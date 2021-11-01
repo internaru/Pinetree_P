@@ -1,0 +1,41 @@
+<!--#ssi INCLUDE /midas-header.xml -->
+<!--COMMENT 
+
+properties.xml
+
+MIDAS Properties file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+<!--#ssi INCLUDE /version-content.xml -->
+<!--#ssi INCLUDE /status-content.xml -->
+<!--#ssi INCLUDE /product-info-content.xml -->
+<!--#ssi INCLUDE /storage-content.xml -->
+  <ioConnections>
+<!--#ssi INCLUDE /io-connections/wired-network-content.xml -->
+<!--#ssi INCLUDE /io-connections/usb-connection-content.xml -->
+  </ioConnections>
+  <functions>
+<!--#ssi INCLUDE /functions/host-print-content.xml -->
+<!-- # ssi INCLUDE /functions/copy-content.xml -->
+<!-- # ssi INCLUDE /functions/scan-content.xml -->
+  </functions>
+  <supplies>
+<!--#ssi INCLUDE /supplies/marker-supply-content.xml -->
+<!--#ssi INCLUDE /supplies/media-supply-content.xml -->
+<!--#ssi INCLUDE /supplies/print-head-content.xml -->
+  </supplies>
+<!--#ssi INCLUDE /usage-content.xml -->
+<!--#ssi INCLUDE /service-content.xml -->
+<!--#ssi INCLUDE /midas-footer.xml -->

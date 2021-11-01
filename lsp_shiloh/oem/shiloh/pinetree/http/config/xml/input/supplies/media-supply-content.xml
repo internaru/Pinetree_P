@@ -1,0 +1,31 @@
+<!--COMMENT
+
+supplies/media-supply-content.xml
+
+MIDAS Supplies Media Supply Content file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+    <mediaSupply>
+      <trayId><!--#ssi IDr OID_PRINT_OUTPUT_TRAY_TRAY_ID --></trayId>
+      <mediaSizeInfo>
+        <mediaSize><!--#ssi IDr OID_PRINT_OUTPUT_TRAY_MEDIA_SIZE --></mediaSize>
+        <customSize>
+          <width><!--#ssi IDr OID_PRINT_MEDIA_SIZE_CUSTOM_WIDTH --></width>
+          <height><!--#ssi IDr OID_PRINT_MEDIA_SIZE_CUSTOM_HEIGHT --></height>
+          <unitOfMeasure><!--#ssi IDr OID_PRINT_MEDIA_SIZE_CUSTOM_UNIT_OF_MEASURE --></unitOfMeasure>
+        </customSize>
+      </mediaSizeInfo>
+      <mediaType><!--#ssi IDr OID_PRINT_OUTPUT_TRAY_MEDIA_TYPE --></mediaType>
+    </mediaSupply>

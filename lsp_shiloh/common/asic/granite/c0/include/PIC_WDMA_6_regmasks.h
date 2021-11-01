@@ -1,0 +1,2995 @@
+ /*
+ **************************************************************************************
+ *
+ * Copyright (c) 2010 Marvell International, Ltd.
+ *
+ **************************************************************************************
+ *
+ * Marvell Commercial License Option
+ *
+ * If you received this File from Marvell as part of a proprietary software release,
+ * the File is considered Marvell Proprietary and Confidential Information, and is
+ * licensed to you under the terms of the applicable Commercial License.
+ *
+ **************************************************************************************
+ *
+ * Marvell GPL License Option
+ *
+ * If you received this File from Marvell as part of a Linux distribution, this File
+ * is licensed to you in accordance with the terms and conditions of the General Public
+ * License Version 2, June 1991 (the "GPL License").  You can redistribute it and/or
+ * modify it under the terms of the GPL License; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ * PARTICULAR PURPOSE.  See the GPL License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with this
+ * program.  If not, see http://www.gnu.org/licenses/.
+ *
+ **************************************************************************************
+ *
+ * \file PIC_WDMA_6_regmasks.h
+ * Generated using RegBuild 1.6.1
+ *
+ *************************************************************************
+ */
+
+#ifndef _PIC_WDMA_6_REGMASKS_H_
+#define _PIC_WDMA_6_REGMASKS_H_
+
+#include <stdint.h>
+
+//====================================================================
+//
+//Register File: PIC_WDMA (PIC_WDMA_6)
+/** \brief Register Descriptions for the multi-channel PIC WDMA block*/
+//
+//====================================================================
+
+//====================================================================
+//Register: PIC WDMA Configuration Register (DWOCR)
+/** \brief General configuration register for all DMAs in this block.*/
+//====================================================================
+
+#define  PIC_WDMA_6_DWOCR_RESERVED1_MASK 0xfffc0000
+#define  PIC_WDMA_6_DWOCR_RESERVED1_SHIFT 18
+#define  PIC_WDMA_6_DWOCR_RESERVED1_MASK_SHIFT(reg) (((reg) & PIC_WDMA_6_DWOCR_RESERVED1_MASK) >> PIC_WDMA_6_DWOCR_RESERVED1_SHIFT)
+#define  PIC_WDMA_6_DWOCR_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~PIC_WDMA_6_DWOCR_RESERVED1_MASK) | (((uint32_t)val) << PIC_WDMA_6_DWOCR_RESERVED1_SHIFT))
+
+#define  PIC_WDMA_6_DWOCR_DISABLEMODE_MASK 0x30000
+#define  PIC_WDMA_6_DWOCR_DISABLEMODE_SHIFT 16
+#define  PIC_WDMA_6_DWOCR_DISABLEMODE_MASK_SHIFT(reg) (((reg) & PIC_WDMA_6_DWOCR_DISABLEMODE_MASK) >> PIC_WDMA_6_DWOCR_DISABLEMODE_SHIFT)
+#define  PIC_WDMA_6_DWOCR_DISABLEMODE_REPLACE_VAL(reg,val) (((reg) & ~PIC_WDMA_6_DWOCR_DISABLEMODE_MASK) | (((uint32_t)val) << PIC_WDMA_6_DWOCR_DISABLEMODE_SHIFT))
+
+#define  PIC_WDMA_6_DWOCR_RESERVED2_MASK 0xffff
+#define  PIC_WDMA_6_DWOCR_RESERVED2_SHIFT 0
+#define  PIC_WDMA_6_DWOCR_RESERVED2_MASK_SHIFT(reg) (((reg) & PIC_WDMA_6_DWOCR_RESERVED2_MASK) >> PIC_WDMA_6_DWOCR_RESERVED2_SHIFT)
+#define  PIC_WDMA_6_DWOCR_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~PIC_WDMA_6_DWOCR_RESERVED2_MASK) | (((uint32_t)val) << PIC_WDMA_6_DWOCR_RESERVED2_SHIFT))
+
+//====================================================================
+//Register: PIC WDMA Router Table Register (DWRTBL)
+/** \brief PIC Write DMA Router Table <br>
+    <br>
+    For all fields in this register, the value should be in the range '0-NUMBER_OF_PIC_WDMA_CHANNELS-1'. Values outside these ranges will be forced into the ranges using the 'mod' function.*/
+//====================================================================
+
+#define  PIC_WDMA_6_DWRTBL_MONOODDDMACRV_MASK 0xf0000000
+#define  PIC_WDMA_6_DWRTBL_MONOODDDMACRV_SHIFT 28
+#define  PIC_WDMA_6_DWRTBL_MONOODDDMACRV_MASK_SHIFT(reg) (((reg) & PIC_WDMA_6_DWRTBL_MONOODDDMACRV_MASK) >> PIC_WDMA_6_DWRTBL_MONOODDDMACRV_SHIFT)
+#define  PIC_WDMA_6_DWRTBL_MONOODDDMACRV_REPLACE_VAL(reg,val) (((reg) & ~PIC_WDMA_6_DWRTBL_MONOODDDMACRV_MASK) | (((uint32_t)val) << PIC_WDMA_6_DWRTBL_MONOODDDMACRV_SHIFT))
+
+#define  PIC_WDMA_6_DWRTBL_COLOR2ODDDMACRV_MASK 0xf000000
+#define  PIC_WDMA_6_DWRTBL_COLOR2ODDDMACRV_SHIFT 24
+#define  PIC_WDMA_6_DWRTBL_COLOR2ODDDMACRV_MASK_SHIFT(reg) (((reg) & PIC_WDMA_6_DWRTBL_COLOR2ODDDMACRV_MASK) >> PIC_WDMA_6_DWRTBL_COLOR2ODDDMACRV_SHIFT)
+#define  PIC_WDMA_6_DWRTBL_COLOR2ODDDMACRV_REPLACE_VAL(reg,val) (((reg) & ~PIC_WDMA_6_DWRTBL_COLOR2ODDDMACRV_MASK) | (((uint32_t)val) << PIC_WDMA_6_DWRTBL_COLOR2ODDDMACRV_SHIFT))
+
+#define  PIC_WDMA_6_DWRTBL_COLOR1ODDDMACRV_MASK 0xf00000
+#define  PIC_WDMA_6_DWRTBL_COLOR1ODDDMACRV_SHIFT 20
+#define  PIC_WDMA_6_DWRTBL_COLOR1ODDDMACRV_MASK_SHIFT(reg) (((reg) & PIC_WDMA_6_DWRTBL_COLOR1ODDDMACRV_MASK) >> PIC_WDMA_6_DWRTBL_COLOR1ODDDMACRV_SHIFT)
+#define  PIC_WDMA_6_DWRTBL_COLOR1ODDDMACRV_REPLACE_VAL(reg,val) (((reg) & ~PIC_WDMA_6_DWRTBL_COLOR1ODDDMACRV_MASK) | (((uint32_t)val) << PIC_WDMA_6_DWRTBL_COLOR1ODDDMACRV_SHIFT))
+
+#define  PIC_WDMA_6_DWRTBL_COLOR0ODDDMACRV_MASK 0xf0000
+#define  PIC_WDMA_6_DWRTBL_COLOR0ODDDMACRV_SHIFT 16
+#define  PIC_WDMA_6_DWRTBL_COLOR0ODDDMACRV_MASK_SHIFT(reg) (((reg) & PIC_WDMA_6_DWRTBL_COLOR0ODDDMACRV_MASK) >> PIC_WDMA_6_DWRTBL_COLOR0ODDDMACRV_SHIFT)
+#define  PIC_WDMA_6_DWRTBL_COLOR0ODDDMACRV_REPLACE_VAL(reg,val) (((reg) & ~PIC_WDMA_6_DWRTBL_COLOR0ODDDMACRV_MASK) | (((uint32_t)val) << PIC_WDMA_6_DWRTBL_COLOR0ODDDMACRV_SHIFT))
+
+#define  PIC_WDMA_6_DWRTBL_MONOEVENDMACRV_MASK 0xf000
+#define  PIC_WDMA_6_DWRTBL_MONOEVENDMACRV_SHIFT 12
+#define  PIC_WDMA_6_DWRTBL_MONOEVENDMACRV_MASK_SHIFT(reg) (((reg) & PIC_WDMA_6_DWRTBL_MONOEVENDMACRV_MASK) >> PIC_WDMA_6_DWRTBL_MONOEVENDMACRV_SHIFT)
+#define  PIC_WDMA_6_DWRTBL_MONOEVENDMACRV_REPLACE_VAL(reg,val) (((reg) & ~PIC_WDMA_6_DWRTBL_MONOEVENDMACRV_MASK) | (((uint32_t)val) << PIC_WDMA_6_DWRTBL_MONOEVENDMACRV_SHIFT))
+
+#define  PIC_WDMA_6_DWRTBL_COLOR2EVENDMACRV_MASK 0xf00
+#define  PIC_WDMA_6_DWRTBL_COLOR2EVENDMACRV_SHIFT 8
+#define  PIC_WDMA_6_DWRTBL_COLOR2EVENDMACRV_MASK_SHIFT(reg) (((reg) & PIC_WDMA_6_DWRTBL_COLOR2EVENDMACRV_MASK) >> PIC_WDMA_6_DWRTBL_COLOR2EVENDMACRV_SHIFT)
+#define  PIC_WDMA_6_DWRTBL_COLOR2EVENDMACRV_REPLACE_VAL(reg,val) (((reg) & ~PIC_WDMA_6_DWRTBL_COLOR2EVENDMACRV_MASK) | (((uint32_t)val) << PIC_WDMA_6_DWRTBL_COLOR2EVENDMACRV_SHIFT))
+
+#define  PIC_WDMA_6_DWRTBL_COLOR1EVENDMACRV_MASK 0xf0
+#define  PIC_WDMA_6_DWRTBL_COLOR1EVENDMACRV_SHIFT 4
+#define  PIC_WDMA_6_DWRTBL_COLOR1EVENDMACRV_MASK_SHIFT(reg) (((reg) & PIC_WDMA_6_DWRTBL_COLOR1EVENDMACRV_MASK) >> PIC_WDMA_6_DWRTBL_COLOR1EVENDMACRV_SHIFT)
+#define  PIC_WDMA_6_DWRTBL_COLOR1EVENDMACRV_REPLACE_VAL(reg,val) (((reg) & ~PIC_WDMA_6_DWRTBL_COLOR1EVENDMACRV_MASK) | (((uint32_t)val) << PIC_WDMA_6_DWRTBL_COLOR1EVENDMACRV_SHIFT))
+
+#define  PIC_WDMA_6_DWRTBL_COLOR0EVENDMACRV_MASK 0xf
+#define  PIC_WDMA_6_DWRTBL_COLOR0EVENDMACRV_SHIFT 0
+#define  PIC_WDMA_6_DWRTBL_COLOR0EVENDMACRV_MASK_SHIFT(reg) (((reg) & PIC_WDMA_6_DWRTBL_COLOR0EVENDMACRV_MASK) >> PIC_WDMA_6_DWRTBL_COLOR0EVENDMACRV_SHIFT)
+#define  PIC_WDMA_6_DWRTBL_COLOR0EVENDMACRV_REPLACE_VAL(reg,val) (((reg) & ~PIC_WDMA_6_DWRTBL_COLOR0EVENDMACRV_MASK) | (((uint32_t)val) << PIC_WDMA_6_DWRTBL_COLOR0EVENDMACRV_SHIFT))
+
+//====================================================================
+//Register: PIC Write DMA Common Interrupt Select (DWCIS)
+/** \brief DMA Channel Common Interrupt Select*/
+//====================================================================
+
+#define  PIC_WDMA_6_DWCIS_RESERVED1_MASK 0xffffffc0
+#define  PIC_WDMA_6_DWCIS_RESERVED1_SHIFT 6
+#define  PIC_WDMA_6_DWCIS_RESERVED1_MASK_SHIFT(reg) (((reg) & PIC_WDMA_6_DWCIS_RESERVED1_MASK) >> PIC_WDMA_6_DWCIS_RESERVED1_SHIFT)
+#define  PIC_WDMA_6_DWCIS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~PIC_WDMA_6_DWCIS_RESERVED1_MASK) | (((uint32_t)val) << PIC_WDMA_6_DWCIS_RESERVED1_SHIFT))
+
+#define  PIC_WDMA_6_DWCIS_SELECT_MASK 0x3f
+#define  PIC_WDMA_6_DWCIS_SELECT_SHIFT 0
+#define  PIC_WDMA_6_DWCIS_SELECT_MASK_SHIFT(reg) (((reg) & PIC_WDMA_6_DWCIS_SELECT_MASK) >> PIC_WDMA_6_DWCIS_SELECT_SHIFT)
+#define  PIC_WDMA_6_DWCIS_SELECT_REPLACE_VAL(reg,val) (((reg) & ~PIC_WDMA_6_DWCIS_SELECT_MASK) | (((uint32_t)val) << PIC_WDMA_6_DWCIS_SELECT_SHIFT))
+
+//====================================================================
+//
+//Register File: DMA channel (Instance 1 of 6) (DMA0)
+//
+//====================================================================
+
+//====================================================================
+//Register: Configuration register (cfg)
+//====================================================================
+
+#define  DMA0_CFG_RESERVED1_MASK 0xffc00000
+#define  DMA0_CFG_RESERVED1_SHIFT 22
+#define  DMA0_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA0_CFG_RESERVED1_MASK) >> DMA0_CFG_RESERVED1_SHIFT)
+#define  DMA0_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA0_CFG_RESERVED1_MASK) | (((uint32_t)val) << DMA0_CFG_RESERVED1_SHIFT))
+
+#define  DMA0_CFG_SERPENTINE_MASK 0x200000
+#define  DMA0_CFG_SERPENTINE_SHIFT 21
+#define  DMA0_CFG_SERPENTINE_MASK_SHIFT(reg) (((reg) & DMA0_CFG_SERPENTINE_MASK) >> DMA0_CFG_SERPENTINE_SHIFT)
+#define  DMA0_CFG_SERPENTINE_REPLACE_VAL(reg,val) (((reg) & ~DMA0_CFG_SERPENTINE_MASK) | (((uint32_t)val) << DMA0_CFG_SERPENTINE_SHIFT))
+
+#define  DMA0_CFG_LINE_REV_MASK 0x100000
+#define  DMA0_CFG_LINE_REV_SHIFT 20
+#define  DMA0_CFG_LINE_REV_MASK_SHIFT(reg) (((reg) & DMA0_CFG_LINE_REV_MASK) >> DMA0_CFG_LINE_REV_SHIFT)
+#define  DMA0_CFG_LINE_REV_REPLACE_VAL(reg,val) (((reg) & ~DMA0_CFG_LINE_REV_MASK) | (((uint32_t)val) << DMA0_CFG_LINE_REV_SHIFT))
+
+#define  DMA0_CFG_TRAN_REV_MASK 0x80000
+#define  DMA0_CFG_TRAN_REV_SHIFT 19
+#define  DMA0_CFG_TRAN_REV_MASK_SHIFT(reg) (((reg) & DMA0_CFG_TRAN_REV_MASK) >> DMA0_CFG_TRAN_REV_SHIFT)
+#define  DMA0_CFG_TRAN_REV_REPLACE_VAL(reg,val) (((reg) & ~DMA0_CFG_TRAN_REV_MASK) | (((uint32_t)val) << DMA0_CFG_TRAN_REV_SHIFT))
+
+#define  DMA0_CFG_UPPER_HALF_MASK 0x40000
+#define  DMA0_CFG_UPPER_HALF_SHIFT 18
+#define  DMA0_CFG_UPPER_HALF_MASK_SHIFT(reg) (((reg) & DMA0_CFG_UPPER_HALF_MASK) >> DMA0_CFG_UPPER_HALF_SHIFT)
+#define  DMA0_CFG_UPPER_HALF_REPLACE_VAL(reg,val) (((reg) & ~DMA0_CFG_UPPER_HALF_MASK) | (((uint32_t)val) << DMA0_CFG_UPPER_HALF_SHIFT))
+
+#define  DMA0_CFG_MSB_IN_MASK 0x20000
+#define  DMA0_CFG_MSB_IN_SHIFT 17
+#define  DMA0_CFG_MSB_IN_MASK_SHIFT(reg) (((reg) & DMA0_CFG_MSB_IN_MASK) >> DMA0_CFG_MSB_IN_SHIFT)
+#define  DMA0_CFG_MSB_IN_REPLACE_VAL(reg,val) (((reg) & ~DMA0_CFG_MSB_IN_MASK) | (((uint32_t)val) << DMA0_CFG_MSB_IN_SHIFT))
+
+#define  DMA0_CFG_ENABLE_MASK 0x10000
+#define  DMA0_CFG_ENABLE_SHIFT 16
+#define  DMA0_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & DMA0_CFG_ENABLE_MASK) >> DMA0_CFG_ENABLE_SHIFT)
+#define  DMA0_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~DMA0_CFG_ENABLE_MASK) | (((uint32_t)val) << DMA0_CFG_ENABLE_SHIFT))
+
+#define  DMA0_CFG_RESERVED2_MASK 0xf800
+#define  DMA0_CFG_RESERVED2_SHIFT 11
+#define  DMA0_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & DMA0_CFG_RESERVED2_MASK) >> DMA0_CFG_RESERVED2_SHIFT)
+#define  DMA0_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~DMA0_CFG_RESERVED2_MASK) | (((uint32_t)val) << DMA0_CFG_RESERVED2_SHIFT))
+
+#define  DMA0_CFG_IN_WIDTH_MASK 0x700
+#define  DMA0_CFG_IN_WIDTH_SHIFT 8
+#define  DMA0_CFG_IN_WIDTH_MASK_SHIFT(reg) (((reg) & DMA0_CFG_IN_WIDTH_MASK) >> DMA0_CFG_IN_WIDTH_SHIFT)
+#define  DMA0_CFG_IN_WIDTH_REPLACE_VAL(reg,val) (((reg) & ~DMA0_CFG_IN_WIDTH_MASK) | (((uint32_t)val) << DMA0_CFG_IN_WIDTH_SHIFT))
+
+#define  DMA0_CFG_RESERVED3_MASK 0xfc
+#define  DMA0_CFG_RESERVED3_SHIFT 2
+#define  DMA0_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & DMA0_CFG_RESERVED3_MASK) >> DMA0_CFG_RESERVED3_SHIFT)
+#define  DMA0_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~DMA0_CFG_RESERVED3_MASK) | (((uint32_t)val) << DMA0_CFG_RESERVED3_SHIFT))
+
+#define  DMA0_CFG_BURST_LEN_MASK 0x3
+#define  DMA0_CFG_BURST_LEN_SHIFT 0
+#define  DMA0_CFG_BURST_LEN_MASK_SHIFT(reg) (((reg) & DMA0_CFG_BURST_LEN_MASK) >> DMA0_CFG_BURST_LEN_SHIFT)
+#define  DMA0_CFG_BURST_LEN_REPLACE_VAL(reg,val) (((reg) & ~DMA0_CFG_BURST_LEN_MASK) | (((uint32_t)val) << DMA0_CFG_BURST_LEN_SHIFT))
+
+//====================================================================
+//Register: Status register (status)
+//====================================================================
+
+#define  DMA0_STATUS_RESERVED1_MASK 0xfffff800
+#define  DMA0_STATUS_RESERVED1_SHIFT 11
+#define  DMA0_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA0_STATUS_RESERVED1_MASK) >> DMA0_STATUS_RESERVED1_SHIFT)
+#define  DMA0_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA0_STATUS_RESERVED1_MASK) | (((uint32_t)val) << DMA0_STATUS_RESERVED1_SHIFT))
+
+#define  DMA0_STATUS_DESC_OWN_MASK 0x400
+#define  DMA0_STATUS_DESC_OWN_SHIFT 10
+#define  DMA0_STATUS_DESC_OWN_MASK_SHIFT(reg) (((reg) & DMA0_STATUS_DESC_OWN_MASK) >> DMA0_STATUS_DESC_OWN_SHIFT)
+#define  DMA0_STATUS_DESC_OWN_REPLACE_VAL(reg,val) (((reg) & ~DMA0_STATUS_DESC_OWN_MASK) | (((uint32_t)val) << DMA0_STATUS_DESC_OWN_SHIFT))
+
+#define  DMA0_STATUS_DESC_EOI_MASK 0x200
+#define  DMA0_STATUS_DESC_EOI_SHIFT 9
+#define  DMA0_STATUS_DESC_EOI_MASK_SHIFT(reg) (((reg) & DMA0_STATUS_DESC_EOI_MASK) >> DMA0_STATUS_DESC_EOI_SHIFT)
+#define  DMA0_STATUS_DESC_EOI_REPLACE_VAL(reg,val) (((reg) & ~DMA0_STATUS_DESC_EOI_MASK) | (((uint32_t)val) << DMA0_STATUS_DESC_EOI_SHIFT))
+
+#define  DMA0_STATUS_DESC_SOI_MASK 0x100
+#define  DMA0_STATUS_DESC_SOI_SHIFT 8
+#define  DMA0_STATUS_DESC_SOI_MASK_SHIFT(reg) (((reg) & DMA0_STATUS_DESC_SOI_MASK) >> DMA0_STATUS_DESC_SOI_SHIFT)
+#define  DMA0_STATUS_DESC_SOI_REPLACE_VAL(reg,val) (((reg) & ~DMA0_STATUS_DESC_SOI_MASK) | (((uint32_t)val) << DMA0_STATUS_DESC_SOI_SHIFT))
+
+#define  DMA0_STATUS_REVERSE_MASK 0x80
+#define  DMA0_STATUS_REVERSE_SHIFT 7
+#define  DMA0_STATUS_REVERSE_MASK_SHIFT(reg) (((reg) & DMA0_STATUS_REVERSE_MASK) >> DMA0_STATUS_REVERSE_SHIFT)
+#define  DMA0_STATUS_REVERSE_REPLACE_VAL(reg,val) (((reg) & ~DMA0_STATUS_REVERSE_MASK) | (((uint32_t)val) << DMA0_STATUS_REVERSE_SHIFT))
+
+#define  DMA0_STATUS_SOFTRESET_MASK 0x40
+#define  DMA0_STATUS_SOFTRESET_SHIFT 6
+#define  DMA0_STATUS_SOFTRESET_MASK_SHIFT(reg) (((reg) & DMA0_STATUS_SOFTRESET_MASK) >> DMA0_STATUS_SOFTRESET_SHIFT)
+#define  DMA0_STATUS_SOFTRESET_REPLACE_VAL(reg,val) (((reg) & ~DMA0_STATUS_SOFTRESET_MASK) | (((uint32_t)val) << DMA0_STATUS_SOFTRESET_SHIFT))
+
+#define  DMA0_STATUS_FULL_CBUF_MASK 0x20
+#define  DMA0_STATUS_FULL_CBUF_SHIFT 5
+#define  DMA0_STATUS_FULL_CBUF_MASK_SHIFT(reg) (((reg) & DMA0_STATUS_FULL_CBUF_MASK) >> DMA0_STATUS_FULL_CBUF_SHIFT)
+#define  DMA0_STATUS_FULL_CBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA0_STATUS_FULL_CBUF_MASK) | (((uint32_t)val) << DMA0_STATUS_FULL_CBUF_SHIFT))
+
+#define  DMA0_STATUS_EMPTY_CBUF_MASK 0x10
+#define  DMA0_STATUS_EMPTY_CBUF_SHIFT 4
+#define  DMA0_STATUS_EMPTY_CBUF_MASK_SHIFT(reg) (((reg) & DMA0_STATUS_EMPTY_CBUF_MASK) >> DMA0_STATUS_EMPTY_CBUF_SHIFT)
+#define  DMA0_STATUS_EMPTY_CBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA0_STATUS_EMPTY_CBUF_MASK) | (((uint32_t)val) << DMA0_STATUS_EMPTY_CBUF_SHIFT))
+
+#define  DMA0_STATUS_FULL_DBUF_MASK 0x8
+#define  DMA0_STATUS_FULL_DBUF_SHIFT 3
+#define  DMA0_STATUS_FULL_DBUF_MASK_SHIFT(reg) (((reg) & DMA0_STATUS_FULL_DBUF_MASK) >> DMA0_STATUS_FULL_DBUF_SHIFT)
+#define  DMA0_STATUS_FULL_DBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA0_STATUS_FULL_DBUF_MASK) | (((uint32_t)val) << DMA0_STATUS_FULL_DBUF_SHIFT))
+
+#define  DMA0_STATUS_EMPTY_DBUF_MASK 0x4
+#define  DMA0_STATUS_EMPTY_DBUF_SHIFT 2
+#define  DMA0_STATUS_EMPTY_DBUF_MASK_SHIFT(reg) (((reg) & DMA0_STATUS_EMPTY_DBUF_MASK) >> DMA0_STATUS_EMPTY_DBUF_SHIFT)
+#define  DMA0_STATUS_EMPTY_DBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA0_STATUS_EMPTY_DBUF_MASK) | (((uint32_t)val) << DMA0_STATUS_EMPTY_DBUF_SHIFT))
+
+#define  DMA0_STATUS_PACKER_EMPTY_MASK 0x2
+#define  DMA0_STATUS_PACKER_EMPTY_SHIFT 1
+#define  DMA0_STATUS_PACKER_EMPTY_MASK_SHIFT(reg) (((reg) & DMA0_STATUS_PACKER_EMPTY_MASK) >> DMA0_STATUS_PACKER_EMPTY_SHIFT)
+#define  DMA0_STATUS_PACKER_EMPTY_REPLACE_VAL(reg,val) (((reg) & ~DMA0_STATUS_PACKER_EMPTY_MASK) | (((uint32_t)val) << DMA0_STATUS_PACKER_EMPTY_SHIFT))
+
+#define  DMA0_STATUS_DMA_BUSY_MASK 0x1
+#define  DMA0_STATUS_DMA_BUSY_SHIFT 0
+#define  DMA0_STATUS_DMA_BUSY_MASK_SHIFT(reg) (((reg) & DMA0_STATUS_DMA_BUSY_MASK) >> DMA0_STATUS_DMA_BUSY_SHIFT)
+#define  DMA0_STATUS_DMA_BUSY_REPLACE_VAL(reg,val) (((reg) & ~DMA0_STATUS_DMA_BUSY_MASK) | (((uint32_t)val) << DMA0_STATUS_DMA_BUSY_SHIFT))
+
+//====================================================================
+//Register: Line Size Register (line_size)
+//====================================================================
+
+#define  DMA0_LINE_SIZE_RESERVED1_MASK 0xfffc0000
+#define  DMA0_LINE_SIZE_RESERVED1_SHIFT 18
+#define  DMA0_LINE_SIZE_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA0_LINE_SIZE_RESERVED1_MASK) >> DMA0_LINE_SIZE_RESERVED1_SHIFT)
+#define  DMA0_LINE_SIZE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA0_LINE_SIZE_RESERVED1_MASK) | (((uint32_t)val) << DMA0_LINE_SIZE_RESERVED1_SHIFT))
+
+#define  DMA0_LINE_SIZE_LINE_SIZE_MASK 0x3ffff
+#define  DMA0_LINE_SIZE_LINE_SIZE_SHIFT 0
+#define  DMA0_LINE_SIZE_LINE_SIZE_MASK_SHIFT(reg) (((reg) & DMA0_LINE_SIZE_LINE_SIZE_MASK) >> DMA0_LINE_SIZE_LINE_SIZE_SHIFT)
+#define  DMA0_LINE_SIZE_LINE_SIZE_REPLACE_VAL(reg,val) (((reg) & ~DMA0_LINE_SIZE_LINE_SIZE_MASK) | (((uint32_t)val) << DMA0_LINE_SIZE_LINE_SIZE_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (int_en)
+//====================================================================
+
+#define  DMA0_INT_EN_RESERVED1_MASK 0xfffff800
+#define  DMA0_INT_EN_RESERVED1_SHIFT 11
+#define  DMA0_INT_EN_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA0_INT_EN_RESERVED1_MASK) >> DMA0_INT_EN_RESERVED1_SHIFT)
+#define  DMA0_INT_EN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_EN_RESERVED1_MASK) | (((uint32_t)val) << DMA0_INT_EN_RESERVED1_SHIFT))
+
+#define  DMA0_INT_EN_RRESP_INT_EN_MASK 0x400
+#define  DMA0_INT_EN_RRESP_INT_EN_SHIFT 10
+#define  DMA0_INT_EN_RRESP_INT_EN_MASK_SHIFT(reg) (((reg) & DMA0_INT_EN_RRESP_INT_EN_MASK) >> DMA0_INT_EN_RRESP_INT_EN_SHIFT)
+#define  DMA0_INT_EN_RRESP_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_EN_RRESP_INT_EN_MASK) | (((uint32_t)val) << DMA0_INT_EN_RRESP_INT_EN_SHIFT))
+
+#define  DMA0_INT_EN_BRESP_INT_EN_MASK 0x200
+#define  DMA0_INT_EN_BRESP_INT_EN_SHIFT 9
+#define  DMA0_INT_EN_BRESP_INT_EN_MASK_SHIFT(reg) (((reg) & DMA0_INT_EN_BRESP_INT_EN_MASK) >> DMA0_INT_EN_BRESP_INT_EN_SHIFT)
+#define  DMA0_INT_EN_BRESP_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_EN_BRESP_INT_EN_MASK) | (((uint32_t)val) << DMA0_INT_EN_BRESP_INT_EN_SHIFT))
+
+#define  DMA0_INT_EN_RST_INT_EN_MASK 0x100
+#define  DMA0_INT_EN_RST_INT_EN_SHIFT 8
+#define  DMA0_INT_EN_RST_INT_EN_MASK_SHIFT(reg) (((reg) & DMA0_INT_EN_RST_INT_EN_MASK) >> DMA0_INT_EN_RST_INT_EN_SHIFT)
+#define  DMA0_INT_EN_RST_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_EN_RST_INT_EN_MASK) | (((uint32_t)val) << DMA0_INT_EN_RST_INT_EN_SHIFT))
+
+#define  DMA0_INT_EN_EOI_INT_EN_MASK 0x80
+#define  DMA0_INT_EN_EOI_INT_EN_SHIFT 7
+#define  DMA0_INT_EN_EOI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA0_INT_EN_EOI_INT_EN_MASK) >> DMA0_INT_EN_EOI_INT_EN_SHIFT)
+#define  DMA0_INT_EN_EOI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_EN_EOI_INT_EN_MASK) | (((uint32_t)val) << DMA0_INT_EN_EOI_INT_EN_SHIFT))
+
+#define  DMA0_INT_EN_DIR_INT_EN_MASK 0x40
+#define  DMA0_INT_EN_DIR_INT_EN_SHIFT 6
+#define  DMA0_INT_EN_DIR_INT_EN_MASK_SHIFT(reg) (((reg) & DMA0_INT_EN_DIR_INT_EN_MASK) >> DMA0_INT_EN_DIR_INT_EN_SHIFT)
+#define  DMA0_INT_EN_DIR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_EN_DIR_INT_EN_MASK) | (((uint32_t)val) << DMA0_INT_EN_DIR_INT_EN_SHIFT))
+
+#define  DMA0_INT_EN_CL_ALI_INT_EN_MASK 0x20
+#define  DMA0_INT_EN_CL_ALI_INT_EN_SHIFT 5
+#define  DMA0_INT_EN_CL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA0_INT_EN_CL_ALI_INT_EN_MASK) >> DMA0_INT_EN_CL_ALI_INT_EN_SHIFT)
+#define  DMA0_INT_EN_CL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_EN_CL_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA0_INT_EN_CL_ALI_INT_EN_SHIFT))
+
+#define  DMA0_INT_EN_EOL_ALI_INT_EN_MASK 0x10
+#define  DMA0_INT_EN_EOL_ALI_INT_EN_SHIFT 4
+#define  DMA0_INT_EN_EOL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA0_INT_EN_EOL_ALI_INT_EN_MASK) >> DMA0_INT_EN_EOL_ALI_INT_EN_SHIFT)
+#define  DMA0_INT_EN_EOL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_EN_EOL_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA0_INT_EN_EOL_ALI_INT_EN_SHIFT))
+
+#define  DMA0_INT_EN_EOI_ALI_INT_EN_MASK 0x8
+#define  DMA0_INT_EN_EOI_ALI_INT_EN_SHIFT 3
+#define  DMA0_INT_EN_EOI_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA0_INT_EN_EOI_ALI_INT_EN_MASK) >> DMA0_INT_EN_EOI_ALI_INT_EN_SHIFT)
+#define  DMA0_INT_EN_EOI_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_EN_EOI_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA0_INT_EN_EOI_ALI_INT_EN_SHIFT))
+
+#define  DMA0_INT_EN_EOI_ERR_INT_EN_MASK 0x4
+#define  DMA0_INT_EN_EOI_ERR_INT_EN_SHIFT 2
+#define  DMA0_INT_EN_EOI_ERR_INT_EN_MASK_SHIFT(reg) (((reg) & DMA0_INT_EN_EOI_ERR_INT_EN_MASK) >> DMA0_INT_EN_EOI_ERR_INT_EN_SHIFT)
+#define  DMA0_INT_EN_EOI_ERR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_EN_EOI_ERR_INT_EN_MASK) | (((uint32_t)val) << DMA0_INT_EN_EOI_ERR_INT_EN_SHIFT))
+
+#define  DMA0_INT_EN_FIN_INT_EN_MASK 0x2
+#define  DMA0_INT_EN_FIN_INT_EN_SHIFT 1
+#define  DMA0_INT_EN_FIN_INT_EN_MASK_SHIFT(reg) (((reg) & DMA0_INT_EN_FIN_INT_EN_MASK) >> DMA0_INT_EN_FIN_INT_EN_SHIFT)
+#define  DMA0_INT_EN_FIN_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_EN_FIN_INT_EN_MASK) | (((uint32_t)val) << DMA0_INT_EN_FIN_INT_EN_SHIFT))
+
+#define  DMA0_INT_EN_WHO_INT_EN_MASK 0x1
+#define  DMA0_INT_EN_WHO_INT_EN_SHIFT 0
+#define  DMA0_INT_EN_WHO_INT_EN_MASK_SHIFT(reg) (((reg) & DMA0_INT_EN_WHO_INT_EN_MASK) >> DMA0_INT_EN_WHO_INT_EN_SHIFT)
+#define  DMA0_INT_EN_WHO_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_EN_WHO_INT_EN_MASK) | (((uint32_t)val) << DMA0_INT_EN_WHO_INT_EN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (int_pend)
+//====================================================================
+
+#define  DMA0_INT_PEND_RESERVED1_MASK 0xfffff800
+#define  DMA0_INT_PEND_RESERVED1_SHIFT 11
+#define  DMA0_INT_PEND_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA0_INT_PEND_RESERVED1_MASK) >> DMA0_INT_PEND_RESERVED1_SHIFT)
+#define  DMA0_INT_PEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_PEND_RESERVED1_MASK) | (((uint32_t)val) << DMA0_INT_PEND_RESERVED1_SHIFT))
+
+#define  DMA0_INT_PEND_RRESP_INT_PEND_MASK 0x400
+#define  DMA0_INT_PEND_RRESP_INT_PEND_SHIFT 10
+#define  DMA0_INT_PEND_RRESP_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA0_INT_PEND_RRESP_INT_PEND_MASK) >> DMA0_INT_PEND_RRESP_INT_PEND_SHIFT)
+#define  DMA0_INT_PEND_RRESP_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_PEND_RRESP_INT_PEND_MASK) | (((uint32_t)val) << DMA0_INT_PEND_RRESP_INT_PEND_SHIFT))
+
+#define  DMA0_INT_PEND_BRESP_INT_PEND_MASK 0x200
+#define  DMA0_INT_PEND_BRESP_INT_PEND_SHIFT 9
+#define  DMA0_INT_PEND_BRESP_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA0_INT_PEND_BRESP_INT_PEND_MASK) >> DMA0_INT_PEND_BRESP_INT_PEND_SHIFT)
+#define  DMA0_INT_PEND_BRESP_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_PEND_BRESP_INT_PEND_MASK) | (((uint32_t)val) << DMA0_INT_PEND_BRESP_INT_PEND_SHIFT))
+
+#define  DMA0_INT_PEND_RST_INT_PEND_MASK 0x100
+#define  DMA0_INT_PEND_RST_INT_PEND_SHIFT 8
+#define  DMA0_INT_PEND_RST_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA0_INT_PEND_RST_INT_PEND_MASK) >> DMA0_INT_PEND_RST_INT_PEND_SHIFT)
+#define  DMA0_INT_PEND_RST_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_PEND_RST_INT_PEND_MASK) | (((uint32_t)val) << DMA0_INT_PEND_RST_INT_PEND_SHIFT))
+
+#define  DMA0_INT_PEND_EOI_INT_PEND_MASK 0x80
+#define  DMA0_INT_PEND_EOI_INT_PEND_SHIFT 7
+#define  DMA0_INT_PEND_EOI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA0_INT_PEND_EOI_INT_PEND_MASK) >> DMA0_INT_PEND_EOI_INT_PEND_SHIFT)
+#define  DMA0_INT_PEND_EOI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_PEND_EOI_INT_PEND_MASK) | (((uint32_t)val) << DMA0_INT_PEND_EOI_INT_PEND_SHIFT))
+
+#define  DMA0_INT_PEND_DIR_INT_PEND_MASK 0x40
+#define  DMA0_INT_PEND_DIR_INT_PEND_SHIFT 6
+#define  DMA0_INT_PEND_DIR_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA0_INT_PEND_DIR_INT_PEND_MASK) >> DMA0_INT_PEND_DIR_INT_PEND_SHIFT)
+#define  DMA0_INT_PEND_DIR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_PEND_DIR_INT_PEND_MASK) | (((uint32_t)val) << DMA0_INT_PEND_DIR_INT_PEND_SHIFT))
+
+#define  DMA0_INT_PEND_CL_ALI_INT_PEND_MASK 0x20
+#define  DMA0_INT_PEND_CL_ALI_INT_PEND_SHIFT 5
+#define  DMA0_INT_PEND_CL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA0_INT_PEND_CL_ALI_INT_PEND_MASK) >> DMA0_INT_PEND_CL_ALI_INT_PEND_SHIFT)
+#define  DMA0_INT_PEND_CL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_PEND_CL_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA0_INT_PEND_CL_ALI_INT_PEND_SHIFT))
+
+#define  DMA0_INT_PEND_EOL_ALI_INT_PEND_MASK 0x10
+#define  DMA0_INT_PEND_EOL_ALI_INT_PEND_SHIFT 4
+#define  DMA0_INT_PEND_EOL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA0_INT_PEND_EOL_ALI_INT_PEND_MASK) >> DMA0_INT_PEND_EOL_ALI_INT_PEND_SHIFT)
+#define  DMA0_INT_PEND_EOL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_PEND_EOL_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA0_INT_PEND_EOL_ALI_INT_PEND_SHIFT))
+
+#define  DMA0_INT_PEND_EOI_ALI_INT_PEND_MASK 0x8
+#define  DMA0_INT_PEND_EOI_ALI_INT_PEND_SHIFT 3
+#define  DMA0_INT_PEND_EOI_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA0_INT_PEND_EOI_ALI_INT_PEND_MASK) >> DMA0_INT_PEND_EOI_ALI_INT_PEND_SHIFT)
+#define  DMA0_INT_PEND_EOI_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_PEND_EOI_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA0_INT_PEND_EOI_ALI_INT_PEND_SHIFT))
+
+#define  DMA0_INT_PEND_EOI_ERR_INT_PEND_MASK 0x4
+#define  DMA0_INT_PEND_EOI_ERR_INT_PEND_SHIFT 2
+#define  DMA0_INT_PEND_EOI_ERR_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA0_INT_PEND_EOI_ERR_INT_PEND_MASK) >> DMA0_INT_PEND_EOI_ERR_INT_PEND_SHIFT)
+#define  DMA0_INT_PEND_EOI_ERR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_PEND_EOI_ERR_INT_PEND_MASK) | (((uint32_t)val) << DMA0_INT_PEND_EOI_ERR_INT_PEND_SHIFT))
+
+#define  DMA0_INT_PEND_FIN_INT_PEND_MASK 0x2
+#define  DMA0_INT_PEND_FIN_INT_PEND_SHIFT 1
+#define  DMA0_INT_PEND_FIN_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA0_INT_PEND_FIN_INT_PEND_MASK) >> DMA0_INT_PEND_FIN_INT_PEND_SHIFT)
+#define  DMA0_INT_PEND_FIN_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_PEND_FIN_INT_PEND_MASK) | (((uint32_t)val) << DMA0_INT_PEND_FIN_INT_PEND_SHIFT))
+
+#define  DMA0_INT_PEND_WHO_INT_PEND_MASK 0x1
+#define  DMA0_INT_PEND_WHO_INT_PEND_SHIFT 0
+#define  DMA0_INT_PEND_WHO_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA0_INT_PEND_WHO_INT_PEND_MASK) >> DMA0_INT_PEND_WHO_INT_PEND_SHIFT)
+#define  DMA0_INT_PEND_WHO_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_PEND_WHO_INT_PEND_MASK) | (((uint32_t)val) << DMA0_INT_PEND_WHO_INT_PEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (int_ack)
+//====================================================================
+
+#define  DMA0_INT_ACK_RESERVED1_MASK 0xfffff800
+#define  DMA0_INT_ACK_RESERVED1_SHIFT 11
+#define  DMA0_INT_ACK_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA0_INT_ACK_RESERVED1_MASK) >> DMA0_INT_ACK_RESERVED1_SHIFT)
+#define  DMA0_INT_ACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_ACK_RESERVED1_MASK) | (((uint32_t)val) << DMA0_INT_ACK_RESERVED1_SHIFT))
+
+#define  DMA0_INT_ACK_RRESP_INT_ACK_MASK 0x400
+#define  DMA0_INT_ACK_RRESP_INT_ACK_SHIFT 10
+#define  DMA0_INT_ACK_RRESP_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA0_INT_ACK_RRESP_INT_ACK_MASK) >> DMA0_INT_ACK_RRESP_INT_ACK_SHIFT)
+#define  DMA0_INT_ACK_RRESP_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_ACK_RRESP_INT_ACK_MASK) | (((uint32_t)val) << DMA0_INT_ACK_RRESP_INT_ACK_SHIFT))
+
+#define  DMA0_INT_ACK_BRESP_INT_ACK_MASK 0x200
+#define  DMA0_INT_ACK_BRESP_INT_ACK_SHIFT 9
+#define  DMA0_INT_ACK_BRESP_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA0_INT_ACK_BRESP_INT_ACK_MASK) >> DMA0_INT_ACK_BRESP_INT_ACK_SHIFT)
+#define  DMA0_INT_ACK_BRESP_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_ACK_BRESP_INT_ACK_MASK) | (((uint32_t)val) << DMA0_INT_ACK_BRESP_INT_ACK_SHIFT))
+
+#define  DMA0_INT_ACK_RST_INT_ACK_MASK 0x100
+#define  DMA0_INT_ACK_RST_INT_ACK_SHIFT 8
+#define  DMA0_INT_ACK_RST_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA0_INT_ACK_RST_INT_ACK_MASK) >> DMA0_INT_ACK_RST_INT_ACK_SHIFT)
+#define  DMA0_INT_ACK_RST_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_ACK_RST_INT_ACK_MASK) | (((uint32_t)val) << DMA0_INT_ACK_RST_INT_ACK_SHIFT))
+
+#define  DMA0_INT_ACK_EOI_INT_ACK_MASK 0x80
+#define  DMA0_INT_ACK_EOI_INT_ACK_SHIFT 7
+#define  DMA0_INT_ACK_EOI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA0_INT_ACK_EOI_INT_ACK_MASK) >> DMA0_INT_ACK_EOI_INT_ACK_SHIFT)
+#define  DMA0_INT_ACK_EOI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_ACK_EOI_INT_ACK_MASK) | (((uint32_t)val) << DMA0_INT_ACK_EOI_INT_ACK_SHIFT))
+
+#define  DMA0_INT_ACK_DIR_INT_ACK_MASK 0x40
+#define  DMA0_INT_ACK_DIR_INT_ACK_SHIFT 6
+#define  DMA0_INT_ACK_DIR_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA0_INT_ACK_DIR_INT_ACK_MASK) >> DMA0_INT_ACK_DIR_INT_ACK_SHIFT)
+#define  DMA0_INT_ACK_DIR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_ACK_DIR_INT_ACK_MASK) | (((uint32_t)val) << DMA0_INT_ACK_DIR_INT_ACK_SHIFT))
+
+#define  DMA0_INT_ACK_CL_ALI_INT_ACK_MASK 0x20
+#define  DMA0_INT_ACK_CL_ALI_INT_ACK_SHIFT 5
+#define  DMA0_INT_ACK_CL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA0_INT_ACK_CL_ALI_INT_ACK_MASK) >> DMA0_INT_ACK_CL_ALI_INT_ACK_SHIFT)
+#define  DMA0_INT_ACK_CL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_ACK_CL_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA0_INT_ACK_CL_ALI_INT_ACK_SHIFT))
+
+#define  DMA0_INT_ACK_EOL_ALI_INT_ACK_MASK 0x10
+#define  DMA0_INT_ACK_EOL_ALI_INT_ACK_SHIFT 4
+#define  DMA0_INT_ACK_EOL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA0_INT_ACK_EOL_ALI_INT_ACK_MASK) >> DMA0_INT_ACK_EOL_ALI_INT_ACK_SHIFT)
+#define  DMA0_INT_ACK_EOL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_ACK_EOL_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA0_INT_ACK_EOL_ALI_INT_ACK_SHIFT))
+
+#define  DMA0_INT_ACK_EOI_ALI_INT_ACK_MASK 0x8
+#define  DMA0_INT_ACK_EOI_ALI_INT_ACK_SHIFT 3
+#define  DMA0_INT_ACK_EOI_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA0_INT_ACK_EOI_ALI_INT_ACK_MASK) >> DMA0_INT_ACK_EOI_ALI_INT_ACK_SHIFT)
+#define  DMA0_INT_ACK_EOI_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_ACK_EOI_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA0_INT_ACK_EOI_ALI_INT_ACK_SHIFT))
+
+#define  DMA0_INT_ACK_EOI_ERR_INT_ACK_MASK 0x4
+#define  DMA0_INT_ACK_EOI_ERR_INT_ACK_SHIFT 2
+#define  DMA0_INT_ACK_EOI_ERR_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA0_INT_ACK_EOI_ERR_INT_ACK_MASK) >> DMA0_INT_ACK_EOI_ERR_INT_ACK_SHIFT)
+#define  DMA0_INT_ACK_EOI_ERR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_ACK_EOI_ERR_INT_ACK_MASK) | (((uint32_t)val) << DMA0_INT_ACK_EOI_ERR_INT_ACK_SHIFT))
+
+#define  DMA0_INT_ACK_FIN_INT_ACK_MASK 0x2
+#define  DMA0_INT_ACK_FIN_INT_ACK_SHIFT 1
+#define  DMA0_INT_ACK_FIN_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA0_INT_ACK_FIN_INT_ACK_MASK) >> DMA0_INT_ACK_FIN_INT_ACK_SHIFT)
+#define  DMA0_INT_ACK_FIN_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_ACK_FIN_INT_ACK_MASK) | (((uint32_t)val) << DMA0_INT_ACK_FIN_INT_ACK_SHIFT))
+
+#define  DMA0_INT_ACK_WHO_INT_ACK_MASK 0x1
+#define  DMA0_INT_ACK_WHO_INT_ACK_SHIFT 0
+#define  DMA0_INT_ACK_WHO_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA0_INT_ACK_WHO_INT_ACK_MASK) >> DMA0_INT_ACK_WHO_INT_ACK_SHIFT)
+#define  DMA0_INT_ACK_WHO_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_ACK_WHO_INT_ACK_MASK) | (((uint32_t)val) << DMA0_INT_ACK_WHO_INT_ACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (int_fo)
+//====================================================================
+
+#define  DMA0_INT_FO_RESERVED1_MASK 0xfffff800
+#define  DMA0_INT_FO_RESERVED1_SHIFT 11
+#define  DMA0_INT_FO_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA0_INT_FO_RESERVED1_MASK) >> DMA0_INT_FO_RESERVED1_SHIFT)
+#define  DMA0_INT_FO_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_FO_RESERVED1_MASK) | (((uint32_t)val) << DMA0_INT_FO_RESERVED1_SHIFT))
+
+#define  DMA0_INT_FO_RRESP_INT_FO_MASK 0x400
+#define  DMA0_INT_FO_RRESP_INT_FO_SHIFT 10
+#define  DMA0_INT_FO_RRESP_INT_FO_MASK_SHIFT(reg) (((reg) & DMA0_INT_FO_RRESP_INT_FO_MASK) >> DMA0_INT_FO_RRESP_INT_FO_SHIFT)
+#define  DMA0_INT_FO_RRESP_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_FO_RRESP_INT_FO_MASK) | (((uint32_t)val) << DMA0_INT_FO_RRESP_INT_FO_SHIFT))
+
+#define  DMA0_INT_FO_BRESP_INT_FO_MASK 0x200
+#define  DMA0_INT_FO_BRESP_INT_FO_SHIFT 9
+#define  DMA0_INT_FO_BRESP_INT_FO_MASK_SHIFT(reg) (((reg) & DMA0_INT_FO_BRESP_INT_FO_MASK) >> DMA0_INT_FO_BRESP_INT_FO_SHIFT)
+#define  DMA0_INT_FO_BRESP_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_FO_BRESP_INT_FO_MASK) | (((uint32_t)val) << DMA0_INT_FO_BRESP_INT_FO_SHIFT))
+
+#define  DMA0_INT_FO_RST_INT_FO_MASK 0x100
+#define  DMA0_INT_FO_RST_INT_FO_SHIFT 8
+#define  DMA0_INT_FO_RST_INT_FO_MASK_SHIFT(reg) (((reg) & DMA0_INT_FO_RST_INT_FO_MASK) >> DMA0_INT_FO_RST_INT_FO_SHIFT)
+#define  DMA0_INT_FO_RST_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_FO_RST_INT_FO_MASK) | (((uint32_t)val) << DMA0_INT_FO_RST_INT_FO_SHIFT))
+
+#define  DMA0_INT_FO_EOI_INT_FO_MASK 0x80
+#define  DMA0_INT_FO_EOI_INT_FO_SHIFT 7
+#define  DMA0_INT_FO_EOI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA0_INT_FO_EOI_INT_FO_MASK) >> DMA0_INT_FO_EOI_INT_FO_SHIFT)
+#define  DMA0_INT_FO_EOI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_FO_EOI_INT_FO_MASK) | (((uint32_t)val) << DMA0_INT_FO_EOI_INT_FO_SHIFT))
+
+#define  DMA0_INT_FO_DIR_INT_FO_MASK 0x40
+#define  DMA0_INT_FO_DIR_INT_FO_SHIFT 6
+#define  DMA0_INT_FO_DIR_INT_FO_MASK_SHIFT(reg) (((reg) & DMA0_INT_FO_DIR_INT_FO_MASK) >> DMA0_INT_FO_DIR_INT_FO_SHIFT)
+#define  DMA0_INT_FO_DIR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_FO_DIR_INT_FO_MASK) | (((uint32_t)val) << DMA0_INT_FO_DIR_INT_FO_SHIFT))
+
+#define  DMA0_INT_FO_CL_ALI_INT_FO_MASK 0x20
+#define  DMA0_INT_FO_CL_ALI_INT_FO_SHIFT 5
+#define  DMA0_INT_FO_CL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA0_INT_FO_CL_ALI_INT_FO_MASK) >> DMA0_INT_FO_CL_ALI_INT_FO_SHIFT)
+#define  DMA0_INT_FO_CL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_FO_CL_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA0_INT_FO_CL_ALI_INT_FO_SHIFT))
+
+#define  DMA0_INT_FO_EOL_ALI_INT_FO_MASK 0x10
+#define  DMA0_INT_FO_EOL_ALI_INT_FO_SHIFT 4
+#define  DMA0_INT_FO_EOL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA0_INT_FO_EOL_ALI_INT_FO_MASK) >> DMA0_INT_FO_EOL_ALI_INT_FO_SHIFT)
+#define  DMA0_INT_FO_EOL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_FO_EOL_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA0_INT_FO_EOL_ALI_INT_FO_SHIFT))
+
+#define  DMA0_INT_FO_EOI_ALI_INT_FO_MASK 0x8
+#define  DMA0_INT_FO_EOI_ALI_INT_FO_SHIFT 3
+#define  DMA0_INT_FO_EOI_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA0_INT_FO_EOI_ALI_INT_FO_MASK) >> DMA0_INT_FO_EOI_ALI_INT_FO_SHIFT)
+#define  DMA0_INT_FO_EOI_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_FO_EOI_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA0_INT_FO_EOI_ALI_INT_FO_SHIFT))
+
+#define  DMA0_INT_FO_EOI_ERR_INT_FO_MASK 0x4
+#define  DMA0_INT_FO_EOI_ERR_INT_FO_SHIFT 2
+#define  DMA0_INT_FO_EOI_ERR_INT_FO_MASK_SHIFT(reg) (((reg) & DMA0_INT_FO_EOI_ERR_INT_FO_MASK) >> DMA0_INT_FO_EOI_ERR_INT_FO_SHIFT)
+#define  DMA0_INT_FO_EOI_ERR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_FO_EOI_ERR_INT_FO_MASK) | (((uint32_t)val) << DMA0_INT_FO_EOI_ERR_INT_FO_SHIFT))
+
+#define  DMA0_INT_FO_FIN_INT_FO_MASK 0x2
+#define  DMA0_INT_FO_FIN_INT_FO_SHIFT 1
+#define  DMA0_INT_FO_FIN_INT_FO_MASK_SHIFT(reg) (((reg) & DMA0_INT_FO_FIN_INT_FO_MASK) >> DMA0_INT_FO_FIN_INT_FO_SHIFT)
+#define  DMA0_INT_FO_FIN_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_FO_FIN_INT_FO_MASK) | (((uint32_t)val) << DMA0_INT_FO_FIN_INT_FO_SHIFT))
+
+#define  DMA0_INT_FO_WHO_INT_FO_MASK 0x1
+#define  DMA0_INT_FO_WHO_INT_FO_SHIFT 0
+#define  DMA0_INT_FO_WHO_INT_FO_MASK_SHIFT(reg) (((reg) & DMA0_INT_FO_WHO_INT_FO_MASK) >> DMA0_INT_FO_WHO_INT_FO_SHIFT)
+#define  DMA0_INT_FO_WHO_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA0_INT_FO_WHO_INT_FO_MASK) | (((uint32_t)val) << DMA0_INT_FO_WHO_INT_FO_SHIFT))
+
+//====================================================================
+//Register: Descriptor Write Register (desc_write)
+//====================================================================
+
+#define  DMA0_DESC_WRITE_DESC_MASK 0xfffffffc
+#define  DMA0_DESC_WRITE_DESC_SHIFT 2
+#define  DMA0_DESC_WRITE_DESC_MASK_SHIFT(reg) (((reg) & DMA0_DESC_WRITE_DESC_MASK) >> DMA0_DESC_WRITE_DESC_SHIFT)
+#define  DMA0_DESC_WRITE_DESC_REPLACE_VAL(reg,val) (((reg) & ~DMA0_DESC_WRITE_DESC_MASK) | (((uint32_t)val) << DMA0_DESC_WRITE_DESC_SHIFT))
+
+#define  DMA0_DESC_WRITE_RESERVED1_MASK 0x3
+#define  DMA0_DESC_WRITE_RESERVED1_SHIFT 0
+#define  DMA0_DESC_WRITE_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA0_DESC_WRITE_RESERVED1_MASK) >> DMA0_DESC_WRITE_RESERVED1_SHIFT)
+#define  DMA0_DESC_WRITE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA0_DESC_WRITE_RESERVED1_MASK) | (((uint32_t)val) << DMA0_DESC_WRITE_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Descriptor Read Register (desc_read)
+//====================================================================
+
+#define  DMA0_DESC_READ_DESC_MASK 0xffffffff
+#define  DMA0_DESC_READ_DESC_SHIFT 0
+#define  DMA0_DESC_READ_DESC_MASK_SHIFT(reg) (((reg) & DMA0_DESC_READ_DESC_MASK) >> DMA0_DESC_READ_DESC_SHIFT)
+#define  DMA0_DESC_READ_DESC_REPLACE_VAL(reg,val) (((reg) & ~DMA0_DESC_READ_DESC_MASK) | (((uint32_t)val) << DMA0_DESC_READ_DESC_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Length Register (xfer_length)
+//====================================================================
+
+#define  DMA0_XFER_LENGTH_LEN_MASK 0xffffffff
+#define  DMA0_XFER_LENGTH_LEN_SHIFT 0
+#define  DMA0_XFER_LENGTH_LEN_MASK_SHIFT(reg) (((reg) & DMA0_XFER_LENGTH_LEN_MASK) >> DMA0_XFER_LENGTH_LEN_SHIFT)
+#define  DMA0_XFER_LENGTH_LEN_REPLACE_VAL(reg,val) (((reg) & ~DMA0_XFER_LENGTH_LEN_MASK) | (((uint32_t)val) << DMA0_XFER_LENGTH_LEN_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Address Register (xfer_addr)
+//====================================================================
+
+#define  DMA0_XFER_ADDR_ADDR_MASK 0xffffffff
+#define  DMA0_XFER_ADDR_ADDR_SHIFT 0
+#define  DMA0_XFER_ADDR_ADDR_MASK_SHIFT(reg) (((reg) & DMA0_XFER_ADDR_ADDR_MASK) >> DMA0_XFER_ADDR_ADDR_SHIFT)
+#define  DMA0_XFER_ADDR_ADDR_REPLACE_VAL(reg,val) (((reg) & ~DMA0_XFER_ADDR_ADDR_MASK) | (((uint32_t)val) << DMA0_XFER_ADDR_ADDR_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Burst Register (xfer_burst)
+//====================================================================
+
+#define  DMA0_XFER_BURST_RESERVED1_MASK 0xffffffe0
+#define  DMA0_XFER_BURST_RESERVED1_SHIFT 5
+#define  DMA0_XFER_BURST_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA0_XFER_BURST_RESERVED1_MASK) >> DMA0_XFER_BURST_RESERVED1_SHIFT)
+#define  DMA0_XFER_BURST_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA0_XFER_BURST_RESERVED1_MASK) | (((uint32_t)val) << DMA0_XFER_BURST_RESERVED1_SHIFT))
+
+#define  DMA0_XFER_BURST_BURST_MASK 0x1f
+#define  DMA0_XFER_BURST_BURST_SHIFT 0
+#define  DMA0_XFER_BURST_BURST_MASK_SHIFT(reg) (((reg) & DMA0_XFER_BURST_BURST_MASK) >> DMA0_XFER_BURST_BURST_SHIFT)
+#define  DMA0_XFER_BURST_BURST_REPLACE_VAL(reg,val) (((reg) & ~DMA0_XFER_BURST_BURST_MASK) | (((uint32_t)val) << DMA0_XFER_BURST_BURST_SHIFT))
+
+//====================================================================
+//Register: Data Valid Register (data_val)
+//====================================================================
+
+#define  DMA0_DATA_VAL_DATA_VALID_MASK 0xffffffff
+#define  DMA0_DATA_VAL_DATA_VALID_SHIFT 0
+#define  DMA0_DATA_VAL_DATA_VALID_MASK_SHIFT(reg) (((reg) & DMA0_DATA_VAL_DATA_VALID_MASK) >> DMA0_DATA_VAL_DATA_VALID_SHIFT)
+#define  DMA0_DATA_VAL_DATA_VALID_REPLACE_VAL(reg,val) (((reg) & ~DMA0_DATA_VAL_DATA_VALID_MASK) | (((uint32_t)val) << DMA0_DATA_VAL_DATA_VALID_SHIFT))
+
+//====================================================================
+//Register: Soft Reset register (reset)
+//====================================================================
+
+#define  DMA0_RESET_RESERVED1_MASK 0xfffffffe
+#define  DMA0_RESET_RESERVED1_SHIFT 1
+#define  DMA0_RESET_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA0_RESET_RESERVED1_MASK) >> DMA0_RESET_RESERVED1_SHIFT)
+#define  DMA0_RESET_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA0_RESET_RESERVED1_MASK) | (((uint32_t)val) << DMA0_RESET_RESERVED1_SHIFT))
+
+#define  DMA0_RESET_SOFT_RESET_MASK 0x1
+#define  DMA0_RESET_SOFT_RESET_SHIFT 0
+#define  DMA0_RESET_SOFT_RESET_MASK_SHIFT(reg) (((reg) & DMA0_RESET_SOFT_RESET_MASK) >> DMA0_RESET_SOFT_RESET_SHIFT)
+#define  DMA0_RESET_SOFT_RESET_REPLACE_VAL(reg,val) (((reg) & ~DMA0_RESET_SOFT_RESET_MASK) | (((uint32_t)val) << DMA0_RESET_SOFT_RESET_SHIFT))
+
+//====================================================================
+//
+//Register File: DMA channel (Instance 2 of 6) (DMA1)
+//
+//====================================================================
+
+//====================================================================
+//Register: Configuration register (cfg)
+//====================================================================
+
+#define  DMA1_CFG_RESERVED1_MASK 0xffc00000
+#define  DMA1_CFG_RESERVED1_SHIFT 22
+#define  DMA1_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA1_CFG_RESERVED1_MASK) >> DMA1_CFG_RESERVED1_SHIFT)
+#define  DMA1_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA1_CFG_RESERVED1_MASK) | (((uint32_t)val) << DMA1_CFG_RESERVED1_SHIFT))
+
+#define  DMA1_CFG_SERPENTINE_MASK 0x200000
+#define  DMA1_CFG_SERPENTINE_SHIFT 21
+#define  DMA1_CFG_SERPENTINE_MASK_SHIFT(reg) (((reg) & DMA1_CFG_SERPENTINE_MASK) >> DMA1_CFG_SERPENTINE_SHIFT)
+#define  DMA1_CFG_SERPENTINE_REPLACE_VAL(reg,val) (((reg) & ~DMA1_CFG_SERPENTINE_MASK) | (((uint32_t)val) << DMA1_CFG_SERPENTINE_SHIFT))
+
+#define  DMA1_CFG_LINE_REV_MASK 0x100000
+#define  DMA1_CFG_LINE_REV_SHIFT 20
+#define  DMA1_CFG_LINE_REV_MASK_SHIFT(reg) (((reg) & DMA1_CFG_LINE_REV_MASK) >> DMA1_CFG_LINE_REV_SHIFT)
+#define  DMA1_CFG_LINE_REV_REPLACE_VAL(reg,val) (((reg) & ~DMA1_CFG_LINE_REV_MASK) | (((uint32_t)val) << DMA1_CFG_LINE_REV_SHIFT))
+
+#define  DMA1_CFG_TRAN_REV_MASK 0x80000
+#define  DMA1_CFG_TRAN_REV_SHIFT 19
+#define  DMA1_CFG_TRAN_REV_MASK_SHIFT(reg) (((reg) & DMA1_CFG_TRAN_REV_MASK) >> DMA1_CFG_TRAN_REV_SHIFT)
+#define  DMA1_CFG_TRAN_REV_REPLACE_VAL(reg,val) (((reg) & ~DMA1_CFG_TRAN_REV_MASK) | (((uint32_t)val) << DMA1_CFG_TRAN_REV_SHIFT))
+
+#define  DMA1_CFG_UPPER_HALF_MASK 0x40000
+#define  DMA1_CFG_UPPER_HALF_SHIFT 18
+#define  DMA1_CFG_UPPER_HALF_MASK_SHIFT(reg) (((reg) & DMA1_CFG_UPPER_HALF_MASK) >> DMA1_CFG_UPPER_HALF_SHIFT)
+#define  DMA1_CFG_UPPER_HALF_REPLACE_VAL(reg,val) (((reg) & ~DMA1_CFG_UPPER_HALF_MASK) | (((uint32_t)val) << DMA1_CFG_UPPER_HALF_SHIFT))
+
+#define  DMA1_CFG_MSB_IN_MASK 0x20000
+#define  DMA1_CFG_MSB_IN_SHIFT 17
+#define  DMA1_CFG_MSB_IN_MASK_SHIFT(reg) (((reg) & DMA1_CFG_MSB_IN_MASK) >> DMA1_CFG_MSB_IN_SHIFT)
+#define  DMA1_CFG_MSB_IN_REPLACE_VAL(reg,val) (((reg) & ~DMA1_CFG_MSB_IN_MASK) | (((uint32_t)val) << DMA1_CFG_MSB_IN_SHIFT))
+
+#define  DMA1_CFG_ENABLE_MASK 0x10000
+#define  DMA1_CFG_ENABLE_SHIFT 16
+#define  DMA1_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & DMA1_CFG_ENABLE_MASK) >> DMA1_CFG_ENABLE_SHIFT)
+#define  DMA1_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~DMA1_CFG_ENABLE_MASK) | (((uint32_t)val) << DMA1_CFG_ENABLE_SHIFT))
+
+#define  DMA1_CFG_RESERVED2_MASK 0xf800
+#define  DMA1_CFG_RESERVED2_SHIFT 11
+#define  DMA1_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & DMA1_CFG_RESERVED2_MASK) >> DMA1_CFG_RESERVED2_SHIFT)
+#define  DMA1_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~DMA1_CFG_RESERVED2_MASK) | (((uint32_t)val) << DMA1_CFG_RESERVED2_SHIFT))
+
+#define  DMA1_CFG_IN_WIDTH_MASK 0x700
+#define  DMA1_CFG_IN_WIDTH_SHIFT 8
+#define  DMA1_CFG_IN_WIDTH_MASK_SHIFT(reg) (((reg) & DMA1_CFG_IN_WIDTH_MASK) >> DMA1_CFG_IN_WIDTH_SHIFT)
+#define  DMA1_CFG_IN_WIDTH_REPLACE_VAL(reg,val) (((reg) & ~DMA1_CFG_IN_WIDTH_MASK) | (((uint32_t)val) << DMA1_CFG_IN_WIDTH_SHIFT))
+
+#define  DMA1_CFG_RESERVED3_MASK 0xfc
+#define  DMA1_CFG_RESERVED3_SHIFT 2
+#define  DMA1_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & DMA1_CFG_RESERVED3_MASK) >> DMA1_CFG_RESERVED3_SHIFT)
+#define  DMA1_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~DMA1_CFG_RESERVED3_MASK) | (((uint32_t)val) << DMA1_CFG_RESERVED3_SHIFT))
+
+#define  DMA1_CFG_BURST_LEN_MASK 0x3
+#define  DMA1_CFG_BURST_LEN_SHIFT 0
+#define  DMA1_CFG_BURST_LEN_MASK_SHIFT(reg) (((reg) & DMA1_CFG_BURST_LEN_MASK) >> DMA1_CFG_BURST_LEN_SHIFT)
+#define  DMA1_CFG_BURST_LEN_REPLACE_VAL(reg,val) (((reg) & ~DMA1_CFG_BURST_LEN_MASK) | (((uint32_t)val) << DMA1_CFG_BURST_LEN_SHIFT))
+
+//====================================================================
+//Register: Status register (status)
+//====================================================================
+
+#define  DMA1_STATUS_RESERVED1_MASK 0xfffff800
+#define  DMA1_STATUS_RESERVED1_SHIFT 11
+#define  DMA1_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA1_STATUS_RESERVED1_MASK) >> DMA1_STATUS_RESERVED1_SHIFT)
+#define  DMA1_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA1_STATUS_RESERVED1_MASK) | (((uint32_t)val) << DMA1_STATUS_RESERVED1_SHIFT))
+
+#define  DMA1_STATUS_DESC_OWN_MASK 0x400
+#define  DMA1_STATUS_DESC_OWN_SHIFT 10
+#define  DMA1_STATUS_DESC_OWN_MASK_SHIFT(reg) (((reg) & DMA1_STATUS_DESC_OWN_MASK) >> DMA1_STATUS_DESC_OWN_SHIFT)
+#define  DMA1_STATUS_DESC_OWN_REPLACE_VAL(reg,val) (((reg) & ~DMA1_STATUS_DESC_OWN_MASK) | (((uint32_t)val) << DMA1_STATUS_DESC_OWN_SHIFT))
+
+#define  DMA1_STATUS_DESC_EOI_MASK 0x200
+#define  DMA1_STATUS_DESC_EOI_SHIFT 9
+#define  DMA1_STATUS_DESC_EOI_MASK_SHIFT(reg) (((reg) & DMA1_STATUS_DESC_EOI_MASK) >> DMA1_STATUS_DESC_EOI_SHIFT)
+#define  DMA1_STATUS_DESC_EOI_REPLACE_VAL(reg,val) (((reg) & ~DMA1_STATUS_DESC_EOI_MASK) | (((uint32_t)val) << DMA1_STATUS_DESC_EOI_SHIFT))
+
+#define  DMA1_STATUS_DESC_SOI_MASK 0x100
+#define  DMA1_STATUS_DESC_SOI_SHIFT 8
+#define  DMA1_STATUS_DESC_SOI_MASK_SHIFT(reg) (((reg) & DMA1_STATUS_DESC_SOI_MASK) >> DMA1_STATUS_DESC_SOI_SHIFT)
+#define  DMA1_STATUS_DESC_SOI_REPLACE_VAL(reg,val) (((reg) & ~DMA1_STATUS_DESC_SOI_MASK) | (((uint32_t)val) << DMA1_STATUS_DESC_SOI_SHIFT))
+
+#define  DMA1_STATUS_REVERSE_MASK 0x80
+#define  DMA1_STATUS_REVERSE_SHIFT 7
+#define  DMA1_STATUS_REVERSE_MASK_SHIFT(reg) (((reg) & DMA1_STATUS_REVERSE_MASK) >> DMA1_STATUS_REVERSE_SHIFT)
+#define  DMA1_STATUS_REVERSE_REPLACE_VAL(reg,val) (((reg) & ~DMA1_STATUS_REVERSE_MASK) | (((uint32_t)val) << DMA1_STATUS_REVERSE_SHIFT))
+
+#define  DMA1_STATUS_SOFTRESET_MASK 0x40
+#define  DMA1_STATUS_SOFTRESET_SHIFT 6
+#define  DMA1_STATUS_SOFTRESET_MASK_SHIFT(reg) (((reg) & DMA1_STATUS_SOFTRESET_MASK) >> DMA1_STATUS_SOFTRESET_SHIFT)
+#define  DMA1_STATUS_SOFTRESET_REPLACE_VAL(reg,val) (((reg) & ~DMA1_STATUS_SOFTRESET_MASK) | (((uint32_t)val) << DMA1_STATUS_SOFTRESET_SHIFT))
+
+#define  DMA1_STATUS_FULL_CBUF_MASK 0x20
+#define  DMA1_STATUS_FULL_CBUF_SHIFT 5
+#define  DMA1_STATUS_FULL_CBUF_MASK_SHIFT(reg) (((reg) & DMA1_STATUS_FULL_CBUF_MASK) >> DMA1_STATUS_FULL_CBUF_SHIFT)
+#define  DMA1_STATUS_FULL_CBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA1_STATUS_FULL_CBUF_MASK) | (((uint32_t)val) << DMA1_STATUS_FULL_CBUF_SHIFT))
+
+#define  DMA1_STATUS_EMPTY_CBUF_MASK 0x10
+#define  DMA1_STATUS_EMPTY_CBUF_SHIFT 4
+#define  DMA1_STATUS_EMPTY_CBUF_MASK_SHIFT(reg) (((reg) & DMA1_STATUS_EMPTY_CBUF_MASK) >> DMA1_STATUS_EMPTY_CBUF_SHIFT)
+#define  DMA1_STATUS_EMPTY_CBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA1_STATUS_EMPTY_CBUF_MASK) | (((uint32_t)val) << DMA1_STATUS_EMPTY_CBUF_SHIFT))
+
+#define  DMA1_STATUS_FULL_DBUF_MASK 0x8
+#define  DMA1_STATUS_FULL_DBUF_SHIFT 3
+#define  DMA1_STATUS_FULL_DBUF_MASK_SHIFT(reg) (((reg) & DMA1_STATUS_FULL_DBUF_MASK) >> DMA1_STATUS_FULL_DBUF_SHIFT)
+#define  DMA1_STATUS_FULL_DBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA1_STATUS_FULL_DBUF_MASK) | (((uint32_t)val) << DMA1_STATUS_FULL_DBUF_SHIFT))
+
+#define  DMA1_STATUS_EMPTY_DBUF_MASK 0x4
+#define  DMA1_STATUS_EMPTY_DBUF_SHIFT 2
+#define  DMA1_STATUS_EMPTY_DBUF_MASK_SHIFT(reg) (((reg) & DMA1_STATUS_EMPTY_DBUF_MASK) >> DMA1_STATUS_EMPTY_DBUF_SHIFT)
+#define  DMA1_STATUS_EMPTY_DBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA1_STATUS_EMPTY_DBUF_MASK) | (((uint32_t)val) << DMA1_STATUS_EMPTY_DBUF_SHIFT))
+
+#define  DMA1_STATUS_PACKER_EMPTY_MASK 0x2
+#define  DMA1_STATUS_PACKER_EMPTY_SHIFT 1
+#define  DMA1_STATUS_PACKER_EMPTY_MASK_SHIFT(reg) (((reg) & DMA1_STATUS_PACKER_EMPTY_MASK) >> DMA1_STATUS_PACKER_EMPTY_SHIFT)
+#define  DMA1_STATUS_PACKER_EMPTY_REPLACE_VAL(reg,val) (((reg) & ~DMA1_STATUS_PACKER_EMPTY_MASK) | (((uint32_t)val) << DMA1_STATUS_PACKER_EMPTY_SHIFT))
+
+#define  DMA1_STATUS_DMA_BUSY_MASK 0x1
+#define  DMA1_STATUS_DMA_BUSY_SHIFT 0
+#define  DMA1_STATUS_DMA_BUSY_MASK_SHIFT(reg) (((reg) & DMA1_STATUS_DMA_BUSY_MASK) >> DMA1_STATUS_DMA_BUSY_SHIFT)
+#define  DMA1_STATUS_DMA_BUSY_REPLACE_VAL(reg,val) (((reg) & ~DMA1_STATUS_DMA_BUSY_MASK) | (((uint32_t)val) << DMA1_STATUS_DMA_BUSY_SHIFT))
+
+//====================================================================
+//Register: Line Size Register (line_size)
+//====================================================================
+
+#define  DMA1_LINE_SIZE_RESERVED1_MASK 0xfffc0000
+#define  DMA1_LINE_SIZE_RESERVED1_SHIFT 18
+#define  DMA1_LINE_SIZE_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA1_LINE_SIZE_RESERVED1_MASK) >> DMA1_LINE_SIZE_RESERVED1_SHIFT)
+#define  DMA1_LINE_SIZE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA1_LINE_SIZE_RESERVED1_MASK) | (((uint32_t)val) << DMA1_LINE_SIZE_RESERVED1_SHIFT))
+
+#define  DMA1_LINE_SIZE_LINE_SIZE_MASK 0x3ffff
+#define  DMA1_LINE_SIZE_LINE_SIZE_SHIFT 0
+#define  DMA1_LINE_SIZE_LINE_SIZE_MASK_SHIFT(reg) (((reg) & DMA1_LINE_SIZE_LINE_SIZE_MASK) >> DMA1_LINE_SIZE_LINE_SIZE_SHIFT)
+#define  DMA1_LINE_SIZE_LINE_SIZE_REPLACE_VAL(reg,val) (((reg) & ~DMA1_LINE_SIZE_LINE_SIZE_MASK) | (((uint32_t)val) << DMA1_LINE_SIZE_LINE_SIZE_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (int_en)
+//====================================================================
+
+#define  DMA1_INT_EN_RESERVED1_MASK 0xfffff800
+#define  DMA1_INT_EN_RESERVED1_SHIFT 11
+#define  DMA1_INT_EN_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA1_INT_EN_RESERVED1_MASK) >> DMA1_INT_EN_RESERVED1_SHIFT)
+#define  DMA1_INT_EN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_EN_RESERVED1_MASK) | (((uint32_t)val) << DMA1_INT_EN_RESERVED1_SHIFT))
+
+#define  DMA1_INT_EN_RRESP_INT_EN_MASK 0x400
+#define  DMA1_INT_EN_RRESP_INT_EN_SHIFT 10
+#define  DMA1_INT_EN_RRESP_INT_EN_MASK_SHIFT(reg) (((reg) & DMA1_INT_EN_RRESP_INT_EN_MASK) >> DMA1_INT_EN_RRESP_INT_EN_SHIFT)
+#define  DMA1_INT_EN_RRESP_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_EN_RRESP_INT_EN_MASK) | (((uint32_t)val) << DMA1_INT_EN_RRESP_INT_EN_SHIFT))
+
+#define  DMA1_INT_EN_BRESP_INT_EN_MASK 0x200
+#define  DMA1_INT_EN_BRESP_INT_EN_SHIFT 9
+#define  DMA1_INT_EN_BRESP_INT_EN_MASK_SHIFT(reg) (((reg) & DMA1_INT_EN_BRESP_INT_EN_MASK) >> DMA1_INT_EN_BRESP_INT_EN_SHIFT)
+#define  DMA1_INT_EN_BRESP_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_EN_BRESP_INT_EN_MASK) | (((uint32_t)val) << DMA1_INT_EN_BRESP_INT_EN_SHIFT))
+
+#define  DMA1_INT_EN_RST_INT_EN_MASK 0x100
+#define  DMA1_INT_EN_RST_INT_EN_SHIFT 8
+#define  DMA1_INT_EN_RST_INT_EN_MASK_SHIFT(reg) (((reg) & DMA1_INT_EN_RST_INT_EN_MASK) >> DMA1_INT_EN_RST_INT_EN_SHIFT)
+#define  DMA1_INT_EN_RST_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_EN_RST_INT_EN_MASK) | (((uint32_t)val) << DMA1_INT_EN_RST_INT_EN_SHIFT))
+
+#define  DMA1_INT_EN_EOI_INT_EN_MASK 0x80
+#define  DMA1_INT_EN_EOI_INT_EN_SHIFT 7
+#define  DMA1_INT_EN_EOI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA1_INT_EN_EOI_INT_EN_MASK) >> DMA1_INT_EN_EOI_INT_EN_SHIFT)
+#define  DMA1_INT_EN_EOI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_EN_EOI_INT_EN_MASK) | (((uint32_t)val) << DMA1_INT_EN_EOI_INT_EN_SHIFT))
+
+#define  DMA1_INT_EN_DIR_INT_EN_MASK 0x40
+#define  DMA1_INT_EN_DIR_INT_EN_SHIFT 6
+#define  DMA1_INT_EN_DIR_INT_EN_MASK_SHIFT(reg) (((reg) & DMA1_INT_EN_DIR_INT_EN_MASK) >> DMA1_INT_EN_DIR_INT_EN_SHIFT)
+#define  DMA1_INT_EN_DIR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_EN_DIR_INT_EN_MASK) | (((uint32_t)val) << DMA1_INT_EN_DIR_INT_EN_SHIFT))
+
+#define  DMA1_INT_EN_CL_ALI_INT_EN_MASK 0x20
+#define  DMA1_INT_EN_CL_ALI_INT_EN_SHIFT 5
+#define  DMA1_INT_EN_CL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA1_INT_EN_CL_ALI_INT_EN_MASK) >> DMA1_INT_EN_CL_ALI_INT_EN_SHIFT)
+#define  DMA1_INT_EN_CL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_EN_CL_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA1_INT_EN_CL_ALI_INT_EN_SHIFT))
+
+#define  DMA1_INT_EN_EOL_ALI_INT_EN_MASK 0x10
+#define  DMA1_INT_EN_EOL_ALI_INT_EN_SHIFT 4
+#define  DMA1_INT_EN_EOL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA1_INT_EN_EOL_ALI_INT_EN_MASK) >> DMA1_INT_EN_EOL_ALI_INT_EN_SHIFT)
+#define  DMA1_INT_EN_EOL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_EN_EOL_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA1_INT_EN_EOL_ALI_INT_EN_SHIFT))
+
+#define  DMA1_INT_EN_EOI_ALI_INT_EN_MASK 0x8
+#define  DMA1_INT_EN_EOI_ALI_INT_EN_SHIFT 3
+#define  DMA1_INT_EN_EOI_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA1_INT_EN_EOI_ALI_INT_EN_MASK) >> DMA1_INT_EN_EOI_ALI_INT_EN_SHIFT)
+#define  DMA1_INT_EN_EOI_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_EN_EOI_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA1_INT_EN_EOI_ALI_INT_EN_SHIFT))
+
+#define  DMA1_INT_EN_EOI_ERR_INT_EN_MASK 0x4
+#define  DMA1_INT_EN_EOI_ERR_INT_EN_SHIFT 2
+#define  DMA1_INT_EN_EOI_ERR_INT_EN_MASK_SHIFT(reg) (((reg) & DMA1_INT_EN_EOI_ERR_INT_EN_MASK) >> DMA1_INT_EN_EOI_ERR_INT_EN_SHIFT)
+#define  DMA1_INT_EN_EOI_ERR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_EN_EOI_ERR_INT_EN_MASK) | (((uint32_t)val) << DMA1_INT_EN_EOI_ERR_INT_EN_SHIFT))
+
+#define  DMA1_INT_EN_FIN_INT_EN_MASK 0x2
+#define  DMA1_INT_EN_FIN_INT_EN_SHIFT 1
+#define  DMA1_INT_EN_FIN_INT_EN_MASK_SHIFT(reg) (((reg) & DMA1_INT_EN_FIN_INT_EN_MASK) >> DMA1_INT_EN_FIN_INT_EN_SHIFT)
+#define  DMA1_INT_EN_FIN_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_EN_FIN_INT_EN_MASK) | (((uint32_t)val) << DMA1_INT_EN_FIN_INT_EN_SHIFT))
+
+#define  DMA1_INT_EN_WHO_INT_EN_MASK 0x1
+#define  DMA1_INT_EN_WHO_INT_EN_SHIFT 0
+#define  DMA1_INT_EN_WHO_INT_EN_MASK_SHIFT(reg) (((reg) & DMA1_INT_EN_WHO_INT_EN_MASK) >> DMA1_INT_EN_WHO_INT_EN_SHIFT)
+#define  DMA1_INT_EN_WHO_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_EN_WHO_INT_EN_MASK) | (((uint32_t)val) << DMA1_INT_EN_WHO_INT_EN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (int_pend)
+//====================================================================
+
+#define  DMA1_INT_PEND_RESERVED1_MASK 0xfffff800
+#define  DMA1_INT_PEND_RESERVED1_SHIFT 11
+#define  DMA1_INT_PEND_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA1_INT_PEND_RESERVED1_MASK) >> DMA1_INT_PEND_RESERVED1_SHIFT)
+#define  DMA1_INT_PEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_PEND_RESERVED1_MASK) | (((uint32_t)val) << DMA1_INT_PEND_RESERVED1_SHIFT))
+
+#define  DMA1_INT_PEND_RRESP_INT_PEND_MASK 0x400
+#define  DMA1_INT_PEND_RRESP_INT_PEND_SHIFT 10
+#define  DMA1_INT_PEND_RRESP_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA1_INT_PEND_RRESP_INT_PEND_MASK) >> DMA1_INT_PEND_RRESP_INT_PEND_SHIFT)
+#define  DMA1_INT_PEND_RRESP_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_PEND_RRESP_INT_PEND_MASK) | (((uint32_t)val) << DMA1_INT_PEND_RRESP_INT_PEND_SHIFT))
+
+#define  DMA1_INT_PEND_BRESP_INT_PEND_MASK 0x200
+#define  DMA1_INT_PEND_BRESP_INT_PEND_SHIFT 9
+#define  DMA1_INT_PEND_BRESP_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA1_INT_PEND_BRESP_INT_PEND_MASK) >> DMA1_INT_PEND_BRESP_INT_PEND_SHIFT)
+#define  DMA1_INT_PEND_BRESP_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_PEND_BRESP_INT_PEND_MASK) | (((uint32_t)val) << DMA1_INT_PEND_BRESP_INT_PEND_SHIFT))
+
+#define  DMA1_INT_PEND_RST_INT_PEND_MASK 0x100
+#define  DMA1_INT_PEND_RST_INT_PEND_SHIFT 8
+#define  DMA1_INT_PEND_RST_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA1_INT_PEND_RST_INT_PEND_MASK) >> DMA1_INT_PEND_RST_INT_PEND_SHIFT)
+#define  DMA1_INT_PEND_RST_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_PEND_RST_INT_PEND_MASK) | (((uint32_t)val) << DMA1_INT_PEND_RST_INT_PEND_SHIFT))
+
+#define  DMA1_INT_PEND_EOI_INT_PEND_MASK 0x80
+#define  DMA1_INT_PEND_EOI_INT_PEND_SHIFT 7
+#define  DMA1_INT_PEND_EOI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA1_INT_PEND_EOI_INT_PEND_MASK) >> DMA1_INT_PEND_EOI_INT_PEND_SHIFT)
+#define  DMA1_INT_PEND_EOI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_PEND_EOI_INT_PEND_MASK) | (((uint32_t)val) << DMA1_INT_PEND_EOI_INT_PEND_SHIFT))
+
+#define  DMA1_INT_PEND_DIR_INT_PEND_MASK 0x40
+#define  DMA1_INT_PEND_DIR_INT_PEND_SHIFT 6
+#define  DMA1_INT_PEND_DIR_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA1_INT_PEND_DIR_INT_PEND_MASK) >> DMA1_INT_PEND_DIR_INT_PEND_SHIFT)
+#define  DMA1_INT_PEND_DIR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_PEND_DIR_INT_PEND_MASK) | (((uint32_t)val) << DMA1_INT_PEND_DIR_INT_PEND_SHIFT))
+
+#define  DMA1_INT_PEND_CL_ALI_INT_PEND_MASK 0x20
+#define  DMA1_INT_PEND_CL_ALI_INT_PEND_SHIFT 5
+#define  DMA1_INT_PEND_CL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA1_INT_PEND_CL_ALI_INT_PEND_MASK) >> DMA1_INT_PEND_CL_ALI_INT_PEND_SHIFT)
+#define  DMA1_INT_PEND_CL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_PEND_CL_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA1_INT_PEND_CL_ALI_INT_PEND_SHIFT))
+
+#define  DMA1_INT_PEND_EOL_ALI_INT_PEND_MASK 0x10
+#define  DMA1_INT_PEND_EOL_ALI_INT_PEND_SHIFT 4
+#define  DMA1_INT_PEND_EOL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA1_INT_PEND_EOL_ALI_INT_PEND_MASK) >> DMA1_INT_PEND_EOL_ALI_INT_PEND_SHIFT)
+#define  DMA1_INT_PEND_EOL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_PEND_EOL_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA1_INT_PEND_EOL_ALI_INT_PEND_SHIFT))
+
+#define  DMA1_INT_PEND_EOI_ALI_INT_PEND_MASK 0x8
+#define  DMA1_INT_PEND_EOI_ALI_INT_PEND_SHIFT 3
+#define  DMA1_INT_PEND_EOI_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA1_INT_PEND_EOI_ALI_INT_PEND_MASK) >> DMA1_INT_PEND_EOI_ALI_INT_PEND_SHIFT)
+#define  DMA1_INT_PEND_EOI_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_PEND_EOI_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA1_INT_PEND_EOI_ALI_INT_PEND_SHIFT))
+
+#define  DMA1_INT_PEND_EOI_ERR_INT_PEND_MASK 0x4
+#define  DMA1_INT_PEND_EOI_ERR_INT_PEND_SHIFT 2
+#define  DMA1_INT_PEND_EOI_ERR_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA1_INT_PEND_EOI_ERR_INT_PEND_MASK) >> DMA1_INT_PEND_EOI_ERR_INT_PEND_SHIFT)
+#define  DMA1_INT_PEND_EOI_ERR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_PEND_EOI_ERR_INT_PEND_MASK) | (((uint32_t)val) << DMA1_INT_PEND_EOI_ERR_INT_PEND_SHIFT))
+
+#define  DMA1_INT_PEND_FIN_INT_PEND_MASK 0x2
+#define  DMA1_INT_PEND_FIN_INT_PEND_SHIFT 1
+#define  DMA1_INT_PEND_FIN_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA1_INT_PEND_FIN_INT_PEND_MASK) >> DMA1_INT_PEND_FIN_INT_PEND_SHIFT)
+#define  DMA1_INT_PEND_FIN_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_PEND_FIN_INT_PEND_MASK) | (((uint32_t)val) << DMA1_INT_PEND_FIN_INT_PEND_SHIFT))
+
+#define  DMA1_INT_PEND_WHO_INT_PEND_MASK 0x1
+#define  DMA1_INT_PEND_WHO_INT_PEND_SHIFT 0
+#define  DMA1_INT_PEND_WHO_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA1_INT_PEND_WHO_INT_PEND_MASK) >> DMA1_INT_PEND_WHO_INT_PEND_SHIFT)
+#define  DMA1_INT_PEND_WHO_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_PEND_WHO_INT_PEND_MASK) | (((uint32_t)val) << DMA1_INT_PEND_WHO_INT_PEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (int_ack)
+//====================================================================
+
+#define  DMA1_INT_ACK_RESERVED1_MASK 0xfffff800
+#define  DMA1_INT_ACK_RESERVED1_SHIFT 11
+#define  DMA1_INT_ACK_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA1_INT_ACK_RESERVED1_MASK) >> DMA1_INT_ACK_RESERVED1_SHIFT)
+#define  DMA1_INT_ACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_ACK_RESERVED1_MASK) | (((uint32_t)val) << DMA1_INT_ACK_RESERVED1_SHIFT))
+
+#define  DMA1_INT_ACK_RRESP_INT_ACK_MASK 0x400
+#define  DMA1_INT_ACK_RRESP_INT_ACK_SHIFT 10
+#define  DMA1_INT_ACK_RRESP_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA1_INT_ACK_RRESP_INT_ACK_MASK) >> DMA1_INT_ACK_RRESP_INT_ACK_SHIFT)
+#define  DMA1_INT_ACK_RRESP_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_ACK_RRESP_INT_ACK_MASK) | (((uint32_t)val) << DMA1_INT_ACK_RRESP_INT_ACK_SHIFT))
+
+#define  DMA1_INT_ACK_BRESP_INT_ACK_MASK 0x200
+#define  DMA1_INT_ACK_BRESP_INT_ACK_SHIFT 9
+#define  DMA1_INT_ACK_BRESP_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA1_INT_ACK_BRESP_INT_ACK_MASK) >> DMA1_INT_ACK_BRESP_INT_ACK_SHIFT)
+#define  DMA1_INT_ACK_BRESP_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_ACK_BRESP_INT_ACK_MASK) | (((uint32_t)val) << DMA1_INT_ACK_BRESP_INT_ACK_SHIFT))
+
+#define  DMA1_INT_ACK_RST_INT_ACK_MASK 0x100
+#define  DMA1_INT_ACK_RST_INT_ACK_SHIFT 8
+#define  DMA1_INT_ACK_RST_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA1_INT_ACK_RST_INT_ACK_MASK) >> DMA1_INT_ACK_RST_INT_ACK_SHIFT)
+#define  DMA1_INT_ACK_RST_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_ACK_RST_INT_ACK_MASK) | (((uint32_t)val) << DMA1_INT_ACK_RST_INT_ACK_SHIFT))
+
+#define  DMA1_INT_ACK_EOI_INT_ACK_MASK 0x80
+#define  DMA1_INT_ACK_EOI_INT_ACK_SHIFT 7
+#define  DMA1_INT_ACK_EOI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA1_INT_ACK_EOI_INT_ACK_MASK) >> DMA1_INT_ACK_EOI_INT_ACK_SHIFT)
+#define  DMA1_INT_ACK_EOI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_ACK_EOI_INT_ACK_MASK) | (((uint32_t)val) << DMA1_INT_ACK_EOI_INT_ACK_SHIFT))
+
+#define  DMA1_INT_ACK_DIR_INT_ACK_MASK 0x40
+#define  DMA1_INT_ACK_DIR_INT_ACK_SHIFT 6
+#define  DMA1_INT_ACK_DIR_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA1_INT_ACK_DIR_INT_ACK_MASK) >> DMA1_INT_ACK_DIR_INT_ACK_SHIFT)
+#define  DMA1_INT_ACK_DIR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_ACK_DIR_INT_ACK_MASK) | (((uint32_t)val) << DMA1_INT_ACK_DIR_INT_ACK_SHIFT))
+
+#define  DMA1_INT_ACK_CL_ALI_INT_ACK_MASK 0x20
+#define  DMA1_INT_ACK_CL_ALI_INT_ACK_SHIFT 5
+#define  DMA1_INT_ACK_CL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA1_INT_ACK_CL_ALI_INT_ACK_MASK) >> DMA1_INT_ACK_CL_ALI_INT_ACK_SHIFT)
+#define  DMA1_INT_ACK_CL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_ACK_CL_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA1_INT_ACK_CL_ALI_INT_ACK_SHIFT))
+
+#define  DMA1_INT_ACK_EOL_ALI_INT_ACK_MASK 0x10
+#define  DMA1_INT_ACK_EOL_ALI_INT_ACK_SHIFT 4
+#define  DMA1_INT_ACK_EOL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA1_INT_ACK_EOL_ALI_INT_ACK_MASK) >> DMA1_INT_ACK_EOL_ALI_INT_ACK_SHIFT)
+#define  DMA1_INT_ACK_EOL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_ACK_EOL_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA1_INT_ACK_EOL_ALI_INT_ACK_SHIFT))
+
+#define  DMA1_INT_ACK_EOI_ALI_INT_ACK_MASK 0x8
+#define  DMA1_INT_ACK_EOI_ALI_INT_ACK_SHIFT 3
+#define  DMA1_INT_ACK_EOI_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA1_INT_ACK_EOI_ALI_INT_ACK_MASK) >> DMA1_INT_ACK_EOI_ALI_INT_ACK_SHIFT)
+#define  DMA1_INT_ACK_EOI_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_ACK_EOI_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA1_INT_ACK_EOI_ALI_INT_ACK_SHIFT))
+
+#define  DMA1_INT_ACK_EOI_ERR_INT_ACK_MASK 0x4
+#define  DMA1_INT_ACK_EOI_ERR_INT_ACK_SHIFT 2
+#define  DMA1_INT_ACK_EOI_ERR_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA1_INT_ACK_EOI_ERR_INT_ACK_MASK) >> DMA1_INT_ACK_EOI_ERR_INT_ACK_SHIFT)
+#define  DMA1_INT_ACK_EOI_ERR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_ACK_EOI_ERR_INT_ACK_MASK) | (((uint32_t)val) << DMA1_INT_ACK_EOI_ERR_INT_ACK_SHIFT))
+
+#define  DMA1_INT_ACK_FIN_INT_ACK_MASK 0x2
+#define  DMA1_INT_ACK_FIN_INT_ACK_SHIFT 1
+#define  DMA1_INT_ACK_FIN_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA1_INT_ACK_FIN_INT_ACK_MASK) >> DMA1_INT_ACK_FIN_INT_ACK_SHIFT)
+#define  DMA1_INT_ACK_FIN_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_ACK_FIN_INT_ACK_MASK) | (((uint32_t)val) << DMA1_INT_ACK_FIN_INT_ACK_SHIFT))
+
+#define  DMA1_INT_ACK_WHO_INT_ACK_MASK 0x1
+#define  DMA1_INT_ACK_WHO_INT_ACK_SHIFT 0
+#define  DMA1_INT_ACK_WHO_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA1_INT_ACK_WHO_INT_ACK_MASK) >> DMA1_INT_ACK_WHO_INT_ACK_SHIFT)
+#define  DMA1_INT_ACK_WHO_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_ACK_WHO_INT_ACK_MASK) | (((uint32_t)val) << DMA1_INT_ACK_WHO_INT_ACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (int_fo)
+//====================================================================
+
+#define  DMA1_INT_FO_RESERVED1_MASK 0xfffff800
+#define  DMA1_INT_FO_RESERVED1_SHIFT 11
+#define  DMA1_INT_FO_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA1_INT_FO_RESERVED1_MASK) >> DMA1_INT_FO_RESERVED1_SHIFT)
+#define  DMA1_INT_FO_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_FO_RESERVED1_MASK) | (((uint32_t)val) << DMA1_INT_FO_RESERVED1_SHIFT))
+
+#define  DMA1_INT_FO_RRESP_INT_FO_MASK 0x400
+#define  DMA1_INT_FO_RRESP_INT_FO_SHIFT 10
+#define  DMA1_INT_FO_RRESP_INT_FO_MASK_SHIFT(reg) (((reg) & DMA1_INT_FO_RRESP_INT_FO_MASK) >> DMA1_INT_FO_RRESP_INT_FO_SHIFT)
+#define  DMA1_INT_FO_RRESP_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_FO_RRESP_INT_FO_MASK) | (((uint32_t)val) << DMA1_INT_FO_RRESP_INT_FO_SHIFT))
+
+#define  DMA1_INT_FO_BRESP_INT_FO_MASK 0x200
+#define  DMA1_INT_FO_BRESP_INT_FO_SHIFT 9
+#define  DMA1_INT_FO_BRESP_INT_FO_MASK_SHIFT(reg) (((reg) & DMA1_INT_FO_BRESP_INT_FO_MASK) >> DMA1_INT_FO_BRESP_INT_FO_SHIFT)
+#define  DMA1_INT_FO_BRESP_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_FO_BRESP_INT_FO_MASK) | (((uint32_t)val) << DMA1_INT_FO_BRESP_INT_FO_SHIFT))
+
+#define  DMA1_INT_FO_RST_INT_FO_MASK 0x100
+#define  DMA1_INT_FO_RST_INT_FO_SHIFT 8
+#define  DMA1_INT_FO_RST_INT_FO_MASK_SHIFT(reg) (((reg) & DMA1_INT_FO_RST_INT_FO_MASK) >> DMA1_INT_FO_RST_INT_FO_SHIFT)
+#define  DMA1_INT_FO_RST_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_FO_RST_INT_FO_MASK) | (((uint32_t)val) << DMA1_INT_FO_RST_INT_FO_SHIFT))
+
+#define  DMA1_INT_FO_EOI_INT_FO_MASK 0x80
+#define  DMA1_INT_FO_EOI_INT_FO_SHIFT 7
+#define  DMA1_INT_FO_EOI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA1_INT_FO_EOI_INT_FO_MASK) >> DMA1_INT_FO_EOI_INT_FO_SHIFT)
+#define  DMA1_INT_FO_EOI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_FO_EOI_INT_FO_MASK) | (((uint32_t)val) << DMA1_INT_FO_EOI_INT_FO_SHIFT))
+
+#define  DMA1_INT_FO_DIR_INT_FO_MASK 0x40
+#define  DMA1_INT_FO_DIR_INT_FO_SHIFT 6
+#define  DMA1_INT_FO_DIR_INT_FO_MASK_SHIFT(reg) (((reg) & DMA1_INT_FO_DIR_INT_FO_MASK) >> DMA1_INT_FO_DIR_INT_FO_SHIFT)
+#define  DMA1_INT_FO_DIR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_FO_DIR_INT_FO_MASK) | (((uint32_t)val) << DMA1_INT_FO_DIR_INT_FO_SHIFT))
+
+#define  DMA1_INT_FO_CL_ALI_INT_FO_MASK 0x20
+#define  DMA1_INT_FO_CL_ALI_INT_FO_SHIFT 5
+#define  DMA1_INT_FO_CL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA1_INT_FO_CL_ALI_INT_FO_MASK) >> DMA1_INT_FO_CL_ALI_INT_FO_SHIFT)
+#define  DMA1_INT_FO_CL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_FO_CL_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA1_INT_FO_CL_ALI_INT_FO_SHIFT))
+
+#define  DMA1_INT_FO_EOL_ALI_INT_FO_MASK 0x10
+#define  DMA1_INT_FO_EOL_ALI_INT_FO_SHIFT 4
+#define  DMA1_INT_FO_EOL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA1_INT_FO_EOL_ALI_INT_FO_MASK) >> DMA1_INT_FO_EOL_ALI_INT_FO_SHIFT)
+#define  DMA1_INT_FO_EOL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_FO_EOL_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA1_INT_FO_EOL_ALI_INT_FO_SHIFT))
+
+#define  DMA1_INT_FO_EOI_ALI_INT_FO_MASK 0x8
+#define  DMA1_INT_FO_EOI_ALI_INT_FO_SHIFT 3
+#define  DMA1_INT_FO_EOI_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA1_INT_FO_EOI_ALI_INT_FO_MASK) >> DMA1_INT_FO_EOI_ALI_INT_FO_SHIFT)
+#define  DMA1_INT_FO_EOI_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_FO_EOI_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA1_INT_FO_EOI_ALI_INT_FO_SHIFT))
+
+#define  DMA1_INT_FO_EOI_ERR_INT_FO_MASK 0x4
+#define  DMA1_INT_FO_EOI_ERR_INT_FO_SHIFT 2
+#define  DMA1_INT_FO_EOI_ERR_INT_FO_MASK_SHIFT(reg) (((reg) & DMA1_INT_FO_EOI_ERR_INT_FO_MASK) >> DMA1_INT_FO_EOI_ERR_INT_FO_SHIFT)
+#define  DMA1_INT_FO_EOI_ERR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_FO_EOI_ERR_INT_FO_MASK) | (((uint32_t)val) << DMA1_INT_FO_EOI_ERR_INT_FO_SHIFT))
+
+#define  DMA1_INT_FO_FIN_INT_FO_MASK 0x2
+#define  DMA1_INT_FO_FIN_INT_FO_SHIFT 1
+#define  DMA1_INT_FO_FIN_INT_FO_MASK_SHIFT(reg) (((reg) & DMA1_INT_FO_FIN_INT_FO_MASK) >> DMA1_INT_FO_FIN_INT_FO_SHIFT)
+#define  DMA1_INT_FO_FIN_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_FO_FIN_INT_FO_MASK) | (((uint32_t)val) << DMA1_INT_FO_FIN_INT_FO_SHIFT))
+
+#define  DMA1_INT_FO_WHO_INT_FO_MASK 0x1
+#define  DMA1_INT_FO_WHO_INT_FO_SHIFT 0
+#define  DMA1_INT_FO_WHO_INT_FO_MASK_SHIFT(reg) (((reg) & DMA1_INT_FO_WHO_INT_FO_MASK) >> DMA1_INT_FO_WHO_INT_FO_SHIFT)
+#define  DMA1_INT_FO_WHO_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA1_INT_FO_WHO_INT_FO_MASK) | (((uint32_t)val) << DMA1_INT_FO_WHO_INT_FO_SHIFT))
+
+//====================================================================
+//Register: Descriptor Write Register (desc_write)
+//====================================================================
+
+#define  DMA1_DESC_WRITE_DESC_MASK 0xfffffffc
+#define  DMA1_DESC_WRITE_DESC_SHIFT 2
+#define  DMA1_DESC_WRITE_DESC_MASK_SHIFT(reg) (((reg) & DMA1_DESC_WRITE_DESC_MASK) >> DMA1_DESC_WRITE_DESC_SHIFT)
+#define  DMA1_DESC_WRITE_DESC_REPLACE_VAL(reg,val) (((reg) & ~DMA1_DESC_WRITE_DESC_MASK) | (((uint32_t)val) << DMA1_DESC_WRITE_DESC_SHIFT))
+
+#define  DMA1_DESC_WRITE_RESERVED1_MASK 0x3
+#define  DMA1_DESC_WRITE_RESERVED1_SHIFT 0
+#define  DMA1_DESC_WRITE_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA1_DESC_WRITE_RESERVED1_MASK) >> DMA1_DESC_WRITE_RESERVED1_SHIFT)
+#define  DMA1_DESC_WRITE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA1_DESC_WRITE_RESERVED1_MASK) | (((uint32_t)val) << DMA1_DESC_WRITE_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Descriptor Read Register (desc_read)
+//====================================================================
+
+#define  DMA1_DESC_READ_DESC_MASK 0xffffffff
+#define  DMA1_DESC_READ_DESC_SHIFT 0
+#define  DMA1_DESC_READ_DESC_MASK_SHIFT(reg) (((reg) & DMA1_DESC_READ_DESC_MASK) >> DMA1_DESC_READ_DESC_SHIFT)
+#define  DMA1_DESC_READ_DESC_REPLACE_VAL(reg,val) (((reg) & ~DMA1_DESC_READ_DESC_MASK) | (((uint32_t)val) << DMA1_DESC_READ_DESC_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Length Register (xfer_length)
+//====================================================================
+
+#define  DMA1_XFER_LENGTH_LEN_MASK 0xffffffff
+#define  DMA1_XFER_LENGTH_LEN_SHIFT 0
+#define  DMA1_XFER_LENGTH_LEN_MASK_SHIFT(reg) (((reg) & DMA1_XFER_LENGTH_LEN_MASK) >> DMA1_XFER_LENGTH_LEN_SHIFT)
+#define  DMA1_XFER_LENGTH_LEN_REPLACE_VAL(reg,val) (((reg) & ~DMA1_XFER_LENGTH_LEN_MASK) | (((uint32_t)val) << DMA1_XFER_LENGTH_LEN_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Address Register (xfer_addr)
+//====================================================================
+
+#define  DMA1_XFER_ADDR_ADDR_MASK 0xffffffff
+#define  DMA1_XFER_ADDR_ADDR_SHIFT 0
+#define  DMA1_XFER_ADDR_ADDR_MASK_SHIFT(reg) (((reg) & DMA1_XFER_ADDR_ADDR_MASK) >> DMA1_XFER_ADDR_ADDR_SHIFT)
+#define  DMA1_XFER_ADDR_ADDR_REPLACE_VAL(reg,val) (((reg) & ~DMA1_XFER_ADDR_ADDR_MASK) | (((uint32_t)val) << DMA1_XFER_ADDR_ADDR_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Burst Register (xfer_burst)
+//====================================================================
+
+#define  DMA1_XFER_BURST_RESERVED1_MASK 0xffffffe0
+#define  DMA1_XFER_BURST_RESERVED1_SHIFT 5
+#define  DMA1_XFER_BURST_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA1_XFER_BURST_RESERVED1_MASK) >> DMA1_XFER_BURST_RESERVED1_SHIFT)
+#define  DMA1_XFER_BURST_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA1_XFER_BURST_RESERVED1_MASK) | (((uint32_t)val) << DMA1_XFER_BURST_RESERVED1_SHIFT))
+
+#define  DMA1_XFER_BURST_BURST_MASK 0x1f
+#define  DMA1_XFER_BURST_BURST_SHIFT 0
+#define  DMA1_XFER_BURST_BURST_MASK_SHIFT(reg) (((reg) & DMA1_XFER_BURST_BURST_MASK) >> DMA1_XFER_BURST_BURST_SHIFT)
+#define  DMA1_XFER_BURST_BURST_REPLACE_VAL(reg,val) (((reg) & ~DMA1_XFER_BURST_BURST_MASK) | (((uint32_t)val) << DMA1_XFER_BURST_BURST_SHIFT))
+
+//====================================================================
+//Register: Data Valid Register (data_val)
+//====================================================================
+
+#define  DMA1_DATA_VAL_DATA_VALID_MASK 0xffffffff
+#define  DMA1_DATA_VAL_DATA_VALID_SHIFT 0
+#define  DMA1_DATA_VAL_DATA_VALID_MASK_SHIFT(reg) (((reg) & DMA1_DATA_VAL_DATA_VALID_MASK) >> DMA1_DATA_VAL_DATA_VALID_SHIFT)
+#define  DMA1_DATA_VAL_DATA_VALID_REPLACE_VAL(reg,val) (((reg) & ~DMA1_DATA_VAL_DATA_VALID_MASK) | (((uint32_t)val) << DMA1_DATA_VAL_DATA_VALID_SHIFT))
+
+//====================================================================
+//Register: Soft Reset register (reset)
+//====================================================================
+
+#define  DMA1_RESET_RESERVED1_MASK 0xfffffffe
+#define  DMA1_RESET_RESERVED1_SHIFT 1
+#define  DMA1_RESET_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA1_RESET_RESERVED1_MASK) >> DMA1_RESET_RESERVED1_SHIFT)
+#define  DMA1_RESET_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA1_RESET_RESERVED1_MASK) | (((uint32_t)val) << DMA1_RESET_RESERVED1_SHIFT))
+
+#define  DMA1_RESET_SOFT_RESET_MASK 0x1
+#define  DMA1_RESET_SOFT_RESET_SHIFT 0
+#define  DMA1_RESET_SOFT_RESET_MASK_SHIFT(reg) (((reg) & DMA1_RESET_SOFT_RESET_MASK) >> DMA1_RESET_SOFT_RESET_SHIFT)
+#define  DMA1_RESET_SOFT_RESET_REPLACE_VAL(reg,val) (((reg) & ~DMA1_RESET_SOFT_RESET_MASK) | (((uint32_t)val) << DMA1_RESET_SOFT_RESET_SHIFT))
+
+//====================================================================
+//
+//Register File: DMA channel (Instance 3 of 6) (DMA2)
+//
+//====================================================================
+
+//====================================================================
+//Register: Configuration register (cfg)
+//====================================================================
+
+#define  DMA2_CFG_RESERVED1_MASK 0xffc00000
+#define  DMA2_CFG_RESERVED1_SHIFT 22
+#define  DMA2_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA2_CFG_RESERVED1_MASK) >> DMA2_CFG_RESERVED1_SHIFT)
+#define  DMA2_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA2_CFG_RESERVED1_MASK) | (((uint32_t)val) << DMA2_CFG_RESERVED1_SHIFT))
+
+#define  DMA2_CFG_SERPENTINE_MASK 0x200000
+#define  DMA2_CFG_SERPENTINE_SHIFT 21
+#define  DMA2_CFG_SERPENTINE_MASK_SHIFT(reg) (((reg) & DMA2_CFG_SERPENTINE_MASK) >> DMA2_CFG_SERPENTINE_SHIFT)
+#define  DMA2_CFG_SERPENTINE_REPLACE_VAL(reg,val) (((reg) & ~DMA2_CFG_SERPENTINE_MASK) | (((uint32_t)val) << DMA2_CFG_SERPENTINE_SHIFT))
+
+#define  DMA2_CFG_LINE_REV_MASK 0x100000
+#define  DMA2_CFG_LINE_REV_SHIFT 20
+#define  DMA2_CFG_LINE_REV_MASK_SHIFT(reg) (((reg) & DMA2_CFG_LINE_REV_MASK) >> DMA2_CFG_LINE_REV_SHIFT)
+#define  DMA2_CFG_LINE_REV_REPLACE_VAL(reg,val) (((reg) & ~DMA2_CFG_LINE_REV_MASK) | (((uint32_t)val) << DMA2_CFG_LINE_REV_SHIFT))
+
+#define  DMA2_CFG_TRAN_REV_MASK 0x80000
+#define  DMA2_CFG_TRAN_REV_SHIFT 19
+#define  DMA2_CFG_TRAN_REV_MASK_SHIFT(reg) (((reg) & DMA2_CFG_TRAN_REV_MASK) >> DMA2_CFG_TRAN_REV_SHIFT)
+#define  DMA2_CFG_TRAN_REV_REPLACE_VAL(reg,val) (((reg) & ~DMA2_CFG_TRAN_REV_MASK) | (((uint32_t)val) << DMA2_CFG_TRAN_REV_SHIFT))
+
+#define  DMA2_CFG_UPPER_HALF_MASK 0x40000
+#define  DMA2_CFG_UPPER_HALF_SHIFT 18
+#define  DMA2_CFG_UPPER_HALF_MASK_SHIFT(reg) (((reg) & DMA2_CFG_UPPER_HALF_MASK) >> DMA2_CFG_UPPER_HALF_SHIFT)
+#define  DMA2_CFG_UPPER_HALF_REPLACE_VAL(reg,val) (((reg) & ~DMA2_CFG_UPPER_HALF_MASK) | (((uint32_t)val) << DMA2_CFG_UPPER_HALF_SHIFT))
+
+#define  DMA2_CFG_MSB_IN_MASK 0x20000
+#define  DMA2_CFG_MSB_IN_SHIFT 17
+#define  DMA2_CFG_MSB_IN_MASK_SHIFT(reg) (((reg) & DMA2_CFG_MSB_IN_MASK) >> DMA2_CFG_MSB_IN_SHIFT)
+#define  DMA2_CFG_MSB_IN_REPLACE_VAL(reg,val) (((reg) & ~DMA2_CFG_MSB_IN_MASK) | (((uint32_t)val) << DMA2_CFG_MSB_IN_SHIFT))
+
+#define  DMA2_CFG_ENABLE_MASK 0x10000
+#define  DMA2_CFG_ENABLE_SHIFT 16
+#define  DMA2_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & DMA2_CFG_ENABLE_MASK) >> DMA2_CFG_ENABLE_SHIFT)
+#define  DMA2_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~DMA2_CFG_ENABLE_MASK) | (((uint32_t)val) << DMA2_CFG_ENABLE_SHIFT))
+
+#define  DMA2_CFG_RESERVED2_MASK 0xf800
+#define  DMA2_CFG_RESERVED2_SHIFT 11
+#define  DMA2_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & DMA2_CFG_RESERVED2_MASK) >> DMA2_CFG_RESERVED2_SHIFT)
+#define  DMA2_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~DMA2_CFG_RESERVED2_MASK) | (((uint32_t)val) << DMA2_CFG_RESERVED2_SHIFT))
+
+#define  DMA2_CFG_IN_WIDTH_MASK 0x700
+#define  DMA2_CFG_IN_WIDTH_SHIFT 8
+#define  DMA2_CFG_IN_WIDTH_MASK_SHIFT(reg) (((reg) & DMA2_CFG_IN_WIDTH_MASK) >> DMA2_CFG_IN_WIDTH_SHIFT)
+#define  DMA2_CFG_IN_WIDTH_REPLACE_VAL(reg,val) (((reg) & ~DMA2_CFG_IN_WIDTH_MASK) | (((uint32_t)val) << DMA2_CFG_IN_WIDTH_SHIFT))
+
+#define  DMA2_CFG_RESERVED3_MASK 0xfc
+#define  DMA2_CFG_RESERVED3_SHIFT 2
+#define  DMA2_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & DMA2_CFG_RESERVED3_MASK) >> DMA2_CFG_RESERVED3_SHIFT)
+#define  DMA2_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~DMA2_CFG_RESERVED3_MASK) | (((uint32_t)val) << DMA2_CFG_RESERVED3_SHIFT))
+
+#define  DMA2_CFG_BURST_LEN_MASK 0x3
+#define  DMA2_CFG_BURST_LEN_SHIFT 0
+#define  DMA2_CFG_BURST_LEN_MASK_SHIFT(reg) (((reg) & DMA2_CFG_BURST_LEN_MASK) >> DMA2_CFG_BURST_LEN_SHIFT)
+#define  DMA2_CFG_BURST_LEN_REPLACE_VAL(reg,val) (((reg) & ~DMA2_CFG_BURST_LEN_MASK) | (((uint32_t)val) << DMA2_CFG_BURST_LEN_SHIFT))
+
+//====================================================================
+//Register: Status register (status)
+//====================================================================
+
+#define  DMA2_STATUS_RESERVED1_MASK 0xfffff800
+#define  DMA2_STATUS_RESERVED1_SHIFT 11
+#define  DMA2_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA2_STATUS_RESERVED1_MASK) >> DMA2_STATUS_RESERVED1_SHIFT)
+#define  DMA2_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA2_STATUS_RESERVED1_MASK) | (((uint32_t)val) << DMA2_STATUS_RESERVED1_SHIFT))
+
+#define  DMA2_STATUS_DESC_OWN_MASK 0x400
+#define  DMA2_STATUS_DESC_OWN_SHIFT 10
+#define  DMA2_STATUS_DESC_OWN_MASK_SHIFT(reg) (((reg) & DMA2_STATUS_DESC_OWN_MASK) >> DMA2_STATUS_DESC_OWN_SHIFT)
+#define  DMA2_STATUS_DESC_OWN_REPLACE_VAL(reg,val) (((reg) & ~DMA2_STATUS_DESC_OWN_MASK) | (((uint32_t)val) << DMA2_STATUS_DESC_OWN_SHIFT))
+
+#define  DMA2_STATUS_DESC_EOI_MASK 0x200
+#define  DMA2_STATUS_DESC_EOI_SHIFT 9
+#define  DMA2_STATUS_DESC_EOI_MASK_SHIFT(reg) (((reg) & DMA2_STATUS_DESC_EOI_MASK) >> DMA2_STATUS_DESC_EOI_SHIFT)
+#define  DMA2_STATUS_DESC_EOI_REPLACE_VAL(reg,val) (((reg) & ~DMA2_STATUS_DESC_EOI_MASK) | (((uint32_t)val) << DMA2_STATUS_DESC_EOI_SHIFT))
+
+#define  DMA2_STATUS_DESC_SOI_MASK 0x100
+#define  DMA2_STATUS_DESC_SOI_SHIFT 8
+#define  DMA2_STATUS_DESC_SOI_MASK_SHIFT(reg) (((reg) & DMA2_STATUS_DESC_SOI_MASK) >> DMA2_STATUS_DESC_SOI_SHIFT)
+#define  DMA2_STATUS_DESC_SOI_REPLACE_VAL(reg,val) (((reg) & ~DMA2_STATUS_DESC_SOI_MASK) | (((uint32_t)val) << DMA2_STATUS_DESC_SOI_SHIFT))
+
+#define  DMA2_STATUS_REVERSE_MASK 0x80
+#define  DMA2_STATUS_REVERSE_SHIFT 7
+#define  DMA2_STATUS_REVERSE_MASK_SHIFT(reg) (((reg) & DMA2_STATUS_REVERSE_MASK) >> DMA2_STATUS_REVERSE_SHIFT)
+#define  DMA2_STATUS_REVERSE_REPLACE_VAL(reg,val) (((reg) & ~DMA2_STATUS_REVERSE_MASK) | (((uint32_t)val) << DMA2_STATUS_REVERSE_SHIFT))
+
+#define  DMA2_STATUS_SOFTRESET_MASK 0x40
+#define  DMA2_STATUS_SOFTRESET_SHIFT 6
+#define  DMA2_STATUS_SOFTRESET_MASK_SHIFT(reg) (((reg) & DMA2_STATUS_SOFTRESET_MASK) >> DMA2_STATUS_SOFTRESET_SHIFT)
+#define  DMA2_STATUS_SOFTRESET_REPLACE_VAL(reg,val) (((reg) & ~DMA2_STATUS_SOFTRESET_MASK) | (((uint32_t)val) << DMA2_STATUS_SOFTRESET_SHIFT))
+
+#define  DMA2_STATUS_FULL_CBUF_MASK 0x20
+#define  DMA2_STATUS_FULL_CBUF_SHIFT 5
+#define  DMA2_STATUS_FULL_CBUF_MASK_SHIFT(reg) (((reg) & DMA2_STATUS_FULL_CBUF_MASK) >> DMA2_STATUS_FULL_CBUF_SHIFT)
+#define  DMA2_STATUS_FULL_CBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA2_STATUS_FULL_CBUF_MASK) | (((uint32_t)val) << DMA2_STATUS_FULL_CBUF_SHIFT))
+
+#define  DMA2_STATUS_EMPTY_CBUF_MASK 0x10
+#define  DMA2_STATUS_EMPTY_CBUF_SHIFT 4
+#define  DMA2_STATUS_EMPTY_CBUF_MASK_SHIFT(reg) (((reg) & DMA2_STATUS_EMPTY_CBUF_MASK) >> DMA2_STATUS_EMPTY_CBUF_SHIFT)
+#define  DMA2_STATUS_EMPTY_CBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA2_STATUS_EMPTY_CBUF_MASK) | (((uint32_t)val) << DMA2_STATUS_EMPTY_CBUF_SHIFT))
+
+#define  DMA2_STATUS_FULL_DBUF_MASK 0x8
+#define  DMA2_STATUS_FULL_DBUF_SHIFT 3
+#define  DMA2_STATUS_FULL_DBUF_MASK_SHIFT(reg) (((reg) & DMA2_STATUS_FULL_DBUF_MASK) >> DMA2_STATUS_FULL_DBUF_SHIFT)
+#define  DMA2_STATUS_FULL_DBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA2_STATUS_FULL_DBUF_MASK) | (((uint32_t)val) << DMA2_STATUS_FULL_DBUF_SHIFT))
+
+#define  DMA2_STATUS_EMPTY_DBUF_MASK 0x4
+#define  DMA2_STATUS_EMPTY_DBUF_SHIFT 2
+#define  DMA2_STATUS_EMPTY_DBUF_MASK_SHIFT(reg) (((reg) & DMA2_STATUS_EMPTY_DBUF_MASK) >> DMA2_STATUS_EMPTY_DBUF_SHIFT)
+#define  DMA2_STATUS_EMPTY_DBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA2_STATUS_EMPTY_DBUF_MASK) | (((uint32_t)val) << DMA2_STATUS_EMPTY_DBUF_SHIFT))
+
+#define  DMA2_STATUS_PACKER_EMPTY_MASK 0x2
+#define  DMA2_STATUS_PACKER_EMPTY_SHIFT 1
+#define  DMA2_STATUS_PACKER_EMPTY_MASK_SHIFT(reg) (((reg) & DMA2_STATUS_PACKER_EMPTY_MASK) >> DMA2_STATUS_PACKER_EMPTY_SHIFT)
+#define  DMA2_STATUS_PACKER_EMPTY_REPLACE_VAL(reg,val) (((reg) & ~DMA2_STATUS_PACKER_EMPTY_MASK) | (((uint32_t)val) << DMA2_STATUS_PACKER_EMPTY_SHIFT))
+
+#define  DMA2_STATUS_DMA_BUSY_MASK 0x1
+#define  DMA2_STATUS_DMA_BUSY_SHIFT 0
+#define  DMA2_STATUS_DMA_BUSY_MASK_SHIFT(reg) (((reg) & DMA2_STATUS_DMA_BUSY_MASK) >> DMA2_STATUS_DMA_BUSY_SHIFT)
+#define  DMA2_STATUS_DMA_BUSY_REPLACE_VAL(reg,val) (((reg) & ~DMA2_STATUS_DMA_BUSY_MASK) | (((uint32_t)val) << DMA2_STATUS_DMA_BUSY_SHIFT))
+
+//====================================================================
+//Register: Line Size Register (line_size)
+//====================================================================
+
+#define  DMA2_LINE_SIZE_RESERVED1_MASK 0xfffc0000
+#define  DMA2_LINE_SIZE_RESERVED1_SHIFT 18
+#define  DMA2_LINE_SIZE_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA2_LINE_SIZE_RESERVED1_MASK) >> DMA2_LINE_SIZE_RESERVED1_SHIFT)
+#define  DMA2_LINE_SIZE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA2_LINE_SIZE_RESERVED1_MASK) | (((uint32_t)val) << DMA2_LINE_SIZE_RESERVED1_SHIFT))
+
+#define  DMA2_LINE_SIZE_LINE_SIZE_MASK 0x3ffff
+#define  DMA2_LINE_SIZE_LINE_SIZE_SHIFT 0
+#define  DMA2_LINE_SIZE_LINE_SIZE_MASK_SHIFT(reg) (((reg) & DMA2_LINE_SIZE_LINE_SIZE_MASK) >> DMA2_LINE_SIZE_LINE_SIZE_SHIFT)
+#define  DMA2_LINE_SIZE_LINE_SIZE_REPLACE_VAL(reg,val) (((reg) & ~DMA2_LINE_SIZE_LINE_SIZE_MASK) | (((uint32_t)val) << DMA2_LINE_SIZE_LINE_SIZE_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (int_en)
+//====================================================================
+
+#define  DMA2_INT_EN_RESERVED1_MASK 0xfffff800
+#define  DMA2_INT_EN_RESERVED1_SHIFT 11
+#define  DMA2_INT_EN_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA2_INT_EN_RESERVED1_MASK) >> DMA2_INT_EN_RESERVED1_SHIFT)
+#define  DMA2_INT_EN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_EN_RESERVED1_MASK) | (((uint32_t)val) << DMA2_INT_EN_RESERVED1_SHIFT))
+
+#define  DMA2_INT_EN_RRESP_INT_EN_MASK 0x400
+#define  DMA2_INT_EN_RRESP_INT_EN_SHIFT 10
+#define  DMA2_INT_EN_RRESP_INT_EN_MASK_SHIFT(reg) (((reg) & DMA2_INT_EN_RRESP_INT_EN_MASK) >> DMA2_INT_EN_RRESP_INT_EN_SHIFT)
+#define  DMA2_INT_EN_RRESP_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_EN_RRESP_INT_EN_MASK) | (((uint32_t)val) << DMA2_INT_EN_RRESP_INT_EN_SHIFT))
+
+#define  DMA2_INT_EN_BRESP_INT_EN_MASK 0x200
+#define  DMA2_INT_EN_BRESP_INT_EN_SHIFT 9
+#define  DMA2_INT_EN_BRESP_INT_EN_MASK_SHIFT(reg) (((reg) & DMA2_INT_EN_BRESP_INT_EN_MASK) >> DMA2_INT_EN_BRESP_INT_EN_SHIFT)
+#define  DMA2_INT_EN_BRESP_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_EN_BRESP_INT_EN_MASK) | (((uint32_t)val) << DMA2_INT_EN_BRESP_INT_EN_SHIFT))
+
+#define  DMA2_INT_EN_RST_INT_EN_MASK 0x100
+#define  DMA2_INT_EN_RST_INT_EN_SHIFT 8
+#define  DMA2_INT_EN_RST_INT_EN_MASK_SHIFT(reg) (((reg) & DMA2_INT_EN_RST_INT_EN_MASK) >> DMA2_INT_EN_RST_INT_EN_SHIFT)
+#define  DMA2_INT_EN_RST_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_EN_RST_INT_EN_MASK) | (((uint32_t)val) << DMA2_INT_EN_RST_INT_EN_SHIFT))
+
+#define  DMA2_INT_EN_EOI_INT_EN_MASK 0x80
+#define  DMA2_INT_EN_EOI_INT_EN_SHIFT 7
+#define  DMA2_INT_EN_EOI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA2_INT_EN_EOI_INT_EN_MASK) >> DMA2_INT_EN_EOI_INT_EN_SHIFT)
+#define  DMA2_INT_EN_EOI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_EN_EOI_INT_EN_MASK) | (((uint32_t)val) << DMA2_INT_EN_EOI_INT_EN_SHIFT))
+
+#define  DMA2_INT_EN_DIR_INT_EN_MASK 0x40
+#define  DMA2_INT_EN_DIR_INT_EN_SHIFT 6
+#define  DMA2_INT_EN_DIR_INT_EN_MASK_SHIFT(reg) (((reg) & DMA2_INT_EN_DIR_INT_EN_MASK) >> DMA2_INT_EN_DIR_INT_EN_SHIFT)
+#define  DMA2_INT_EN_DIR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_EN_DIR_INT_EN_MASK) | (((uint32_t)val) << DMA2_INT_EN_DIR_INT_EN_SHIFT))
+
+#define  DMA2_INT_EN_CL_ALI_INT_EN_MASK 0x20
+#define  DMA2_INT_EN_CL_ALI_INT_EN_SHIFT 5
+#define  DMA2_INT_EN_CL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA2_INT_EN_CL_ALI_INT_EN_MASK) >> DMA2_INT_EN_CL_ALI_INT_EN_SHIFT)
+#define  DMA2_INT_EN_CL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_EN_CL_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA2_INT_EN_CL_ALI_INT_EN_SHIFT))
+
+#define  DMA2_INT_EN_EOL_ALI_INT_EN_MASK 0x10
+#define  DMA2_INT_EN_EOL_ALI_INT_EN_SHIFT 4
+#define  DMA2_INT_EN_EOL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA2_INT_EN_EOL_ALI_INT_EN_MASK) >> DMA2_INT_EN_EOL_ALI_INT_EN_SHIFT)
+#define  DMA2_INT_EN_EOL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_EN_EOL_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA2_INT_EN_EOL_ALI_INT_EN_SHIFT))
+
+#define  DMA2_INT_EN_EOI_ALI_INT_EN_MASK 0x8
+#define  DMA2_INT_EN_EOI_ALI_INT_EN_SHIFT 3
+#define  DMA2_INT_EN_EOI_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA2_INT_EN_EOI_ALI_INT_EN_MASK) >> DMA2_INT_EN_EOI_ALI_INT_EN_SHIFT)
+#define  DMA2_INT_EN_EOI_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_EN_EOI_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA2_INT_EN_EOI_ALI_INT_EN_SHIFT))
+
+#define  DMA2_INT_EN_EOI_ERR_INT_EN_MASK 0x4
+#define  DMA2_INT_EN_EOI_ERR_INT_EN_SHIFT 2
+#define  DMA2_INT_EN_EOI_ERR_INT_EN_MASK_SHIFT(reg) (((reg) & DMA2_INT_EN_EOI_ERR_INT_EN_MASK) >> DMA2_INT_EN_EOI_ERR_INT_EN_SHIFT)
+#define  DMA2_INT_EN_EOI_ERR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_EN_EOI_ERR_INT_EN_MASK) | (((uint32_t)val) << DMA2_INT_EN_EOI_ERR_INT_EN_SHIFT))
+
+#define  DMA2_INT_EN_FIN_INT_EN_MASK 0x2
+#define  DMA2_INT_EN_FIN_INT_EN_SHIFT 1
+#define  DMA2_INT_EN_FIN_INT_EN_MASK_SHIFT(reg) (((reg) & DMA2_INT_EN_FIN_INT_EN_MASK) >> DMA2_INT_EN_FIN_INT_EN_SHIFT)
+#define  DMA2_INT_EN_FIN_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_EN_FIN_INT_EN_MASK) | (((uint32_t)val) << DMA2_INT_EN_FIN_INT_EN_SHIFT))
+
+#define  DMA2_INT_EN_WHO_INT_EN_MASK 0x1
+#define  DMA2_INT_EN_WHO_INT_EN_SHIFT 0
+#define  DMA2_INT_EN_WHO_INT_EN_MASK_SHIFT(reg) (((reg) & DMA2_INT_EN_WHO_INT_EN_MASK) >> DMA2_INT_EN_WHO_INT_EN_SHIFT)
+#define  DMA2_INT_EN_WHO_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_EN_WHO_INT_EN_MASK) | (((uint32_t)val) << DMA2_INT_EN_WHO_INT_EN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (int_pend)
+//====================================================================
+
+#define  DMA2_INT_PEND_RESERVED1_MASK 0xfffff800
+#define  DMA2_INT_PEND_RESERVED1_SHIFT 11
+#define  DMA2_INT_PEND_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA2_INT_PEND_RESERVED1_MASK) >> DMA2_INT_PEND_RESERVED1_SHIFT)
+#define  DMA2_INT_PEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_PEND_RESERVED1_MASK) | (((uint32_t)val) << DMA2_INT_PEND_RESERVED1_SHIFT))
+
+#define  DMA2_INT_PEND_RRESP_INT_PEND_MASK 0x400
+#define  DMA2_INT_PEND_RRESP_INT_PEND_SHIFT 10
+#define  DMA2_INT_PEND_RRESP_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA2_INT_PEND_RRESP_INT_PEND_MASK) >> DMA2_INT_PEND_RRESP_INT_PEND_SHIFT)
+#define  DMA2_INT_PEND_RRESP_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_PEND_RRESP_INT_PEND_MASK) | (((uint32_t)val) << DMA2_INT_PEND_RRESP_INT_PEND_SHIFT))
+
+#define  DMA2_INT_PEND_BRESP_INT_PEND_MASK 0x200
+#define  DMA2_INT_PEND_BRESP_INT_PEND_SHIFT 9
+#define  DMA2_INT_PEND_BRESP_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA2_INT_PEND_BRESP_INT_PEND_MASK) >> DMA2_INT_PEND_BRESP_INT_PEND_SHIFT)
+#define  DMA2_INT_PEND_BRESP_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_PEND_BRESP_INT_PEND_MASK) | (((uint32_t)val) << DMA2_INT_PEND_BRESP_INT_PEND_SHIFT))
+
+#define  DMA2_INT_PEND_RST_INT_PEND_MASK 0x100
+#define  DMA2_INT_PEND_RST_INT_PEND_SHIFT 8
+#define  DMA2_INT_PEND_RST_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA2_INT_PEND_RST_INT_PEND_MASK) >> DMA2_INT_PEND_RST_INT_PEND_SHIFT)
+#define  DMA2_INT_PEND_RST_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_PEND_RST_INT_PEND_MASK) | (((uint32_t)val) << DMA2_INT_PEND_RST_INT_PEND_SHIFT))
+
+#define  DMA2_INT_PEND_EOI_INT_PEND_MASK 0x80
+#define  DMA2_INT_PEND_EOI_INT_PEND_SHIFT 7
+#define  DMA2_INT_PEND_EOI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA2_INT_PEND_EOI_INT_PEND_MASK) >> DMA2_INT_PEND_EOI_INT_PEND_SHIFT)
+#define  DMA2_INT_PEND_EOI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_PEND_EOI_INT_PEND_MASK) | (((uint32_t)val) << DMA2_INT_PEND_EOI_INT_PEND_SHIFT))
+
+#define  DMA2_INT_PEND_DIR_INT_PEND_MASK 0x40
+#define  DMA2_INT_PEND_DIR_INT_PEND_SHIFT 6
+#define  DMA2_INT_PEND_DIR_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA2_INT_PEND_DIR_INT_PEND_MASK) >> DMA2_INT_PEND_DIR_INT_PEND_SHIFT)
+#define  DMA2_INT_PEND_DIR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_PEND_DIR_INT_PEND_MASK) | (((uint32_t)val) << DMA2_INT_PEND_DIR_INT_PEND_SHIFT))
+
+#define  DMA2_INT_PEND_CL_ALI_INT_PEND_MASK 0x20
+#define  DMA2_INT_PEND_CL_ALI_INT_PEND_SHIFT 5
+#define  DMA2_INT_PEND_CL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA2_INT_PEND_CL_ALI_INT_PEND_MASK) >> DMA2_INT_PEND_CL_ALI_INT_PEND_SHIFT)
+#define  DMA2_INT_PEND_CL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_PEND_CL_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA2_INT_PEND_CL_ALI_INT_PEND_SHIFT))
+
+#define  DMA2_INT_PEND_EOL_ALI_INT_PEND_MASK 0x10
+#define  DMA2_INT_PEND_EOL_ALI_INT_PEND_SHIFT 4
+#define  DMA2_INT_PEND_EOL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA2_INT_PEND_EOL_ALI_INT_PEND_MASK) >> DMA2_INT_PEND_EOL_ALI_INT_PEND_SHIFT)
+#define  DMA2_INT_PEND_EOL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_PEND_EOL_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA2_INT_PEND_EOL_ALI_INT_PEND_SHIFT))
+
+#define  DMA2_INT_PEND_EOI_ALI_INT_PEND_MASK 0x8
+#define  DMA2_INT_PEND_EOI_ALI_INT_PEND_SHIFT 3
+#define  DMA2_INT_PEND_EOI_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA2_INT_PEND_EOI_ALI_INT_PEND_MASK) >> DMA2_INT_PEND_EOI_ALI_INT_PEND_SHIFT)
+#define  DMA2_INT_PEND_EOI_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_PEND_EOI_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA2_INT_PEND_EOI_ALI_INT_PEND_SHIFT))
+
+#define  DMA2_INT_PEND_EOI_ERR_INT_PEND_MASK 0x4
+#define  DMA2_INT_PEND_EOI_ERR_INT_PEND_SHIFT 2
+#define  DMA2_INT_PEND_EOI_ERR_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA2_INT_PEND_EOI_ERR_INT_PEND_MASK) >> DMA2_INT_PEND_EOI_ERR_INT_PEND_SHIFT)
+#define  DMA2_INT_PEND_EOI_ERR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_PEND_EOI_ERR_INT_PEND_MASK) | (((uint32_t)val) << DMA2_INT_PEND_EOI_ERR_INT_PEND_SHIFT))
+
+#define  DMA2_INT_PEND_FIN_INT_PEND_MASK 0x2
+#define  DMA2_INT_PEND_FIN_INT_PEND_SHIFT 1
+#define  DMA2_INT_PEND_FIN_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA2_INT_PEND_FIN_INT_PEND_MASK) >> DMA2_INT_PEND_FIN_INT_PEND_SHIFT)
+#define  DMA2_INT_PEND_FIN_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_PEND_FIN_INT_PEND_MASK) | (((uint32_t)val) << DMA2_INT_PEND_FIN_INT_PEND_SHIFT))
+
+#define  DMA2_INT_PEND_WHO_INT_PEND_MASK 0x1
+#define  DMA2_INT_PEND_WHO_INT_PEND_SHIFT 0
+#define  DMA2_INT_PEND_WHO_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA2_INT_PEND_WHO_INT_PEND_MASK) >> DMA2_INT_PEND_WHO_INT_PEND_SHIFT)
+#define  DMA2_INT_PEND_WHO_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_PEND_WHO_INT_PEND_MASK) | (((uint32_t)val) << DMA2_INT_PEND_WHO_INT_PEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (int_ack)
+//====================================================================
+
+#define  DMA2_INT_ACK_RESERVED1_MASK 0xfffff800
+#define  DMA2_INT_ACK_RESERVED1_SHIFT 11
+#define  DMA2_INT_ACK_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA2_INT_ACK_RESERVED1_MASK) >> DMA2_INT_ACK_RESERVED1_SHIFT)
+#define  DMA2_INT_ACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_ACK_RESERVED1_MASK) | (((uint32_t)val) << DMA2_INT_ACK_RESERVED1_SHIFT))
+
+#define  DMA2_INT_ACK_RRESP_INT_ACK_MASK 0x400
+#define  DMA2_INT_ACK_RRESP_INT_ACK_SHIFT 10
+#define  DMA2_INT_ACK_RRESP_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA2_INT_ACK_RRESP_INT_ACK_MASK) >> DMA2_INT_ACK_RRESP_INT_ACK_SHIFT)
+#define  DMA2_INT_ACK_RRESP_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_ACK_RRESP_INT_ACK_MASK) | (((uint32_t)val) << DMA2_INT_ACK_RRESP_INT_ACK_SHIFT))
+
+#define  DMA2_INT_ACK_BRESP_INT_ACK_MASK 0x200
+#define  DMA2_INT_ACK_BRESP_INT_ACK_SHIFT 9
+#define  DMA2_INT_ACK_BRESP_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA2_INT_ACK_BRESP_INT_ACK_MASK) >> DMA2_INT_ACK_BRESP_INT_ACK_SHIFT)
+#define  DMA2_INT_ACK_BRESP_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_ACK_BRESP_INT_ACK_MASK) | (((uint32_t)val) << DMA2_INT_ACK_BRESP_INT_ACK_SHIFT))
+
+#define  DMA2_INT_ACK_RST_INT_ACK_MASK 0x100
+#define  DMA2_INT_ACK_RST_INT_ACK_SHIFT 8
+#define  DMA2_INT_ACK_RST_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA2_INT_ACK_RST_INT_ACK_MASK) >> DMA2_INT_ACK_RST_INT_ACK_SHIFT)
+#define  DMA2_INT_ACK_RST_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_ACK_RST_INT_ACK_MASK) | (((uint32_t)val) << DMA2_INT_ACK_RST_INT_ACK_SHIFT))
+
+#define  DMA2_INT_ACK_EOI_INT_ACK_MASK 0x80
+#define  DMA2_INT_ACK_EOI_INT_ACK_SHIFT 7
+#define  DMA2_INT_ACK_EOI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA2_INT_ACK_EOI_INT_ACK_MASK) >> DMA2_INT_ACK_EOI_INT_ACK_SHIFT)
+#define  DMA2_INT_ACK_EOI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_ACK_EOI_INT_ACK_MASK) | (((uint32_t)val) << DMA2_INT_ACK_EOI_INT_ACK_SHIFT))
+
+#define  DMA2_INT_ACK_DIR_INT_ACK_MASK 0x40
+#define  DMA2_INT_ACK_DIR_INT_ACK_SHIFT 6
+#define  DMA2_INT_ACK_DIR_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA2_INT_ACK_DIR_INT_ACK_MASK) >> DMA2_INT_ACK_DIR_INT_ACK_SHIFT)
+#define  DMA2_INT_ACK_DIR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_ACK_DIR_INT_ACK_MASK) | (((uint32_t)val) << DMA2_INT_ACK_DIR_INT_ACK_SHIFT))
+
+#define  DMA2_INT_ACK_CL_ALI_INT_ACK_MASK 0x20
+#define  DMA2_INT_ACK_CL_ALI_INT_ACK_SHIFT 5
+#define  DMA2_INT_ACK_CL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA2_INT_ACK_CL_ALI_INT_ACK_MASK) >> DMA2_INT_ACK_CL_ALI_INT_ACK_SHIFT)
+#define  DMA2_INT_ACK_CL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_ACK_CL_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA2_INT_ACK_CL_ALI_INT_ACK_SHIFT))
+
+#define  DMA2_INT_ACK_EOL_ALI_INT_ACK_MASK 0x10
+#define  DMA2_INT_ACK_EOL_ALI_INT_ACK_SHIFT 4
+#define  DMA2_INT_ACK_EOL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA2_INT_ACK_EOL_ALI_INT_ACK_MASK) >> DMA2_INT_ACK_EOL_ALI_INT_ACK_SHIFT)
+#define  DMA2_INT_ACK_EOL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_ACK_EOL_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA2_INT_ACK_EOL_ALI_INT_ACK_SHIFT))
+
+#define  DMA2_INT_ACK_EOI_ALI_INT_ACK_MASK 0x8
+#define  DMA2_INT_ACK_EOI_ALI_INT_ACK_SHIFT 3
+#define  DMA2_INT_ACK_EOI_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA2_INT_ACK_EOI_ALI_INT_ACK_MASK) >> DMA2_INT_ACK_EOI_ALI_INT_ACK_SHIFT)
+#define  DMA2_INT_ACK_EOI_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_ACK_EOI_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA2_INT_ACK_EOI_ALI_INT_ACK_SHIFT))
+
+#define  DMA2_INT_ACK_EOI_ERR_INT_ACK_MASK 0x4
+#define  DMA2_INT_ACK_EOI_ERR_INT_ACK_SHIFT 2
+#define  DMA2_INT_ACK_EOI_ERR_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA2_INT_ACK_EOI_ERR_INT_ACK_MASK) >> DMA2_INT_ACK_EOI_ERR_INT_ACK_SHIFT)
+#define  DMA2_INT_ACK_EOI_ERR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_ACK_EOI_ERR_INT_ACK_MASK) | (((uint32_t)val) << DMA2_INT_ACK_EOI_ERR_INT_ACK_SHIFT))
+
+#define  DMA2_INT_ACK_FIN_INT_ACK_MASK 0x2
+#define  DMA2_INT_ACK_FIN_INT_ACK_SHIFT 1
+#define  DMA2_INT_ACK_FIN_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA2_INT_ACK_FIN_INT_ACK_MASK) >> DMA2_INT_ACK_FIN_INT_ACK_SHIFT)
+#define  DMA2_INT_ACK_FIN_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_ACK_FIN_INT_ACK_MASK) | (((uint32_t)val) << DMA2_INT_ACK_FIN_INT_ACK_SHIFT))
+
+#define  DMA2_INT_ACK_WHO_INT_ACK_MASK 0x1
+#define  DMA2_INT_ACK_WHO_INT_ACK_SHIFT 0
+#define  DMA2_INT_ACK_WHO_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA2_INT_ACK_WHO_INT_ACK_MASK) >> DMA2_INT_ACK_WHO_INT_ACK_SHIFT)
+#define  DMA2_INT_ACK_WHO_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_ACK_WHO_INT_ACK_MASK) | (((uint32_t)val) << DMA2_INT_ACK_WHO_INT_ACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (int_fo)
+//====================================================================
+
+#define  DMA2_INT_FO_RESERVED1_MASK 0xfffff800
+#define  DMA2_INT_FO_RESERVED1_SHIFT 11
+#define  DMA2_INT_FO_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA2_INT_FO_RESERVED1_MASK) >> DMA2_INT_FO_RESERVED1_SHIFT)
+#define  DMA2_INT_FO_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_FO_RESERVED1_MASK) | (((uint32_t)val) << DMA2_INT_FO_RESERVED1_SHIFT))
+
+#define  DMA2_INT_FO_RRESP_INT_FO_MASK 0x400
+#define  DMA2_INT_FO_RRESP_INT_FO_SHIFT 10
+#define  DMA2_INT_FO_RRESP_INT_FO_MASK_SHIFT(reg) (((reg) & DMA2_INT_FO_RRESP_INT_FO_MASK) >> DMA2_INT_FO_RRESP_INT_FO_SHIFT)
+#define  DMA2_INT_FO_RRESP_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_FO_RRESP_INT_FO_MASK) | (((uint32_t)val) << DMA2_INT_FO_RRESP_INT_FO_SHIFT))
+
+#define  DMA2_INT_FO_BRESP_INT_FO_MASK 0x200
+#define  DMA2_INT_FO_BRESP_INT_FO_SHIFT 9
+#define  DMA2_INT_FO_BRESP_INT_FO_MASK_SHIFT(reg) (((reg) & DMA2_INT_FO_BRESP_INT_FO_MASK) >> DMA2_INT_FO_BRESP_INT_FO_SHIFT)
+#define  DMA2_INT_FO_BRESP_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_FO_BRESP_INT_FO_MASK) | (((uint32_t)val) << DMA2_INT_FO_BRESP_INT_FO_SHIFT))
+
+#define  DMA2_INT_FO_RST_INT_FO_MASK 0x100
+#define  DMA2_INT_FO_RST_INT_FO_SHIFT 8
+#define  DMA2_INT_FO_RST_INT_FO_MASK_SHIFT(reg) (((reg) & DMA2_INT_FO_RST_INT_FO_MASK) >> DMA2_INT_FO_RST_INT_FO_SHIFT)
+#define  DMA2_INT_FO_RST_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_FO_RST_INT_FO_MASK) | (((uint32_t)val) << DMA2_INT_FO_RST_INT_FO_SHIFT))
+
+#define  DMA2_INT_FO_EOI_INT_FO_MASK 0x80
+#define  DMA2_INT_FO_EOI_INT_FO_SHIFT 7
+#define  DMA2_INT_FO_EOI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA2_INT_FO_EOI_INT_FO_MASK) >> DMA2_INT_FO_EOI_INT_FO_SHIFT)
+#define  DMA2_INT_FO_EOI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_FO_EOI_INT_FO_MASK) | (((uint32_t)val) << DMA2_INT_FO_EOI_INT_FO_SHIFT))
+
+#define  DMA2_INT_FO_DIR_INT_FO_MASK 0x40
+#define  DMA2_INT_FO_DIR_INT_FO_SHIFT 6
+#define  DMA2_INT_FO_DIR_INT_FO_MASK_SHIFT(reg) (((reg) & DMA2_INT_FO_DIR_INT_FO_MASK) >> DMA2_INT_FO_DIR_INT_FO_SHIFT)
+#define  DMA2_INT_FO_DIR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_FO_DIR_INT_FO_MASK) | (((uint32_t)val) << DMA2_INT_FO_DIR_INT_FO_SHIFT))
+
+#define  DMA2_INT_FO_CL_ALI_INT_FO_MASK 0x20
+#define  DMA2_INT_FO_CL_ALI_INT_FO_SHIFT 5
+#define  DMA2_INT_FO_CL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA2_INT_FO_CL_ALI_INT_FO_MASK) >> DMA2_INT_FO_CL_ALI_INT_FO_SHIFT)
+#define  DMA2_INT_FO_CL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_FO_CL_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA2_INT_FO_CL_ALI_INT_FO_SHIFT))
+
+#define  DMA2_INT_FO_EOL_ALI_INT_FO_MASK 0x10
+#define  DMA2_INT_FO_EOL_ALI_INT_FO_SHIFT 4
+#define  DMA2_INT_FO_EOL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA2_INT_FO_EOL_ALI_INT_FO_MASK) >> DMA2_INT_FO_EOL_ALI_INT_FO_SHIFT)
+#define  DMA2_INT_FO_EOL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_FO_EOL_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA2_INT_FO_EOL_ALI_INT_FO_SHIFT))
+
+#define  DMA2_INT_FO_EOI_ALI_INT_FO_MASK 0x8
+#define  DMA2_INT_FO_EOI_ALI_INT_FO_SHIFT 3
+#define  DMA2_INT_FO_EOI_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA2_INT_FO_EOI_ALI_INT_FO_MASK) >> DMA2_INT_FO_EOI_ALI_INT_FO_SHIFT)
+#define  DMA2_INT_FO_EOI_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_FO_EOI_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA2_INT_FO_EOI_ALI_INT_FO_SHIFT))
+
+#define  DMA2_INT_FO_EOI_ERR_INT_FO_MASK 0x4
+#define  DMA2_INT_FO_EOI_ERR_INT_FO_SHIFT 2
+#define  DMA2_INT_FO_EOI_ERR_INT_FO_MASK_SHIFT(reg) (((reg) & DMA2_INT_FO_EOI_ERR_INT_FO_MASK) >> DMA2_INT_FO_EOI_ERR_INT_FO_SHIFT)
+#define  DMA2_INT_FO_EOI_ERR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_FO_EOI_ERR_INT_FO_MASK) | (((uint32_t)val) << DMA2_INT_FO_EOI_ERR_INT_FO_SHIFT))
+
+#define  DMA2_INT_FO_FIN_INT_FO_MASK 0x2
+#define  DMA2_INT_FO_FIN_INT_FO_SHIFT 1
+#define  DMA2_INT_FO_FIN_INT_FO_MASK_SHIFT(reg) (((reg) & DMA2_INT_FO_FIN_INT_FO_MASK) >> DMA2_INT_FO_FIN_INT_FO_SHIFT)
+#define  DMA2_INT_FO_FIN_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_FO_FIN_INT_FO_MASK) | (((uint32_t)val) << DMA2_INT_FO_FIN_INT_FO_SHIFT))
+
+#define  DMA2_INT_FO_WHO_INT_FO_MASK 0x1
+#define  DMA2_INT_FO_WHO_INT_FO_SHIFT 0
+#define  DMA2_INT_FO_WHO_INT_FO_MASK_SHIFT(reg) (((reg) & DMA2_INT_FO_WHO_INT_FO_MASK) >> DMA2_INT_FO_WHO_INT_FO_SHIFT)
+#define  DMA2_INT_FO_WHO_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA2_INT_FO_WHO_INT_FO_MASK) | (((uint32_t)val) << DMA2_INT_FO_WHO_INT_FO_SHIFT))
+
+//====================================================================
+//Register: Descriptor Write Register (desc_write)
+//====================================================================
+
+#define  DMA2_DESC_WRITE_DESC_MASK 0xfffffffc
+#define  DMA2_DESC_WRITE_DESC_SHIFT 2
+#define  DMA2_DESC_WRITE_DESC_MASK_SHIFT(reg) (((reg) & DMA2_DESC_WRITE_DESC_MASK) >> DMA2_DESC_WRITE_DESC_SHIFT)
+#define  DMA2_DESC_WRITE_DESC_REPLACE_VAL(reg,val) (((reg) & ~DMA2_DESC_WRITE_DESC_MASK) | (((uint32_t)val) << DMA2_DESC_WRITE_DESC_SHIFT))
+
+#define  DMA2_DESC_WRITE_RESERVED1_MASK 0x3
+#define  DMA2_DESC_WRITE_RESERVED1_SHIFT 0
+#define  DMA2_DESC_WRITE_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA2_DESC_WRITE_RESERVED1_MASK) >> DMA2_DESC_WRITE_RESERVED1_SHIFT)
+#define  DMA2_DESC_WRITE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA2_DESC_WRITE_RESERVED1_MASK) | (((uint32_t)val) << DMA2_DESC_WRITE_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Descriptor Read Register (desc_read)
+//====================================================================
+
+#define  DMA2_DESC_READ_DESC_MASK 0xffffffff
+#define  DMA2_DESC_READ_DESC_SHIFT 0
+#define  DMA2_DESC_READ_DESC_MASK_SHIFT(reg) (((reg) & DMA2_DESC_READ_DESC_MASK) >> DMA2_DESC_READ_DESC_SHIFT)
+#define  DMA2_DESC_READ_DESC_REPLACE_VAL(reg,val) (((reg) & ~DMA2_DESC_READ_DESC_MASK) | (((uint32_t)val) << DMA2_DESC_READ_DESC_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Length Register (xfer_length)
+//====================================================================
+
+#define  DMA2_XFER_LENGTH_LEN_MASK 0xffffffff
+#define  DMA2_XFER_LENGTH_LEN_SHIFT 0
+#define  DMA2_XFER_LENGTH_LEN_MASK_SHIFT(reg) (((reg) & DMA2_XFER_LENGTH_LEN_MASK) >> DMA2_XFER_LENGTH_LEN_SHIFT)
+#define  DMA2_XFER_LENGTH_LEN_REPLACE_VAL(reg,val) (((reg) & ~DMA2_XFER_LENGTH_LEN_MASK) | (((uint32_t)val) << DMA2_XFER_LENGTH_LEN_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Address Register (xfer_addr)
+//====================================================================
+
+#define  DMA2_XFER_ADDR_ADDR_MASK 0xffffffff
+#define  DMA2_XFER_ADDR_ADDR_SHIFT 0
+#define  DMA2_XFER_ADDR_ADDR_MASK_SHIFT(reg) (((reg) & DMA2_XFER_ADDR_ADDR_MASK) >> DMA2_XFER_ADDR_ADDR_SHIFT)
+#define  DMA2_XFER_ADDR_ADDR_REPLACE_VAL(reg,val) (((reg) & ~DMA2_XFER_ADDR_ADDR_MASK) | (((uint32_t)val) << DMA2_XFER_ADDR_ADDR_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Burst Register (xfer_burst)
+//====================================================================
+
+#define  DMA2_XFER_BURST_RESERVED1_MASK 0xffffffe0
+#define  DMA2_XFER_BURST_RESERVED1_SHIFT 5
+#define  DMA2_XFER_BURST_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA2_XFER_BURST_RESERVED1_MASK) >> DMA2_XFER_BURST_RESERVED1_SHIFT)
+#define  DMA2_XFER_BURST_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA2_XFER_BURST_RESERVED1_MASK) | (((uint32_t)val) << DMA2_XFER_BURST_RESERVED1_SHIFT))
+
+#define  DMA2_XFER_BURST_BURST_MASK 0x1f
+#define  DMA2_XFER_BURST_BURST_SHIFT 0
+#define  DMA2_XFER_BURST_BURST_MASK_SHIFT(reg) (((reg) & DMA2_XFER_BURST_BURST_MASK) >> DMA2_XFER_BURST_BURST_SHIFT)
+#define  DMA2_XFER_BURST_BURST_REPLACE_VAL(reg,val) (((reg) & ~DMA2_XFER_BURST_BURST_MASK) | (((uint32_t)val) << DMA2_XFER_BURST_BURST_SHIFT))
+
+//====================================================================
+//Register: Data Valid Register (data_val)
+//====================================================================
+
+#define  DMA2_DATA_VAL_DATA_VALID_MASK 0xffffffff
+#define  DMA2_DATA_VAL_DATA_VALID_SHIFT 0
+#define  DMA2_DATA_VAL_DATA_VALID_MASK_SHIFT(reg) (((reg) & DMA2_DATA_VAL_DATA_VALID_MASK) >> DMA2_DATA_VAL_DATA_VALID_SHIFT)
+#define  DMA2_DATA_VAL_DATA_VALID_REPLACE_VAL(reg,val) (((reg) & ~DMA2_DATA_VAL_DATA_VALID_MASK) | (((uint32_t)val) << DMA2_DATA_VAL_DATA_VALID_SHIFT))
+
+//====================================================================
+//Register: Soft Reset register (reset)
+//====================================================================
+
+#define  DMA2_RESET_RESERVED1_MASK 0xfffffffe
+#define  DMA2_RESET_RESERVED1_SHIFT 1
+#define  DMA2_RESET_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA2_RESET_RESERVED1_MASK) >> DMA2_RESET_RESERVED1_SHIFT)
+#define  DMA2_RESET_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA2_RESET_RESERVED1_MASK) | (((uint32_t)val) << DMA2_RESET_RESERVED1_SHIFT))
+
+#define  DMA2_RESET_SOFT_RESET_MASK 0x1
+#define  DMA2_RESET_SOFT_RESET_SHIFT 0
+#define  DMA2_RESET_SOFT_RESET_MASK_SHIFT(reg) (((reg) & DMA2_RESET_SOFT_RESET_MASK) >> DMA2_RESET_SOFT_RESET_SHIFT)
+#define  DMA2_RESET_SOFT_RESET_REPLACE_VAL(reg,val) (((reg) & ~DMA2_RESET_SOFT_RESET_MASK) | (((uint32_t)val) << DMA2_RESET_SOFT_RESET_SHIFT))
+
+//====================================================================
+//
+//Register File: DMA channel (Instance 4 of 6) (DMA3)
+//
+//====================================================================
+
+//====================================================================
+//Register: Configuration register (cfg)
+//====================================================================
+
+#define  DMA3_CFG_RESERVED1_MASK 0xffc00000
+#define  DMA3_CFG_RESERVED1_SHIFT 22
+#define  DMA3_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA3_CFG_RESERVED1_MASK) >> DMA3_CFG_RESERVED1_SHIFT)
+#define  DMA3_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA3_CFG_RESERVED1_MASK) | (((uint32_t)val) << DMA3_CFG_RESERVED1_SHIFT))
+
+#define  DMA3_CFG_SERPENTINE_MASK 0x200000
+#define  DMA3_CFG_SERPENTINE_SHIFT 21
+#define  DMA3_CFG_SERPENTINE_MASK_SHIFT(reg) (((reg) & DMA3_CFG_SERPENTINE_MASK) >> DMA3_CFG_SERPENTINE_SHIFT)
+#define  DMA3_CFG_SERPENTINE_REPLACE_VAL(reg,val) (((reg) & ~DMA3_CFG_SERPENTINE_MASK) | (((uint32_t)val) << DMA3_CFG_SERPENTINE_SHIFT))
+
+#define  DMA3_CFG_LINE_REV_MASK 0x100000
+#define  DMA3_CFG_LINE_REV_SHIFT 20
+#define  DMA3_CFG_LINE_REV_MASK_SHIFT(reg) (((reg) & DMA3_CFG_LINE_REV_MASK) >> DMA3_CFG_LINE_REV_SHIFT)
+#define  DMA3_CFG_LINE_REV_REPLACE_VAL(reg,val) (((reg) & ~DMA3_CFG_LINE_REV_MASK) | (((uint32_t)val) << DMA3_CFG_LINE_REV_SHIFT))
+
+#define  DMA3_CFG_TRAN_REV_MASK 0x80000
+#define  DMA3_CFG_TRAN_REV_SHIFT 19
+#define  DMA3_CFG_TRAN_REV_MASK_SHIFT(reg) (((reg) & DMA3_CFG_TRAN_REV_MASK) >> DMA3_CFG_TRAN_REV_SHIFT)
+#define  DMA3_CFG_TRAN_REV_REPLACE_VAL(reg,val) (((reg) & ~DMA3_CFG_TRAN_REV_MASK) | (((uint32_t)val) << DMA3_CFG_TRAN_REV_SHIFT))
+
+#define  DMA3_CFG_UPPER_HALF_MASK 0x40000
+#define  DMA3_CFG_UPPER_HALF_SHIFT 18
+#define  DMA3_CFG_UPPER_HALF_MASK_SHIFT(reg) (((reg) & DMA3_CFG_UPPER_HALF_MASK) >> DMA3_CFG_UPPER_HALF_SHIFT)
+#define  DMA3_CFG_UPPER_HALF_REPLACE_VAL(reg,val) (((reg) & ~DMA3_CFG_UPPER_HALF_MASK) | (((uint32_t)val) << DMA3_CFG_UPPER_HALF_SHIFT))
+
+#define  DMA3_CFG_MSB_IN_MASK 0x20000
+#define  DMA3_CFG_MSB_IN_SHIFT 17
+#define  DMA3_CFG_MSB_IN_MASK_SHIFT(reg) (((reg) & DMA3_CFG_MSB_IN_MASK) >> DMA3_CFG_MSB_IN_SHIFT)
+#define  DMA3_CFG_MSB_IN_REPLACE_VAL(reg,val) (((reg) & ~DMA3_CFG_MSB_IN_MASK) | (((uint32_t)val) << DMA3_CFG_MSB_IN_SHIFT))
+
+#define  DMA3_CFG_ENABLE_MASK 0x10000
+#define  DMA3_CFG_ENABLE_SHIFT 16
+#define  DMA3_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & DMA3_CFG_ENABLE_MASK) >> DMA3_CFG_ENABLE_SHIFT)
+#define  DMA3_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~DMA3_CFG_ENABLE_MASK) | (((uint32_t)val) << DMA3_CFG_ENABLE_SHIFT))
+
+#define  DMA3_CFG_RESERVED2_MASK 0xf800
+#define  DMA3_CFG_RESERVED2_SHIFT 11
+#define  DMA3_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & DMA3_CFG_RESERVED2_MASK) >> DMA3_CFG_RESERVED2_SHIFT)
+#define  DMA3_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~DMA3_CFG_RESERVED2_MASK) | (((uint32_t)val) << DMA3_CFG_RESERVED2_SHIFT))
+
+#define  DMA3_CFG_IN_WIDTH_MASK 0x700
+#define  DMA3_CFG_IN_WIDTH_SHIFT 8
+#define  DMA3_CFG_IN_WIDTH_MASK_SHIFT(reg) (((reg) & DMA3_CFG_IN_WIDTH_MASK) >> DMA3_CFG_IN_WIDTH_SHIFT)
+#define  DMA3_CFG_IN_WIDTH_REPLACE_VAL(reg,val) (((reg) & ~DMA3_CFG_IN_WIDTH_MASK) | (((uint32_t)val) << DMA3_CFG_IN_WIDTH_SHIFT))
+
+#define  DMA3_CFG_RESERVED3_MASK 0xfc
+#define  DMA3_CFG_RESERVED3_SHIFT 2
+#define  DMA3_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & DMA3_CFG_RESERVED3_MASK) >> DMA3_CFG_RESERVED3_SHIFT)
+#define  DMA3_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~DMA3_CFG_RESERVED3_MASK) | (((uint32_t)val) << DMA3_CFG_RESERVED3_SHIFT))
+
+#define  DMA3_CFG_BURST_LEN_MASK 0x3
+#define  DMA3_CFG_BURST_LEN_SHIFT 0
+#define  DMA3_CFG_BURST_LEN_MASK_SHIFT(reg) (((reg) & DMA3_CFG_BURST_LEN_MASK) >> DMA3_CFG_BURST_LEN_SHIFT)
+#define  DMA3_CFG_BURST_LEN_REPLACE_VAL(reg,val) (((reg) & ~DMA3_CFG_BURST_LEN_MASK) | (((uint32_t)val) << DMA3_CFG_BURST_LEN_SHIFT))
+
+//====================================================================
+//Register: Status register (status)
+//====================================================================
+
+#define  DMA3_STATUS_RESERVED1_MASK 0xfffff800
+#define  DMA3_STATUS_RESERVED1_SHIFT 11
+#define  DMA3_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA3_STATUS_RESERVED1_MASK) >> DMA3_STATUS_RESERVED1_SHIFT)
+#define  DMA3_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA3_STATUS_RESERVED1_MASK) | (((uint32_t)val) << DMA3_STATUS_RESERVED1_SHIFT))
+
+#define  DMA3_STATUS_DESC_OWN_MASK 0x400
+#define  DMA3_STATUS_DESC_OWN_SHIFT 10
+#define  DMA3_STATUS_DESC_OWN_MASK_SHIFT(reg) (((reg) & DMA3_STATUS_DESC_OWN_MASK) >> DMA3_STATUS_DESC_OWN_SHIFT)
+#define  DMA3_STATUS_DESC_OWN_REPLACE_VAL(reg,val) (((reg) & ~DMA3_STATUS_DESC_OWN_MASK) | (((uint32_t)val) << DMA3_STATUS_DESC_OWN_SHIFT))
+
+#define  DMA3_STATUS_DESC_EOI_MASK 0x200
+#define  DMA3_STATUS_DESC_EOI_SHIFT 9
+#define  DMA3_STATUS_DESC_EOI_MASK_SHIFT(reg) (((reg) & DMA3_STATUS_DESC_EOI_MASK) >> DMA3_STATUS_DESC_EOI_SHIFT)
+#define  DMA3_STATUS_DESC_EOI_REPLACE_VAL(reg,val) (((reg) & ~DMA3_STATUS_DESC_EOI_MASK) | (((uint32_t)val) << DMA3_STATUS_DESC_EOI_SHIFT))
+
+#define  DMA3_STATUS_DESC_SOI_MASK 0x100
+#define  DMA3_STATUS_DESC_SOI_SHIFT 8
+#define  DMA3_STATUS_DESC_SOI_MASK_SHIFT(reg) (((reg) & DMA3_STATUS_DESC_SOI_MASK) >> DMA3_STATUS_DESC_SOI_SHIFT)
+#define  DMA3_STATUS_DESC_SOI_REPLACE_VAL(reg,val) (((reg) & ~DMA3_STATUS_DESC_SOI_MASK) | (((uint32_t)val) << DMA3_STATUS_DESC_SOI_SHIFT))
+
+#define  DMA3_STATUS_REVERSE_MASK 0x80
+#define  DMA3_STATUS_REVERSE_SHIFT 7
+#define  DMA3_STATUS_REVERSE_MASK_SHIFT(reg) (((reg) & DMA3_STATUS_REVERSE_MASK) >> DMA3_STATUS_REVERSE_SHIFT)
+#define  DMA3_STATUS_REVERSE_REPLACE_VAL(reg,val) (((reg) & ~DMA3_STATUS_REVERSE_MASK) | (((uint32_t)val) << DMA3_STATUS_REVERSE_SHIFT))
+
+#define  DMA3_STATUS_SOFTRESET_MASK 0x40
+#define  DMA3_STATUS_SOFTRESET_SHIFT 6
+#define  DMA3_STATUS_SOFTRESET_MASK_SHIFT(reg) (((reg) & DMA3_STATUS_SOFTRESET_MASK) >> DMA3_STATUS_SOFTRESET_SHIFT)
+#define  DMA3_STATUS_SOFTRESET_REPLACE_VAL(reg,val) (((reg) & ~DMA3_STATUS_SOFTRESET_MASK) | (((uint32_t)val) << DMA3_STATUS_SOFTRESET_SHIFT))
+
+#define  DMA3_STATUS_FULL_CBUF_MASK 0x20
+#define  DMA3_STATUS_FULL_CBUF_SHIFT 5
+#define  DMA3_STATUS_FULL_CBUF_MASK_SHIFT(reg) (((reg) & DMA3_STATUS_FULL_CBUF_MASK) >> DMA3_STATUS_FULL_CBUF_SHIFT)
+#define  DMA3_STATUS_FULL_CBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA3_STATUS_FULL_CBUF_MASK) | (((uint32_t)val) << DMA3_STATUS_FULL_CBUF_SHIFT))
+
+#define  DMA3_STATUS_EMPTY_CBUF_MASK 0x10
+#define  DMA3_STATUS_EMPTY_CBUF_SHIFT 4
+#define  DMA3_STATUS_EMPTY_CBUF_MASK_SHIFT(reg) (((reg) & DMA3_STATUS_EMPTY_CBUF_MASK) >> DMA3_STATUS_EMPTY_CBUF_SHIFT)
+#define  DMA3_STATUS_EMPTY_CBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA3_STATUS_EMPTY_CBUF_MASK) | (((uint32_t)val) << DMA3_STATUS_EMPTY_CBUF_SHIFT))
+
+#define  DMA3_STATUS_FULL_DBUF_MASK 0x8
+#define  DMA3_STATUS_FULL_DBUF_SHIFT 3
+#define  DMA3_STATUS_FULL_DBUF_MASK_SHIFT(reg) (((reg) & DMA3_STATUS_FULL_DBUF_MASK) >> DMA3_STATUS_FULL_DBUF_SHIFT)
+#define  DMA3_STATUS_FULL_DBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA3_STATUS_FULL_DBUF_MASK) | (((uint32_t)val) << DMA3_STATUS_FULL_DBUF_SHIFT))
+
+#define  DMA3_STATUS_EMPTY_DBUF_MASK 0x4
+#define  DMA3_STATUS_EMPTY_DBUF_SHIFT 2
+#define  DMA3_STATUS_EMPTY_DBUF_MASK_SHIFT(reg) (((reg) & DMA3_STATUS_EMPTY_DBUF_MASK) >> DMA3_STATUS_EMPTY_DBUF_SHIFT)
+#define  DMA3_STATUS_EMPTY_DBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA3_STATUS_EMPTY_DBUF_MASK) | (((uint32_t)val) << DMA3_STATUS_EMPTY_DBUF_SHIFT))
+
+#define  DMA3_STATUS_PACKER_EMPTY_MASK 0x2
+#define  DMA3_STATUS_PACKER_EMPTY_SHIFT 1
+#define  DMA3_STATUS_PACKER_EMPTY_MASK_SHIFT(reg) (((reg) & DMA3_STATUS_PACKER_EMPTY_MASK) >> DMA3_STATUS_PACKER_EMPTY_SHIFT)
+#define  DMA3_STATUS_PACKER_EMPTY_REPLACE_VAL(reg,val) (((reg) & ~DMA3_STATUS_PACKER_EMPTY_MASK) | (((uint32_t)val) << DMA3_STATUS_PACKER_EMPTY_SHIFT))
+
+#define  DMA3_STATUS_DMA_BUSY_MASK 0x1
+#define  DMA3_STATUS_DMA_BUSY_SHIFT 0
+#define  DMA3_STATUS_DMA_BUSY_MASK_SHIFT(reg) (((reg) & DMA3_STATUS_DMA_BUSY_MASK) >> DMA3_STATUS_DMA_BUSY_SHIFT)
+#define  DMA3_STATUS_DMA_BUSY_REPLACE_VAL(reg,val) (((reg) & ~DMA3_STATUS_DMA_BUSY_MASK) | (((uint32_t)val) << DMA3_STATUS_DMA_BUSY_SHIFT))
+
+//====================================================================
+//Register: Line Size Register (line_size)
+//====================================================================
+
+#define  DMA3_LINE_SIZE_RESERVED1_MASK 0xfffc0000
+#define  DMA3_LINE_SIZE_RESERVED1_SHIFT 18
+#define  DMA3_LINE_SIZE_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA3_LINE_SIZE_RESERVED1_MASK) >> DMA3_LINE_SIZE_RESERVED1_SHIFT)
+#define  DMA3_LINE_SIZE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA3_LINE_SIZE_RESERVED1_MASK) | (((uint32_t)val) << DMA3_LINE_SIZE_RESERVED1_SHIFT))
+
+#define  DMA3_LINE_SIZE_LINE_SIZE_MASK 0x3ffff
+#define  DMA3_LINE_SIZE_LINE_SIZE_SHIFT 0
+#define  DMA3_LINE_SIZE_LINE_SIZE_MASK_SHIFT(reg) (((reg) & DMA3_LINE_SIZE_LINE_SIZE_MASK) >> DMA3_LINE_SIZE_LINE_SIZE_SHIFT)
+#define  DMA3_LINE_SIZE_LINE_SIZE_REPLACE_VAL(reg,val) (((reg) & ~DMA3_LINE_SIZE_LINE_SIZE_MASK) | (((uint32_t)val) << DMA3_LINE_SIZE_LINE_SIZE_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (int_en)
+//====================================================================
+
+#define  DMA3_INT_EN_RESERVED1_MASK 0xfffff800
+#define  DMA3_INT_EN_RESERVED1_SHIFT 11
+#define  DMA3_INT_EN_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA3_INT_EN_RESERVED1_MASK) >> DMA3_INT_EN_RESERVED1_SHIFT)
+#define  DMA3_INT_EN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_EN_RESERVED1_MASK) | (((uint32_t)val) << DMA3_INT_EN_RESERVED1_SHIFT))
+
+#define  DMA3_INT_EN_RRESP_INT_EN_MASK 0x400
+#define  DMA3_INT_EN_RRESP_INT_EN_SHIFT 10
+#define  DMA3_INT_EN_RRESP_INT_EN_MASK_SHIFT(reg) (((reg) & DMA3_INT_EN_RRESP_INT_EN_MASK) >> DMA3_INT_EN_RRESP_INT_EN_SHIFT)
+#define  DMA3_INT_EN_RRESP_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_EN_RRESP_INT_EN_MASK) | (((uint32_t)val) << DMA3_INT_EN_RRESP_INT_EN_SHIFT))
+
+#define  DMA3_INT_EN_BRESP_INT_EN_MASK 0x200
+#define  DMA3_INT_EN_BRESP_INT_EN_SHIFT 9
+#define  DMA3_INT_EN_BRESP_INT_EN_MASK_SHIFT(reg) (((reg) & DMA3_INT_EN_BRESP_INT_EN_MASK) >> DMA3_INT_EN_BRESP_INT_EN_SHIFT)
+#define  DMA3_INT_EN_BRESP_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_EN_BRESP_INT_EN_MASK) | (((uint32_t)val) << DMA3_INT_EN_BRESP_INT_EN_SHIFT))
+
+#define  DMA3_INT_EN_RST_INT_EN_MASK 0x100
+#define  DMA3_INT_EN_RST_INT_EN_SHIFT 8
+#define  DMA3_INT_EN_RST_INT_EN_MASK_SHIFT(reg) (((reg) & DMA3_INT_EN_RST_INT_EN_MASK) >> DMA3_INT_EN_RST_INT_EN_SHIFT)
+#define  DMA3_INT_EN_RST_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_EN_RST_INT_EN_MASK) | (((uint32_t)val) << DMA3_INT_EN_RST_INT_EN_SHIFT))
+
+#define  DMA3_INT_EN_EOI_INT_EN_MASK 0x80
+#define  DMA3_INT_EN_EOI_INT_EN_SHIFT 7
+#define  DMA3_INT_EN_EOI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA3_INT_EN_EOI_INT_EN_MASK) >> DMA3_INT_EN_EOI_INT_EN_SHIFT)
+#define  DMA3_INT_EN_EOI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_EN_EOI_INT_EN_MASK) | (((uint32_t)val) << DMA3_INT_EN_EOI_INT_EN_SHIFT))
+
+#define  DMA3_INT_EN_DIR_INT_EN_MASK 0x40
+#define  DMA3_INT_EN_DIR_INT_EN_SHIFT 6
+#define  DMA3_INT_EN_DIR_INT_EN_MASK_SHIFT(reg) (((reg) & DMA3_INT_EN_DIR_INT_EN_MASK) >> DMA3_INT_EN_DIR_INT_EN_SHIFT)
+#define  DMA3_INT_EN_DIR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_EN_DIR_INT_EN_MASK) | (((uint32_t)val) << DMA3_INT_EN_DIR_INT_EN_SHIFT))
+
+#define  DMA3_INT_EN_CL_ALI_INT_EN_MASK 0x20
+#define  DMA3_INT_EN_CL_ALI_INT_EN_SHIFT 5
+#define  DMA3_INT_EN_CL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA3_INT_EN_CL_ALI_INT_EN_MASK) >> DMA3_INT_EN_CL_ALI_INT_EN_SHIFT)
+#define  DMA3_INT_EN_CL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_EN_CL_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA3_INT_EN_CL_ALI_INT_EN_SHIFT))
+
+#define  DMA3_INT_EN_EOL_ALI_INT_EN_MASK 0x10
+#define  DMA3_INT_EN_EOL_ALI_INT_EN_SHIFT 4
+#define  DMA3_INT_EN_EOL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA3_INT_EN_EOL_ALI_INT_EN_MASK) >> DMA3_INT_EN_EOL_ALI_INT_EN_SHIFT)
+#define  DMA3_INT_EN_EOL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_EN_EOL_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA3_INT_EN_EOL_ALI_INT_EN_SHIFT))
+
+#define  DMA3_INT_EN_EOI_ALI_INT_EN_MASK 0x8
+#define  DMA3_INT_EN_EOI_ALI_INT_EN_SHIFT 3
+#define  DMA3_INT_EN_EOI_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA3_INT_EN_EOI_ALI_INT_EN_MASK) >> DMA3_INT_EN_EOI_ALI_INT_EN_SHIFT)
+#define  DMA3_INT_EN_EOI_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_EN_EOI_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA3_INT_EN_EOI_ALI_INT_EN_SHIFT))
+
+#define  DMA3_INT_EN_EOI_ERR_INT_EN_MASK 0x4
+#define  DMA3_INT_EN_EOI_ERR_INT_EN_SHIFT 2
+#define  DMA3_INT_EN_EOI_ERR_INT_EN_MASK_SHIFT(reg) (((reg) & DMA3_INT_EN_EOI_ERR_INT_EN_MASK) >> DMA3_INT_EN_EOI_ERR_INT_EN_SHIFT)
+#define  DMA3_INT_EN_EOI_ERR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_EN_EOI_ERR_INT_EN_MASK) | (((uint32_t)val) << DMA3_INT_EN_EOI_ERR_INT_EN_SHIFT))
+
+#define  DMA3_INT_EN_FIN_INT_EN_MASK 0x2
+#define  DMA3_INT_EN_FIN_INT_EN_SHIFT 1
+#define  DMA3_INT_EN_FIN_INT_EN_MASK_SHIFT(reg) (((reg) & DMA3_INT_EN_FIN_INT_EN_MASK) >> DMA3_INT_EN_FIN_INT_EN_SHIFT)
+#define  DMA3_INT_EN_FIN_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_EN_FIN_INT_EN_MASK) | (((uint32_t)val) << DMA3_INT_EN_FIN_INT_EN_SHIFT))
+
+#define  DMA3_INT_EN_WHO_INT_EN_MASK 0x1
+#define  DMA3_INT_EN_WHO_INT_EN_SHIFT 0
+#define  DMA3_INT_EN_WHO_INT_EN_MASK_SHIFT(reg) (((reg) & DMA3_INT_EN_WHO_INT_EN_MASK) >> DMA3_INT_EN_WHO_INT_EN_SHIFT)
+#define  DMA3_INT_EN_WHO_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_EN_WHO_INT_EN_MASK) | (((uint32_t)val) << DMA3_INT_EN_WHO_INT_EN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (int_pend)
+//====================================================================
+
+#define  DMA3_INT_PEND_RESERVED1_MASK 0xfffff800
+#define  DMA3_INT_PEND_RESERVED1_SHIFT 11
+#define  DMA3_INT_PEND_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA3_INT_PEND_RESERVED1_MASK) >> DMA3_INT_PEND_RESERVED1_SHIFT)
+#define  DMA3_INT_PEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_PEND_RESERVED1_MASK) | (((uint32_t)val) << DMA3_INT_PEND_RESERVED1_SHIFT))
+
+#define  DMA3_INT_PEND_RRESP_INT_PEND_MASK 0x400
+#define  DMA3_INT_PEND_RRESP_INT_PEND_SHIFT 10
+#define  DMA3_INT_PEND_RRESP_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA3_INT_PEND_RRESP_INT_PEND_MASK) >> DMA3_INT_PEND_RRESP_INT_PEND_SHIFT)
+#define  DMA3_INT_PEND_RRESP_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_PEND_RRESP_INT_PEND_MASK) | (((uint32_t)val) << DMA3_INT_PEND_RRESP_INT_PEND_SHIFT))
+
+#define  DMA3_INT_PEND_BRESP_INT_PEND_MASK 0x200
+#define  DMA3_INT_PEND_BRESP_INT_PEND_SHIFT 9
+#define  DMA3_INT_PEND_BRESP_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA3_INT_PEND_BRESP_INT_PEND_MASK) >> DMA3_INT_PEND_BRESP_INT_PEND_SHIFT)
+#define  DMA3_INT_PEND_BRESP_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_PEND_BRESP_INT_PEND_MASK) | (((uint32_t)val) << DMA3_INT_PEND_BRESP_INT_PEND_SHIFT))
+
+#define  DMA3_INT_PEND_RST_INT_PEND_MASK 0x100
+#define  DMA3_INT_PEND_RST_INT_PEND_SHIFT 8
+#define  DMA3_INT_PEND_RST_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA3_INT_PEND_RST_INT_PEND_MASK) >> DMA3_INT_PEND_RST_INT_PEND_SHIFT)
+#define  DMA3_INT_PEND_RST_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_PEND_RST_INT_PEND_MASK) | (((uint32_t)val) << DMA3_INT_PEND_RST_INT_PEND_SHIFT))
+
+#define  DMA3_INT_PEND_EOI_INT_PEND_MASK 0x80
+#define  DMA3_INT_PEND_EOI_INT_PEND_SHIFT 7
+#define  DMA3_INT_PEND_EOI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA3_INT_PEND_EOI_INT_PEND_MASK) >> DMA3_INT_PEND_EOI_INT_PEND_SHIFT)
+#define  DMA3_INT_PEND_EOI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_PEND_EOI_INT_PEND_MASK) | (((uint32_t)val) << DMA3_INT_PEND_EOI_INT_PEND_SHIFT))
+
+#define  DMA3_INT_PEND_DIR_INT_PEND_MASK 0x40
+#define  DMA3_INT_PEND_DIR_INT_PEND_SHIFT 6
+#define  DMA3_INT_PEND_DIR_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA3_INT_PEND_DIR_INT_PEND_MASK) >> DMA3_INT_PEND_DIR_INT_PEND_SHIFT)
+#define  DMA3_INT_PEND_DIR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_PEND_DIR_INT_PEND_MASK) | (((uint32_t)val) << DMA3_INT_PEND_DIR_INT_PEND_SHIFT))
+
+#define  DMA3_INT_PEND_CL_ALI_INT_PEND_MASK 0x20
+#define  DMA3_INT_PEND_CL_ALI_INT_PEND_SHIFT 5
+#define  DMA3_INT_PEND_CL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA3_INT_PEND_CL_ALI_INT_PEND_MASK) >> DMA3_INT_PEND_CL_ALI_INT_PEND_SHIFT)
+#define  DMA3_INT_PEND_CL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_PEND_CL_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA3_INT_PEND_CL_ALI_INT_PEND_SHIFT))
+
+#define  DMA3_INT_PEND_EOL_ALI_INT_PEND_MASK 0x10
+#define  DMA3_INT_PEND_EOL_ALI_INT_PEND_SHIFT 4
+#define  DMA3_INT_PEND_EOL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA3_INT_PEND_EOL_ALI_INT_PEND_MASK) >> DMA3_INT_PEND_EOL_ALI_INT_PEND_SHIFT)
+#define  DMA3_INT_PEND_EOL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_PEND_EOL_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA3_INT_PEND_EOL_ALI_INT_PEND_SHIFT))
+
+#define  DMA3_INT_PEND_EOI_ALI_INT_PEND_MASK 0x8
+#define  DMA3_INT_PEND_EOI_ALI_INT_PEND_SHIFT 3
+#define  DMA3_INT_PEND_EOI_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA3_INT_PEND_EOI_ALI_INT_PEND_MASK) >> DMA3_INT_PEND_EOI_ALI_INT_PEND_SHIFT)
+#define  DMA3_INT_PEND_EOI_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_PEND_EOI_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA3_INT_PEND_EOI_ALI_INT_PEND_SHIFT))
+
+#define  DMA3_INT_PEND_EOI_ERR_INT_PEND_MASK 0x4
+#define  DMA3_INT_PEND_EOI_ERR_INT_PEND_SHIFT 2
+#define  DMA3_INT_PEND_EOI_ERR_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA3_INT_PEND_EOI_ERR_INT_PEND_MASK) >> DMA3_INT_PEND_EOI_ERR_INT_PEND_SHIFT)
+#define  DMA3_INT_PEND_EOI_ERR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_PEND_EOI_ERR_INT_PEND_MASK) | (((uint32_t)val) << DMA3_INT_PEND_EOI_ERR_INT_PEND_SHIFT))
+
+#define  DMA3_INT_PEND_FIN_INT_PEND_MASK 0x2
+#define  DMA3_INT_PEND_FIN_INT_PEND_SHIFT 1
+#define  DMA3_INT_PEND_FIN_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA3_INT_PEND_FIN_INT_PEND_MASK) >> DMA3_INT_PEND_FIN_INT_PEND_SHIFT)
+#define  DMA3_INT_PEND_FIN_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_PEND_FIN_INT_PEND_MASK) | (((uint32_t)val) << DMA3_INT_PEND_FIN_INT_PEND_SHIFT))
+
+#define  DMA3_INT_PEND_WHO_INT_PEND_MASK 0x1
+#define  DMA3_INT_PEND_WHO_INT_PEND_SHIFT 0
+#define  DMA3_INT_PEND_WHO_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA3_INT_PEND_WHO_INT_PEND_MASK) >> DMA3_INT_PEND_WHO_INT_PEND_SHIFT)
+#define  DMA3_INT_PEND_WHO_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_PEND_WHO_INT_PEND_MASK) | (((uint32_t)val) << DMA3_INT_PEND_WHO_INT_PEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (int_ack)
+//====================================================================
+
+#define  DMA3_INT_ACK_RESERVED1_MASK 0xfffff800
+#define  DMA3_INT_ACK_RESERVED1_SHIFT 11
+#define  DMA3_INT_ACK_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA3_INT_ACK_RESERVED1_MASK) >> DMA3_INT_ACK_RESERVED1_SHIFT)
+#define  DMA3_INT_ACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_ACK_RESERVED1_MASK) | (((uint32_t)val) << DMA3_INT_ACK_RESERVED1_SHIFT))
+
+#define  DMA3_INT_ACK_RRESP_INT_ACK_MASK 0x400
+#define  DMA3_INT_ACK_RRESP_INT_ACK_SHIFT 10
+#define  DMA3_INT_ACK_RRESP_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA3_INT_ACK_RRESP_INT_ACK_MASK) >> DMA3_INT_ACK_RRESP_INT_ACK_SHIFT)
+#define  DMA3_INT_ACK_RRESP_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_ACK_RRESP_INT_ACK_MASK) | (((uint32_t)val) << DMA3_INT_ACK_RRESP_INT_ACK_SHIFT))
+
+#define  DMA3_INT_ACK_BRESP_INT_ACK_MASK 0x200
+#define  DMA3_INT_ACK_BRESP_INT_ACK_SHIFT 9
+#define  DMA3_INT_ACK_BRESP_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA3_INT_ACK_BRESP_INT_ACK_MASK) >> DMA3_INT_ACK_BRESP_INT_ACK_SHIFT)
+#define  DMA3_INT_ACK_BRESP_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_ACK_BRESP_INT_ACK_MASK) | (((uint32_t)val) << DMA3_INT_ACK_BRESP_INT_ACK_SHIFT))
+
+#define  DMA3_INT_ACK_RST_INT_ACK_MASK 0x100
+#define  DMA3_INT_ACK_RST_INT_ACK_SHIFT 8
+#define  DMA3_INT_ACK_RST_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA3_INT_ACK_RST_INT_ACK_MASK) >> DMA3_INT_ACK_RST_INT_ACK_SHIFT)
+#define  DMA3_INT_ACK_RST_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_ACK_RST_INT_ACK_MASK) | (((uint32_t)val) << DMA3_INT_ACK_RST_INT_ACK_SHIFT))
+
+#define  DMA3_INT_ACK_EOI_INT_ACK_MASK 0x80
+#define  DMA3_INT_ACK_EOI_INT_ACK_SHIFT 7
+#define  DMA3_INT_ACK_EOI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA3_INT_ACK_EOI_INT_ACK_MASK) >> DMA3_INT_ACK_EOI_INT_ACK_SHIFT)
+#define  DMA3_INT_ACK_EOI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_ACK_EOI_INT_ACK_MASK) | (((uint32_t)val) << DMA3_INT_ACK_EOI_INT_ACK_SHIFT))
+
+#define  DMA3_INT_ACK_DIR_INT_ACK_MASK 0x40
+#define  DMA3_INT_ACK_DIR_INT_ACK_SHIFT 6
+#define  DMA3_INT_ACK_DIR_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA3_INT_ACK_DIR_INT_ACK_MASK) >> DMA3_INT_ACK_DIR_INT_ACK_SHIFT)
+#define  DMA3_INT_ACK_DIR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_ACK_DIR_INT_ACK_MASK) | (((uint32_t)val) << DMA3_INT_ACK_DIR_INT_ACK_SHIFT))
+
+#define  DMA3_INT_ACK_CL_ALI_INT_ACK_MASK 0x20
+#define  DMA3_INT_ACK_CL_ALI_INT_ACK_SHIFT 5
+#define  DMA3_INT_ACK_CL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA3_INT_ACK_CL_ALI_INT_ACK_MASK) >> DMA3_INT_ACK_CL_ALI_INT_ACK_SHIFT)
+#define  DMA3_INT_ACK_CL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_ACK_CL_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA3_INT_ACK_CL_ALI_INT_ACK_SHIFT))
+
+#define  DMA3_INT_ACK_EOL_ALI_INT_ACK_MASK 0x10
+#define  DMA3_INT_ACK_EOL_ALI_INT_ACK_SHIFT 4
+#define  DMA3_INT_ACK_EOL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA3_INT_ACK_EOL_ALI_INT_ACK_MASK) >> DMA3_INT_ACK_EOL_ALI_INT_ACK_SHIFT)
+#define  DMA3_INT_ACK_EOL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_ACK_EOL_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA3_INT_ACK_EOL_ALI_INT_ACK_SHIFT))
+
+#define  DMA3_INT_ACK_EOI_ALI_INT_ACK_MASK 0x8
+#define  DMA3_INT_ACK_EOI_ALI_INT_ACK_SHIFT 3
+#define  DMA3_INT_ACK_EOI_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA3_INT_ACK_EOI_ALI_INT_ACK_MASK) >> DMA3_INT_ACK_EOI_ALI_INT_ACK_SHIFT)
+#define  DMA3_INT_ACK_EOI_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_ACK_EOI_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA3_INT_ACK_EOI_ALI_INT_ACK_SHIFT))
+
+#define  DMA3_INT_ACK_EOI_ERR_INT_ACK_MASK 0x4
+#define  DMA3_INT_ACK_EOI_ERR_INT_ACK_SHIFT 2
+#define  DMA3_INT_ACK_EOI_ERR_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA3_INT_ACK_EOI_ERR_INT_ACK_MASK) >> DMA3_INT_ACK_EOI_ERR_INT_ACK_SHIFT)
+#define  DMA3_INT_ACK_EOI_ERR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_ACK_EOI_ERR_INT_ACK_MASK) | (((uint32_t)val) << DMA3_INT_ACK_EOI_ERR_INT_ACK_SHIFT))
+
+#define  DMA3_INT_ACK_FIN_INT_ACK_MASK 0x2
+#define  DMA3_INT_ACK_FIN_INT_ACK_SHIFT 1
+#define  DMA3_INT_ACK_FIN_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA3_INT_ACK_FIN_INT_ACK_MASK) >> DMA3_INT_ACK_FIN_INT_ACK_SHIFT)
+#define  DMA3_INT_ACK_FIN_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_ACK_FIN_INT_ACK_MASK) | (((uint32_t)val) << DMA3_INT_ACK_FIN_INT_ACK_SHIFT))
+
+#define  DMA3_INT_ACK_WHO_INT_ACK_MASK 0x1
+#define  DMA3_INT_ACK_WHO_INT_ACK_SHIFT 0
+#define  DMA3_INT_ACK_WHO_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA3_INT_ACK_WHO_INT_ACK_MASK) >> DMA3_INT_ACK_WHO_INT_ACK_SHIFT)
+#define  DMA3_INT_ACK_WHO_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_ACK_WHO_INT_ACK_MASK) | (((uint32_t)val) << DMA3_INT_ACK_WHO_INT_ACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (int_fo)
+//====================================================================
+
+#define  DMA3_INT_FO_RESERVED1_MASK 0xfffff800
+#define  DMA3_INT_FO_RESERVED1_SHIFT 11
+#define  DMA3_INT_FO_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA3_INT_FO_RESERVED1_MASK) >> DMA3_INT_FO_RESERVED1_SHIFT)
+#define  DMA3_INT_FO_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_FO_RESERVED1_MASK) | (((uint32_t)val) << DMA3_INT_FO_RESERVED1_SHIFT))
+
+#define  DMA3_INT_FO_RRESP_INT_FO_MASK 0x400
+#define  DMA3_INT_FO_RRESP_INT_FO_SHIFT 10
+#define  DMA3_INT_FO_RRESP_INT_FO_MASK_SHIFT(reg) (((reg) & DMA3_INT_FO_RRESP_INT_FO_MASK) >> DMA3_INT_FO_RRESP_INT_FO_SHIFT)
+#define  DMA3_INT_FO_RRESP_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_FO_RRESP_INT_FO_MASK) | (((uint32_t)val) << DMA3_INT_FO_RRESP_INT_FO_SHIFT))
+
+#define  DMA3_INT_FO_BRESP_INT_FO_MASK 0x200
+#define  DMA3_INT_FO_BRESP_INT_FO_SHIFT 9
+#define  DMA3_INT_FO_BRESP_INT_FO_MASK_SHIFT(reg) (((reg) & DMA3_INT_FO_BRESP_INT_FO_MASK) >> DMA3_INT_FO_BRESP_INT_FO_SHIFT)
+#define  DMA3_INT_FO_BRESP_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_FO_BRESP_INT_FO_MASK) | (((uint32_t)val) << DMA3_INT_FO_BRESP_INT_FO_SHIFT))
+
+#define  DMA3_INT_FO_RST_INT_FO_MASK 0x100
+#define  DMA3_INT_FO_RST_INT_FO_SHIFT 8
+#define  DMA3_INT_FO_RST_INT_FO_MASK_SHIFT(reg) (((reg) & DMA3_INT_FO_RST_INT_FO_MASK) >> DMA3_INT_FO_RST_INT_FO_SHIFT)
+#define  DMA3_INT_FO_RST_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_FO_RST_INT_FO_MASK) | (((uint32_t)val) << DMA3_INT_FO_RST_INT_FO_SHIFT))
+
+#define  DMA3_INT_FO_EOI_INT_FO_MASK 0x80
+#define  DMA3_INT_FO_EOI_INT_FO_SHIFT 7
+#define  DMA3_INT_FO_EOI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA3_INT_FO_EOI_INT_FO_MASK) >> DMA3_INT_FO_EOI_INT_FO_SHIFT)
+#define  DMA3_INT_FO_EOI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_FO_EOI_INT_FO_MASK) | (((uint32_t)val) << DMA3_INT_FO_EOI_INT_FO_SHIFT))
+
+#define  DMA3_INT_FO_DIR_INT_FO_MASK 0x40
+#define  DMA3_INT_FO_DIR_INT_FO_SHIFT 6
+#define  DMA3_INT_FO_DIR_INT_FO_MASK_SHIFT(reg) (((reg) & DMA3_INT_FO_DIR_INT_FO_MASK) >> DMA3_INT_FO_DIR_INT_FO_SHIFT)
+#define  DMA3_INT_FO_DIR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_FO_DIR_INT_FO_MASK) | (((uint32_t)val) << DMA3_INT_FO_DIR_INT_FO_SHIFT))
+
+#define  DMA3_INT_FO_CL_ALI_INT_FO_MASK 0x20
+#define  DMA3_INT_FO_CL_ALI_INT_FO_SHIFT 5
+#define  DMA3_INT_FO_CL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA3_INT_FO_CL_ALI_INT_FO_MASK) >> DMA3_INT_FO_CL_ALI_INT_FO_SHIFT)
+#define  DMA3_INT_FO_CL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_FO_CL_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA3_INT_FO_CL_ALI_INT_FO_SHIFT))
+
+#define  DMA3_INT_FO_EOL_ALI_INT_FO_MASK 0x10
+#define  DMA3_INT_FO_EOL_ALI_INT_FO_SHIFT 4
+#define  DMA3_INT_FO_EOL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA3_INT_FO_EOL_ALI_INT_FO_MASK) >> DMA3_INT_FO_EOL_ALI_INT_FO_SHIFT)
+#define  DMA3_INT_FO_EOL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_FO_EOL_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA3_INT_FO_EOL_ALI_INT_FO_SHIFT))
+
+#define  DMA3_INT_FO_EOI_ALI_INT_FO_MASK 0x8
+#define  DMA3_INT_FO_EOI_ALI_INT_FO_SHIFT 3
+#define  DMA3_INT_FO_EOI_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA3_INT_FO_EOI_ALI_INT_FO_MASK) >> DMA3_INT_FO_EOI_ALI_INT_FO_SHIFT)
+#define  DMA3_INT_FO_EOI_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_FO_EOI_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA3_INT_FO_EOI_ALI_INT_FO_SHIFT))
+
+#define  DMA3_INT_FO_EOI_ERR_INT_FO_MASK 0x4
+#define  DMA3_INT_FO_EOI_ERR_INT_FO_SHIFT 2
+#define  DMA3_INT_FO_EOI_ERR_INT_FO_MASK_SHIFT(reg) (((reg) & DMA3_INT_FO_EOI_ERR_INT_FO_MASK) >> DMA3_INT_FO_EOI_ERR_INT_FO_SHIFT)
+#define  DMA3_INT_FO_EOI_ERR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_FO_EOI_ERR_INT_FO_MASK) | (((uint32_t)val) << DMA3_INT_FO_EOI_ERR_INT_FO_SHIFT))
+
+#define  DMA3_INT_FO_FIN_INT_FO_MASK 0x2
+#define  DMA3_INT_FO_FIN_INT_FO_SHIFT 1
+#define  DMA3_INT_FO_FIN_INT_FO_MASK_SHIFT(reg) (((reg) & DMA3_INT_FO_FIN_INT_FO_MASK) >> DMA3_INT_FO_FIN_INT_FO_SHIFT)
+#define  DMA3_INT_FO_FIN_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_FO_FIN_INT_FO_MASK) | (((uint32_t)val) << DMA3_INT_FO_FIN_INT_FO_SHIFT))
+
+#define  DMA3_INT_FO_WHO_INT_FO_MASK 0x1
+#define  DMA3_INT_FO_WHO_INT_FO_SHIFT 0
+#define  DMA3_INT_FO_WHO_INT_FO_MASK_SHIFT(reg) (((reg) & DMA3_INT_FO_WHO_INT_FO_MASK) >> DMA3_INT_FO_WHO_INT_FO_SHIFT)
+#define  DMA3_INT_FO_WHO_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA3_INT_FO_WHO_INT_FO_MASK) | (((uint32_t)val) << DMA3_INT_FO_WHO_INT_FO_SHIFT))
+
+//====================================================================
+//Register: Descriptor Write Register (desc_write)
+//====================================================================
+
+#define  DMA3_DESC_WRITE_DESC_MASK 0xfffffffc
+#define  DMA3_DESC_WRITE_DESC_SHIFT 2
+#define  DMA3_DESC_WRITE_DESC_MASK_SHIFT(reg) (((reg) & DMA3_DESC_WRITE_DESC_MASK) >> DMA3_DESC_WRITE_DESC_SHIFT)
+#define  DMA3_DESC_WRITE_DESC_REPLACE_VAL(reg,val) (((reg) & ~DMA3_DESC_WRITE_DESC_MASK) | (((uint32_t)val) << DMA3_DESC_WRITE_DESC_SHIFT))
+
+#define  DMA3_DESC_WRITE_RESERVED1_MASK 0x3
+#define  DMA3_DESC_WRITE_RESERVED1_SHIFT 0
+#define  DMA3_DESC_WRITE_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA3_DESC_WRITE_RESERVED1_MASK) >> DMA3_DESC_WRITE_RESERVED1_SHIFT)
+#define  DMA3_DESC_WRITE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA3_DESC_WRITE_RESERVED1_MASK) | (((uint32_t)val) << DMA3_DESC_WRITE_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Descriptor Read Register (desc_read)
+//====================================================================
+
+#define  DMA3_DESC_READ_DESC_MASK 0xffffffff
+#define  DMA3_DESC_READ_DESC_SHIFT 0
+#define  DMA3_DESC_READ_DESC_MASK_SHIFT(reg) (((reg) & DMA3_DESC_READ_DESC_MASK) >> DMA3_DESC_READ_DESC_SHIFT)
+#define  DMA3_DESC_READ_DESC_REPLACE_VAL(reg,val) (((reg) & ~DMA3_DESC_READ_DESC_MASK) | (((uint32_t)val) << DMA3_DESC_READ_DESC_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Length Register (xfer_length)
+//====================================================================
+
+#define  DMA3_XFER_LENGTH_LEN_MASK 0xffffffff
+#define  DMA3_XFER_LENGTH_LEN_SHIFT 0
+#define  DMA3_XFER_LENGTH_LEN_MASK_SHIFT(reg) (((reg) & DMA3_XFER_LENGTH_LEN_MASK) >> DMA3_XFER_LENGTH_LEN_SHIFT)
+#define  DMA3_XFER_LENGTH_LEN_REPLACE_VAL(reg,val) (((reg) & ~DMA3_XFER_LENGTH_LEN_MASK) | (((uint32_t)val) << DMA3_XFER_LENGTH_LEN_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Address Register (xfer_addr)
+//====================================================================
+
+#define  DMA3_XFER_ADDR_ADDR_MASK 0xffffffff
+#define  DMA3_XFER_ADDR_ADDR_SHIFT 0
+#define  DMA3_XFER_ADDR_ADDR_MASK_SHIFT(reg) (((reg) & DMA3_XFER_ADDR_ADDR_MASK) >> DMA3_XFER_ADDR_ADDR_SHIFT)
+#define  DMA3_XFER_ADDR_ADDR_REPLACE_VAL(reg,val) (((reg) & ~DMA3_XFER_ADDR_ADDR_MASK) | (((uint32_t)val) << DMA3_XFER_ADDR_ADDR_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Burst Register (xfer_burst)
+//====================================================================
+
+#define  DMA3_XFER_BURST_RESERVED1_MASK 0xffffffe0
+#define  DMA3_XFER_BURST_RESERVED1_SHIFT 5
+#define  DMA3_XFER_BURST_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA3_XFER_BURST_RESERVED1_MASK) >> DMA3_XFER_BURST_RESERVED1_SHIFT)
+#define  DMA3_XFER_BURST_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA3_XFER_BURST_RESERVED1_MASK) | (((uint32_t)val) << DMA3_XFER_BURST_RESERVED1_SHIFT))
+
+#define  DMA3_XFER_BURST_BURST_MASK 0x1f
+#define  DMA3_XFER_BURST_BURST_SHIFT 0
+#define  DMA3_XFER_BURST_BURST_MASK_SHIFT(reg) (((reg) & DMA3_XFER_BURST_BURST_MASK) >> DMA3_XFER_BURST_BURST_SHIFT)
+#define  DMA3_XFER_BURST_BURST_REPLACE_VAL(reg,val) (((reg) & ~DMA3_XFER_BURST_BURST_MASK) | (((uint32_t)val) << DMA3_XFER_BURST_BURST_SHIFT))
+
+//====================================================================
+//Register: Data Valid Register (data_val)
+//====================================================================
+
+#define  DMA3_DATA_VAL_DATA_VALID_MASK 0xffffffff
+#define  DMA3_DATA_VAL_DATA_VALID_SHIFT 0
+#define  DMA3_DATA_VAL_DATA_VALID_MASK_SHIFT(reg) (((reg) & DMA3_DATA_VAL_DATA_VALID_MASK) >> DMA3_DATA_VAL_DATA_VALID_SHIFT)
+#define  DMA3_DATA_VAL_DATA_VALID_REPLACE_VAL(reg,val) (((reg) & ~DMA3_DATA_VAL_DATA_VALID_MASK) | (((uint32_t)val) << DMA3_DATA_VAL_DATA_VALID_SHIFT))
+
+//====================================================================
+//Register: Soft Reset register (reset)
+//====================================================================
+
+#define  DMA3_RESET_RESERVED1_MASK 0xfffffffe
+#define  DMA3_RESET_RESERVED1_SHIFT 1
+#define  DMA3_RESET_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA3_RESET_RESERVED1_MASK) >> DMA3_RESET_RESERVED1_SHIFT)
+#define  DMA3_RESET_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA3_RESET_RESERVED1_MASK) | (((uint32_t)val) << DMA3_RESET_RESERVED1_SHIFT))
+
+#define  DMA3_RESET_SOFT_RESET_MASK 0x1
+#define  DMA3_RESET_SOFT_RESET_SHIFT 0
+#define  DMA3_RESET_SOFT_RESET_MASK_SHIFT(reg) (((reg) & DMA3_RESET_SOFT_RESET_MASK) >> DMA3_RESET_SOFT_RESET_SHIFT)
+#define  DMA3_RESET_SOFT_RESET_REPLACE_VAL(reg,val) (((reg) & ~DMA3_RESET_SOFT_RESET_MASK) | (((uint32_t)val) << DMA3_RESET_SOFT_RESET_SHIFT))
+
+//====================================================================
+//
+//Register File: DMA channel (Instance 5 of 6) (DMA4)
+//
+//====================================================================
+
+//====================================================================
+//Register: Configuration register (cfg)
+//====================================================================
+
+#define  DMA4_CFG_RESERVED1_MASK 0xffc00000
+#define  DMA4_CFG_RESERVED1_SHIFT 22
+#define  DMA4_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA4_CFG_RESERVED1_MASK) >> DMA4_CFG_RESERVED1_SHIFT)
+#define  DMA4_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA4_CFG_RESERVED1_MASK) | (((uint32_t)val) << DMA4_CFG_RESERVED1_SHIFT))
+
+#define  DMA4_CFG_SERPENTINE_MASK 0x200000
+#define  DMA4_CFG_SERPENTINE_SHIFT 21
+#define  DMA4_CFG_SERPENTINE_MASK_SHIFT(reg) (((reg) & DMA4_CFG_SERPENTINE_MASK) >> DMA4_CFG_SERPENTINE_SHIFT)
+#define  DMA4_CFG_SERPENTINE_REPLACE_VAL(reg,val) (((reg) & ~DMA4_CFG_SERPENTINE_MASK) | (((uint32_t)val) << DMA4_CFG_SERPENTINE_SHIFT))
+
+#define  DMA4_CFG_LINE_REV_MASK 0x100000
+#define  DMA4_CFG_LINE_REV_SHIFT 20
+#define  DMA4_CFG_LINE_REV_MASK_SHIFT(reg) (((reg) & DMA4_CFG_LINE_REV_MASK) >> DMA4_CFG_LINE_REV_SHIFT)
+#define  DMA4_CFG_LINE_REV_REPLACE_VAL(reg,val) (((reg) & ~DMA4_CFG_LINE_REV_MASK) | (((uint32_t)val) << DMA4_CFG_LINE_REV_SHIFT))
+
+#define  DMA4_CFG_TRAN_REV_MASK 0x80000
+#define  DMA4_CFG_TRAN_REV_SHIFT 19
+#define  DMA4_CFG_TRAN_REV_MASK_SHIFT(reg) (((reg) & DMA4_CFG_TRAN_REV_MASK) >> DMA4_CFG_TRAN_REV_SHIFT)
+#define  DMA4_CFG_TRAN_REV_REPLACE_VAL(reg,val) (((reg) & ~DMA4_CFG_TRAN_REV_MASK) | (((uint32_t)val) << DMA4_CFG_TRAN_REV_SHIFT))
+
+#define  DMA4_CFG_UPPER_HALF_MASK 0x40000
+#define  DMA4_CFG_UPPER_HALF_SHIFT 18
+#define  DMA4_CFG_UPPER_HALF_MASK_SHIFT(reg) (((reg) & DMA4_CFG_UPPER_HALF_MASK) >> DMA4_CFG_UPPER_HALF_SHIFT)
+#define  DMA4_CFG_UPPER_HALF_REPLACE_VAL(reg,val) (((reg) & ~DMA4_CFG_UPPER_HALF_MASK) | (((uint32_t)val) << DMA4_CFG_UPPER_HALF_SHIFT))
+
+#define  DMA4_CFG_MSB_IN_MASK 0x20000
+#define  DMA4_CFG_MSB_IN_SHIFT 17
+#define  DMA4_CFG_MSB_IN_MASK_SHIFT(reg) (((reg) & DMA4_CFG_MSB_IN_MASK) >> DMA4_CFG_MSB_IN_SHIFT)
+#define  DMA4_CFG_MSB_IN_REPLACE_VAL(reg,val) (((reg) & ~DMA4_CFG_MSB_IN_MASK) | (((uint32_t)val) << DMA4_CFG_MSB_IN_SHIFT))
+
+#define  DMA4_CFG_ENABLE_MASK 0x10000
+#define  DMA4_CFG_ENABLE_SHIFT 16
+#define  DMA4_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & DMA4_CFG_ENABLE_MASK) >> DMA4_CFG_ENABLE_SHIFT)
+#define  DMA4_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~DMA4_CFG_ENABLE_MASK) | (((uint32_t)val) << DMA4_CFG_ENABLE_SHIFT))
+
+#define  DMA4_CFG_RESERVED2_MASK 0xf800
+#define  DMA4_CFG_RESERVED2_SHIFT 11
+#define  DMA4_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & DMA4_CFG_RESERVED2_MASK) >> DMA4_CFG_RESERVED2_SHIFT)
+#define  DMA4_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~DMA4_CFG_RESERVED2_MASK) | (((uint32_t)val) << DMA4_CFG_RESERVED2_SHIFT))
+
+#define  DMA4_CFG_IN_WIDTH_MASK 0x700
+#define  DMA4_CFG_IN_WIDTH_SHIFT 8
+#define  DMA4_CFG_IN_WIDTH_MASK_SHIFT(reg) (((reg) & DMA4_CFG_IN_WIDTH_MASK) >> DMA4_CFG_IN_WIDTH_SHIFT)
+#define  DMA4_CFG_IN_WIDTH_REPLACE_VAL(reg,val) (((reg) & ~DMA4_CFG_IN_WIDTH_MASK) | (((uint32_t)val) << DMA4_CFG_IN_WIDTH_SHIFT))
+
+#define  DMA4_CFG_RESERVED3_MASK 0xfc
+#define  DMA4_CFG_RESERVED3_SHIFT 2
+#define  DMA4_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & DMA4_CFG_RESERVED3_MASK) >> DMA4_CFG_RESERVED3_SHIFT)
+#define  DMA4_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~DMA4_CFG_RESERVED3_MASK) | (((uint32_t)val) << DMA4_CFG_RESERVED3_SHIFT))
+
+#define  DMA4_CFG_BURST_LEN_MASK 0x3
+#define  DMA4_CFG_BURST_LEN_SHIFT 0
+#define  DMA4_CFG_BURST_LEN_MASK_SHIFT(reg) (((reg) & DMA4_CFG_BURST_LEN_MASK) >> DMA4_CFG_BURST_LEN_SHIFT)
+#define  DMA4_CFG_BURST_LEN_REPLACE_VAL(reg,val) (((reg) & ~DMA4_CFG_BURST_LEN_MASK) | (((uint32_t)val) << DMA4_CFG_BURST_LEN_SHIFT))
+
+//====================================================================
+//Register: Status register (status)
+//====================================================================
+
+#define  DMA4_STATUS_RESERVED1_MASK 0xfffff800
+#define  DMA4_STATUS_RESERVED1_SHIFT 11
+#define  DMA4_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA4_STATUS_RESERVED1_MASK) >> DMA4_STATUS_RESERVED1_SHIFT)
+#define  DMA4_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA4_STATUS_RESERVED1_MASK) | (((uint32_t)val) << DMA4_STATUS_RESERVED1_SHIFT))
+
+#define  DMA4_STATUS_DESC_OWN_MASK 0x400
+#define  DMA4_STATUS_DESC_OWN_SHIFT 10
+#define  DMA4_STATUS_DESC_OWN_MASK_SHIFT(reg) (((reg) & DMA4_STATUS_DESC_OWN_MASK) >> DMA4_STATUS_DESC_OWN_SHIFT)
+#define  DMA4_STATUS_DESC_OWN_REPLACE_VAL(reg,val) (((reg) & ~DMA4_STATUS_DESC_OWN_MASK) | (((uint32_t)val) << DMA4_STATUS_DESC_OWN_SHIFT))
+
+#define  DMA4_STATUS_DESC_EOI_MASK 0x200
+#define  DMA4_STATUS_DESC_EOI_SHIFT 9
+#define  DMA4_STATUS_DESC_EOI_MASK_SHIFT(reg) (((reg) & DMA4_STATUS_DESC_EOI_MASK) >> DMA4_STATUS_DESC_EOI_SHIFT)
+#define  DMA4_STATUS_DESC_EOI_REPLACE_VAL(reg,val) (((reg) & ~DMA4_STATUS_DESC_EOI_MASK) | (((uint32_t)val) << DMA4_STATUS_DESC_EOI_SHIFT))
+
+#define  DMA4_STATUS_DESC_SOI_MASK 0x100
+#define  DMA4_STATUS_DESC_SOI_SHIFT 8
+#define  DMA4_STATUS_DESC_SOI_MASK_SHIFT(reg) (((reg) & DMA4_STATUS_DESC_SOI_MASK) >> DMA4_STATUS_DESC_SOI_SHIFT)
+#define  DMA4_STATUS_DESC_SOI_REPLACE_VAL(reg,val) (((reg) & ~DMA4_STATUS_DESC_SOI_MASK) | (((uint32_t)val) << DMA4_STATUS_DESC_SOI_SHIFT))
+
+#define  DMA4_STATUS_REVERSE_MASK 0x80
+#define  DMA4_STATUS_REVERSE_SHIFT 7
+#define  DMA4_STATUS_REVERSE_MASK_SHIFT(reg) (((reg) & DMA4_STATUS_REVERSE_MASK) >> DMA4_STATUS_REVERSE_SHIFT)
+#define  DMA4_STATUS_REVERSE_REPLACE_VAL(reg,val) (((reg) & ~DMA4_STATUS_REVERSE_MASK) | (((uint32_t)val) << DMA4_STATUS_REVERSE_SHIFT))
+
+#define  DMA4_STATUS_SOFTRESET_MASK 0x40
+#define  DMA4_STATUS_SOFTRESET_SHIFT 6
+#define  DMA4_STATUS_SOFTRESET_MASK_SHIFT(reg) (((reg) & DMA4_STATUS_SOFTRESET_MASK) >> DMA4_STATUS_SOFTRESET_SHIFT)
+#define  DMA4_STATUS_SOFTRESET_REPLACE_VAL(reg,val) (((reg) & ~DMA4_STATUS_SOFTRESET_MASK) | (((uint32_t)val) << DMA4_STATUS_SOFTRESET_SHIFT))
+
+#define  DMA4_STATUS_FULL_CBUF_MASK 0x20
+#define  DMA4_STATUS_FULL_CBUF_SHIFT 5
+#define  DMA4_STATUS_FULL_CBUF_MASK_SHIFT(reg) (((reg) & DMA4_STATUS_FULL_CBUF_MASK) >> DMA4_STATUS_FULL_CBUF_SHIFT)
+#define  DMA4_STATUS_FULL_CBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA4_STATUS_FULL_CBUF_MASK) | (((uint32_t)val) << DMA4_STATUS_FULL_CBUF_SHIFT))
+
+#define  DMA4_STATUS_EMPTY_CBUF_MASK 0x10
+#define  DMA4_STATUS_EMPTY_CBUF_SHIFT 4
+#define  DMA4_STATUS_EMPTY_CBUF_MASK_SHIFT(reg) (((reg) & DMA4_STATUS_EMPTY_CBUF_MASK) >> DMA4_STATUS_EMPTY_CBUF_SHIFT)
+#define  DMA4_STATUS_EMPTY_CBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA4_STATUS_EMPTY_CBUF_MASK) | (((uint32_t)val) << DMA4_STATUS_EMPTY_CBUF_SHIFT))
+
+#define  DMA4_STATUS_FULL_DBUF_MASK 0x8
+#define  DMA4_STATUS_FULL_DBUF_SHIFT 3
+#define  DMA4_STATUS_FULL_DBUF_MASK_SHIFT(reg) (((reg) & DMA4_STATUS_FULL_DBUF_MASK) >> DMA4_STATUS_FULL_DBUF_SHIFT)
+#define  DMA4_STATUS_FULL_DBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA4_STATUS_FULL_DBUF_MASK) | (((uint32_t)val) << DMA4_STATUS_FULL_DBUF_SHIFT))
+
+#define  DMA4_STATUS_EMPTY_DBUF_MASK 0x4
+#define  DMA4_STATUS_EMPTY_DBUF_SHIFT 2
+#define  DMA4_STATUS_EMPTY_DBUF_MASK_SHIFT(reg) (((reg) & DMA4_STATUS_EMPTY_DBUF_MASK) >> DMA4_STATUS_EMPTY_DBUF_SHIFT)
+#define  DMA4_STATUS_EMPTY_DBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA4_STATUS_EMPTY_DBUF_MASK) | (((uint32_t)val) << DMA4_STATUS_EMPTY_DBUF_SHIFT))
+
+#define  DMA4_STATUS_PACKER_EMPTY_MASK 0x2
+#define  DMA4_STATUS_PACKER_EMPTY_SHIFT 1
+#define  DMA4_STATUS_PACKER_EMPTY_MASK_SHIFT(reg) (((reg) & DMA4_STATUS_PACKER_EMPTY_MASK) >> DMA4_STATUS_PACKER_EMPTY_SHIFT)
+#define  DMA4_STATUS_PACKER_EMPTY_REPLACE_VAL(reg,val) (((reg) & ~DMA4_STATUS_PACKER_EMPTY_MASK) | (((uint32_t)val) << DMA4_STATUS_PACKER_EMPTY_SHIFT))
+
+#define  DMA4_STATUS_DMA_BUSY_MASK 0x1
+#define  DMA4_STATUS_DMA_BUSY_SHIFT 0
+#define  DMA4_STATUS_DMA_BUSY_MASK_SHIFT(reg) (((reg) & DMA4_STATUS_DMA_BUSY_MASK) >> DMA4_STATUS_DMA_BUSY_SHIFT)
+#define  DMA4_STATUS_DMA_BUSY_REPLACE_VAL(reg,val) (((reg) & ~DMA4_STATUS_DMA_BUSY_MASK) | (((uint32_t)val) << DMA4_STATUS_DMA_BUSY_SHIFT))
+
+//====================================================================
+//Register: Line Size Register (line_size)
+//====================================================================
+
+#define  DMA4_LINE_SIZE_RESERVED1_MASK 0xfffc0000
+#define  DMA4_LINE_SIZE_RESERVED1_SHIFT 18
+#define  DMA4_LINE_SIZE_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA4_LINE_SIZE_RESERVED1_MASK) >> DMA4_LINE_SIZE_RESERVED1_SHIFT)
+#define  DMA4_LINE_SIZE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA4_LINE_SIZE_RESERVED1_MASK) | (((uint32_t)val) << DMA4_LINE_SIZE_RESERVED1_SHIFT))
+
+#define  DMA4_LINE_SIZE_LINE_SIZE_MASK 0x3ffff
+#define  DMA4_LINE_SIZE_LINE_SIZE_SHIFT 0
+#define  DMA4_LINE_SIZE_LINE_SIZE_MASK_SHIFT(reg) (((reg) & DMA4_LINE_SIZE_LINE_SIZE_MASK) >> DMA4_LINE_SIZE_LINE_SIZE_SHIFT)
+#define  DMA4_LINE_SIZE_LINE_SIZE_REPLACE_VAL(reg,val) (((reg) & ~DMA4_LINE_SIZE_LINE_SIZE_MASK) | (((uint32_t)val) << DMA4_LINE_SIZE_LINE_SIZE_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (int_en)
+//====================================================================
+
+#define  DMA4_INT_EN_RESERVED1_MASK 0xfffff800
+#define  DMA4_INT_EN_RESERVED1_SHIFT 11
+#define  DMA4_INT_EN_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA4_INT_EN_RESERVED1_MASK) >> DMA4_INT_EN_RESERVED1_SHIFT)
+#define  DMA4_INT_EN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_EN_RESERVED1_MASK) | (((uint32_t)val) << DMA4_INT_EN_RESERVED1_SHIFT))
+
+#define  DMA4_INT_EN_RRESP_INT_EN_MASK 0x400
+#define  DMA4_INT_EN_RRESP_INT_EN_SHIFT 10
+#define  DMA4_INT_EN_RRESP_INT_EN_MASK_SHIFT(reg) (((reg) & DMA4_INT_EN_RRESP_INT_EN_MASK) >> DMA4_INT_EN_RRESP_INT_EN_SHIFT)
+#define  DMA4_INT_EN_RRESP_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_EN_RRESP_INT_EN_MASK) | (((uint32_t)val) << DMA4_INT_EN_RRESP_INT_EN_SHIFT))
+
+#define  DMA4_INT_EN_BRESP_INT_EN_MASK 0x200
+#define  DMA4_INT_EN_BRESP_INT_EN_SHIFT 9
+#define  DMA4_INT_EN_BRESP_INT_EN_MASK_SHIFT(reg) (((reg) & DMA4_INT_EN_BRESP_INT_EN_MASK) >> DMA4_INT_EN_BRESP_INT_EN_SHIFT)
+#define  DMA4_INT_EN_BRESP_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_EN_BRESP_INT_EN_MASK) | (((uint32_t)val) << DMA4_INT_EN_BRESP_INT_EN_SHIFT))
+
+#define  DMA4_INT_EN_RST_INT_EN_MASK 0x100
+#define  DMA4_INT_EN_RST_INT_EN_SHIFT 8
+#define  DMA4_INT_EN_RST_INT_EN_MASK_SHIFT(reg) (((reg) & DMA4_INT_EN_RST_INT_EN_MASK) >> DMA4_INT_EN_RST_INT_EN_SHIFT)
+#define  DMA4_INT_EN_RST_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_EN_RST_INT_EN_MASK) | (((uint32_t)val) << DMA4_INT_EN_RST_INT_EN_SHIFT))
+
+#define  DMA4_INT_EN_EOI_INT_EN_MASK 0x80
+#define  DMA4_INT_EN_EOI_INT_EN_SHIFT 7
+#define  DMA4_INT_EN_EOI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA4_INT_EN_EOI_INT_EN_MASK) >> DMA4_INT_EN_EOI_INT_EN_SHIFT)
+#define  DMA4_INT_EN_EOI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_EN_EOI_INT_EN_MASK) | (((uint32_t)val) << DMA4_INT_EN_EOI_INT_EN_SHIFT))
+
+#define  DMA4_INT_EN_DIR_INT_EN_MASK 0x40
+#define  DMA4_INT_EN_DIR_INT_EN_SHIFT 6
+#define  DMA4_INT_EN_DIR_INT_EN_MASK_SHIFT(reg) (((reg) & DMA4_INT_EN_DIR_INT_EN_MASK) >> DMA4_INT_EN_DIR_INT_EN_SHIFT)
+#define  DMA4_INT_EN_DIR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_EN_DIR_INT_EN_MASK) | (((uint32_t)val) << DMA4_INT_EN_DIR_INT_EN_SHIFT))
+
+#define  DMA4_INT_EN_CL_ALI_INT_EN_MASK 0x20
+#define  DMA4_INT_EN_CL_ALI_INT_EN_SHIFT 5
+#define  DMA4_INT_EN_CL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA4_INT_EN_CL_ALI_INT_EN_MASK) >> DMA4_INT_EN_CL_ALI_INT_EN_SHIFT)
+#define  DMA4_INT_EN_CL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_EN_CL_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA4_INT_EN_CL_ALI_INT_EN_SHIFT))
+
+#define  DMA4_INT_EN_EOL_ALI_INT_EN_MASK 0x10
+#define  DMA4_INT_EN_EOL_ALI_INT_EN_SHIFT 4
+#define  DMA4_INT_EN_EOL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA4_INT_EN_EOL_ALI_INT_EN_MASK) >> DMA4_INT_EN_EOL_ALI_INT_EN_SHIFT)
+#define  DMA4_INT_EN_EOL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_EN_EOL_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA4_INT_EN_EOL_ALI_INT_EN_SHIFT))
+
+#define  DMA4_INT_EN_EOI_ALI_INT_EN_MASK 0x8
+#define  DMA4_INT_EN_EOI_ALI_INT_EN_SHIFT 3
+#define  DMA4_INT_EN_EOI_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA4_INT_EN_EOI_ALI_INT_EN_MASK) >> DMA4_INT_EN_EOI_ALI_INT_EN_SHIFT)
+#define  DMA4_INT_EN_EOI_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_EN_EOI_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA4_INT_EN_EOI_ALI_INT_EN_SHIFT))
+
+#define  DMA4_INT_EN_EOI_ERR_INT_EN_MASK 0x4
+#define  DMA4_INT_EN_EOI_ERR_INT_EN_SHIFT 2
+#define  DMA4_INT_EN_EOI_ERR_INT_EN_MASK_SHIFT(reg) (((reg) & DMA4_INT_EN_EOI_ERR_INT_EN_MASK) >> DMA4_INT_EN_EOI_ERR_INT_EN_SHIFT)
+#define  DMA4_INT_EN_EOI_ERR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_EN_EOI_ERR_INT_EN_MASK) | (((uint32_t)val) << DMA4_INT_EN_EOI_ERR_INT_EN_SHIFT))
+
+#define  DMA4_INT_EN_FIN_INT_EN_MASK 0x2
+#define  DMA4_INT_EN_FIN_INT_EN_SHIFT 1
+#define  DMA4_INT_EN_FIN_INT_EN_MASK_SHIFT(reg) (((reg) & DMA4_INT_EN_FIN_INT_EN_MASK) >> DMA4_INT_EN_FIN_INT_EN_SHIFT)
+#define  DMA4_INT_EN_FIN_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_EN_FIN_INT_EN_MASK) | (((uint32_t)val) << DMA4_INT_EN_FIN_INT_EN_SHIFT))
+
+#define  DMA4_INT_EN_WHO_INT_EN_MASK 0x1
+#define  DMA4_INT_EN_WHO_INT_EN_SHIFT 0
+#define  DMA4_INT_EN_WHO_INT_EN_MASK_SHIFT(reg) (((reg) & DMA4_INT_EN_WHO_INT_EN_MASK) >> DMA4_INT_EN_WHO_INT_EN_SHIFT)
+#define  DMA4_INT_EN_WHO_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_EN_WHO_INT_EN_MASK) | (((uint32_t)val) << DMA4_INT_EN_WHO_INT_EN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (int_pend)
+//====================================================================
+
+#define  DMA4_INT_PEND_RESERVED1_MASK 0xfffff800
+#define  DMA4_INT_PEND_RESERVED1_SHIFT 11
+#define  DMA4_INT_PEND_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA4_INT_PEND_RESERVED1_MASK) >> DMA4_INT_PEND_RESERVED1_SHIFT)
+#define  DMA4_INT_PEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_PEND_RESERVED1_MASK) | (((uint32_t)val) << DMA4_INT_PEND_RESERVED1_SHIFT))
+
+#define  DMA4_INT_PEND_RRESP_INT_PEND_MASK 0x400
+#define  DMA4_INT_PEND_RRESP_INT_PEND_SHIFT 10
+#define  DMA4_INT_PEND_RRESP_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA4_INT_PEND_RRESP_INT_PEND_MASK) >> DMA4_INT_PEND_RRESP_INT_PEND_SHIFT)
+#define  DMA4_INT_PEND_RRESP_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_PEND_RRESP_INT_PEND_MASK) | (((uint32_t)val) << DMA4_INT_PEND_RRESP_INT_PEND_SHIFT))
+
+#define  DMA4_INT_PEND_BRESP_INT_PEND_MASK 0x200
+#define  DMA4_INT_PEND_BRESP_INT_PEND_SHIFT 9
+#define  DMA4_INT_PEND_BRESP_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA4_INT_PEND_BRESP_INT_PEND_MASK) >> DMA4_INT_PEND_BRESP_INT_PEND_SHIFT)
+#define  DMA4_INT_PEND_BRESP_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_PEND_BRESP_INT_PEND_MASK) | (((uint32_t)val) << DMA4_INT_PEND_BRESP_INT_PEND_SHIFT))
+
+#define  DMA4_INT_PEND_RST_INT_PEND_MASK 0x100
+#define  DMA4_INT_PEND_RST_INT_PEND_SHIFT 8
+#define  DMA4_INT_PEND_RST_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA4_INT_PEND_RST_INT_PEND_MASK) >> DMA4_INT_PEND_RST_INT_PEND_SHIFT)
+#define  DMA4_INT_PEND_RST_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_PEND_RST_INT_PEND_MASK) | (((uint32_t)val) << DMA4_INT_PEND_RST_INT_PEND_SHIFT))
+
+#define  DMA4_INT_PEND_EOI_INT_PEND_MASK 0x80
+#define  DMA4_INT_PEND_EOI_INT_PEND_SHIFT 7
+#define  DMA4_INT_PEND_EOI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA4_INT_PEND_EOI_INT_PEND_MASK) >> DMA4_INT_PEND_EOI_INT_PEND_SHIFT)
+#define  DMA4_INT_PEND_EOI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_PEND_EOI_INT_PEND_MASK) | (((uint32_t)val) << DMA4_INT_PEND_EOI_INT_PEND_SHIFT))
+
+#define  DMA4_INT_PEND_DIR_INT_PEND_MASK 0x40
+#define  DMA4_INT_PEND_DIR_INT_PEND_SHIFT 6
+#define  DMA4_INT_PEND_DIR_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA4_INT_PEND_DIR_INT_PEND_MASK) >> DMA4_INT_PEND_DIR_INT_PEND_SHIFT)
+#define  DMA4_INT_PEND_DIR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_PEND_DIR_INT_PEND_MASK) | (((uint32_t)val) << DMA4_INT_PEND_DIR_INT_PEND_SHIFT))
+
+#define  DMA4_INT_PEND_CL_ALI_INT_PEND_MASK 0x20
+#define  DMA4_INT_PEND_CL_ALI_INT_PEND_SHIFT 5
+#define  DMA4_INT_PEND_CL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA4_INT_PEND_CL_ALI_INT_PEND_MASK) >> DMA4_INT_PEND_CL_ALI_INT_PEND_SHIFT)
+#define  DMA4_INT_PEND_CL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_PEND_CL_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA4_INT_PEND_CL_ALI_INT_PEND_SHIFT))
+
+#define  DMA4_INT_PEND_EOL_ALI_INT_PEND_MASK 0x10
+#define  DMA4_INT_PEND_EOL_ALI_INT_PEND_SHIFT 4
+#define  DMA4_INT_PEND_EOL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA4_INT_PEND_EOL_ALI_INT_PEND_MASK) >> DMA4_INT_PEND_EOL_ALI_INT_PEND_SHIFT)
+#define  DMA4_INT_PEND_EOL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_PEND_EOL_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA4_INT_PEND_EOL_ALI_INT_PEND_SHIFT))
+
+#define  DMA4_INT_PEND_EOI_ALI_INT_PEND_MASK 0x8
+#define  DMA4_INT_PEND_EOI_ALI_INT_PEND_SHIFT 3
+#define  DMA4_INT_PEND_EOI_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA4_INT_PEND_EOI_ALI_INT_PEND_MASK) >> DMA4_INT_PEND_EOI_ALI_INT_PEND_SHIFT)
+#define  DMA4_INT_PEND_EOI_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_PEND_EOI_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA4_INT_PEND_EOI_ALI_INT_PEND_SHIFT))
+
+#define  DMA4_INT_PEND_EOI_ERR_INT_PEND_MASK 0x4
+#define  DMA4_INT_PEND_EOI_ERR_INT_PEND_SHIFT 2
+#define  DMA4_INT_PEND_EOI_ERR_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA4_INT_PEND_EOI_ERR_INT_PEND_MASK) >> DMA4_INT_PEND_EOI_ERR_INT_PEND_SHIFT)
+#define  DMA4_INT_PEND_EOI_ERR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_PEND_EOI_ERR_INT_PEND_MASK) | (((uint32_t)val) << DMA4_INT_PEND_EOI_ERR_INT_PEND_SHIFT))
+
+#define  DMA4_INT_PEND_FIN_INT_PEND_MASK 0x2
+#define  DMA4_INT_PEND_FIN_INT_PEND_SHIFT 1
+#define  DMA4_INT_PEND_FIN_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA4_INT_PEND_FIN_INT_PEND_MASK) >> DMA4_INT_PEND_FIN_INT_PEND_SHIFT)
+#define  DMA4_INT_PEND_FIN_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_PEND_FIN_INT_PEND_MASK) | (((uint32_t)val) << DMA4_INT_PEND_FIN_INT_PEND_SHIFT))
+
+#define  DMA4_INT_PEND_WHO_INT_PEND_MASK 0x1
+#define  DMA4_INT_PEND_WHO_INT_PEND_SHIFT 0
+#define  DMA4_INT_PEND_WHO_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA4_INT_PEND_WHO_INT_PEND_MASK) >> DMA4_INT_PEND_WHO_INT_PEND_SHIFT)
+#define  DMA4_INT_PEND_WHO_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_PEND_WHO_INT_PEND_MASK) | (((uint32_t)val) << DMA4_INT_PEND_WHO_INT_PEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (int_ack)
+//====================================================================
+
+#define  DMA4_INT_ACK_RESERVED1_MASK 0xfffff800
+#define  DMA4_INT_ACK_RESERVED1_SHIFT 11
+#define  DMA4_INT_ACK_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA4_INT_ACK_RESERVED1_MASK) >> DMA4_INT_ACK_RESERVED1_SHIFT)
+#define  DMA4_INT_ACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_ACK_RESERVED1_MASK) | (((uint32_t)val) << DMA4_INT_ACK_RESERVED1_SHIFT))
+
+#define  DMA4_INT_ACK_RRESP_INT_ACK_MASK 0x400
+#define  DMA4_INT_ACK_RRESP_INT_ACK_SHIFT 10
+#define  DMA4_INT_ACK_RRESP_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA4_INT_ACK_RRESP_INT_ACK_MASK) >> DMA4_INT_ACK_RRESP_INT_ACK_SHIFT)
+#define  DMA4_INT_ACK_RRESP_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_ACK_RRESP_INT_ACK_MASK) | (((uint32_t)val) << DMA4_INT_ACK_RRESP_INT_ACK_SHIFT))
+
+#define  DMA4_INT_ACK_BRESP_INT_ACK_MASK 0x200
+#define  DMA4_INT_ACK_BRESP_INT_ACK_SHIFT 9
+#define  DMA4_INT_ACK_BRESP_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA4_INT_ACK_BRESP_INT_ACK_MASK) >> DMA4_INT_ACK_BRESP_INT_ACK_SHIFT)
+#define  DMA4_INT_ACK_BRESP_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_ACK_BRESP_INT_ACK_MASK) | (((uint32_t)val) << DMA4_INT_ACK_BRESP_INT_ACK_SHIFT))
+
+#define  DMA4_INT_ACK_RST_INT_ACK_MASK 0x100
+#define  DMA4_INT_ACK_RST_INT_ACK_SHIFT 8
+#define  DMA4_INT_ACK_RST_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA4_INT_ACK_RST_INT_ACK_MASK) >> DMA4_INT_ACK_RST_INT_ACK_SHIFT)
+#define  DMA4_INT_ACK_RST_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_ACK_RST_INT_ACK_MASK) | (((uint32_t)val) << DMA4_INT_ACK_RST_INT_ACK_SHIFT))
+
+#define  DMA4_INT_ACK_EOI_INT_ACK_MASK 0x80
+#define  DMA4_INT_ACK_EOI_INT_ACK_SHIFT 7
+#define  DMA4_INT_ACK_EOI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA4_INT_ACK_EOI_INT_ACK_MASK) >> DMA4_INT_ACK_EOI_INT_ACK_SHIFT)
+#define  DMA4_INT_ACK_EOI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_ACK_EOI_INT_ACK_MASK) | (((uint32_t)val) << DMA4_INT_ACK_EOI_INT_ACK_SHIFT))
+
+#define  DMA4_INT_ACK_DIR_INT_ACK_MASK 0x40
+#define  DMA4_INT_ACK_DIR_INT_ACK_SHIFT 6
+#define  DMA4_INT_ACK_DIR_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA4_INT_ACK_DIR_INT_ACK_MASK) >> DMA4_INT_ACK_DIR_INT_ACK_SHIFT)
+#define  DMA4_INT_ACK_DIR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_ACK_DIR_INT_ACK_MASK) | (((uint32_t)val) << DMA4_INT_ACK_DIR_INT_ACK_SHIFT))
+
+#define  DMA4_INT_ACK_CL_ALI_INT_ACK_MASK 0x20
+#define  DMA4_INT_ACK_CL_ALI_INT_ACK_SHIFT 5
+#define  DMA4_INT_ACK_CL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA4_INT_ACK_CL_ALI_INT_ACK_MASK) >> DMA4_INT_ACK_CL_ALI_INT_ACK_SHIFT)
+#define  DMA4_INT_ACK_CL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_ACK_CL_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA4_INT_ACK_CL_ALI_INT_ACK_SHIFT))
+
+#define  DMA4_INT_ACK_EOL_ALI_INT_ACK_MASK 0x10
+#define  DMA4_INT_ACK_EOL_ALI_INT_ACK_SHIFT 4
+#define  DMA4_INT_ACK_EOL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA4_INT_ACK_EOL_ALI_INT_ACK_MASK) >> DMA4_INT_ACK_EOL_ALI_INT_ACK_SHIFT)
+#define  DMA4_INT_ACK_EOL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_ACK_EOL_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA4_INT_ACK_EOL_ALI_INT_ACK_SHIFT))
+
+#define  DMA4_INT_ACK_EOI_ALI_INT_ACK_MASK 0x8
+#define  DMA4_INT_ACK_EOI_ALI_INT_ACK_SHIFT 3
+#define  DMA4_INT_ACK_EOI_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA4_INT_ACK_EOI_ALI_INT_ACK_MASK) >> DMA4_INT_ACK_EOI_ALI_INT_ACK_SHIFT)
+#define  DMA4_INT_ACK_EOI_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_ACK_EOI_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA4_INT_ACK_EOI_ALI_INT_ACK_SHIFT))
+
+#define  DMA4_INT_ACK_EOI_ERR_INT_ACK_MASK 0x4
+#define  DMA4_INT_ACK_EOI_ERR_INT_ACK_SHIFT 2
+#define  DMA4_INT_ACK_EOI_ERR_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA4_INT_ACK_EOI_ERR_INT_ACK_MASK) >> DMA4_INT_ACK_EOI_ERR_INT_ACK_SHIFT)
+#define  DMA4_INT_ACK_EOI_ERR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_ACK_EOI_ERR_INT_ACK_MASK) | (((uint32_t)val) << DMA4_INT_ACK_EOI_ERR_INT_ACK_SHIFT))
+
+#define  DMA4_INT_ACK_FIN_INT_ACK_MASK 0x2
+#define  DMA4_INT_ACK_FIN_INT_ACK_SHIFT 1
+#define  DMA4_INT_ACK_FIN_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA4_INT_ACK_FIN_INT_ACK_MASK) >> DMA4_INT_ACK_FIN_INT_ACK_SHIFT)
+#define  DMA4_INT_ACK_FIN_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_ACK_FIN_INT_ACK_MASK) | (((uint32_t)val) << DMA4_INT_ACK_FIN_INT_ACK_SHIFT))
+
+#define  DMA4_INT_ACK_WHO_INT_ACK_MASK 0x1
+#define  DMA4_INT_ACK_WHO_INT_ACK_SHIFT 0
+#define  DMA4_INT_ACK_WHO_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA4_INT_ACK_WHO_INT_ACK_MASK) >> DMA4_INT_ACK_WHO_INT_ACK_SHIFT)
+#define  DMA4_INT_ACK_WHO_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_ACK_WHO_INT_ACK_MASK) | (((uint32_t)val) << DMA4_INT_ACK_WHO_INT_ACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (int_fo)
+//====================================================================
+
+#define  DMA4_INT_FO_RESERVED1_MASK 0xfffff800
+#define  DMA4_INT_FO_RESERVED1_SHIFT 11
+#define  DMA4_INT_FO_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA4_INT_FO_RESERVED1_MASK) >> DMA4_INT_FO_RESERVED1_SHIFT)
+#define  DMA4_INT_FO_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_FO_RESERVED1_MASK) | (((uint32_t)val) << DMA4_INT_FO_RESERVED1_SHIFT))
+
+#define  DMA4_INT_FO_RRESP_INT_FO_MASK 0x400
+#define  DMA4_INT_FO_RRESP_INT_FO_SHIFT 10
+#define  DMA4_INT_FO_RRESP_INT_FO_MASK_SHIFT(reg) (((reg) & DMA4_INT_FO_RRESP_INT_FO_MASK) >> DMA4_INT_FO_RRESP_INT_FO_SHIFT)
+#define  DMA4_INT_FO_RRESP_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_FO_RRESP_INT_FO_MASK) | (((uint32_t)val) << DMA4_INT_FO_RRESP_INT_FO_SHIFT))
+
+#define  DMA4_INT_FO_BRESP_INT_FO_MASK 0x200
+#define  DMA4_INT_FO_BRESP_INT_FO_SHIFT 9
+#define  DMA4_INT_FO_BRESP_INT_FO_MASK_SHIFT(reg) (((reg) & DMA4_INT_FO_BRESP_INT_FO_MASK) >> DMA4_INT_FO_BRESP_INT_FO_SHIFT)
+#define  DMA4_INT_FO_BRESP_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_FO_BRESP_INT_FO_MASK) | (((uint32_t)val) << DMA4_INT_FO_BRESP_INT_FO_SHIFT))
+
+#define  DMA4_INT_FO_RST_INT_FO_MASK 0x100
+#define  DMA4_INT_FO_RST_INT_FO_SHIFT 8
+#define  DMA4_INT_FO_RST_INT_FO_MASK_SHIFT(reg) (((reg) & DMA4_INT_FO_RST_INT_FO_MASK) >> DMA4_INT_FO_RST_INT_FO_SHIFT)
+#define  DMA4_INT_FO_RST_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_FO_RST_INT_FO_MASK) | (((uint32_t)val) << DMA4_INT_FO_RST_INT_FO_SHIFT))
+
+#define  DMA4_INT_FO_EOI_INT_FO_MASK 0x80
+#define  DMA4_INT_FO_EOI_INT_FO_SHIFT 7
+#define  DMA4_INT_FO_EOI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA4_INT_FO_EOI_INT_FO_MASK) >> DMA4_INT_FO_EOI_INT_FO_SHIFT)
+#define  DMA4_INT_FO_EOI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_FO_EOI_INT_FO_MASK) | (((uint32_t)val) << DMA4_INT_FO_EOI_INT_FO_SHIFT))
+
+#define  DMA4_INT_FO_DIR_INT_FO_MASK 0x40
+#define  DMA4_INT_FO_DIR_INT_FO_SHIFT 6
+#define  DMA4_INT_FO_DIR_INT_FO_MASK_SHIFT(reg) (((reg) & DMA4_INT_FO_DIR_INT_FO_MASK) >> DMA4_INT_FO_DIR_INT_FO_SHIFT)
+#define  DMA4_INT_FO_DIR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_FO_DIR_INT_FO_MASK) | (((uint32_t)val) << DMA4_INT_FO_DIR_INT_FO_SHIFT))
+
+#define  DMA4_INT_FO_CL_ALI_INT_FO_MASK 0x20
+#define  DMA4_INT_FO_CL_ALI_INT_FO_SHIFT 5
+#define  DMA4_INT_FO_CL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA4_INT_FO_CL_ALI_INT_FO_MASK) >> DMA4_INT_FO_CL_ALI_INT_FO_SHIFT)
+#define  DMA4_INT_FO_CL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_FO_CL_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA4_INT_FO_CL_ALI_INT_FO_SHIFT))
+
+#define  DMA4_INT_FO_EOL_ALI_INT_FO_MASK 0x10
+#define  DMA4_INT_FO_EOL_ALI_INT_FO_SHIFT 4
+#define  DMA4_INT_FO_EOL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA4_INT_FO_EOL_ALI_INT_FO_MASK) >> DMA4_INT_FO_EOL_ALI_INT_FO_SHIFT)
+#define  DMA4_INT_FO_EOL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_FO_EOL_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA4_INT_FO_EOL_ALI_INT_FO_SHIFT))
+
+#define  DMA4_INT_FO_EOI_ALI_INT_FO_MASK 0x8
+#define  DMA4_INT_FO_EOI_ALI_INT_FO_SHIFT 3
+#define  DMA4_INT_FO_EOI_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA4_INT_FO_EOI_ALI_INT_FO_MASK) >> DMA4_INT_FO_EOI_ALI_INT_FO_SHIFT)
+#define  DMA4_INT_FO_EOI_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_FO_EOI_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA4_INT_FO_EOI_ALI_INT_FO_SHIFT))
+
+#define  DMA4_INT_FO_EOI_ERR_INT_FO_MASK 0x4
+#define  DMA4_INT_FO_EOI_ERR_INT_FO_SHIFT 2
+#define  DMA4_INT_FO_EOI_ERR_INT_FO_MASK_SHIFT(reg) (((reg) & DMA4_INT_FO_EOI_ERR_INT_FO_MASK) >> DMA4_INT_FO_EOI_ERR_INT_FO_SHIFT)
+#define  DMA4_INT_FO_EOI_ERR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_FO_EOI_ERR_INT_FO_MASK) | (((uint32_t)val) << DMA4_INT_FO_EOI_ERR_INT_FO_SHIFT))
+
+#define  DMA4_INT_FO_FIN_INT_FO_MASK 0x2
+#define  DMA4_INT_FO_FIN_INT_FO_SHIFT 1
+#define  DMA4_INT_FO_FIN_INT_FO_MASK_SHIFT(reg) (((reg) & DMA4_INT_FO_FIN_INT_FO_MASK) >> DMA4_INT_FO_FIN_INT_FO_SHIFT)
+#define  DMA4_INT_FO_FIN_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_FO_FIN_INT_FO_MASK) | (((uint32_t)val) << DMA4_INT_FO_FIN_INT_FO_SHIFT))
+
+#define  DMA4_INT_FO_WHO_INT_FO_MASK 0x1
+#define  DMA4_INT_FO_WHO_INT_FO_SHIFT 0
+#define  DMA4_INT_FO_WHO_INT_FO_MASK_SHIFT(reg) (((reg) & DMA4_INT_FO_WHO_INT_FO_MASK) >> DMA4_INT_FO_WHO_INT_FO_SHIFT)
+#define  DMA4_INT_FO_WHO_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA4_INT_FO_WHO_INT_FO_MASK) | (((uint32_t)val) << DMA4_INT_FO_WHO_INT_FO_SHIFT))
+
+//====================================================================
+//Register: Descriptor Write Register (desc_write)
+//====================================================================
+
+#define  DMA4_DESC_WRITE_DESC_MASK 0xfffffffc
+#define  DMA4_DESC_WRITE_DESC_SHIFT 2
+#define  DMA4_DESC_WRITE_DESC_MASK_SHIFT(reg) (((reg) & DMA4_DESC_WRITE_DESC_MASK) >> DMA4_DESC_WRITE_DESC_SHIFT)
+#define  DMA4_DESC_WRITE_DESC_REPLACE_VAL(reg,val) (((reg) & ~DMA4_DESC_WRITE_DESC_MASK) | (((uint32_t)val) << DMA4_DESC_WRITE_DESC_SHIFT))
+
+#define  DMA4_DESC_WRITE_RESERVED1_MASK 0x3
+#define  DMA4_DESC_WRITE_RESERVED1_SHIFT 0
+#define  DMA4_DESC_WRITE_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA4_DESC_WRITE_RESERVED1_MASK) >> DMA4_DESC_WRITE_RESERVED1_SHIFT)
+#define  DMA4_DESC_WRITE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA4_DESC_WRITE_RESERVED1_MASK) | (((uint32_t)val) << DMA4_DESC_WRITE_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Descriptor Read Register (desc_read)
+//====================================================================
+
+#define  DMA4_DESC_READ_DESC_MASK 0xffffffff
+#define  DMA4_DESC_READ_DESC_SHIFT 0
+#define  DMA4_DESC_READ_DESC_MASK_SHIFT(reg) (((reg) & DMA4_DESC_READ_DESC_MASK) >> DMA4_DESC_READ_DESC_SHIFT)
+#define  DMA4_DESC_READ_DESC_REPLACE_VAL(reg,val) (((reg) & ~DMA4_DESC_READ_DESC_MASK) | (((uint32_t)val) << DMA4_DESC_READ_DESC_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Length Register (xfer_length)
+//====================================================================
+
+#define  DMA4_XFER_LENGTH_LEN_MASK 0xffffffff
+#define  DMA4_XFER_LENGTH_LEN_SHIFT 0
+#define  DMA4_XFER_LENGTH_LEN_MASK_SHIFT(reg) (((reg) & DMA4_XFER_LENGTH_LEN_MASK) >> DMA4_XFER_LENGTH_LEN_SHIFT)
+#define  DMA4_XFER_LENGTH_LEN_REPLACE_VAL(reg,val) (((reg) & ~DMA4_XFER_LENGTH_LEN_MASK) | (((uint32_t)val) << DMA4_XFER_LENGTH_LEN_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Address Register (xfer_addr)
+//====================================================================
+
+#define  DMA4_XFER_ADDR_ADDR_MASK 0xffffffff
+#define  DMA4_XFER_ADDR_ADDR_SHIFT 0
+#define  DMA4_XFER_ADDR_ADDR_MASK_SHIFT(reg) (((reg) & DMA4_XFER_ADDR_ADDR_MASK) >> DMA4_XFER_ADDR_ADDR_SHIFT)
+#define  DMA4_XFER_ADDR_ADDR_REPLACE_VAL(reg,val) (((reg) & ~DMA4_XFER_ADDR_ADDR_MASK) | (((uint32_t)val) << DMA4_XFER_ADDR_ADDR_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Burst Register (xfer_burst)
+//====================================================================
+
+#define  DMA4_XFER_BURST_RESERVED1_MASK 0xffffffe0
+#define  DMA4_XFER_BURST_RESERVED1_SHIFT 5
+#define  DMA4_XFER_BURST_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA4_XFER_BURST_RESERVED1_MASK) >> DMA4_XFER_BURST_RESERVED1_SHIFT)
+#define  DMA4_XFER_BURST_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA4_XFER_BURST_RESERVED1_MASK) | (((uint32_t)val) << DMA4_XFER_BURST_RESERVED1_SHIFT))
+
+#define  DMA4_XFER_BURST_BURST_MASK 0x1f
+#define  DMA4_XFER_BURST_BURST_SHIFT 0
+#define  DMA4_XFER_BURST_BURST_MASK_SHIFT(reg) (((reg) & DMA4_XFER_BURST_BURST_MASK) >> DMA4_XFER_BURST_BURST_SHIFT)
+#define  DMA4_XFER_BURST_BURST_REPLACE_VAL(reg,val) (((reg) & ~DMA4_XFER_BURST_BURST_MASK) | (((uint32_t)val) << DMA4_XFER_BURST_BURST_SHIFT))
+
+//====================================================================
+//Register: Data Valid Register (data_val)
+//====================================================================
+
+#define  DMA4_DATA_VAL_DATA_VALID_MASK 0xffffffff
+#define  DMA4_DATA_VAL_DATA_VALID_SHIFT 0
+#define  DMA4_DATA_VAL_DATA_VALID_MASK_SHIFT(reg) (((reg) & DMA4_DATA_VAL_DATA_VALID_MASK) >> DMA4_DATA_VAL_DATA_VALID_SHIFT)
+#define  DMA4_DATA_VAL_DATA_VALID_REPLACE_VAL(reg,val) (((reg) & ~DMA4_DATA_VAL_DATA_VALID_MASK) | (((uint32_t)val) << DMA4_DATA_VAL_DATA_VALID_SHIFT))
+
+//====================================================================
+//Register: Soft Reset register (reset)
+//====================================================================
+
+#define  DMA4_RESET_RESERVED1_MASK 0xfffffffe
+#define  DMA4_RESET_RESERVED1_SHIFT 1
+#define  DMA4_RESET_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA4_RESET_RESERVED1_MASK) >> DMA4_RESET_RESERVED1_SHIFT)
+#define  DMA4_RESET_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA4_RESET_RESERVED1_MASK) | (((uint32_t)val) << DMA4_RESET_RESERVED1_SHIFT))
+
+#define  DMA4_RESET_SOFT_RESET_MASK 0x1
+#define  DMA4_RESET_SOFT_RESET_SHIFT 0
+#define  DMA4_RESET_SOFT_RESET_MASK_SHIFT(reg) (((reg) & DMA4_RESET_SOFT_RESET_MASK) >> DMA4_RESET_SOFT_RESET_SHIFT)
+#define  DMA4_RESET_SOFT_RESET_REPLACE_VAL(reg,val) (((reg) & ~DMA4_RESET_SOFT_RESET_MASK) | (((uint32_t)val) << DMA4_RESET_SOFT_RESET_SHIFT))
+
+//====================================================================
+//
+//Register File: DMA channel (Instance 6 of 6) (DMA5)
+//
+//====================================================================
+
+//====================================================================
+//Register: Configuration register (cfg)
+//====================================================================
+
+#define  DMA5_CFG_RESERVED1_MASK 0xffc00000
+#define  DMA5_CFG_RESERVED1_SHIFT 22
+#define  DMA5_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA5_CFG_RESERVED1_MASK) >> DMA5_CFG_RESERVED1_SHIFT)
+#define  DMA5_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA5_CFG_RESERVED1_MASK) | (((uint32_t)val) << DMA5_CFG_RESERVED1_SHIFT))
+
+#define  DMA5_CFG_SERPENTINE_MASK 0x200000
+#define  DMA5_CFG_SERPENTINE_SHIFT 21
+#define  DMA5_CFG_SERPENTINE_MASK_SHIFT(reg) (((reg) & DMA5_CFG_SERPENTINE_MASK) >> DMA5_CFG_SERPENTINE_SHIFT)
+#define  DMA5_CFG_SERPENTINE_REPLACE_VAL(reg,val) (((reg) & ~DMA5_CFG_SERPENTINE_MASK) | (((uint32_t)val) << DMA5_CFG_SERPENTINE_SHIFT))
+
+#define  DMA5_CFG_LINE_REV_MASK 0x100000
+#define  DMA5_CFG_LINE_REV_SHIFT 20
+#define  DMA5_CFG_LINE_REV_MASK_SHIFT(reg) (((reg) & DMA5_CFG_LINE_REV_MASK) >> DMA5_CFG_LINE_REV_SHIFT)
+#define  DMA5_CFG_LINE_REV_REPLACE_VAL(reg,val) (((reg) & ~DMA5_CFG_LINE_REV_MASK) | (((uint32_t)val) << DMA5_CFG_LINE_REV_SHIFT))
+
+#define  DMA5_CFG_TRAN_REV_MASK 0x80000
+#define  DMA5_CFG_TRAN_REV_SHIFT 19
+#define  DMA5_CFG_TRAN_REV_MASK_SHIFT(reg) (((reg) & DMA5_CFG_TRAN_REV_MASK) >> DMA5_CFG_TRAN_REV_SHIFT)
+#define  DMA5_CFG_TRAN_REV_REPLACE_VAL(reg,val) (((reg) & ~DMA5_CFG_TRAN_REV_MASK) | (((uint32_t)val) << DMA5_CFG_TRAN_REV_SHIFT))
+
+#define  DMA5_CFG_UPPER_HALF_MASK 0x40000
+#define  DMA5_CFG_UPPER_HALF_SHIFT 18
+#define  DMA5_CFG_UPPER_HALF_MASK_SHIFT(reg) (((reg) & DMA5_CFG_UPPER_HALF_MASK) >> DMA5_CFG_UPPER_HALF_SHIFT)
+#define  DMA5_CFG_UPPER_HALF_REPLACE_VAL(reg,val) (((reg) & ~DMA5_CFG_UPPER_HALF_MASK) | (((uint32_t)val) << DMA5_CFG_UPPER_HALF_SHIFT))
+
+#define  DMA5_CFG_MSB_IN_MASK 0x20000
+#define  DMA5_CFG_MSB_IN_SHIFT 17
+#define  DMA5_CFG_MSB_IN_MASK_SHIFT(reg) (((reg) & DMA5_CFG_MSB_IN_MASK) >> DMA5_CFG_MSB_IN_SHIFT)
+#define  DMA5_CFG_MSB_IN_REPLACE_VAL(reg,val) (((reg) & ~DMA5_CFG_MSB_IN_MASK) | (((uint32_t)val) << DMA5_CFG_MSB_IN_SHIFT))
+
+#define  DMA5_CFG_ENABLE_MASK 0x10000
+#define  DMA5_CFG_ENABLE_SHIFT 16
+#define  DMA5_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & DMA5_CFG_ENABLE_MASK) >> DMA5_CFG_ENABLE_SHIFT)
+#define  DMA5_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~DMA5_CFG_ENABLE_MASK) | (((uint32_t)val) << DMA5_CFG_ENABLE_SHIFT))
+
+#define  DMA5_CFG_RESERVED2_MASK 0xf800
+#define  DMA5_CFG_RESERVED2_SHIFT 11
+#define  DMA5_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & DMA5_CFG_RESERVED2_MASK) >> DMA5_CFG_RESERVED2_SHIFT)
+#define  DMA5_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~DMA5_CFG_RESERVED2_MASK) | (((uint32_t)val) << DMA5_CFG_RESERVED2_SHIFT))
+
+#define  DMA5_CFG_IN_WIDTH_MASK 0x700
+#define  DMA5_CFG_IN_WIDTH_SHIFT 8
+#define  DMA5_CFG_IN_WIDTH_MASK_SHIFT(reg) (((reg) & DMA5_CFG_IN_WIDTH_MASK) >> DMA5_CFG_IN_WIDTH_SHIFT)
+#define  DMA5_CFG_IN_WIDTH_REPLACE_VAL(reg,val) (((reg) & ~DMA5_CFG_IN_WIDTH_MASK) | (((uint32_t)val) << DMA5_CFG_IN_WIDTH_SHIFT))
+
+#define  DMA5_CFG_RESERVED3_MASK 0xfc
+#define  DMA5_CFG_RESERVED3_SHIFT 2
+#define  DMA5_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & DMA5_CFG_RESERVED3_MASK) >> DMA5_CFG_RESERVED3_SHIFT)
+#define  DMA5_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~DMA5_CFG_RESERVED3_MASK) | (((uint32_t)val) << DMA5_CFG_RESERVED3_SHIFT))
+
+#define  DMA5_CFG_BURST_LEN_MASK 0x3
+#define  DMA5_CFG_BURST_LEN_SHIFT 0
+#define  DMA5_CFG_BURST_LEN_MASK_SHIFT(reg) (((reg) & DMA5_CFG_BURST_LEN_MASK) >> DMA5_CFG_BURST_LEN_SHIFT)
+#define  DMA5_CFG_BURST_LEN_REPLACE_VAL(reg,val) (((reg) & ~DMA5_CFG_BURST_LEN_MASK) | (((uint32_t)val) << DMA5_CFG_BURST_LEN_SHIFT))
+
+//====================================================================
+//Register: Status register (status)
+//====================================================================
+
+#define  DMA5_STATUS_RESERVED1_MASK 0xfffff800
+#define  DMA5_STATUS_RESERVED1_SHIFT 11
+#define  DMA5_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA5_STATUS_RESERVED1_MASK) >> DMA5_STATUS_RESERVED1_SHIFT)
+#define  DMA5_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA5_STATUS_RESERVED1_MASK) | (((uint32_t)val) << DMA5_STATUS_RESERVED1_SHIFT))
+
+#define  DMA5_STATUS_DESC_OWN_MASK 0x400
+#define  DMA5_STATUS_DESC_OWN_SHIFT 10
+#define  DMA5_STATUS_DESC_OWN_MASK_SHIFT(reg) (((reg) & DMA5_STATUS_DESC_OWN_MASK) >> DMA5_STATUS_DESC_OWN_SHIFT)
+#define  DMA5_STATUS_DESC_OWN_REPLACE_VAL(reg,val) (((reg) & ~DMA5_STATUS_DESC_OWN_MASK) | (((uint32_t)val) << DMA5_STATUS_DESC_OWN_SHIFT))
+
+#define  DMA5_STATUS_DESC_EOI_MASK 0x200
+#define  DMA5_STATUS_DESC_EOI_SHIFT 9
+#define  DMA5_STATUS_DESC_EOI_MASK_SHIFT(reg) (((reg) & DMA5_STATUS_DESC_EOI_MASK) >> DMA5_STATUS_DESC_EOI_SHIFT)
+#define  DMA5_STATUS_DESC_EOI_REPLACE_VAL(reg,val) (((reg) & ~DMA5_STATUS_DESC_EOI_MASK) | (((uint32_t)val) << DMA5_STATUS_DESC_EOI_SHIFT))
+
+#define  DMA5_STATUS_DESC_SOI_MASK 0x100
+#define  DMA5_STATUS_DESC_SOI_SHIFT 8
+#define  DMA5_STATUS_DESC_SOI_MASK_SHIFT(reg) (((reg) & DMA5_STATUS_DESC_SOI_MASK) >> DMA5_STATUS_DESC_SOI_SHIFT)
+#define  DMA5_STATUS_DESC_SOI_REPLACE_VAL(reg,val) (((reg) & ~DMA5_STATUS_DESC_SOI_MASK) | (((uint32_t)val) << DMA5_STATUS_DESC_SOI_SHIFT))
+
+#define  DMA5_STATUS_REVERSE_MASK 0x80
+#define  DMA5_STATUS_REVERSE_SHIFT 7
+#define  DMA5_STATUS_REVERSE_MASK_SHIFT(reg) (((reg) & DMA5_STATUS_REVERSE_MASK) >> DMA5_STATUS_REVERSE_SHIFT)
+#define  DMA5_STATUS_REVERSE_REPLACE_VAL(reg,val) (((reg) & ~DMA5_STATUS_REVERSE_MASK) | (((uint32_t)val) << DMA5_STATUS_REVERSE_SHIFT))
+
+#define  DMA5_STATUS_SOFTRESET_MASK 0x40
+#define  DMA5_STATUS_SOFTRESET_SHIFT 6
+#define  DMA5_STATUS_SOFTRESET_MASK_SHIFT(reg) (((reg) & DMA5_STATUS_SOFTRESET_MASK) >> DMA5_STATUS_SOFTRESET_SHIFT)
+#define  DMA5_STATUS_SOFTRESET_REPLACE_VAL(reg,val) (((reg) & ~DMA5_STATUS_SOFTRESET_MASK) | (((uint32_t)val) << DMA5_STATUS_SOFTRESET_SHIFT))
+
+#define  DMA5_STATUS_FULL_CBUF_MASK 0x20
+#define  DMA5_STATUS_FULL_CBUF_SHIFT 5
+#define  DMA5_STATUS_FULL_CBUF_MASK_SHIFT(reg) (((reg) & DMA5_STATUS_FULL_CBUF_MASK) >> DMA5_STATUS_FULL_CBUF_SHIFT)
+#define  DMA5_STATUS_FULL_CBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA5_STATUS_FULL_CBUF_MASK) | (((uint32_t)val) << DMA5_STATUS_FULL_CBUF_SHIFT))
+
+#define  DMA5_STATUS_EMPTY_CBUF_MASK 0x10
+#define  DMA5_STATUS_EMPTY_CBUF_SHIFT 4
+#define  DMA5_STATUS_EMPTY_CBUF_MASK_SHIFT(reg) (((reg) & DMA5_STATUS_EMPTY_CBUF_MASK) >> DMA5_STATUS_EMPTY_CBUF_SHIFT)
+#define  DMA5_STATUS_EMPTY_CBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA5_STATUS_EMPTY_CBUF_MASK) | (((uint32_t)val) << DMA5_STATUS_EMPTY_CBUF_SHIFT))
+
+#define  DMA5_STATUS_FULL_DBUF_MASK 0x8
+#define  DMA5_STATUS_FULL_DBUF_SHIFT 3
+#define  DMA5_STATUS_FULL_DBUF_MASK_SHIFT(reg) (((reg) & DMA5_STATUS_FULL_DBUF_MASK) >> DMA5_STATUS_FULL_DBUF_SHIFT)
+#define  DMA5_STATUS_FULL_DBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA5_STATUS_FULL_DBUF_MASK) | (((uint32_t)val) << DMA5_STATUS_FULL_DBUF_SHIFT))
+
+#define  DMA5_STATUS_EMPTY_DBUF_MASK 0x4
+#define  DMA5_STATUS_EMPTY_DBUF_SHIFT 2
+#define  DMA5_STATUS_EMPTY_DBUF_MASK_SHIFT(reg) (((reg) & DMA5_STATUS_EMPTY_DBUF_MASK) >> DMA5_STATUS_EMPTY_DBUF_SHIFT)
+#define  DMA5_STATUS_EMPTY_DBUF_REPLACE_VAL(reg,val) (((reg) & ~DMA5_STATUS_EMPTY_DBUF_MASK) | (((uint32_t)val) << DMA5_STATUS_EMPTY_DBUF_SHIFT))
+
+#define  DMA5_STATUS_PACKER_EMPTY_MASK 0x2
+#define  DMA5_STATUS_PACKER_EMPTY_SHIFT 1
+#define  DMA5_STATUS_PACKER_EMPTY_MASK_SHIFT(reg) (((reg) & DMA5_STATUS_PACKER_EMPTY_MASK) >> DMA5_STATUS_PACKER_EMPTY_SHIFT)
+#define  DMA5_STATUS_PACKER_EMPTY_REPLACE_VAL(reg,val) (((reg) & ~DMA5_STATUS_PACKER_EMPTY_MASK) | (((uint32_t)val) << DMA5_STATUS_PACKER_EMPTY_SHIFT))
+
+#define  DMA5_STATUS_DMA_BUSY_MASK 0x1
+#define  DMA5_STATUS_DMA_BUSY_SHIFT 0
+#define  DMA5_STATUS_DMA_BUSY_MASK_SHIFT(reg) (((reg) & DMA5_STATUS_DMA_BUSY_MASK) >> DMA5_STATUS_DMA_BUSY_SHIFT)
+#define  DMA5_STATUS_DMA_BUSY_REPLACE_VAL(reg,val) (((reg) & ~DMA5_STATUS_DMA_BUSY_MASK) | (((uint32_t)val) << DMA5_STATUS_DMA_BUSY_SHIFT))
+
+//====================================================================
+//Register: Line Size Register (line_size)
+//====================================================================
+
+#define  DMA5_LINE_SIZE_RESERVED1_MASK 0xfffc0000
+#define  DMA5_LINE_SIZE_RESERVED1_SHIFT 18
+#define  DMA5_LINE_SIZE_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA5_LINE_SIZE_RESERVED1_MASK) >> DMA5_LINE_SIZE_RESERVED1_SHIFT)
+#define  DMA5_LINE_SIZE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA5_LINE_SIZE_RESERVED1_MASK) | (((uint32_t)val) << DMA5_LINE_SIZE_RESERVED1_SHIFT))
+
+#define  DMA5_LINE_SIZE_LINE_SIZE_MASK 0x3ffff
+#define  DMA5_LINE_SIZE_LINE_SIZE_SHIFT 0
+#define  DMA5_LINE_SIZE_LINE_SIZE_MASK_SHIFT(reg) (((reg) & DMA5_LINE_SIZE_LINE_SIZE_MASK) >> DMA5_LINE_SIZE_LINE_SIZE_SHIFT)
+#define  DMA5_LINE_SIZE_LINE_SIZE_REPLACE_VAL(reg,val) (((reg) & ~DMA5_LINE_SIZE_LINE_SIZE_MASK) | (((uint32_t)val) << DMA5_LINE_SIZE_LINE_SIZE_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (int_en)
+//====================================================================
+
+#define  DMA5_INT_EN_RESERVED1_MASK 0xfffff800
+#define  DMA5_INT_EN_RESERVED1_SHIFT 11
+#define  DMA5_INT_EN_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA5_INT_EN_RESERVED1_MASK) >> DMA5_INT_EN_RESERVED1_SHIFT)
+#define  DMA5_INT_EN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_EN_RESERVED1_MASK) | (((uint32_t)val) << DMA5_INT_EN_RESERVED1_SHIFT))
+
+#define  DMA5_INT_EN_RRESP_INT_EN_MASK 0x400
+#define  DMA5_INT_EN_RRESP_INT_EN_SHIFT 10
+#define  DMA5_INT_EN_RRESP_INT_EN_MASK_SHIFT(reg) (((reg) & DMA5_INT_EN_RRESP_INT_EN_MASK) >> DMA5_INT_EN_RRESP_INT_EN_SHIFT)
+#define  DMA5_INT_EN_RRESP_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_EN_RRESP_INT_EN_MASK) | (((uint32_t)val) << DMA5_INT_EN_RRESP_INT_EN_SHIFT))
+
+#define  DMA5_INT_EN_BRESP_INT_EN_MASK 0x200
+#define  DMA5_INT_EN_BRESP_INT_EN_SHIFT 9
+#define  DMA5_INT_EN_BRESP_INT_EN_MASK_SHIFT(reg) (((reg) & DMA5_INT_EN_BRESP_INT_EN_MASK) >> DMA5_INT_EN_BRESP_INT_EN_SHIFT)
+#define  DMA5_INT_EN_BRESP_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_EN_BRESP_INT_EN_MASK) | (((uint32_t)val) << DMA5_INT_EN_BRESP_INT_EN_SHIFT))
+
+#define  DMA5_INT_EN_RST_INT_EN_MASK 0x100
+#define  DMA5_INT_EN_RST_INT_EN_SHIFT 8
+#define  DMA5_INT_EN_RST_INT_EN_MASK_SHIFT(reg) (((reg) & DMA5_INT_EN_RST_INT_EN_MASK) >> DMA5_INT_EN_RST_INT_EN_SHIFT)
+#define  DMA5_INT_EN_RST_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_EN_RST_INT_EN_MASK) | (((uint32_t)val) << DMA5_INT_EN_RST_INT_EN_SHIFT))
+
+#define  DMA5_INT_EN_EOI_INT_EN_MASK 0x80
+#define  DMA5_INT_EN_EOI_INT_EN_SHIFT 7
+#define  DMA5_INT_EN_EOI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA5_INT_EN_EOI_INT_EN_MASK) >> DMA5_INT_EN_EOI_INT_EN_SHIFT)
+#define  DMA5_INT_EN_EOI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_EN_EOI_INT_EN_MASK) | (((uint32_t)val) << DMA5_INT_EN_EOI_INT_EN_SHIFT))
+
+#define  DMA5_INT_EN_DIR_INT_EN_MASK 0x40
+#define  DMA5_INT_EN_DIR_INT_EN_SHIFT 6
+#define  DMA5_INT_EN_DIR_INT_EN_MASK_SHIFT(reg) (((reg) & DMA5_INT_EN_DIR_INT_EN_MASK) >> DMA5_INT_EN_DIR_INT_EN_SHIFT)
+#define  DMA5_INT_EN_DIR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_EN_DIR_INT_EN_MASK) | (((uint32_t)val) << DMA5_INT_EN_DIR_INT_EN_SHIFT))
+
+#define  DMA5_INT_EN_CL_ALI_INT_EN_MASK 0x20
+#define  DMA5_INT_EN_CL_ALI_INT_EN_SHIFT 5
+#define  DMA5_INT_EN_CL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA5_INT_EN_CL_ALI_INT_EN_MASK) >> DMA5_INT_EN_CL_ALI_INT_EN_SHIFT)
+#define  DMA5_INT_EN_CL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_EN_CL_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA5_INT_EN_CL_ALI_INT_EN_SHIFT))
+
+#define  DMA5_INT_EN_EOL_ALI_INT_EN_MASK 0x10
+#define  DMA5_INT_EN_EOL_ALI_INT_EN_SHIFT 4
+#define  DMA5_INT_EN_EOL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA5_INT_EN_EOL_ALI_INT_EN_MASK) >> DMA5_INT_EN_EOL_ALI_INT_EN_SHIFT)
+#define  DMA5_INT_EN_EOL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_EN_EOL_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA5_INT_EN_EOL_ALI_INT_EN_SHIFT))
+
+#define  DMA5_INT_EN_EOI_ALI_INT_EN_MASK 0x8
+#define  DMA5_INT_EN_EOI_ALI_INT_EN_SHIFT 3
+#define  DMA5_INT_EN_EOI_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & DMA5_INT_EN_EOI_ALI_INT_EN_MASK) >> DMA5_INT_EN_EOI_ALI_INT_EN_SHIFT)
+#define  DMA5_INT_EN_EOI_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_EN_EOI_ALI_INT_EN_MASK) | (((uint32_t)val) << DMA5_INT_EN_EOI_ALI_INT_EN_SHIFT))
+
+#define  DMA5_INT_EN_EOI_ERR_INT_EN_MASK 0x4
+#define  DMA5_INT_EN_EOI_ERR_INT_EN_SHIFT 2
+#define  DMA5_INT_EN_EOI_ERR_INT_EN_MASK_SHIFT(reg) (((reg) & DMA5_INT_EN_EOI_ERR_INT_EN_MASK) >> DMA5_INT_EN_EOI_ERR_INT_EN_SHIFT)
+#define  DMA5_INT_EN_EOI_ERR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_EN_EOI_ERR_INT_EN_MASK) | (((uint32_t)val) << DMA5_INT_EN_EOI_ERR_INT_EN_SHIFT))
+
+#define  DMA5_INT_EN_FIN_INT_EN_MASK 0x2
+#define  DMA5_INT_EN_FIN_INT_EN_SHIFT 1
+#define  DMA5_INT_EN_FIN_INT_EN_MASK_SHIFT(reg) (((reg) & DMA5_INT_EN_FIN_INT_EN_MASK) >> DMA5_INT_EN_FIN_INT_EN_SHIFT)
+#define  DMA5_INT_EN_FIN_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_EN_FIN_INT_EN_MASK) | (((uint32_t)val) << DMA5_INT_EN_FIN_INT_EN_SHIFT))
+
+#define  DMA5_INT_EN_WHO_INT_EN_MASK 0x1
+#define  DMA5_INT_EN_WHO_INT_EN_SHIFT 0
+#define  DMA5_INT_EN_WHO_INT_EN_MASK_SHIFT(reg) (((reg) & DMA5_INT_EN_WHO_INT_EN_MASK) >> DMA5_INT_EN_WHO_INT_EN_SHIFT)
+#define  DMA5_INT_EN_WHO_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_EN_WHO_INT_EN_MASK) | (((uint32_t)val) << DMA5_INT_EN_WHO_INT_EN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (int_pend)
+//====================================================================
+
+#define  DMA5_INT_PEND_RESERVED1_MASK 0xfffff800
+#define  DMA5_INT_PEND_RESERVED1_SHIFT 11
+#define  DMA5_INT_PEND_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA5_INT_PEND_RESERVED1_MASK) >> DMA5_INT_PEND_RESERVED1_SHIFT)
+#define  DMA5_INT_PEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_PEND_RESERVED1_MASK) | (((uint32_t)val) << DMA5_INT_PEND_RESERVED1_SHIFT))
+
+#define  DMA5_INT_PEND_RRESP_INT_PEND_MASK 0x400
+#define  DMA5_INT_PEND_RRESP_INT_PEND_SHIFT 10
+#define  DMA5_INT_PEND_RRESP_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA5_INT_PEND_RRESP_INT_PEND_MASK) >> DMA5_INT_PEND_RRESP_INT_PEND_SHIFT)
+#define  DMA5_INT_PEND_RRESP_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_PEND_RRESP_INT_PEND_MASK) | (((uint32_t)val) << DMA5_INT_PEND_RRESP_INT_PEND_SHIFT))
+
+#define  DMA5_INT_PEND_BRESP_INT_PEND_MASK 0x200
+#define  DMA5_INT_PEND_BRESP_INT_PEND_SHIFT 9
+#define  DMA5_INT_PEND_BRESP_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA5_INT_PEND_BRESP_INT_PEND_MASK) >> DMA5_INT_PEND_BRESP_INT_PEND_SHIFT)
+#define  DMA5_INT_PEND_BRESP_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_PEND_BRESP_INT_PEND_MASK) | (((uint32_t)val) << DMA5_INT_PEND_BRESP_INT_PEND_SHIFT))
+
+#define  DMA5_INT_PEND_RST_INT_PEND_MASK 0x100
+#define  DMA5_INT_PEND_RST_INT_PEND_SHIFT 8
+#define  DMA5_INT_PEND_RST_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA5_INT_PEND_RST_INT_PEND_MASK) >> DMA5_INT_PEND_RST_INT_PEND_SHIFT)
+#define  DMA5_INT_PEND_RST_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_PEND_RST_INT_PEND_MASK) | (((uint32_t)val) << DMA5_INT_PEND_RST_INT_PEND_SHIFT))
+
+#define  DMA5_INT_PEND_EOI_INT_PEND_MASK 0x80
+#define  DMA5_INT_PEND_EOI_INT_PEND_SHIFT 7
+#define  DMA5_INT_PEND_EOI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA5_INT_PEND_EOI_INT_PEND_MASK) >> DMA5_INT_PEND_EOI_INT_PEND_SHIFT)
+#define  DMA5_INT_PEND_EOI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_PEND_EOI_INT_PEND_MASK) | (((uint32_t)val) << DMA5_INT_PEND_EOI_INT_PEND_SHIFT))
+
+#define  DMA5_INT_PEND_DIR_INT_PEND_MASK 0x40
+#define  DMA5_INT_PEND_DIR_INT_PEND_SHIFT 6
+#define  DMA5_INT_PEND_DIR_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA5_INT_PEND_DIR_INT_PEND_MASK) >> DMA5_INT_PEND_DIR_INT_PEND_SHIFT)
+#define  DMA5_INT_PEND_DIR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_PEND_DIR_INT_PEND_MASK) | (((uint32_t)val) << DMA5_INT_PEND_DIR_INT_PEND_SHIFT))
+
+#define  DMA5_INT_PEND_CL_ALI_INT_PEND_MASK 0x20
+#define  DMA5_INT_PEND_CL_ALI_INT_PEND_SHIFT 5
+#define  DMA5_INT_PEND_CL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA5_INT_PEND_CL_ALI_INT_PEND_MASK) >> DMA5_INT_PEND_CL_ALI_INT_PEND_SHIFT)
+#define  DMA5_INT_PEND_CL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_PEND_CL_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA5_INT_PEND_CL_ALI_INT_PEND_SHIFT))
+
+#define  DMA5_INT_PEND_EOL_ALI_INT_PEND_MASK 0x10
+#define  DMA5_INT_PEND_EOL_ALI_INT_PEND_SHIFT 4
+#define  DMA5_INT_PEND_EOL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA5_INT_PEND_EOL_ALI_INT_PEND_MASK) >> DMA5_INT_PEND_EOL_ALI_INT_PEND_SHIFT)
+#define  DMA5_INT_PEND_EOL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_PEND_EOL_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA5_INT_PEND_EOL_ALI_INT_PEND_SHIFT))
+
+#define  DMA5_INT_PEND_EOI_ALI_INT_PEND_MASK 0x8
+#define  DMA5_INT_PEND_EOI_ALI_INT_PEND_SHIFT 3
+#define  DMA5_INT_PEND_EOI_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA5_INT_PEND_EOI_ALI_INT_PEND_MASK) >> DMA5_INT_PEND_EOI_ALI_INT_PEND_SHIFT)
+#define  DMA5_INT_PEND_EOI_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_PEND_EOI_ALI_INT_PEND_MASK) | (((uint32_t)val) << DMA5_INT_PEND_EOI_ALI_INT_PEND_SHIFT))
+
+#define  DMA5_INT_PEND_EOI_ERR_INT_PEND_MASK 0x4
+#define  DMA5_INT_PEND_EOI_ERR_INT_PEND_SHIFT 2
+#define  DMA5_INT_PEND_EOI_ERR_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA5_INT_PEND_EOI_ERR_INT_PEND_MASK) >> DMA5_INT_PEND_EOI_ERR_INT_PEND_SHIFT)
+#define  DMA5_INT_PEND_EOI_ERR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_PEND_EOI_ERR_INT_PEND_MASK) | (((uint32_t)val) << DMA5_INT_PEND_EOI_ERR_INT_PEND_SHIFT))
+
+#define  DMA5_INT_PEND_FIN_INT_PEND_MASK 0x2
+#define  DMA5_INT_PEND_FIN_INT_PEND_SHIFT 1
+#define  DMA5_INT_PEND_FIN_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA5_INT_PEND_FIN_INT_PEND_MASK) >> DMA5_INT_PEND_FIN_INT_PEND_SHIFT)
+#define  DMA5_INT_PEND_FIN_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_PEND_FIN_INT_PEND_MASK) | (((uint32_t)val) << DMA5_INT_PEND_FIN_INT_PEND_SHIFT))
+
+#define  DMA5_INT_PEND_WHO_INT_PEND_MASK 0x1
+#define  DMA5_INT_PEND_WHO_INT_PEND_SHIFT 0
+#define  DMA5_INT_PEND_WHO_INT_PEND_MASK_SHIFT(reg) (((reg) & DMA5_INT_PEND_WHO_INT_PEND_MASK) >> DMA5_INT_PEND_WHO_INT_PEND_SHIFT)
+#define  DMA5_INT_PEND_WHO_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_PEND_WHO_INT_PEND_MASK) | (((uint32_t)val) << DMA5_INT_PEND_WHO_INT_PEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (int_ack)
+//====================================================================
+
+#define  DMA5_INT_ACK_RESERVED1_MASK 0xfffff800
+#define  DMA5_INT_ACK_RESERVED1_SHIFT 11
+#define  DMA5_INT_ACK_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA5_INT_ACK_RESERVED1_MASK) >> DMA5_INT_ACK_RESERVED1_SHIFT)
+#define  DMA5_INT_ACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_ACK_RESERVED1_MASK) | (((uint32_t)val) << DMA5_INT_ACK_RESERVED1_SHIFT))
+
+#define  DMA5_INT_ACK_RRESP_INT_ACK_MASK 0x400
+#define  DMA5_INT_ACK_RRESP_INT_ACK_SHIFT 10
+#define  DMA5_INT_ACK_RRESP_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA5_INT_ACK_RRESP_INT_ACK_MASK) >> DMA5_INT_ACK_RRESP_INT_ACK_SHIFT)
+#define  DMA5_INT_ACK_RRESP_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_ACK_RRESP_INT_ACK_MASK) | (((uint32_t)val) << DMA5_INT_ACK_RRESP_INT_ACK_SHIFT))
+
+#define  DMA5_INT_ACK_BRESP_INT_ACK_MASK 0x200
+#define  DMA5_INT_ACK_BRESP_INT_ACK_SHIFT 9
+#define  DMA5_INT_ACK_BRESP_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA5_INT_ACK_BRESP_INT_ACK_MASK) >> DMA5_INT_ACK_BRESP_INT_ACK_SHIFT)
+#define  DMA5_INT_ACK_BRESP_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_ACK_BRESP_INT_ACK_MASK) | (((uint32_t)val) << DMA5_INT_ACK_BRESP_INT_ACK_SHIFT))
+
+#define  DMA5_INT_ACK_RST_INT_ACK_MASK 0x100
+#define  DMA5_INT_ACK_RST_INT_ACK_SHIFT 8
+#define  DMA5_INT_ACK_RST_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA5_INT_ACK_RST_INT_ACK_MASK) >> DMA5_INT_ACK_RST_INT_ACK_SHIFT)
+#define  DMA5_INT_ACK_RST_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_ACK_RST_INT_ACK_MASK) | (((uint32_t)val) << DMA5_INT_ACK_RST_INT_ACK_SHIFT))
+
+#define  DMA5_INT_ACK_EOI_INT_ACK_MASK 0x80
+#define  DMA5_INT_ACK_EOI_INT_ACK_SHIFT 7
+#define  DMA5_INT_ACK_EOI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA5_INT_ACK_EOI_INT_ACK_MASK) >> DMA5_INT_ACK_EOI_INT_ACK_SHIFT)
+#define  DMA5_INT_ACK_EOI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_ACK_EOI_INT_ACK_MASK) | (((uint32_t)val) << DMA5_INT_ACK_EOI_INT_ACK_SHIFT))
+
+#define  DMA5_INT_ACK_DIR_INT_ACK_MASK 0x40
+#define  DMA5_INT_ACK_DIR_INT_ACK_SHIFT 6
+#define  DMA5_INT_ACK_DIR_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA5_INT_ACK_DIR_INT_ACK_MASK) >> DMA5_INT_ACK_DIR_INT_ACK_SHIFT)
+#define  DMA5_INT_ACK_DIR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_ACK_DIR_INT_ACK_MASK) | (((uint32_t)val) << DMA5_INT_ACK_DIR_INT_ACK_SHIFT))
+
+#define  DMA5_INT_ACK_CL_ALI_INT_ACK_MASK 0x20
+#define  DMA5_INT_ACK_CL_ALI_INT_ACK_SHIFT 5
+#define  DMA5_INT_ACK_CL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA5_INT_ACK_CL_ALI_INT_ACK_MASK) >> DMA5_INT_ACK_CL_ALI_INT_ACK_SHIFT)
+#define  DMA5_INT_ACK_CL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_ACK_CL_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA5_INT_ACK_CL_ALI_INT_ACK_SHIFT))
+
+#define  DMA5_INT_ACK_EOL_ALI_INT_ACK_MASK 0x10
+#define  DMA5_INT_ACK_EOL_ALI_INT_ACK_SHIFT 4
+#define  DMA5_INT_ACK_EOL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA5_INT_ACK_EOL_ALI_INT_ACK_MASK) >> DMA5_INT_ACK_EOL_ALI_INT_ACK_SHIFT)
+#define  DMA5_INT_ACK_EOL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_ACK_EOL_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA5_INT_ACK_EOL_ALI_INT_ACK_SHIFT))
+
+#define  DMA5_INT_ACK_EOI_ALI_INT_ACK_MASK 0x8
+#define  DMA5_INT_ACK_EOI_ALI_INT_ACK_SHIFT 3
+#define  DMA5_INT_ACK_EOI_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA5_INT_ACK_EOI_ALI_INT_ACK_MASK) >> DMA5_INT_ACK_EOI_ALI_INT_ACK_SHIFT)
+#define  DMA5_INT_ACK_EOI_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_ACK_EOI_ALI_INT_ACK_MASK) | (((uint32_t)val) << DMA5_INT_ACK_EOI_ALI_INT_ACK_SHIFT))
+
+#define  DMA5_INT_ACK_EOI_ERR_INT_ACK_MASK 0x4
+#define  DMA5_INT_ACK_EOI_ERR_INT_ACK_SHIFT 2
+#define  DMA5_INT_ACK_EOI_ERR_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA5_INT_ACK_EOI_ERR_INT_ACK_MASK) >> DMA5_INT_ACK_EOI_ERR_INT_ACK_SHIFT)
+#define  DMA5_INT_ACK_EOI_ERR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_ACK_EOI_ERR_INT_ACK_MASK) | (((uint32_t)val) << DMA5_INT_ACK_EOI_ERR_INT_ACK_SHIFT))
+
+#define  DMA5_INT_ACK_FIN_INT_ACK_MASK 0x2
+#define  DMA5_INT_ACK_FIN_INT_ACK_SHIFT 1
+#define  DMA5_INT_ACK_FIN_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA5_INT_ACK_FIN_INT_ACK_MASK) >> DMA5_INT_ACK_FIN_INT_ACK_SHIFT)
+#define  DMA5_INT_ACK_FIN_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_ACK_FIN_INT_ACK_MASK) | (((uint32_t)val) << DMA5_INT_ACK_FIN_INT_ACK_SHIFT))
+
+#define  DMA5_INT_ACK_WHO_INT_ACK_MASK 0x1
+#define  DMA5_INT_ACK_WHO_INT_ACK_SHIFT 0
+#define  DMA5_INT_ACK_WHO_INT_ACK_MASK_SHIFT(reg) (((reg) & DMA5_INT_ACK_WHO_INT_ACK_MASK) >> DMA5_INT_ACK_WHO_INT_ACK_SHIFT)
+#define  DMA5_INT_ACK_WHO_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_ACK_WHO_INT_ACK_MASK) | (((uint32_t)val) << DMA5_INT_ACK_WHO_INT_ACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (int_fo)
+//====================================================================
+
+#define  DMA5_INT_FO_RESERVED1_MASK 0xfffff800
+#define  DMA5_INT_FO_RESERVED1_SHIFT 11
+#define  DMA5_INT_FO_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA5_INT_FO_RESERVED1_MASK) >> DMA5_INT_FO_RESERVED1_SHIFT)
+#define  DMA5_INT_FO_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_FO_RESERVED1_MASK) | (((uint32_t)val) << DMA5_INT_FO_RESERVED1_SHIFT))
+
+#define  DMA5_INT_FO_RRESP_INT_FO_MASK 0x400
+#define  DMA5_INT_FO_RRESP_INT_FO_SHIFT 10
+#define  DMA5_INT_FO_RRESP_INT_FO_MASK_SHIFT(reg) (((reg) & DMA5_INT_FO_RRESP_INT_FO_MASK) >> DMA5_INT_FO_RRESP_INT_FO_SHIFT)
+#define  DMA5_INT_FO_RRESP_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_FO_RRESP_INT_FO_MASK) | (((uint32_t)val) << DMA5_INT_FO_RRESP_INT_FO_SHIFT))
+
+#define  DMA5_INT_FO_BRESP_INT_FO_MASK 0x200
+#define  DMA5_INT_FO_BRESP_INT_FO_SHIFT 9
+#define  DMA5_INT_FO_BRESP_INT_FO_MASK_SHIFT(reg) (((reg) & DMA5_INT_FO_BRESP_INT_FO_MASK) >> DMA5_INT_FO_BRESP_INT_FO_SHIFT)
+#define  DMA5_INT_FO_BRESP_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_FO_BRESP_INT_FO_MASK) | (((uint32_t)val) << DMA5_INT_FO_BRESP_INT_FO_SHIFT))
+
+#define  DMA5_INT_FO_RST_INT_FO_MASK 0x100
+#define  DMA5_INT_FO_RST_INT_FO_SHIFT 8
+#define  DMA5_INT_FO_RST_INT_FO_MASK_SHIFT(reg) (((reg) & DMA5_INT_FO_RST_INT_FO_MASK) >> DMA5_INT_FO_RST_INT_FO_SHIFT)
+#define  DMA5_INT_FO_RST_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_FO_RST_INT_FO_MASK) | (((uint32_t)val) << DMA5_INT_FO_RST_INT_FO_SHIFT))
+
+#define  DMA5_INT_FO_EOI_INT_FO_MASK 0x80
+#define  DMA5_INT_FO_EOI_INT_FO_SHIFT 7
+#define  DMA5_INT_FO_EOI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA5_INT_FO_EOI_INT_FO_MASK) >> DMA5_INT_FO_EOI_INT_FO_SHIFT)
+#define  DMA5_INT_FO_EOI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_FO_EOI_INT_FO_MASK) | (((uint32_t)val) << DMA5_INT_FO_EOI_INT_FO_SHIFT))
+
+#define  DMA5_INT_FO_DIR_INT_FO_MASK 0x40
+#define  DMA5_INT_FO_DIR_INT_FO_SHIFT 6
+#define  DMA5_INT_FO_DIR_INT_FO_MASK_SHIFT(reg) (((reg) & DMA5_INT_FO_DIR_INT_FO_MASK) >> DMA5_INT_FO_DIR_INT_FO_SHIFT)
+#define  DMA5_INT_FO_DIR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_FO_DIR_INT_FO_MASK) | (((uint32_t)val) << DMA5_INT_FO_DIR_INT_FO_SHIFT))
+
+#define  DMA5_INT_FO_CL_ALI_INT_FO_MASK 0x20
+#define  DMA5_INT_FO_CL_ALI_INT_FO_SHIFT 5
+#define  DMA5_INT_FO_CL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA5_INT_FO_CL_ALI_INT_FO_MASK) >> DMA5_INT_FO_CL_ALI_INT_FO_SHIFT)
+#define  DMA5_INT_FO_CL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_FO_CL_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA5_INT_FO_CL_ALI_INT_FO_SHIFT))
+
+#define  DMA5_INT_FO_EOL_ALI_INT_FO_MASK 0x10
+#define  DMA5_INT_FO_EOL_ALI_INT_FO_SHIFT 4
+#define  DMA5_INT_FO_EOL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA5_INT_FO_EOL_ALI_INT_FO_MASK) >> DMA5_INT_FO_EOL_ALI_INT_FO_SHIFT)
+#define  DMA5_INT_FO_EOL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_FO_EOL_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA5_INT_FO_EOL_ALI_INT_FO_SHIFT))
+
+#define  DMA5_INT_FO_EOI_ALI_INT_FO_MASK 0x8
+#define  DMA5_INT_FO_EOI_ALI_INT_FO_SHIFT 3
+#define  DMA5_INT_FO_EOI_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & DMA5_INT_FO_EOI_ALI_INT_FO_MASK) >> DMA5_INT_FO_EOI_ALI_INT_FO_SHIFT)
+#define  DMA5_INT_FO_EOI_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_FO_EOI_ALI_INT_FO_MASK) | (((uint32_t)val) << DMA5_INT_FO_EOI_ALI_INT_FO_SHIFT))
+
+#define  DMA5_INT_FO_EOI_ERR_INT_FO_MASK 0x4
+#define  DMA5_INT_FO_EOI_ERR_INT_FO_SHIFT 2
+#define  DMA5_INT_FO_EOI_ERR_INT_FO_MASK_SHIFT(reg) (((reg) & DMA5_INT_FO_EOI_ERR_INT_FO_MASK) >> DMA5_INT_FO_EOI_ERR_INT_FO_SHIFT)
+#define  DMA5_INT_FO_EOI_ERR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_FO_EOI_ERR_INT_FO_MASK) | (((uint32_t)val) << DMA5_INT_FO_EOI_ERR_INT_FO_SHIFT))
+
+#define  DMA5_INT_FO_FIN_INT_FO_MASK 0x2
+#define  DMA5_INT_FO_FIN_INT_FO_SHIFT 1
+#define  DMA5_INT_FO_FIN_INT_FO_MASK_SHIFT(reg) (((reg) & DMA5_INT_FO_FIN_INT_FO_MASK) >> DMA5_INT_FO_FIN_INT_FO_SHIFT)
+#define  DMA5_INT_FO_FIN_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_FO_FIN_INT_FO_MASK) | (((uint32_t)val) << DMA5_INT_FO_FIN_INT_FO_SHIFT))
+
+#define  DMA5_INT_FO_WHO_INT_FO_MASK 0x1
+#define  DMA5_INT_FO_WHO_INT_FO_SHIFT 0
+#define  DMA5_INT_FO_WHO_INT_FO_MASK_SHIFT(reg) (((reg) & DMA5_INT_FO_WHO_INT_FO_MASK) >> DMA5_INT_FO_WHO_INT_FO_SHIFT)
+#define  DMA5_INT_FO_WHO_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~DMA5_INT_FO_WHO_INT_FO_MASK) | (((uint32_t)val) << DMA5_INT_FO_WHO_INT_FO_SHIFT))
+
+//====================================================================
+//Register: Descriptor Write Register (desc_write)
+//====================================================================
+
+#define  DMA5_DESC_WRITE_DESC_MASK 0xfffffffc
+#define  DMA5_DESC_WRITE_DESC_SHIFT 2
+#define  DMA5_DESC_WRITE_DESC_MASK_SHIFT(reg) (((reg) & DMA5_DESC_WRITE_DESC_MASK) >> DMA5_DESC_WRITE_DESC_SHIFT)
+#define  DMA5_DESC_WRITE_DESC_REPLACE_VAL(reg,val) (((reg) & ~DMA5_DESC_WRITE_DESC_MASK) | (((uint32_t)val) << DMA5_DESC_WRITE_DESC_SHIFT))
+
+#define  DMA5_DESC_WRITE_RESERVED1_MASK 0x3
+#define  DMA5_DESC_WRITE_RESERVED1_SHIFT 0
+#define  DMA5_DESC_WRITE_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA5_DESC_WRITE_RESERVED1_MASK) >> DMA5_DESC_WRITE_RESERVED1_SHIFT)
+#define  DMA5_DESC_WRITE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA5_DESC_WRITE_RESERVED1_MASK) | (((uint32_t)val) << DMA5_DESC_WRITE_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Descriptor Read Register (desc_read)
+//====================================================================
+
+#define  DMA5_DESC_READ_DESC_MASK 0xffffffff
+#define  DMA5_DESC_READ_DESC_SHIFT 0
+#define  DMA5_DESC_READ_DESC_MASK_SHIFT(reg) (((reg) & DMA5_DESC_READ_DESC_MASK) >> DMA5_DESC_READ_DESC_SHIFT)
+#define  DMA5_DESC_READ_DESC_REPLACE_VAL(reg,val) (((reg) & ~DMA5_DESC_READ_DESC_MASK) | (((uint32_t)val) << DMA5_DESC_READ_DESC_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Length Register (xfer_length)
+//====================================================================
+
+#define  DMA5_XFER_LENGTH_LEN_MASK 0xffffffff
+#define  DMA5_XFER_LENGTH_LEN_SHIFT 0
+#define  DMA5_XFER_LENGTH_LEN_MASK_SHIFT(reg) (((reg) & DMA5_XFER_LENGTH_LEN_MASK) >> DMA5_XFER_LENGTH_LEN_SHIFT)
+#define  DMA5_XFER_LENGTH_LEN_REPLACE_VAL(reg,val) (((reg) & ~DMA5_XFER_LENGTH_LEN_MASK) | (((uint32_t)val) << DMA5_XFER_LENGTH_LEN_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Address Register (xfer_addr)
+//====================================================================
+
+#define  DMA5_XFER_ADDR_ADDR_MASK 0xffffffff
+#define  DMA5_XFER_ADDR_ADDR_SHIFT 0
+#define  DMA5_XFER_ADDR_ADDR_MASK_SHIFT(reg) (((reg) & DMA5_XFER_ADDR_ADDR_MASK) >> DMA5_XFER_ADDR_ADDR_SHIFT)
+#define  DMA5_XFER_ADDR_ADDR_REPLACE_VAL(reg,val) (((reg) & ~DMA5_XFER_ADDR_ADDR_MASK) | (((uint32_t)val) << DMA5_XFER_ADDR_ADDR_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Burst Register (xfer_burst)
+//====================================================================
+
+#define  DMA5_XFER_BURST_RESERVED1_MASK 0xffffffe0
+#define  DMA5_XFER_BURST_RESERVED1_SHIFT 5
+#define  DMA5_XFER_BURST_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA5_XFER_BURST_RESERVED1_MASK) >> DMA5_XFER_BURST_RESERVED1_SHIFT)
+#define  DMA5_XFER_BURST_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA5_XFER_BURST_RESERVED1_MASK) | (((uint32_t)val) << DMA5_XFER_BURST_RESERVED1_SHIFT))
+
+#define  DMA5_XFER_BURST_BURST_MASK 0x1f
+#define  DMA5_XFER_BURST_BURST_SHIFT 0
+#define  DMA5_XFER_BURST_BURST_MASK_SHIFT(reg) (((reg) & DMA5_XFER_BURST_BURST_MASK) >> DMA5_XFER_BURST_BURST_SHIFT)
+#define  DMA5_XFER_BURST_BURST_REPLACE_VAL(reg,val) (((reg) & ~DMA5_XFER_BURST_BURST_MASK) | (((uint32_t)val) << DMA5_XFER_BURST_BURST_SHIFT))
+
+//====================================================================
+//Register: Data Valid Register (data_val)
+//====================================================================
+
+#define  DMA5_DATA_VAL_DATA_VALID_MASK 0xffffffff
+#define  DMA5_DATA_VAL_DATA_VALID_SHIFT 0
+#define  DMA5_DATA_VAL_DATA_VALID_MASK_SHIFT(reg) (((reg) & DMA5_DATA_VAL_DATA_VALID_MASK) >> DMA5_DATA_VAL_DATA_VALID_SHIFT)
+#define  DMA5_DATA_VAL_DATA_VALID_REPLACE_VAL(reg,val) (((reg) & ~DMA5_DATA_VAL_DATA_VALID_MASK) | (((uint32_t)val) << DMA5_DATA_VAL_DATA_VALID_SHIFT))
+
+//====================================================================
+//Register: Soft Reset register (reset)
+//====================================================================
+
+#define  DMA5_RESET_RESERVED1_MASK 0xfffffffe
+#define  DMA5_RESET_RESERVED1_SHIFT 1
+#define  DMA5_RESET_RESERVED1_MASK_SHIFT(reg) (((reg) & DMA5_RESET_RESERVED1_MASK) >> DMA5_RESET_RESERVED1_SHIFT)
+#define  DMA5_RESET_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~DMA5_RESET_RESERVED1_MASK) | (((uint32_t)val) << DMA5_RESET_RESERVED1_SHIFT))
+
+#define  DMA5_RESET_SOFT_RESET_MASK 0x1
+#define  DMA5_RESET_SOFT_RESET_SHIFT 0
+#define  DMA5_RESET_SOFT_RESET_MASK_SHIFT(reg) (((reg) & DMA5_RESET_SOFT_RESET_MASK) >> DMA5_RESET_SOFT_RESET_SHIFT)
+#define  DMA5_RESET_SOFT_RESET_REPLACE_VAL(reg,val) (((reg) & ~DMA5_RESET_SOFT_RESET_MASK) | (((uint32_t)val) << DMA5_RESET_SOFT_RESET_SHIFT))
+
+#endif // PIC_WDMA_6

@@ -1,0 +1,103 @@
+{
+   "ID" : 1,
+   "jsonrpc" : "2.0",
+   "method" : "set params",
+   "params" : {
+      "SERVICES" : {
+         "CIFS" : {
+            "ID" : "",
+            "PW" : "",
+            "Server Address" : "",
+            "Use" : false
+         },
+         "FTP" : {
+            "ID" : "",
+            "PW" : "",
+            "Server Address" : "",
+            "Use" : true,
+            "Use SSL" : false
+         },
+         "SMTP" : {
+            "Email Address" : "",
+            "Port Number" : "",
+            "Server Address" : "",
+            "Use" : true,
+            "Use SSL" : false
+         },
+         "SNMP" : {
+            "Community" : "",
+            "Server Address" : "",
+            "Trap Community" : "",
+            "Type" : false,
+            "Use" : true
+         }
+      },
+      "Security" : {
+         "IEEE902.1x" : false,
+         "IP Filtering" : false,
+         "IPSec" : false,
+         "SMTP-auth" : false,
+         "SSL/TLS" : false,
+         "WPA/IEEE802.11i" : false
+      },
+      "TCPIP" : {
+         "Ethernet" : {
+            "TCPIPv4" : {
+               "ADNS" : "",
+               "DHCP DNS" : false,
+               "DHCP IP" : false,
+               "Gateway" : "10.15.1.254",
+               "IP Address" : "10.15.102.210",
+               "Netmask" : "255.255.0.0",
+               "PDNS" : ""
+            },
+            "TCPIPv6" : {
+               "ADNS" : "",
+               "DHCP DNS" : false,
+               "DHCP IP" : false,
+               "Gateway" : "",
+               "IP Address" : "fe80:0000:0000:0000:0220:24ff:fe2c:5744/64",
+               "Netmask" : "",
+               "PDNS" : ""
+            }
+         },
+         "Wireless" : {
+            "TCPIPv4" : {
+               "ADNS" : "",
+               "DHCP DNS" : true,
+               "DHCP IP" : true,
+               "Gateway" : "",
+               "IP Address" : "",
+               "Netmask" : "",
+               "PDNS" : ""
+            },
+            "TCPIPv6" : {
+               "ADNS" : "",
+               "DHCP DNS" : false,
+               "DHCP IP" : false,
+               "Gateway" : "",
+               "IP Address" : "",
+               "Netmask" : "",
+               "PDNS" : ""
+            }
+         },
+         "Wireless Config" : {
+            "Encryption Method" : 3,
+            "SSID" : "SMC",
+            "WEP" : {
+               "Key" : ""
+            },
+            "WPA-PSK" : {
+               "Gcipher" : false,
+               "Key" : "",
+               "Pchiper" : false
+            },
+            "WPA2-PSK" : {
+               "Gcipher" : false,
+               "Key" : "",
+               "Pchiper" : false
+            }
+         }
+      }
+   }
+}

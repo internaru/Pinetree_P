@@ -1,0 +1,20 @@
+<!--COMMENT 
+
+status-content.xml
+
+MIDAS status xml file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+<status><!--#ssi IDr OID_STATUS_GENERAL --></status> 

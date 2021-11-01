@@ -1,0 +1,72 @@
+#!/bin/sh
+
+# Quick and dirty script to read a block of rows from a raw capture and
+# generate a montage of graphs of all the rows in the block.
+#
+# Originally created to graph each row in a block of data coming back in a
+# cal-to-host.
+#
+# davep 30-Apr-2008
+# $Id: rowmontage 413 2008-05-16 20:40:39Z davep $
+
+if [ $# -ne 4 ] ; then
+    echo "usage: $0 filename pixels-per-row bytes-per-pixel rows-to-skip"
+    exit 1
+fi
+
+infilename=$1
+pixels_per_row=$2
+bytes_per_pixel=$3
+rows_to_skip=$4
+
+# hardcode the number of rows
+# note: 300 DPI captures 30 rows per scan, 600==60, 1200=50
+num_rows=30
+
+# should usually be zero; hardwiring it to trim off the white DMA padding
+#left_clip=3
+#right_clip=16
+right_clip=0
+left_clip=0
+
+# XXX temp debug ; only capture 9 
+#num_rows=9
+
+if [ ! -f $infilename ] ; then
+    echo "$infilename does not exist"
+    exit 1
+fi
+
+files="" 
+i=$rows_to_skip
+last_row=$(($i+$num_rows))
+
+echo reading rows $i to $last_row
+while [ $i -lt $last_row ] ; do 
+    echo $i 
+    python rowparse.py --pixels_per_row=$pixels_per_row --skip_rows=$i --bytes_per_pixel=$bytes_per_pixel --left_clip=$left_clip --right_clip=$right_clip $infilename > row$i.dat 
+
+    if [ $? -ne 0 ] ; then
+        echo "rowparse.py failed!"
+        exit 1
+    fi 
+
+    echo "set term png; set output \"row$i.png\"; plot \"row$i.dat\";" | gnuplot
+    if [ $? -ne 0 ] ; then
+        echo "gnuplot failed!"
+        exit 1
+    fi 
+
+    files="${files} 'row$i.png'," 
+    i=$(($i+1)) 
+done
+
+echo $files
+
+python -c "files=[$files]; print files; import calparse; calparse.make_montage( files, '$infilename-rows.png')" 
+
+if [ $? -ne 0 ] ; then
+    echo "calparse failed!"
+    exit 1
+fi 
+

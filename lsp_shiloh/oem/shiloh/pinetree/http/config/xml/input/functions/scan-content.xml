@@ -1,0 +1,27 @@
+<!--COMMENT  
+
+functions/scan-content.xml
+
+MIDAS Functions Scan Content file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+    <scan>
+	  <targetHosts>
+	    <targetHost>
+		  <hostName><!--#ssi IDr OID_SCAN_TARGET_HOST_NAME_0 --></hostName>
+		  <hostScanPending><!--#ssi IDr OID_SCAN_TARGET_HOST_SCAN_PENDING_0 --></hostScanPending>
+		</targetHost>
+	  </targetHosts>
+    </scan>

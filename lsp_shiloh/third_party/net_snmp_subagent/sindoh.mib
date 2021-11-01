@@ -1,0 +1,312 @@
+--------------------------------------------------------------------------------
+--- SINDOH-MIB
+--------------------------------------------------------------------------------
+
+SINDOH-MIB   DEFINITIONS ::= BEGIN
+	IMPORTS
+	enterprises, IpAddress
+			FROM RFC1155-SMI
+		Unsigned32, Counter32, Counter64, TimeTicks, OBJECT-TYPE, MODULE-IDENTITY
+			FROM SNMPv2-SMI;
+
+------------------------------------------------------------------------------
+--- textual conventions
+----------------------------------------------------------------------------------
+
+	Boolean ::= INTEGER { ture(1), false(2) }
+	DisplayString ::= OCTET STRING
+	-- This data type is used to model textual information taken
+	-- from the NVT ASCII character set.  By convention, objects
+	-- with this syntax are declared as having
+	--
+	--      SIZE (0..255)
+
+	PhysAddress ::= OCTET STRING
+	-- This data type is used to model media addresses.  For many
+	-- types of media, this will be in a binary representation.
+	-- For example, an ethernet address would be represented as
+	-- a string of 6 octets.
+
+	KBytes ::= INTEGER (0..2147483647)
+	-- memory size, expressed in units of 1024bytes
+	
+	sindoh MODULE-IDENTITY
+		LAST-UPDATED "20090305"
+		ORGANIZATION
+			"sindoh Inc."
+		CONTACT-INFO
+			"Choi In-Kwan
+		E-Mail: ikchoi@sindoh.com"
+		DESCRIPTION
+			"The MIB module for SINDOH Inc. Information."
+		::= { enterprises 27278 }
+
+--- Engine Group
+	sdhEngine 					OBJECT IDENTIFIER ::= { sindoh 1 }
+
+--- Engine General Group
+	sdhEngGeneral				OBJECT IDENTIFIER ::= { sdhEngine 1 }
+		
+--- Engine Status Group
+	sdhEngStatus				OBJECT IDENTIFIER ::= { sdhEngine 2 }
+
+--- Engine Alert Group
+	sdhEngAlert					OBJECT IDENTIFIER ::= { sdhEngine 3 }
+	
+--- Network Group
+	sdhNetwork					OBJECT IDENTIFIER ::= { sindoh 2 }
+
+-- Engine
+
+	sdhEngSerialNumber OBJECT-TYPE
+		SYNTAX  DisplayString (SIZE (0..16))
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				"Serial number of the plotter engine"
+		::= { sdhEngGeneral 1 }
+		
+	sdhEngSearchFunction OBJECT-TYPE
+		SYNTAX  Integer32
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				"Bit pattern describing available functions (per application)"
+		::= { sdhEngGeneral 2 }
+		
+	sdhEngCounter OBJECT-TYPE
+		SYNTAX  Unsigned32
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngGeneral 3 }
+		
+	sdhEngTonerLevel OBJECT-TYPE
+		SYNTAX  INTEGER(-100..100)
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngGeneral 4 }
+		
+	sdhEngHDDMax OBJECT-TYPE
+		SYNTAX  KBytes
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngGeneral 5 }
+	
+	sdhEngHDDUsed OBJECT-TYPE
+		SYNTAX  KBytes
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngGeneral 6 }
+
+-- Engine Status
+
+	sdhEngScanStatus OBJECT-TYPE
+		SYNTAX  Unsigned32
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngStatus 1 }
+		
+	sdhEngFAXStatus OBJECT-TYPE
+		SYNTAX  Unsigned32
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngStatus 2 }
+		
+	sdhEngCopyStatus OBJECT-TYPE
+		SYNTAX  Unsigned32
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngStatus 3 }
+
+-- Engine Alert
+	
+	sdhEngAlertScanTable OBJECT-TYPE
+		SYNTAX  SEQUENCE OF SdhEngAlertScanEntry
+		ACCESS  not-accessible
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngAlert 1 }
+
+	sdhEngAlertScanEntry OBJECT-TYPE
+		SYNTAX  SdhEngAlertScanEntry
+		ACCESS  not-accessible
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		INDEX   { sdhEngAlertScanID }
+		::= { sdhEngAlertScanTable 1 }
+
+	SdhEngAlertScanEntry ::=
+		SEQUENCE {
+			sdhEngAlertScanID
+				Integer32,
+			sdhEngAlertScanDescr
+				DisplayString
+		}
+
+	sdhEngAlertScanID OBJECT-TYPE
+		SYNTAX  Integer32
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngAlertScanEntry 1 }
+
+	sdhEngAlertScanDescr OBJECT-TYPE
+		SYNTAX  DisplayString (SIZE (0..255))
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngAlertScanEntry 2 }
+		
+	sdhEngAlertFAXTable OBJECT-TYPE
+		SYNTAX  SEQUENCE OF SdhEngAlertFAXEntry
+		ACCESS  not-accessible
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngAlert 2 }
+
+	sdhEngAlertFAXEntry OBJECT-TYPE
+		SYNTAX  SdhEngAlertFAXEntry
+		ACCESS  not-accessible
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		INDEX   { sdhEngAlertFAXID }
+		::= { sdhEngAlertFAXTable 1 }
+
+	SdhEngAlertFAXEntry ::=
+		SEQUENCE {
+			sdhEngAlertFAXID
+				Integer32,
+			sdhEngAlertFAXDescr
+				DisplayString
+		}
+
+	sdhEngAlertFAXID OBJECT-TYPE
+		SYNTAX  Integer32
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngAlertFAXEntry 1 }
+
+	sdhEngAlertFAXDescr OBJECT-TYPE
+		SYNTAX  DisplayString (SIZE (0..255))
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngAlertFAXEntry 2 }
+	
+	sdhEngAlertCopyTable OBJECT-TYPE
+		SYNTAX  SEQUENCE OF SdhEngAlertCopyEntry
+		ACCESS  not-accessible
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngAlert 3 }
+
+	sdhEngAlertCopyEntry OBJECT-TYPE
+		SYNTAX  SdhEngAlertCopyEntry
+		ACCESS  not-accessible
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		INDEX   { sdhEngAlertCopyID }
+		::= { sdhEngAlertCopyTable 1 }
+
+	SdhEngAlertCopyEntry ::=
+		SEQUENCE {
+			sdhEngAlertCopyID
+				Integer32,
+			sdhEngAlertCopyDescr
+				DisplayString
+		}
+
+	sdhEngAlertCopyID OBJECT-TYPE
+		SYNTAX  Integer32
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngAlertCopyEntry 1 }
+
+	sdhEngAlertCopyDescr OBJECT-TYPE
+		SYNTAX  DisplayString (SIZE (0..255))
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngAlertCopyEntry 2 }
+
+-- New value applied
+    EngStatusCode OBJECT-TYPE
+		SYNTAX  Integer32
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngine 4 }
+
+    EngDrumLife OBJECT-TYPE
+		SYNTAX  Integer32
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngine 5 }
+
+    EngBridge OBJECT-TYPE
+		SYNTAX  Integer32
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngine 6 }
+
+    EngOneBin OBJECT-TYPE
+		SYNTAX  Integer32
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhEngine 7 }
+		
+-- Network
+
+	sdhNetContName OBJECT-TYPE
+		SYNTAX  DisplayString (SIZE (0..255))
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhNetwork 1 }
+		
+	sdhNetComputerName OBJECT-TYPE
+		SYNTAX  DisplayString (SIZE (0..255))
+		ACCESS  read-only
+		STATUS  mandatory
+		DESCRIPTION
+				""
+		::= { sdhNetwork 2 }
+
+
+END

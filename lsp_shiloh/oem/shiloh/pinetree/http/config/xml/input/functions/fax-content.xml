@@ -1,0 +1,26 @@
+<!-- 
+
+functions/fax-content.xml
+
+MIDAS Functions Fax Content file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+    <fax>
+      <faxHeader><!--#ssi IDr FAX_HEADER --></faxHeader>
+      <faxAreaCode><!--#ssi IDr FAX_AREA_CODE --></faxAreaCode>
+      <faxPhoneNumber><!--#ssi IDr FAX_PHONE_NUMBER --></faxPhoneNumber>
+      <faxMaxRings><!--#ssi IDr FAX_MAX_RINGS --></faxMaxRings>
+      <faxRetries><!--#ssi IDr FAX_RETRIES --></faxRetries>
+    </fax>

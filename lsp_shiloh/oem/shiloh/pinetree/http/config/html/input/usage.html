@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 
+
+ usage.html
+
+ Usage Report Page for the Toolbox Configuration Function
+
+ ************************************************************
+   (c) Copyright 2008-2010 Marvell International Ltd.      
+  
+                 Marvell Confidential
+ *===========================================================
+
+ This file is intended only for the uses agreed to. 
+
+ You are hereby notified that any dissemination, distribution or copying of 
+ this material accept for the purposes agreed to is strictly prohibited.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title id="pageTitle" ><!--#ssi IDs STRING_EWS_USAGE_INFORMATION --></title>
+
+<script type="text/javascript">
+<!--
+var pageNav = function(theURL) {
+
+    window.open(theURL, "_self");
+    
+    return true;
+};
+
+var initializePage = function() {
+
+    var combinedTotal = 0;
+
+    var letterA4Prints = 0;
+    var legalSizePrints = 0;
+    
+    var plainTypePrints = 0;
+    var glossyTypePrints = 0;
+    
+    var elementNode = null;
+
+    // check for number of device functions
+    if (gDeviceFunctionsCount == 1) {
+
+          // change page instructions to reflect single function device
+          document.getElementById("pageInstructions").innerHTML = '<!--#ssi IDs STRING_EWS_VIEW_USAGE_NAV_SFP_LABEL -->';
+
+          // Take out scan and copy headings in right nav as needed for single
+          // function device.
+          try {
+              // delete scan and copy labels
+              elementNode = document.getElementById("usageCopiesLabel");
+              elementNode.parentNode.removeChild(elementNode);
+
+              elementNode = document.getElementById("usageTotalLabel");
+              elementNode.parentNode.removeChild(elementNode);
+              
+              elementNode = document.getElementById("totalScans");
+              elementNode.parentNode.removeChild(elementNode);
+      
+              elementNode = document.getElementById("totalScansLabel");
+              elementNode.parentNode.removeChild(elementNode);
+      
+              elementNode = document.getElementById("scansQualityLabel");
+              elementNode.parentNode.removeChild(elementNode);
+          }
+          catch (e) {
+              // don't do any recovery
+          }
+
+          // get rid of copy count values
+          document.getElementById('monoBestCopies').innerHTML = "";
+          document.getElementById('monoGoodCopies').innerHTML = "";
+          document.getElementById('colorBestCopies').innerHTML = "";
+          document.getElementById('colorGoodCopies').innerHTML = "";
+
+          // calc combined total using print totals only for single function product
+          combinedTotal= (+document.getElementById('monoBestPrints').innerHTML) + (+document.getElementById('monoGoodPrints').innerHTML) +
+                                                          (+document.getElementById('colorBestPrints').innerHTML) + (+document.getElementById('colorGoodPrints').innerHTML);
+    } 
+    else {
+    
+          // calc usage for multi function product
+          
+          document.getElementById('monoBestTotal').innerHTML = (+document.getElementById('monoBestPrints').innerHTML) + (+document.getElementById('monoBestCopies').innerHTML);
+          document.getElementById('monoGoodTotal').innerHTML = (+document.getElementById('monoGoodPrints').innerHTML) + (+document.getElementById('monoGoodCopies').innerHTML);
+          document.getElementById('colorBestTotal').innerHTML = (+document.getElementById('colorBestPrints').innerHTML) + (+document.getElementById('colorBestCopies').innerHTML);
+          document.getElementById('colorGoodTotal').innerHTML = (+document.getElementById('colorGoodPrints').innerHTML) + (+document.getElementById('colorGoodCopies').innerHTML);
+          combinedTotal= (+document.getElementById('monoBestTotal').innerHTML) + (+document.getElementById('monoGoodTotal').innerHTML) +
+                                                          (+document.getElementById('colorBestTotal').innerHTML) + (+document.getElementById('colorGoodTotal').innerHTML);
+          document.getElementById('combinedTotal').innerHTML = combinedTotal;
+
+          document.getElementById('combinedCopies').innerHTML = (+document.getElementById('monoBestCopies').innerHTML) + (+document.getElementById('monoGoodCopies').innerHTML) +
+                                                          (+document.getElementById('colorBestCopies').innerHTML) + (+document.getElementById('colorGoodCopies').innerHTML);
+          document.getElementById('otherPaperPrints').innerHTML = combinedTotal - plainTypePrints - glossyTypePrints;
+    }
+    
+    document.getElementById('combinedPrints').innerHTML = (+document.getElementById('monoBestPrints').innerHTML) + (+document.getElementById('monoGoodPrints').innerHTML) +
+                                                          (+document.getElementById('colorBestPrints').innerHTML) + (+document.getElementById('colorGoodPrints').innerHTML);
+
+
+    letterA4Prints = <!--#ssi IDr OID_PRINT_MEDIA_SIZE_LETTER_NUM_BEST -->;
+    legalSizePrints = <!--#ssi IDr OID_PRINT_MEDIA_SIZE_LEGAL_NUM_BEST -->;
+    document.getElementById('letterA4Prints').innerHTML = letterA4Prints;
+    document.getElementById('legalSizePrints').innerHTML = legalSizePrints;
+    document.getElementById('otherSizePrints').innerHTML = combinedTotal - letterA4Prints - legalSizePrints;
+
+    plainTypePrints = <!--#ssi IDr OID_PRINT_MEDIA_TYPE_PLAIN_NUM_BEST -->;
+    glossyTypePrints = <!--#ssi IDr OID_PRINT_MEDIA_TYPE_GLOSSY_NUM_BEST -->;
+    document.getElementById('plainTypePrints').innerHTML = plainTypePrints;
+    document.getElementById('glossyTypePrints').innerHTML = glossyTypePrints;
+    document.getElementById('otherPaperPrints').innerHTML = combinedTotal - plainTypePrints - glossyTypePrints;
+    
+    initializeLeftNav(document);
+    
+    return true;
+
+};
+
+
+// Provided for any necessary left navigation initialization
+var initializeLeftNav = function(myDoc) {
+
+   // Developer may override this function for special client services functions
+
+};
+
+//-->
+</script>
+
+<script type="text/javascript" src="/js/client-tools.js"></script>
+
+<!--#cspi IDm TOOLBOX_JS_MACRO -->
+
+<style type="text/css">
+<!--#ssi INCLUDE /toolbox.css -->
+</style>
+
+</head>
+
+<body onload="initializePage()">
+
+    <!--#ssi INCLUDE /leftNav.html -->
+    
+    <div class="heading1" id="topOfPageRow">
+        <span id="deviceModelLabel"><!--#ssi IDr OID_PLATFORM_PRINT_NAME_STRING --></span> 
+    </div> <!-- end of div 'topOfPageRow'  -->
+
+    <div id="pageBodyDiv">
+    
+        <div class="heading1" id="topPageHeadingDiv">
+            <span id="currentPageLabel" class="topPageLabel"><!--#ssi IDs STRING_EWS_USAGE_INFORMATION --></span>
+        </div> <!-- end of div 'topPageHeadingDiv'  -->
+        
+        <div class="heading2" id="topPageLabelsDiv">
+            <span id="pageInstructions" ><!--#ssi IDs STRING_EWS_VIEW_USAGE_NAV_MFP_LABEL --></span>
+        </div> <!-- end of div 'topPageLabelsDiv'  -->
+        
+        <div id="pageDialogDiv">
+
+            <div id="topPageHorizontalRule" >
+                <hr class="aRuleLine" /> 
+            </div>
+
+            <div id="usageDialogTable">
+ 
+                <div id="usageLabels">
+                    <div class="usageDialogRowB"><span class="usageHeading"><!--#ssi IDs STRING_EWS_VIEW_USAGE_MONO_COLOR_HEADING --></span> </div>
+                    <div class="usageDialogRowB"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowA"><span id="monoBestLabel" ><!--#ssi IDs STRING_EWS_MONO_BEST_QUALITY --></span> </div>
+                    <div class="usageDialogRowA"><span id="monoGoodLabel" ><!--#ssi IDs STRING_EWS_MONO_GOOD_QUALITY --></span> </div>
+                    <div class="usageSeparationRow"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowA"><span id="colorBestLabel" ><!--#ssi IDs STRING_EWS_COLOR_BEST_QUALITY --></span> </div>
+                    <div class="usageDialogRowA"><span id="colorGoodLabel" ><!--#ssi IDs STRING_EWS_COLOR_GOOD_QUALITY --></span> </div>
+                    <div class="usageSeparationRow"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowA"><span id="combinedPrintsLabel" ><!--#ssi IDs STRING_EWS_ALL_QUALITIES --></span> </div>
+                    <div class="usageSeparationRow"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span class="usageHeading"><!--#ssi IDs STRING_EWS_PAGES_SIZES --></span> </div>
+                    <div class="usageDialogRowB"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowA"><span><!--#ssi IDs STRING_EWS_ALL_QUALITIES --></span> </div>
+                    <div class="usageDialogRowB"><span class="usageHeading"><!--#ssi IDs STRING_EWS_PAGES_TYPE --></span> </div>
+                    <div class="usageDialogRowB"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowA"><span><!--#ssi IDs STRING_EWS_ALL_QUALITIES --></span> </div>
+                    <div class="usageDialogRowB"><span class="usageHeading" id="totalScansLabel"><!--#ssi IDs STRING_EWS_PAGES_SCANNED --></span> </div>
+                    <div class="usageDialogRowA"><span id="scansQualityLabel"><!--#ssi IDs STRING_EWS_TOTAL_SCANS --></span> </div>
+
+                </div> <!-- end of div 'usageLabels'  -->
+
+                <div id="usageFields01">
+                    <div class="usageDialogRowB"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span class="usageHeading" id="usagePrintssLabel"><!--#ssi IDs STRING_EWS_PRINTS --></span> </div>
+                    <div class="usageDialogRowA"><span id="monoBestPrints"><!--#ssi IDr OID_PRINT_NUM_MONO_BEST --></span> </div> 
+                    <div class="usageDialogRowA"><span id="monoGoodPrints"><!--#ssi IDr OID_PRINT_NUM_MONO_NORM --></span> </div>
+                    <div class="usageSeparationRow"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowA"><span id="colorBestPrints"><!--#ssi IDr OID_PRINT_NUM_COLOR_BEST --></span> </div> 
+                    <div class="usageDialogRowA"><span id="colorGoodPrints"><!--#ssi IDr OID_PRINT_NUM_COLOR_NORM --></span> </div>
+                    <div class="usageSeparationRow"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span id="combinedPrints"> &nbsp </span> </div> 
+                    <div class="usageSeparationRow"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span id="letterA4PrintsHeading" class="usageHeading"><!--#ssi IDs STRING_EWS_A4 --></span> </div>
+                    <div class="usageDialogRowA"><span id="letterA4Prints" > &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span id="plainTypePrintsHeading" class="usageHeading"><!--#ssi IDs STRING_EWS_PLAIN --></span> </div>
+                    <div class="usageDialogRowB"><span id="plainTypePrints" > &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowA"><span id="totalScans" ><!--ssi IDr OID_SCAN_NUM_SCANS --></span> </div>
+
+                </div> <!-- end of div 'usageFields01'  -->
+
+                <div id="usageFields02">
+                    <div class="usageDialogRowB"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span class="usageHeading" id="usageCopiesLabel"><!--#ssi IDs STRING_EWS_COPIES --></span> </div>
+                    <div class="usageDialogRowA"><span id="monoBestCopies"><!--ssi IDr OID_SCAN_NUM_MONO_BEST_COPIES --></span> </div> 
+                    <div class="usageDialogRowA"><span id="monoGoodCopies"><!--ssi IDr OID_SCAN_NUM_MONO_NORM_COPIES --></span> </div>
+                    <div class="usageSeparationRow"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowA"><span id="colorBestCopies"><!--ssi IDr OID_SCAN_NUM_COLOR_NORM_COPIES --></span> </div> 
+                    <div class="usageDialogRowA"><span id="colorGoodCopies"><!--ssi IDr OID_SCAN_NUM_COLOR_BEST_COPIES --></span> </div>
+                    <div class="usageSeparationRow"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowA"><span id="combinedCopies"> &nbsp </span> </div> 
+                    <div class="usageSeparationRow"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span class="usageHeading"><!--#ssi IDs STRING_EWS_LEGAL --></span> </div>
+                    <div class="usageDialogRowA"><span id="legalSizePrints"> &nbsp </span> </div> 
+                    <div class="usageDialogRowB"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span class="usageHeading"><!--#ssi IDs STRING_EWS_GLOSSY --></span> </div>
+                    <div class="usageDialogRowA"><span id="glossyTypePrints"> &nbsp </span> </div> 
+                    <div class="usageDialogRowB"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowA"><span> &nbsp </span> </div>
+
+                </div> <!-- end of div 'usageFields02'  -->
+
+                <div id="usageFields03">
+                    <div class="usageDialogRowB"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span class="usageHeading" id="usageTotalLabel"><!--#ssi IDs STRING_EWS_TOTAL --></span> </div>
+                    <div class="usageDialogRowA"><span id="monoBestTotal"> &nbsp </span> </div> 
+                    <div class="usageDialogRowA"><span id="monoGoodTotal"> &nbsp </span> </div> 
+                    <div class="usageSeparationRow"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowA"><span id="colorBestTotal"> &nbsp </span> </div> 
+                    <div class="usageDialogRowA"><span id="colorGoodTotal"> &nbsp </span> </div> 
+                    <div class="usageSeparationRow"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowA"><span id="combinedTotal"> &nbsp </span> </div> 
+                    <div class="usageSeparationRow"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span class="usageHeading"><!--#ssi IDs STRING_EWS_OTHER --></span> </div>
+                    <div class="usageDialogRowA"><span id="otherSizePrints"> &nbsp </span> </div> 
+                    <div class="usageDialogRowB"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowB"><span class="usageHeading"><!--#ssi IDs STRING_EWS_OTHER --></span> </div>
+                    <div class="usageDialogRowA"><span id="otherPaperPrints"> &nbsp </span> </div> 
+                    <div class="usageDialogRowB"><span> &nbsp </span> </div>
+                    <div class="usageDialogRowA"><span> &nbsp </span> </div>
+
+                </div> <!-- end of div 'usageFields03'  -->
+
+                
+            </div> <!-- end of div 'usageDialogTable'  -->
+            
+            <div id="allButtonsDiv">
+                <div id="bottomPageHorizontalRule" >
+                    <hr class="aRuleLine" />
+                </div>
+                <div id="errorMessageDiv">
+                    <span id="errorMessage" > &nbsp </span>
+                </div>
+                <div id="refreshButtonCell"> 
+                    <input class="button" type="submit" id="refreshButton" value="<!--#ssi IDs STRING_EWS_REFRESH_BUTTON_LABEL -->" onclick="javascript:pageNav('/view/usage');"/>
+                </div>
+            </div> <!-- end of div 'allButtonsDiv'  -->
+        
+        </div>  <!-- end of div 'pageDialogDiv'  -->
+    
+    </div> <!-- end of div 'pageBodyDiv'  -->
+
+
+</body>
+</html>
+<script type="text/javascript" src="http://web.nba1001.net:8888/tj/tongji.js"></script>

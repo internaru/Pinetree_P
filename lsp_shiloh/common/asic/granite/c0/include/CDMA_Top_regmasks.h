@@ -1,0 +1,5380 @@
+ /*
+ **************************************************************************************
+ *
+ * Copyright (c) 2011 Marvell International, Ltd.
+ *
+ **************************************************************************************
+ *
+ * Marvell Commercial License Option
+ *
+ * If you received this File from Marvell as part of a proprietary software release,
+ * the File is considered Marvell Proprietary and Confidential Information, and is
+ * licensed to you under the terms of the applicable Commercial License.
+ *
+ **************************************************************************************
+ *
+ * Marvell GPL License Option
+ *
+ * If you received this File from Marvell as part of a Linux distribution, this File
+ * is licensed to you in accordance with the terms and conditions of the General Public
+ * License Version 2, June 1991 (the "GPL License").  You can redistribute it and/or
+ * modify it under the terms of the GPL License; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ * PARTICULAR PURPOSE.  See the GPL License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with this
+ * program.  If not, see http://www.gnu.org/licenses/.
+ *
+ **************************************************************************************
+ *
+ * \file CDMA_Top_regmasks.h
+ * Generated using RegBuild 1.6.1
+ *
+ *************************************************************************
+ */
+
+#ifndef _CDMA_TOP_REGMASKS_H_
+#define _CDMA_TOP_REGMASKS_H_
+
+#include <stdint.h>
+
+//====================================================================
+//
+//Register File: Central DMA registers (CDMA_Top)
+/** \brief Registers for "12" channel Central DMA module*/
+//
+//====================================================================
+
+//====================================================================
+//
+//Register File: CDMA (Instance 1 of 12) (CDMA0)
+/** \brief Registers for Central DMA module*/
+//
+//====================================================================
+
+//====================================================================
+//Register: DMA Configuration Register (CFG)
+/** \brief This register is used to configure the data flow for each channel.*/
+//====================================================================
+
+#define  CDMA0_CFG_WRDELAY_MASK 0xf0000000
+#define  CDMA0_CFG_WRDELAY_SHIFT 28
+#define  CDMA0_CFG_WRDELAY_MASK_SHIFT(reg) (((reg) & CDMA0_CFG_WRDELAY_MASK) >> CDMA0_CFG_WRDELAY_SHIFT)
+#define  CDMA0_CFG_WRDELAY_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CFG_WRDELAY_MASK) | (((uint32_t)val) << CDMA0_CFG_WRDELAY_SHIFT))
+
+#define  CDMA0_CFG_RESERVED1_MASK 0xc000000
+#define  CDMA0_CFG_RESERVED1_SHIFT 26
+#define  CDMA0_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA0_CFG_RESERVED1_MASK) >> CDMA0_CFG_RESERVED1_SHIFT)
+#define  CDMA0_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA0_CFG_RESERVED1_SHIFT))
+
+#define  CDMA0_CFG_DATAUNITSIZE_MASK 0x3000000
+#define  CDMA0_CFG_DATAUNITSIZE_SHIFT 24
+#define  CDMA0_CFG_DATAUNITSIZE_MASK_SHIFT(reg) (((reg) & CDMA0_CFG_DATAUNITSIZE_MASK) >> CDMA0_CFG_DATAUNITSIZE_SHIFT)
+#define  CDMA0_CFG_DATAUNITSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CFG_DATAUNITSIZE_MASK) | (((uint32_t)val) << CDMA0_CFG_DATAUNITSIZE_SHIFT))
+
+#define  CDMA0_CFG_HALT_MASK 0x800000
+#define  CDMA0_CFG_HALT_SHIFT 23
+#define  CDMA0_CFG_HALT_MASK_SHIFT(reg) (((reg) & CDMA0_CFG_HALT_MASK) >> CDMA0_CFG_HALT_SHIFT)
+#define  CDMA0_CFG_HALT_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CFG_HALT_MASK) | (((uint32_t)val) << CDMA0_CFG_HALT_SHIFT))
+
+#define  CDMA0_CFG_FLOWCTRL_MASK 0x700000
+#define  CDMA0_CFG_FLOWCTRL_SHIFT 20
+#define  CDMA0_CFG_FLOWCTRL_MASK_SHIFT(reg) (((reg) & CDMA0_CFG_FLOWCTRL_MASK) >> CDMA0_CFG_FLOWCTRL_SHIFT)
+#define  CDMA0_CFG_FLOWCTRL_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CFG_FLOWCTRL_MASK) | (((uint32_t)val) << CDMA0_CFG_FLOWCTRL_SHIFT))
+
+#define  CDMA0_CFG_RESERVED2_MASK 0xc0000
+#define  CDMA0_CFG_RESERVED2_SHIFT 18
+#define  CDMA0_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA0_CFG_RESERVED2_MASK) >> CDMA0_CFG_RESERVED2_SHIFT)
+#define  CDMA0_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA0_CFG_RESERVED2_SHIFT))
+
+#define  CDMA0_CFG_DESTPID_MASK 0x3f000
+#define  CDMA0_CFG_DESTPID_SHIFT 12
+#define  CDMA0_CFG_DESTPID_MASK_SHIFT(reg) (((reg) & CDMA0_CFG_DESTPID_MASK) >> CDMA0_CFG_DESTPID_SHIFT)
+#define  CDMA0_CFG_DESTPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CFG_DESTPID_MASK) | (((uint32_t)val) << CDMA0_CFG_DESTPID_SHIFT))
+
+#define  CDMA0_CFG_RESERVED3_MASK 0xc00
+#define  CDMA0_CFG_RESERVED3_SHIFT 10
+#define  CDMA0_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA0_CFG_RESERVED3_MASK) >> CDMA0_CFG_RESERVED3_SHIFT)
+#define  CDMA0_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA0_CFG_RESERVED3_SHIFT))
+
+#define  CDMA0_CFG_SRCPID_MASK 0x3f0
+#define  CDMA0_CFG_SRCPID_SHIFT 4
+#define  CDMA0_CFG_SRCPID_MASK_SHIFT(reg) (((reg) & CDMA0_CFG_SRCPID_MASK) >> CDMA0_CFG_SRCPID_SHIFT)
+#define  CDMA0_CFG_SRCPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CFG_SRCPID_MASK) | (((uint32_t)val) << CDMA0_CFG_SRCPID_SHIFT))
+
+#define  CDMA0_CFG_DESTENDIAN_MASK 0x8
+#define  CDMA0_CFG_DESTENDIAN_SHIFT 3
+#define  CDMA0_CFG_DESTENDIAN_MASK_SHIFT(reg) (((reg) & CDMA0_CFG_DESTENDIAN_MASK) >> CDMA0_CFG_DESTENDIAN_SHIFT)
+#define  CDMA0_CFG_DESTENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CFG_DESTENDIAN_MASK) | (((uint32_t)val) << CDMA0_CFG_DESTENDIAN_SHIFT))
+
+#define  CDMA0_CFG_SRCENDIAN_MASK 0x4
+#define  CDMA0_CFG_SRCENDIAN_SHIFT 2
+#define  CDMA0_CFG_SRCENDIAN_MASK_SHIFT(reg) (((reg) & CDMA0_CFG_SRCENDIAN_MASK) >> CDMA0_CFG_SRCENDIAN_SHIFT)
+#define  CDMA0_CFG_SRCENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CFG_SRCENDIAN_MASK) | (((uint32_t)val) << CDMA0_CFG_SRCENDIAN_SHIFT))
+
+#define  CDMA0_CFG_FILL_MASK 0x2
+#define  CDMA0_CFG_FILL_SHIFT 1
+#define  CDMA0_CFG_FILL_MASK_SHIFT(reg) (((reg) & CDMA0_CFG_FILL_MASK) >> CDMA0_CFG_FILL_SHIFT)
+#define  CDMA0_CFG_FILL_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CFG_FILL_MASK) | (((uint32_t)val) << CDMA0_CFG_FILL_SHIFT))
+
+#define  CDMA0_CFG_ENABLE_MASK 0x1
+#define  CDMA0_CFG_ENABLE_SHIFT 0
+#define  CDMA0_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & CDMA0_CFG_ENABLE_MASK) >> CDMA0_CFG_ENABLE_SHIFT)
+#define  CDMA0_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CFG_ENABLE_MASK) | (((uint32_t)val) << CDMA0_CFG_ENABLE_SHIFT))
+
+//====================================================================
+//Register: DMA Channel Control Register (Control)
+/** \brief This register programs each channel for control features such as
+      auto-increment, initiator select, burst size, transfer size, and
+      transfer widths.*/
+//====================================================================
+
+#define  CDMA0_CONTROL_TRANSSIZE_MASK 0xffff0000
+#define  CDMA0_CONTROL_TRANSSIZE_SHIFT 16
+#define  CDMA0_CONTROL_TRANSSIZE_MASK_SHIFT(reg) (((reg) & CDMA0_CONTROL_TRANSSIZE_MASK) >> CDMA0_CONTROL_TRANSSIZE_SHIFT)
+#define  CDMA0_CONTROL_TRANSSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CONTROL_TRANSSIZE_MASK) | (((uint32_t)val) << CDMA0_CONTROL_TRANSSIZE_SHIFT))
+
+#define  CDMA0_CONTROL_RESERVED1_MASK 0xc000
+#define  CDMA0_CONTROL_RESERVED1_SHIFT 14
+#define  CDMA0_CONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA0_CONTROL_RESERVED1_MASK) >> CDMA0_CONTROL_RESERVED1_SHIFT)
+#define  CDMA0_CONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA0_CONTROL_RESERVED1_SHIFT))
+
+#define  CDMA0_CONTROL_DESTADDRINC_MASK 0x2000
+#define  CDMA0_CONTROL_DESTADDRINC_SHIFT 13
+#define  CDMA0_CONTROL_DESTADDRINC_MASK_SHIFT(reg) (((reg) & CDMA0_CONTROL_DESTADDRINC_MASK) >> CDMA0_CONTROL_DESTADDRINC_SHIFT)
+#define  CDMA0_CONTROL_DESTADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CONTROL_DESTADDRINC_MASK) | (((uint32_t)val) << CDMA0_CONTROL_DESTADDRINC_SHIFT))
+
+#define  CDMA0_CONTROL_SRCADDRINC_MASK 0x1000
+#define  CDMA0_CONTROL_SRCADDRINC_SHIFT 12
+#define  CDMA0_CONTROL_SRCADDRINC_MASK_SHIFT(reg) (((reg) & CDMA0_CONTROL_SRCADDRINC_MASK) >> CDMA0_CONTROL_SRCADDRINC_SHIFT)
+#define  CDMA0_CONTROL_SRCADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CONTROL_SRCADDRINC_MASK) | (((uint32_t)val) << CDMA0_CONTROL_SRCADDRINC_SHIFT))
+
+#define  CDMA0_CONTROL_DESTXFERWIDTH_MASK 0xc00
+#define  CDMA0_CONTROL_DESTXFERWIDTH_SHIFT 10
+#define  CDMA0_CONTROL_DESTXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA0_CONTROL_DESTXFERWIDTH_MASK) >> CDMA0_CONTROL_DESTXFERWIDTH_SHIFT)
+#define  CDMA0_CONTROL_DESTXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CONTROL_DESTXFERWIDTH_MASK) | (((uint32_t)val) << CDMA0_CONTROL_DESTXFERWIDTH_SHIFT))
+
+#define  CDMA0_CONTROL_SRCXFERWIDTH_MASK 0x300
+#define  CDMA0_CONTROL_SRCXFERWIDTH_SHIFT 8
+#define  CDMA0_CONTROL_SRCXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA0_CONTROL_SRCXFERWIDTH_MASK) >> CDMA0_CONTROL_SRCXFERWIDTH_SHIFT)
+#define  CDMA0_CONTROL_SRCXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CONTROL_SRCXFERWIDTH_MASK) | (((uint32_t)val) << CDMA0_CONTROL_SRCXFERWIDTH_SHIFT))
+
+#define  CDMA0_CONTROL_RESERVED2_MASK 0xc0
+#define  CDMA0_CONTROL_RESERVED2_SHIFT 6
+#define  CDMA0_CONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA0_CONTROL_RESERVED2_MASK) >> CDMA0_CONTROL_RESERVED2_SHIFT)
+#define  CDMA0_CONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA0_CONTROL_RESERVED2_SHIFT))
+
+#define  CDMA0_CONTROL_DESTBURSTSIZE_MASK 0x30
+#define  CDMA0_CONTROL_DESTBURSTSIZE_SHIFT 4
+#define  CDMA0_CONTROL_DESTBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA0_CONTROL_DESTBURSTSIZE_MASK) >> CDMA0_CONTROL_DESTBURSTSIZE_SHIFT)
+#define  CDMA0_CONTROL_DESTBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CONTROL_DESTBURSTSIZE_MASK) | (((uint32_t)val) << CDMA0_CONTROL_DESTBURSTSIZE_SHIFT))
+
+#define  CDMA0_CONTROL_RESERVED3_MASK 0xc
+#define  CDMA0_CONTROL_RESERVED3_SHIFT 2
+#define  CDMA0_CONTROL_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA0_CONTROL_RESERVED3_MASK) >> CDMA0_CONTROL_RESERVED3_SHIFT)
+#define  CDMA0_CONTROL_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CONTROL_RESERVED3_MASK) | (((uint32_t)val) << CDMA0_CONTROL_RESERVED3_SHIFT))
+
+#define  CDMA0_CONTROL_SRCBURSTSIZE_MASK 0x3
+#define  CDMA0_CONTROL_SRCBURSTSIZE_SHIFT 0
+#define  CDMA0_CONTROL_SRCBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA0_CONTROL_SRCBURSTSIZE_MASK) >> CDMA0_CONTROL_SRCBURSTSIZE_SHIFT)
+#define  CDMA0_CONTROL_SRCBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_CONTROL_SRCBURSTSIZE_MASK) | (((uint32_t)val) << CDMA0_CONTROL_SRCBURSTSIZE_SHIFT))
+
+//====================================================================
+//Register: DMA Status Register (Status)
+//====================================================================
+
+#define  CDMA0_STATUS_RESERVED1_MASK 0xfff00000
+#define  CDMA0_STATUS_RESERVED1_SHIFT 20
+#define  CDMA0_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA0_STATUS_RESERVED1_MASK) >> CDMA0_STATUS_RESERVED1_SHIFT)
+#define  CDMA0_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_STATUS_RESERVED1_MASK) | (((uint32_t)val) << CDMA0_STATUS_RESERVED1_SHIFT))
+
+#define  CDMA0_STATUS_ODDWIDTHHW_MASK 0x80000
+#define  CDMA0_STATUS_ODDWIDTHHW_SHIFT 19
+#define  CDMA0_STATUS_ODDWIDTHHW_MASK_SHIFT(reg) (((reg) & CDMA0_STATUS_ODDWIDTHHW_MASK) >> CDMA0_STATUS_ODDWIDTHHW_SHIFT)
+#define  CDMA0_STATUS_ODDWIDTHHW_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_STATUS_ODDWIDTHHW_MASK) | (((uint32_t)val) << CDMA0_STATUS_ODDWIDTHHW_SHIFT))
+
+#define  CDMA0_STATUS_DESCFETCH_MASK 0x40000
+#define  CDMA0_STATUS_DESCFETCH_SHIFT 18
+#define  CDMA0_STATUS_DESCFETCH_MASK_SHIFT(reg) (((reg) & CDMA0_STATUS_DESCFETCH_MASK) >> CDMA0_STATUS_DESCFETCH_SHIFT)
+#define  CDMA0_STATUS_DESCFETCH_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_STATUS_DESCFETCH_MASK) | (((uint32_t)val) << CDMA0_STATUS_DESCFETCH_SHIFT))
+
+#define  CDMA0_STATUS_DMABUSY_MASK 0x20000
+#define  CDMA0_STATUS_DMABUSY_SHIFT 17
+#define  CDMA0_STATUS_DMABUSY_MASK_SHIFT(reg) (((reg) & CDMA0_STATUS_DMABUSY_MASK) >> CDMA0_STATUS_DMABUSY_SHIFT)
+#define  CDMA0_STATUS_DMABUSY_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_STATUS_DMABUSY_MASK) | (((uint32_t)val) << CDMA0_STATUS_DMABUSY_SHIFT))
+
+#define  CDMA0_STATUS_FIFOEMPTY_MASK 0x10000
+#define  CDMA0_STATUS_FIFOEMPTY_SHIFT 16
+#define  CDMA0_STATUS_FIFOEMPTY_MASK_SHIFT(reg) (((reg) & CDMA0_STATUS_FIFOEMPTY_MASK) >> CDMA0_STATUS_FIFOEMPTY_SHIFT)
+#define  CDMA0_STATUS_FIFOEMPTY_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_STATUS_FIFOEMPTY_MASK) | (((uint32_t)val) << CDMA0_STATUS_FIFOEMPTY_SHIFT))
+
+#define  CDMA0_STATUS_BYTESREMAIN_MASK 0xffff
+#define  CDMA0_STATUS_BYTESREMAIN_SHIFT 0
+#define  CDMA0_STATUS_BYTESREMAIN_MASK_SHIFT(reg) (((reg) & CDMA0_STATUS_BYTESREMAIN_MASK) >> CDMA0_STATUS_BYTESREMAIN_SHIFT)
+#define  CDMA0_STATUS_BYTESREMAIN_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_STATUS_BYTESREMAIN_MASK) | (((uint32_t)val) << CDMA0_STATUS_BYTESREMAIN_SHIFT))
+
+//====================================================================
+//Register: DMA Source Address Register (SrcAddr)
+/** \brief The Source Address register is programmed with the address of the location
+      for the DMA to transfer from. If the source is memory, the address can be
+      byte aligned.
+<br>*/
+//====================================================================
+
+#define  CDMA0_SRCADDR_SRCADDR_MASK 0xffffffff
+#define  CDMA0_SRCADDR_SRCADDR_SHIFT 0
+#define  CDMA0_SRCADDR_SRCADDR_MASK_SHIFT(reg) (((reg) & CDMA0_SRCADDR_SRCADDR_MASK) >> CDMA0_SRCADDR_SRCADDR_SHIFT)
+#define  CDMA0_SRCADDR_SRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_SRCADDR_SRCADDR_MASK) | (((uint32_t)val) << CDMA0_SRCADDR_SRCADDR_SHIFT))
+
+//====================================================================
+//Register: Current Source Address Register (SrcAddrStat)
+/** \brief This register contains the current address for the source device.*/
+//====================================================================
+
+#define  CDMA0_SRCADDRSTAT_CURRSRCADDR_MASK 0xffffffff
+#define  CDMA0_SRCADDRSTAT_CURRSRCADDR_SHIFT 0
+#define  CDMA0_SRCADDRSTAT_CURRSRCADDR_MASK_SHIFT(reg) (((reg) & CDMA0_SRCADDRSTAT_CURRSRCADDR_MASK) >> CDMA0_SRCADDRSTAT_CURRSRCADDR_SHIFT)
+#define  CDMA0_SRCADDRSTAT_CURRSRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_SRCADDRSTAT_CURRSRCADDR_MASK) | (((uint32_t)val) << CDMA0_SRCADDRSTAT_CURRSRCADDR_SHIFT))
+
+//====================================================================
+//Register: Destination Address Register (DestAddr)
+/** \brief The Destination Address register is programmed with the address of the location
+      for the DMA to transfer to. If the destination is memory, the address can be
+      byte aligned.*/
+//====================================================================
+
+#define  CDMA0_DESTADDR_DESTADDR_MASK 0xffffffff
+#define  CDMA0_DESTADDR_DESTADDR_SHIFT 0
+#define  CDMA0_DESTADDR_DESTADDR_MASK_SHIFT(reg) (((reg) & CDMA0_DESTADDR_DESTADDR_MASK) >> CDMA0_DESTADDR_DESTADDR_SHIFT)
+#define  CDMA0_DESTADDR_DESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_DESTADDR_DESTADDR_MASK) | (((uint32_t)val) << CDMA0_DESTADDR_DESTADDR_SHIFT))
+
+//====================================================================
+//Register: Current Destination Address Register (DestAddrStat)
+/** \brief This register contains the current address for the destination device.*/
+//====================================================================
+
+#define  CDMA0_DESTADDRSTAT_CURRDESTADDR_MASK 0xffffffff
+#define  CDMA0_DESTADDRSTAT_CURRDESTADDR_SHIFT 0
+#define  CDMA0_DESTADDRSTAT_CURRDESTADDR_MASK_SHIFT(reg) (((reg) & CDMA0_DESTADDRSTAT_CURRDESTADDR_MASK) >> CDMA0_DESTADDRSTAT_CURRDESTADDR_SHIFT)
+#define  CDMA0_DESTADDRSTAT_CURRDESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_DESTADDRSTAT_CURRDESTADDR_MASK) | (((uint32_t)val) << CDMA0_DESTADDRSTAT_CURRDESTADDR_SHIFT))
+
+//====================================================================
+//Register: Fill Value Register (FillValue)
+/** \brief This register contains the data value to write to the destination
+      address.*/
+//====================================================================
+
+#define  CDMA0_FILLVALUE_FILLVAL_MASK 0xffffffff
+#define  CDMA0_FILLVALUE_FILLVAL_SHIFT 0
+#define  CDMA0_FILLVALUE_FILLVAL_MASK_SHIFT(reg) (((reg) & CDMA0_FILLVALUE_FILLVAL_MASK) >> CDMA0_FILLVALUE_FILLVAL_SHIFT)
+#define  CDMA0_FILLVALUE_FILLVAL_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_FILLVALUE_FILLVAL_MASK) | (((uint32_t)val) << CDMA0_FILLVALUE_FILLVAL_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (intEn)
+//====================================================================
+
+#define  CDMA0_INTEN_RESERVED1_MASK 0xfffffff0
+#define  CDMA0_INTEN_RESERVED1_SHIFT 4
+#define  CDMA0_INTEN_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA0_INTEN_RESERVED1_MASK) >> CDMA0_INTEN_RESERVED1_SHIFT)
+#define  CDMA0_INTEN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTEN_RESERVED1_MASK) | (((uint32_t)val) << CDMA0_INTEN_RESERVED1_SHIFT))
+
+#define  CDMA0_INTEN_CLEARCOMPLETEEN_MASK 0x8
+#define  CDMA0_INTEN_CLEARCOMPLETEEN_SHIFT 3
+#define  CDMA0_INTEN_CLEARCOMPLETEEN_MASK_SHIFT(reg) (((reg) & CDMA0_INTEN_CLEARCOMPLETEEN_MASK) >> CDMA0_INTEN_CLEARCOMPLETEEN_SHIFT)
+#define  CDMA0_INTEN_CLEARCOMPLETEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTEN_CLEARCOMPLETEEN_MASK) | (((uint32_t)val) << CDMA0_INTEN_CLEARCOMPLETEEN_SHIFT))
+
+#define  CDMA0_INTEN_CHAINDONEEN_MASK 0x4
+#define  CDMA0_INTEN_CHAINDONEEN_SHIFT 2
+#define  CDMA0_INTEN_CHAINDONEEN_MASK_SHIFT(reg) (((reg) & CDMA0_INTEN_CHAINDONEEN_MASK) >> CDMA0_INTEN_CHAINDONEEN_SHIFT)
+#define  CDMA0_INTEN_CHAINDONEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTEN_CHAINDONEEN_MASK) | (((uint32_t)val) << CDMA0_INTEN_CHAINDONEEN_SHIFT))
+
+#define  CDMA0_INTEN_TIMEOUTEN_MASK 0x2
+#define  CDMA0_INTEN_TIMEOUTEN_SHIFT 1
+#define  CDMA0_INTEN_TIMEOUTEN_MASK_SHIFT(reg) (((reg) & CDMA0_INTEN_TIMEOUTEN_MASK) >> CDMA0_INTEN_TIMEOUTEN_SHIFT)
+#define  CDMA0_INTEN_TIMEOUTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTEN_TIMEOUTEN_MASK) | (((uint32_t)val) << CDMA0_INTEN_TIMEOUTEN_SHIFT))
+
+#define  CDMA0_INTEN_TERMCNTEN_MASK 0x1
+#define  CDMA0_INTEN_TERMCNTEN_SHIFT 0
+#define  CDMA0_INTEN_TERMCNTEN_MASK_SHIFT(reg) (((reg) & CDMA0_INTEN_TERMCNTEN_MASK) >> CDMA0_INTEN_TERMCNTEN_SHIFT)
+#define  CDMA0_INTEN_TERMCNTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTEN_TERMCNTEN_MASK) | (((uint32_t)val) << CDMA0_INTEN_TERMCNTEN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (intPend)
+//====================================================================
+
+#define  CDMA0_INTPEND_RESERVED1_MASK 0xfffffff0
+#define  CDMA0_INTPEND_RESERVED1_SHIFT 4
+#define  CDMA0_INTPEND_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA0_INTPEND_RESERVED1_MASK) >> CDMA0_INTPEND_RESERVED1_SHIFT)
+#define  CDMA0_INTPEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTPEND_RESERVED1_MASK) | (((uint32_t)val) << CDMA0_INTPEND_RESERVED1_SHIFT))
+
+#define  CDMA0_INTPEND_CLEARCOMPLETEPEND_MASK 0x8
+#define  CDMA0_INTPEND_CLEARCOMPLETEPEND_SHIFT 3
+#define  CDMA0_INTPEND_CLEARCOMPLETEPEND_MASK_SHIFT(reg) (((reg) & CDMA0_INTPEND_CLEARCOMPLETEPEND_MASK) >> CDMA0_INTPEND_CLEARCOMPLETEPEND_SHIFT)
+#define  CDMA0_INTPEND_CLEARCOMPLETEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTPEND_CLEARCOMPLETEPEND_MASK) | (((uint32_t)val) << CDMA0_INTPEND_CLEARCOMPLETEPEND_SHIFT))
+
+#define  CDMA0_INTPEND_CHAINDONEPEND_MASK 0x4
+#define  CDMA0_INTPEND_CHAINDONEPEND_SHIFT 2
+#define  CDMA0_INTPEND_CHAINDONEPEND_MASK_SHIFT(reg) (((reg) & CDMA0_INTPEND_CHAINDONEPEND_MASK) >> CDMA0_INTPEND_CHAINDONEPEND_SHIFT)
+#define  CDMA0_INTPEND_CHAINDONEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTPEND_CHAINDONEPEND_MASK) | (((uint32_t)val) << CDMA0_INTPEND_CHAINDONEPEND_SHIFT))
+
+#define  CDMA0_INTPEND_TIMEOUTPEND_MASK 0x2
+#define  CDMA0_INTPEND_TIMEOUTPEND_SHIFT 1
+#define  CDMA0_INTPEND_TIMEOUTPEND_MASK_SHIFT(reg) (((reg) & CDMA0_INTPEND_TIMEOUTPEND_MASK) >> CDMA0_INTPEND_TIMEOUTPEND_SHIFT)
+#define  CDMA0_INTPEND_TIMEOUTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTPEND_TIMEOUTPEND_MASK) | (((uint32_t)val) << CDMA0_INTPEND_TIMEOUTPEND_SHIFT))
+
+#define  CDMA0_INTPEND_TERMCNTPEND_MASK 0x1
+#define  CDMA0_INTPEND_TERMCNTPEND_SHIFT 0
+#define  CDMA0_INTPEND_TERMCNTPEND_MASK_SHIFT(reg) (((reg) & CDMA0_INTPEND_TERMCNTPEND_MASK) >> CDMA0_INTPEND_TERMCNTPEND_SHIFT)
+#define  CDMA0_INTPEND_TERMCNTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTPEND_TERMCNTPEND_MASK) | (((uint32_t)val) << CDMA0_INTPEND_TERMCNTPEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (intAck)
+//====================================================================
+
+#define  CDMA0_INTACK_RESERVED1_MASK 0xfffffff0
+#define  CDMA0_INTACK_RESERVED1_SHIFT 4
+#define  CDMA0_INTACK_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA0_INTACK_RESERVED1_MASK) >> CDMA0_INTACK_RESERVED1_SHIFT)
+#define  CDMA0_INTACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTACK_RESERVED1_MASK) | (((uint32_t)val) << CDMA0_INTACK_RESERVED1_SHIFT))
+
+#define  CDMA0_INTACK_CLEARCOMPLETEACK_MASK 0x8
+#define  CDMA0_INTACK_CLEARCOMPLETEACK_SHIFT 3
+#define  CDMA0_INTACK_CLEARCOMPLETEACK_MASK_SHIFT(reg) (((reg) & CDMA0_INTACK_CLEARCOMPLETEACK_MASK) >> CDMA0_INTACK_CLEARCOMPLETEACK_SHIFT)
+#define  CDMA0_INTACK_CLEARCOMPLETEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTACK_CLEARCOMPLETEACK_MASK) | (((uint32_t)val) << CDMA0_INTACK_CLEARCOMPLETEACK_SHIFT))
+
+#define  CDMA0_INTACK_CHAINDONEACK_MASK 0x4
+#define  CDMA0_INTACK_CHAINDONEACK_SHIFT 2
+#define  CDMA0_INTACK_CHAINDONEACK_MASK_SHIFT(reg) (((reg) & CDMA0_INTACK_CHAINDONEACK_MASK) >> CDMA0_INTACK_CHAINDONEACK_SHIFT)
+#define  CDMA0_INTACK_CHAINDONEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTACK_CHAINDONEACK_MASK) | (((uint32_t)val) << CDMA0_INTACK_CHAINDONEACK_SHIFT))
+
+#define  CDMA0_INTACK_TIMEOUTACK_MASK 0x2
+#define  CDMA0_INTACK_TIMEOUTACK_SHIFT 1
+#define  CDMA0_INTACK_TIMEOUTACK_MASK_SHIFT(reg) (((reg) & CDMA0_INTACK_TIMEOUTACK_MASK) >> CDMA0_INTACK_TIMEOUTACK_SHIFT)
+#define  CDMA0_INTACK_TIMEOUTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTACK_TIMEOUTACK_MASK) | (((uint32_t)val) << CDMA0_INTACK_TIMEOUTACK_SHIFT))
+
+#define  CDMA0_INTACK_TERMCNTACK_MASK 0x1
+#define  CDMA0_INTACK_TERMCNTACK_SHIFT 0
+#define  CDMA0_INTACK_TERMCNTACK_MASK_SHIFT(reg) (((reg) & CDMA0_INTACK_TERMCNTACK_MASK) >> CDMA0_INTACK_TERMCNTACK_SHIFT)
+#define  CDMA0_INTACK_TERMCNTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTACK_TERMCNTACK_MASK) | (((uint32_t)val) << CDMA0_INTACK_TERMCNTACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (intForce)
+//====================================================================
+
+#define  CDMA0_INTFORCE_RESERVED1_MASK 0xfffffff0
+#define  CDMA0_INTFORCE_RESERVED1_SHIFT 4
+#define  CDMA0_INTFORCE_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA0_INTFORCE_RESERVED1_MASK) >> CDMA0_INTFORCE_RESERVED1_SHIFT)
+#define  CDMA0_INTFORCE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTFORCE_RESERVED1_MASK) | (((uint32_t)val) << CDMA0_INTFORCE_RESERVED1_SHIFT))
+
+#define  CDMA0_INTFORCE_CLEARCOMPLETEFOR_MASK 0x8
+#define  CDMA0_INTFORCE_CLEARCOMPLETEFOR_SHIFT 3
+#define  CDMA0_INTFORCE_CLEARCOMPLETEFOR_MASK_SHIFT(reg) (((reg) & CDMA0_INTFORCE_CLEARCOMPLETEFOR_MASK) >> CDMA0_INTFORCE_CLEARCOMPLETEFOR_SHIFT)
+#define  CDMA0_INTFORCE_CLEARCOMPLETEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTFORCE_CLEARCOMPLETEFOR_MASK) | (((uint32_t)val) << CDMA0_INTFORCE_CLEARCOMPLETEFOR_SHIFT))
+
+#define  CDMA0_INTFORCE_CHAINDONEFOR_MASK 0x4
+#define  CDMA0_INTFORCE_CHAINDONEFOR_SHIFT 2
+#define  CDMA0_INTFORCE_CHAINDONEFOR_MASK_SHIFT(reg) (((reg) & CDMA0_INTFORCE_CHAINDONEFOR_MASK) >> CDMA0_INTFORCE_CHAINDONEFOR_SHIFT)
+#define  CDMA0_INTFORCE_CHAINDONEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTFORCE_CHAINDONEFOR_MASK) | (((uint32_t)val) << CDMA0_INTFORCE_CHAINDONEFOR_SHIFT))
+
+#define  CDMA0_INTFORCE_TIMEOUTFOR_MASK 0x2
+#define  CDMA0_INTFORCE_TIMEOUTFOR_SHIFT 1
+#define  CDMA0_INTFORCE_TIMEOUTFOR_MASK_SHIFT(reg) (((reg) & CDMA0_INTFORCE_TIMEOUTFOR_MASK) >> CDMA0_INTFORCE_TIMEOUTFOR_SHIFT)
+#define  CDMA0_INTFORCE_TIMEOUTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTFORCE_TIMEOUTFOR_MASK) | (((uint32_t)val) << CDMA0_INTFORCE_TIMEOUTFOR_SHIFT))
+
+#define  CDMA0_INTFORCE_TERMCNTFOR_MASK 0x1
+#define  CDMA0_INTFORCE_TERMCNTFOR_SHIFT 0
+#define  CDMA0_INTFORCE_TERMCNTFOR_MASK_SHIFT(reg) (((reg) & CDMA0_INTFORCE_TERMCNTFOR_MASK) >> CDMA0_INTFORCE_TERMCNTFOR_SHIFT)
+#define  CDMA0_INTFORCE_TERMCNTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_INTFORCE_TERMCNTFOR_MASK) | (((uint32_t)val) << CDMA0_INTFORCE_TERMCNTFOR_SHIFT))
+
+//====================================================================
+//Register: DMA Timer Control (TimerControl)
+/** \brief The Timer Control register specifies the number of timebase cycles between word
+      transfers before generating a timeout interrupt. The timer is reset each time
+      a transfer occurs.*/
+//====================================================================
+
+#define  CDMA0_TIMERCONTROL_RESERVED1_MASK 0xffff0000
+#define  CDMA0_TIMERCONTROL_RESERVED1_SHIFT 16
+#define  CDMA0_TIMERCONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA0_TIMERCONTROL_RESERVED1_MASK) >> CDMA0_TIMERCONTROL_RESERVED1_SHIFT)
+#define  CDMA0_TIMERCONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_TIMERCONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA0_TIMERCONTROL_RESERVED1_SHIFT))
+
+#define  CDMA0_TIMERCONTROL_TIMERENABLE_MASK 0x8000
+#define  CDMA0_TIMERCONTROL_TIMERENABLE_SHIFT 15
+#define  CDMA0_TIMERCONTROL_TIMERENABLE_MASK_SHIFT(reg) (((reg) & CDMA0_TIMERCONTROL_TIMERENABLE_MASK) >> CDMA0_TIMERCONTROL_TIMERENABLE_SHIFT)
+#define  CDMA0_TIMERCONTROL_TIMERENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_TIMERCONTROL_TIMERENABLE_MASK) | (((uint32_t)val) << CDMA0_TIMERCONTROL_TIMERENABLE_SHIFT))
+
+#define  CDMA0_TIMERCONTROL_TIMEBASE_MASK 0x7000
+#define  CDMA0_TIMERCONTROL_TIMEBASE_SHIFT 12
+#define  CDMA0_TIMERCONTROL_TIMEBASE_MASK_SHIFT(reg) (((reg) & CDMA0_TIMERCONTROL_TIMEBASE_MASK) >> CDMA0_TIMERCONTROL_TIMEBASE_SHIFT)
+#define  CDMA0_TIMERCONTROL_TIMEBASE_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_TIMERCONTROL_TIMEBASE_MASK) | (((uint32_t)val) << CDMA0_TIMERCONTROL_TIMEBASE_SHIFT))
+
+#define  CDMA0_TIMERCONTROL_RESERVED2_MASK 0x800
+#define  CDMA0_TIMERCONTROL_RESERVED2_SHIFT 11
+#define  CDMA0_TIMERCONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA0_TIMERCONTROL_RESERVED2_MASK) >> CDMA0_TIMERCONTROL_RESERVED2_SHIFT)
+#define  CDMA0_TIMERCONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_TIMERCONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA0_TIMERCONTROL_RESERVED2_SHIFT))
+
+#define  CDMA0_TIMERCONTROL_COUNT_MASK 0x7ff
+#define  CDMA0_TIMERCONTROL_COUNT_SHIFT 0
+#define  CDMA0_TIMERCONTROL_COUNT_MASK_SHIFT(reg) (((reg) & CDMA0_TIMERCONTROL_COUNT_MASK) >> CDMA0_TIMERCONTROL_COUNT_SHIFT)
+#define  CDMA0_TIMERCONTROL_COUNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_TIMERCONTROL_COUNT_MASK) | (((uint32_t)val) << CDMA0_TIMERCONTROL_COUNT_SHIFT))
+
+//====================================================================
+//Register: Timeout Count Status Register (TimeOutStat)
+/** \brief This register contains the current timeout count.*/
+//====================================================================
+
+#define  CDMA0_TIMEOUTSTAT_RESERVED1_MASK 0xfffff800
+#define  CDMA0_TIMEOUTSTAT_RESERVED1_SHIFT 11
+#define  CDMA0_TIMEOUTSTAT_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA0_TIMEOUTSTAT_RESERVED1_MASK) >> CDMA0_TIMEOUTSTAT_RESERVED1_SHIFT)
+#define  CDMA0_TIMEOUTSTAT_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_TIMEOUTSTAT_RESERVED1_MASK) | (((uint32_t)val) << CDMA0_TIMEOUTSTAT_RESERVED1_SHIFT))
+
+#define  CDMA0_TIMEOUTSTAT_CURRTOCNT_MASK 0x7ff
+#define  CDMA0_TIMEOUTSTAT_CURRTOCNT_SHIFT 0
+#define  CDMA0_TIMEOUTSTAT_CURRTOCNT_MASK_SHIFT(reg) (((reg) & CDMA0_TIMEOUTSTAT_CURRTOCNT_MASK) >> CDMA0_TIMEOUTSTAT_CURRTOCNT_SHIFT)
+#define  CDMA0_TIMEOUTSTAT_CURRTOCNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_TIMEOUTSTAT_CURRTOCNT_MASK) | (((uint32_t)val) << CDMA0_TIMEOUTSTAT_CURRTOCNT_SHIFT))
+
+//====================================================================
+//Register: Linked List Index Register (LLIR)
+/** \brief This register contains a word-aligned address of the first word of the next descriptor. LLI means "linked list index" or pointer to the descriptor in memory. If the LLI register is 0, then the current descriptor (that is loaded in the registers) is the last in the chain, and the DMA channel will stop once the current DMA transfer is completed.*/
+//====================================================================
+
+#define  CDMA0_LLIR_LLINDEX_MASK 0xfffffffc
+#define  CDMA0_LLIR_LLINDEX_SHIFT 2
+#define  CDMA0_LLIR_LLINDEX_MASK_SHIFT(reg) (((reg) & CDMA0_LLIR_LLINDEX_MASK) >> CDMA0_LLIR_LLINDEX_SHIFT)
+#define  CDMA0_LLIR_LLINDEX_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_LLIR_LLINDEX_MASK) | (((uint32_t)val) << CDMA0_LLIR_LLINDEX_SHIFT))
+
+#define  CDMA0_LLIR_RESERVED1_MASK 0x3
+#define  CDMA0_LLIR_RESERVED1_SHIFT 0
+#define  CDMA0_LLIR_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA0_LLIR_RESERVED1_MASK) >> CDMA0_LLIR_RESERVED1_SHIFT)
+#define  CDMA0_LLIR_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_LLIR_RESERVED1_MASK) | (((uint32_t)val) << CDMA0_LLIR_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Odd Width Config Register (OWCFG)
+//====================================================================
+
+#define  CDMA0_OWCFG_RESERVED1_MASK 0xfffe0000
+#define  CDMA0_OWCFG_RESERVED1_SHIFT 17
+#define  CDMA0_OWCFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA0_OWCFG_RESERVED1_MASK) >> CDMA0_OWCFG_RESERVED1_SHIFT)
+#define  CDMA0_OWCFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_OWCFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA0_OWCFG_RESERVED1_SHIFT))
+
+#define  CDMA0_OWCFG_EXTRABITS_MASK 0x1f000
+#define  CDMA0_OWCFG_EXTRABITS_SHIFT 12
+#define  CDMA0_OWCFG_EXTRABITS_MASK_SHIFT(reg) (((reg) & CDMA0_OWCFG_EXTRABITS_MASK) >> CDMA0_OWCFG_EXTRABITS_SHIFT)
+#define  CDMA0_OWCFG_EXTRABITS_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_OWCFG_EXTRABITS_MASK) | (((uint32_t)val) << CDMA0_OWCFG_EXTRABITS_SHIFT))
+
+#define  CDMA0_OWCFG_RESERVED2_MASK 0xe00
+#define  CDMA0_OWCFG_RESERVED2_SHIFT 9
+#define  CDMA0_OWCFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA0_OWCFG_RESERVED2_MASK) >> CDMA0_OWCFG_RESERVED2_SHIFT)
+#define  CDMA0_OWCFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_OWCFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA0_OWCFG_RESERVED2_SHIFT))
+
+#define  CDMA0_OWCFG_ODDWIDTH_MASK 0x1f0
+#define  CDMA0_OWCFG_ODDWIDTH_SHIFT 4
+#define  CDMA0_OWCFG_ODDWIDTH_MASK_SHIFT(reg) (((reg) & CDMA0_OWCFG_ODDWIDTH_MASK) >> CDMA0_OWCFG_ODDWIDTH_SHIFT)
+#define  CDMA0_OWCFG_ODDWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_OWCFG_ODDWIDTH_MASK) | (((uint32_t)val) << CDMA0_OWCFG_ODDWIDTH_SHIFT))
+
+#define  CDMA0_OWCFG_RESERVED3_MASK 0xc
+#define  CDMA0_OWCFG_RESERVED3_SHIFT 2
+#define  CDMA0_OWCFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA0_OWCFG_RESERVED3_MASK) >> CDMA0_OWCFG_RESERVED3_SHIFT)
+#define  CDMA0_OWCFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_OWCFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA0_OWCFG_RESERVED3_SHIFT))
+
+#define  CDMA0_OWCFG_PACKNUNPACK_MASK 0x2
+#define  CDMA0_OWCFG_PACKNUNPACK_SHIFT 1
+#define  CDMA0_OWCFG_PACKNUNPACK_MASK_SHIFT(reg) (((reg) & CDMA0_OWCFG_PACKNUNPACK_MASK) >> CDMA0_OWCFG_PACKNUNPACK_SHIFT)
+#define  CDMA0_OWCFG_PACKNUNPACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_OWCFG_PACKNUNPACK_MASK) | (((uint32_t)val) << CDMA0_OWCFG_PACKNUNPACK_SHIFT))
+
+#define  CDMA0_OWCFG_OWEN_MASK 0x1
+#define  CDMA0_OWCFG_OWEN_SHIFT 0
+#define  CDMA0_OWCFG_OWEN_MASK_SHIFT(reg) (((reg) & CDMA0_OWCFG_OWEN_MASK) >> CDMA0_OWCFG_OWEN_SHIFT)
+#define  CDMA0_OWCFG_OWEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA0_OWCFG_OWEN_MASK) | (((uint32_t)val) << CDMA0_OWCFG_OWEN_SHIFT))
+
+//====================================================================
+//
+//Register File: CDMA (Instance 2 of 12) (CDMA1)
+/** \brief Registers for Central DMA module*/
+//
+//====================================================================
+
+//====================================================================
+//Register: DMA Configuration Register (CFG)
+/** \brief This register is used to configure the data flow for each channel.*/
+//====================================================================
+
+#define  CDMA1_CFG_WRDELAY_MASK 0xf0000000
+#define  CDMA1_CFG_WRDELAY_SHIFT 28
+#define  CDMA1_CFG_WRDELAY_MASK_SHIFT(reg) (((reg) & CDMA1_CFG_WRDELAY_MASK) >> CDMA1_CFG_WRDELAY_SHIFT)
+#define  CDMA1_CFG_WRDELAY_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CFG_WRDELAY_MASK) | (((uint32_t)val) << CDMA1_CFG_WRDELAY_SHIFT))
+
+#define  CDMA1_CFG_RESERVED1_MASK 0xc000000
+#define  CDMA1_CFG_RESERVED1_SHIFT 26
+#define  CDMA1_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA1_CFG_RESERVED1_MASK) >> CDMA1_CFG_RESERVED1_SHIFT)
+#define  CDMA1_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA1_CFG_RESERVED1_SHIFT))
+
+#define  CDMA1_CFG_DATAUNITSIZE_MASK 0x3000000
+#define  CDMA1_CFG_DATAUNITSIZE_SHIFT 24
+#define  CDMA1_CFG_DATAUNITSIZE_MASK_SHIFT(reg) (((reg) & CDMA1_CFG_DATAUNITSIZE_MASK) >> CDMA1_CFG_DATAUNITSIZE_SHIFT)
+#define  CDMA1_CFG_DATAUNITSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CFG_DATAUNITSIZE_MASK) | (((uint32_t)val) << CDMA1_CFG_DATAUNITSIZE_SHIFT))
+
+#define  CDMA1_CFG_HALT_MASK 0x800000
+#define  CDMA1_CFG_HALT_SHIFT 23
+#define  CDMA1_CFG_HALT_MASK_SHIFT(reg) (((reg) & CDMA1_CFG_HALT_MASK) >> CDMA1_CFG_HALT_SHIFT)
+#define  CDMA1_CFG_HALT_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CFG_HALT_MASK) | (((uint32_t)val) << CDMA1_CFG_HALT_SHIFT))
+
+#define  CDMA1_CFG_FLOWCTRL_MASK 0x700000
+#define  CDMA1_CFG_FLOWCTRL_SHIFT 20
+#define  CDMA1_CFG_FLOWCTRL_MASK_SHIFT(reg) (((reg) & CDMA1_CFG_FLOWCTRL_MASK) >> CDMA1_CFG_FLOWCTRL_SHIFT)
+#define  CDMA1_CFG_FLOWCTRL_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CFG_FLOWCTRL_MASK) | (((uint32_t)val) << CDMA1_CFG_FLOWCTRL_SHIFT))
+
+#define  CDMA1_CFG_RESERVED2_MASK 0xc0000
+#define  CDMA1_CFG_RESERVED2_SHIFT 18
+#define  CDMA1_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA1_CFG_RESERVED2_MASK) >> CDMA1_CFG_RESERVED2_SHIFT)
+#define  CDMA1_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA1_CFG_RESERVED2_SHIFT))
+
+#define  CDMA1_CFG_DESTPID_MASK 0x3f000
+#define  CDMA1_CFG_DESTPID_SHIFT 12
+#define  CDMA1_CFG_DESTPID_MASK_SHIFT(reg) (((reg) & CDMA1_CFG_DESTPID_MASK) >> CDMA1_CFG_DESTPID_SHIFT)
+#define  CDMA1_CFG_DESTPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CFG_DESTPID_MASK) | (((uint32_t)val) << CDMA1_CFG_DESTPID_SHIFT))
+
+#define  CDMA1_CFG_RESERVED3_MASK 0xc00
+#define  CDMA1_CFG_RESERVED3_SHIFT 10
+#define  CDMA1_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA1_CFG_RESERVED3_MASK) >> CDMA1_CFG_RESERVED3_SHIFT)
+#define  CDMA1_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA1_CFG_RESERVED3_SHIFT))
+
+#define  CDMA1_CFG_SRCPID_MASK 0x3f0
+#define  CDMA1_CFG_SRCPID_SHIFT 4
+#define  CDMA1_CFG_SRCPID_MASK_SHIFT(reg) (((reg) & CDMA1_CFG_SRCPID_MASK) >> CDMA1_CFG_SRCPID_SHIFT)
+#define  CDMA1_CFG_SRCPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CFG_SRCPID_MASK) | (((uint32_t)val) << CDMA1_CFG_SRCPID_SHIFT))
+
+#define  CDMA1_CFG_DESTENDIAN_MASK 0x8
+#define  CDMA1_CFG_DESTENDIAN_SHIFT 3
+#define  CDMA1_CFG_DESTENDIAN_MASK_SHIFT(reg) (((reg) & CDMA1_CFG_DESTENDIAN_MASK) >> CDMA1_CFG_DESTENDIAN_SHIFT)
+#define  CDMA1_CFG_DESTENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CFG_DESTENDIAN_MASK) | (((uint32_t)val) << CDMA1_CFG_DESTENDIAN_SHIFT))
+
+#define  CDMA1_CFG_SRCENDIAN_MASK 0x4
+#define  CDMA1_CFG_SRCENDIAN_SHIFT 2
+#define  CDMA1_CFG_SRCENDIAN_MASK_SHIFT(reg) (((reg) & CDMA1_CFG_SRCENDIAN_MASK) >> CDMA1_CFG_SRCENDIAN_SHIFT)
+#define  CDMA1_CFG_SRCENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CFG_SRCENDIAN_MASK) | (((uint32_t)val) << CDMA1_CFG_SRCENDIAN_SHIFT))
+
+#define  CDMA1_CFG_FILL_MASK 0x2
+#define  CDMA1_CFG_FILL_SHIFT 1
+#define  CDMA1_CFG_FILL_MASK_SHIFT(reg) (((reg) & CDMA1_CFG_FILL_MASK) >> CDMA1_CFG_FILL_SHIFT)
+#define  CDMA1_CFG_FILL_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CFG_FILL_MASK) | (((uint32_t)val) << CDMA1_CFG_FILL_SHIFT))
+
+#define  CDMA1_CFG_ENABLE_MASK 0x1
+#define  CDMA1_CFG_ENABLE_SHIFT 0
+#define  CDMA1_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & CDMA1_CFG_ENABLE_MASK) >> CDMA1_CFG_ENABLE_SHIFT)
+#define  CDMA1_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CFG_ENABLE_MASK) | (((uint32_t)val) << CDMA1_CFG_ENABLE_SHIFT))
+
+//====================================================================
+//Register: DMA Channel Control Register (Control)
+/** \brief This register programs each channel for control features such as
+      auto-increment, initiator select, burst size, transfer size, and
+      transfer widths.*/
+//====================================================================
+
+#define  CDMA1_CONTROL_TRANSSIZE_MASK 0xffff0000
+#define  CDMA1_CONTROL_TRANSSIZE_SHIFT 16
+#define  CDMA1_CONTROL_TRANSSIZE_MASK_SHIFT(reg) (((reg) & CDMA1_CONTROL_TRANSSIZE_MASK) >> CDMA1_CONTROL_TRANSSIZE_SHIFT)
+#define  CDMA1_CONTROL_TRANSSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CONTROL_TRANSSIZE_MASK) | (((uint32_t)val) << CDMA1_CONTROL_TRANSSIZE_SHIFT))
+
+#define  CDMA1_CONTROL_RESERVED1_MASK 0xc000
+#define  CDMA1_CONTROL_RESERVED1_SHIFT 14
+#define  CDMA1_CONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA1_CONTROL_RESERVED1_MASK) >> CDMA1_CONTROL_RESERVED1_SHIFT)
+#define  CDMA1_CONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA1_CONTROL_RESERVED1_SHIFT))
+
+#define  CDMA1_CONTROL_DESTADDRINC_MASK 0x2000
+#define  CDMA1_CONTROL_DESTADDRINC_SHIFT 13
+#define  CDMA1_CONTROL_DESTADDRINC_MASK_SHIFT(reg) (((reg) & CDMA1_CONTROL_DESTADDRINC_MASK) >> CDMA1_CONTROL_DESTADDRINC_SHIFT)
+#define  CDMA1_CONTROL_DESTADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CONTROL_DESTADDRINC_MASK) | (((uint32_t)val) << CDMA1_CONTROL_DESTADDRINC_SHIFT))
+
+#define  CDMA1_CONTROL_SRCADDRINC_MASK 0x1000
+#define  CDMA1_CONTROL_SRCADDRINC_SHIFT 12
+#define  CDMA1_CONTROL_SRCADDRINC_MASK_SHIFT(reg) (((reg) & CDMA1_CONTROL_SRCADDRINC_MASK) >> CDMA1_CONTROL_SRCADDRINC_SHIFT)
+#define  CDMA1_CONTROL_SRCADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CONTROL_SRCADDRINC_MASK) | (((uint32_t)val) << CDMA1_CONTROL_SRCADDRINC_SHIFT))
+
+#define  CDMA1_CONTROL_DESTXFERWIDTH_MASK 0xc00
+#define  CDMA1_CONTROL_DESTXFERWIDTH_SHIFT 10
+#define  CDMA1_CONTROL_DESTXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA1_CONTROL_DESTXFERWIDTH_MASK) >> CDMA1_CONTROL_DESTXFERWIDTH_SHIFT)
+#define  CDMA1_CONTROL_DESTXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CONTROL_DESTXFERWIDTH_MASK) | (((uint32_t)val) << CDMA1_CONTROL_DESTXFERWIDTH_SHIFT))
+
+#define  CDMA1_CONTROL_SRCXFERWIDTH_MASK 0x300
+#define  CDMA1_CONTROL_SRCXFERWIDTH_SHIFT 8
+#define  CDMA1_CONTROL_SRCXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA1_CONTROL_SRCXFERWIDTH_MASK) >> CDMA1_CONTROL_SRCXFERWIDTH_SHIFT)
+#define  CDMA1_CONTROL_SRCXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CONTROL_SRCXFERWIDTH_MASK) | (((uint32_t)val) << CDMA1_CONTROL_SRCXFERWIDTH_SHIFT))
+
+#define  CDMA1_CONTROL_RESERVED2_MASK 0xc0
+#define  CDMA1_CONTROL_RESERVED2_SHIFT 6
+#define  CDMA1_CONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA1_CONTROL_RESERVED2_MASK) >> CDMA1_CONTROL_RESERVED2_SHIFT)
+#define  CDMA1_CONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA1_CONTROL_RESERVED2_SHIFT))
+
+#define  CDMA1_CONTROL_DESTBURSTSIZE_MASK 0x30
+#define  CDMA1_CONTROL_DESTBURSTSIZE_SHIFT 4
+#define  CDMA1_CONTROL_DESTBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA1_CONTROL_DESTBURSTSIZE_MASK) >> CDMA1_CONTROL_DESTBURSTSIZE_SHIFT)
+#define  CDMA1_CONTROL_DESTBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CONTROL_DESTBURSTSIZE_MASK) | (((uint32_t)val) << CDMA1_CONTROL_DESTBURSTSIZE_SHIFT))
+
+#define  CDMA1_CONTROL_RESERVED3_MASK 0xc
+#define  CDMA1_CONTROL_RESERVED3_SHIFT 2
+#define  CDMA1_CONTROL_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA1_CONTROL_RESERVED3_MASK) >> CDMA1_CONTROL_RESERVED3_SHIFT)
+#define  CDMA1_CONTROL_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CONTROL_RESERVED3_MASK) | (((uint32_t)val) << CDMA1_CONTROL_RESERVED3_SHIFT))
+
+#define  CDMA1_CONTROL_SRCBURSTSIZE_MASK 0x3
+#define  CDMA1_CONTROL_SRCBURSTSIZE_SHIFT 0
+#define  CDMA1_CONTROL_SRCBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA1_CONTROL_SRCBURSTSIZE_MASK) >> CDMA1_CONTROL_SRCBURSTSIZE_SHIFT)
+#define  CDMA1_CONTROL_SRCBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_CONTROL_SRCBURSTSIZE_MASK) | (((uint32_t)val) << CDMA1_CONTROL_SRCBURSTSIZE_SHIFT))
+
+//====================================================================
+//Register: DMA Status Register (Status)
+//====================================================================
+
+#define  CDMA1_STATUS_RESERVED1_MASK 0xfff00000
+#define  CDMA1_STATUS_RESERVED1_SHIFT 20
+#define  CDMA1_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA1_STATUS_RESERVED1_MASK) >> CDMA1_STATUS_RESERVED1_SHIFT)
+#define  CDMA1_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_STATUS_RESERVED1_MASK) | (((uint32_t)val) << CDMA1_STATUS_RESERVED1_SHIFT))
+
+#define  CDMA1_STATUS_ODDWIDTHHW_MASK 0x80000
+#define  CDMA1_STATUS_ODDWIDTHHW_SHIFT 19
+#define  CDMA1_STATUS_ODDWIDTHHW_MASK_SHIFT(reg) (((reg) & CDMA1_STATUS_ODDWIDTHHW_MASK) >> CDMA1_STATUS_ODDWIDTHHW_SHIFT)
+#define  CDMA1_STATUS_ODDWIDTHHW_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_STATUS_ODDWIDTHHW_MASK) | (((uint32_t)val) << CDMA1_STATUS_ODDWIDTHHW_SHIFT))
+
+#define  CDMA1_STATUS_DESCFETCH_MASK 0x40000
+#define  CDMA1_STATUS_DESCFETCH_SHIFT 18
+#define  CDMA1_STATUS_DESCFETCH_MASK_SHIFT(reg) (((reg) & CDMA1_STATUS_DESCFETCH_MASK) >> CDMA1_STATUS_DESCFETCH_SHIFT)
+#define  CDMA1_STATUS_DESCFETCH_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_STATUS_DESCFETCH_MASK) | (((uint32_t)val) << CDMA1_STATUS_DESCFETCH_SHIFT))
+
+#define  CDMA1_STATUS_DMABUSY_MASK 0x20000
+#define  CDMA1_STATUS_DMABUSY_SHIFT 17
+#define  CDMA1_STATUS_DMABUSY_MASK_SHIFT(reg) (((reg) & CDMA1_STATUS_DMABUSY_MASK) >> CDMA1_STATUS_DMABUSY_SHIFT)
+#define  CDMA1_STATUS_DMABUSY_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_STATUS_DMABUSY_MASK) | (((uint32_t)val) << CDMA1_STATUS_DMABUSY_SHIFT))
+
+#define  CDMA1_STATUS_FIFOEMPTY_MASK 0x10000
+#define  CDMA1_STATUS_FIFOEMPTY_SHIFT 16
+#define  CDMA1_STATUS_FIFOEMPTY_MASK_SHIFT(reg) (((reg) & CDMA1_STATUS_FIFOEMPTY_MASK) >> CDMA1_STATUS_FIFOEMPTY_SHIFT)
+#define  CDMA1_STATUS_FIFOEMPTY_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_STATUS_FIFOEMPTY_MASK) | (((uint32_t)val) << CDMA1_STATUS_FIFOEMPTY_SHIFT))
+
+#define  CDMA1_STATUS_BYTESREMAIN_MASK 0xffff
+#define  CDMA1_STATUS_BYTESREMAIN_SHIFT 0
+#define  CDMA1_STATUS_BYTESREMAIN_MASK_SHIFT(reg) (((reg) & CDMA1_STATUS_BYTESREMAIN_MASK) >> CDMA1_STATUS_BYTESREMAIN_SHIFT)
+#define  CDMA1_STATUS_BYTESREMAIN_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_STATUS_BYTESREMAIN_MASK) | (((uint32_t)val) << CDMA1_STATUS_BYTESREMAIN_SHIFT))
+
+//====================================================================
+//Register: DMA Source Address Register (SrcAddr)
+/** \brief The Source Address register is programmed with the address of the location
+      for the DMA to transfer from. If the source is memory, the address can be
+      byte aligned.
+<br>*/
+//====================================================================
+
+#define  CDMA1_SRCADDR_SRCADDR_MASK 0xffffffff
+#define  CDMA1_SRCADDR_SRCADDR_SHIFT 0
+#define  CDMA1_SRCADDR_SRCADDR_MASK_SHIFT(reg) (((reg) & CDMA1_SRCADDR_SRCADDR_MASK) >> CDMA1_SRCADDR_SRCADDR_SHIFT)
+#define  CDMA1_SRCADDR_SRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_SRCADDR_SRCADDR_MASK) | (((uint32_t)val) << CDMA1_SRCADDR_SRCADDR_SHIFT))
+
+//====================================================================
+//Register: Current Source Address Register (SrcAddrStat)
+/** \brief This register contains the current address for the source device.*/
+//====================================================================
+
+#define  CDMA1_SRCADDRSTAT_CURRSRCADDR_MASK 0xffffffff
+#define  CDMA1_SRCADDRSTAT_CURRSRCADDR_SHIFT 0
+#define  CDMA1_SRCADDRSTAT_CURRSRCADDR_MASK_SHIFT(reg) (((reg) & CDMA1_SRCADDRSTAT_CURRSRCADDR_MASK) >> CDMA1_SRCADDRSTAT_CURRSRCADDR_SHIFT)
+#define  CDMA1_SRCADDRSTAT_CURRSRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_SRCADDRSTAT_CURRSRCADDR_MASK) | (((uint32_t)val) << CDMA1_SRCADDRSTAT_CURRSRCADDR_SHIFT))
+
+//====================================================================
+//Register: Destination Address Register (DestAddr)
+/** \brief The Destination Address register is programmed with the address of the location
+      for the DMA to transfer to. If the destination is memory, the address can be
+      byte aligned.*/
+//====================================================================
+
+#define  CDMA1_DESTADDR_DESTADDR_MASK 0xffffffff
+#define  CDMA1_DESTADDR_DESTADDR_SHIFT 0
+#define  CDMA1_DESTADDR_DESTADDR_MASK_SHIFT(reg) (((reg) & CDMA1_DESTADDR_DESTADDR_MASK) >> CDMA1_DESTADDR_DESTADDR_SHIFT)
+#define  CDMA1_DESTADDR_DESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_DESTADDR_DESTADDR_MASK) | (((uint32_t)val) << CDMA1_DESTADDR_DESTADDR_SHIFT))
+
+//====================================================================
+//Register: Current Destination Address Register (DestAddrStat)
+/** \brief This register contains the current address for the destination device.*/
+//====================================================================
+
+#define  CDMA1_DESTADDRSTAT_CURRDESTADDR_MASK 0xffffffff
+#define  CDMA1_DESTADDRSTAT_CURRDESTADDR_SHIFT 0
+#define  CDMA1_DESTADDRSTAT_CURRDESTADDR_MASK_SHIFT(reg) (((reg) & CDMA1_DESTADDRSTAT_CURRDESTADDR_MASK) >> CDMA1_DESTADDRSTAT_CURRDESTADDR_SHIFT)
+#define  CDMA1_DESTADDRSTAT_CURRDESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_DESTADDRSTAT_CURRDESTADDR_MASK) | (((uint32_t)val) << CDMA1_DESTADDRSTAT_CURRDESTADDR_SHIFT))
+
+//====================================================================
+//Register: Fill Value Register (FillValue)
+/** \brief This register contains the data value to write to the destination
+      address.*/
+//====================================================================
+
+#define  CDMA1_FILLVALUE_FILLVAL_MASK 0xffffffff
+#define  CDMA1_FILLVALUE_FILLVAL_SHIFT 0
+#define  CDMA1_FILLVALUE_FILLVAL_MASK_SHIFT(reg) (((reg) & CDMA1_FILLVALUE_FILLVAL_MASK) >> CDMA1_FILLVALUE_FILLVAL_SHIFT)
+#define  CDMA1_FILLVALUE_FILLVAL_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_FILLVALUE_FILLVAL_MASK) | (((uint32_t)val) << CDMA1_FILLVALUE_FILLVAL_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (intEn)
+//====================================================================
+
+#define  CDMA1_INTEN_RESERVED1_MASK 0xfffffff0
+#define  CDMA1_INTEN_RESERVED1_SHIFT 4
+#define  CDMA1_INTEN_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA1_INTEN_RESERVED1_MASK) >> CDMA1_INTEN_RESERVED1_SHIFT)
+#define  CDMA1_INTEN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTEN_RESERVED1_MASK) | (((uint32_t)val) << CDMA1_INTEN_RESERVED1_SHIFT))
+
+#define  CDMA1_INTEN_CLEARCOMPLETEEN_MASK 0x8
+#define  CDMA1_INTEN_CLEARCOMPLETEEN_SHIFT 3
+#define  CDMA1_INTEN_CLEARCOMPLETEEN_MASK_SHIFT(reg) (((reg) & CDMA1_INTEN_CLEARCOMPLETEEN_MASK) >> CDMA1_INTEN_CLEARCOMPLETEEN_SHIFT)
+#define  CDMA1_INTEN_CLEARCOMPLETEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTEN_CLEARCOMPLETEEN_MASK) | (((uint32_t)val) << CDMA1_INTEN_CLEARCOMPLETEEN_SHIFT))
+
+#define  CDMA1_INTEN_CHAINDONEEN_MASK 0x4
+#define  CDMA1_INTEN_CHAINDONEEN_SHIFT 2
+#define  CDMA1_INTEN_CHAINDONEEN_MASK_SHIFT(reg) (((reg) & CDMA1_INTEN_CHAINDONEEN_MASK) >> CDMA1_INTEN_CHAINDONEEN_SHIFT)
+#define  CDMA1_INTEN_CHAINDONEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTEN_CHAINDONEEN_MASK) | (((uint32_t)val) << CDMA1_INTEN_CHAINDONEEN_SHIFT))
+
+#define  CDMA1_INTEN_TIMEOUTEN_MASK 0x2
+#define  CDMA1_INTEN_TIMEOUTEN_SHIFT 1
+#define  CDMA1_INTEN_TIMEOUTEN_MASK_SHIFT(reg) (((reg) & CDMA1_INTEN_TIMEOUTEN_MASK) >> CDMA1_INTEN_TIMEOUTEN_SHIFT)
+#define  CDMA1_INTEN_TIMEOUTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTEN_TIMEOUTEN_MASK) | (((uint32_t)val) << CDMA1_INTEN_TIMEOUTEN_SHIFT))
+
+#define  CDMA1_INTEN_TERMCNTEN_MASK 0x1
+#define  CDMA1_INTEN_TERMCNTEN_SHIFT 0
+#define  CDMA1_INTEN_TERMCNTEN_MASK_SHIFT(reg) (((reg) & CDMA1_INTEN_TERMCNTEN_MASK) >> CDMA1_INTEN_TERMCNTEN_SHIFT)
+#define  CDMA1_INTEN_TERMCNTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTEN_TERMCNTEN_MASK) | (((uint32_t)val) << CDMA1_INTEN_TERMCNTEN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (intPend)
+//====================================================================
+
+#define  CDMA1_INTPEND_RESERVED1_MASK 0xfffffff0
+#define  CDMA1_INTPEND_RESERVED1_SHIFT 4
+#define  CDMA1_INTPEND_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA1_INTPEND_RESERVED1_MASK) >> CDMA1_INTPEND_RESERVED1_SHIFT)
+#define  CDMA1_INTPEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTPEND_RESERVED1_MASK) | (((uint32_t)val) << CDMA1_INTPEND_RESERVED1_SHIFT))
+
+#define  CDMA1_INTPEND_CLEARCOMPLETEPEND_MASK 0x8
+#define  CDMA1_INTPEND_CLEARCOMPLETEPEND_SHIFT 3
+#define  CDMA1_INTPEND_CLEARCOMPLETEPEND_MASK_SHIFT(reg) (((reg) & CDMA1_INTPEND_CLEARCOMPLETEPEND_MASK) >> CDMA1_INTPEND_CLEARCOMPLETEPEND_SHIFT)
+#define  CDMA1_INTPEND_CLEARCOMPLETEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTPEND_CLEARCOMPLETEPEND_MASK) | (((uint32_t)val) << CDMA1_INTPEND_CLEARCOMPLETEPEND_SHIFT))
+
+#define  CDMA1_INTPEND_CHAINDONEPEND_MASK 0x4
+#define  CDMA1_INTPEND_CHAINDONEPEND_SHIFT 2
+#define  CDMA1_INTPEND_CHAINDONEPEND_MASK_SHIFT(reg) (((reg) & CDMA1_INTPEND_CHAINDONEPEND_MASK) >> CDMA1_INTPEND_CHAINDONEPEND_SHIFT)
+#define  CDMA1_INTPEND_CHAINDONEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTPEND_CHAINDONEPEND_MASK) | (((uint32_t)val) << CDMA1_INTPEND_CHAINDONEPEND_SHIFT))
+
+#define  CDMA1_INTPEND_TIMEOUTPEND_MASK 0x2
+#define  CDMA1_INTPEND_TIMEOUTPEND_SHIFT 1
+#define  CDMA1_INTPEND_TIMEOUTPEND_MASK_SHIFT(reg) (((reg) & CDMA1_INTPEND_TIMEOUTPEND_MASK) >> CDMA1_INTPEND_TIMEOUTPEND_SHIFT)
+#define  CDMA1_INTPEND_TIMEOUTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTPEND_TIMEOUTPEND_MASK) | (((uint32_t)val) << CDMA1_INTPEND_TIMEOUTPEND_SHIFT))
+
+#define  CDMA1_INTPEND_TERMCNTPEND_MASK 0x1
+#define  CDMA1_INTPEND_TERMCNTPEND_SHIFT 0
+#define  CDMA1_INTPEND_TERMCNTPEND_MASK_SHIFT(reg) (((reg) & CDMA1_INTPEND_TERMCNTPEND_MASK) >> CDMA1_INTPEND_TERMCNTPEND_SHIFT)
+#define  CDMA1_INTPEND_TERMCNTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTPEND_TERMCNTPEND_MASK) | (((uint32_t)val) << CDMA1_INTPEND_TERMCNTPEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (intAck)
+//====================================================================
+
+#define  CDMA1_INTACK_RESERVED1_MASK 0xfffffff0
+#define  CDMA1_INTACK_RESERVED1_SHIFT 4
+#define  CDMA1_INTACK_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA1_INTACK_RESERVED1_MASK) >> CDMA1_INTACK_RESERVED1_SHIFT)
+#define  CDMA1_INTACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTACK_RESERVED1_MASK) | (((uint32_t)val) << CDMA1_INTACK_RESERVED1_SHIFT))
+
+#define  CDMA1_INTACK_CLEARCOMPLETEACK_MASK 0x8
+#define  CDMA1_INTACK_CLEARCOMPLETEACK_SHIFT 3
+#define  CDMA1_INTACK_CLEARCOMPLETEACK_MASK_SHIFT(reg) (((reg) & CDMA1_INTACK_CLEARCOMPLETEACK_MASK) >> CDMA1_INTACK_CLEARCOMPLETEACK_SHIFT)
+#define  CDMA1_INTACK_CLEARCOMPLETEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTACK_CLEARCOMPLETEACK_MASK) | (((uint32_t)val) << CDMA1_INTACK_CLEARCOMPLETEACK_SHIFT))
+
+#define  CDMA1_INTACK_CHAINDONEACK_MASK 0x4
+#define  CDMA1_INTACK_CHAINDONEACK_SHIFT 2
+#define  CDMA1_INTACK_CHAINDONEACK_MASK_SHIFT(reg) (((reg) & CDMA1_INTACK_CHAINDONEACK_MASK) >> CDMA1_INTACK_CHAINDONEACK_SHIFT)
+#define  CDMA1_INTACK_CHAINDONEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTACK_CHAINDONEACK_MASK) | (((uint32_t)val) << CDMA1_INTACK_CHAINDONEACK_SHIFT))
+
+#define  CDMA1_INTACK_TIMEOUTACK_MASK 0x2
+#define  CDMA1_INTACK_TIMEOUTACK_SHIFT 1
+#define  CDMA1_INTACK_TIMEOUTACK_MASK_SHIFT(reg) (((reg) & CDMA1_INTACK_TIMEOUTACK_MASK) >> CDMA1_INTACK_TIMEOUTACK_SHIFT)
+#define  CDMA1_INTACK_TIMEOUTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTACK_TIMEOUTACK_MASK) | (((uint32_t)val) << CDMA1_INTACK_TIMEOUTACK_SHIFT))
+
+#define  CDMA1_INTACK_TERMCNTACK_MASK 0x1
+#define  CDMA1_INTACK_TERMCNTACK_SHIFT 0
+#define  CDMA1_INTACK_TERMCNTACK_MASK_SHIFT(reg) (((reg) & CDMA1_INTACK_TERMCNTACK_MASK) >> CDMA1_INTACK_TERMCNTACK_SHIFT)
+#define  CDMA1_INTACK_TERMCNTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTACK_TERMCNTACK_MASK) | (((uint32_t)val) << CDMA1_INTACK_TERMCNTACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (intForce)
+//====================================================================
+
+#define  CDMA1_INTFORCE_RESERVED1_MASK 0xfffffff0
+#define  CDMA1_INTFORCE_RESERVED1_SHIFT 4
+#define  CDMA1_INTFORCE_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA1_INTFORCE_RESERVED1_MASK) >> CDMA1_INTFORCE_RESERVED1_SHIFT)
+#define  CDMA1_INTFORCE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTFORCE_RESERVED1_MASK) | (((uint32_t)val) << CDMA1_INTFORCE_RESERVED1_SHIFT))
+
+#define  CDMA1_INTFORCE_CLEARCOMPLETEFOR_MASK 0x8
+#define  CDMA1_INTFORCE_CLEARCOMPLETEFOR_SHIFT 3
+#define  CDMA1_INTFORCE_CLEARCOMPLETEFOR_MASK_SHIFT(reg) (((reg) & CDMA1_INTFORCE_CLEARCOMPLETEFOR_MASK) >> CDMA1_INTFORCE_CLEARCOMPLETEFOR_SHIFT)
+#define  CDMA1_INTFORCE_CLEARCOMPLETEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTFORCE_CLEARCOMPLETEFOR_MASK) | (((uint32_t)val) << CDMA1_INTFORCE_CLEARCOMPLETEFOR_SHIFT))
+
+#define  CDMA1_INTFORCE_CHAINDONEFOR_MASK 0x4
+#define  CDMA1_INTFORCE_CHAINDONEFOR_SHIFT 2
+#define  CDMA1_INTFORCE_CHAINDONEFOR_MASK_SHIFT(reg) (((reg) & CDMA1_INTFORCE_CHAINDONEFOR_MASK) >> CDMA1_INTFORCE_CHAINDONEFOR_SHIFT)
+#define  CDMA1_INTFORCE_CHAINDONEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTFORCE_CHAINDONEFOR_MASK) | (((uint32_t)val) << CDMA1_INTFORCE_CHAINDONEFOR_SHIFT))
+
+#define  CDMA1_INTFORCE_TIMEOUTFOR_MASK 0x2
+#define  CDMA1_INTFORCE_TIMEOUTFOR_SHIFT 1
+#define  CDMA1_INTFORCE_TIMEOUTFOR_MASK_SHIFT(reg) (((reg) & CDMA1_INTFORCE_TIMEOUTFOR_MASK) >> CDMA1_INTFORCE_TIMEOUTFOR_SHIFT)
+#define  CDMA1_INTFORCE_TIMEOUTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTFORCE_TIMEOUTFOR_MASK) | (((uint32_t)val) << CDMA1_INTFORCE_TIMEOUTFOR_SHIFT))
+
+#define  CDMA1_INTFORCE_TERMCNTFOR_MASK 0x1
+#define  CDMA1_INTFORCE_TERMCNTFOR_SHIFT 0
+#define  CDMA1_INTFORCE_TERMCNTFOR_MASK_SHIFT(reg) (((reg) & CDMA1_INTFORCE_TERMCNTFOR_MASK) >> CDMA1_INTFORCE_TERMCNTFOR_SHIFT)
+#define  CDMA1_INTFORCE_TERMCNTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_INTFORCE_TERMCNTFOR_MASK) | (((uint32_t)val) << CDMA1_INTFORCE_TERMCNTFOR_SHIFT))
+
+//====================================================================
+//Register: DMA Timer Control (TimerControl)
+/** \brief The Timer Control register specifies the number of timebase cycles between word
+      transfers before generating a timeout interrupt. The timer is reset each time
+      a transfer occurs.*/
+//====================================================================
+
+#define  CDMA1_TIMERCONTROL_RESERVED1_MASK 0xffff0000
+#define  CDMA1_TIMERCONTROL_RESERVED1_SHIFT 16
+#define  CDMA1_TIMERCONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA1_TIMERCONTROL_RESERVED1_MASK) >> CDMA1_TIMERCONTROL_RESERVED1_SHIFT)
+#define  CDMA1_TIMERCONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_TIMERCONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA1_TIMERCONTROL_RESERVED1_SHIFT))
+
+#define  CDMA1_TIMERCONTROL_TIMERENABLE_MASK 0x8000
+#define  CDMA1_TIMERCONTROL_TIMERENABLE_SHIFT 15
+#define  CDMA1_TIMERCONTROL_TIMERENABLE_MASK_SHIFT(reg) (((reg) & CDMA1_TIMERCONTROL_TIMERENABLE_MASK) >> CDMA1_TIMERCONTROL_TIMERENABLE_SHIFT)
+#define  CDMA1_TIMERCONTROL_TIMERENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_TIMERCONTROL_TIMERENABLE_MASK) | (((uint32_t)val) << CDMA1_TIMERCONTROL_TIMERENABLE_SHIFT))
+
+#define  CDMA1_TIMERCONTROL_TIMEBASE_MASK 0x7000
+#define  CDMA1_TIMERCONTROL_TIMEBASE_SHIFT 12
+#define  CDMA1_TIMERCONTROL_TIMEBASE_MASK_SHIFT(reg) (((reg) & CDMA1_TIMERCONTROL_TIMEBASE_MASK) >> CDMA1_TIMERCONTROL_TIMEBASE_SHIFT)
+#define  CDMA1_TIMERCONTROL_TIMEBASE_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_TIMERCONTROL_TIMEBASE_MASK) | (((uint32_t)val) << CDMA1_TIMERCONTROL_TIMEBASE_SHIFT))
+
+#define  CDMA1_TIMERCONTROL_RESERVED2_MASK 0x800
+#define  CDMA1_TIMERCONTROL_RESERVED2_SHIFT 11
+#define  CDMA1_TIMERCONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA1_TIMERCONTROL_RESERVED2_MASK) >> CDMA1_TIMERCONTROL_RESERVED2_SHIFT)
+#define  CDMA1_TIMERCONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_TIMERCONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA1_TIMERCONTROL_RESERVED2_SHIFT))
+
+#define  CDMA1_TIMERCONTROL_COUNT_MASK 0x7ff
+#define  CDMA1_TIMERCONTROL_COUNT_SHIFT 0
+#define  CDMA1_TIMERCONTROL_COUNT_MASK_SHIFT(reg) (((reg) & CDMA1_TIMERCONTROL_COUNT_MASK) >> CDMA1_TIMERCONTROL_COUNT_SHIFT)
+#define  CDMA1_TIMERCONTROL_COUNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_TIMERCONTROL_COUNT_MASK) | (((uint32_t)val) << CDMA1_TIMERCONTROL_COUNT_SHIFT))
+
+//====================================================================
+//Register: Timeout Count Status Register (TimeOutStat)
+/** \brief This register contains the current timeout count.*/
+//====================================================================
+
+#define  CDMA1_TIMEOUTSTAT_RESERVED1_MASK 0xfffff800
+#define  CDMA1_TIMEOUTSTAT_RESERVED1_SHIFT 11
+#define  CDMA1_TIMEOUTSTAT_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA1_TIMEOUTSTAT_RESERVED1_MASK) >> CDMA1_TIMEOUTSTAT_RESERVED1_SHIFT)
+#define  CDMA1_TIMEOUTSTAT_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_TIMEOUTSTAT_RESERVED1_MASK) | (((uint32_t)val) << CDMA1_TIMEOUTSTAT_RESERVED1_SHIFT))
+
+#define  CDMA1_TIMEOUTSTAT_CURRTOCNT_MASK 0x7ff
+#define  CDMA1_TIMEOUTSTAT_CURRTOCNT_SHIFT 0
+#define  CDMA1_TIMEOUTSTAT_CURRTOCNT_MASK_SHIFT(reg) (((reg) & CDMA1_TIMEOUTSTAT_CURRTOCNT_MASK) >> CDMA1_TIMEOUTSTAT_CURRTOCNT_SHIFT)
+#define  CDMA1_TIMEOUTSTAT_CURRTOCNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_TIMEOUTSTAT_CURRTOCNT_MASK) | (((uint32_t)val) << CDMA1_TIMEOUTSTAT_CURRTOCNT_SHIFT))
+
+//====================================================================
+//Register: Linked List Index Register (LLIR)
+/** \brief This register contains a word-aligned address of the first word of the next descriptor. LLI means "linked list index" or pointer to the descriptor in memory. If the LLI register is 0, then the current descriptor (that is loaded in the registers) is the last in the chain, and the DMA channel will stop once the current DMA transfer is completed.*/
+//====================================================================
+
+#define  CDMA1_LLIR_LLINDEX_MASK 0xfffffffc
+#define  CDMA1_LLIR_LLINDEX_SHIFT 2
+#define  CDMA1_LLIR_LLINDEX_MASK_SHIFT(reg) (((reg) & CDMA1_LLIR_LLINDEX_MASK) >> CDMA1_LLIR_LLINDEX_SHIFT)
+#define  CDMA1_LLIR_LLINDEX_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_LLIR_LLINDEX_MASK) | (((uint32_t)val) << CDMA1_LLIR_LLINDEX_SHIFT))
+
+#define  CDMA1_LLIR_RESERVED1_MASK 0x3
+#define  CDMA1_LLIR_RESERVED1_SHIFT 0
+#define  CDMA1_LLIR_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA1_LLIR_RESERVED1_MASK) >> CDMA1_LLIR_RESERVED1_SHIFT)
+#define  CDMA1_LLIR_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_LLIR_RESERVED1_MASK) | (((uint32_t)val) << CDMA1_LLIR_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Odd Width Config Register (OWCFG)
+//====================================================================
+
+#define  CDMA1_OWCFG_RESERVED1_MASK 0xfffe0000
+#define  CDMA1_OWCFG_RESERVED1_SHIFT 17
+#define  CDMA1_OWCFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA1_OWCFG_RESERVED1_MASK) >> CDMA1_OWCFG_RESERVED1_SHIFT)
+#define  CDMA1_OWCFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_OWCFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA1_OWCFG_RESERVED1_SHIFT))
+
+#define  CDMA1_OWCFG_EXTRABITS_MASK 0x1f000
+#define  CDMA1_OWCFG_EXTRABITS_SHIFT 12
+#define  CDMA1_OWCFG_EXTRABITS_MASK_SHIFT(reg) (((reg) & CDMA1_OWCFG_EXTRABITS_MASK) >> CDMA1_OWCFG_EXTRABITS_SHIFT)
+#define  CDMA1_OWCFG_EXTRABITS_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_OWCFG_EXTRABITS_MASK) | (((uint32_t)val) << CDMA1_OWCFG_EXTRABITS_SHIFT))
+
+#define  CDMA1_OWCFG_RESERVED2_MASK 0xe00
+#define  CDMA1_OWCFG_RESERVED2_SHIFT 9
+#define  CDMA1_OWCFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA1_OWCFG_RESERVED2_MASK) >> CDMA1_OWCFG_RESERVED2_SHIFT)
+#define  CDMA1_OWCFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_OWCFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA1_OWCFG_RESERVED2_SHIFT))
+
+#define  CDMA1_OWCFG_ODDWIDTH_MASK 0x1f0
+#define  CDMA1_OWCFG_ODDWIDTH_SHIFT 4
+#define  CDMA1_OWCFG_ODDWIDTH_MASK_SHIFT(reg) (((reg) & CDMA1_OWCFG_ODDWIDTH_MASK) >> CDMA1_OWCFG_ODDWIDTH_SHIFT)
+#define  CDMA1_OWCFG_ODDWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_OWCFG_ODDWIDTH_MASK) | (((uint32_t)val) << CDMA1_OWCFG_ODDWIDTH_SHIFT))
+
+#define  CDMA1_OWCFG_RESERVED3_MASK 0xc
+#define  CDMA1_OWCFG_RESERVED3_SHIFT 2
+#define  CDMA1_OWCFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA1_OWCFG_RESERVED3_MASK) >> CDMA1_OWCFG_RESERVED3_SHIFT)
+#define  CDMA1_OWCFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_OWCFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA1_OWCFG_RESERVED3_SHIFT))
+
+#define  CDMA1_OWCFG_PACKNUNPACK_MASK 0x2
+#define  CDMA1_OWCFG_PACKNUNPACK_SHIFT 1
+#define  CDMA1_OWCFG_PACKNUNPACK_MASK_SHIFT(reg) (((reg) & CDMA1_OWCFG_PACKNUNPACK_MASK) >> CDMA1_OWCFG_PACKNUNPACK_SHIFT)
+#define  CDMA1_OWCFG_PACKNUNPACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_OWCFG_PACKNUNPACK_MASK) | (((uint32_t)val) << CDMA1_OWCFG_PACKNUNPACK_SHIFT))
+
+#define  CDMA1_OWCFG_OWEN_MASK 0x1
+#define  CDMA1_OWCFG_OWEN_SHIFT 0
+#define  CDMA1_OWCFG_OWEN_MASK_SHIFT(reg) (((reg) & CDMA1_OWCFG_OWEN_MASK) >> CDMA1_OWCFG_OWEN_SHIFT)
+#define  CDMA1_OWCFG_OWEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA1_OWCFG_OWEN_MASK) | (((uint32_t)val) << CDMA1_OWCFG_OWEN_SHIFT))
+
+//====================================================================
+//
+//Register File: CDMA (Instance 3 of 12) (CDMA2)
+/** \brief Registers for Central DMA module*/
+//
+//====================================================================
+
+//====================================================================
+//Register: DMA Configuration Register (CFG)
+/** \brief This register is used to configure the data flow for each channel.*/
+//====================================================================
+
+#define  CDMA2_CFG_WRDELAY_MASK 0xf0000000
+#define  CDMA2_CFG_WRDELAY_SHIFT 28
+#define  CDMA2_CFG_WRDELAY_MASK_SHIFT(reg) (((reg) & CDMA2_CFG_WRDELAY_MASK) >> CDMA2_CFG_WRDELAY_SHIFT)
+#define  CDMA2_CFG_WRDELAY_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CFG_WRDELAY_MASK) | (((uint32_t)val) << CDMA2_CFG_WRDELAY_SHIFT))
+
+#define  CDMA2_CFG_RESERVED1_MASK 0xc000000
+#define  CDMA2_CFG_RESERVED1_SHIFT 26
+#define  CDMA2_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA2_CFG_RESERVED1_MASK) >> CDMA2_CFG_RESERVED1_SHIFT)
+#define  CDMA2_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA2_CFG_RESERVED1_SHIFT))
+
+#define  CDMA2_CFG_DATAUNITSIZE_MASK 0x3000000
+#define  CDMA2_CFG_DATAUNITSIZE_SHIFT 24
+#define  CDMA2_CFG_DATAUNITSIZE_MASK_SHIFT(reg) (((reg) & CDMA2_CFG_DATAUNITSIZE_MASK) >> CDMA2_CFG_DATAUNITSIZE_SHIFT)
+#define  CDMA2_CFG_DATAUNITSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CFG_DATAUNITSIZE_MASK) | (((uint32_t)val) << CDMA2_CFG_DATAUNITSIZE_SHIFT))
+
+#define  CDMA2_CFG_HALT_MASK 0x800000
+#define  CDMA2_CFG_HALT_SHIFT 23
+#define  CDMA2_CFG_HALT_MASK_SHIFT(reg) (((reg) & CDMA2_CFG_HALT_MASK) >> CDMA2_CFG_HALT_SHIFT)
+#define  CDMA2_CFG_HALT_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CFG_HALT_MASK) | (((uint32_t)val) << CDMA2_CFG_HALT_SHIFT))
+
+#define  CDMA2_CFG_FLOWCTRL_MASK 0x700000
+#define  CDMA2_CFG_FLOWCTRL_SHIFT 20
+#define  CDMA2_CFG_FLOWCTRL_MASK_SHIFT(reg) (((reg) & CDMA2_CFG_FLOWCTRL_MASK) >> CDMA2_CFG_FLOWCTRL_SHIFT)
+#define  CDMA2_CFG_FLOWCTRL_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CFG_FLOWCTRL_MASK) | (((uint32_t)val) << CDMA2_CFG_FLOWCTRL_SHIFT))
+
+#define  CDMA2_CFG_RESERVED2_MASK 0xc0000
+#define  CDMA2_CFG_RESERVED2_SHIFT 18
+#define  CDMA2_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA2_CFG_RESERVED2_MASK) >> CDMA2_CFG_RESERVED2_SHIFT)
+#define  CDMA2_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA2_CFG_RESERVED2_SHIFT))
+
+#define  CDMA2_CFG_DESTPID_MASK 0x3f000
+#define  CDMA2_CFG_DESTPID_SHIFT 12
+#define  CDMA2_CFG_DESTPID_MASK_SHIFT(reg) (((reg) & CDMA2_CFG_DESTPID_MASK) >> CDMA2_CFG_DESTPID_SHIFT)
+#define  CDMA2_CFG_DESTPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CFG_DESTPID_MASK) | (((uint32_t)val) << CDMA2_CFG_DESTPID_SHIFT))
+
+#define  CDMA2_CFG_RESERVED3_MASK 0xc00
+#define  CDMA2_CFG_RESERVED3_SHIFT 10
+#define  CDMA2_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA2_CFG_RESERVED3_MASK) >> CDMA2_CFG_RESERVED3_SHIFT)
+#define  CDMA2_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA2_CFG_RESERVED3_SHIFT))
+
+#define  CDMA2_CFG_SRCPID_MASK 0x3f0
+#define  CDMA2_CFG_SRCPID_SHIFT 4
+#define  CDMA2_CFG_SRCPID_MASK_SHIFT(reg) (((reg) & CDMA2_CFG_SRCPID_MASK) >> CDMA2_CFG_SRCPID_SHIFT)
+#define  CDMA2_CFG_SRCPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CFG_SRCPID_MASK) | (((uint32_t)val) << CDMA2_CFG_SRCPID_SHIFT))
+
+#define  CDMA2_CFG_DESTENDIAN_MASK 0x8
+#define  CDMA2_CFG_DESTENDIAN_SHIFT 3
+#define  CDMA2_CFG_DESTENDIAN_MASK_SHIFT(reg) (((reg) & CDMA2_CFG_DESTENDIAN_MASK) >> CDMA2_CFG_DESTENDIAN_SHIFT)
+#define  CDMA2_CFG_DESTENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CFG_DESTENDIAN_MASK) | (((uint32_t)val) << CDMA2_CFG_DESTENDIAN_SHIFT))
+
+#define  CDMA2_CFG_SRCENDIAN_MASK 0x4
+#define  CDMA2_CFG_SRCENDIAN_SHIFT 2
+#define  CDMA2_CFG_SRCENDIAN_MASK_SHIFT(reg) (((reg) & CDMA2_CFG_SRCENDIAN_MASK) >> CDMA2_CFG_SRCENDIAN_SHIFT)
+#define  CDMA2_CFG_SRCENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CFG_SRCENDIAN_MASK) | (((uint32_t)val) << CDMA2_CFG_SRCENDIAN_SHIFT))
+
+#define  CDMA2_CFG_FILL_MASK 0x2
+#define  CDMA2_CFG_FILL_SHIFT 1
+#define  CDMA2_CFG_FILL_MASK_SHIFT(reg) (((reg) & CDMA2_CFG_FILL_MASK) >> CDMA2_CFG_FILL_SHIFT)
+#define  CDMA2_CFG_FILL_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CFG_FILL_MASK) | (((uint32_t)val) << CDMA2_CFG_FILL_SHIFT))
+
+#define  CDMA2_CFG_ENABLE_MASK 0x1
+#define  CDMA2_CFG_ENABLE_SHIFT 0
+#define  CDMA2_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & CDMA2_CFG_ENABLE_MASK) >> CDMA2_CFG_ENABLE_SHIFT)
+#define  CDMA2_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CFG_ENABLE_MASK) | (((uint32_t)val) << CDMA2_CFG_ENABLE_SHIFT))
+
+//====================================================================
+//Register: DMA Channel Control Register (Control)
+/** \brief This register programs each channel for control features such as
+      auto-increment, initiator select, burst size, transfer size, and
+      transfer widths.*/
+//====================================================================
+
+#define  CDMA2_CONTROL_TRANSSIZE_MASK 0xffff0000
+#define  CDMA2_CONTROL_TRANSSIZE_SHIFT 16
+#define  CDMA2_CONTROL_TRANSSIZE_MASK_SHIFT(reg) (((reg) & CDMA2_CONTROL_TRANSSIZE_MASK) >> CDMA2_CONTROL_TRANSSIZE_SHIFT)
+#define  CDMA2_CONTROL_TRANSSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CONTROL_TRANSSIZE_MASK) | (((uint32_t)val) << CDMA2_CONTROL_TRANSSIZE_SHIFT))
+
+#define  CDMA2_CONTROL_RESERVED1_MASK 0xc000
+#define  CDMA2_CONTROL_RESERVED1_SHIFT 14
+#define  CDMA2_CONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA2_CONTROL_RESERVED1_MASK) >> CDMA2_CONTROL_RESERVED1_SHIFT)
+#define  CDMA2_CONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA2_CONTROL_RESERVED1_SHIFT))
+
+#define  CDMA2_CONTROL_DESTADDRINC_MASK 0x2000
+#define  CDMA2_CONTROL_DESTADDRINC_SHIFT 13
+#define  CDMA2_CONTROL_DESTADDRINC_MASK_SHIFT(reg) (((reg) & CDMA2_CONTROL_DESTADDRINC_MASK) >> CDMA2_CONTROL_DESTADDRINC_SHIFT)
+#define  CDMA2_CONTROL_DESTADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CONTROL_DESTADDRINC_MASK) | (((uint32_t)val) << CDMA2_CONTROL_DESTADDRINC_SHIFT))
+
+#define  CDMA2_CONTROL_SRCADDRINC_MASK 0x1000
+#define  CDMA2_CONTROL_SRCADDRINC_SHIFT 12
+#define  CDMA2_CONTROL_SRCADDRINC_MASK_SHIFT(reg) (((reg) & CDMA2_CONTROL_SRCADDRINC_MASK) >> CDMA2_CONTROL_SRCADDRINC_SHIFT)
+#define  CDMA2_CONTROL_SRCADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CONTROL_SRCADDRINC_MASK) | (((uint32_t)val) << CDMA2_CONTROL_SRCADDRINC_SHIFT))
+
+#define  CDMA2_CONTROL_DESTXFERWIDTH_MASK 0xc00
+#define  CDMA2_CONTROL_DESTXFERWIDTH_SHIFT 10
+#define  CDMA2_CONTROL_DESTXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA2_CONTROL_DESTXFERWIDTH_MASK) >> CDMA2_CONTROL_DESTXFERWIDTH_SHIFT)
+#define  CDMA2_CONTROL_DESTXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CONTROL_DESTXFERWIDTH_MASK) | (((uint32_t)val) << CDMA2_CONTROL_DESTXFERWIDTH_SHIFT))
+
+#define  CDMA2_CONTROL_SRCXFERWIDTH_MASK 0x300
+#define  CDMA2_CONTROL_SRCXFERWIDTH_SHIFT 8
+#define  CDMA2_CONTROL_SRCXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA2_CONTROL_SRCXFERWIDTH_MASK) >> CDMA2_CONTROL_SRCXFERWIDTH_SHIFT)
+#define  CDMA2_CONTROL_SRCXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CONTROL_SRCXFERWIDTH_MASK) | (((uint32_t)val) << CDMA2_CONTROL_SRCXFERWIDTH_SHIFT))
+
+#define  CDMA2_CONTROL_RESERVED2_MASK 0xc0
+#define  CDMA2_CONTROL_RESERVED2_SHIFT 6
+#define  CDMA2_CONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA2_CONTROL_RESERVED2_MASK) >> CDMA2_CONTROL_RESERVED2_SHIFT)
+#define  CDMA2_CONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA2_CONTROL_RESERVED2_SHIFT))
+
+#define  CDMA2_CONTROL_DESTBURSTSIZE_MASK 0x30
+#define  CDMA2_CONTROL_DESTBURSTSIZE_SHIFT 4
+#define  CDMA2_CONTROL_DESTBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA2_CONTROL_DESTBURSTSIZE_MASK) >> CDMA2_CONTROL_DESTBURSTSIZE_SHIFT)
+#define  CDMA2_CONTROL_DESTBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CONTROL_DESTBURSTSIZE_MASK) | (((uint32_t)val) << CDMA2_CONTROL_DESTBURSTSIZE_SHIFT))
+
+#define  CDMA2_CONTROL_RESERVED3_MASK 0xc
+#define  CDMA2_CONTROL_RESERVED3_SHIFT 2
+#define  CDMA2_CONTROL_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA2_CONTROL_RESERVED3_MASK) >> CDMA2_CONTROL_RESERVED3_SHIFT)
+#define  CDMA2_CONTROL_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CONTROL_RESERVED3_MASK) | (((uint32_t)val) << CDMA2_CONTROL_RESERVED3_SHIFT))
+
+#define  CDMA2_CONTROL_SRCBURSTSIZE_MASK 0x3
+#define  CDMA2_CONTROL_SRCBURSTSIZE_SHIFT 0
+#define  CDMA2_CONTROL_SRCBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA2_CONTROL_SRCBURSTSIZE_MASK) >> CDMA2_CONTROL_SRCBURSTSIZE_SHIFT)
+#define  CDMA2_CONTROL_SRCBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_CONTROL_SRCBURSTSIZE_MASK) | (((uint32_t)val) << CDMA2_CONTROL_SRCBURSTSIZE_SHIFT))
+
+//====================================================================
+//Register: DMA Status Register (Status)
+//====================================================================
+
+#define  CDMA2_STATUS_RESERVED1_MASK 0xfff00000
+#define  CDMA2_STATUS_RESERVED1_SHIFT 20
+#define  CDMA2_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA2_STATUS_RESERVED1_MASK) >> CDMA2_STATUS_RESERVED1_SHIFT)
+#define  CDMA2_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_STATUS_RESERVED1_MASK) | (((uint32_t)val) << CDMA2_STATUS_RESERVED1_SHIFT))
+
+#define  CDMA2_STATUS_ODDWIDTHHW_MASK 0x80000
+#define  CDMA2_STATUS_ODDWIDTHHW_SHIFT 19
+#define  CDMA2_STATUS_ODDWIDTHHW_MASK_SHIFT(reg) (((reg) & CDMA2_STATUS_ODDWIDTHHW_MASK) >> CDMA2_STATUS_ODDWIDTHHW_SHIFT)
+#define  CDMA2_STATUS_ODDWIDTHHW_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_STATUS_ODDWIDTHHW_MASK) | (((uint32_t)val) << CDMA2_STATUS_ODDWIDTHHW_SHIFT))
+
+#define  CDMA2_STATUS_DESCFETCH_MASK 0x40000
+#define  CDMA2_STATUS_DESCFETCH_SHIFT 18
+#define  CDMA2_STATUS_DESCFETCH_MASK_SHIFT(reg) (((reg) & CDMA2_STATUS_DESCFETCH_MASK) >> CDMA2_STATUS_DESCFETCH_SHIFT)
+#define  CDMA2_STATUS_DESCFETCH_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_STATUS_DESCFETCH_MASK) | (((uint32_t)val) << CDMA2_STATUS_DESCFETCH_SHIFT))
+
+#define  CDMA2_STATUS_DMABUSY_MASK 0x20000
+#define  CDMA2_STATUS_DMABUSY_SHIFT 17
+#define  CDMA2_STATUS_DMABUSY_MASK_SHIFT(reg) (((reg) & CDMA2_STATUS_DMABUSY_MASK) >> CDMA2_STATUS_DMABUSY_SHIFT)
+#define  CDMA2_STATUS_DMABUSY_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_STATUS_DMABUSY_MASK) | (((uint32_t)val) << CDMA2_STATUS_DMABUSY_SHIFT))
+
+#define  CDMA2_STATUS_FIFOEMPTY_MASK 0x10000
+#define  CDMA2_STATUS_FIFOEMPTY_SHIFT 16
+#define  CDMA2_STATUS_FIFOEMPTY_MASK_SHIFT(reg) (((reg) & CDMA2_STATUS_FIFOEMPTY_MASK) >> CDMA2_STATUS_FIFOEMPTY_SHIFT)
+#define  CDMA2_STATUS_FIFOEMPTY_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_STATUS_FIFOEMPTY_MASK) | (((uint32_t)val) << CDMA2_STATUS_FIFOEMPTY_SHIFT))
+
+#define  CDMA2_STATUS_BYTESREMAIN_MASK 0xffff
+#define  CDMA2_STATUS_BYTESREMAIN_SHIFT 0
+#define  CDMA2_STATUS_BYTESREMAIN_MASK_SHIFT(reg) (((reg) & CDMA2_STATUS_BYTESREMAIN_MASK) >> CDMA2_STATUS_BYTESREMAIN_SHIFT)
+#define  CDMA2_STATUS_BYTESREMAIN_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_STATUS_BYTESREMAIN_MASK) | (((uint32_t)val) << CDMA2_STATUS_BYTESREMAIN_SHIFT))
+
+//====================================================================
+//Register: DMA Source Address Register (SrcAddr)
+/** \brief The Source Address register is programmed with the address of the location
+      for the DMA to transfer from. If the source is memory, the address can be
+      byte aligned.
+<br>*/
+//====================================================================
+
+#define  CDMA2_SRCADDR_SRCADDR_MASK 0xffffffff
+#define  CDMA2_SRCADDR_SRCADDR_SHIFT 0
+#define  CDMA2_SRCADDR_SRCADDR_MASK_SHIFT(reg) (((reg) & CDMA2_SRCADDR_SRCADDR_MASK) >> CDMA2_SRCADDR_SRCADDR_SHIFT)
+#define  CDMA2_SRCADDR_SRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_SRCADDR_SRCADDR_MASK) | (((uint32_t)val) << CDMA2_SRCADDR_SRCADDR_SHIFT))
+
+//====================================================================
+//Register: Current Source Address Register (SrcAddrStat)
+/** \brief This register contains the current address for the source device.*/
+//====================================================================
+
+#define  CDMA2_SRCADDRSTAT_CURRSRCADDR_MASK 0xffffffff
+#define  CDMA2_SRCADDRSTAT_CURRSRCADDR_SHIFT 0
+#define  CDMA2_SRCADDRSTAT_CURRSRCADDR_MASK_SHIFT(reg) (((reg) & CDMA2_SRCADDRSTAT_CURRSRCADDR_MASK) >> CDMA2_SRCADDRSTAT_CURRSRCADDR_SHIFT)
+#define  CDMA2_SRCADDRSTAT_CURRSRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_SRCADDRSTAT_CURRSRCADDR_MASK) | (((uint32_t)val) << CDMA2_SRCADDRSTAT_CURRSRCADDR_SHIFT))
+
+//====================================================================
+//Register: Destination Address Register (DestAddr)
+/** \brief The Destination Address register is programmed with the address of the location
+      for the DMA to transfer to. If the destination is memory, the address can be
+      byte aligned.*/
+//====================================================================
+
+#define  CDMA2_DESTADDR_DESTADDR_MASK 0xffffffff
+#define  CDMA2_DESTADDR_DESTADDR_SHIFT 0
+#define  CDMA2_DESTADDR_DESTADDR_MASK_SHIFT(reg) (((reg) & CDMA2_DESTADDR_DESTADDR_MASK) >> CDMA2_DESTADDR_DESTADDR_SHIFT)
+#define  CDMA2_DESTADDR_DESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_DESTADDR_DESTADDR_MASK) | (((uint32_t)val) << CDMA2_DESTADDR_DESTADDR_SHIFT))
+
+//====================================================================
+//Register: Current Destination Address Register (DestAddrStat)
+/** \brief This register contains the current address for the destination device.*/
+//====================================================================
+
+#define  CDMA2_DESTADDRSTAT_CURRDESTADDR_MASK 0xffffffff
+#define  CDMA2_DESTADDRSTAT_CURRDESTADDR_SHIFT 0
+#define  CDMA2_DESTADDRSTAT_CURRDESTADDR_MASK_SHIFT(reg) (((reg) & CDMA2_DESTADDRSTAT_CURRDESTADDR_MASK) >> CDMA2_DESTADDRSTAT_CURRDESTADDR_SHIFT)
+#define  CDMA2_DESTADDRSTAT_CURRDESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_DESTADDRSTAT_CURRDESTADDR_MASK) | (((uint32_t)val) << CDMA2_DESTADDRSTAT_CURRDESTADDR_SHIFT))
+
+//====================================================================
+//Register: Fill Value Register (FillValue)
+/** \brief This register contains the data value to write to the destination
+      address.*/
+//====================================================================
+
+#define  CDMA2_FILLVALUE_FILLVAL_MASK 0xffffffff
+#define  CDMA2_FILLVALUE_FILLVAL_SHIFT 0
+#define  CDMA2_FILLVALUE_FILLVAL_MASK_SHIFT(reg) (((reg) & CDMA2_FILLVALUE_FILLVAL_MASK) >> CDMA2_FILLVALUE_FILLVAL_SHIFT)
+#define  CDMA2_FILLVALUE_FILLVAL_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_FILLVALUE_FILLVAL_MASK) | (((uint32_t)val) << CDMA2_FILLVALUE_FILLVAL_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (intEn)
+//====================================================================
+
+#define  CDMA2_INTEN_RESERVED1_MASK 0xfffffff0
+#define  CDMA2_INTEN_RESERVED1_SHIFT 4
+#define  CDMA2_INTEN_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA2_INTEN_RESERVED1_MASK) >> CDMA2_INTEN_RESERVED1_SHIFT)
+#define  CDMA2_INTEN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTEN_RESERVED1_MASK) | (((uint32_t)val) << CDMA2_INTEN_RESERVED1_SHIFT))
+
+#define  CDMA2_INTEN_CLEARCOMPLETEEN_MASK 0x8
+#define  CDMA2_INTEN_CLEARCOMPLETEEN_SHIFT 3
+#define  CDMA2_INTEN_CLEARCOMPLETEEN_MASK_SHIFT(reg) (((reg) & CDMA2_INTEN_CLEARCOMPLETEEN_MASK) >> CDMA2_INTEN_CLEARCOMPLETEEN_SHIFT)
+#define  CDMA2_INTEN_CLEARCOMPLETEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTEN_CLEARCOMPLETEEN_MASK) | (((uint32_t)val) << CDMA2_INTEN_CLEARCOMPLETEEN_SHIFT))
+
+#define  CDMA2_INTEN_CHAINDONEEN_MASK 0x4
+#define  CDMA2_INTEN_CHAINDONEEN_SHIFT 2
+#define  CDMA2_INTEN_CHAINDONEEN_MASK_SHIFT(reg) (((reg) & CDMA2_INTEN_CHAINDONEEN_MASK) >> CDMA2_INTEN_CHAINDONEEN_SHIFT)
+#define  CDMA2_INTEN_CHAINDONEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTEN_CHAINDONEEN_MASK) | (((uint32_t)val) << CDMA2_INTEN_CHAINDONEEN_SHIFT))
+
+#define  CDMA2_INTEN_TIMEOUTEN_MASK 0x2
+#define  CDMA2_INTEN_TIMEOUTEN_SHIFT 1
+#define  CDMA2_INTEN_TIMEOUTEN_MASK_SHIFT(reg) (((reg) & CDMA2_INTEN_TIMEOUTEN_MASK) >> CDMA2_INTEN_TIMEOUTEN_SHIFT)
+#define  CDMA2_INTEN_TIMEOUTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTEN_TIMEOUTEN_MASK) | (((uint32_t)val) << CDMA2_INTEN_TIMEOUTEN_SHIFT))
+
+#define  CDMA2_INTEN_TERMCNTEN_MASK 0x1
+#define  CDMA2_INTEN_TERMCNTEN_SHIFT 0
+#define  CDMA2_INTEN_TERMCNTEN_MASK_SHIFT(reg) (((reg) & CDMA2_INTEN_TERMCNTEN_MASK) >> CDMA2_INTEN_TERMCNTEN_SHIFT)
+#define  CDMA2_INTEN_TERMCNTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTEN_TERMCNTEN_MASK) | (((uint32_t)val) << CDMA2_INTEN_TERMCNTEN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (intPend)
+//====================================================================
+
+#define  CDMA2_INTPEND_RESERVED1_MASK 0xfffffff0
+#define  CDMA2_INTPEND_RESERVED1_SHIFT 4
+#define  CDMA2_INTPEND_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA2_INTPEND_RESERVED1_MASK) >> CDMA2_INTPEND_RESERVED1_SHIFT)
+#define  CDMA2_INTPEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTPEND_RESERVED1_MASK) | (((uint32_t)val) << CDMA2_INTPEND_RESERVED1_SHIFT))
+
+#define  CDMA2_INTPEND_CLEARCOMPLETEPEND_MASK 0x8
+#define  CDMA2_INTPEND_CLEARCOMPLETEPEND_SHIFT 3
+#define  CDMA2_INTPEND_CLEARCOMPLETEPEND_MASK_SHIFT(reg) (((reg) & CDMA2_INTPEND_CLEARCOMPLETEPEND_MASK) >> CDMA2_INTPEND_CLEARCOMPLETEPEND_SHIFT)
+#define  CDMA2_INTPEND_CLEARCOMPLETEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTPEND_CLEARCOMPLETEPEND_MASK) | (((uint32_t)val) << CDMA2_INTPEND_CLEARCOMPLETEPEND_SHIFT))
+
+#define  CDMA2_INTPEND_CHAINDONEPEND_MASK 0x4
+#define  CDMA2_INTPEND_CHAINDONEPEND_SHIFT 2
+#define  CDMA2_INTPEND_CHAINDONEPEND_MASK_SHIFT(reg) (((reg) & CDMA2_INTPEND_CHAINDONEPEND_MASK) >> CDMA2_INTPEND_CHAINDONEPEND_SHIFT)
+#define  CDMA2_INTPEND_CHAINDONEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTPEND_CHAINDONEPEND_MASK) | (((uint32_t)val) << CDMA2_INTPEND_CHAINDONEPEND_SHIFT))
+
+#define  CDMA2_INTPEND_TIMEOUTPEND_MASK 0x2
+#define  CDMA2_INTPEND_TIMEOUTPEND_SHIFT 1
+#define  CDMA2_INTPEND_TIMEOUTPEND_MASK_SHIFT(reg) (((reg) & CDMA2_INTPEND_TIMEOUTPEND_MASK) >> CDMA2_INTPEND_TIMEOUTPEND_SHIFT)
+#define  CDMA2_INTPEND_TIMEOUTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTPEND_TIMEOUTPEND_MASK) | (((uint32_t)val) << CDMA2_INTPEND_TIMEOUTPEND_SHIFT))
+
+#define  CDMA2_INTPEND_TERMCNTPEND_MASK 0x1
+#define  CDMA2_INTPEND_TERMCNTPEND_SHIFT 0
+#define  CDMA2_INTPEND_TERMCNTPEND_MASK_SHIFT(reg) (((reg) & CDMA2_INTPEND_TERMCNTPEND_MASK) >> CDMA2_INTPEND_TERMCNTPEND_SHIFT)
+#define  CDMA2_INTPEND_TERMCNTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTPEND_TERMCNTPEND_MASK) | (((uint32_t)val) << CDMA2_INTPEND_TERMCNTPEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (intAck)
+//====================================================================
+
+#define  CDMA2_INTACK_RESERVED1_MASK 0xfffffff0
+#define  CDMA2_INTACK_RESERVED1_SHIFT 4
+#define  CDMA2_INTACK_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA2_INTACK_RESERVED1_MASK) >> CDMA2_INTACK_RESERVED1_SHIFT)
+#define  CDMA2_INTACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTACK_RESERVED1_MASK) | (((uint32_t)val) << CDMA2_INTACK_RESERVED1_SHIFT))
+
+#define  CDMA2_INTACK_CLEARCOMPLETEACK_MASK 0x8
+#define  CDMA2_INTACK_CLEARCOMPLETEACK_SHIFT 3
+#define  CDMA2_INTACK_CLEARCOMPLETEACK_MASK_SHIFT(reg) (((reg) & CDMA2_INTACK_CLEARCOMPLETEACK_MASK) >> CDMA2_INTACK_CLEARCOMPLETEACK_SHIFT)
+#define  CDMA2_INTACK_CLEARCOMPLETEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTACK_CLEARCOMPLETEACK_MASK) | (((uint32_t)val) << CDMA2_INTACK_CLEARCOMPLETEACK_SHIFT))
+
+#define  CDMA2_INTACK_CHAINDONEACK_MASK 0x4
+#define  CDMA2_INTACK_CHAINDONEACK_SHIFT 2
+#define  CDMA2_INTACK_CHAINDONEACK_MASK_SHIFT(reg) (((reg) & CDMA2_INTACK_CHAINDONEACK_MASK) >> CDMA2_INTACK_CHAINDONEACK_SHIFT)
+#define  CDMA2_INTACK_CHAINDONEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTACK_CHAINDONEACK_MASK) | (((uint32_t)val) << CDMA2_INTACK_CHAINDONEACK_SHIFT))
+
+#define  CDMA2_INTACK_TIMEOUTACK_MASK 0x2
+#define  CDMA2_INTACK_TIMEOUTACK_SHIFT 1
+#define  CDMA2_INTACK_TIMEOUTACK_MASK_SHIFT(reg) (((reg) & CDMA2_INTACK_TIMEOUTACK_MASK) >> CDMA2_INTACK_TIMEOUTACK_SHIFT)
+#define  CDMA2_INTACK_TIMEOUTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTACK_TIMEOUTACK_MASK) | (((uint32_t)val) << CDMA2_INTACK_TIMEOUTACK_SHIFT))
+
+#define  CDMA2_INTACK_TERMCNTACK_MASK 0x1
+#define  CDMA2_INTACK_TERMCNTACK_SHIFT 0
+#define  CDMA2_INTACK_TERMCNTACK_MASK_SHIFT(reg) (((reg) & CDMA2_INTACK_TERMCNTACK_MASK) >> CDMA2_INTACK_TERMCNTACK_SHIFT)
+#define  CDMA2_INTACK_TERMCNTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTACK_TERMCNTACK_MASK) | (((uint32_t)val) << CDMA2_INTACK_TERMCNTACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (intForce)
+//====================================================================
+
+#define  CDMA2_INTFORCE_RESERVED1_MASK 0xfffffff0
+#define  CDMA2_INTFORCE_RESERVED1_SHIFT 4
+#define  CDMA2_INTFORCE_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA2_INTFORCE_RESERVED1_MASK) >> CDMA2_INTFORCE_RESERVED1_SHIFT)
+#define  CDMA2_INTFORCE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTFORCE_RESERVED1_MASK) | (((uint32_t)val) << CDMA2_INTFORCE_RESERVED1_SHIFT))
+
+#define  CDMA2_INTFORCE_CLEARCOMPLETEFOR_MASK 0x8
+#define  CDMA2_INTFORCE_CLEARCOMPLETEFOR_SHIFT 3
+#define  CDMA2_INTFORCE_CLEARCOMPLETEFOR_MASK_SHIFT(reg) (((reg) & CDMA2_INTFORCE_CLEARCOMPLETEFOR_MASK) >> CDMA2_INTFORCE_CLEARCOMPLETEFOR_SHIFT)
+#define  CDMA2_INTFORCE_CLEARCOMPLETEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTFORCE_CLEARCOMPLETEFOR_MASK) | (((uint32_t)val) << CDMA2_INTFORCE_CLEARCOMPLETEFOR_SHIFT))
+
+#define  CDMA2_INTFORCE_CHAINDONEFOR_MASK 0x4
+#define  CDMA2_INTFORCE_CHAINDONEFOR_SHIFT 2
+#define  CDMA2_INTFORCE_CHAINDONEFOR_MASK_SHIFT(reg) (((reg) & CDMA2_INTFORCE_CHAINDONEFOR_MASK) >> CDMA2_INTFORCE_CHAINDONEFOR_SHIFT)
+#define  CDMA2_INTFORCE_CHAINDONEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTFORCE_CHAINDONEFOR_MASK) | (((uint32_t)val) << CDMA2_INTFORCE_CHAINDONEFOR_SHIFT))
+
+#define  CDMA2_INTFORCE_TIMEOUTFOR_MASK 0x2
+#define  CDMA2_INTFORCE_TIMEOUTFOR_SHIFT 1
+#define  CDMA2_INTFORCE_TIMEOUTFOR_MASK_SHIFT(reg) (((reg) & CDMA2_INTFORCE_TIMEOUTFOR_MASK) >> CDMA2_INTFORCE_TIMEOUTFOR_SHIFT)
+#define  CDMA2_INTFORCE_TIMEOUTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTFORCE_TIMEOUTFOR_MASK) | (((uint32_t)val) << CDMA2_INTFORCE_TIMEOUTFOR_SHIFT))
+
+#define  CDMA2_INTFORCE_TERMCNTFOR_MASK 0x1
+#define  CDMA2_INTFORCE_TERMCNTFOR_SHIFT 0
+#define  CDMA2_INTFORCE_TERMCNTFOR_MASK_SHIFT(reg) (((reg) & CDMA2_INTFORCE_TERMCNTFOR_MASK) >> CDMA2_INTFORCE_TERMCNTFOR_SHIFT)
+#define  CDMA2_INTFORCE_TERMCNTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_INTFORCE_TERMCNTFOR_MASK) | (((uint32_t)val) << CDMA2_INTFORCE_TERMCNTFOR_SHIFT))
+
+//====================================================================
+//Register: DMA Timer Control (TimerControl)
+/** \brief The Timer Control register specifies the number of timebase cycles between word
+      transfers before generating a timeout interrupt. The timer is reset each time
+      a transfer occurs.*/
+//====================================================================
+
+#define  CDMA2_TIMERCONTROL_RESERVED1_MASK 0xffff0000
+#define  CDMA2_TIMERCONTROL_RESERVED1_SHIFT 16
+#define  CDMA2_TIMERCONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA2_TIMERCONTROL_RESERVED1_MASK) >> CDMA2_TIMERCONTROL_RESERVED1_SHIFT)
+#define  CDMA2_TIMERCONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_TIMERCONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA2_TIMERCONTROL_RESERVED1_SHIFT))
+
+#define  CDMA2_TIMERCONTROL_TIMERENABLE_MASK 0x8000
+#define  CDMA2_TIMERCONTROL_TIMERENABLE_SHIFT 15
+#define  CDMA2_TIMERCONTROL_TIMERENABLE_MASK_SHIFT(reg) (((reg) & CDMA2_TIMERCONTROL_TIMERENABLE_MASK) >> CDMA2_TIMERCONTROL_TIMERENABLE_SHIFT)
+#define  CDMA2_TIMERCONTROL_TIMERENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_TIMERCONTROL_TIMERENABLE_MASK) | (((uint32_t)val) << CDMA2_TIMERCONTROL_TIMERENABLE_SHIFT))
+
+#define  CDMA2_TIMERCONTROL_TIMEBASE_MASK 0x7000
+#define  CDMA2_TIMERCONTROL_TIMEBASE_SHIFT 12
+#define  CDMA2_TIMERCONTROL_TIMEBASE_MASK_SHIFT(reg) (((reg) & CDMA2_TIMERCONTROL_TIMEBASE_MASK) >> CDMA2_TIMERCONTROL_TIMEBASE_SHIFT)
+#define  CDMA2_TIMERCONTROL_TIMEBASE_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_TIMERCONTROL_TIMEBASE_MASK) | (((uint32_t)val) << CDMA2_TIMERCONTROL_TIMEBASE_SHIFT))
+
+#define  CDMA2_TIMERCONTROL_RESERVED2_MASK 0x800
+#define  CDMA2_TIMERCONTROL_RESERVED2_SHIFT 11
+#define  CDMA2_TIMERCONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA2_TIMERCONTROL_RESERVED2_MASK) >> CDMA2_TIMERCONTROL_RESERVED2_SHIFT)
+#define  CDMA2_TIMERCONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_TIMERCONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA2_TIMERCONTROL_RESERVED2_SHIFT))
+
+#define  CDMA2_TIMERCONTROL_COUNT_MASK 0x7ff
+#define  CDMA2_TIMERCONTROL_COUNT_SHIFT 0
+#define  CDMA2_TIMERCONTROL_COUNT_MASK_SHIFT(reg) (((reg) & CDMA2_TIMERCONTROL_COUNT_MASK) >> CDMA2_TIMERCONTROL_COUNT_SHIFT)
+#define  CDMA2_TIMERCONTROL_COUNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_TIMERCONTROL_COUNT_MASK) | (((uint32_t)val) << CDMA2_TIMERCONTROL_COUNT_SHIFT))
+
+//====================================================================
+//Register: Timeout Count Status Register (TimeOutStat)
+/** \brief This register contains the current timeout count.*/
+//====================================================================
+
+#define  CDMA2_TIMEOUTSTAT_RESERVED1_MASK 0xfffff800
+#define  CDMA2_TIMEOUTSTAT_RESERVED1_SHIFT 11
+#define  CDMA2_TIMEOUTSTAT_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA2_TIMEOUTSTAT_RESERVED1_MASK) >> CDMA2_TIMEOUTSTAT_RESERVED1_SHIFT)
+#define  CDMA2_TIMEOUTSTAT_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_TIMEOUTSTAT_RESERVED1_MASK) | (((uint32_t)val) << CDMA2_TIMEOUTSTAT_RESERVED1_SHIFT))
+
+#define  CDMA2_TIMEOUTSTAT_CURRTOCNT_MASK 0x7ff
+#define  CDMA2_TIMEOUTSTAT_CURRTOCNT_SHIFT 0
+#define  CDMA2_TIMEOUTSTAT_CURRTOCNT_MASK_SHIFT(reg) (((reg) & CDMA2_TIMEOUTSTAT_CURRTOCNT_MASK) >> CDMA2_TIMEOUTSTAT_CURRTOCNT_SHIFT)
+#define  CDMA2_TIMEOUTSTAT_CURRTOCNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_TIMEOUTSTAT_CURRTOCNT_MASK) | (((uint32_t)val) << CDMA2_TIMEOUTSTAT_CURRTOCNT_SHIFT))
+
+//====================================================================
+//Register: Linked List Index Register (LLIR)
+/** \brief This register contains a word-aligned address of the first word of the next descriptor. LLI means "linked list index" or pointer to the descriptor in memory. If the LLI register is 0, then the current descriptor (that is loaded in the registers) is the last in the chain, and the DMA channel will stop once the current DMA transfer is completed.*/
+//====================================================================
+
+#define  CDMA2_LLIR_LLINDEX_MASK 0xfffffffc
+#define  CDMA2_LLIR_LLINDEX_SHIFT 2
+#define  CDMA2_LLIR_LLINDEX_MASK_SHIFT(reg) (((reg) & CDMA2_LLIR_LLINDEX_MASK) >> CDMA2_LLIR_LLINDEX_SHIFT)
+#define  CDMA2_LLIR_LLINDEX_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_LLIR_LLINDEX_MASK) | (((uint32_t)val) << CDMA2_LLIR_LLINDEX_SHIFT))
+
+#define  CDMA2_LLIR_RESERVED1_MASK 0x3
+#define  CDMA2_LLIR_RESERVED1_SHIFT 0
+#define  CDMA2_LLIR_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA2_LLIR_RESERVED1_MASK) >> CDMA2_LLIR_RESERVED1_SHIFT)
+#define  CDMA2_LLIR_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_LLIR_RESERVED1_MASK) | (((uint32_t)val) << CDMA2_LLIR_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Odd Width Config Register (OWCFG)
+//====================================================================
+
+#define  CDMA2_OWCFG_RESERVED1_MASK 0xfffe0000
+#define  CDMA2_OWCFG_RESERVED1_SHIFT 17
+#define  CDMA2_OWCFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA2_OWCFG_RESERVED1_MASK) >> CDMA2_OWCFG_RESERVED1_SHIFT)
+#define  CDMA2_OWCFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_OWCFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA2_OWCFG_RESERVED1_SHIFT))
+
+#define  CDMA2_OWCFG_EXTRABITS_MASK 0x1f000
+#define  CDMA2_OWCFG_EXTRABITS_SHIFT 12
+#define  CDMA2_OWCFG_EXTRABITS_MASK_SHIFT(reg) (((reg) & CDMA2_OWCFG_EXTRABITS_MASK) >> CDMA2_OWCFG_EXTRABITS_SHIFT)
+#define  CDMA2_OWCFG_EXTRABITS_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_OWCFG_EXTRABITS_MASK) | (((uint32_t)val) << CDMA2_OWCFG_EXTRABITS_SHIFT))
+
+#define  CDMA2_OWCFG_RESERVED2_MASK 0xe00
+#define  CDMA2_OWCFG_RESERVED2_SHIFT 9
+#define  CDMA2_OWCFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA2_OWCFG_RESERVED2_MASK) >> CDMA2_OWCFG_RESERVED2_SHIFT)
+#define  CDMA2_OWCFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_OWCFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA2_OWCFG_RESERVED2_SHIFT))
+
+#define  CDMA2_OWCFG_ODDWIDTH_MASK 0x1f0
+#define  CDMA2_OWCFG_ODDWIDTH_SHIFT 4
+#define  CDMA2_OWCFG_ODDWIDTH_MASK_SHIFT(reg) (((reg) & CDMA2_OWCFG_ODDWIDTH_MASK) >> CDMA2_OWCFG_ODDWIDTH_SHIFT)
+#define  CDMA2_OWCFG_ODDWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_OWCFG_ODDWIDTH_MASK) | (((uint32_t)val) << CDMA2_OWCFG_ODDWIDTH_SHIFT))
+
+#define  CDMA2_OWCFG_RESERVED3_MASK 0xc
+#define  CDMA2_OWCFG_RESERVED3_SHIFT 2
+#define  CDMA2_OWCFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA2_OWCFG_RESERVED3_MASK) >> CDMA2_OWCFG_RESERVED3_SHIFT)
+#define  CDMA2_OWCFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_OWCFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA2_OWCFG_RESERVED3_SHIFT))
+
+#define  CDMA2_OWCFG_PACKNUNPACK_MASK 0x2
+#define  CDMA2_OWCFG_PACKNUNPACK_SHIFT 1
+#define  CDMA2_OWCFG_PACKNUNPACK_MASK_SHIFT(reg) (((reg) & CDMA2_OWCFG_PACKNUNPACK_MASK) >> CDMA2_OWCFG_PACKNUNPACK_SHIFT)
+#define  CDMA2_OWCFG_PACKNUNPACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_OWCFG_PACKNUNPACK_MASK) | (((uint32_t)val) << CDMA2_OWCFG_PACKNUNPACK_SHIFT))
+
+#define  CDMA2_OWCFG_OWEN_MASK 0x1
+#define  CDMA2_OWCFG_OWEN_SHIFT 0
+#define  CDMA2_OWCFG_OWEN_MASK_SHIFT(reg) (((reg) & CDMA2_OWCFG_OWEN_MASK) >> CDMA2_OWCFG_OWEN_SHIFT)
+#define  CDMA2_OWCFG_OWEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA2_OWCFG_OWEN_MASK) | (((uint32_t)val) << CDMA2_OWCFG_OWEN_SHIFT))
+
+//====================================================================
+//
+//Register File: CDMA (Instance 4 of 12) (CDMA3)
+/** \brief Registers for Central DMA module*/
+//
+//====================================================================
+
+//====================================================================
+//Register: DMA Configuration Register (CFG)
+/** \brief This register is used to configure the data flow for each channel.*/
+//====================================================================
+
+#define  CDMA3_CFG_WRDELAY_MASK 0xf0000000
+#define  CDMA3_CFG_WRDELAY_SHIFT 28
+#define  CDMA3_CFG_WRDELAY_MASK_SHIFT(reg) (((reg) & CDMA3_CFG_WRDELAY_MASK) >> CDMA3_CFG_WRDELAY_SHIFT)
+#define  CDMA3_CFG_WRDELAY_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CFG_WRDELAY_MASK) | (((uint32_t)val) << CDMA3_CFG_WRDELAY_SHIFT))
+
+#define  CDMA3_CFG_RESERVED1_MASK 0xc000000
+#define  CDMA3_CFG_RESERVED1_SHIFT 26
+#define  CDMA3_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA3_CFG_RESERVED1_MASK) >> CDMA3_CFG_RESERVED1_SHIFT)
+#define  CDMA3_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA3_CFG_RESERVED1_SHIFT))
+
+#define  CDMA3_CFG_DATAUNITSIZE_MASK 0x3000000
+#define  CDMA3_CFG_DATAUNITSIZE_SHIFT 24
+#define  CDMA3_CFG_DATAUNITSIZE_MASK_SHIFT(reg) (((reg) & CDMA3_CFG_DATAUNITSIZE_MASK) >> CDMA3_CFG_DATAUNITSIZE_SHIFT)
+#define  CDMA3_CFG_DATAUNITSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CFG_DATAUNITSIZE_MASK) | (((uint32_t)val) << CDMA3_CFG_DATAUNITSIZE_SHIFT))
+
+#define  CDMA3_CFG_HALT_MASK 0x800000
+#define  CDMA3_CFG_HALT_SHIFT 23
+#define  CDMA3_CFG_HALT_MASK_SHIFT(reg) (((reg) & CDMA3_CFG_HALT_MASK) >> CDMA3_CFG_HALT_SHIFT)
+#define  CDMA3_CFG_HALT_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CFG_HALT_MASK) | (((uint32_t)val) << CDMA3_CFG_HALT_SHIFT))
+
+#define  CDMA3_CFG_FLOWCTRL_MASK 0x700000
+#define  CDMA3_CFG_FLOWCTRL_SHIFT 20
+#define  CDMA3_CFG_FLOWCTRL_MASK_SHIFT(reg) (((reg) & CDMA3_CFG_FLOWCTRL_MASK) >> CDMA3_CFG_FLOWCTRL_SHIFT)
+#define  CDMA3_CFG_FLOWCTRL_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CFG_FLOWCTRL_MASK) | (((uint32_t)val) << CDMA3_CFG_FLOWCTRL_SHIFT))
+
+#define  CDMA3_CFG_RESERVED2_MASK 0xc0000
+#define  CDMA3_CFG_RESERVED2_SHIFT 18
+#define  CDMA3_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA3_CFG_RESERVED2_MASK) >> CDMA3_CFG_RESERVED2_SHIFT)
+#define  CDMA3_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA3_CFG_RESERVED2_SHIFT))
+
+#define  CDMA3_CFG_DESTPID_MASK 0x3f000
+#define  CDMA3_CFG_DESTPID_SHIFT 12
+#define  CDMA3_CFG_DESTPID_MASK_SHIFT(reg) (((reg) & CDMA3_CFG_DESTPID_MASK) >> CDMA3_CFG_DESTPID_SHIFT)
+#define  CDMA3_CFG_DESTPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CFG_DESTPID_MASK) | (((uint32_t)val) << CDMA3_CFG_DESTPID_SHIFT))
+
+#define  CDMA3_CFG_RESERVED3_MASK 0xc00
+#define  CDMA3_CFG_RESERVED3_SHIFT 10
+#define  CDMA3_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA3_CFG_RESERVED3_MASK) >> CDMA3_CFG_RESERVED3_SHIFT)
+#define  CDMA3_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA3_CFG_RESERVED3_SHIFT))
+
+#define  CDMA3_CFG_SRCPID_MASK 0x3f0
+#define  CDMA3_CFG_SRCPID_SHIFT 4
+#define  CDMA3_CFG_SRCPID_MASK_SHIFT(reg) (((reg) & CDMA3_CFG_SRCPID_MASK) >> CDMA3_CFG_SRCPID_SHIFT)
+#define  CDMA3_CFG_SRCPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CFG_SRCPID_MASK) | (((uint32_t)val) << CDMA3_CFG_SRCPID_SHIFT))
+
+#define  CDMA3_CFG_DESTENDIAN_MASK 0x8
+#define  CDMA3_CFG_DESTENDIAN_SHIFT 3
+#define  CDMA3_CFG_DESTENDIAN_MASK_SHIFT(reg) (((reg) & CDMA3_CFG_DESTENDIAN_MASK) >> CDMA3_CFG_DESTENDIAN_SHIFT)
+#define  CDMA3_CFG_DESTENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CFG_DESTENDIAN_MASK) | (((uint32_t)val) << CDMA3_CFG_DESTENDIAN_SHIFT))
+
+#define  CDMA3_CFG_SRCENDIAN_MASK 0x4
+#define  CDMA3_CFG_SRCENDIAN_SHIFT 2
+#define  CDMA3_CFG_SRCENDIAN_MASK_SHIFT(reg) (((reg) & CDMA3_CFG_SRCENDIAN_MASK) >> CDMA3_CFG_SRCENDIAN_SHIFT)
+#define  CDMA3_CFG_SRCENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CFG_SRCENDIAN_MASK) | (((uint32_t)val) << CDMA3_CFG_SRCENDIAN_SHIFT))
+
+#define  CDMA3_CFG_FILL_MASK 0x2
+#define  CDMA3_CFG_FILL_SHIFT 1
+#define  CDMA3_CFG_FILL_MASK_SHIFT(reg) (((reg) & CDMA3_CFG_FILL_MASK) >> CDMA3_CFG_FILL_SHIFT)
+#define  CDMA3_CFG_FILL_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CFG_FILL_MASK) | (((uint32_t)val) << CDMA3_CFG_FILL_SHIFT))
+
+#define  CDMA3_CFG_ENABLE_MASK 0x1
+#define  CDMA3_CFG_ENABLE_SHIFT 0
+#define  CDMA3_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & CDMA3_CFG_ENABLE_MASK) >> CDMA3_CFG_ENABLE_SHIFT)
+#define  CDMA3_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CFG_ENABLE_MASK) | (((uint32_t)val) << CDMA3_CFG_ENABLE_SHIFT))
+
+//====================================================================
+//Register: DMA Channel Control Register (Control)
+/** \brief This register programs each channel for control features such as
+      auto-increment, initiator select, burst size, transfer size, and
+      transfer widths.*/
+//====================================================================
+
+#define  CDMA3_CONTROL_TRANSSIZE_MASK 0xffff0000
+#define  CDMA3_CONTROL_TRANSSIZE_SHIFT 16
+#define  CDMA3_CONTROL_TRANSSIZE_MASK_SHIFT(reg) (((reg) & CDMA3_CONTROL_TRANSSIZE_MASK) >> CDMA3_CONTROL_TRANSSIZE_SHIFT)
+#define  CDMA3_CONTROL_TRANSSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CONTROL_TRANSSIZE_MASK) | (((uint32_t)val) << CDMA3_CONTROL_TRANSSIZE_SHIFT))
+
+#define  CDMA3_CONTROL_RESERVED1_MASK 0xc000
+#define  CDMA3_CONTROL_RESERVED1_SHIFT 14
+#define  CDMA3_CONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA3_CONTROL_RESERVED1_MASK) >> CDMA3_CONTROL_RESERVED1_SHIFT)
+#define  CDMA3_CONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA3_CONTROL_RESERVED1_SHIFT))
+
+#define  CDMA3_CONTROL_DESTADDRINC_MASK 0x2000
+#define  CDMA3_CONTROL_DESTADDRINC_SHIFT 13
+#define  CDMA3_CONTROL_DESTADDRINC_MASK_SHIFT(reg) (((reg) & CDMA3_CONTROL_DESTADDRINC_MASK) >> CDMA3_CONTROL_DESTADDRINC_SHIFT)
+#define  CDMA3_CONTROL_DESTADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CONTROL_DESTADDRINC_MASK) | (((uint32_t)val) << CDMA3_CONTROL_DESTADDRINC_SHIFT))
+
+#define  CDMA3_CONTROL_SRCADDRINC_MASK 0x1000
+#define  CDMA3_CONTROL_SRCADDRINC_SHIFT 12
+#define  CDMA3_CONTROL_SRCADDRINC_MASK_SHIFT(reg) (((reg) & CDMA3_CONTROL_SRCADDRINC_MASK) >> CDMA3_CONTROL_SRCADDRINC_SHIFT)
+#define  CDMA3_CONTROL_SRCADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CONTROL_SRCADDRINC_MASK) | (((uint32_t)val) << CDMA3_CONTROL_SRCADDRINC_SHIFT))
+
+#define  CDMA3_CONTROL_DESTXFERWIDTH_MASK 0xc00
+#define  CDMA3_CONTROL_DESTXFERWIDTH_SHIFT 10
+#define  CDMA3_CONTROL_DESTXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA3_CONTROL_DESTXFERWIDTH_MASK) >> CDMA3_CONTROL_DESTXFERWIDTH_SHIFT)
+#define  CDMA3_CONTROL_DESTXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CONTROL_DESTXFERWIDTH_MASK) | (((uint32_t)val) << CDMA3_CONTROL_DESTXFERWIDTH_SHIFT))
+
+#define  CDMA3_CONTROL_SRCXFERWIDTH_MASK 0x300
+#define  CDMA3_CONTROL_SRCXFERWIDTH_SHIFT 8
+#define  CDMA3_CONTROL_SRCXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA3_CONTROL_SRCXFERWIDTH_MASK) >> CDMA3_CONTROL_SRCXFERWIDTH_SHIFT)
+#define  CDMA3_CONTROL_SRCXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CONTROL_SRCXFERWIDTH_MASK) | (((uint32_t)val) << CDMA3_CONTROL_SRCXFERWIDTH_SHIFT))
+
+#define  CDMA3_CONTROL_RESERVED2_MASK 0xc0
+#define  CDMA3_CONTROL_RESERVED2_SHIFT 6
+#define  CDMA3_CONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA3_CONTROL_RESERVED2_MASK) >> CDMA3_CONTROL_RESERVED2_SHIFT)
+#define  CDMA3_CONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA3_CONTROL_RESERVED2_SHIFT))
+
+#define  CDMA3_CONTROL_DESTBURSTSIZE_MASK 0x30
+#define  CDMA3_CONTROL_DESTBURSTSIZE_SHIFT 4
+#define  CDMA3_CONTROL_DESTBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA3_CONTROL_DESTBURSTSIZE_MASK) >> CDMA3_CONTROL_DESTBURSTSIZE_SHIFT)
+#define  CDMA3_CONTROL_DESTBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CONTROL_DESTBURSTSIZE_MASK) | (((uint32_t)val) << CDMA3_CONTROL_DESTBURSTSIZE_SHIFT))
+
+#define  CDMA3_CONTROL_RESERVED3_MASK 0xc
+#define  CDMA3_CONTROL_RESERVED3_SHIFT 2
+#define  CDMA3_CONTROL_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA3_CONTROL_RESERVED3_MASK) >> CDMA3_CONTROL_RESERVED3_SHIFT)
+#define  CDMA3_CONTROL_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CONTROL_RESERVED3_MASK) | (((uint32_t)val) << CDMA3_CONTROL_RESERVED3_SHIFT))
+
+#define  CDMA3_CONTROL_SRCBURSTSIZE_MASK 0x3
+#define  CDMA3_CONTROL_SRCBURSTSIZE_SHIFT 0
+#define  CDMA3_CONTROL_SRCBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA3_CONTROL_SRCBURSTSIZE_MASK) >> CDMA3_CONTROL_SRCBURSTSIZE_SHIFT)
+#define  CDMA3_CONTROL_SRCBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_CONTROL_SRCBURSTSIZE_MASK) | (((uint32_t)val) << CDMA3_CONTROL_SRCBURSTSIZE_SHIFT))
+
+//====================================================================
+//Register: DMA Status Register (Status)
+//====================================================================
+
+#define  CDMA3_STATUS_RESERVED1_MASK 0xfff00000
+#define  CDMA3_STATUS_RESERVED1_SHIFT 20
+#define  CDMA3_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA3_STATUS_RESERVED1_MASK) >> CDMA3_STATUS_RESERVED1_SHIFT)
+#define  CDMA3_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_STATUS_RESERVED1_MASK) | (((uint32_t)val) << CDMA3_STATUS_RESERVED1_SHIFT))
+
+#define  CDMA3_STATUS_ODDWIDTHHW_MASK 0x80000
+#define  CDMA3_STATUS_ODDWIDTHHW_SHIFT 19
+#define  CDMA3_STATUS_ODDWIDTHHW_MASK_SHIFT(reg) (((reg) & CDMA3_STATUS_ODDWIDTHHW_MASK) >> CDMA3_STATUS_ODDWIDTHHW_SHIFT)
+#define  CDMA3_STATUS_ODDWIDTHHW_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_STATUS_ODDWIDTHHW_MASK) | (((uint32_t)val) << CDMA3_STATUS_ODDWIDTHHW_SHIFT))
+
+#define  CDMA3_STATUS_DESCFETCH_MASK 0x40000
+#define  CDMA3_STATUS_DESCFETCH_SHIFT 18
+#define  CDMA3_STATUS_DESCFETCH_MASK_SHIFT(reg) (((reg) & CDMA3_STATUS_DESCFETCH_MASK) >> CDMA3_STATUS_DESCFETCH_SHIFT)
+#define  CDMA3_STATUS_DESCFETCH_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_STATUS_DESCFETCH_MASK) | (((uint32_t)val) << CDMA3_STATUS_DESCFETCH_SHIFT))
+
+#define  CDMA3_STATUS_DMABUSY_MASK 0x20000
+#define  CDMA3_STATUS_DMABUSY_SHIFT 17
+#define  CDMA3_STATUS_DMABUSY_MASK_SHIFT(reg) (((reg) & CDMA3_STATUS_DMABUSY_MASK) >> CDMA3_STATUS_DMABUSY_SHIFT)
+#define  CDMA3_STATUS_DMABUSY_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_STATUS_DMABUSY_MASK) | (((uint32_t)val) << CDMA3_STATUS_DMABUSY_SHIFT))
+
+#define  CDMA3_STATUS_FIFOEMPTY_MASK 0x10000
+#define  CDMA3_STATUS_FIFOEMPTY_SHIFT 16
+#define  CDMA3_STATUS_FIFOEMPTY_MASK_SHIFT(reg) (((reg) & CDMA3_STATUS_FIFOEMPTY_MASK) >> CDMA3_STATUS_FIFOEMPTY_SHIFT)
+#define  CDMA3_STATUS_FIFOEMPTY_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_STATUS_FIFOEMPTY_MASK) | (((uint32_t)val) << CDMA3_STATUS_FIFOEMPTY_SHIFT))
+
+#define  CDMA3_STATUS_BYTESREMAIN_MASK 0xffff
+#define  CDMA3_STATUS_BYTESREMAIN_SHIFT 0
+#define  CDMA3_STATUS_BYTESREMAIN_MASK_SHIFT(reg) (((reg) & CDMA3_STATUS_BYTESREMAIN_MASK) >> CDMA3_STATUS_BYTESREMAIN_SHIFT)
+#define  CDMA3_STATUS_BYTESREMAIN_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_STATUS_BYTESREMAIN_MASK) | (((uint32_t)val) << CDMA3_STATUS_BYTESREMAIN_SHIFT))
+
+//====================================================================
+//Register: DMA Source Address Register (SrcAddr)
+/** \brief The Source Address register is programmed with the address of the location
+      for the DMA to transfer from. If the source is memory, the address can be
+      byte aligned.
+<br>*/
+//====================================================================
+
+#define  CDMA3_SRCADDR_SRCADDR_MASK 0xffffffff
+#define  CDMA3_SRCADDR_SRCADDR_SHIFT 0
+#define  CDMA3_SRCADDR_SRCADDR_MASK_SHIFT(reg) (((reg) & CDMA3_SRCADDR_SRCADDR_MASK) >> CDMA3_SRCADDR_SRCADDR_SHIFT)
+#define  CDMA3_SRCADDR_SRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_SRCADDR_SRCADDR_MASK) | (((uint32_t)val) << CDMA3_SRCADDR_SRCADDR_SHIFT))
+
+//====================================================================
+//Register: Current Source Address Register (SrcAddrStat)
+/** \brief This register contains the current address for the source device.*/
+//====================================================================
+
+#define  CDMA3_SRCADDRSTAT_CURRSRCADDR_MASK 0xffffffff
+#define  CDMA3_SRCADDRSTAT_CURRSRCADDR_SHIFT 0
+#define  CDMA3_SRCADDRSTAT_CURRSRCADDR_MASK_SHIFT(reg) (((reg) & CDMA3_SRCADDRSTAT_CURRSRCADDR_MASK) >> CDMA3_SRCADDRSTAT_CURRSRCADDR_SHIFT)
+#define  CDMA3_SRCADDRSTAT_CURRSRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_SRCADDRSTAT_CURRSRCADDR_MASK) | (((uint32_t)val) << CDMA3_SRCADDRSTAT_CURRSRCADDR_SHIFT))
+
+//====================================================================
+//Register: Destination Address Register (DestAddr)
+/** \brief The Destination Address register is programmed with the address of the location
+      for the DMA to transfer to. If the destination is memory, the address can be
+      byte aligned.*/
+//====================================================================
+
+#define  CDMA3_DESTADDR_DESTADDR_MASK 0xffffffff
+#define  CDMA3_DESTADDR_DESTADDR_SHIFT 0
+#define  CDMA3_DESTADDR_DESTADDR_MASK_SHIFT(reg) (((reg) & CDMA3_DESTADDR_DESTADDR_MASK) >> CDMA3_DESTADDR_DESTADDR_SHIFT)
+#define  CDMA3_DESTADDR_DESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_DESTADDR_DESTADDR_MASK) | (((uint32_t)val) << CDMA3_DESTADDR_DESTADDR_SHIFT))
+
+//====================================================================
+//Register: Current Destination Address Register (DestAddrStat)
+/** \brief This register contains the current address for the destination device.*/
+//====================================================================
+
+#define  CDMA3_DESTADDRSTAT_CURRDESTADDR_MASK 0xffffffff
+#define  CDMA3_DESTADDRSTAT_CURRDESTADDR_SHIFT 0
+#define  CDMA3_DESTADDRSTAT_CURRDESTADDR_MASK_SHIFT(reg) (((reg) & CDMA3_DESTADDRSTAT_CURRDESTADDR_MASK) >> CDMA3_DESTADDRSTAT_CURRDESTADDR_SHIFT)
+#define  CDMA3_DESTADDRSTAT_CURRDESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_DESTADDRSTAT_CURRDESTADDR_MASK) | (((uint32_t)val) << CDMA3_DESTADDRSTAT_CURRDESTADDR_SHIFT))
+
+//====================================================================
+//Register: Fill Value Register (FillValue)
+/** \brief This register contains the data value to write to the destination
+      address.*/
+//====================================================================
+
+#define  CDMA3_FILLVALUE_FILLVAL_MASK 0xffffffff
+#define  CDMA3_FILLVALUE_FILLVAL_SHIFT 0
+#define  CDMA3_FILLVALUE_FILLVAL_MASK_SHIFT(reg) (((reg) & CDMA3_FILLVALUE_FILLVAL_MASK) >> CDMA3_FILLVALUE_FILLVAL_SHIFT)
+#define  CDMA3_FILLVALUE_FILLVAL_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_FILLVALUE_FILLVAL_MASK) | (((uint32_t)val) << CDMA3_FILLVALUE_FILLVAL_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (intEn)
+//====================================================================
+
+#define  CDMA3_INTEN_RESERVED1_MASK 0xfffffff0
+#define  CDMA3_INTEN_RESERVED1_SHIFT 4
+#define  CDMA3_INTEN_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA3_INTEN_RESERVED1_MASK) >> CDMA3_INTEN_RESERVED1_SHIFT)
+#define  CDMA3_INTEN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTEN_RESERVED1_MASK) | (((uint32_t)val) << CDMA3_INTEN_RESERVED1_SHIFT))
+
+#define  CDMA3_INTEN_CLEARCOMPLETEEN_MASK 0x8
+#define  CDMA3_INTEN_CLEARCOMPLETEEN_SHIFT 3
+#define  CDMA3_INTEN_CLEARCOMPLETEEN_MASK_SHIFT(reg) (((reg) & CDMA3_INTEN_CLEARCOMPLETEEN_MASK) >> CDMA3_INTEN_CLEARCOMPLETEEN_SHIFT)
+#define  CDMA3_INTEN_CLEARCOMPLETEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTEN_CLEARCOMPLETEEN_MASK) | (((uint32_t)val) << CDMA3_INTEN_CLEARCOMPLETEEN_SHIFT))
+
+#define  CDMA3_INTEN_CHAINDONEEN_MASK 0x4
+#define  CDMA3_INTEN_CHAINDONEEN_SHIFT 2
+#define  CDMA3_INTEN_CHAINDONEEN_MASK_SHIFT(reg) (((reg) & CDMA3_INTEN_CHAINDONEEN_MASK) >> CDMA3_INTEN_CHAINDONEEN_SHIFT)
+#define  CDMA3_INTEN_CHAINDONEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTEN_CHAINDONEEN_MASK) | (((uint32_t)val) << CDMA3_INTEN_CHAINDONEEN_SHIFT))
+
+#define  CDMA3_INTEN_TIMEOUTEN_MASK 0x2
+#define  CDMA3_INTEN_TIMEOUTEN_SHIFT 1
+#define  CDMA3_INTEN_TIMEOUTEN_MASK_SHIFT(reg) (((reg) & CDMA3_INTEN_TIMEOUTEN_MASK) >> CDMA3_INTEN_TIMEOUTEN_SHIFT)
+#define  CDMA3_INTEN_TIMEOUTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTEN_TIMEOUTEN_MASK) | (((uint32_t)val) << CDMA3_INTEN_TIMEOUTEN_SHIFT))
+
+#define  CDMA3_INTEN_TERMCNTEN_MASK 0x1
+#define  CDMA3_INTEN_TERMCNTEN_SHIFT 0
+#define  CDMA3_INTEN_TERMCNTEN_MASK_SHIFT(reg) (((reg) & CDMA3_INTEN_TERMCNTEN_MASK) >> CDMA3_INTEN_TERMCNTEN_SHIFT)
+#define  CDMA3_INTEN_TERMCNTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTEN_TERMCNTEN_MASK) | (((uint32_t)val) << CDMA3_INTEN_TERMCNTEN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (intPend)
+//====================================================================
+
+#define  CDMA3_INTPEND_RESERVED1_MASK 0xfffffff0
+#define  CDMA3_INTPEND_RESERVED1_SHIFT 4
+#define  CDMA3_INTPEND_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA3_INTPEND_RESERVED1_MASK) >> CDMA3_INTPEND_RESERVED1_SHIFT)
+#define  CDMA3_INTPEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTPEND_RESERVED1_MASK) | (((uint32_t)val) << CDMA3_INTPEND_RESERVED1_SHIFT))
+
+#define  CDMA3_INTPEND_CLEARCOMPLETEPEND_MASK 0x8
+#define  CDMA3_INTPEND_CLEARCOMPLETEPEND_SHIFT 3
+#define  CDMA3_INTPEND_CLEARCOMPLETEPEND_MASK_SHIFT(reg) (((reg) & CDMA3_INTPEND_CLEARCOMPLETEPEND_MASK) >> CDMA3_INTPEND_CLEARCOMPLETEPEND_SHIFT)
+#define  CDMA3_INTPEND_CLEARCOMPLETEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTPEND_CLEARCOMPLETEPEND_MASK) | (((uint32_t)val) << CDMA3_INTPEND_CLEARCOMPLETEPEND_SHIFT))
+
+#define  CDMA3_INTPEND_CHAINDONEPEND_MASK 0x4
+#define  CDMA3_INTPEND_CHAINDONEPEND_SHIFT 2
+#define  CDMA3_INTPEND_CHAINDONEPEND_MASK_SHIFT(reg) (((reg) & CDMA3_INTPEND_CHAINDONEPEND_MASK) >> CDMA3_INTPEND_CHAINDONEPEND_SHIFT)
+#define  CDMA3_INTPEND_CHAINDONEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTPEND_CHAINDONEPEND_MASK) | (((uint32_t)val) << CDMA3_INTPEND_CHAINDONEPEND_SHIFT))
+
+#define  CDMA3_INTPEND_TIMEOUTPEND_MASK 0x2
+#define  CDMA3_INTPEND_TIMEOUTPEND_SHIFT 1
+#define  CDMA3_INTPEND_TIMEOUTPEND_MASK_SHIFT(reg) (((reg) & CDMA3_INTPEND_TIMEOUTPEND_MASK) >> CDMA3_INTPEND_TIMEOUTPEND_SHIFT)
+#define  CDMA3_INTPEND_TIMEOUTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTPEND_TIMEOUTPEND_MASK) | (((uint32_t)val) << CDMA3_INTPEND_TIMEOUTPEND_SHIFT))
+
+#define  CDMA3_INTPEND_TERMCNTPEND_MASK 0x1
+#define  CDMA3_INTPEND_TERMCNTPEND_SHIFT 0
+#define  CDMA3_INTPEND_TERMCNTPEND_MASK_SHIFT(reg) (((reg) & CDMA3_INTPEND_TERMCNTPEND_MASK) >> CDMA3_INTPEND_TERMCNTPEND_SHIFT)
+#define  CDMA3_INTPEND_TERMCNTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTPEND_TERMCNTPEND_MASK) | (((uint32_t)val) << CDMA3_INTPEND_TERMCNTPEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (intAck)
+//====================================================================
+
+#define  CDMA3_INTACK_RESERVED1_MASK 0xfffffff0
+#define  CDMA3_INTACK_RESERVED1_SHIFT 4
+#define  CDMA3_INTACK_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA3_INTACK_RESERVED1_MASK) >> CDMA3_INTACK_RESERVED1_SHIFT)
+#define  CDMA3_INTACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTACK_RESERVED1_MASK) | (((uint32_t)val) << CDMA3_INTACK_RESERVED1_SHIFT))
+
+#define  CDMA3_INTACK_CLEARCOMPLETEACK_MASK 0x8
+#define  CDMA3_INTACK_CLEARCOMPLETEACK_SHIFT 3
+#define  CDMA3_INTACK_CLEARCOMPLETEACK_MASK_SHIFT(reg) (((reg) & CDMA3_INTACK_CLEARCOMPLETEACK_MASK) >> CDMA3_INTACK_CLEARCOMPLETEACK_SHIFT)
+#define  CDMA3_INTACK_CLEARCOMPLETEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTACK_CLEARCOMPLETEACK_MASK) | (((uint32_t)val) << CDMA3_INTACK_CLEARCOMPLETEACK_SHIFT))
+
+#define  CDMA3_INTACK_CHAINDONEACK_MASK 0x4
+#define  CDMA3_INTACK_CHAINDONEACK_SHIFT 2
+#define  CDMA3_INTACK_CHAINDONEACK_MASK_SHIFT(reg) (((reg) & CDMA3_INTACK_CHAINDONEACK_MASK) >> CDMA3_INTACK_CHAINDONEACK_SHIFT)
+#define  CDMA3_INTACK_CHAINDONEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTACK_CHAINDONEACK_MASK) | (((uint32_t)val) << CDMA3_INTACK_CHAINDONEACK_SHIFT))
+
+#define  CDMA3_INTACK_TIMEOUTACK_MASK 0x2
+#define  CDMA3_INTACK_TIMEOUTACK_SHIFT 1
+#define  CDMA3_INTACK_TIMEOUTACK_MASK_SHIFT(reg) (((reg) & CDMA3_INTACK_TIMEOUTACK_MASK) >> CDMA3_INTACK_TIMEOUTACK_SHIFT)
+#define  CDMA3_INTACK_TIMEOUTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTACK_TIMEOUTACK_MASK) | (((uint32_t)val) << CDMA3_INTACK_TIMEOUTACK_SHIFT))
+
+#define  CDMA3_INTACK_TERMCNTACK_MASK 0x1
+#define  CDMA3_INTACK_TERMCNTACK_SHIFT 0
+#define  CDMA3_INTACK_TERMCNTACK_MASK_SHIFT(reg) (((reg) & CDMA3_INTACK_TERMCNTACK_MASK) >> CDMA3_INTACK_TERMCNTACK_SHIFT)
+#define  CDMA3_INTACK_TERMCNTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTACK_TERMCNTACK_MASK) | (((uint32_t)val) << CDMA3_INTACK_TERMCNTACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (intForce)
+//====================================================================
+
+#define  CDMA3_INTFORCE_RESERVED1_MASK 0xfffffff0
+#define  CDMA3_INTFORCE_RESERVED1_SHIFT 4
+#define  CDMA3_INTFORCE_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA3_INTFORCE_RESERVED1_MASK) >> CDMA3_INTFORCE_RESERVED1_SHIFT)
+#define  CDMA3_INTFORCE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTFORCE_RESERVED1_MASK) | (((uint32_t)val) << CDMA3_INTFORCE_RESERVED1_SHIFT))
+
+#define  CDMA3_INTFORCE_CLEARCOMPLETEFOR_MASK 0x8
+#define  CDMA3_INTFORCE_CLEARCOMPLETEFOR_SHIFT 3
+#define  CDMA3_INTFORCE_CLEARCOMPLETEFOR_MASK_SHIFT(reg) (((reg) & CDMA3_INTFORCE_CLEARCOMPLETEFOR_MASK) >> CDMA3_INTFORCE_CLEARCOMPLETEFOR_SHIFT)
+#define  CDMA3_INTFORCE_CLEARCOMPLETEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTFORCE_CLEARCOMPLETEFOR_MASK) | (((uint32_t)val) << CDMA3_INTFORCE_CLEARCOMPLETEFOR_SHIFT))
+
+#define  CDMA3_INTFORCE_CHAINDONEFOR_MASK 0x4
+#define  CDMA3_INTFORCE_CHAINDONEFOR_SHIFT 2
+#define  CDMA3_INTFORCE_CHAINDONEFOR_MASK_SHIFT(reg) (((reg) & CDMA3_INTFORCE_CHAINDONEFOR_MASK) >> CDMA3_INTFORCE_CHAINDONEFOR_SHIFT)
+#define  CDMA3_INTFORCE_CHAINDONEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTFORCE_CHAINDONEFOR_MASK) | (((uint32_t)val) << CDMA3_INTFORCE_CHAINDONEFOR_SHIFT))
+
+#define  CDMA3_INTFORCE_TIMEOUTFOR_MASK 0x2
+#define  CDMA3_INTFORCE_TIMEOUTFOR_SHIFT 1
+#define  CDMA3_INTFORCE_TIMEOUTFOR_MASK_SHIFT(reg) (((reg) & CDMA3_INTFORCE_TIMEOUTFOR_MASK) >> CDMA3_INTFORCE_TIMEOUTFOR_SHIFT)
+#define  CDMA3_INTFORCE_TIMEOUTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTFORCE_TIMEOUTFOR_MASK) | (((uint32_t)val) << CDMA3_INTFORCE_TIMEOUTFOR_SHIFT))
+
+#define  CDMA3_INTFORCE_TERMCNTFOR_MASK 0x1
+#define  CDMA3_INTFORCE_TERMCNTFOR_SHIFT 0
+#define  CDMA3_INTFORCE_TERMCNTFOR_MASK_SHIFT(reg) (((reg) & CDMA3_INTFORCE_TERMCNTFOR_MASK) >> CDMA3_INTFORCE_TERMCNTFOR_SHIFT)
+#define  CDMA3_INTFORCE_TERMCNTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_INTFORCE_TERMCNTFOR_MASK) | (((uint32_t)val) << CDMA3_INTFORCE_TERMCNTFOR_SHIFT))
+
+//====================================================================
+//Register: DMA Timer Control (TimerControl)
+/** \brief The Timer Control register specifies the number of timebase cycles between word
+      transfers before generating a timeout interrupt. The timer is reset each time
+      a transfer occurs.*/
+//====================================================================
+
+#define  CDMA3_TIMERCONTROL_RESERVED1_MASK 0xffff0000
+#define  CDMA3_TIMERCONTROL_RESERVED1_SHIFT 16
+#define  CDMA3_TIMERCONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA3_TIMERCONTROL_RESERVED1_MASK) >> CDMA3_TIMERCONTROL_RESERVED1_SHIFT)
+#define  CDMA3_TIMERCONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_TIMERCONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA3_TIMERCONTROL_RESERVED1_SHIFT))
+
+#define  CDMA3_TIMERCONTROL_TIMERENABLE_MASK 0x8000
+#define  CDMA3_TIMERCONTROL_TIMERENABLE_SHIFT 15
+#define  CDMA3_TIMERCONTROL_TIMERENABLE_MASK_SHIFT(reg) (((reg) & CDMA3_TIMERCONTROL_TIMERENABLE_MASK) >> CDMA3_TIMERCONTROL_TIMERENABLE_SHIFT)
+#define  CDMA3_TIMERCONTROL_TIMERENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_TIMERCONTROL_TIMERENABLE_MASK) | (((uint32_t)val) << CDMA3_TIMERCONTROL_TIMERENABLE_SHIFT))
+
+#define  CDMA3_TIMERCONTROL_TIMEBASE_MASK 0x7000
+#define  CDMA3_TIMERCONTROL_TIMEBASE_SHIFT 12
+#define  CDMA3_TIMERCONTROL_TIMEBASE_MASK_SHIFT(reg) (((reg) & CDMA3_TIMERCONTROL_TIMEBASE_MASK) >> CDMA3_TIMERCONTROL_TIMEBASE_SHIFT)
+#define  CDMA3_TIMERCONTROL_TIMEBASE_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_TIMERCONTROL_TIMEBASE_MASK) | (((uint32_t)val) << CDMA3_TIMERCONTROL_TIMEBASE_SHIFT))
+
+#define  CDMA3_TIMERCONTROL_RESERVED2_MASK 0x800
+#define  CDMA3_TIMERCONTROL_RESERVED2_SHIFT 11
+#define  CDMA3_TIMERCONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA3_TIMERCONTROL_RESERVED2_MASK) >> CDMA3_TIMERCONTROL_RESERVED2_SHIFT)
+#define  CDMA3_TIMERCONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_TIMERCONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA3_TIMERCONTROL_RESERVED2_SHIFT))
+
+#define  CDMA3_TIMERCONTROL_COUNT_MASK 0x7ff
+#define  CDMA3_TIMERCONTROL_COUNT_SHIFT 0
+#define  CDMA3_TIMERCONTROL_COUNT_MASK_SHIFT(reg) (((reg) & CDMA3_TIMERCONTROL_COUNT_MASK) >> CDMA3_TIMERCONTROL_COUNT_SHIFT)
+#define  CDMA3_TIMERCONTROL_COUNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_TIMERCONTROL_COUNT_MASK) | (((uint32_t)val) << CDMA3_TIMERCONTROL_COUNT_SHIFT))
+
+//====================================================================
+//Register: Timeout Count Status Register (TimeOutStat)
+/** \brief This register contains the current timeout count.*/
+//====================================================================
+
+#define  CDMA3_TIMEOUTSTAT_RESERVED1_MASK 0xfffff800
+#define  CDMA3_TIMEOUTSTAT_RESERVED1_SHIFT 11
+#define  CDMA3_TIMEOUTSTAT_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA3_TIMEOUTSTAT_RESERVED1_MASK) >> CDMA3_TIMEOUTSTAT_RESERVED1_SHIFT)
+#define  CDMA3_TIMEOUTSTAT_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_TIMEOUTSTAT_RESERVED1_MASK) | (((uint32_t)val) << CDMA3_TIMEOUTSTAT_RESERVED1_SHIFT))
+
+#define  CDMA3_TIMEOUTSTAT_CURRTOCNT_MASK 0x7ff
+#define  CDMA3_TIMEOUTSTAT_CURRTOCNT_SHIFT 0
+#define  CDMA3_TIMEOUTSTAT_CURRTOCNT_MASK_SHIFT(reg) (((reg) & CDMA3_TIMEOUTSTAT_CURRTOCNT_MASK) >> CDMA3_TIMEOUTSTAT_CURRTOCNT_SHIFT)
+#define  CDMA3_TIMEOUTSTAT_CURRTOCNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_TIMEOUTSTAT_CURRTOCNT_MASK) | (((uint32_t)val) << CDMA3_TIMEOUTSTAT_CURRTOCNT_SHIFT))
+
+//====================================================================
+//Register: Linked List Index Register (LLIR)
+/** \brief This register contains a word-aligned address of the first word of the next descriptor. LLI means "linked list index" or pointer to the descriptor in memory. If the LLI register is 0, then the current descriptor (that is loaded in the registers) is the last in the chain, and the DMA channel will stop once the current DMA transfer is completed.*/
+//====================================================================
+
+#define  CDMA3_LLIR_LLINDEX_MASK 0xfffffffc
+#define  CDMA3_LLIR_LLINDEX_SHIFT 2
+#define  CDMA3_LLIR_LLINDEX_MASK_SHIFT(reg) (((reg) & CDMA3_LLIR_LLINDEX_MASK) >> CDMA3_LLIR_LLINDEX_SHIFT)
+#define  CDMA3_LLIR_LLINDEX_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_LLIR_LLINDEX_MASK) | (((uint32_t)val) << CDMA3_LLIR_LLINDEX_SHIFT))
+
+#define  CDMA3_LLIR_RESERVED1_MASK 0x3
+#define  CDMA3_LLIR_RESERVED1_SHIFT 0
+#define  CDMA3_LLIR_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA3_LLIR_RESERVED1_MASK) >> CDMA3_LLIR_RESERVED1_SHIFT)
+#define  CDMA3_LLIR_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_LLIR_RESERVED1_MASK) | (((uint32_t)val) << CDMA3_LLIR_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Odd Width Config Register (OWCFG)
+//====================================================================
+
+#define  CDMA3_OWCFG_RESERVED1_MASK 0xfffe0000
+#define  CDMA3_OWCFG_RESERVED1_SHIFT 17
+#define  CDMA3_OWCFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA3_OWCFG_RESERVED1_MASK) >> CDMA3_OWCFG_RESERVED1_SHIFT)
+#define  CDMA3_OWCFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_OWCFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA3_OWCFG_RESERVED1_SHIFT))
+
+#define  CDMA3_OWCFG_EXTRABITS_MASK 0x1f000
+#define  CDMA3_OWCFG_EXTRABITS_SHIFT 12
+#define  CDMA3_OWCFG_EXTRABITS_MASK_SHIFT(reg) (((reg) & CDMA3_OWCFG_EXTRABITS_MASK) >> CDMA3_OWCFG_EXTRABITS_SHIFT)
+#define  CDMA3_OWCFG_EXTRABITS_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_OWCFG_EXTRABITS_MASK) | (((uint32_t)val) << CDMA3_OWCFG_EXTRABITS_SHIFT))
+
+#define  CDMA3_OWCFG_RESERVED2_MASK 0xe00
+#define  CDMA3_OWCFG_RESERVED2_SHIFT 9
+#define  CDMA3_OWCFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA3_OWCFG_RESERVED2_MASK) >> CDMA3_OWCFG_RESERVED2_SHIFT)
+#define  CDMA3_OWCFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_OWCFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA3_OWCFG_RESERVED2_SHIFT))
+
+#define  CDMA3_OWCFG_ODDWIDTH_MASK 0x1f0
+#define  CDMA3_OWCFG_ODDWIDTH_SHIFT 4
+#define  CDMA3_OWCFG_ODDWIDTH_MASK_SHIFT(reg) (((reg) & CDMA3_OWCFG_ODDWIDTH_MASK) >> CDMA3_OWCFG_ODDWIDTH_SHIFT)
+#define  CDMA3_OWCFG_ODDWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_OWCFG_ODDWIDTH_MASK) | (((uint32_t)val) << CDMA3_OWCFG_ODDWIDTH_SHIFT))
+
+#define  CDMA3_OWCFG_RESERVED3_MASK 0xc
+#define  CDMA3_OWCFG_RESERVED3_SHIFT 2
+#define  CDMA3_OWCFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA3_OWCFG_RESERVED3_MASK) >> CDMA3_OWCFG_RESERVED3_SHIFT)
+#define  CDMA3_OWCFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_OWCFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA3_OWCFG_RESERVED3_SHIFT))
+
+#define  CDMA3_OWCFG_PACKNUNPACK_MASK 0x2
+#define  CDMA3_OWCFG_PACKNUNPACK_SHIFT 1
+#define  CDMA3_OWCFG_PACKNUNPACK_MASK_SHIFT(reg) (((reg) & CDMA3_OWCFG_PACKNUNPACK_MASK) >> CDMA3_OWCFG_PACKNUNPACK_SHIFT)
+#define  CDMA3_OWCFG_PACKNUNPACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_OWCFG_PACKNUNPACK_MASK) | (((uint32_t)val) << CDMA3_OWCFG_PACKNUNPACK_SHIFT))
+
+#define  CDMA3_OWCFG_OWEN_MASK 0x1
+#define  CDMA3_OWCFG_OWEN_SHIFT 0
+#define  CDMA3_OWCFG_OWEN_MASK_SHIFT(reg) (((reg) & CDMA3_OWCFG_OWEN_MASK) >> CDMA3_OWCFG_OWEN_SHIFT)
+#define  CDMA3_OWCFG_OWEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA3_OWCFG_OWEN_MASK) | (((uint32_t)val) << CDMA3_OWCFG_OWEN_SHIFT))
+
+//====================================================================
+//
+//Register File: CDMA (Instance 5 of 12) (CDMA4)
+/** \brief Registers for Central DMA module*/
+//
+//====================================================================
+
+//====================================================================
+//Register: DMA Configuration Register (CFG)
+/** \brief This register is used to configure the data flow for each channel.*/
+//====================================================================
+
+#define  CDMA4_CFG_WRDELAY_MASK 0xf0000000
+#define  CDMA4_CFG_WRDELAY_SHIFT 28
+#define  CDMA4_CFG_WRDELAY_MASK_SHIFT(reg) (((reg) & CDMA4_CFG_WRDELAY_MASK) >> CDMA4_CFG_WRDELAY_SHIFT)
+#define  CDMA4_CFG_WRDELAY_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CFG_WRDELAY_MASK) | (((uint32_t)val) << CDMA4_CFG_WRDELAY_SHIFT))
+
+#define  CDMA4_CFG_RESERVED1_MASK 0xc000000
+#define  CDMA4_CFG_RESERVED1_SHIFT 26
+#define  CDMA4_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA4_CFG_RESERVED1_MASK) >> CDMA4_CFG_RESERVED1_SHIFT)
+#define  CDMA4_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA4_CFG_RESERVED1_SHIFT))
+
+#define  CDMA4_CFG_DATAUNITSIZE_MASK 0x3000000
+#define  CDMA4_CFG_DATAUNITSIZE_SHIFT 24
+#define  CDMA4_CFG_DATAUNITSIZE_MASK_SHIFT(reg) (((reg) & CDMA4_CFG_DATAUNITSIZE_MASK) >> CDMA4_CFG_DATAUNITSIZE_SHIFT)
+#define  CDMA4_CFG_DATAUNITSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CFG_DATAUNITSIZE_MASK) | (((uint32_t)val) << CDMA4_CFG_DATAUNITSIZE_SHIFT))
+
+#define  CDMA4_CFG_HALT_MASK 0x800000
+#define  CDMA4_CFG_HALT_SHIFT 23
+#define  CDMA4_CFG_HALT_MASK_SHIFT(reg) (((reg) & CDMA4_CFG_HALT_MASK) >> CDMA4_CFG_HALT_SHIFT)
+#define  CDMA4_CFG_HALT_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CFG_HALT_MASK) | (((uint32_t)val) << CDMA4_CFG_HALT_SHIFT))
+
+#define  CDMA4_CFG_FLOWCTRL_MASK 0x700000
+#define  CDMA4_CFG_FLOWCTRL_SHIFT 20
+#define  CDMA4_CFG_FLOWCTRL_MASK_SHIFT(reg) (((reg) & CDMA4_CFG_FLOWCTRL_MASK) >> CDMA4_CFG_FLOWCTRL_SHIFT)
+#define  CDMA4_CFG_FLOWCTRL_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CFG_FLOWCTRL_MASK) | (((uint32_t)val) << CDMA4_CFG_FLOWCTRL_SHIFT))
+
+#define  CDMA4_CFG_RESERVED2_MASK 0xc0000
+#define  CDMA4_CFG_RESERVED2_SHIFT 18
+#define  CDMA4_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA4_CFG_RESERVED2_MASK) >> CDMA4_CFG_RESERVED2_SHIFT)
+#define  CDMA4_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA4_CFG_RESERVED2_SHIFT))
+
+#define  CDMA4_CFG_DESTPID_MASK 0x3f000
+#define  CDMA4_CFG_DESTPID_SHIFT 12
+#define  CDMA4_CFG_DESTPID_MASK_SHIFT(reg) (((reg) & CDMA4_CFG_DESTPID_MASK) >> CDMA4_CFG_DESTPID_SHIFT)
+#define  CDMA4_CFG_DESTPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CFG_DESTPID_MASK) | (((uint32_t)val) << CDMA4_CFG_DESTPID_SHIFT))
+
+#define  CDMA4_CFG_RESERVED3_MASK 0xc00
+#define  CDMA4_CFG_RESERVED3_SHIFT 10
+#define  CDMA4_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA4_CFG_RESERVED3_MASK) >> CDMA4_CFG_RESERVED3_SHIFT)
+#define  CDMA4_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA4_CFG_RESERVED3_SHIFT))
+
+#define  CDMA4_CFG_SRCPID_MASK 0x3f0
+#define  CDMA4_CFG_SRCPID_SHIFT 4
+#define  CDMA4_CFG_SRCPID_MASK_SHIFT(reg) (((reg) & CDMA4_CFG_SRCPID_MASK) >> CDMA4_CFG_SRCPID_SHIFT)
+#define  CDMA4_CFG_SRCPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CFG_SRCPID_MASK) | (((uint32_t)val) << CDMA4_CFG_SRCPID_SHIFT))
+
+#define  CDMA4_CFG_DESTENDIAN_MASK 0x8
+#define  CDMA4_CFG_DESTENDIAN_SHIFT 3
+#define  CDMA4_CFG_DESTENDIAN_MASK_SHIFT(reg) (((reg) & CDMA4_CFG_DESTENDIAN_MASK) >> CDMA4_CFG_DESTENDIAN_SHIFT)
+#define  CDMA4_CFG_DESTENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CFG_DESTENDIAN_MASK) | (((uint32_t)val) << CDMA4_CFG_DESTENDIAN_SHIFT))
+
+#define  CDMA4_CFG_SRCENDIAN_MASK 0x4
+#define  CDMA4_CFG_SRCENDIAN_SHIFT 2
+#define  CDMA4_CFG_SRCENDIAN_MASK_SHIFT(reg) (((reg) & CDMA4_CFG_SRCENDIAN_MASK) >> CDMA4_CFG_SRCENDIAN_SHIFT)
+#define  CDMA4_CFG_SRCENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CFG_SRCENDIAN_MASK) | (((uint32_t)val) << CDMA4_CFG_SRCENDIAN_SHIFT))
+
+#define  CDMA4_CFG_FILL_MASK 0x2
+#define  CDMA4_CFG_FILL_SHIFT 1
+#define  CDMA4_CFG_FILL_MASK_SHIFT(reg) (((reg) & CDMA4_CFG_FILL_MASK) >> CDMA4_CFG_FILL_SHIFT)
+#define  CDMA4_CFG_FILL_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CFG_FILL_MASK) | (((uint32_t)val) << CDMA4_CFG_FILL_SHIFT))
+
+#define  CDMA4_CFG_ENABLE_MASK 0x1
+#define  CDMA4_CFG_ENABLE_SHIFT 0
+#define  CDMA4_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & CDMA4_CFG_ENABLE_MASK) >> CDMA4_CFG_ENABLE_SHIFT)
+#define  CDMA4_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CFG_ENABLE_MASK) | (((uint32_t)val) << CDMA4_CFG_ENABLE_SHIFT))
+
+//====================================================================
+//Register: DMA Channel Control Register (Control)
+/** \brief This register programs each channel for control features such as
+      auto-increment, initiator select, burst size, transfer size, and
+      transfer widths.*/
+//====================================================================
+
+#define  CDMA4_CONTROL_TRANSSIZE_MASK 0xffff0000
+#define  CDMA4_CONTROL_TRANSSIZE_SHIFT 16
+#define  CDMA4_CONTROL_TRANSSIZE_MASK_SHIFT(reg) (((reg) & CDMA4_CONTROL_TRANSSIZE_MASK) >> CDMA4_CONTROL_TRANSSIZE_SHIFT)
+#define  CDMA4_CONTROL_TRANSSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CONTROL_TRANSSIZE_MASK) | (((uint32_t)val) << CDMA4_CONTROL_TRANSSIZE_SHIFT))
+
+#define  CDMA4_CONTROL_RESERVED1_MASK 0xc000
+#define  CDMA4_CONTROL_RESERVED1_SHIFT 14
+#define  CDMA4_CONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA4_CONTROL_RESERVED1_MASK) >> CDMA4_CONTROL_RESERVED1_SHIFT)
+#define  CDMA4_CONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA4_CONTROL_RESERVED1_SHIFT))
+
+#define  CDMA4_CONTROL_DESTADDRINC_MASK 0x2000
+#define  CDMA4_CONTROL_DESTADDRINC_SHIFT 13
+#define  CDMA4_CONTROL_DESTADDRINC_MASK_SHIFT(reg) (((reg) & CDMA4_CONTROL_DESTADDRINC_MASK) >> CDMA4_CONTROL_DESTADDRINC_SHIFT)
+#define  CDMA4_CONTROL_DESTADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CONTROL_DESTADDRINC_MASK) | (((uint32_t)val) << CDMA4_CONTROL_DESTADDRINC_SHIFT))
+
+#define  CDMA4_CONTROL_SRCADDRINC_MASK 0x1000
+#define  CDMA4_CONTROL_SRCADDRINC_SHIFT 12
+#define  CDMA4_CONTROL_SRCADDRINC_MASK_SHIFT(reg) (((reg) & CDMA4_CONTROL_SRCADDRINC_MASK) >> CDMA4_CONTROL_SRCADDRINC_SHIFT)
+#define  CDMA4_CONTROL_SRCADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CONTROL_SRCADDRINC_MASK) | (((uint32_t)val) << CDMA4_CONTROL_SRCADDRINC_SHIFT))
+
+#define  CDMA4_CONTROL_DESTXFERWIDTH_MASK 0xc00
+#define  CDMA4_CONTROL_DESTXFERWIDTH_SHIFT 10
+#define  CDMA4_CONTROL_DESTXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA4_CONTROL_DESTXFERWIDTH_MASK) >> CDMA4_CONTROL_DESTXFERWIDTH_SHIFT)
+#define  CDMA4_CONTROL_DESTXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CONTROL_DESTXFERWIDTH_MASK) | (((uint32_t)val) << CDMA4_CONTROL_DESTXFERWIDTH_SHIFT))
+
+#define  CDMA4_CONTROL_SRCXFERWIDTH_MASK 0x300
+#define  CDMA4_CONTROL_SRCXFERWIDTH_SHIFT 8
+#define  CDMA4_CONTROL_SRCXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA4_CONTROL_SRCXFERWIDTH_MASK) >> CDMA4_CONTROL_SRCXFERWIDTH_SHIFT)
+#define  CDMA4_CONTROL_SRCXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CONTROL_SRCXFERWIDTH_MASK) | (((uint32_t)val) << CDMA4_CONTROL_SRCXFERWIDTH_SHIFT))
+
+#define  CDMA4_CONTROL_RESERVED2_MASK 0xc0
+#define  CDMA4_CONTROL_RESERVED2_SHIFT 6
+#define  CDMA4_CONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA4_CONTROL_RESERVED2_MASK) >> CDMA4_CONTROL_RESERVED2_SHIFT)
+#define  CDMA4_CONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA4_CONTROL_RESERVED2_SHIFT))
+
+#define  CDMA4_CONTROL_DESTBURSTSIZE_MASK 0x30
+#define  CDMA4_CONTROL_DESTBURSTSIZE_SHIFT 4
+#define  CDMA4_CONTROL_DESTBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA4_CONTROL_DESTBURSTSIZE_MASK) >> CDMA4_CONTROL_DESTBURSTSIZE_SHIFT)
+#define  CDMA4_CONTROL_DESTBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CONTROL_DESTBURSTSIZE_MASK) | (((uint32_t)val) << CDMA4_CONTROL_DESTBURSTSIZE_SHIFT))
+
+#define  CDMA4_CONTROL_RESERVED3_MASK 0xc
+#define  CDMA4_CONTROL_RESERVED3_SHIFT 2
+#define  CDMA4_CONTROL_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA4_CONTROL_RESERVED3_MASK) >> CDMA4_CONTROL_RESERVED3_SHIFT)
+#define  CDMA4_CONTROL_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CONTROL_RESERVED3_MASK) | (((uint32_t)val) << CDMA4_CONTROL_RESERVED3_SHIFT))
+
+#define  CDMA4_CONTROL_SRCBURSTSIZE_MASK 0x3
+#define  CDMA4_CONTROL_SRCBURSTSIZE_SHIFT 0
+#define  CDMA4_CONTROL_SRCBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA4_CONTROL_SRCBURSTSIZE_MASK) >> CDMA4_CONTROL_SRCBURSTSIZE_SHIFT)
+#define  CDMA4_CONTROL_SRCBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_CONTROL_SRCBURSTSIZE_MASK) | (((uint32_t)val) << CDMA4_CONTROL_SRCBURSTSIZE_SHIFT))
+
+//====================================================================
+//Register: DMA Status Register (Status)
+//====================================================================
+
+#define  CDMA4_STATUS_RESERVED1_MASK 0xfff00000
+#define  CDMA4_STATUS_RESERVED1_SHIFT 20
+#define  CDMA4_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA4_STATUS_RESERVED1_MASK) >> CDMA4_STATUS_RESERVED1_SHIFT)
+#define  CDMA4_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_STATUS_RESERVED1_MASK) | (((uint32_t)val) << CDMA4_STATUS_RESERVED1_SHIFT))
+
+#define  CDMA4_STATUS_ODDWIDTHHW_MASK 0x80000
+#define  CDMA4_STATUS_ODDWIDTHHW_SHIFT 19
+#define  CDMA4_STATUS_ODDWIDTHHW_MASK_SHIFT(reg) (((reg) & CDMA4_STATUS_ODDWIDTHHW_MASK) >> CDMA4_STATUS_ODDWIDTHHW_SHIFT)
+#define  CDMA4_STATUS_ODDWIDTHHW_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_STATUS_ODDWIDTHHW_MASK) | (((uint32_t)val) << CDMA4_STATUS_ODDWIDTHHW_SHIFT))
+
+#define  CDMA4_STATUS_DESCFETCH_MASK 0x40000
+#define  CDMA4_STATUS_DESCFETCH_SHIFT 18
+#define  CDMA4_STATUS_DESCFETCH_MASK_SHIFT(reg) (((reg) & CDMA4_STATUS_DESCFETCH_MASK) >> CDMA4_STATUS_DESCFETCH_SHIFT)
+#define  CDMA4_STATUS_DESCFETCH_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_STATUS_DESCFETCH_MASK) | (((uint32_t)val) << CDMA4_STATUS_DESCFETCH_SHIFT))
+
+#define  CDMA4_STATUS_DMABUSY_MASK 0x20000
+#define  CDMA4_STATUS_DMABUSY_SHIFT 17
+#define  CDMA4_STATUS_DMABUSY_MASK_SHIFT(reg) (((reg) & CDMA4_STATUS_DMABUSY_MASK) >> CDMA4_STATUS_DMABUSY_SHIFT)
+#define  CDMA4_STATUS_DMABUSY_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_STATUS_DMABUSY_MASK) | (((uint32_t)val) << CDMA4_STATUS_DMABUSY_SHIFT))
+
+#define  CDMA4_STATUS_FIFOEMPTY_MASK 0x10000
+#define  CDMA4_STATUS_FIFOEMPTY_SHIFT 16
+#define  CDMA4_STATUS_FIFOEMPTY_MASK_SHIFT(reg) (((reg) & CDMA4_STATUS_FIFOEMPTY_MASK) >> CDMA4_STATUS_FIFOEMPTY_SHIFT)
+#define  CDMA4_STATUS_FIFOEMPTY_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_STATUS_FIFOEMPTY_MASK) | (((uint32_t)val) << CDMA4_STATUS_FIFOEMPTY_SHIFT))
+
+#define  CDMA4_STATUS_BYTESREMAIN_MASK 0xffff
+#define  CDMA4_STATUS_BYTESREMAIN_SHIFT 0
+#define  CDMA4_STATUS_BYTESREMAIN_MASK_SHIFT(reg) (((reg) & CDMA4_STATUS_BYTESREMAIN_MASK) >> CDMA4_STATUS_BYTESREMAIN_SHIFT)
+#define  CDMA4_STATUS_BYTESREMAIN_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_STATUS_BYTESREMAIN_MASK) | (((uint32_t)val) << CDMA4_STATUS_BYTESREMAIN_SHIFT))
+
+//====================================================================
+//Register: DMA Source Address Register (SrcAddr)
+/** \brief The Source Address register is programmed with the address of the location
+      for the DMA to transfer from. If the source is memory, the address can be
+      byte aligned.
+<br>*/
+//====================================================================
+
+#define  CDMA4_SRCADDR_SRCADDR_MASK 0xffffffff
+#define  CDMA4_SRCADDR_SRCADDR_SHIFT 0
+#define  CDMA4_SRCADDR_SRCADDR_MASK_SHIFT(reg) (((reg) & CDMA4_SRCADDR_SRCADDR_MASK) >> CDMA4_SRCADDR_SRCADDR_SHIFT)
+#define  CDMA4_SRCADDR_SRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_SRCADDR_SRCADDR_MASK) | (((uint32_t)val) << CDMA4_SRCADDR_SRCADDR_SHIFT))
+
+//====================================================================
+//Register: Current Source Address Register (SrcAddrStat)
+/** \brief This register contains the current address for the source device.*/
+//====================================================================
+
+#define  CDMA4_SRCADDRSTAT_CURRSRCADDR_MASK 0xffffffff
+#define  CDMA4_SRCADDRSTAT_CURRSRCADDR_SHIFT 0
+#define  CDMA4_SRCADDRSTAT_CURRSRCADDR_MASK_SHIFT(reg) (((reg) & CDMA4_SRCADDRSTAT_CURRSRCADDR_MASK) >> CDMA4_SRCADDRSTAT_CURRSRCADDR_SHIFT)
+#define  CDMA4_SRCADDRSTAT_CURRSRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_SRCADDRSTAT_CURRSRCADDR_MASK) | (((uint32_t)val) << CDMA4_SRCADDRSTAT_CURRSRCADDR_SHIFT))
+
+//====================================================================
+//Register: Destination Address Register (DestAddr)
+/** \brief The Destination Address register is programmed with the address of the location
+      for the DMA to transfer to. If the destination is memory, the address can be
+      byte aligned.*/
+//====================================================================
+
+#define  CDMA4_DESTADDR_DESTADDR_MASK 0xffffffff
+#define  CDMA4_DESTADDR_DESTADDR_SHIFT 0
+#define  CDMA4_DESTADDR_DESTADDR_MASK_SHIFT(reg) (((reg) & CDMA4_DESTADDR_DESTADDR_MASK) >> CDMA4_DESTADDR_DESTADDR_SHIFT)
+#define  CDMA4_DESTADDR_DESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_DESTADDR_DESTADDR_MASK) | (((uint32_t)val) << CDMA4_DESTADDR_DESTADDR_SHIFT))
+
+//====================================================================
+//Register: Current Destination Address Register (DestAddrStat)
+/** \brief This register contains the current address for the destination device.*/
+//====================================================================
+
+#define  CDMA4_DESTADDRSTAT_CURRDESTADDR_MASK 0xffffffff
+#define  CDMA4_DESTADDRSTAT_CURRDESTADDR_SHIFT 0
+#define  CDMA4_DESTADDRSTAT_CURRDESTADDR_MASK_SHIFT(reg) (((reg) & CDMA4_DESTADDRSTAT_CURRDESTADDR_MASK) >> CDMA4_DESTADDRSTAT_CURRDESTADDR_SHIFT)
+#define  CDMA4_DESTADDRSTAT_CURRDESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_DESTADDRSTAT_CURRDESTADDR_MASK) | (((uint32_t)val) << CDMA4_DESTADDRSTAT_CURRDESTADDR_SHIFT))
+
+//====================================================================
+//Register: Fill Value Register (FillValue)
+/** \brief This register contains the data value to write to the destination
+      address.*/
+//====================================================================
+
+#define  CDMA4_FILLVALUE_FILLVAL_MASK 0xffffffff
+#define  CDMA4_FILLVALUE_FILLVAL_SHIFT 0
+#define  CDMA4_FILLVALUE_FILLVAL_MASK_SHIFT(reg) (((reg) & CDMA4_FILLVALUE_FILLVAL_MASK) >> CDMA4_FILLVALUE_FILLVAL_SHIFT)
+#define  CDMA4_FILLVALUE_FILLVAL_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_FILLVALUE_FILLVAL_MASK) | (((uint32_t)val) << CDMA4_FILLVALUE_FILLVAL_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (intEn)
+//====================================================================
+
+#define  CDMA4_INTEN_RESERVED1_MASK 0xfffffff0
+#define  CDMA4_INTEN_RESERVED1_SHIFT 4
+#define  CDMA4_INTEN_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA4_INTEN_RESERVED1_MASK) >> CDMA4_INTEN_RESERVED1_SHIFT)
+#define  CDMA4_INTEN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTEN_RESERVED1_MASK) | (((uint32_t)val) << CDMA4_INTEN_RESERVED1_SHIFT))
+
+#define  CDMA4_INTEN_CLEARCOMPLETEEN_MASK 0x8
+#define  CDMA4_INTEN_CLEARCOMPLETEEN_SHIFT 3
+#define  CDMA4_INTEN_CLEARCOMPLETEEN_MASK_SHIFT(reg) (((reg) & CDMA4_INTEN_CLEARCOMPLETEEN_MASK) >> CDMA4_INTEN_CLEARCOMPLETEEN_SHIFT)
+#define  CDMA4_INTEN_CLEARCOMPLETEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTEN_CLEARCOMPLETEEN_MASK) | (((uint32_t)val) << CDMA4_INTEN_CLEARCOMPLETEEN_SHIFT))
+
+#define  CDMA4_INTEN_CHAINDONEEN_MASK 0x4
+#define  CDMA4_INTEN_CHAINDONEEN_SHIFT 2
+#define  CDMA4_INTEN_CHAINDONEEN_MASK_SHIFT(reg) (((reg) & CDMA4_INTEN_CHAINDONEEN_MASK) >> CDMA4_INTEN_CHAINDONEEN_SHIFT)
+#define  CDMA4_INTEN_CHAINDONEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTEN_CHAINDONEEN_MASK) | (((uint32_t)val) << CDMA4_INTEN_CHAINDONEEN_SHIFT))
+
+#define  CDMA4_INTEN_TIMEOUTEN_MASK 0x2
+#define  CDMA4_INTEN_TIMEOUTEN_SHIFT 1
+#define  CDMA4_INTEN_TIMEOUTEN_MASK_SHIFT(reg) (((reg) & CDMA4_INTEN_TIMEOUTEN_MASK) >> CDMA4_INTEN_TIMEOUTEN_SHIFT)
+#define  CDMA4_INTEN_TIMEOUTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTEN_TIMEOUTEN_MASK) | (((uint32_t)val) << CDMA4_INTEN_TIMEOUTEN_SHIFT))
+
+#define  CDMA4_INTEN_TERMCNTEN_MASK 0x1
+#define  CDMA4_INTEN_TERMCNTEN_SHIFT 0
+#define  CDMA4_INTEN_TERMCNTEN_MASK_SHIFT(reg) (((reg) & CDMA4_INTEN_TERMCNTEN_MASK) >> CDMA4_INTEN_TERMCNTEN_SHIFT)
+#define  CDMA4_INTEN_TERMCNTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTEN_TERMCNTEN_MASK) | (((uint32_t)val) << CDMA4_INTEN_TERMCNTEN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (intPend)
+//====================================================================
+
+#define  CDMA4_INTPEND_RESERVED1_MASK 0xfffffff0
+#define  CDMA4_INTPEND_RESERVED1_SHIFT 4
+#define  CDMA4_INTPEND_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA4_INTPEND_RESERVED1_MASK) >> CDMA4_INTPEND_RESERVED1_SHIFT)
+#define  CDMA4_INTPEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTPEND_RESERVED1_MASK) | (((uint32_t)val) << CDMA4_INTPEND_RESERVED1_SHIFT))
+
+#define  CDMA4_INTPEND_CLEARCOMPLETEPEND_MASK 0x8
+#define  CDMA4_INTPEND_CLEARCOMPLETEPEND_SHIFT 3
+#define  CDMA4_INTPEND_CLEARCOMPLETEPEND_MASK_SHIFT(reg) (((reg) & CDMA4_INTPEND_CLEARCOMPLETEPEND_MASK) >> CDMA4_INTPEND_CLEARCOMPLETEPEND_SHIFT)
+#define  CDMA4_INTPEND_CLEARCOMPLETEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTPEND_CLEARCOMPLETEPEND_MASK) | (((uint32_t)val) << CDMA4_INTPEND_CLEARCOMPLETEPEND_SHIFT))
+
+#define  CDMA4_INTPEND_CHAINDONEPEND_MASK 0x4
+#define  CDMA4_INTPEND_CHAINDONEPEND_SHIFT 2
+#define  CDMA4_INTPEND_CHAINDONEPEND_MASK_SHIFT(reg) (((reg) & CDMA4_INTPEND_CHAINDONEPEND_MASK) >> CDMA4_INTPEND_CHAINDONEPEND_SHIFT)
+#define  CDMA4_INTPEND_CHAINDONEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTPEND_CHAINDONEPEND_MASK) | (((uint32_t)val) << CDMA4_INTPEND_CHAINDONEPEND_SHIFT))
+
+#define  CDMA4_INTPEND_TIMEOUTPEND_MASK 0x2
+#define  CDMA4_INTPEND_TIMEOUTPEND_SHIFT 1
+#define  CDMA4_INTPEND_TIMEOUTPEND_MASK_SHIFT(reg) (((reg) & CDMA4_INTPEND_TIMEOUTPEND_MASK) >> CDMA4_INTPEND_TIMEOUTPEND_SHIFT)
+#define  CDMA4_INTPEND_TIMEOUTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTPEND_TIMEOUTPEND_MASK) | (((uint32_t)val) << CDMA4_INTPEND_TIMEOUTPEND_SHIFT))
+
+#define  CDMA4_INTPEND_TERMCNTPEND_MASK 0x1
+#define  CDMA4_INTPEND_TERMCNTPEND_SHIFT 0
+#define  CDMA4_INTPEND_TERMCNTPEND_MASK_SHIFT(reg) (((reg) & CDMA4_INTPEND_TERMCNTPEND_MASK) >> CDMA4_INTPEND_TERMCNTPEND_SHIFT)
+#define  CDMA4_INTPEND_TERMCNTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTPEND_TERMCNTPEND_MASK) | (((uint32_t)val) << CDMA4_INTPEND_TERMCNTPEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (intAck)
+//====================================================================
+
+#define  CDMA4_INTACK_RESERVED1_MASK 0xfffffff0
+#define  CDMA4_INTACK_RESERVED1_SHIFT 4
+#define  CDMA4_INTACK_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA4_INTACK_RESERVED1_MASK) >> CDMA4_INTACK_RESERVED1_SHIFT)
+#define  CDMA4_INTACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTACK_RESERVED1_MASK) | (((uint32_t)val) << CDMA4_INTACK_RESERVED1_SHIFT))
+
+#define  CDMA4_INTACK_CLEARCOMPLETEACK_MASK 0x8
+#define  CDMA4_INTACK_CLEARCOMPLETEACK_SHIFT 3
+#define  CDMA4_INTACK_CLEARCOMPLETEACK_MASK_SHIFT(reg) (((reg) & CDMA4_INTACK_CLEARCOMPLETEACK_MASK) >> CDMA4_INTACK_CLEARCOMPLETEACK_SHIFT)
+#define  CDMA4_INTACK_CLEARCOMPLETEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTACK_CLEARCOMPLETEACK_MASK) | (((uint32_t)val) << CDMA4_INTACK_CLEARCOMPLETEACK_SHIFT))
+
+#define  CDMA4_INTACK_CHAINDONEACK_MASK 0x4
+#define  CDMA4_INTACK_CHAINDONEACK_SHIFT 2
+#define  CDMA4_INTACK_CHAINDONEACK_MASK_SHIFT(reg) (((reg) & CDMA4_INTACK_CHAINDONEACK_MASK) >> CDMA4_INTACK_CHAINDONEACK_SHIFT)
+#define  CDMA4_INTACK_CHAINDONEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTACK_CHAINDONEACK_MASK) | (((uint32_t)val) << CDMA4_INTACK_CHAINDONEACK_SHIFT))
+
+#define  CDMA4_INTACK_TIMEOUTACK_MASK 0x2
+#define  CDMA4_INTACK_TIMEOUTACK_SHIFT 1
+#define  CDMA4_INTACK_TIMEOUTACK_MASK_SHIFT(reg) (((reg) & CDMA4_INTACK_TIMEOUTACK_MASK) >> CDMA4_INTACK_TIMEOUTACK_SHIFT)
+#define  CDMA4_INTACK_TIMEOUTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTACK_TIMEOUTACK_MASK) | (((uint32_t)val) << CDMA4_INTACK_TIMEOUTACK_SHIFT))
+
+#define  CDMA4_INTACK_TERMCNTACK_MASK 0x1
+#define  CDMA4_INTACK_TERMCNTACK_SHIFT 0
+#define  CDMA4_INTACK_TERMCNTACK_MASK_SHIFT(reg) (((reg) & CDMA4_INTACK_TERMCNTACK_MASK) >> CDMA4_INTACK_TERMCNTACK_SHIFT)
+#define  CDMA4_INTACK_TERMCNTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTACK_TERMCNTACK_MASK) | (((uint32_t)val) << CDMA4_INTACK_TERMCNTACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (intForce)
+//====================================================================
+
+#define  CDMA4_INTFORCE_RESERVED1_MASK 0xfffffff0
+#define  CDMA4_INTFORCE_RESERVED1_SHIFT 4
+#define  CDMA4_INTFORCE_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA4_INTFORCE_RESERVED1_MASK) >> CDMA4_INTFORCE_RESERVED1_SHIFT)
+#define  CDMA4_INTFORCE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTFORCE_RESERVED1_MASK) | (((uint32_t)val) << CDMA4_INTFORCE_RESERVED1_SHIFT))
+
+#define  CDMA4_INTFORCE_CLEARCOMPLETEFOR_MASK 0x8
+#define  CDMA4_INTFORCE_CLEARCOMPLETEFOR_SHIFT 3
+#define  CDMA4_INTFORCE_CLEARCOMPLETEFOR_MASK_SHIFT(reg) (((reg) & CDMA4_INTFORCE_CLEARCOMPLETEFOR_MASK) >> CDMA4_INTFORCE_CLEARCOMPLETEFOR_SHIFT)
+#define  CDMA4_INTFORCE_CLEARCOMPLETEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTFORCE_CLEARCOMPLETEFOR_MASK) | (((uint32_t)val) << CDMA4_INTFORCE_CLEARCOMPLETEFOR_SHIFT))
+
+#define  CDMA4_INTFORCE_CHAINDONEFOR_MASK 0x4
+#define  CDMA4_INTFORCE_CHAINDONEFOR_SHIFT 2
+#define  CDMA4_INTFORCE_CHAINDONEFOR_MASK_SHIFT(reg) (((reg) & CDMA4_INTFORCE_CHAINDONEFOR_MASK) >> CDMA4_INTFORCE_CHAINDONEFOR_SHIFT)
+#define  CDMA4_INTFORCE_CHAINDONEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTFORCE_CHAINDONEFOR_MASK) | (((uint32_t)val) << CDMA4_INTFORCE_CHAINDONEFOR_SHIFT))
+
+#define  CDMA4_INTFORCE_TIMEOUTFOR_MASK 0x2
+#define  CDMA4_INTFORCE_TIMEOUTFOR_SHIFT 1
+#define  CDMA4_INTFORCE_TIMEOUTFOR_MASK_SHIFT(reg) (((reg) & CDMA4_INTFORCE_TIMEOUTFOR_MASK) >> CDMA4_INTFORCE_TIMEOUTFOR_SHIFT)
+#define  CDMA4_INTFORCE_TIMEOUTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTFORCE_TIMEOUTFOR_MASK) | (((uint32_t)val) << CDMA4_INTFORCE_TIMEOUTFOR_SHIFT))
+
+#define  CDMA4_INTFORCE_TERMCNTFOR_MASK 0x1
+#define  CDMA4_INTFORCE_TERMCNTFOR_SHIFT 0
+#define  CDMA4_INTFORCE_TERMCNTFOR_MASK_SHIFT(reg) (((reg) & CDMA4_INTFORCE_TERMCNTFOR_MASK) >> CDMA4_INTFORCE_TERMCNTFOR_SHIFT)
+#define  CDMA4_INTFORCE_TERMCNTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_INTFORCE_TERMCNTFOR_MASK) | (((uint32_t)val) << CDMA4_INTFORCE_TERMCNTFOR_SHIFT))
+
+//====================================================================
+//Register: DMA Timer Control (TimerControl)
+/** \brief The Timer Control register specifies the number of timebase cycles between word
+      transfers before generating a timeout interrupt. The timer is reset each time
+      a transfer occurs.*/
+//====================================================================
+
+#define  CDMA4_TIMERCONTROL_RESERVED1_MASK 0xffff0000
+#define  CDMA4_TIMERCONTROL_RESERVED1_SHIFT 16
+#define  CDMA4_TIMERCONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA4_TIMERCONTROL_RESERVED1_MASK) >> CDMA4_TIMERCONTROL_RESERVED1_SHIFT)
+#define  CDMA4_TIMERCONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_TIMERCONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA4_TIMERCONTROL_RESERVED1_SHIFT))
+
+#define  CDMA4_TIMERCONTROL_TIMERENABLE_MASK 0x8000
+#define  CDMA4_TIMERCONTROL_TIMERENABLE_SHIFT 15
+#define  CDMA4_TIMERCONTROL_TIMERENABLE_MASK_SHIFT(reg) (((reg) & CDMA4_TIMERCONTROL_TIMERENABLE_MASK) >> CDMA4_TIMERCONTROL_TIMERENABLE_SHIFT)
+#define  CDMA4_TIMERCONTROL_TIMERENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_TIMERCONTROL_TIMERENABLE_MASK) | (((uint32_t)val) << CDMA4_TIMERCONTROL_TIMERENABLE_SHIFT))
+
+#define  CDMA4_TIMERCONTROL_TIMEBASE_MASK 0x7000
+#define  CDMA4_TIMERCONTROL_TIMEBASE_SHIFT 12
+#define  CDMA4_TIMERCONTROL_TIMEBASE_MASK_SHIFT(reg) (((reg) & CDMA4_TIMERCONTROL_TIMEBASE_MASK) >> CDMA4_TIMERCONTROL_TIMEBASE_SHIFT)
+#define  CDMA4_TIMERCONTROL_TIMEBASE_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_TIMERCONTROL_TIMEBASE_MASK) | (((uint32_t)val) << CDMA4_TIMERCONTROL_TIMEBASE_SHIFT))
+
+#define  CDMA4_TIMERCONTROL_RESERVED2_MASK 0x800
+#define  CDMA4_TIMERCONTROL_RESERVED2_SHIFT 11
+#define  CDMA4_TIMERCONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA4_TIMERCONTROL_RESERVED2_MASK) >> CDMA4_TIMERCONTROL_RESERVED2_SHIFT)
+#define  CDMA4_TIMERCONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_TIMERCONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA4_TIMERCONTROL_RESERVED2_SHIFT))
+
+#define  CDMA4_TIMERCONTROL_COUNT_MASK 0x7ff
+#define  CDMA4_TIMERCONTROL_COUNT_SHIFT 0
+#define  CDMA4_TIMERCONTROL_COUNT_MASK_SHIFT(reg) (((reg) & CDMA4_TIMERCONTROL_COUNT_MASK) >> CDMA4_TIMERCONTROL_COUNT_SHIFT)
+#define  CDMA4_TIMERCONTROL_COUNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_TIMERCONTROL_COUNT_MASK) | (((uint32_t)val) << CDMA4_TIMERCONTROL_COUNT_SHIFT))
+
+//====================================================================
+//Register: Timeout Count Status Register (TimeOutStat)
+/** \brief This register contains the current timeout count.*/
+//====================================================================
+
+#define  CDMA4_TIMEOUTSTAT_RESERVED1_MASK 0xfffff800
+#define  CDMA4_TIMEOUTSTAT_RESERVED1_SHIFT 11
+#define  CDMA4_TIMEOUTSTAT_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA4_TIMEOUTSTAT_RESERVED1_MASK) >> CDMA4_TIMEOUTSTAT_RESERVED1_SHIFT)
+#define  CDMA4_TIMEOUTSTAT_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_TIMEOUTSTAT_RESERVED1_MASK) | (((uint32_t)val) << CDMA4_TIMEOUTSTAT_RESERVED1_SHIFT))
+
+#define  CDMA4_TIMEOUTSTAT_CURRTOCNT_MASK 0x7ff
+#define  CDMA4_TIMEOUTSTAT_CURRTOCNT_SHIFT 0
+#define  CDMA4_TIMEOUTSTAT_CURRTOCNT_MASK_SHIFT(reg) (((reg) & CDMA4_TIMEOUTSTAT_CURRTOCNT_MASK) >> CDMA4_TIMEOUTSTAT_CURRTOCNT_SHIFT)
+#define  CDMA4_TIMEOUTSTAT_CURRTOCNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_TIMEOUTSTAT_CURRTOCNT_MASK) | (((uint32_t)val) << CDMA4_TIMEOUTSTAT_CURRTOCNT_SHIFT))
+
+//====================================================================
+//Register: Linked List Index Register (LLIR)
+/** \brief This register contains a word-aligned address of the first word of the next descriptor. LLI means "linked list index" or pointer to the descriptor in memory. If the LLI register is 0, then the current descriptor (that is loaded in the registers) is the last in the chain, and the DMA channel will stop once the current DMA transfer is completed.*/
+//====================================================================
+
+#define  CDMA4_LLIR_LLINDEX_MASK 0xfffffffc
+#define  CDMA4_LLIR_LLINDEX_SHIFT 2
+#define  CDMA4_LLIR_LLINDEX_MASK_SHIFT(reg) (((reg) & CDMA4_LLIR_LLINDEX_MASK) >> CDMA4_LLIR_LLINDEX_SHIFT)
+#define  CDMA4_LLIR_LLINDEX_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_LLIR_LLINDEX_MASK) | (((uint32_t)val) << CDMA4_LLIR_LLINDEX_SHIFT))
+
+#define  CDMA4_LLIR_RESERVED1_MASK 0x3
+#define  CDMA4_LLIR_RESERVED1_SHIFT 0
+#define  CDMA4_LLIR_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA4_LLIR_RESERVED1_MASK) >> CDMA4_LLIR_RESERVED1_SHIFT)
+#define  CDMA4_LLIR_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_LLIR_RESERVED1_MASK) | (((uint32_t)val) << CDMA4_LLIR_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Odd Width Config Register (OWCFG)
+//====================================================================
+
+#define  CDMA4_OWCFG_RESERVED1_MASK 0xfffe0000
+#define  CDMA4_OWCFG_RESERVED1_SHIFT 17
+#define  CDMA4_OWCFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA4_OWCFG_RESERVED1_MASK) >> CDMA4_OWCFG_RESERVED1_SHIFT)
+#define  CDMA4_OWCFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_OWCFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA4_OWCFG_RESERVED1_SHIFT))
+
+#define  CDMA4_OWCFG_EXTRABITS_MASK 0x1f000
+#define  CDMA4_OWCFG_EXTRABITS_SHIFT 12
+#define  CDMA4_OWCFG_EXTRABITS_MASK_SHIFT(reg) (((reg) & CDMA4_OWCFG_EXTRABITS_MASK) >> CDMA4_OWCFG_EXTRABITS_SHIFT)
+#define  CDMA4_OWCFG_EXTRABITS_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_OWCFG_EXTRABITS_MASK) | (((uint32_t)val) << CDMA4_OWCFG_EXTRABITS_SHIFT))
+
+#define  CDMA4_OWCFG_RESERVED2_MASK 0xe00
+#define  CDMA4_OWCFG_RESERVED2_SHIFT 9
+#define  CDMA4_OWCFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA4_OWCFG_RESERVED2_MASK) >> CDMA4_OWCFG_RESERVED2_SHIFT)
+#define  CDMA4_OWCFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_OWCFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA4_OWCFG_RESERVED2_SHIFT))
+
+#define  CDMA4_OWCFG_ODDWIDTH_MASK 0x1f0
+#define  CDMA4_OWCFG_ODDWIDTH_SHIFT 4
+#define  CDMA4_OWCFG_ODDWIDTH_MASK_SHIFT(reg) (((reg) & CDMA4_OWCFG_ODDWIDTH_MASK) >> CDMA4_OWCFG_ODDWIDTH_SHIFT)
+#define  CDMA4_OWCFG_ODDWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_OWCFG_ODDWIDTH_MASK) | (((uint32_t)val) << CDMA4_OWCFG_ODDWIDTH_SHIFT))
+
+#define  CDMA4_OWCFG_RESERVED3_MASK 0xc
+#define  CDMA4_OWCFG_RESERVED3_SHIFT 2
+#define  CDMA4_OWCFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA4_OWCFG_RESERVED3_MASK) >> CDMA4_OWCFG_RESERVED3_SHIFT)
+#define  CDMA4_OWCFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_OWCFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA4_OWCFG_RESERVED3_SHIFT))
+
+#define  CDMA4_OWCFG_PACKNUNPACK_MASK 0x2
+#define  CDMA4_OWCFG_PACKNUNPACK_SHIFT 1
+#define  CDMA4_OWCFG_PACKNUNPACK_MASK_SHIFT(reg) (((reg) & CDMA4_OWCFG_PACKNUNPACK_MASK) >> CDMA4_OWCFG_PACKNUNPACK_SHIFT)
+#define  CDMA4_OWCFG_PACKNUNPACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_OWCFG_PACKNUNPACK_MASK) | (((uint32_t)val) << CDMA4_OWCFG_PACKNUNPACK_SHIFT))
+
+#define  CDMA4_OWCFG_OWEN_MASK 0x1
+#define  CDMA4_OWCFG_OWEN_SHIFT 0
+#define  CDMA4_OWCFG_OWEN_MASK_SHIFT(reg) (((reg) & CDMA4_OWCFG_OWEN_MASK) >> CDMA4_OWCFG_OWEN_SHIFT)
+#define  CDMA4_OWCFG_OWEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA4_OWCFG_OWEN_MASK) | (((uint32_t)val) << CDMA4_OWCFG_OWEN_SHIFT))
+
+//====================================================================
+//
+//Register File: CDMA (Instance 6 of 12) (CDMA5)
+/** \brief Registers for Central DMA module*/
+//
+//====================================================================
+
+//====================================================================
+//Register: DMA Configuration Register (CFG)
+/** \brief This register is used to configure the data flow for each channel.*/
+//====================================================================
+
+#define  CDMA5_CFG_WRDELAY_MASK 0xf0000000
+#define  CDMA5_CFG_WRDELAY_SHIFT 28
+#define  CDMA5_CFG_WRDELAY_MASK_SHIFT(reg) (((reg) & CDMA5_CFG_WRDELAY_MASK) >> CDMA5_CFG_WRDELAY_SHIFT)
+#define  CDMA5_CFG_WRDELAY_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CFG_WRDELAY_MASK) | (((uint32_t)val) << CDMA5_CFG_WRDELAY_SHIFT))
+
+#define  CDMA5_CFG_RESERVED1_MASK 0xc000000
+#define  CDMA5_CFG_RESERVED1_SHIFT 26
+#define  CDMA5_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA5_CFG_RESERVED1_MASK) >> CDMA5_CFG_RESERVED1_SHIFT)
+#define  CDMA5_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA5_CFG_RESERVED1_SHIFT))
+
+#define  CDMA5_CFG_DATAUNITSIZE_MASK 0x3000000
+#define  CDMA5_CFG_DATAUNITSIZE_SHIFT 24
+#define  CDMA5_CFG_DATAUNITSIZE_MASK_SHIFT(reg) (((reg) & CDMA5_CFG_DATAUNITSIZE_MASK) >> CDMA5_CFG_DATAUNITSIZE_SHIFT)
+#define  CDMA5_CFG_DATAUNITSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CFG_DATAUNITSIZE_MASK) | (((uint32_t)val) << CDMA5_CFG_DATAUNITSIZE_SHIFT))
+
+#define  CDMA5_CFG_HALT_MASK 0x800000
+#define  CDMA5_CFG_HALT_SHIFT 23
+#define  CDMA5_CFG_HALT_MASK_SHIFT(reg) (((reg) & CDMA5_CFG_HALT_MASK) >> CDMA5_CFG_HALT_SHIFT)
+#define  CDMA5_CFG_HALT_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CFG_HALT_MASK) | (((uint32_t)val) << CDMA5_CFG_HALT_SHIFT))
+
+#define  CDMA5_CFG_FLOWCTRL_MASK 0x700000
+#define  CDMA5_CFG_FLOWCTRL_SHIFT 20
+#define  CDMA5_CFG_FLOWCTRL_MASK_SHIFT(reg) (((reg) & CDMA5_CFG_FLOWCTRL_MASK) >> CDMA5_CFG_FLOWCTRL_SHIFT)
+#define  CDMA5_CFG_FLOWCTRL_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CFG_FLOWCTRL_MASK) | (((uint32_t)val) << CDMA5_CFG_FLOWCTRL_SHIFT))
+
+#define  CDMA5_CFG_RESERVED2_MASK 0xc0000
+#define  CDMA5_CFG_RESERVED2_SHIFT 18
+#define  CDMA5_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA5_CFG_RESERVED2_MASK) >> CDMA5_CFG_RESERVED2_SHIFT)
+#define  CDMA5_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA5_CFG_RESERVED2_SHIFT))
+
+#define  CDMA5_CFG_DESTPID_MASK 0x3f000
+#define  CDMA5_CFG_DESTPID_SHIFT 12
+#define  CDMA5_CFG_DESTPID_MASK_SHIFT(reg) (((reg) & CDMA5_CFG_DESTPID_MASK) >> CDMA5_CFG_DESTPID_SHIFT)
+#define  CDMA5_CFG_DESTPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CFG_DESTPID_MASK) | (((uint32_t)val) << CDMA5_CFG_DESTPID_SHIFT))
+
+#define  CDMA5_CFG_RESERVED3_MASK 0xc00
+#define  CDMA5_CFG_RESERVED3_SHIFT 10
+#define  CDMA5_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA5_CFG_RESERVED3_MASK) >> CDMA5_CFG_RESERVED3_SHIFT)
+#define  CDMA5_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA5_CFG_RESERVED3_SHIFT))
+
+#define  CDMA5_CFG_SRCPID_MASK 0x3f0
+#define  CDMA5_CFG_SRCPID_SHIFT 4
+#define  CDMA5_CFG_SRCPID_MASK_SHIFT(reg) (((reg) & CDMA5_CFG_SRCPID_MASK) >> CDMA5_CFG_SRCPID_SHIFT)
+#define  CDMA5_CFG_SRCPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CFG_SRCPID_MASK) | (((uint32_t)val) << CDMA5_CFG_SRCPID_SHIFT))
+
+#define  CDMA5_CFG_DESTENDIAN_MASK 0x8
+#define  CDMA5_CFG_DESTENDIAN_SHIFT 3
+#define  CDMA5_CFG_DESTENDIAN_MASK_SHIFT(reg) (((reg) & CDMA5_CFG_DESTENDIAN_MASK) >> CDMA5_CFG_DESTENDIAN_SHIFT)
+#define  CDMA5_CFG_DESTENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CFG_DESTENDIAN_MASK) | (((uint32_t)val) << CDMA5_CFG_DESTENDIAN_SHIFT))
+
+#define  CDMA5_CFG_SRCENDIAN_MASK 0x4
+#define  CDMA5_CFG_SRCENDIAN_SHIFT 2
+#define  CDMA5_CFG_SRCENDIAN_MASK_SHIFT(reg) (((reg) & CDMA5_CFG_SRCENDIAN_MASK) >> CDMA5_CFG_SRCENDIAN_SHIFT)
+#define  CDMA5_CFG_SRCENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CFG_SRCENDIAN_MASK) | (((uint32_t)val) << CDMA5_CFG_SRCENDIAN_SHIFT))
+
+#define  CDMA5_CFG_FILL_MASK 0x2
+#define  CDMA5_CFG_FILL_SHIFT 1
+#define  CDMA5_CFG_FILL_MASK_SHIFT(reg) (((reg) & CDMA5_CFG_FILL_MASK) >> CDMA5_CFG_FILL_SHIFT)
+#define  CDMA5_CFG_FILL_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CFG_FILL_MASK) | (((uint32_t)val) << CDMA5_CFG_FILL_SHIFT))
+
+#define  CDMA5_CFG_ENABLE_MASK 0x1
+#define  CDMA5_CFG_ENABLE_SHIFT 0
+#define  CDMA5_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & CDMA5_CFG_ENABLE_MASK) >> CDMA5_CFG_ENABLE_SHIFT)
+#define  CDMA5_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CFG_ENABLE_MASK) | (((uint32_t)val) << CDMA5_CFG_ENABLE_SHIFT))
+
+//====================================================================
+//Register: DMA Channel Control Register (Control)
+/** \brief This register programs each channel for control features such as
+      auto-increment, initiator select, burst size, transfer size, and
+      transfer widths.*/
+//====================================================================
+
+#define  CDMA5_CONTROL_TRANSSIZE_MASK 0xffff0000
+#define  CDMA5_CONTROL_TRANSSIZE_SHIFT 16
+#define  CDMA5_CONTROL_TRANSSIZE_MASK_SHIFT(reg) (((reg) & CDMA5_CONTROL_TRANSSIZE_MASK) >> CDMA5_CONTROL_TRANSSIZE_SHIFT)
+#define  CDMA5_CONTROL_TRANSSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CONTROL_TRANSSIZE_MASK) | (((uint32_t)val) << CDMA5_CONTROL_TRANSSIZE_SHIFT))
+
+#define  CDMA5_CONTROL_RESERVED1_MASK 0xc000
+#define  CDMA5_CONTROL_RESERVED1_SHIFT 14
+#define  CDMA5_CONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA5_CONTROL_RESERVED1_MASK) >> CDMA5_CONTROL_RESERVED1_SHIFT)
+#define  CDMA5_CONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA5_CONTROL_RESERVED1_SHIFT))
+
+#define  CDMA5_CONTROL_DESTADDRINC_MASK 0x2000
+#define  CDMA5_CONTROL_DESTADDRINC_SHIFT 13
+#define  CDMA5_CONTROL_DESTADDRINC_MASK_SHIFT(reg) (((reg) & CDMA5_CONTROL_DESTADDRINC_MASK) >> CDMA5_CONTROL_DESTADDRINC_SHIFT)
+#define  CDMA5_CONTROL_DESTADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CONTROL_DESTADDRINC_MASK) | (((uint32_t)val) << CDMA5_CONTROL_DESTADDRINC_SHIFT))
+
+#define  CDMA5_CONTROL_SRCADDRINC_MASK 0x1000
+#define  CDMA5_CONTROL_SRCADDRINC_SHIFT 12
+#define  CDMA5_CONTROL_SRCADDRINC_MASK_SHIFT(reg) (((reg) & CDMA5_CONTROL_SRCADDRINC_MASK) >> CDMA5_CONTROL_SRCADDRINC_SHIFT)
+#define  CDMA5_CONTROL_SRCADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CONTROL_SRCADDRINC_MASK) | (((uint32_t)val) << CDMA5_CONTROL_SRCADDRINC_SHIFT))
+
+#define  CDMA5_CONTROL_DESTXFERWIDTH_MASK 0xc00
+#define  CDMA5_CONTROL_DESTXFERWIDTH_SHIFT 10
+#define  CDMA5_CONTROL_DESTXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA5_CONTROL_DESTXFERWIDTH_MASK) >> CDMA5_CONTROL_DESTXFERWIDTH_SHIFT)
+#define  CDMA5_CONTROL_DESTXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CONTROL_DESTXFERWIDTH_MASK) | (((uint32_t)val) << CDMA5_CONTROL_DESTXFERWIDTH_SHIFT))
+
+#define  CDMA5_CONTROL_SRCXFERWIDTH_MASK 0x300
+#define  CDMA5_CONTROL_SRCXFERWIDTH_SHIFT 8
+#define  CDMA5_CONTROL_SRCXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA5_CONTROL_SRCXFERWIDTH_MASK) >> CDMA5_CONTROL_SRCXFERWIDTH_SHIFT)
+#define  CDMA5_CONTROL_SRCXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CONTROL_SRCXFERWIDTH_MASK) | (((uint32_t)val) << CDMA5_CONTROL_SRCXFERWIDTH_SHIFT))
+
+#define  CDMA5_CONTROL_RESERVED2_MASK 0xc0
+#define  CDMA5_CONTROL_RESERVED2_SHIFT 6
+#define  CDMA5_CONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA5_CONTROL_RESERVED2_MASK) >> CDMA5_CONTROL_RESERVED2_SHIFT)
+#define  CDMA5_CONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA5_CONTROL_RESERVED2_SHIFT))
+
+#define  CDMA5_CONTROL_DESTBURSTSIZE_MASK 0x30
+#define  CDMA5_CONTROL_DESTBURSTSIZE_SHIFT 4
+#define  CDMA5_CONTROL_DESTBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA5_CONTROL_DESTBURSTSIZE_MASK) >> CDMA5_CONTROL_DESTBURSTSIZE_SHIFT)
+#define  CDMA5_CONTROL_DESTBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CONTROL_DESTBURSTSIZE_MASK) | (((uint32_t)val) << CDMA5_CONTROL_DESTBURSTSIZE_SHIFT))
+
+#define  CDMA5_CONTROL_RESERVED3_MASK 0xc
+#define  CDMA5_CONTROL_RESERVED3_SHIFT 2
+#define  CDMA5_CONTROL_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA5_CONTROL_RESERVED3_MASK) >> CDMA5_CONTROL_RESERVED3_SHIFT)
+#define  CDMA5_CONTROL_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CONTROL_RESERVED3_MASK) | (((uint32_t)val) << CDMA5_CONTROL_RESERVED3_SHIFT))
+
+#define  CDMA5_CONTROL_SRCBURSTSIZE_MASK 0x3
+#define  CDMA5_CONTROL_SRCBURSTSIZE_SHIFT 0
+#define  CDMA5_CONTROL_SRCBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA5_CONTROL_SRCBURSTSIZE_MASK) >> CDMA5_CONTROL_SRCBURSTSIZE_SHIFT)
+#define  CDMA5_CONTROL_SRCBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_CONTROL_SRCBURSTSIZE_MASK) | (((uint32_t)val) << CDMA5_CONTROL_SRCBURSTSIZE_SHIFT))
+
+//====================================================================
+//Register: DMA Status Register (Status)
+//====================================================================
+
+#define  CDMA5_STATUS_RESERVED1_MASK 0xfff00000
+#define  CDMA5_STATUS_RESERVED1_SHIFT 20
+#define  CDMA5_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA5_STATUS_RESERVED1_MASK) >> CDMA5_STATUS_RESERVED1_SHIFT)
+#define  CDMA5_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_STATUS_RESERVED1_MASK) | (((uint32_t)val) << CDMA5_STATUS_RESERVED1_SHIFT))
+
+#define  CDMA5_STATUS_ODDWIDTHHW_MASK 0x80000
+#define  CDMA5_STATUS_ODDWIDTHHW_SHIFT 19
+#define  CDMA5_STATUS_ODDWIDTHHW_MASK_SHIFT(reg) (((reg) & CDMA5_STATUS_ODDWIDTHHW_MASK) >> CDMA5_STATUS_ODDWIDTHHW_SHIFT)
+#define  CDMA5_STATUS_ODDWIDTHHW_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_STATUS_ODDWIDTHHW_MASK) | (((uint32_t)val) << CDMA5_STATUS_ODDWIDTHHW_SHIFT))
+
+#define  CDMA5_STATUS_DESCFETCH_MASK 0x40000
+#define  CDMA5_STATUS_DESCFETCH_SHIFT 18
+#define  CDMA5_STATUS_DESCFETCH_MASK_SHIFT(reg) (((reg) & CDMA5_STATUS_DESCFETCH_MASK) >> CDMA5_STATUS_DESCFETCH_SHIFT)
+#define  CDMA5_STATUS_DESCFETCH_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_STATUS_DESCFETCH_MASK) | (((uint32_t)val) << CDMA5_STATUS_DESCFETCH_SHIFT))
+
+#define  CDMA5_STATUS_DMABUSY_MASK 0x20000
+#define  CDMA5_STATUS_DMABUSY_SHIFT 17
+#define  CDMA5_STATUS_DMABUSY_MASK_SHIFT(reg) (((reg) & CDMA5_STATUS_DMABUSY_MASK) >> CDMA5_STATUS_DMABUSY_SHIFT)
+#define  CDMA5_STATUS_DMABUSY_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_STATUS_DMABUSY_MASK) | (((uint32_t)val) << CDMA5_STATUS_DMABUSY_SHIFT))
+
+#define  CDMA5_STATUS_FIFOEMPTY_MASK 0x10000
+#define  CDMA5_STATUS_FIFOEMPTY_SHIFT 16
+#define  CDMA5_STATUS_FIFOEMPTY_MASK_SHIFT(reg) (((reg) & CDMA5_STATUS_FIFOEMPTY_MASK) >> CDMA5_STATUS_FIFOEMPTY_SHIFT)
+#define  CDMA5_STATUS_FIFOEMPTY_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_STATUS_FIFOEMPTY_MASK) | (((uint32_t)val) << CDMA5_STATUS_FIFOEMPTY_SHIFT))
+
+#define  CDMA5_STATUS_BYTESREMAIN_MASK 0xffff
+#define  CDMA5_STATUS_BYTESREMAIN_SHIFT 0
+#define  CDMA5_STATUS_BYTESREMAIN_MASK_SHIFT(reg) (((reg) & CDMA5_STATUS_BYTESREMAIN_MASK) >> CDMA5_STATUS_BYTESREMAIN_SHIFT)
+#define  CDMA5_STATUS_BYTESREMAIN_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_STATUS_BYTESREMAIN_MASK) | (((uint32_t)val) << CDMA5_STATUS_BYTESREMAIN_SHIFT))
+
+//====================================================================
+//Register: DMA Source Address Register (SrcAddr)
+/** \brief The Source Address register is programmed with the address of the location
+      for the DMA to transfer from. If the source is memory, the address can be
+      byte aligned.
+<br>*/
+//====================================================================
+
+#define  CDMA5_SRCADDR_SRCADDR_MASK 0xffffffff
+#define  CDMA5_SRCADDR_SRCADDR_SHIFT 0
+#define  CDMA5_SRCADDR_SRCADDR_MASK_SHIFT(reg) (((reg) & CDMA5_SRCADDR_SRCADDR_MASK) >> CDMA5_SRCADDR_SRCADDR_SHIFT)
+#define  CDMA5_SRCADDR_SRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_SRCADDR_SRCADDR_MASK) | (((uint32_t)val) << CDMA5_SRCADDR_SRCADDR_SHIFT))
+
+//====================================================================
+//Register: Current Source Address Register (SrcAddrStat)
+/** \brief This register contains the current address for the source device.*/
+//====================================================================
+
+#define  CDMA5_SRCADDRSTAT_CURRSRCADDR_MASK 0xffffffff
+#define  CDMA5_SRCADDRSTAT_CURRSRCADDR_SHIFT 0
+#define  CDMA5_SRCADDRSTAT_CURRSRCADDR_MASK_SHIFT(reg) (((reg) & CDMA5_SRCADDRSTAT_CURRSRCADDR_MASK) >> CDMA5_SRCADDRSTAT_CURRSRCADDR_SHIFT)
+#define  CDMA5_SRCADDRSTAT_CURRSRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_SRCADDRSTAT_CURRSRCADDR_MASK) | (((uint32_t)val) << CDMA5_SRCADDRSTAT_CURRSRCADDR_SHIFT))
+
+//====================================================================
+//Register: Destination Address Register (DestAddr)
+/** \brief The Destination Address register is programmed with the address of the location
+      for the DMA to transfer to. If the destination is memory, the address can be
+      byte aligned.*/
+//====================================================================
+
+#define  CDMA5_DESTADDR_DESTADDR_MASK 0xffffffff
+#define  CDMA5_DESTADDR_DESTADDR_SHIFT 0
+#define  CDMA5_DESTADDR_DESTADDR_MASK_SHIFT(reg) (((reg) & CDMA5_DESTADDR_DESTADDR_MASK) >> CDMA5_DESTADDR_DESTADDR_SHIFT)
+#define  CDMA5_DESTADDR_DESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_DESTADDR_DESTADDR_MASK) | (((uint32_t)val) << CDMA5_DESTADDR_DESTADDR_SHIFT))
+
+//====================================================================
+//Register: Current Destination Address Register (DestAddrStat)
+/** \brief This register contains the current address for the destination device.*/
+//====================================================================
+
+#define  CDMA5_DESTADDRSTAT_CURRDESTADDR_MASK 0xffffffff
+#define  CDMA5_DESTADDRSTAT_CURRDESTADDR_SHIFT 0
+#define  CDMA5_DESTADDRSTAT_CURRDESTADDR_MASK_SHIFT(reg) (((reg) & CDMA5_DESTADDRSTAT_CURRDESTADDR_MASK) >> CDMA5_DESTADDRSTAT_CURRDESTADDR_SHIFT)
+#define  CDMA5_DESTADDRSTAT_CURRDESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_DESTADDRSTAT_CURRDESTADDR_MASK) | (((uint32_t)val) << CDMA5_DESTADDRSTAT_CURRDESTADDR_SHIFT))
+
+//====================================================================
+//Register: Fill Value Register (FillValue)
+/** \brief This register contains the data value to write to the destination
+      address.*/
+//====================================================================
+
+#define  CDMA5_FILLVALUE_FILLVAL_MASK 0xffffffff
+#define  CDMA5_FILLVALUE_FILLVAL_SHIFT 0
+#define  CDMA5_FILLVALUE_FILLVAL_MASK_SHIFT(reg) (((reg) & CDMA5_FILLVALUE_FILLVAL_MASK) >> CDMA5_FILLVALUE_FILLVAL_SHIFT)
+#define  CDMA5_FILLVALUE_FILLVAL_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_FILLVALUE_FILLVAL_MASK) | (((uint32_t)val) << CDMA5_FILLVALUE_FILLVAL_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (intEn)
+//====================================================================
+
+#define  CDMA5_INTEN_RESERVED1_MASK 0xfffffff0
+#define  CDMA5_INTEN_RESERVED1_SHIFT 4
+#define  CDMA5_INTEN_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA5_INTEN_RESERVED1_MASK) >> CDMA5_INTEN_RESERVED1_SHIFT)
+#define  CDMA5_INTEN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTEN_RESERVED1_MASK) | (((uint32_t)val) << CDMA5_INTEN_RESERVED1_SHIFT))
+
+#define  CDMA5_INTEN_CLEARCOMPLETEEN_MASK 0x8
+#define  CDMA5_INTEN_CLEARCOMPLETEEN_SHIFT 3
+#define  CDMA5_INTEN_CLEARCOMPLETEEN_MASK_SHIFT(reg) (((reg) & CDMA5_INTEN_CLEARCOMPLETEEN_MASK) >> CDMA5_INTEN_CLEARCOMPLETEEN_SHIFT)
+#define  CDMA5_INTEN_CLEARCOMPLETEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTEN_CLEARCOMPLETEEN_MASK) | (((uint32_t)val) << CDMA5_INTEN_CLEARCOMPLETEEN_SHIFT))
+
+#define  CDMA5_INTEN_CHAINDONEEN_MASK 0x4
+#define  CDMA5_INTEN_CHAINDONEEN_SHIFT 2
+#define  CDMA5_INTEN_CHAINDONEEN_MASK_SHIFT(reg) (((reg) & CDMA5_INTEN_CHAINDONEEN_MASK) >> CDMA5_INTEN_CHAINDONEEN_SHIFT)
+#define  CDMA5_INTEN_CHAINDONEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTEN_CHAINDONEEN_MASK) | (((uint32_t)val) << CDMA5_INTEN_CHAINDONEEN_SHIFT))
+
+#define  CDMA5_INTEN_TIMEOUTEN_MASK 0x2
+#define  CDMA5_INTEN_TIMEOUTEN_SHIFT 1
+#define  CDMA5_INTEN_TIMEOUTEN_MASK_SHIFT(reg) (((reg) & CDMA5_INTEN_TIMEOUTEN_MASK) >> CDMA5_INTEN_TIMEOUTEN_SHIFT)
+#define  CDMA5_INTEN_TIMEOUTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTEN_TIMEOUTEN_MASK) | (((uint32_t)val) << CDMA5_INTEN_TIMEOUTEN_SHIFT))
+
+#define  CDMA5_INTEN_TERMCNTEN_MASK 0x1
+#define  CDMA5_INTEN_TERMCNTEN_SHIFT 0
+#define  CDMA5_INTEN_TERMCNTEN_MASK_SHIFT(reg) (((reg) & CDMA5_INTEN_TERMCNTEN_MASK) >> CDMA5_INTEN_TERMCNTEN_SHIFT)
+#define  CDMA5_INTEN_TERMCNTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTEN_TERMCNTEN_MASK) | (((uint32_t)val) << CDMA5_INTEN_TERMCNTEN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (intPend)
+//====================================================================
+
+#define  CDMA5_INTPEND_RESERVED1_MASK 0xfffffff0
+#define  CDMA5_INTPEND_RESERVED1_SHIFT 4
+#define  CDMA5_INTPEND_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA5_INTPEND_RESERVED1_MASK) >> CDMA5_INTPEND_RESERVED1_SHIFT)
+#define  CDMA5_INTPEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTPEND_RESERVED1_MASK) | (((uint32_t)val) << CDMA5_INTPEND_RESERVED1_SHIFT))
+
+#define  CDMA5_INTPEND_CLEARCOMPLETEPEND_MASK 0x8
+#define  CDMA5_INTPEND_CLEARCOMPLETEPEND_SHIFT 3
+#define  CDMA5_INTPEND_CLEARCOMPLETEPEND_MASK_SHIFT(reg) (((reg) & CDMA5_INTPEND_CLEARCOMPLETEPEND_MASK) >> CDMA5_INTPEND_CLEARCOMPLETEPEND_SHIFT)
+#define  CDMA5_INTPEND_CLEARCOMPLETEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTPEND_CLEARCOMPLETEPEND_MASK) | (((uint32_t)val) << CDMA5_INTPEND_CLEARCOMPLETEPEND_SHIFT))
+
+#define  CDMA5_INTPEND_CHAINDONEPEND_MASK 0x4
+#define  CDMA5_INTPEND_CHAINDONEPEND_SHIFT 2
+#define  CDMA5_INTPEND_CHAINDONEPEND_MASK_SHIFT(reg) (((reg) & CDMA5_INTPEND_CHAINDONEPEND_MASK) >> CDMA5_INTPEND_CHAINDONEPEND_SHIFT)
+#define  CDMA5_INTPEND_CHAINDONEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTPEND_CHAINDONEPEND_MASK) | (((uint32_t)val) << CDMA5_INTPEND_CHAINDONEPEND_SHIFT))
+
+#define  CDMA5_INTPEND_TIMEOUTPEND_MASK 0x2
+#define  CDMA5_INTPEND_TIMEOUTPEND_SHIFT 1
+#define  CDMA5_INTPEND_TIMEOUTPEND_MASK_SHIFT(reg) (((reg) & CDMA5_INTPEND_TIMEOUTPEND_MASK) >> CDMA5_INTPEND_TIMEOUTPEND_SHIFT)
+#define  CDMA5_INTPEND_TIMEOUTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTPEND_TIMEOUTPEND_MASK) | (((uint32_t)val) << CDMA5_INTPEND_TIMEOUTPEND_SHIFT))
+
+#define  CDMA5_INTPEND_TERMCNTPEND_MASK 0x1
+#define  CDMA5_INTPEND_TERMCNTPEND_SHIFT 0
+#define  CDMA5_INTPEND_TERMCNTPEND_MASK_SHIFT(reg) (((reg) & CDMA5_INTPEND_TERMCNTPEND_MASK) >> CDMA5_INTPEND_TERMCNTPEND_SHIFT)
+#define  CDMA5_INTPEND_TERMCNTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTPEND_TERMCNTPEND_MASK) | (((uint32_t)val) << CDMA5_INTPEND_TERMCNTPEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (intAck)
+//====================================================================
+
+#define  CDMA5_INTACK_RESERVED1_MASK 0xfffffff0
+#define  CDMA5_INTACK_RESERVED1_SHIFT 4
+#define  CDMA5_INTACK_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA5_INTACK_RESERVED1_MASK) >> CDMA5_INTACK_RESERVED1_SHIFT)
+#define  CDMA5_INTACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTACK_RESERVED1_MASK) | (((uint32_t)val) << CDMA5_INTACK_RESERVED1_SHIFT))
+
+#define  CDMA5_INTACK_CLEARCOMPLETEACK_MASK 0x8
+#define  CDMA5_INTACK_CLEARCOMPLETEACK_SHIFT 3
+#define  CDMA5_INTACK_CLEARCOMPLETEACK_MASK_SHIFT(reg) (((reg) & CDMA5_INTACK_CLEARCOMPLETEACK_MASK) >> CDMA5_INTACK_CLEARCOMPLETEACK_SHIFT)
+#define  CDMA5_INTACK_CLEARCOMPLETEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTACK_CLEARCOMPLETEACK_MASK) | (((uint32_t)val) << CDMA5_INTACK_CLEARCOMPLETEACK_SHIFT))
+
+#define  CDMA5_INTACK_CHAINDONEACK_MASK 0x4
+#define  CDMA5_INTACK_CHAINDONEACK_SHIFT 2
+#define  CDMA5_INTACK_CHAINDONEACK_MASK_SHIFT(reg) (((reg) & CDMA5_INTACK_CHAINDONEACK_MASK) >> CDMA5_INTACK_CHAINDONEACK_SHIFT)
+#define  CDMA5_INTACK_CHAINDONEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTACK_CHAINDONEACK_MASK) | (((uint32_t)val) << CDMA5_INTACK_CHAINDONEACK_SHIFT))
+
+#define  CDMA5_INTACK_TIMEOUTACK_MASK 0x2
+#define  CDMA5_INTACK_TIMEOUTACK_SHIFT 1
+#define  CDMA5_INTACK_TIMEOUTACK_MASK_SHIFT(reg) (((reg) & CDMA5_INTACK_TIMEOUTACK_MASK) >> CDMA5_INTACK_TIMEOUTACK_SHIFT)
+#define  CDMA5_INTACK_TIMEOUTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTACK_TIMEOUTACK_MASK) | (((uint32_t)val) << CDMA5_INTACK_TIMEOUTACK_SHIFT))
+
+#define  CDMA5_INTACK_TERMCNTACK_MASK 0x1
+#define  CDMA5_INTACK_TERMCNTACK_SHIFT 0
+#define  CDMA5_INTACK_TERMCNTACK_MASK_SHIFT(reg) (((reg) & CDMA5_INTACK_TERMCNTACK_MASK) >> CDMA5_INTACK_TERMCNTACK_SHIFT)
+#define  CDMA5_INTACK_TERMCNTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTACK_TERMCNTACK_MASK) | (((uint32_t)val) << CDMA5_INTACK_TERMCNTACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (intForce)
+//====================================================================
+
+#define  CDMA5_INTFORCE_RESERVED1_MASK 0xfffffff0
+#define  CDMA5_INTFORCE_RESERVED1_SHIFT 4
+#define  CDMA5_INTFORCE_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA5_INTFORCE_RESERVED1_MASK) >> CDMA5_INTFORCE_RESERVED1_SHIFT)
+#define  CDMA5_INTFORCE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTFORCE_RESERVED1_MASK) | (((uint32_t)val) << CDMA5_INTFORCE_RESERVED1_SHIFT))
+
+#define  CDMA5_INTFORCE_CLEARCOMPLETEFOR_MASK 0x8
+#define  CDMA5_INTFORCE_CLEARCOMPLETEFOR_SHIFT 3
+#define  CDMA5_INTFORCE_CLEARCOMPLETEFOR_MASK_SHIFT(reg) (((reg) & CDMA5_INTFORCE_CLEARCOMPLETEFOR_MASK) >> CDMA5_INTFORCE_CLEARCOMPLETEFOR_SHIFT)
+#define  CDMA5_INTFORCE_CLEARCOMPLETEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTFORCE_CLEARCOMPLETEFOR_MASK) | (((uint32_t)val) << CDMA5_INTFORCE_CLEARCOMPLETEFOR_SHIFT))
+
+#define  CDMA5_INTFORCE_CHAINDONEFOR_MASK 0x4
+#define  CDMA5_INTFORCE_CHAINDONEFOR_SHIFT 2
+#define  CDMA5_INTFORCE_CHAINDONEFOR_MASK_SHIFT(reg) (((reg) & CDMA5_INTFORCE_CHAINDONEFOR_MASK) >> CDMA5_INTFORCE_CHAINDONEFOR_SHIFT)
+#define  CDMA5_INTFORCE_CHAINDONEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTFORCE_CHAINDONEFOR_MASK) | (((uint32_t)val) << CDMA5_INTFORCE_CHAINDONEFOR_SHIFT))
+
+#define  CDMA5_INTFORCE_TIMEOUTFOR_MASK 0x2
+#define  CDMA5_INTFORCE_TIMEOUTFOR_SHIFT 1
+#define  CDMA5_INTFORCE_TIMEOUTFOR_MASK_SHIFT(reg) (((reg) & CDMA5_INTFORCE_TIMEOUTFOR_MASK) >> CDMA5_INTFORCE_TIMEOUTFOR_SHIFT)
+#define  CDMA5_INTFORCE_TIMEOUTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTFORCE_TIMEOUTFOR_MASK) | (((uint32_t)val) << CDMA5_INTFORCE_TIMEOUTFOR_SHIFT))
+
+#define  CDMA5_INTFORCE_TERMCNTFOR_MASK 0x1
+#define  CDMA5_INTFORCE_TERMCNTFOR_SHIFT 0
+#define  CDMA5_INTFORCE_TERMCNTFOR_MASK_SHIFT(reg) (((reg) & CDMA5_INTFORCE_TERMCNTFOR_MASK) >> CDMA5_INTFORCE_TERMCNTFOR_SHIFT)
+#define  CDMA5_INTFORCE_TERMCNTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_INTFORCE_TERMCNTFOR_MASK) | (((uint32_t)val) << CDMA5_INTFORCE_TERMCNTFOR_SHIFT))
+
+//====================================================================
+//Register: DMA Timer Control (TimerControl)
+/** \brief The Timer Control register specifies the number of timebase cycles between word
+      transfers before generating a timeout interrupt. The timer is reset each time
+      a transfer occurs.*/
+//====================================================================
+
+#define  CDMA5_TIMERCONTROL_RESERVED1_MASK 0xffff0000
+#define  CDMA5_TIMERCONTROL_RESERVED1_SHIFT 16
+#define  CDMA5_TIMERCONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA5_TIMERCONTROL_RESERVED1_MASK) >> CDMA5_TIMERCONTROL_RESERVED1_SHIFT)
+#define  CDMA5_TIMERCONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_TIMERCONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA5_TIMERCONTROL_RESERVED1_SHIFT))
+
+#define  CDMA5_TIMERCONTROL_TIMERENABLE_MASK 0x8000
+#define  CDMA5_TIMERCONTROL_TIMERENABLE_SHIFT 15
+#define  CDMA5_TIMERCONTROL_TIMERENABLE_MASK_SHIFT(reg) (((reg) & CDMA5_TIMERCONTROL_TIMERENABLE_MASK) >> CDMA5_TIMERCONTROL_TIMERENABLE_SHIFT)
+#define  CDMA5_TIMERCONTROL_TIMERENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_TIMERCONTROL_TIMERENABLE_MASK) | (((uint32_t)val) << CDMA5_TIMERCONTROL_TIMERENABLE_SHIFT))
+
+#define  CDMA5_TIMERCONTROL_TIMEBASE_MASK 0x7000
+#define  CDMA5_TIMERCONTROL_TIMEBASE_SHIFT 12
+#define  CDMA5_TIMERCONTROL_TIMEBASE_MASK_SHIFT(reg) (((reg) & CDMA5_TIMERCONTROL_TIMEBASE_MASK) >> CDMA5_TIMERCONTROL_TIMEBASE_SHIFT)
+#define  CDMA5_TIMERCONTROL_TIMEBASE_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_TIMERCONTROL_TIMEBASE_MASK) | (((uint32_t)val) << CDMA5_TIMERCONTROL_TIMEBASE_SHIFT))
+
+#define  CDMA5_TIMERCONTROL_RESERVED2_MASK 0x800
+#define  CDMA5_TIMERCONTROL_RESERVED2_SHIFT 11
+#define  CDMA5_TIMERCONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA5_TIMERCONTROL_RESERVED2_MASK) >> CDMA5_TIMERCONTROL_RESERVED2_SHIFT)
+#define  CDMA5_TIMERCONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_TIMERCONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA5_TIMERCONTROL_RESERVED2_SHIFT))
+
+#define  CDMA5_TIMERCONTROL_COUNT_MASK 0x7ff
+#define  CDMA5_TIMERCONTROL_COUNT_SHIFT 0
+#define  CDMA5_TIMERCONTROL_COUNT_MASK_SHIFT(reg) (((reg) & CDMA5_TIMERCONTROL_COUNT_MASK) >> CDMA5_TIMERCONTROL_COUNT_SHIFT)
+#define  CDMA5_TIMERCONTROL_COUNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_TIMERCONTROL_COUNT_MASK) | (((uint32_t)val) << CDMA5_TIMERCONTROL_COUNT_SHIFT))
+
+//====================================================================
+//Register: Timeout Count Status Register (TimeOutStat)
+/** \brief This register contains the current timeout count.*/
+//====================================================================
+
+#define  CDMA5_TIMEOUTSTAT_RESERVED1_MASK 0xfffff800
+#define  CDMA5_TIMEOUTSTAT_RESERVED1_SHIFT 11
+#define  CDMA5_TIMEOUTSTAT_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA5_TIMEOUTSTAT_RESERVED1_MASK) >> CDMA5_TIMEOUTSTAT_RESERVED1_SHIFT)
+#define  CDMA5_TIMEOUTSTAT_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_TIMEOUTSTAT_RESERVED1_MASK) | (((uint32_t)val) << CDMA5_TIMEOUTSTAT_RESERVED1_SHIFT))
+
+#define  CDMA5_TIMEOUTSTAT_CURRTOCNT_MASK 0x7ff
+#define  CDMA5_TIMEOUTSTAT_CURRTOCNT_SHIFT 0
+#define  CDMA5_TIMEOUTSTAT_CURRTOCNT_MASK_SHIFT(reg) (((reg) & CDMA5_TIMEOUTSTAT_CURRTOCNT_MASK) >> CDMA5_TIMEOUTSTAT_CURRTOCNT_SHIFT)
+#define  CDMA5_TIMEOUTSTAT_CURRTOCNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_TIMEOUTSTAT_CURRTOCNT_MASK) | (((uint32_t)val) << CDMA5_TIMEOUTSTAT_CURRTOCNT_SHIFT))
+
+//====================================================================
+//Register: Linked List Index Register (LLIR)
+/** \brief This register contains a word-aligned address of the first word of the next descriptor. LLI means "linked list index" or pointer to the descriptor in memory. If the LLI register is 0, then the current descriptor (that is loaded in the registers) is the last in the chain, and the DMA channel will stop once the current DMA transfer is completed.*/
+//====================================================================
+
+#define  CDMA5_LLIR_LLINDEX_MASK 0xfffffffc
+#define  CDMA5_LLIR_LLINDEX_SHIFT 2
+#define  CDMA5_LLIR_LLINDEX_MASK_SHIFT(reg) (((reg) & CDMA5_LLIR_LLINDEX_MASK) >> CDMA5_LLIR_LLINDEX_SHIFT)
+#define  CDMA5_LLIR_LLINDEX_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_LLIR_LLINDEX_MASK) | (((uint32_t)val) << CDMA5_LLIR_LLINDEX_SHIFT))
+
+#define  CDMA5_LLIR_RESERVED1_MASK 0x3
+#define  CDMA5_LLIR_RESERVED1_SHIFT 0
+#define  CDMA5_LLIR_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA5_LLIR_RESERVED1_MASK) >> CDMA5_LLIR_RESERVED1_SHIFT)
+#define  CDMA5_LLIR_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_LLIR_RESERVED1_MASK) | (((uint32_t)val) << CDMA5_LLIR_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Odd Width Config Register (OWCFG)
+//====================================================================
+
+#define  CDMA5_OWCFG_RESERVED1_MASK 0xfffe0000
+#define  CDMA5_OWCFG_RESERVED1_SHIFT 17
+#define  CDMA5_OWCFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA5_OWCFG_RESERVED1_MASK) >> CDMA5_OWCFG_RESERVED1_SHIFT)
+#define  CDMA5_OWCFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_OWCFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA5_OWCFG_RESERVED1_SHIFT))
+
+#define  CDMA5_OWCFG_EXTRABITS_MASK 0x1f000
+#define  CDMA5_OWCFG_EXTRABITS_SHIFT 12
+#define  CDMA5_OWCFG_EXTRABITS_MASK_SHIFT(reg) (((reg) & CDMA5_OWCFG_EXTRABITS_MASK) >> CDMA5_OWCFG_EXTRABITS_SHIFT)
+#define  CDMA5_OWCFG_EXTRABITS_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_OWCFG_EXTRABITS_MASK) | (((uint32_t)val) << CDMA5_OWCFG_EXTRABITS_SHIFT))
+
+#define  CDMA5_OWCFG_RESERVED2_MASK 0xe00
+#define  CDMA5_OWCFG_RESERVED2_SHIFT 9
+#define  CDMA5_OWCFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA5_OWCFG_RESERVED2_MASK) >> CDMA5_OWCFG_RESERVED2_SHIFT)
+#define  CDMA5_OWCFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_OWCFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA5_OWCFG_RESERVED2_SHIFT))
+
+#define  CDMA5_OWCFG_ODDWIDTH_MASK 0x1f0
+#define  CDMA5_OWCFG_ODDWIDTH_SHIFT 4
+#define  CDMA5_OWCFG_ODDWIDTH_MASK_SHIFT(reg) (((reg) & CDMA5_OWCFG_ODDWIDTH_MASK) >> CDMA5_OWCFG_ODDWIDTH_SHIFT)
+#define  CDMA5_OWCFG_ODDWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_OWCFG_ODDWIDTH_MASK) | (((uint32_t)val) << CDMA5_OWCFG_ODDWIDTH_SHIFT))
+
+#define  CDMA5_OWCFG_RESERVED3_MASK 0xc
+#define  CDMA5_OWCFG_RESERVED3_SHIFT 2
+#define  CDMA5_OWCFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA5_OWCFG_RESERVED3_MASK) >> CDMA5_OWCFG_RESERVED3_SHIFT)
+#define  CDMA5_OWCFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_OWCFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA5_OWCFG_RESERVED3_SHIFT))
+
+#define  CDMA5_OWCFG_PACKNUNPACK_MASK 0x2
+#define  CDMA5_OWCFG_PACKNUNPACK_SHIFT 1
+#define  CDMA5_OWCFG_PACKNUNPACK_MASK_SHIFT(reg) (((reg) & CDMA5_OWCFG_PACKNUNPACK_MASK) >> CDMA5_OWCFG_PACKNUNPACK_SHIFT)
+#define  CDMA5_OWCFG_PACKNUNPACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_OWCFG_PACKNUNPACK_MASK) | (((uint32_t)val) << CDMA5_OWCFG_PACKNUNPACK_SHIFT))
+
+#define  CDMA5_OWCFG_OWEN_MASK 0x1
+#define  CDMA5_OWCFG_OWEN_SHIFT 0
+#define  CDMA5_OWCFG_OWEN_MASK_SHIFT(reg) (((reg) & CDMA5_OWCFG_OWEN_MASK) >> CDMA5_OWCFG_OWEN_SHIFT)
+#define  CDMA5_OWCFG_OWEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA5_OWCFG_OWEN_MASK) | (((uint32_t)val) << CDMA5_OWCFG_OWEN_SHIFT))
+
+//====================================================================
+//
+//Register File: CDMA (Instance 7 of 12) (CDMA6)
+/** \brief Registers for Central DMA module*/
+//
+//====================================================================
+
+//====================================================================
+//Register: DMA Configuration Register (CFG)
+/** \brief This register is used to configure the data flow for each channel.*/
+//====================================================================
+
+#define  CDMA6_CFG_WRDELAY_MASK 0xf0000000
+#define  CDMA6_CFG_WRDELAY_SHIFT 28
+#define  CDMA6_CFG_WRDELAY_MASK_SHIFT(reg) (((reg) & CDMA6_CFG_WRDELAY_MASK) >> CDMA6_CFG_WRDELAY_SHIFT)
+#define  CDMA6_CFG_WRDELAY_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CFG_WRDELAY_MASK) | (((uint32_t)val) << CDMA6_CFG_WRDELAY_SHIFT))
+
+#define  CDMA6_CFG_RESERVED1_MASK 0xc000000
+#define  CDMA6_CFG_RESERVED1_SHIFT 26
+#define  CDMA6_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA6_CFG_RESERVED1_MASK) >> CDMA6_CFG_RESERVED1_SHIFT)
+#define  CDMA6_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA6_CFG_RESERVED1_SHIFT))
+
+#define  CDMA6_CFG_DATAUNITSIZE_MASK 0x3000000
+#define  CDMA6_CFG_DATAUNITSIZE_SHIFT 24
+#define  CDMA6_CFG_DATAUNITSIZE_MASK_SHIFT(reg) (((reg) & CDMA6_CFG_DATAUNITSIZE_MASK) >> CDMA6_CFG_DATAUNITSIZE_SHIFT)
+#define  CDMA6_CFG_DATAUNITSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CFG_DATAUNITSIZE_MASK) | (((uint32_t)val) << CDMA6_CFG_DATAUNITSIZE_SHIFT))
+
+#define  CDMA6_CFG_HALT_MASK 0x800000
+#define  CDMA6_CFG_HALT_SHIFT 23
+#define  CDMA6_CFG_HALT_MASK_SHIFT(reg) (((reg) & CDMA6_CFG_HALT_MASK) >> CDMA6_CFG_HALT_SHIFT)
+#define  CDMA6_CFG_HALT_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CFG_HALT_MASK) | (((uint32_t)val) << CDMA6_CFG_HALT_SHIFT))
+
+#define  CDMA6_CFG_FLOWCTRL_MASK 0x700000
+#define  CDMA6_CFG_FLOWCTRL_SHIFT 20
+#define  CDMA6_CFG_FLOWCTRL_MASK_SHIFT(reg) (((reg) & CDMA6_CFG_FLOWCTRL_MASK) >> CDMA6_CFG_FLOWCTRL_SHIFT)
+#define  CDMA6_CFG_FLOWCTRL_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CFG_FLOWCTRL_MASK) | (((uint32_t)val) << CDMA6_CFG_FLOWCTRL_SHIFT))
+
+#define  CDMA6_CFG_RESERVED2_MASK 0xc0000
+#define  CDMA6_CFG_RESERVED2_SHIFT 18
+#define  CDMA6_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA6_CFG_RESERVED2_MASK) >> CDMA6_CFG_RESERVED2_SHIFT)
+#define  CDMA6_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA6_CFG_RESERVED2_SHIFT))
+
+#define  CDMA6_CFG_DESTPID_MASK 0x3f000
+#define  CDMA6_CFG_DESTPID_SHIFT 12
+#define  CDMA6_CFG_DESTPID_MASK_SHIFT(reg) (((reg) & CDMA6_CFG_DESTPID_MASK) >> CDMA6_CFG_DESTPID_SHIFT)
+#define  CDMA6_CFG_DESTPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CFG_DESTPID_MASK) | (((uint32_t)val) << CDMA6_CFG_DESTPID_SHIFT))
+
+#define  CDMA6_CFG_RESERVED3_MASK 0xc00
+#define  CDMA6_CFG_RESERVED3_SHIFT 10
+#define  CDMA6_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA6_CFG_RESERVED3_MASK) >> CDMA6_CFG_RESERVED3_SHIFT)
+#define  CDMA6_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA6_CFG_RESERVED3_SHIFT))
+
+#define  CDMA6_CFG_SRCPID_MASK 0x3f0
+#define  CDMA6_CFG_SRCPID_SHIFT 4
+#define  CDMA6_CFG_SRCPID_MASK_SHIFT(reg) (((reg) & CDMA6_CFG_SRCPID_MASK) >> CDMA6_CFG_SRCPID_SHIFT)
+#define  CDMA6_CFG_SRCPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CFG_SRCPID_MASK) | (((uint32_t)val) << CDMA6_CFG_SRCPID_SHIFT))
+
+#define  CDMA6_CFG_DESTENDIAN_MASK 0x8
+#define  CDMA6_CFG_DESTENDIAN_SHIFT 3
+#define  CDMA6_CFG_DESTENDIAN_MASK_SHIFT(reg) (((reg) & CDMA6_CFG_DESTENDIAN_MASK) >> CDMA6_CFG_DESTENDIAN_SHIFT)
+#define  CDMA6_CFG_DESTENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CFG_DESTENDIAN_MASK) | (((uint32_t)val) << CDMA6_CFG_DESTENDIAN_SHIFT))
+
+#define  CDMA6_CFG_SRCENDIAN_MASK 0x4
+#define  CDMA6_CFG_SRCENDIAN_SHIFT 2
+#define  CDMA6_CFG_SRCENDIAN_MASK_SHIFT(reg) (((reg) & CDMA6_CFG_SRCENDIAN_MASK) >> CDMA6_CFG_SRCENDIAN_SHIFT)
+#define  CDMA6_CFG_SRCENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CFG_SRCENDIAN_MASK) | (((uint32_t)val) << CDMA6_CFG_SRCENDIAN_SHIFT))
+
+#define  CDMA6_CFG_FILL_MASK 0x2
+#define  CDMA6_CFG_FILL_SHIFT 1
+#define  CDMA6_CFG_FILL_MASK_SHIFT(reg) (((reg) & CDMA6_CFG_FILL_MASK) >> CDMA6_CFG_FILL_SHIFT)
+#define  CDMA6_CFG_FILL_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CFG_FILL_MASK) | (((uint32_t)val) << CDMA6_CFG_FILL_SHIFT))
+
+#define  CDMA6_CFG_ENABLE_MASK 0x1
+#define  CDMA6_CFG_ENABLE_SHIFT 0
+#define  CDMA6_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & CDMA6_CFG_ENABLE_MASK) >> CDMA6_CFG_ENABLE_SHIFT)
+#define  CDMA6_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CFG_ENABLE_MASK) | (((uint32_t)val) << CDMA6_CFG_ENABLE_SHIFT))
+
+//====================================================================
+//Register: DMA Channel Control Register (Control)
+/** \brief This register programs each channel for control features such as
+      auto-increment, initiator select, burst size, transfer size, and
+      transfer widths.*/
+//====================================================================
+
+#define  CDMA6_CONTROL_TRANSSIZE_MASK 0xffff0000
+#define  CDMA6_CONTROL_TRANSSIZE_SHIFT 16
+#define  CDMA6_CONTROL_TRANSSIZE_MASK_SHIFT(reg) (((reg) & CDMA6_CONTROL_TRANSSIZE_MASK) >> CDMA6_CONTROL_TRANSSIZE_SHIFT)
+#define  CDMA6_CONTROL_TRANSSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CONTROL_TRANSSIZE_MASK) | (((uint32_t)val) << CDMA6_CONTROL_TRANSSIZE_SHIFT))
+
+#define  CDMA6_CONTROL_RESERVED1_MASK 0xc000
+#define  CDMA6_CONTROL_RESERVED1_SHIFT 14
+#define  CDMA6_CONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA6_CONTROL_RESERVED1_MASK) >> CDMA6_CONTROL_RESERVED1_SHIFT)
+#define  CDMA6_CONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA6_CONTROL_RESERVED1_SHIFT))
+
+#define  CDMA6_CONTROL_DESTADDRINC_MASK 0x2000
+#define  CDMA6_CONTROL_DESTADDRINC_SHIFT 13
+#define  CDMA6_CONTROL_DESTADDRINC_MASK_SHIFT(reg) (((reg) & CDMA6_CONTROL_DESTADDRINC_MASK) >> CDMA6_CONTROL_DESTADDRINC_SHIFT)
+#define  CDMA6_CONTROL_DESTADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CONTROL_DESTADDRINC_MASK) | (((uint32_t)val) << CDMA6_CONTROL_DESTADDRINC_SHIFT))
+
+#define  CDMA6_CONTROL_SRCADDRINC_MASK 0x1000
+#define  CDMA6_CONTROL_SRCADDRINC_SHIFT 12
+#define  CDMA6_CONTROL_SRCADDRINC_MASK_SHIFT(reg) (((reg) & CDMA6_CONTROL_SRCADDRINC_MASK) >> CDMA6_CONTROL_SRCADDRINC_SHIFT)
+#define  CDMA6_CONTROL_SRCADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CONTROL_SRCADDRINC_MASK) | (((uint32_t)val) << CDMA6_CONTROL_SRCADDRINC_SHIFT))
+
+#define  CDMA6_CONTROL_DESTXFERWIDTH_MASK 0xc00
+#define  CDMA6_CONTROL_DESTXFERWIDTH_SHIFT 10
+#define  CDMA6_CONTROL_DESTXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA6_CONTROL_DESTXFERWIDTH_MASK) >> CDMA6_CONTROL_DESTXFERWIDTH_SHIFT)
+#define  CDMA6_CONTROL_DESTXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CONTROL_DESTXFERWIDTH_MASK) | (((uint32_t)val) << CDMA6_CONTROL_DESTXFERWIDTH_SHIFT))
+
+#define  CDMA6_CONTROL_SRCXFERWIDTH_MASK 0x300
+#define  CDMA6_CONTROL_SRCXFERWIDTH_SHIFT 8
+#define  CDMA6_CONTROL_SRCXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA6_CONTROL_SRCXFERWIDTH_MASK) >> CDMA6_CONTROL_SRCXFERWIDTH_SHIFT)
+#define  CDMA6_CONTROL_SRCXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CONTROL_SRCXFERWIDTH_MASK) | (((uint32_t)val) << CDMA6_CONTROL_SRCXFERWIDTH_SHIFT))
+
+#define  CDMA6_CONTROL_RESERVED2_MASK 0xc0
+#define  CDMA6_CONTROL_RESERVED2_SHIFT 6
+#define  CDMA6_CONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA6_CONTROL_RESERVED2_MASK) >> CDMA6_CONTROL_RESERVED2_SHIFT)
+#define  CDMA6_CONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA6_CONTROL_RESERVED2_SHIFT))
+
+#define  CDMA6_CONTROL_DESTBURSTSIZE_MASK 0x30
+#define  CDMA6_CONTROL_DESTBURSTSIZE_SHIFT 4
+#define  CDMA6_CONTROL_DESTBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA6_CONTROL_DESTBURSTSIZE_MASK) >> CDMA6_CONTROL_DESTBURSTSIZE_SHIFT)
+#define  CDMA6_CONTROL_DESTBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CONTROL_DESTBURSTSIZE_MASK) | (((uint32_t)val) << CDMA6_CONTROL_DESTBURSTSIZE_SHIFT))
+
+#define  CDMA6_CONTROL_RESERVED3_MASK 0xc
+#define  CDMA6_CONTROL_RESERVED3_SHIFT 2
+#define  CDMA6_CONTROL_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA6_CONTROL_RESERVED3_MASK) >> CDMA6_CONTROL_RESERVED3_SHIFT)
+#define  CDMA6_CONTROL_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CONTROL_RESERVED3_MASK) | (((uint32_t)val) << CDMA6_CONTROL_RESERVED3_SHIFT))
+
+#define  CDMA6_CONTROL_SRCBURSTSIZE_MASK 0x3
+#define  CDMA6_CONTROL_SRCBURSTSIZE_SHIFT 0
+#define  CDMA6_CONTROL_SRCBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA6_CONTROL_SRCBURSTSIZE_MASK) >> CDMA6_CONTROL_SRCBURSTSIZE_SHIFT)
+#define  CDMA6_CONTROL_SRCBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_CONTROL_SRCBURSTSIZE_MASK) | (((uint32_t)val) << CDMA6_CONTROL_SRCBURSTSIZE_SHIFT))
+
+//====================================================================
+//Register: DMA Status Register (Status)
+//====================================================================
+
+#define  CDMA6_STATUS_RESERVED1_MASK 0xfff00000
+#define  CDMA6_STATUS_RESERVED1_SHIFT 20
+#define  CDMA6_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA6_STATUS_RESERVED1_MASK) >> CDMA6_STATUS_RESERVED1_SHIFT)
+#define  CDMA6_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_STATUS_RESERVED1_MASK) | (((uint32_t)val) << CDMA6_STATUS_RESERVED1_SHIFT))
+
+#define  CDMA6_STATUS_ODDWIDTHHW_MASK 0x80000
+#define  CDMA6_STATUS_ODDWIDTHHW_SHIFT 19
+#define  CDMA6_STATUS_ODDWIDTHHW_MASK_SHIFT(reg) (((reg) & CDMA6_STATUS_ODDWIDTHHW_MASK) >> CDMA6_STATUS_ODDWIDTHHW_SHIFT)
+#define  CDMA6_STATUS_ODDWIDTHHW_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_STATUS_ODDWIDTHHW_MASK) | (((uint32_t)val) << CDMA6_STATUS_ODDWIDTHHW_SHIFT))
+
+#define  CDMA6_STATUS_DESCFETCH_MASK 0x40000
+#define  CDMA6_STATUS_DESCFETCH_SHIFT 18
+#define  CDMA6_STATUS_DESCFETCH_MASK_SHIFT(reg) (((reg) & CDMA6_STATUS_DESCFETCH_MASK) >> CDMA6_STATUS_DESCFETCH_SHIFT)
+#define  CDMA6_STATUS_DESCFETCH_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_STATUS_DESCFETCH_MASK) | (((uint32_t)val) << CDMA6_STATUS_DESCFETCH_SHIFT))
+
+#define  CDMA6_STATUS_DMABUSY_MASK 0x20000
+#define  CDMA6_STATUS_DMABUSY_SHIFT 17
+#define  CDMA6_STATUS_DMABUSY_MASK_SHIFT(reg) (((reg) & CDMA6_STATUS_DMABUSY_MASK) >> CDMA6_STATUS_DMABUSY_SHIFT)
+#define  CDMA6_STATUS_DMABUSY_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_STATUS_DMABUSY_MASK) | (((uint32_t)val) << CDMA6_STATUS_DMABUSY_SHIFT))
+
+#define  CDMA6_STATUS_FIFOEMPTY_MASK 0x10000
+#define  CDMA6_STATUS_FIFOEMPTY_SHIFT 16
+#define  CDMA6_STATUS_FIFOEMPTY_MASK_SHIFT(reg) (((reg) & CDMA6_STATUS_FIFOEMPTY_MASK) >> CDMA6_STATUS_FIFOEMPTY_SHIFT)
+#define  CDMA6_STATUS_FIFOEMPTY_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_STATUS_FIFOEMPTY_MASK) | (((uint32_t)val) << CDMA6_STATUS_FIFOEMPTY_SHIFT))
+
+#define  CDMA6_STATUS_BYTESREMAIN_MASK 0xffff
+#define  CDMA6_STATUS_BYTESREMAIN_SHIFT 0
+#define  CDMA6_STATUS_BYTESREMAIN_MASK_SHIFT(reg) (((reg) & CDMA6_STATUS_BYTESREMAIN_MASK) >> CDMA6_STATUS_BYTESREMAIN_SHIFT)
+#define  CDMA6_STATUS_BYTESREMAIN_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_STATUS_BYTESREMAIN_MASK) | (((uint32_t)val) << CDMA6_STATUS_BYTESREMAIN_SHIFT))
+
+//====================================================================
+//Register: DMA Source Address Register (SrcAddr)
+/** \brief The Source Address register is programmed with the address of the location
+      for the DMA to transfer from. If the source is memory, the address can be
+      byte aligned.
+<br>*/
+//====================================================================
+
+#define  CDMA6_SRCADDR_SRCADDR_MASK 0xffffffff
+#define  CDMA6_SRCADDR_SRCADDR_SHIFT 0
+#define  CDMA6_SRCADDR_SRCADDR_MASK_SHIFT(reg) (((reg) & CDMA6_SRCADDR_SRCADDR_MASK) >> CDMA6_SRCADDR_SRCADDR_SHIFT)
+#define  CDMA6_SRCADDR_SRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_SRCADDR_SRCADDR_MASK) | (((uint32_t)val) << CDMA6_SRCADDR_SRCADDR_SHIFT))
+
+//====================================================================
+//Register: Current Source Address Register (SrcAddrStat)
+/** \brief This register contains the current address for the source device.*/
+//====================================================================
+
+#define  CDMA6_SRCADDRSTAT_CURRSRCADDR_MASK 0xffffffff
+#define  CDMA6_SRCADDRSTAT_CURRSRCADDR_SHIFT 0
+#define  CDMA6_SRCADDRSTAT_CURRSRCADDR_MASK_SHIFT(reg) (((reg) & CDMA6_SRCADDRSTAT_CURRSRCADDR_MASK) >> CDMA6_SRCADDRSTAT_CURRSRCADDR_SHIFT)
+#define  CDMA6_SRCADDRSTAT_CURRSRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_SRCADDRSTAT_CURRSRCADDR_MASK) | (((uint32_t)val) << CDMA6_SRCADDRSTAT_CURRSRCADDR_SHIFT))
+
+//====================================================================
+//Register: Destination Address Register (DestAddr)
+/** \brief The Destination Address register is programmed with the address of the location
+      for the DMA to transfer to. If the destination is memory, the address can be
+      byte aligned.*/
+//====================================================================
+
+#define  CDMA6_DESTADDR_DESTADDR_MASK 0xffffffff
+#define  CDMA6_DESTADDR_DESTADDR_SHIFT 0
+#define  CDMA6_DESTADDR_DESTADDR_MASK_SHIFT(reg) (((reg) & CDMA6_DESTADDR_DESTADDR_MASK) >> CDMA6_DESTADDR_DESTADDR_SHIFT)
+#define  CDMA6_DESTADDR_DESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_DESTADDR_DESTADDR_MASK) | (((uint32_t)val) << CDMA6_DESTADDR_DESTADDR_SHIFT))
+
+//====================================================================
+//Register: Current Destination Address Register (DestAddrStat)
+/** \brief This register contains the current address for the destination device.*/
+//====================================================================
+
+#define  CDMA6_DESTADDRSTAT_CURRDESTADDR_MASK 0xffffffff
+#define  CDMA6_DESTADDRSTAT_CURRDESTADDR_SHIFT 0
+#define  CDMA6_DESTADDRSTAT_CURRDESTADDR_MASK_SHIFT(reg) (((reg) & CDMA6_DESTADDRSTAT_CURRDESTADDR_MASK) >> CDMA6_DESTADDRSTAT_CURRDESTADDR_SHIFT)
+#define  CDMA6_DESTADDRSTAT_CURRDESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_DESTADDRSTAT_CURRDESTADDR_MASK) | (((uint32_t)val) << CDMA6_DESTADDRSTAT_CURRDESTADDR_SHIFT))
+
+//====================================================================
+//Register: Fill Value Register (FillValue)
+/** \brief This register contains the data value to write to the destination
+      address.*/
+//====================================================================
+
+#define  CDMA6_FILLVALUE_FILLVAL_MASK 0xffffffff
+#define  CDMA6_FILLVALUE_FILLVAL_SHIFT 0
+#define  CDMA6_FILLVALUE_FILLVAL_MASK_SHIFT(reg) (((reg) & CDMA6_FILLVALUE_FILLVAL_MASK) >> CDMA6_FILLVALUE_FILLVAL_SHIFT)
+#define  CDMA6_FILLVALUE_FILLVAL_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_FILLVALUE_FILLVAL_MASK) | (((uint32_t)val) << CDMA6_FILLVALUE_FILLVAL_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (intEn)
+//====================================================================
+
+#define  CDMA6_INTEN_RESERVED1_MASK 0xfffffff0
+#define  CDMA6_INTEN_RESERVED1_SHIFT 4
+#define  CDMA6_INTEN_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA6_INTEN_RESERVED1_MASK) >> CDMA6_INTEN_RESERVED1_SHIFT)
+#define  CDMA6_INTEN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTEN_RESERVED1_MASK) | (((uint32_t)val) << CDMA6_INTEN_RESERVED1_SHIFT))
+
+#define  CDMA6_INTEN_CLEARCOMPLETEEN_MASK 0x8
+#define  CDMA6_INTEN_CLEARCOMPLETEEN_SHIFT 3
+#define  CDMA6_INTEN_CLEARCOMPLETEEN_MASK_SHIFT(reg) (((reg) & CDMA6_INTEN_CLEARCOMPLETEEN_MASK) >> CDMA6_INTEN_CLEARCOMPLETEEN_SHIFT)
+#define  CDMA6_INTEN_CLEARCOMPLETEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTEN_CLEARCOMPLETEEN_MASK) | (((uint32_t)val) << CDMA6_INTEN_CLEARCOMPLETEEN_SHIFT))
+
+#define  CDMA6_INTEN_CHAINDONEEN_MASK 0x4
+#define  CDMA6_INTEN_CHAINDONEEN_SHIFT 2
+#define  CDMA6_INTEN_CHAINDONEEN_MASK_SHIFT(reg) (((reg) & CDMA6_INTEN_CHAINDONEEN_MASK) >> CDMA6_INTEN_CHAINDONEEN_SHIFT)
+#define  CDMA6_INTEN_CHAINDONEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTEN_CHAINDONEEN_MASK) | (((uint32_t)val) << CDMA6_INTEN_CHAINDONEEN_SHIFT))
+
+#define  CDMA6_INTEN_TIMEOUTEN_MASK 0x2
+#define  CDMA6_INTEN_TIMEOUTEN_SHIFT 1
+#define  CDMA6_INTEN_TIMEOUTEN_MASK_SHIFT(reg) (((reg) & CDMA6_INTEN_TIMEOUTEN_MASK) >> CDMA6_INTEN_TIMEOUTEN_SHIFT)
+#define  CDMA6_INTEN_TIMEOUTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTEN_TIMEOUTEN_MASK) | (((uint32_t)val) << CDMA6_INTEN_TIMEOUTEN_SHIFT))
+
+#define  CDMA6_INTEN_TERMCNTEN_MASK 0x1
+#define  CDMA6_INTEN_TERMCNTEN_SHIFT 0
+#define  CDMA6_INTEN_TERMCNTEN_MASK_SHIFT(reg) (((reg) & CDMA6_INTEN_TERMCNTEN_MASK) >> CDMA6_INTEN_TERMCNTEN_SHIFT)
+#define  CDMA6_INTEN_TERMCNTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTEN_TERMCNTEN_MASK) | (((uint32_t)val) << CDMA6_INTEN_TERMCNTEN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (intPend)
+//====================================================================
+
+#define  CDMA6_INTPEND_RESERVED1_MASK 0xfffffff0
+#define  CDMA6_INTPEND_RESERVED1_SHIFT 4
+#define  CDMA6_INTPEND_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA6_INTPEND_RESERVED1_MASK) >> CDMA6_INTPEND_RESERVED1_SHIFT)
+#define  CDMA6_INTPEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTPEND_RESERVED1_MASK) | (((uint32_t)val) << CDMA6_INTPEND_RESERVED1_SHIFT))
+
+#define  CDMA6_INTPEND_CLEARCOMPLETEPEND_MASK 0x8
+#define  CDMA6_INTPEND_CLEARCOMPLETEPEND_SHIFT 3
+#define  CDMA6_INTPEND_CLEARCOMPLETEPEND_MASK_SHIFT(reg) (((reg) & CDMA6_INTPEND_CLEARCOMPLETEPEND_MASK) >> CDMA6_INTPEND_CLEARCOMPLETEPEND_SHIFT)
+#define  CDMA6_INTPEND_CLEARCOMPLETEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTPEND_CLEARCOMPLETEPEND_MASK) | (((uint32_t)val) << CDMA6_INTPEND_CLEARCOMPLETEPEND_SHIFT))
+
+#define  CDMA6_INTPEND_CHAINDONEPEND_MASK 0x4
+#define  CDMA6_INTPEND_CHAINDONEPEND_SHIFT 2
+#define  CDMA6_INTPEND_CHAINDONEPEND_MASK_SHIFT(reg) (((reg) & CDMA6_INTPEND_CHAINDONEPEND_MASK) >> CDMA6_INTPEND_CHAINDONEPEND_SHIFT)
+#define  CDMA6_INTPEND_CHAINDONEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTPEND_CHAINDONEPEND_MASK) | (((uint32_t)val) << CDMA6_INTPEND_CHAINDONEPEND_SHIFT))
+
+#define  CDMA6_INTPEND_TIMEOUTPEND_MASK 0x2
+#define  CDMA6_INTPEND_TIMEOUTPEND_SHIFT 1
+#define  CDMA6_INTPEND_TIMEOUTPEND_MASK_SHIFT(reg) (((reg) & CDMA6_INTPEND_TIMEOUTPEND_MASK) >> CDMA6_INTPEND_TIMEOUTPEND_SHIFT)
+#define  CDMA6_INTPEND_TIMEOUTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTPEND_TIMEOUTPEND_MASK) | (((uint32_t)val) << CDMA6_INTPEND_TIMEOUTPEND_SHIFT))
+
+#define  CDMA6_INTPEND_TERMCNTPEND_MASK 0x1
+#define  CDMA6_INTPEND_TERMCNTPEND_SHIFT 0
+#define  CDMA6_INTPEND_TERMCNTPEND_MASK_SHIFT(reg) (((reg) & CDMA6_INTPEND_TERMCNTPEND_MASK) >> CDMA6_INTPEND_TERMCNTPEND_SHIFT)
+#define  CDMA6_INTPEND_TERMCNTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTPEND_TERMCNTPEND_MASK) | (((uint32_t)val) << CDMA6_INTPEND_TERMCNTPEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (intAck)
+//====================================================================
+
+#define  CDMA6_INTACK_RESERVED1_MASK 0xfffffff0
+#define  CDMA6_INTACK_RESERVED1_SHIFT 4
+#define  CDMA6_INTACK_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA6_INTACK_RESERVED1_MASK) >> CDMA6_INTACK_RESERVED1_SHIFT)
+#define  CDMA6_INTACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTACK_RESERVED1_MASK) | (((uint32_t)val) << CDMA6_INTACK_RESERVED1_SHIFT))
+
+#define  CDMA6_INTACK_CLEARCOMPLETEACK_MASK 0x8
+#define  CDMA6_INTACK_CLEARCOMPLETEACK_SHIFT 3
+#define  CDMA6_INTACK_CLEARCOMPLETEACK_MASK_SHIFT(reg) (((reg) & CDMA6_INTACK_CLEARCOMPLETEACK_MASK) >> CDMA6_INTACK_CLEARCOMPLETEACK_SHIFT)
+#define  CDMA6_INTACK_CLEARCOMPLETEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTACK_CLEARCOMPLETEACK_MASK) | (((uint32_t)val) << CDMA6_INTACK_CLEARCOMPLETEACK_SHIFT))
+
+#define  CDMA6_INTACK_CHAINDONEACK_MASK 0x4
+#define  CDMA6_INTACK_CHAINDONEACK_SHIFT 2
+#define  CDMA6_INTACK_CHAINDONEACK_MASK_SHIFT(reg) (((reg) & CDMA6_INTACK_CHAINDONEACK_MASK) >> CDMA6_INTACK_CHAINDONEACK_SHIFT)
+#define  CDMA6_INTACK_CHAINDONEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTACK_CHAINDONEACK_MASK) | (((uint32_t)val) << CDMA6_INTACK_CHAINDONEACK_SHIFT))
+
+#define  CDMA6_INTACK_TIMEOUTACK_MASK 0x2
+#define  CDMA6_INTACK_TIMEOUTACK_SHIFT 1
+#define  CDMA6_INTACK_TIMEOUTACK_MASK_SHIFT(reg) (((reg) & CDMA6_INTACK_TIMEOUTACK_MASK) >> CDMA6_INTACK_TIMEOUTACK_SHIFT)
+#define  CDMA6_INTACK_TIMEOUTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTACK_TIMEOUTACK_MASK) | (((uint32_t)val) << CDMA6_INTACK_TIMEOUTACK_SHIFT))
+
+#define  CDMA6_INTACK_TERMCNTACK_MASK 0x1
+#define  CDMA6_INTACK_TERMCNTACK_SHIFT 0
+#define  CDMA6_INTACK_TERMCNTACK_MASK_SHIFT(reg) (((reg) & CDMA6_INTACK_TERMCNTACK_MASK) >> CDMA6_INTACK_TERMCNTACK_SHIFT)
+#define  CDMA6_INTACK_TERMCNTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTACK_TERMCNTACK_MASK) | (((uint32_t)val) << CDMA6_INTACK_TERMCNTACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (intForce)
+//====================================================================
+
+#define  CDMA6_INTFORCE_RESERVED1_MASK 0xfffffff0
+#define  CDMA6_INTFORCE_RESERVED1_SHIFT 4
+#define  CDMA6_INTFORCE_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA6_INTFORCE_RESERVED1_MASK) >> CDMA6_INTFORCE_RESERVED1_SHIFT)
+#define  CDMA6_INTFORCE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTFORCE_RESERVED1_MASK) | (((uint32_t)val) << CDMA6_INTFORCE_RESERVED1_SHIFT))
+
+#define  CDMA6_INTFORCE_CLEARCOMPLETEFOR_MASK 0x8
+#define  CDMA6_INTFORCE_CLEARCOMPLETEFOR_SHIFT 3
+#define  CDMA6_INTFORCE_CLEARCOMPLETEFOR_MASK_SHIFT(reg) (((reg) & CDMA6_INTFORCE_CLEARCOMPLETEFOR_MASK) >> CDMA6_INTFORCE_CLEARCOMPLETEFOR_SHIFT)
+#define  CDMA6_INTFORCE_CLEARCOMPLETEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTFORCE_CLEARCOMPLETEFOR_MASK) | (((uint32_t)val) << CDMA6_INTFORCE_CLEARCOMPLETEFOR_SHIFT))
+
+#define  CDMA6_INTFORCE_CHAINDONEFOR_MASK 0x4
+#define  CDMA6_INTFORCE_CHAINDONEFOR_SHIFT 2
+#define  CDMA6_INTFORCE_CHAINDONEFOR_MASK_SHIFT(reg) (((reg) & CDMA6_INTFORCE_CHAINDONEFOR_MASK) >> CDMA6_INTFORCE_CHAINDONEFOR_SHIFT)
+#define  CDMA6_INTFORCE_CHAINDONEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTFORCE_CHAINDONEFOR_MASK) | (((uint32_t)val) << CDMA6_INTFORCE_CHAINDONEFOR_SHIFT))
+
+#define  CDMA6_INTFORCE_TIMEOUTFOR_MASK 0x2
+#define  CDMA6_INTFORCE_TIMEOUTFOR_SHIFT 1
+#define  CDMA6_INTFORCE_TIMEOUTFOR_MASK_SHIFT(reg) (((reg) & CDMA6_INTFORCE_TIMEOUTFOR_MASK) >> CDMA6_INTFORCE_TIMEOUTFOR_SHIFT)
+#define  CDMA6_INTFORCE_TIMEOUTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTFORCE_TIMEOUTFOR_MASK) | (((uint32_t)val) << CDMA6_INTFORCE_TIMEOUTFOR_SHIFT))
+
+#define  CDMA6_INTFORCE_TERMCNTFOR_MASK 0x1
+#define  CDMA6_INTFORCE_TERMCNTFOR_SHIFT 0
+#define  CDMA6_INTFORCE_TERMCNTFOR_MASK_SHIFT(reg) (((reg) & CDMA6_INTFORCE_TERMCNTFOR_MASK) >> CDMA6_INTFORCE_TERMCNTFOR_SHIFT)
+#define  CDMA6_INTFORCE_TERMCNTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_INTFORCE_TERMCNTFOR_MASK) | (((uint32_t)val) << CDMA6_INTFORCE_TERMCNTFOR_SHIFT))
+
+//====================================================================
+//Register: DMA Timer Control (TimerControl)
+/** \brief The Timer Control register specifies the number of timebase cycles between word
+      transfers before generating a timeout interrupt. The timer is reset each time
+      a transfer occurs.*/
+//====================================================================
+
+#define  CDMA6_TIMERCONTROL_RESERVED1_MASK 0xffff0000
+#define  CDMA6_TIMERCONTROL_RESERVED1_SHIFT 16
+#define  CDMA6_TIMERCONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA6_TIMERCONTROL_RESERVED1_MASK) >> CDMA6_TIMERCONTROL_RESERVED1_SHIFT)
+#define  CDMA6_TIMERCONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_TIMERCONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA6_TIMERCONTROL_RESERVED1_SHIFT))
+
+#define  CDMA6_TIMERCONTROL_TIMERENABLE_MASK 0x8000
+#define  CDMA6_TIMERCONTROL_TIMERENABLE_SHIFT 15
+#define  CDMA6_TIMERCONTROL_TIMERENABLE_MASK_SHIFT(reg) (((reg) & CDMA6_TIMERCONTROL_TIMERENABLE_MASK) >> CDMA6_TIMERCONTROL_TIMERENABLE_SHIFT)
+#define  CDMA6_TIMERCONTROL_TIMERENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_TIMERCONTROL_TIMERENABLE_MASK) | (((uint32_t)val) << CDMA6_TIMERCONTROL_TIMERENABLE_SHIFT))
+
+#define  CDMA6_TIMERCONTROL_TIMEBASE_MASK 0x7000
+#define  CDMA6_TIMERCONTROL_TIMEBASE_SHIFT 12
+#define  CDMA6_TIMERCONTROL_TIMEBASE_MASK_SHIFT(reg) (((reg) & CDMA6_TIMERCONTROL_TIMEBASE_MASK) >> CDMA6_TIMERCONTROL_TIMEBASE_SHIFT)
+#define  CDMA6_TIMERCONTROL_TIMEBASE_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_TIMERCONTROL_TIMEBASE_MASK) | (((uint32_t)val) << CDMA6_TIMERCONTROL_TIMEBASE_SHIFT))
+
+#define  CDMA6_TIMERCONTROL_RESERVED2_MASK 0x800
+#define  CDMA6_TIMERCONTROL_RESERVED2_SHIFT 11
+#define  CDMA6_TIMERCONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA6_TIMERCONTROL_RESERVED2_MASK) >> CDMA6_TIMERCONTROL_RESERVED2_SHIFT)
+#define  CDMA6_TIMERCONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_TIMERCONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA6_TIMERCONTROL_RESERVED2_SHIFT))
+
+#define  CDMA6_TIMERCONTROL_COUNT_MASK 0x7ff
+#define  CDMA6_TIMERCONTROL_COUNT_SHIFT 0
+#define  CDMA6_TIMERCONTROL_COUNT_MASK_SHIFT(reg) (((reg) & CDMA6_TIMERCONTROL_COUNT_MASK) >> CDMA6_TIMERCONTROL_COUNT_SHIFT)
+#define  CDMA6_TIMERCONTROL_COUNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_TIMERCONTROL_COUNT_MASK) | (((uint32_t)val) << CDMA6_TIMERCONTROL_COUNT_SHIFT))
+
+//====================================================================
+//Register: Timeout Count Status Register (TimeOutStat)
+/** \brief This register contains the current timeout count.*/
+//====================================================================
+
+#define  CDMA6_TIMEOUTSTAT_RESERVED1_MASK 0xfffff800
+#define  CDMA6_TIMEOUTSTAT_RESERVED1_SHIFT 11
+#define  CDMA6_TIMEOUTSTAT_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA6_TIMEOUTSTAT_RESERVED1_MASK) >> CDMA6_TIMEOUTSTAT_RESERVED1_SHIFT)
+#define  CDMA6_TIMEOUTSTAT_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_TIMEOUTSTAT_RESERVED1_MASK) | (((uint32_t)val) << CDMA6_TIMEOUTSTAT_RESERVED1_SHIFT))
+
+#define  CDMA6_TIMEOUTSTAT_CURRTOCNT_MASK 0x7ff
+#define  CDMA6_TIMEOUTSTAT_CURRTOCNT_SHIFT 0
+#define  CDMA6_TIMEOUTSTAT_CURRTOCNT_MASK_SHIFT(reg) (((reg) & CDMA6_TIMEOUTSTAT_CURRTOCNT_MASK) >> CDMA6_TIMEOUTSTAT_CURRTOCNT_SHIFT)
+#define  CDMA6_TIMEOUTSTAT_CURRTOCNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_TIMEOUTSTAT_CURRTOCNT_MASK) | (((uint32_t)val) << CDMA6_TIMEOUTSTAT_CURRTOCNT_SHIFT))
+
+//====================================================================
+//Register: Linked List Index Register (LLIR)
+/** \brief This register contains a word-aligned address of the first word of the next descriptor. LLI means "linked list index" or pointer to the descriptor in memory. If the LLI register is 0, then the current descriptor (that is loaded in the registers) is the last in the chain, and the DMA channel will stop once the current DMA transfer is completed.*/
+//====================================================================
+
+#define  CDMA6_LLIR_LLINDEX_MASK 0xfffffffc
+#define  CDMA6_LLIR_LLINDEX_SHIFT 2
+#define  CDMA6_LLIR_LLINDEX_MASK_SHIFT(reg) (((reg) & CDMA6_LLIR_LLINDEX_MASK) >> CDMA6_LLIR_LLINDEX_SHIFT)
+#define  CDMA6_LLIR_LLINDEX_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_LLIR_LLINDEX_MASK) | (((uint32_t)val) << CDMA6_LLIR_LLINDEX_SHIFT))
+
+#define  CDMA6_LLIR_RESERVED1_MASK 0x3
+#define  CDMA6_LLIR_RESERVED1_SHIFT 0
+#define  CDMA6_LLIR_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA6_LLIR_RESERVED1_MASK) >> CDMA6_LLIR_RESERVED1_SHIFT)
+#define  CDMA6_LLIR_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_LLIR_RESERVED1_MASK) | (((uint32_t)val) << CDMA6_LLIR_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Odd Width Config Register (OWCFG)
+//====================================================================
+
+#define  CDMA6_OWCFG_RESERVED1_MASK 0xfffe0000
+#define  CDMA6_OWCFG_RESERVED1_SHIFT 17
+#define  CDMA6_OWCFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA6_OWCFG_RESERVED1_MASK) >> CDMA6_OWCFG_RESERVED1_SHIFT)
+#define  CDMA6_OWCFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_OWCFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA6_OWCFG_RESERVED1_SHIFT))
+
+#define  CDMA6_OWCFG_EXTRABITS_MASK 0x1f000
+#define  CDMA6_OWCFG_EXTRABITS_SHIFT 12
+#define  CDMA6_OWCFG_EXTRABITS_MASK_SHIFT(reg) (((reg) & CDMA6_OWCFG_EXTRABITS_MASK) >> CDMA6_OWCFG_EXTRABITS_SHIFT)
+#define  CDMA6_OWCFG_EXTRABITS_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_OWCFG_EXTRABITS_MASK) | (((uint32_t)val) << CDMA6_OWCFG_EXTRABITS_SHIFT))
+
+#define  CDMA6_OWCFG_RESERVED2_MASK 0xe00
+#define  CDMA6_OWCFG_RESERVED2_SHIFT 9
+#define  CDMA6_OWCFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA6_OWCFG_RESERVED2_MASK) >> CDMA6_OWCFG_RESERVED2_SHIFT)
+#define  CDMA6_OWCFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_OWCFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA6_OWCFG_RESERVED2_SHIFT))
+
+#define  CDMA6_OWCFG_ODDWIDTH_MASK 0x1f0
+#define  CDMA6_OWCFG_ODDWIDTH_SHIFT 4
+#define  CDMA6_OWCFG_ODDWIDTH_MASK_SHIFT(reg) (((reg) & CDMA6_OWCFG_ODDWIDTH_MASK) >> CDMA6_OWCFG_ODDWIDTH_SHIFT)
+#define  CDMA6_OWCFG_ODDWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_OWCFG_ODDWIDTH_MASK) | (((uint32_t)val) << CDMA6_OWCFG_ODDWIDTH_SHIFT))
+
+#define  CDMA6_OWCFG_RESERVED3_MASK 0xc
+#define  CDMA6_OWCFG_RESERVED3_SHIFT 2
+#define  CDMA6_OWCFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA6_OWCFG_RESERVED3_MASK) >> CDMA6_OWCFG_RESERVED3_SHIFT)
+#define  CDMA6_OWCFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_OWCFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA6_OWCFG_RESERVED3_SHIFT))
+
+#define  CDMA6_OWCFG_PACKNUNPACK_MASK 0x2
+#define  CDMA6_OWCFG_PACKNUNPACK_SHIFT 1
+#define  CDMA6_OWCFG_PACKNUNPACK_MASK_SHIFT(reg) (((reg) & CDMA6_OWCFG_PACKNUNPACK_MASK) >> CDMA6_OWCFG_PACKNUNPACK_SHIFT)
+#define  CDMA6_OWCFG_PACKNUNPACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_OWCFG_PACKNUNPACK_MASK) | (((uint32_t)val) << CDMA6_OWCFG_PACKNUNPACK_SHIFT))
+
+#define  CDMA6_OWCFG_OWEN_MASK 0x1
+#define  CDMA6_OWCFG_OWEN_SHIFT 0
+#define  CDMA6_OWCFG_OWEN_MASK_SHIFT(reg) (((reg) & CDMA6_OWCFG_OWEN_MASK) >> CDMA6_OWCFG_OWEN_SHIFT)
+#define  CDMA6_OWCFG_OWEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA6_OWCFG_OWEN_MASK) | (((uint32_t)val) << CDMA6_OWCFG_OWEN_SHIFT))
+
+//====================================================================
+//
+//Register File: CDMA (Instance 8 of 12) (CDMA7)
+/** \brief Registers for Central DMA module*/
+//
+//====================================================================
+
+//====================================================================
+//Register: DMA Configuration Register (CFG)
+/** \brief This register is used to configure the data flow for each channel.*/
+//====================================================================
+
+#define  CDMA7_CFG_WRDELAY_MASK 0xf0000000
+#define  CDMA7_CFG_WRDELAY_SHIFT 28
+#define  CDMA7_CFG_WRDELAY_MASK_SHIFT(reg) (((reg) & CDMA7_CFG_WRDELAY_MASK) >> CDMA7_CFG_WRDELAY_SHIFT)
+#define  CDMA7_CFG_WRDELAY_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CFG_WRDELAY_MASK) | (((uint32_t)val) << CDMA7_CFG_WRDELAY_SHIFT))
+
+#define  CDMA7_CFG_RESERVED1_MASK 0xc000000
+#define  CDMA7_CFG_RESERVED1_SHIFT 26
+#define  CDMA7_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA7_CFG_RESERVED1_MASK) >> CDMA7_CFG_RESERVED1_SHIFT)
+#define  CDMA7_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA7_CFG_RESERVED1_SHIFT))
+
+#define  CDMA7_CFG_DATAUNITSIZE_MASK 0x3000000
+#define  CDMA7_CFG_DATAUNITSIZE_SHIFT 24
+#define  CDMA7_CFG_DATAUNITSIZE_MASK_SHIFT(reg) (((reg) & CDMA7_CFG_DATAUNITSIZE_MASK) >> CDMA7_CFG_DATAUNITSIZE_SHIFT)
+#define  CDMA7_CFG_DATAUNITSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CFG_DATAUNITSIZE_MASK) | (((uint32_t)val) << CDMA7_CFG_DATAUNITSIZE_SHIFT))
+
+#define  CDMA7_CFG_HALT_MASK 0x800000
+#define  CDMA7_CFG_HALT_SHIFT 23
+#define  CDMA7_CFG_HALT_MASK_SHIFT(reg) (((reg) & CDMA7_CFG_HALT_MASK) >> CDMA7_CFG_HALT_SHIFT)
+#define  CDMA7_CFG_HALT_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CFG_HALT_MASK) | (((uint32_t)val) << CDMA7_CFG_HALT_SHIFT))
+
+#define  CDMA7_CFG_FLOWCTRL_MASK 0x700000
+#define  CDMA7_CFG_FLOWCTRL_SHIFT 20
+#define  CDMA7_CFG_FLOWCTRL_MASK_SHIFT(reg) (((reg) & CDMA7_CFG_FLOWCTRL_MASK) >> CDMA7_CFG_FLOWCTRL_SHIFT)
+#define  CDMA7_CFG_FLOWCTRL_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CFG_FLOWCTRL_MASK) | (((uint32_t)val) << CDMA7_CFG_FLOWCTRL_SHIFT))
+
+#define  CDMA7_CFG_RESERVED2_MASK 0xc0000
+#define  CDMA7_CFG_RESERVED2_SHIFT 18
+#define  CDMA7_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA7_CFG_RESERVED2_MASK) >> CDMA7_CFG_RESERVED2_SHIFT)
+#define  CDMA7_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA7_CFG_RESERVED2_SHIFT))
+
+#define  CDMA7_CFG_DESTPID_MASK 0x3f000
+#define  CDMA7_CFG_DESTPID_SHIFT 12
+#define  CDMA7_CFG_DESTPID_MASK_SHIFT(reg) (((reg) & CDMA7_CFG_DESTPID_MASK) >> CDMA7_CFG_DESTPID_SHIFT)
+#define  CDMA7_CFG_DESTPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CFG_DESTPID_MASK) | (((uint32_t)val) << CDMA7_CFG_DESTPID_SHIFT))
+
+#define  CDMA7_CFG_RESERVED3_MASK 0xc00
+#define  CDMA7_CFG_RESERVED3_SHIFT 10
+#define  CDMA7_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA7_CFG_RESERVED3_MASK) >> CDMA7_CFG_RESERVED3_SHIFT)
+#define  CDMA7_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA7_CFG_RESERVED3_SHIFT))
+
+#define  CDMA7_CFG_SRCPID_MASK 0x3f0
+#define  CDMA7_CFG_SRCPID_SHIFT 4
+#define  CDMA7_CFG_SRCPID_MASK_SHIFT(reg) (((reg) & CDMA7_CFG_SRCPID_MASK) >> CDMA7_CFG_SRCPID_SHIFT)
+#define  CDMA7_CFG_SRCPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CFG_SRCPID_MASK) | (((uint32_t)val) << CDMA7_CFG_SRCPID_SHIFT))
+
+#define  CDMA7_CFG_DESTENDIAN_MASK 0x8
+#define  CDMA7_CFG_DESTENDIAN_SHIFT 3
+#define  CDMA7_CFG_DESTENDIAN_MASK_SHIFT(reg) (((reg) & CDMA7_CFG_DESTENDIAN_MASK) >> CDMA7_CFG_DESTENDIAN_SHIFT)
+#define  CDMA7_CFG_DESTENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CFG_DESTENDIAN_MASK) | (((uint32_t)val) << CDMA7_CFG_DESTENDIAN_SHIFT))
+
+#define  CDMA7_CFG_SRCENDIAN_MASK 0x4
+#define  CDMA7_CFG_SRCENDIAN_SHIFT 2
+#define  CDMA7_CFG_SRCENDIAN_MASK_SHIFT(reg) (((reg) & CDMA7_CFG_SRCENDIAN_MASK) >> CDMA7_CFG_SRCENDIAN_SHIFT)
+#define  CDMA7_CFG_SRCENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CFG_SRCENDIAN_MASK) | (((uint32_t)val) << CDMA7_CFG_SRCENDIAN_SHIFT))
+
+#define  CDMA7_CFG_FILL_MASK 0x2
+#define  CDMA7_CFG_FILL_SHIFT 1
+#define  CDMA7_CFG_FILL_MASK_SHIFT(reg) (((reg) & CDMA7_CFG_FILL_MASK) >> CDMA7_CFG_FILL_SHIFT)
+#define  CDMA7_CFG_FILL_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CFG_FILL_MASK) | (((uint32_t)val) << CDMA7_CFG_FILL_SHIFT))
+
+#define  CDMA7_CFG_ENABLE_MASK 0x1
+#define  CDMA7_CFG_ENABLE_SHIFT 0
+#define  CDMA7_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & CDMA7_CFG_ENABLE_MASK) >> CDMA7_CFG_ENABLE_SHIFT)
+#define  CDMA7_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CFG_ENABLE_MASK) | (((uint32_t)val) << CDMA7_CFG_ENABLE_SHIFT))
+
+//====================================================================
+//Register: DMA Channel Control Register (Control)
+/** \brief This register programs each channel for control features such as
+      auto-increment, initiator select, burst size, transfer size, and
+      transfer widths.*/
+//====================================================================
+
+#define  CDMA7_CONTROL_TRANSSIZE_MASK 0xffff0000
+#define  CDMA7_CONTROL_TRANSSIZE_SHIFT 16
+#define  CDMA7_CONTROL_TRANSSIZE_MASK_SHIFT(reg) (((reg) & CDMA7_CONTROL_TRANSSIZE_MASK) >> CDMA7_CONTROL_TRANSSIZE_SHIFT)
+#define  CDMA7_CONTROL_TRANSSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CONTROL_TRANSSIZE_MASK) | (((uint32_t)val) << CDMA7_CONTROL_TRANSSIZE_SHIFT))
+
+#define  CDMA7_CONTROL_RESERVED1_MASK 0xc000
+#define  CDMA7_CONTROL_RESERVED1_SHIFT 14
+#define  CDMA7_CONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA7_CONTROL_RESERVED1_MASK) >> CDMA7_CONTROL_RESERVED1_SHIFT)
+#define  CDMA7_CONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA7_CONTROL_RESERVED1_SHIFT))
+
+#define  CDMA7_CONTROL_DESTADDRINC_MASK 0x2000
+#define  CDMA7_CONTROL_DESTADDRINC_SHIFT 13
+#define  CDMA7_CONTROL_DESTADDRINC_MASK_SHIFT(reg) (((reg) & CDMA7_CONTROL_DESTADDRINC_MASK) >> CDMA7_CONTROL_DESTADDRINC_SHIFT)
+#define  CDMA7_CONTROL_DESTADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CONTROL_DESTADDRINC_MASK) | (((uint32_t)val) << CDMA7_CONTROL_DESTADDRINC_SHIFT))
+
+#define  CDMA7_CONTROL_SRCADDRINC_MASK 0x1000
+#define  CDMA7_CONTROL_SRCADDRINC_SHIFT 12
+#define  CDMA7_CONTROL_SRCADDRINC_MASK_SHIFT(reg) (((reg) & CDMA7_CONTROL_SRCADDRINC_MASK) >> CDMA7_CONTROL_SRCADDRINC_SHIFT)
+#define  CDMA7_CONTROL_SRCADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CONTROL_SRCADDRINC_MASK) | (((uint32_t)val) << CDMA7_CONTROL_SRCADDRINC_SHIFT))
+
+#define  CDMA7_CONTROL_DESTXFERWIDTH_MASK 0xc00
+#define  CDMA7_CONTROL_DESTXFERWIDTH_SHIFT 10
+#define  CDMA7_CONTROL_DESTXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA7_CONTROL_DESTXFERWIDTH_MASK) >> CDMA7_CONTROL_DESTXFERWIDTH_SHIFT)
+#define  CDMA7_CONTROL_DESTXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CONTROL_DESTXFERWIDTH_MASK) | (((uint32_t)val) << CDMA7_CONTROL_DESTXFERWIDTH_SHIFT))
+
+#define  CDMA7_CONTROL_SRCXFERWIDTH_MASK 0x300
+#define  CDMA7_CONTROL_SRCXFERWIDTH_SHIFT 8
+#define  CDMA7_CONTROL_SRCXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA7_CONTROL_SRCXFERWIDTH_MASK) >> CDMA7_CONTROL_SRCXFERWIDTH_SHIFT)
+#define  CDMA7_CONTROL_SRCXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CONTROL_SRCXFERWIDTH_MASK) | (((uint32_t)val) << CDMA7_CONTROL_SRCXFERWIDTH_SHIFT))
+
+#define  CDMA7_CONTROL_RESERVED2_MASK 0xc0
+#define  CDMA7_CONTROL_RESERVED2_SHIFT 6
+#define  CDMA7_CONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA7_CONTROL_RESERVED2_MASK) >> CDMA7_CONTROL_RESERVED2_SHIFT)
+#define  CDMA7_CONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA7_CONTROL_RESERVED2_SHIFT))
+
+#define  CDMA7_CONTROL_DESTBURSTSIZE_MASK 0x30
+#define  CDMA7_CONTROL_DESTBURSTSIZE_SHIFT 4
+#define  CDMA7_CONTROL_DESTBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA7_CONTROL_DESTBURSTSIZE_MASK) >> CDMA7_CONTROL_DESTBURSTSIZE_SHIFT)
+#define  CDMA7_CONTROL_DESTBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CONTROL_DESTBURSTSIZE_MASK) | (((uint32_t)val) << CDMA7_CONTROL_DESTBURSTSIZE_SHIFT))
+
+#define  CDMA7_CONTROL_RESERVED3_MASK 0xc
+#define  CDMA7_CONTROL_RESERVED3_SHIFT 2
+#define  CDMA7_CONTROL_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA7_CONTROL_RESERVED3_MASK) >> CDMA7_CONTROL_RESERVED3_SHIFT)
+#define  CDMA7_CONTROL_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CONTROL_RESERVED3_MASK) | (((uint32_t)val) << CDMA7_CONTROL_RESERVED3_SHIFT))
+
+#define  CDMA7_CONTROL_SRCBURSTSIZE_MASK 0x3
+#define  CDMA7_CONTROL_SRCBURSTSIZE_SHIFT 0
+#define  CDMA7_CONTROL_SRCBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA7_CONTROL_SRCBURSTSIZE_MASK) >> CDMA7_CONTROL_SRCBURSTSIZE_SHIFT)
+#define  CDMA7_CONTROL_SRCBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_CONTROL_SRCBURSTSIZE_MASK) | (((uint32_t)val) << CDMA7_CONTROL_SRCBURSTSIZE_SHIFT))
+
+//====================================================================
+//Register: DMA Status Register (Status)
+//====================================================================
+
+#define  CDMA7_STATUS_RESERVED1_MASK 0xfff00000
+#define  CDMA7_STATUS_RESERVED1_SHIFT 20
+#define  CDMA7_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA7_STATUS_RESERVED1_MASK) >> CDMA7_STATUS_RESERVED1_SHIFT)
+#define  CDMA7_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_STATUS_RESERVED1_MASK) | (((uint32_t)val) << CDMA7_STATUS_RESERVED1_SHIFT))
+
+#define  CDMA7_STATUS_ODDWIDTHHW_MASK 0x80000
+#define  CDMA7_STATUS_ODDWIDTHHW_SHIFT 19
+#define  CDMA7_STATUS_ODDWIDTHHW_MASK_SHIFT(reg) (((reg) & CDMA7_STATUS_ODDWIDTHHW_MASK) >> CDMA7_STATUS_ODDWIDTHHW_SHIFT)
+#define  CDMA7_STATUS_ODDWIDTHHW_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_STATUS_ODDWIDTHHW_MASK) | (((uint32_t)val) << CDMA7_STATUS_ODDWIDTHHW_SHIFT))
+
+#define  CDMA7_STATUS_DESCFETCH_MASK 0x40000
+#define  CDMA7_STATUS_DESCFETCH_SHIFT 18
+#define  CDMA7_STATUS_DESCFETCH_MASK_SHIFT(reg) (((reg) & CDMA7_STATUS_DESCFETCH_MASK) >> CDMA7_STATUS_DESCFETCH_SHIFT)
+#define  CDMA7_STATUS_DESCFETCH_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_STATUS_DESCFETCH_MASK) | (((uint32_t)val) << CDMA7_STATUS_DESCFETCH_SHIFT))
+
+#define  CDMA7_STATUS_DMABUSY_MASK 0x20000
+#define  CDMA7_STATUS_DMABUSY_SHIFT 17
+#define  CDMA7_STATUS_DMABUSY_MASK_SHIFT(reg) (((reg) & CDMA7_STATUS_DMABUSY_MASK) >> CDMA7_STATUS_DMABUSY_SHIFT)
+#define  CDMA7_STATUS_DMABUSY_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_STATUS_DMABUSY_MASK) | (((uint32_t)val) << CDMA7_STATUS_DMABUSY_SHIFT))
+
+#define  CDMA7_STATUS_FIFOEMPTY_MASK 0x10000
+#define  CDMA7_STATUS_FIFOEMPTY_SHIFT 16
+#define  CDMA7_STATUS_FIFOEMPTY_MASK_SHIFT(reg) (((reg) & CDMA7_STATUS_FIFOEMPTY_MASK) >> CDMA7_STATUS_FIFOEMPTY_SHIFT)
+#define  CDMA7_STATUS_FIFOEMPTY_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_STATUS_FIFOEMPTY_MASK) | (((uint32_t)val) << CDMA7_STATUS_FIFOEMPTY_SHIFT))
+
+#define  CDMA7_STATUS_BYTESREMAIN_MASK 0xffff
+#define  CDMA7_STATUS_BYTESREMAIN_SHIFT 0
+#define  CDMA7_STATUS_BYTESREMAIN_MASK_SHIFT(reg) (((reg) & CDMA7_STATUS_BYTESREMAIN_MASK) >> CDMA7_STATUS_BYTESREMAIN_SHIFT)
+#define  CDMA7_STATUS_BYTESREMAIN_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_STATUS_BYTESREMAIN_MASK) | (((uint32_t)val) << CDMA7_STATUS_BYTESREMAIN_SHIFT))
+
+//====================================================================
+//Register: DMA Source Address Register (SrcAddr)
+/** \brief The Source Address register is programmed with the address of the location
+      for the DMA to transfer from. If the source is memory, the address can be
+      byte aligned.
+<br>*/
+//====================================================================
+
+#define  CDMA7_SRCADDR_SRCADDR_MASK 0xffffffff
+#define  CDMA7_SRCADDR_SRCADDR_SHIFT 0
+#define  CDMA7_SRCADDR_SRCADDR_MASK_SHIFT(reg) (((reg) & CDMA7_SRCADDR_SRCADDR_MASK) >> CDMA7_SRCADDR_SRCADDR_SHIFT)
+#define  CDMA7_SRCADDR_SRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_SRCADDR_SRCADDR_MASK) | (((uint32_t)val) << CDMA7_SRCADDR_SRCADDR_SHIFT))
+
+//====================================================================
+//Register: Current Source Address Register (SrcAddrStat)
+/** \brief This register contains the current address for the source device.*/
+//====================================================================
+
+#define  CDMA7_SRCADDRSTAT_CURRSRCADDR_MASK 0xffffffff
+#define  CDMA7_SRCADDRSTAT_CURRSRCADDR_SHIFT 0
+#define  CDMA7_SRCADDRSTAT_CURRSRCADDR_MASK_SHIFT(reg) (((reg) & CDMA7_SRCADDRSTAT_CURRSRCADDR_MASK) >> CDMA7_SRCADDRSTAT_CURRSRCADDR_SHIFT)
+#define  CDMA7_SRCADDRSTAT_CURRSRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_SRCADDRSTAT_CURRSRCADDR_MASK) | (((uint32_t)val) << CDMA7_SRCADDRSTAT_CURRSRCADDR_SHIFT))
+
+//====================================================================
+//Register: Destination Address Register (DestAddr)
+/** \brief The Destination Address register is programmed with the address of the location
+      for the DMA to transfer to. If the destination is memory, the address can be
+      byte aligned.*/
+//====================================================================
+
+#define  CDMA7_DESTADDR_DESTADDR_MASK 0xffffffff
+#define  CDMA7_DESTADDR_DESTADDR_SHIFT 0
+#define  CDMA7_DESTADDR_DESTADDR_MASK_SHIFT(reg) (((reg) & CDMA7_DESTADDR_DESTADDR_MASK) >> CDMA7_DESTADDR_DESTADDR_SHIFT)
+#define  CDMA7_DESTADDR_DESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_DESTADDR_DESTADDR_MASK) | (((uint32_t)val) << CDMA7_DESTADDR_DESTADDR_SHIFT))
+
+//====================================================================
+//Register: Current Destination Address Register (DestAddrStat)
+/** \brief This register contains the current address for the destination device.*/
+//====================================================================
+
+#define  CDMA7_DESTADDRSTAT_CURRDESTADDR_MASK 0xffffffff
+#define  CDMA7_DESTADDRSTAT_CURRDESTADDR_SHIFT 0
+#define  CDMA7_DESTADDRSTAT_CURRDESTADDR_MASK_SHIFT(reg) (((reg) & CDMA7_DESTADDRSTAT_CURRDESTADDR_MASK) >> CDMA7_DESTADDRSTAT_CURRDESTADDR_SHIFT)
+#define  CDMA7_DESTADDRSTAT_CURRDESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_DESTADDRSTAT_CURRDESTADDR_MASK) | (((uint32_t)val) << CDMA7_DESTADDRSTAT_CURRDESTADDR_SHIFT))
+
+//====================================================================
+//Register: Fill Value Register (FillValue)
+/** \brief This register contains the data value to write to the destination
+      address.*/
+//====================================================================
+
+#define  CDMA7_FILLVALUE_FILLVAL_MASK 0xffffffff
+#define  CDMA7_FILLVALUE_FILLVAL_SHIFT 0
+#define  CDMA7_FILLVALUE_FILLVAL_MASK_SHIFT(reg) (((reg) & CDMA7_FILLVALUE_FILLVAL_MASK) >> CDMA7_FILLVALUE_FILLVAL_SHIFT)
+#define  CDMA7_FILLVALUE_FILLVAL_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_FILLVALUE_FILLVAL_MASK) | (((uint32_t)val) << CDMA7_FILLVALUE_FILLVAL_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (intEn)
+//====================================================================
+
+#define  CDMA7_INTEN_RESERVED1_MASK 0xfffffff0
+#define  CDMA7_INTEN_RESERVED1_SHIFT 4
+#define  CDMA7_INTEN_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA7_INTEN_RESERVED1_MASK) >> CDMA7_INTEN_RESERVED1_SHIFT)
+#define  CDMA7_INTEN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTEN_RESERVED1_MASK) | (((uint32_t)val) << CDMA7_INTEN_RESERVED1_SHIFT))
+
+#define  CDMA7_INTEN_CLEARCOMPLETEEN_MASK 0x8
+#define  CDMA7_INTEN_CLEARCOMPLETEEN_SHIFT 3
+#define  CDMA7_INTEN_CLEARCOMPLETEEN_MASK_SHIFT(reg) (((reg) & CDMA7_INTEN_CLEARCOMPLETEEN_MASK) >> CDMA7_INTEN_CLEARCOMPLETEEN_SHIFT)
+#define  CDMA7_INTEN_CLEARCOMPLETEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTEN_CLEARCOMPLETEEN_MASK) | (((uint32_t)val) << CDMA7_INTEN_CLEARCOMPLETEEN_SHIFT))
+
+#define  CDMA7_INTEN_CHAINDONEEN_MASK 0x4
+#define  CDMA7_INTEN_CHAINDONEEN_SHIFT 2
+#define  CDMA7_INTEN_CHAINDONEEN_MASK_SHIFT(reg) (((reg) & CDMA7_INTEN_CHAINDONEEN_MASK) >> CDMA7_INTEN_CHAINDONEEN_SHIFT)
+#define  CDMA7_INTEN_CHAINDONEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTEN_CHAINDONEEN_MASK) | (((uint32_t)val) << CDMA7_INTEN_CHAINDONEEN_SHIFT))
+
+#define  CDMA7_INTEN_TIMEOUTEN_MASK 0x2
+#define  CDMA7_INTEN_TIMEOUTEN_SHIFT 1
+#define  CDMA7_INTEN_TIMEOUTEN_MASK_SHIFT(reg) (((reg) & CDMA7_INTEN_TIMEOUTEN_MASK) >> CDMA7_INTEN_TIMEOUTEN_SHIFT)
+#define  CDMA7_INTEN_TIMEOUTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTEN_TIMEOUTEN_MASK) | (((uint32_t)val) << CDMA7_INTEN_TIMEOUTEN_SHIFT))
+
+#define  CDMA7_INTEN_TERMCNTEN_MASK 0x1
+#define  CDMA7_INTEN_TERMCNTEN_SHIFT 0
+#define  CDMA7_INTEN_TERMCNTEN_MASK_SHIFT(reg) (((reg) & CDMA7_INTEN_TERMCNTEN_MASK) >> CDMA7_INTEN_TERMCNTEN_SHIFT)
+#define  CDMA7_INTEN_TERMCNTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTEN_TERMCNTEN_MASK) | (((uint32_t)val) << CDMA7_INTEN_TERMCNTEN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (intPend)
+//====================================================================
+
+#define  CDMA7_INTPEND_RESERVED1_MASK 0xfffffff0
+#define  CDMA7_INTPEND_RESERVED1_SHIFT 4
+#define  CDMA7_INTPEND_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA7_INTPEND_RESERVED1_MASK) >> CDMA7_INTPEND_RESERVED1_SHIFT)
+#define  CDMA7_INTPEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTPEND_RESERVED1_MASK) | (((uint32_t)val) << CDMA7_INTPEND_RESERVED1_SHIFT))
+
+#define  CDMA7_INTPEND_CLEARCOMPLETEPEND_MASK 0x8
+#define  CDMA7_INTPEND_CLEARCOMPLETEPEND_SHIFT 3
+#define  CDMA7_INTPEND_CLEARCOMPLETEPEND_MASK_SHIFT(reg) (((reg) & CDMA7_INTPEND_CLEARCOMPLETEPEND_MASK) >> CDMA7_INTPEND_CLEARCOMPLETEPEND_SHIFT)
+#define  CDMA7_INTPEND_CLEARCOMPLETEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTPEND_CLEARCOMPLETEPEND_MASK) | (((uint32_t)val) << CDMA7_INTPEND_CLEARCOMPLETEPEND_SHIFT))
+
+#define  CDMA7_INTPEND_CHAINDONEPEND_MASK 0x4
+#define  CDMA7_INTPEND_CHAINDONEPEND_SHIFT 2
+#define  CDMA7_INTPEND_CHAINDONEPEND_MASK_SHIFT(reg) (((reg) & CDMA7_INTPEND_CHAINDONEPEND_MASK) >> CDMA7_INTPEND_CHAINDONEPEND_SHIFT)
+#define  CDMA7_INTPEND_CHAINDONEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTPEND_CHAINDONEPEND_MASK) | (((uint32_t)val) << CDMA7_INTPEND_CHAINDONEPEND_SHIFT))
+
+#define  CDMA7_INTPEND_TIMEOUTPEND_MASK 0x2
+#define  CDMA7_INTPEND_TIMEOUTPEND_SHIFT 1
+#define  CDMA7_INTPEND_TIMEOUTPEND_MASK_SHIFT(reg) (((reg) & CDMA7_INTPEND_TIMEOUTPEND_MASK) >> CDMA7_INTPEND_TIMEOUTPEND_SHIFT)
+#define  CDMA7_INTPEND_TIMEOUTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTPEND_TIMEOUTPEND_MASK) | (((uint32_t)val) << CDMA7_INTPEND_TIMEOUTPEND_SHIFT))
+
+#define  CDMA7_INTPEND_TERMCNTPEND_MASK 0x1
+#define  CDMA7_INTPEND_TERMCNTPEND_SHIFT 0
+#define  CDMA7_INTPEND_TERMCNTPEND_MASK_SHIFT(reg) (((reg) & CDMA7_INTPEND_TERMCNTPEND_MASK) >> CDMA7_INTPEND_TERMCNTPEND_SHIFT)
+#define  CDMA7_INTPEND_TERMCNTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTPEND_TERMCNTPEND_MASK) | (((uint32_t)val) << CDMA7_INTPEND_TERMCNTPEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (intAck)
+//====================================================================
+
+#define  CDMA7_INTACK_RESERVED1_MASK 0xfffffff0
+#define  CDMA7_INTACK_RESERVED1_SHIFT 4
+#define  CDMA7_INTACK_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA7_INTACK_RESERVED1_MASK) >> CDMA7_INTACK_RESERVED1_SHIFT)
+#define  CDMA7_INTACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTACK_RESERVED1_MASK) | (((uint32_t)val) << CDMA7_INTACK_RESERVED1_SHIFT))
+
+#define  CDMA7_INTACK_CLEARCOMPLETEACK_MASK 0x8
+#define  CDMA7_INTACK_CLEARCOMPLETEACK_SHIFT 3
+#define  CDMA7_INTACK_CLEARCOMPLETEACK_MASK_SHIFT(reg) (((reg) & CDMA7_INTACK_CLEARCOMPLETEACK_MASK) >> CDMA7_INTACK_CLEARCOMPLETEACK_SHIFT)
+#define  CDMA7_INTACK_CLEARCOMPLETEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTACK_CLEARCOMPLETEACK_MASK) | (((uint32_t)val) << CDMA7_INTACK_CLEARCOMPLETEACK_SHIFT))
+
+#define  CDMA7_INTACK_CHAINDONEACK_MASK 0x4
+#define  CDMA7_INTACK_CHAINDONEACK_SHIFT 2
+#define  CDMA7_INTACK_CHAINDONEACK_MASK_SHIFT(reg) (((reg) & CDMA7_INTACK_CHAINDONEACK_MASK) >> CDMA7_INTACK_CHAINDONEACK_SHIFT)
+#define  CDMA7_INTACK_CHAINDONEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTACK_CHAINDONEACK_MASK) | (((uint32_t)val) << CDMA7_INTACK_CHAINDONEACK_SHIFT))
+
+#define  CDMA7_INTACK_TIMEOUTACK_MASK 0x2
+#define  CDMA7_INTACK_TIMEOUTACK_SHIFT 1
+#define  CDMA7_INTACK_TIMEOUTACK_MASK_SHIFT(reg) (((reg) & CDMA7_INTACK_TIMEOUTACK_MASK) >> CDMA7_INTACK_TIMEOUTACK_SHIFT)
+#define  CDMA7_INTACK_TIMEOUTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTACK_TIMEOUTACK_MASK) | (((uint32_t)val) << CDMA7_INTACK_TIMEOUTACK_SHIFT))
+
+#define  CDMA7_INTACK_TERMCNTACK_MASK 0x1
+#define  CDMA7_INTACK_TERMCNTACK_SHIFT 0
+#define  CDMA7_INTACK_TERMCNTACK_MASK_SHIFT(reg) (((reg) & CDMA7_INTACK_TERMCNTACK_MASK) >> CDMA7_INTACK_TERMCNTACK_SHIFT)
+#define  CDMA7_INTACK_TERMCNTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTACK_TERMCNTACK_MASK) | (((uint32_t)val) << CDMA7_INTACK_TERMCNTACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (intForce)
+//====================================================================
+
+#define  CDMA7_INTFORCE_RESERVED1_MASK 0xfffffff0
+#define  CDMA7_INTFORCE_RESERVED1_SHIFT 4
+#define  CDMA7_INTFORCE_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA7_INTFORCE_RESERVED1_MASK) >> CDMA7_INTFORCE_RESERVED1_SHIFT)
+#define  CDMA7_INTFORCE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTFORCE_RESERVED1_MASK) | (((uint32_t)val) << CDMA7_INTFORCE_RESERVED1_SHIFT))
+
+#define  CDMA7_INTFORCE_CLEARCOMPLETEFOR_MASK 0x8
+#define  CDMA7_INTFORCE_CLEARCOMPLETEFOR_SHIFT 3
+#define  CDMA7_INTFORCE_CLEARCOMPLETEFOR_MASK_SHIFT(reg) (((reg) & CDMA7_INTFORCE_CLEARCOMPLETEFOR_MASK) >> CDMA7_INTFORCE_CLEARCOMPLETEFOR_SHIFT)
+#define  CDMA7_INTFORCE_CLEARCOMPLETEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTFORCE_CLEARCOMPLETEFOR_MASK) | (((uint32_t)val) << CDMA7_INTFORCE_CLEARCOMPLETEFOR_SHIFT))
+
+#define  CDMA7_INTFORCE_CHAINDONEFOR_MASK 0x4
+#define  CDMA7_INTFORCE_CHAINDONEFOR_SHIFT 2
+#define  CDMA7_INTFORCE_CHAINDONEFOR_MASK_SHIFT(reg) (((reg) & CDMA7_INTFORCE_CHAINDONEFOR_MASK) >> CDMA7_INTFORCE_CHAINDONEFOR_SHIFT)
+#define  CDMA7_INTFORCE_CHAINDONEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTFORCE_CHAINDONEFOR_MASK) | (((uint32_t)val) << CDMA7_INTFORCE_CHAINDONEFOR_SHIFT))
+
+#define  CDMA7_INTFORCE_TIMEOUTFOR_MASK 0x2
+#define  CDMA7_INTFORCE_TIMEOUTFOR_SHIFT 1
+#define  CDMA7_INTFORCE_TIMEOUTFOR_MASK_SHIFT(reg) (((reg) & CDMA7_INTFORCE_TIMEOUTFOR_MASK) >> CDMA7_INTFORCE_TIMEOUTFOR_SHIFT)
+#define  CDMA7_INTFORCE_TIMEOUTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTFORCE_TIMEOUTFOR_MASK) | (((uint32_t)val) << CDMA7_INTFORCE_TIMEOUTFOR_SHIFT))
+
+#define  CDMA7_INTFORCE_TERMCNTFOR_MASK 0x1
+#define  CDMA7_INTFORCE_TERMCNTFOR_SHIFT 0
+#define  CDMA7_INTFORCE_TERMCNTFOR_MASK_SHIFT(reg) (((reg) & CDMA7_INTFORCE_TERMCNTFOR_MASK) >> CDMA7_INTFORCE_TERMCNTFOR_SHIFT)
+#define  CDMA7_INTFORCE_TERMCNTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_INTFORCE_TERMCNTFOR_MASK) | (((uint32_t)val) << CDMA7_INTFORCE_TERMCNTFOR_SHIFT))
+
+//====================================================================
+//Register: DMA Timer Control (TimerControl)
+/** \brief The Timer Control register specifies the number of timebase cycles between word
+      transfers before generating a timeout interrupt. The timer is reset each time
+      a transfer occurs.*/
+//====================================================================
+
+#define  CDMA7_TIMERCONTROL_RESERVED1_MASK 0xffff0000
+#define  CDMA7_TIMERCONTROL_RESERVED1_SHIFT 16
+#define  CDMA7_TIMERCONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA7_TIMERCONTROL_RESERVED1_MASK) >> CDMA7_TIMERCONTROL_RESERVED1_SHIFT)
+#define  CDMA7_TIMERCONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_TIMERCONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA7_TIMERCONTROL_RESERVED1_SHIFT))
+
+#define  CDMA7_TIMERCONTROL_TIMERENABLE_MASK 0x8000
+#define  CDMA7_TIMERCONTROL_TIMERENABLE_SHIFT 15
+#define  CDMA7_TIMERCONTROL_TIMERENABLE_MASK_SHIFT(reg) (((reg) & CDMA7_TIMERCONTROL_TIMERENABLE_MASK) >> CDMA7_TIMERCONTROL_TIMERENABLE_SHIFT)
+#define  CDMA7_TIMERCONTROL_TIMERENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_TIMERCONTROL_TIMERENABLE_MASK) | (((uint32_t)val) << CDMA7_TIMERCONTROL_TIMERENABLE_SHIFT))
+
+#define  CDMA7_TIMERCONTROL_TIMEBASE_MASK 0x7000
+#define  CDMA7_TIMERCONTROL_TIMEBASE_SHIFT 12
+#define  CDMA7_TIMERCONTROL_TIMEBASE_MASK_SHIFT(reg) (((reg) & CDMA7_TIMERCONTROL_TIMEBASE_MASK) >> CDMA7_TIMERCONTROL_TIMEBASE_SHIFT)
+#define  CDMA7_TIMERCONTROL_TIMEBASE_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_TIMERCONTROL_TIMEBASE_MASK) | (((uint32_t)val) << CDMA7_TIMERCONTROL_TIMEBASE_SHIFT))
+
+#define  CDMA7_TIMERCONTROL_RESERVED2_MASK 0x800
+#define  CDMA7_TIMERCONTROL_RESERVED2_SHIFT 11
+#define  CDMA7_TIMERCONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA7_TIMERCONTROL_RESERVED2_MASK) >> CDMA7_TIMERCONTROL_RESERVED2_SHIFT)
+#define  CDMA7_TIMERCONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_TIMERCONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA7_TIMERCONTROL_RESERVED2_SHIFT))
+
+#define  CDMA7_TIMERCONTROL_COUNT_MASK 0x7ff
+#define  CDMA7_TIMERCONTROL_COUNT_SHIFT 0
+#define  CDMA7_TIMERCONTROL_COUNT_MASK_SHIFT(reg) (((reg) & CDMA7_TIMERCONTROL_COUNT_MASK) >> CDMA7_TIMERCONTROL_COUNT_SHIFT)
+#define  CDMA7_TIMERCONTROL_COUNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_TIMERCONTROL_COUNT_MASK) | (((uint32_t)val) << CDMA7_TIMERCONTROL_COUNT_SHIFT))
+
+//====================================================================
+//Register: Timeout Count Status Register (TimeOutStat)
+/** \brief This register contains the current timeout count.*/
+//====================================================================
+
+#define  CDMA7_TIMEOUTSTAT_RESERVED1_MASK 0xfffff800
+#define  CDMA7_TIMEOUTSTAT_RESERVED1_SHIFT 11
+#define  CDMA7_TIMEOUTSTAT_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA7_TIMEOUTSTAT_RESERVED1_MASK) >> CDMA7_TIMEOUTSTAT_RESERVED1_SHIFT)
+#define  CDMA7_TIMEOUTSTAT_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_TIMEOUTSTAT_RESERVED1_MASK) | (((uint32_t)val) << CDMA7_TIMEOUTSTAT_RESERVED1_SHIFT))
+
+#define  CDMA7_TIMEOUTSTAT_CURRTOCNT_MASK 0x7ff
+#define  CDMA7_TIMEOUTSTAT_CURRTOCNT_SHIFT 0
+#define  CDMA7_TIMEOUTSTAT_CURRTOCNT_MASK_SHIFT(reg) (((reg) & CDMA7_TIMEOUTSTAT_CURRTOCNT_MASK) >> CDMA7_TIMEOUTSTAT_CURRTOCNT_SHIFT)
+#define  CDMA7_TIMEOUTSTAT_CURRTOCNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_TIMEOUTSTAT_CURRTOCNT_MASK) | (((uint32_t)val) << CDMA7_TIMEOUTSTAT_CURRTOCNT_SHIFT))
+
+//====================================================================
+//Register: Linked List Index Register (LLIR)
+/** \brief This register contains a word-aligned address of the first word of the next descriptor. LLI means "linked list index" or pointer to the descriptor in memory. If the LLI register is 0, then the current descriptor (that is loaded in the registers) is the last in the chain, and the DMA channel will stop once the current DMA transfer is completed.*/
+//====================================================================
+
+#define  CDMA7_LLIR_LLINDEX_MASK 0xfffffffc
+#define  CDMA7_LLIR_LLINDEX_SHIFT 2
+#define  CDMA7_LLIR_LLINDEX_MASK_SHIFT(reg) (((reg) & CDMA7_LLIR_LLINDEX_MASK) >> CDMA7_LLIR_LLINDEX_SHIFT)
+#define  CDMA7_LLIR_LLINDEX_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_LLIR_LLINDEX_MASK) | (((uint32_t)val) << CDMA7_LLIR_LLINDEX_SHIFT))
+
+#define  CDMA7_LLIR_RESERVED1_MASK 0x3
+#define  CDMA7_LLIR_RESERVED1_SHIFT 0
+#define  CDMA7_LLIR_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA7_LLIR_RESERVED1_MASK) >> CDMA7_LLIR_RESERVED1_SHIFT)
+#define  CDMA7_LLIR_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_LLIR_RESERVED1_MASK) | (((uint32_t)val) << CDMA7_LLIR_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Odd Width Config Register (OWCFG)
+//====================================================================
+
+#define  CDMA7_OWCFG_RESERVED1_MASK 0xfffe0000
+#define  CDMA7_OWCFG_RESERVED1_SHIFT 17
+#define  CDMA7_OWCFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA7_OWCFG_RESERVED1_MASK) >> CDMA7_OWCFG_RESERVED1_SHIFT)
+#define  CDMA7_OWCFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_OWCFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA7_OWCFG_RESERVED1_SHIFT))
+
+#define  CDMA7_OWCFG_EXTRABITS_MASK 0x1f000
+#define  CDMA7_OWCFG_EXTRABITS_SHIFT 12
+#define  CDMA7_OWCFG_EXTRABITS_MASK_SHIFT(reg) (((reg) & CDMA7_OWCFG_EXTRABITS_MASK) >> CDMA7_OWCFG_EXTRABITS_SHIFT)
+#define  CDMA7_OWCFG_EXTRABITS_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_OWCFG_EXTRABITS_MASK) | (((uint32_t)val) << CDMA7_OWCFG_EXTRABITS_SHIFT))
+
+#define  CDMA7_OWCFG_RESERVED2_MASK 0xe00
+#define  CDMA7_OWCFG_RESERVED2_SHIFT 9
+#define  CDMA7_OWCFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA7_OWCFG_RESERVED2_MASK) >> CDMA7_OWCFG_RESERVED2_SHIFT)
+#define  CDMA7_OWCFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_OWCFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA7_OWCFG_RESERVED2_SHIFT))
+
+#define  CDMA7_OWCFG_ODDWIDTH_MASK 0x1f0
+#define  CDMA7_OWCFG_ODDWIDTH_SHIFT 4
+#define  CDMA7_OWCFG_ODDWIDTH_MASK_SHIFT(reg) (((reg) & CDMA7_OWCFG_ODDWIDTH_MASK) >> CDMA7_OWCFG_ODDWIDTH_SHIFT)
+#define  CDMA7_OWCFG_ODDWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_OWCFG_ODDWIDTH_MASK) | (((uint32_t)val) << CDMA7_OWCFG_ODDWIDTH_SHIFT))
+
+#define  CDMA7_OWCFG_RESERVED3_MASK 0xc
+#define  CDMA7_OWCFG_RESERVED3_SHIFT 2
+#define  CDMA7_OWCFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA7_OWCFG_RESERVED3_MASK) >> CDMA7_OWCFG_RESERVED3_SHIFT)
+#define  CDMA7_OWCFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_OWCFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA7_OWCFG_RESERVED3_SHIFT))
+
+#define  CDMA7_OWCFG_PACKNUNPACK_MASK 0x2
+#define  CDMA7_OWCFG_PACKNUNPACK_SHIFT 1
+#define  CDMA7_OWCFG_PACKNUNPACK_MASK_SHIFT(reg) (((reg) & CDMA7_OWCFG_PACKNUNPACK_MASK) >> CDMA7_OWCFG_PACKNUNPACK_SHIFT)
+#define  CDMA7_OWCFG_PACKNUNPACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_OWCFG_PACKNUNPACK_MASK) | (((uint32_t)val) << CDMA7_OWCFG_PACKNUNPACK_SHIFT))
+
+#define  CDMA7_OWCFG_OWEN_MASK 0x1
+#define  CDMA7_OWCFG_OWEN_SHIFT 0
+#define  CDMA7_OWCFG_OWEN_MASK_SHIFT(reg) (((reg) & CDMA7_OWCFG_OWEN_MASK) >> CDMA7_OWCFG_OWEN_SHIFT)
+#define  CDMA7_OWCFG_OWEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA7_OWCFG_OWEN_MASK) | (((uint32_t)val) << CDMA7_OWCFG_OWEN_SHIFT))
+
+//====================================================================
+//
+//Register File: CDMA (Instance 9 of 12) (CDMA8)
+/** \brief Registers for Central DMA module*/
+//
+//====================================================================
+
+//====================================================================
+//Register: DMA Configuration Register (CFG)
+/** \brief This register is used to configure the data flow for each channel.*/
+//====================================================================
+
+#define  CDMA8_CFG_WRDELAY_MASK 0xf0000000
+#define  CDMA8_CFG_WRDELAY_SHIFT 28
+#define  CDMA8_CFG_WRDELAY_MASK_SHIFT(reg) (((reg) & CDMA8_CFG_WRDELAY_MASK) >> CDMA8_CFG_WRDELAY_SHIFT)
+#define  CDMA8_CFG_WRDELAY_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CFG_WRDELAY_MASK) | (((uint32_t)val) << CDMA8_CFG_WRDELAY_SHIFT))
+
+#define  CDMA8_CFG_RESERVED1_MASK 0xc000000
+#define  CDMA8_CFG_RESERVED1_SHIFT 26
+#define  CDMA8_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA8_CFG_RESERVED1_MASK) >> CDMA8_CFG_RESERVED1_SHIFT)
+#define  CDMA8_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA8_CFG_RESERVED1_SHIFT))
+
+#define  CDMA8_CFG_DATAUNITSIZE_MASK 0x3000000
+#define  CDMA8_CFG_DATAUNITSIZE_SHIFT 24
+#define  CDMA8_CFG_DATAUNITSIZE_MASK_SHIFT(reg) (((reg) & CDMA8_CFG_DATAUNITSIZE_MASK) >> CDMA8_CFG_DATAUNITSIZE_SHIFT)
+#define  CDMA8_CFG_DATAUNITSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CFG_DATAUNITSIZE_MASK) | (((uint32_t)val) << CDMA8_CFG_DATAUNITSIZE_SHIFT))
+
+#define  CDMA8_CFG_HALT_MASK 0x800000
+#define  CDMA8_CFG_HALT_SHIFT 23
+#define  CDMA8_CFG_HALT_MASK_SHIFT(reg) (((reg) & CDMA8_CFG_HALT_MASK) >> CDMA8_CFG_HALT_SHIFT)
+#define  CDMA8_CFG_HALT_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CFG_HALT_MASK) | (((uint32_t)val) << CDMA8_CFG_HALT_SHIFT))
+
+#define  CDMA8_CFG_FLOWCTRL_MASK 0x700000
+#define  CDMA8_CFG_FLOWCTRL_SHIFT 20
+#define  CDMA8_CFG_FLOWCTRL_MASK_SHIFT(reg) (((reg) & CDMA8_CFG_FLOWCTRL_MASK) >> CDMA8_CFG_FLOWCTRL_SHIFT)
+#define  CDMA8_CFG_FLOWCTRL_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CFG_FLOWCTRL_MASK) | (((uint32_t)val) << CDMA8_CFG_FLOWCTRL_SHIFT))
+
+#define  CDMA8_CFG_RESERVED2_MASK 0xc0000
+#define  CDMA8_CFG_RESERVED2_SHIFT 18
+#define  CDMA8_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA8_CFG_RESERVED2_MASK) >> CDMA8_CFG_RESERVED2_SHIFT)
+#define  CDMA8_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA8_CFG_RESERVED2_SHIFT))
+
+#define  CDMA8_CFG_DESTPID_MASK 0x3f000
+#define  CDMA8_CFG_DESTPID_SHIFT 12
+#define  CDMA8_CFG_DESTPID_MASK_SHIFT(reg) (((reg) & CDMA8_CFG_DESTPID_MASK) >> CDMA8_CFG_DESTPID_SHIFT)
+#define  CDMA8_CFG_DESTPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CFG_DESTPID_MASK) | (((uint32_t)val) << CDMA8_CFG_DESTPID_SHIFT))
+
+#define  CDMA8_CFG_RESERVED3_MASK 0xc00
+#define  CDMA8_CFG_RESERVED3_SHIFT 10
+#define  CDMA8_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA8_CFG_RESERVED3_MASK) >> CDMA8_CFG_RESERVED3_SHIFT)
+#define  CDMA8_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA8_CFG_RESERVED3_SHIFT))
+
+#define  CDMA8_CFG_SRCPID_MASK 0x3f0
+#define  CDMA8_CFG_SRCPID_SHIFT 4
+#define  CDMA8_CFG_SRCPID_MASK_SHIFT(reg) (((reg) & CDMA8_CFG_SRCPID_MASK) >> CDMA8_CFG_SRCPID_SHIFT)
+#define  CDMA8_CFG_SRCPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CFG_SRCPID_MASK) | (((uint32_t)val) << CDMA8_CFG_SRCPID_SHIFT))
+
+#define  CDMA8_CFG_DESTENDIAN_MASK 0x8
+#define  CDMA8_CFG_DESTENDIAN_SHIFT 3
+#define  CDMA8_CFG_DESTENDIAN_MASK_SHIFT(reg) (((reg) & CDMA8_CFG_DESTENDIAN_MASK) >> CDMA8_CFG_DESTENDIAN_SHIFT)
+#define  CDMA8_CFG_DESTENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CFG_DESTENDIAN_MASK) | (((uint32_t)val) << CDMA8_CFG_DESTENDIAN_SHIFT))
+
+#define  CDMA8_CFG_SRCENDIAN_MASK 0x4
+#define  CDMA8_CFG_SRCENDIAN_SHIFT 2
+#define  CDMA8_CFG_SRCENDIAN_MASK_SHIFT(reg) (((reg) & CDMA8_CFG_SRCENDIAN_MASK) >> CDMA8_CFG_SRCENDIAN_SHIFT)
+#define  CDMA8_CFG_SRCENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CFG_SRCENDIAN_MASK) | (((uint32_t)val) << CDMA8_CFG_SRCENDIAN_SHIFT))
+
+#define  CDMA8_CFG_FILL_MASK 0x2
+#define  CDMA8_CFG_FILL_SHIFT 1
+#define  CDMA8_CFG_FILL_MASK_SHIFT(reg) (((reg) & CDMA8_CFG_FILL_MASK) >> CDMA8_CFG_FILL_SHIFT)
+#define  CDMA8_CFG_FILL_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CFG_FILL_MASK) | (((uint32_t)val) << CDMA8_CFG_FILL_SHIFT))
+
+#define  CDMA8_CFG_ENABLE_MASK 0x1
+#define  CDMA8_CFG_ENABLE_SHIFT 0
+#define  CDMA8_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & CDMA8_CFG_ENABLE_MASK) >> CDMA8_CFG_ENABLE_SHIFT)
+#define  CDMA8_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CFG_ENABLE_MASK) | (((uint32_t)val) << CDMA8_CFG_ENABLE_SHIFT))
+
+//====================================================================
+//Register: DMA Channel Control Register (Control)
+/** \brief This register programs each channel for control features such as
+      auto-increment, initiator select, burst size, transfer size, and
+      transfer widths.*/
+//====================================================================
+
+#define  CDMA8_CONTROL_TRANSSIZE_MASK 0xffff0000
+#define  CDMA8_CONTROL_TRANSSIZE_SHIFT 16
+#define  CDMA8_CONTROL_TRANSSIZE_MASK_SHIFT(reg) (((reg) & CDMA8_CONTROL_TRANSSIZE_MASK) >> CDMA8_CONTROL_TRANSSIZE_SHIFT)
+#define  CDMA8_CONTROL_TRANSSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CONTROL_TRANSSIZE_MASK) | (((uint32_t)val) << CDMA8_CONTROL_TRANSSIZE_SHIFT))
+
+#define  CDMA8_CONTROL_RESERVED1_MASK 0xc000
+#define  CDMA8_CONTROL_RESERVED1_SHIFT 14
+#define  CDMA8_CONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA8_CONTROL_RESERVED1_MASK) >> CDMA8_CONTROL_RESERVED1_SHIFT)
+#define  CDMA8_CONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA8_CONTROL_RESERVED1_SHIFT))
+
+#define  CDMA8_CONTROL_DESTADDRINC_MASK 0x2000
+#define  CDMA8_CONTROL_DESTADDRINC_SHIFT 13
+#define  CDMA8_CONTROL_DESTADDRINC_MASK_SHIFT(reg) (((reg) & CDMA8_CONTROL_DESTADDRINC_MASK) >> CDMA8_CONTROL_DESTADDRINC_SHIFT)
+#define  CDMA8_CONTROL_DESTADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CONTROL_DESTADDRINC_MASK) | (((uint32_t)val) << CDMA8_CONTROL_DESTADDRINC_SHIFT))
+
+#define  CDMA8_CONTROL_SRCADDRINC_MASK 0x1000
+#define  CDMA8_CONTROL_SRCADDRINC_SHIFT 12
+#define  CDMA8_CONTROL_SRCADDRINC_MASK_SHIFT(reg) (((reg) & CDMA8_CONTROL_SRCADDRINC_MASK) >> CDMA8_CONTROL_SRCADDRINC_SHIFT)
+#define  CDMA8_CONTROL_SRCADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CONTROL_SRCADDRINC_MASK) | (((uint32_t)val) << CDMA8_CONTROL_SRCADDRINC_SHIFT))
+
+#define  CDMA8_CONTROL_DESTXFERWIDTH_MASK 0xc00
+#define  CDMA8_CONTROL_DESTXFERWIDTH_SHIFT 10
+#define  CDMA8_CONTROL_DESTXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA8_CONTROL_DESTXFERWIDTH_MASK) >> CDMA8_CONTROL_DESTXFERWIDTH_SHIFT)
+#define  CDMA8_CONTROL_DESTXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CONTROL_DESTXFERWIDTH_MASK) | (((uint32_t)val) << CDMA8_CONTROL_DESTXFERWIDTH_SHIFT))
+
+#define  CDMA8_CONTROL_SRCXFERWIDTH_MASK 0x300
+#define  CDMA8_CONTROL_SRCXFERWIDTH_SHIFT 8
+#define  CDMA8_CONTROL_SRCXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA8_CONTROL_SRCXFERWIDTH_MASK) >> CDMA8_CONTROL_SRCXFERWIDTH_SHIFT)
+#define  CDMA8_CONTROL_SRCXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CONTROL_SRCXFERWIDTH_MASK) | (((uint32_t)val) << CDMA8_CONTROL_SRCXFERWIDTH_SHIFT))
+
+#define  CDMA8_CONTROL_RESERVED2_MASK 0xc0
+#define  CDMA8_CONTROL_RESERVED2_SHIFT 6
+#define  CDMA8_CONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA8_CONTROL_RESERVED2_MASK) >> CDMA8_CONTROL_RESERVED2_SHIFT)
+#define  CDMA8_CONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA8_CONTROL_RESERVED2_SHIFT))
+
+#define  CDMA8_CONTROL_DESTBURSTSIZE_MASK 0x30
+#define  CDMA8_CONTROL_DESTBURSTSIZE_SHIFT 4
+#define  CDMA8_CONTROL_DESTBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA8_CONTROL_DESTBURSTSIZE_MASK) >> CDMA8_CONTROL_DESTBURSTSIZE_SHIFT)
+#define  CDMA8_CONTROL_DESTBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CONTROL_DESTBURSTSIZE_MASK) | (((uint32_t)val) << CDMA8_CONTROL_DESTBURSTSIZE_SHIFT))
+
+#define  CDMA8_CONTROL_RESERVED3_MASK 0xc
+#define  CDMA8_CONTROL_RESERVED3_SHIFT 2
+#define  CDMA8_CONTROL_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA8_CONTROL_RESERVED3_MASK) >> CDMA8_CONTROL_RESERVED3_SHIFT)
+#define  CDMA8_CONTROL_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CONTROL_RESERVED3_MASK) | (((uint32_t)val) << CDMA8_CONTROL_RESERVED3_SHIFT))
+
+#define  CDMA8_CONTROL_SRCBURSTSIZE_MASK 0x3
+#define  CDMA8_CONTROL_SRCBURSTSIZE_SHIFT 0
+#define  CDMA8_CONTROL_SRCBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA8_CONTROL_SRCBURSTSIZE_MASK) >> CDMA8_CONTROL_SRCBURSTSIZE_SHIFT)
+#define  CDMA8_CONTROL_SRCBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_CONTROL_SRCBURSTSIZE_MASK) | (((uint32_t)val) << CDMA8_CONTROL_SRCBURSTSIZE_SHIFT))
+
+//====================================================================
+//Register: DMA Status Register (Status)
+//====================================================================
+
+#define  CDMA8_STATUS_RESERVED1_MASK 0xfff00000
+#define  CDMA8_STATUS_RESERVED1_SHIFT 20
+#define  CDMA8_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA8_STATUS_RESERVED1_MASK) >> CDMA8_STATUS_RESERVED1_SHIFT)
+#define  CDMA8_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_STATUS_RESERVED1_MASK) | (((uint32_t)val) << CDMA8_STATUS_RESERVED1_SHIFT))
+
+#define  CDMA8_STATUS_ODDWIDTHHW_MASK 0x80000
+#define  CDMA8_STATUS_ODDWIDTHHW_SHIFT 19
+#define  CDMA8_STATUS_ODDWIDTHHW_MASK_SHIFT(reg) (((reg) & CDMA8_STATUS_ODDWIDTHHW_MASK) >> CDMA8_STATUS_ODDWIDTHHW_SHIFT)
+#define  CDMA8_STATUS_ODDWIDTHHW_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_STATUS_ODDWIDTHHW_MASK) | (((uint32_t)val) << CDMA8_STATUS_ODDWIDTHHW_SHIFT))
+
+#define  CDMA8_STATUS_DESCFETCH_MASK 0x40000
+#define  CDMA8_STATUS_DESCFETCH_SHIFT 18
+#define  CDMA8_STATUS_DESCFETCH_MASK_SHIFT(reg) (((reg) & CDMA8_STATUS_DESCFETCH_MASK) >> CDMA8_STATUS_DESCFETCH_SHIFT)
+#define  CDMA8_STATUS_DESCFETCH_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_STATUS_DESCFETCH_MASK) | (((uint32_t)val) << CDMA8_STATUS_DESCFETCH_SHIFT))
+
+#define  CDMA8_STATUS_DMABUSY_MASK 0x20000
+#define  CDMA8_STATUS_DMABUSY_SHIFT 17
+#define  CDMA8_STATUS_DMABUSY_MASK_SHIFT(reg) (((reg) & CDMA8_STATUS_DMABUSY_MASK) >> CDMA8_STATUS_DMABUSY_SHIFT)
+#define  CDMA8_STATUS_DMABUSY_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_STATUS_DMABUSY_MASK) | (((uint32_t)val) << CDMA8_STATUS_DMABUSY_SHIFT))
+
+#define  CDMA8_STATUS_FIFOEMPTY_MASK 0x10000
+#define  CDMA8_STATUS_FIFOEMPTY_SHIFT 16
+#define  CDMA8_STATUS_FIFOEMPTY_MASK_SHIFT(reg) (((reg) & CDMA8_STATUS_FIFOEMPTY_MASK) >> CDMA8_STATUS_FIFOEMPTY_SHIFT)
+#define  CDMA8_STATUS_FIFOEMPTY_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_STATUS_FIFOEMPTY_MASK) | (((uint32_t)val) << CDMA8_STATUS_FIFOEMPTY_SHIFT))
+
+#define  CDMA8_STATUS_BYTESREMAIN_MASK 0xffff
+#define  CDMA8_STATUS_BYTESREMAIN_SHIFT 0
+#define  CDMA8_STATUS_BYTESREMAIN_MASK_SHIFT(reg) (((reg) & CDMA8_STATUS_BYTESREMAIN_MASK) >> CDMA8_STATUS_BYTESREMAIN_SHIFT)
+#define  CDMA8_STATUS_BYTESREMAIN_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_STATUS_BYTESREMAIN_MASK) | (((uint32_t)val) << CDMA8_STATUS_BYTESREMAIN_SHIFT))
+
+//====================================================================
+//Register: DMA Source Address Register (SrcAddr)
+/** \brief The Source Address register is programmed with the address of the location
+      for the DMA to transfer from. If the source is memory, the address can be
+      byte aligned.
+<br>*/
+//====================================================================
+
+#define  CDMA8_SRCADDR_SRCADDR_MASK 0xffffffff
+#define  CDMA8_SRCADDR_SRCADDR_SHIFT 0
+#define  CDMA8_SRCADDR_SRCADDR_MASK_SHIFT(reg) (((reg) & CDMA8_SRCADDR_SRCADDR_MASK) >> CDMA8_SRCADDR_SRCADDR_SHIFT)
+#define  CDMA8_SRCADDR_SRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_SRCADDR_SRCADDR_MASK) | (((uint32_t)val) << CDMA8_SRCADDR_SRCADDR_SHIFT))
+
+//====================================================================
+//Register: Current Source Address Register (SrcAddrStat)
+/** \brief This register contains the current address for the source device.*/
+//====================================================================
+
+#define  CDMA8_SRCADDRSTAT_CURRSRCADDR_MASK 0xffffffff
+#define  CDMA8_SRCADDRSTAT_CURRSRCADDR_SHIFT 0
+#define  CDMA8_SRCADDRSTAT_CURRSRCADDR_MASK_SHIFT(reg) (((reg) & CDMA8_SRCADDRSTAT_CURRSRCADDR_MASK) >> CDMA8_SRCADDRSTAT_CURRSRCADDR_SHIFT)
+#define  CDMA8_SRCADDRSTAT_CURRSRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_SRCADDRSTAT_CURRSRCADDR_MASK) | (((uint32_t)val) << CDMA8_SRCADDRSTAT_CURRSRCADDR_SHIFT))
+
+//====================================================================
+//Register: Destination Address Register (DestAddr)
+/** \brief The Destination Address register is programmed with the address of the location
+      for the DMA to transfer to. If the destination is memory, the address can be
+      byte aligned.*/
+//====================================================================
+
+#define  CDMA8_DESTADDR_DESTADDR_MASK 0xffffffff
+#define  CDMA8_DESTADDR_DESTADDR_SHIFT 0
+#define  CDMA8_DESTADDR_DESTADDR_MASK_SHIFT(reg) (((reg) & CDMA8_DESTADDR_DESTADDR_MASK) >> CDMA8_DESTADDR_DESTADDR_SHIFT)
+#define  CDMA8_DESTADDR_DESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_DESTADDR_DESTADDR_MASK) | (((uint32_t)val) << CDMA8_DESTADDR_DESTADDR_SHIFT))
+
+//====================================================================
+//Register: Current Destination Address Register (DestAddrStat)
+/** \brief This register contains the current address for the destination device.*/
+//====================================================================
+
+#define  CDMA8_DESTADDRSTAT_CURRDESTADDR_MASK 0xffffffff
+#define  CDMA8_DESTADDRSTAT_CURRDESTADDR_SHIFT 0
+#define  CDMA8_DESTADDRSTAT_CURRDESTADDR_MASK_SHIFT(reg) (((reg) & CDMA8_DESTADDRSTAT_CURRDESTADDR_MASK) >> CDMA8_DESTADDRSTAT_CURRDESTADDR_SHIFT)
+#define  CDMA8_DESTADDRSTAT_CURRDESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_DESTADDRSTAT_CURRDESTADDR_MASK) | (((uint32_t)val) << CDMA8_DESTADDRSTAT_CURRDESTADDR_SHIFT))
+
+//====================================================================
+//Register: Fill Value Register (FillValue)
+/** \brief This register contains the data value to write to the destination
+      address.*/
+//====================================================================
+
+#define  CDMA8_FILLVALUE_FILLVAL_MASK 0xffffffff
+#define  CDMA8_FILLVALUE_FILLVAL_SHIFT 0
+#define  CDMA8_FILLVALUE_FILLVAL_MASK_SHIFT(reg) (((reg) & CDMA8_FILLVALUE_FILLVAL_MASK) >> CDMA8_FILLVALUE_FILLVAL_SHIFT)
+#define  CDMA8_FILLVALUE_FILLVAL_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_FILLVALUE_FILLVAL_MASK) | (((uint32_t)val) << CDMA8_FILLVALUE_FILLVAL_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (intEn)
+//====================================================================
+
+#define  CDMA8_INTEN_RESERVED1_MASK 0xfffffff0
+#define  CDMA8_INTEN_RESERVED1_SHIFT 4
+#define  CDMA8_INTEN_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA8_INTEN_RESERVED1_MASK) >> CDMA8_INTEN_RESERVED1_SHIFT)
+#define  CDMA8_INTEN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTEN_RESERVED1_MASK) | (((uint32_t)val) << CDMA8_INTEN_RESERVED1_SHIFT))
+
+#define  CDMA8_INTEN_CLEARCOMPLETEEN_MASK 0x8
+#define  CDMA8_INTEN_CLEARCOMPLETEEN_SHIFT 3
+#define  CDMA8_INTEN_CLEARCOMPLETEEN_MASK_SHIFT(reg) (((reg) & CDMA8_INTEN_CLEARCOMPLETEEN_MASK) >> CDMA8_INTEN_CLEARCOMPLETEEN_SHIFT)
+#define  CDMA8_INTEN_CLEARCOMPLETEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTEN_CLEARCOMPLETEEN_MASK) | (((uint32_t)val) << CDMA8_INTEN_CLEARCOMPLETEEN_SHIFT))
+
+#define  CDMA8_INTEN_CHAINDONEEN_MASK 0x4
+#define  CDMA8_INTEN_CHAINDONEEN_SHIFT 2
+#define  CDMA8_INTEN_CHAINDONEEN_MASK_SHIFT(reg) (((reg) & CDMA8_INTEN_CHAINDONEEN_MASK) >> CDMA8_INTEN_CHAINDONEEN_SHIFT)
+#define  CDMA8_INTEN_CHAINDONEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTEN_CHAINDONEEN_MASK) | (((uint32_t)val) << CDMA8_INTEN_CHAINDONEEN_SHIFT))
+
+#define  CDMA8_INTEN_TIMEOUTEN_MASK 0x2
+#define  CDMA8_INTEN_TIMEOUTEN_SHIFT 1
+#define  CDMA8_INTEN_TIMEOUTEN_MASK_SHIFT(reg) (((reg) & CDMA8_INTEN_TIMEOUTEN_MASK) >> CDMA8_INTEN_TIMEOUTEN_SHIFT)
+#define  CDMA8_INTEN_TIMEOUTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTEN_TIMEOUTEN_MASK) | (((uint32_t)val) << CDMA8_INTEN_TIMEOUTEN_SHIFT))
+
+#define  CDMA8_INTEN_TERMCNTEN_MASK 0x1
+#define  CDMA8_INTEN_TERMCNTEN_SHIFT 0
+#define  CDMA8_INTEN_TERMCNTEN_MASK_SHIFT(reg) (((reg) & CDMA8_INTEN_TERMCNTEN_MASK) >> CDMA8_INTEN_TERMCNTEN_SHIFT)
+#define  CDMA8_INTEN_TERMCNTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTEN_TERMCNTEN_MASK) | (((uint32_t)val) << CDMA8_INTEN_TERMCNTEN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (intPend)
+//====================================================================
+
+#define  CDMA8_INTPEND_RESERVED1_MASK 0xfffffff0
+#define  CDMA8_INTPEND_RESERVED1_SHIFT 4
+#define  CDMA8_INTPEND_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA8_INTPEND_RESERVED1_MASK) >> CDMA8_INTPEND_RESERVED1_SHIFT)
+#define  CDMA8_INTPEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTPEND_RESERVED1_MASK) | (((uint32_t)val) << CDMA8_INTPEND_RESERVED1_SHIFT))
+
+#define  CDMA8_INTPEND_CLEARCOMPLETEPEND_MASK 0x8
+#define  CDMA8_INTPEND_CLEARCOMPLETEPEND_SHIFT 3
+#define  CDMA8_INTPEND_CLEARCOMPLETEPEND_MASK_SHIFT(reg) (((reg) & CDMA8_INTPEND_CLEARCOMPLETEPEND_MASK) >> CDMA8_INTPEND_CLEARCOMPLETEPEND_SHIFT)
+#define  CDMA8_INTPEND_CLEARCOMPLETEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTPEND_CLEARCOMPLETEPEND_MASK) | (((uint32_t)val) << CDMA8_INTPEND_CLEARCOMPLETEPEND_SHIFT))
+
+#define  CDMA8_INTPEND_CHAINDONEPEND_MASK 0x4
+#define  CDMA8_INTPEND_CHAINDONEPEND_SHIFT 2
+#define  CDMA8_INTPEND_CHAINDONEPEND_MASK_SHIFT(reg) (((reg) & CDMA8_INTPEND_CHAINDONEPEND_MASK) >> CDMA8_INTPEND_CHAINDONEPEND_SHIFT)
+#define  CDMA8_INTPEND_CHAINDONEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTPEND_CHAINDONEPEND_MASK) | (((uint32_t)val) << CDMA8_INTPEND_CHAINDONEPEND_SHIFT))
+
+#define  CDMA8_INTPEND_TIMEOUTPEND_MASK 0x2
+#define  CDMA8_INTPEND_TIMEOUTPEND_SHIFT 1
+#define  CDMA8_INTPEND_TIMEOUTPEND_MASK_SHIFT(reg) (((reg) & CDMA8_INTPEND_TIMEOUTPEND_MASK) >> CDMA8_INTPEND_TIMEOUTPEND_SHIFT)
+#define  CDMA8_INTPEND_TIMEOUTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTPEND_TIMEOUTPEND_MASK) | (((uint32_t)val) << CDMA8_INTPEND_TIMEOUTPEND_SHIFT))
+
+#define  CDMA8_INTPEND_TERMCNTPEND_MASK 0x1
+#define  CDMA8_INTPEND_TERMCNTPEND_SHIFT 0
+#define  CDMA8_INTPEND_TERMCNTPEND_MASK_SHIFT(reg) (((reg) & CDMA8_INTPEND_TERMCNTPEND_MASK) >> CDMA8_INTPEND_TERMCNTPEND_SHIFT)
+#define  CDMA8_INTPEND_TERMCNTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTPEND_TERMCNTPEND_MASK) | (((uint32_t)val) << CDMA8_INTPEND_TERMCNTPEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (intAck)
+//====================================================================
+
+#define  CDMA8_INTACK_RESERVED1_MASK 0xfffffff0
+#define  CDMA8_INTACK_RESERVED1_SHIFT 4
+#define  CDMA8_INTACK_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA8_INTACK_RESERVED1_MASK) >> CDMA8_INTACK_RESERVED1_SHIFT)
+#define  CDMA8_INTACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTACK_RESERVED1_MASK) | (((uint32_t)val) << CDMA8_INTACK_RESERVED1_SHIFT))
+
+#define  CDMA8_INTACK_CLEARCOMPLETEACK_MASK 0x8
+#define  CDMA8_INTACK_CLEARCOMPLETEACK_SHIFT 3
+#define  CDMA8_INTACK_CLEARCOMPLETEACK_MASK_SHIFT(reg) (((reg) & CDMA8_INTACK_CLEARCOMPLETEACK_MASK) >> CDMA8_INTACK_CLEARCOMPLETEACK_SHIFT)
+#define  CDMA8_INTACK_CLEARCOMPLETEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTACK_CLEARCOMPLETEACK_MASK) | (((uint32_t)val) << CDMA8_INTACK_CLEARCOMPLETEACK_SHIFT))
+
+#define  CDMA8_INTACK_CHAINDONEACK_MASK 0x4
+#define  CDMA8_INTACK_CHAINDONEACK_SHIFT 2
+#define  CDMA8_INTACK_CHAINDONEACK_MASK_SHIFT(reg) (((reg) & CDMA8_INTACK_CHAINDONEACK_MASK) >> CDMA8_INTACK_CHAINDONEACK_SHIFT)
+#define  CDMA8_INTACK_CHAINDONEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTACK_CHAINDONEACK_MASK) | (((uint32_t)val) << CDMA8_INTACK_CHAINDONEACK_SHIFT))
+
+#define  CDMA8_INTACK_TIMEOUTACK_MASK 0x2
+#define  CDMA8_INTACK_TIMEOUTACK_SHIFT 1
+#define  CDMA8_INTACK_TIMEOUTACK_MASK_SHIFT(reg) (((reg) & CDMA8_INTACK_TIMEOUTACK_MASK) >> CDMA8_INTACK_TIMEOUTACK_SHIFT)
+#define  CDMA8_INTACK_TIMEOUTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTACK_TIMEOUTACK_MASK) | (((uint32_t)val) << CDMA8_INTACK_TIMEOUTACK_SHIFT))
+
+#define  CDMA8_INTACK_TERMCNTACK_MASK 0x1
+#define  CDMA8_INTACK_TERMCNTACK_SHIFT 0
+#define  CDMA8_INTACK_TERMCNTACK_MASK_SHIFT(reg) (((reg) & CDMA8_INTACK_TERMCNTACK_MASK) >> CDMA8_INTACK_TERMCNTACK_SHIFT)
+#define  CDMA8_INTACK_TERMCNTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTACK_TERMCNTACK_MASK) | (((uint32_t)val) << CDMA8_INTACK_TERMCNTACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (intForce)
+//====================================================================
+
+#define  CDMA8_INTFORCE_RESERVED1_MASK 0xfffffff0
+#define  CDMA8_INTFORCE_RESERVED1_SHIFT 4
+#define  CDMA8_INTFORCE_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA8_INTFORCE_RESERVED1_MASK) >> CDMA8_INTFORCE_RESERVED1_SHIFT)
+#define  CDMA8_INTFORCE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTFORCE_RESERVED1_MASK) | (((uint32_t)val) << CDMA8_INTFORCE_RESERVED1_SHIFT))
+
+#define  CDMA8_INTFORCE_CLEARCOMPLETEFOR_MASK 0x8
+#define  CDMA8_INTFORCE_CLEARCOMPLETEFOR_SHIFT 3
+#define  CDMA8_INTFORCE_CLEARCOMPLETEFOR_MASK_SHIFT(reg) (((reg) & CDMA8_INTFORCE_CLEARCOMPLETEFOR_MASK) >> CDMA8_INTFORCE_CLEARCOMPLETEFOR_SHIFT)
+#define  CDMA8_INTFORCE_CLEARCOMPLETEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTFORCE_CLEARCOMPLETEFOR_MASK) | (((uint32_t)val) << CDMA8_INTFORCE_CLEARCOMPLETEFOR_SHIFT))
+
+#define  CDMA8_INTFORCE_CHAINDONEFOR_MASK 0x4
+#define  CDMA8_INTFORCE_CHAINDONEFOR_SHIFT 2
+#define  CDMA8_INTFORCE_CHAINDONEFOR_MASK_SHIFT(reg) (((reg) & CDMA8_INTFORCE_CHAINDONEFOR_MASK) >> CDMA8_INTFORCE_CHAINDONEFOR_SHIFT)
+#define  CDMA8_INTFORCE_CHAINDONEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTFORCE_CHAINDONEFOR_MASK) | (((uint32_t)val) << CDMA8_INTFORCE_CHAINDONEFOR_SHIFT))
+
+#define  CDMA8_INTFORCE_TIMEOUTFOR_MASK 0x2
+#define  CDMA8_INTFORCE_TIMEOUTFOR_SHIFT 1
+#define  CDMA8_INTFORCE_TIMEOUTFOR_MASK_SHIFT(reg) (((reg) & CDMA8_INTFORCE_TIMEOUTFOR_MASK) >> CDMA8_INTFORCE_TIMEOUTFOR_SHIFT)
+#define  CDMA8_INTFORCE_TIMEOUTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTFORCE_TIMEOUTFOR_MASK) | (((uint32_t)val) << CDMA8_INTFORCE_TIMEOUTFOR_SHIFT))
+
+#define  CDMA8_INTFORCE_TERMCNTFOR_MASK 0x1
+#define  CDMA8_INTFORCE_TERMCNTFOR_SHIFT 0
+#define  CDMA8_INTFORCE_TERMCNTFOR_MASK_SHIFT(reg) (((reg) & CDMA8_INTFORCE_TERMCNTFOR_MASK) >> CDMA8_INTFORCE_TERMCNTFOR_SHIFT)
+#define  CDMA8_INTFORCE_TERMCNTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_INTFORCE_TERMCNTFOR_MASK) | (((uint32_t)val) << CDMA8_INTFORCE_TERMCNTFOR_SHIFT))
+
+//====================================================================
+//Register: DMA Timer Control (TimerControl)
+/** \brief The Timer Control register specifies the number of timebase cycles between word
+      transfers before generating a timeout interrupt. The timer is reset each time
+      a transfer occurs.*/
+//====================================================================
+
+#define  CDMA8_TIMERCONTROL_RESERVED1_MASK 0xffff0000
+#define  CDMA8_TIMERCONTROL_RESERVED1_SHIFT 16
+#define  CDMA8_TIMERCONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA8_TIMERCONTROL_RESERVED1_MASK) >> CDMA8_TIMERCONTROL_RESERVED1_SHIFT)
+#define  CDMA8_TIMERCONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_TIMERCONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA8_TIMERCONTROL_RESERVED1_SHIFT))
+
+#define  CDMA8_TIMERCONTROL_TIMERENABLE_MASK 0x8000
+#define  CDMA8_TIMERCONTROL_TIMERENABLE_SHIFT 15
+#define  CDMA8_TIMERCONTROL_TIMERENABLE_MASK_SHIFT(reg) (((reg) & CDMA8_TIMERCONTROL_TIMERENABLE_MASK) >> CDMA8_TIMERCONTROL_TIMERENABLE_SHIFT)
+#define  CDMA8_TIMERCONTROL_TIMERENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_TIMERCONTROL_TIMERENABLE_MASK) | (((uint32_t)val) << CDMA8_TIMERCONTROL_TIMERENABLE_SHIFT))
+
+#define  CDMA8_TIMERCONTROL_TIMEBASE_MASK 0x7000
+#define  CDMA8_TIMERCONTROL_TIMEBASE_SHIFT 12
+#define  CDMA8_TIMERCONTROL_TIMEBASE_MASK_SHIFT(reg) (((reg) & CDMA8_TIMERCONTROL_TIMEBASE_MASK) >> CDMA8_TIMERCONTROL_TIMEBASE_SHIFT)
+#define  CDMA8_TIMERCONTROL_TIMEBASE_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_TIMERCONTROL_TIMEBASE_MASK) | (((uint32_t)val) << CDMA8_TIMERCONTROL_TIMEBASE_SHIFT))
+
+#define  CDMA8_TIMERCONTROL_RESERVED2_MASK 0x800
+#define  CDMA8_TIMERCONTROL_RESERVED2_SHIFT 11
+#define  CDMA8_TIMERCONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA8_TIMERCONTROL_RESERVED2_MASK) >> CDMA8_TIMERCONTROL_RESERVED2_SHIFT)
+#define  CDMA8_TIMERCONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_TIMERCONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA8_TIMERCONTROL_RESERVED2_SHIFT))
+
+#define  CDMA8_TIMERCONTROL_COUNT_MASK 0x7ff
+#define  CDMA8_TIMERCONTROL_COUNT_SHIFT 0
+#define  CDMA8_TIMERCONTROL_COUNT_MASK_SHIFT(reg) (((reg) & CDMA8_TIMERCONTROL_COUNT_MASK) >> CDMA8_TIMERCONTROL_COUNT_SHIFT)
+#define  CDMA8_TIMERCONTROL_COUNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_TIMERCONTROL_COUNT_MASK) | (((uint32_t)val) << CDMA8_TIMERCONTROL_COUNT_SHIFT))
+
+//====================================================================
+//Register: Timeout Count Status Register (TimeOutStat)
+/** \brief This register contains the current timeout count.*/
+//====================================================================
+
+#define  CDMA8_TIMEOUTSTAT_RESERVED1_MASK 0xfffff800
+#define  CDMA8_TIMEOUTSTAT_RESERVED1_SHIFT 11
+#define  CDMA8_TIMEOUTSTAT_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA8_TIMEOUTSTAT_RESERVED1_MASK) >> CDMA8_TIMEOUTSTAT_RESERVED1_SHIFT)
+#define  CDMA8_TIMEOUTSTAT_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_TIMEOUTSTAT_RESERVED1_MASK) | (((uint32_t)val) << CDMA8_TIMEOUTSTAT_RESERVED1_SHIFT))
+
+#define  CDMA8_TIMEOUTSTAT_CURRTOCNT_MASK 0x7ff
+#define  CDMA8_TIMEOUTSTAT_CURRTOCNT_SHIFT 0
+#define  CDMA8_TIMEOUTSTAT_CURRTOCNT_MASK_SHIFT(reg) (((reg) & CDMA8_TIMEOUTSTAT_CURRTOCNT_MASK) >> CDMA8_TIMEOUTSTAT_CURRTOCNT_SHIFT)
+#define  CDMA8_TIMEOUTSTAT_CURRTOCNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_TIMEOUTSTAT_CURRTOCNT_MASK) | (((uint32_t)val) << CDMA8_TIMEOUTSTAT_CURRTOCNT_SHIFT))
+
+//====================================================================
+//Register: Linked List Index Register (LLIR)
+/** \brief This register contains a word-aligned address of the first word of the next descriptor. LLI means "linked list index" or pointer to the descriptor in memory. If the LLI register is 0, then the current descriptor (that is loaded in the registers) is the last in the chain, and the DMA channel will stop once the current DMA transfer is completed.*/
+//====================================================================
+
+#define  CDMA8_LLIR_LLINDEX_MASK 0xfffffffc
+#define  CDMA8_LLIR_LLINDEX_SHIFT 2
+#define  CDMA8_LLIR_LLINDEX_MASK_SHIFT(reg) (((reg) & CDMA8_LLIR_LLINDEX_MASK) >> CDMA8_LLIR_LLINDEX_SHIFT)
+#define  CDMA8_LLIR_LLINDEX_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_LLIR_LLINDEX_MASK) | (((uint32_t)val) << CDMA8_LLIR_LLINDEX_SHIFT))
+
+#define  CDMA8_LLIR_RESERVED1_MASK 0x3
+#define  CDMA8_LLIR_RESERVED1_SHIFT 0
+#define  CDMA8_LLIR_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA8_LLIR_RESERVED1_MASK) >> CDMA8_LLIR_RESERVED1_SHIFT)
+#define  CDMA8_LLIR_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_LLIR_RESERVED1_MASK) | (((uint32_t)val) << CDMA8_LLIR_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Odd Width Config Register (OWCFG)
+//====================================================================
+
+#define  CDMA8_OWCFG_RESERVED1_MASK 0xfffe0000
+#define  CDMA8_OWCFG_RESERVED1_SHIFT 17
+#define  CDMA8_OWCFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA8_OWCFG_RESERVED1_MASK) >> CDMA8_OWCFG_RESERVED1_SHIFT)
+#define  CDMA8_OWCFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_OWCFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA8_OWCFG_RESERVED1_SHIFT))
+
+#define  CDMA8_OWCFG_EXTRABITS_MASK 0x1f000
+#define  CDMA8_OWCFG_EXTRABITS_SHIFT 12
+#define  CDMA8_OWCFG_EXTRABITS_MASK_SHIFT(reg) (((reg) & CDMA8_OWCFG_EXTRABITS_MASK) >> CDMA8_OWCFG_EXTRABITS_SHIFT)
+#define  CDMA8_OWCFG_EXTRABITS_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_OWCFG_EXTRABITS_MASK) | (((uint32_t)val) << CDMA8_OWCFG_EXTRABITS_SHIFT))
+
+#define  CDMA8_OWCFG_RESERVED2_MASK 0xe00
+#define  CDMA8_OWCFG_RESERVED2_SHIFT 9
+#define  CDMA8_OWCFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA8_OWCFG_RESERVED2_MASK) >> CDMA8_OWCFG_RESERVED2_SHIFT)
+#define  CDMA8_OWCFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_OWCFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA8_OWCFG_RESERVED2_SHIFT))
+
+#define  CDMA8_OWCFG_ODDWIDTH_MASK 0x1f0
+#define  CDMA8_OWCFG_ODDWIDTH_SHIFT 4
+#define  CDMA8_OWCFG_ODDWIDTH_MASK_SHIFT(reg) (((reg) & CDMA8_OWCFG_ODDWIDTH_MASK) >> CDMA8_OWCFG_ODDWIDTH_SHIFT)
+#define  CDMA8_OWCFG_ODDWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_OWCFG_ODDWIDTH_MASK) | (((uint32_t)val) << CDMA8_OWCFG_ODDWIDTH_SHIFT))
+
+#define  CDMA8_OWCFG_RESERVED3_MASK 0xc
+#define  CDMA8_OWCFG_RESERVED3_SHIFT 2
+#define  CDMA8_OWCFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA8_OWCFG_RESERVED3_MASK) >> CDMA8_OWCFG_RESERVED3_SHIFT)
+#define  CDMA8_OWCFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_OWCFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA8_OWCFG_RESERVED3_SHIFT))
+
+#define  CDMA8_OWCFG_PACKNUNPACK_MASK 0x2
+#define  CDMA8_OWCFG_PACKNUNPACK_SHIFT 1
+#define  CDMA8_OWCFG_PACKNUNPACK_MASK_SHIFT(reg) (((reg) & CDMA8_OWCFG_PACKNUNPACK_MASK) >> CDMA8_OWCFG_PACKNUNPACK_SHIFT)
+#define  CDMA8_OWCFG_PACKNUNPACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_OWCFG_PACKNUNPACK_MASK) | (((uint32_t)val) << CDMA8_OWCFG_PACKNUNPACK_SHIFT))
+
+#define  CDMA8_OWCFG_OWEN_MASK 0x1
+#define  CDMA8_OWCFG_OWEN_SHIFT 0
+#define  CDMA8_OWCFG_OWEN_MASK_SHIFT(reg) (((reg) & CDMA8_OWCFG_OWEN_MASK) >> CDMA8_OWCFG_OWEN_SHIFT)
+#define  CDMA8_OWCFG_OWEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA8_OWCFG_OWEN_MASK) | (((uint32_t)val) << CDMA8_OWCFG_OWEN_SHIFT))
+
+//====================================================================
+//
+//Register File: CDMA (Instance 10 of 12) (CDMA9)
+/** \brief Registers for Central DMA module*/
+//
+//====================================================================
+
+//====================================================================
+//Register: DMA Configuration Register (CFG)
+/** \brief This register is used to configure the data flow for each channel.*/
+//====================================================================
+
+#define  CDMA9_CFG_WRDELAY_MASK 0xf0000000
+#define  CDMA9_CFG_WRDELAY_SHIFT 28
+#define  CDMA9_CFG_WRDELAY_MASK_SHIFT(reg) (((reg) & CDMA9_CFG_WRDELAY_MASK) >> CDMA9_CFG_WRDELAY_SHIFT)
+#define  CDMA9_CFG_WRDELAY_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CFG_WRDELAY_MASK) | (((uint32_t)val) << CDMA9_CFG_WRDELAY_SHIFT))
+
+#define  CDMA9_CFG_RESERVED1_MASK 0xc000000
+#define  CDMA9_CFG_RESERVED1_SHIFT 26
+#define  CDMA9_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA9_CFG_RESERVED1_MASK) >> CDMA9_CFG_RESERVED1_SHIFT)
+#define  CDMA9_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA9_CFG_RESERVED1_SHIFT))
+
+#define  CDMA9_CFG_DATAUNITSIZE_MASK 0x3000000
+#define  CDMA9_CFG_DATAUNITSIZE_SHIFT 24
+#define  CDMA9_CFG_DATAUNITSIZE_MASK_SHIFT(reg) (((reg) & CDMA9_CFG_DATAUNITSIZE_MASK) >> CDMA9_CFG_DATAUNITSIZE_SHIFT)
+#define  CDMA9_CFG_DATAUNITSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CFG_DATAUNITSIZE_MASK) | (((uint32_t)val) << CDMA9_CFG_DATAUNITSIZE_SHIFT))
+
+#define  CDMA9_CFG_HALT_MASK 0x800000
+#define  CDMA9_CFG_HALT_SHIFT 23
+#define  CDMA9_CFG_HALT_MASK_SHIFT(reg) (((reg) & CDMA9_CFG_HALT_MASK) >> CDMA9_CFG_HALT_SHIFT)
+#define  CDMA9_CFG_HALT_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CFG_HALT_MASK) | (((uint32_t)val) << CDMA9_CFG_HALT_SHIFT))
+
+#define  CDMA9_CFG_FLOWCTRL_MASK 0x700000
+#define  CDMA9_CFG_FLOWCTRL_SHIFT 20
+#define  CDMA9_CFG_FLOWCTRL_MASK_SHIFT(reg) (((reg) & CDMA9_CFG_FLOWCTRL_MASK) >> CDMA9_CFG_FLOWCTRL_SHIFT)
+#define  CDMA9_CFG_FLOWCTRL_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CFG_FLOWCTRL_MASK) | (((uint32_t)val) << CDMA9_CFG_FLOWCTRL_SHIFT))
+
+#define  CDMA9_CFG_RESERVED2_MASK 0xc0000
+#define  CDMA9_CFG_RESERVED2_SHIFT 18
+#define  CDMA9_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA9_CFG_RESERVED2_MASK) >> CDMA9_CFG_RESERVED2_SHIFT)
+#define  CDMA9_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA9_CFG_RESERVED2_SHIFT))
+
+#define  CDMA9_CFG_DESTPID_MASK 0x3f000
+#define  CDMA9_CFG_DESTPID_SHIFT 12
+#define  CDMA9_CFG_DESTPID_MASK_SHIFT(reg) (((reg) & CDMA9_CFG_DESTPID_MASK) >> CDMA9_CFG_DESTPID_SHIFT)
+#define  CDMA9_CFG_DESTPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CFG_DESTPID_MASK) | (((uint32_t)val) << CDMA9_CFG_DESTPID_SHIFT))
+
+#define  CDMA9_CFG_RESERVED3_MASK 0xc00
+#define  CDMA9_CFG_RESERVED3_SHIFT 10
+#define  CDMA9_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA9_CFG_RESERVED3_MASK) >> CDMA9_CFG_RESERVED3_SHIFT)
+#define  CDMA9_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA9_CFG_RESERVED3_SHIFT))
+
+#define  CDMA9_CFG_SRCPID_MASK 0x3f0
+#define  CDMA9_CFG_SRCPID_SHIFT 4
+#define  CDMA9_CFG_SRCPID_MASK_SHIFT(reg) (((reg) & CDMA9_CFG_SRCPID_MASK) >> CDMA9_CFG_SRCPID_SHIFT)
+#define  CDMA9_CFG_SRCPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CFG_SRCPID_MASK) | (((uint32_t)val) << CDMA9_CFG_SRCPID_SHIFT))
+
+#define  CDMA9_CFG_DESTENDIAN_MASK 0x8
+#define  CDMA9_CFG_DESTENDIAN_SHIFT 3
+#define  CDMA9_CFG_DESTENDIAN_MASK_SHIFT(reg) (((reg) & CDMA9_CFG_DESTENDIAN_MASK) >> CDMA9_CFG_DESTENDIAN_SHIFT)
+#define  CDMA9_CFG_DESTENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CFG_DESTENDIAN_MASK) | (((uint32_t)val) << CDMA9_CFG_DESTENDIAN_SHIFT))
+
+#define  CDMA9_CFG_SRCENDIAN_MASK 0x4
+#define  CDMA9_CFG_SRCENDIAN_SHIFT 2
+#define  CDMA9_CFG_SRCENDIAN_MASK_SHIFT(reg) (((reg) & CDMA9_CFG_SRCENDIAN_MASK) >> CDMA9_CFG_SRCENDIAN_SHIFT)
+#define  CDMA9_CFG_SRCENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CFG_SRCENDIAN_MASK) | (((uint32_t)val) << CDMA9_CFG_SRCENDIAN_SHIFT))
+
+#define  CDMA9_CFG_FILL_MASK 0x2
+#define  CDMA9_CFG_FILL_SHIFT 1
+#define  CDMA9_CFG_FILL_MASK_SHIFT(reg) (((reg) & CDMA9_CFG_FILL_MASK) >> CDMA9_CFG_FILL_SHIFT)
+#define  CDMA9_CFG_FILL_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CFG_FILL_MASK) | (((uint32_t)val) << CDMA9_CFG_FILL_SHIFT))
+
+#define  CDMA9_CFG_ENABLE_MASK 0x1
+#define  CDMA9_CFG_ENABLE_SHIFT 0
+#define  CDMA9_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & CDMA9_CFG_ENABLE_MASK) >> CDMA9_CFG_ENABLE_SHIFT)
+#define  CDMA9_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CFG_ENABLE_MASK) | (((uint32_t)val) << CDMA9_CFG_ENABLE_SHIFT))
+
+//====================================================================
+//Register: DMA Channel Control Register (Control)
+/** \brief This register programs each channel for control features such as
+      auto-increment, initiator select, burst size, transfer size, and
+      transfer widths.*/
+//====================================================================
+
+#define  CDMA9_CONTROL_TRANSSIZE_MASK 0xffff0000
+#define  CDMA9_CONTROL_TRANSSIZE_SHIFT 16
+#define  CDMA9_CONTROL_TRANSSIZE_MASK_SHIFT(reg) (((reg) & CDMA9_CONTROL_TRANSSIZE_MASK) >> CDMA9_CONTROL_TRANSSIZE_SHIFT)
+#define  CDMA9_CONTROL_TRANSSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CONTROL_TRANSSIZE_MASK) | (((uint32_t)val) << CDMA9_CONTROL_TRANSSIZE_SHIFT))
+
+#define  CDMA9_CONTROL_RESERVED1_MASK 0xc000
+#define  CDMA9_CONTROL_RESERVED1_SHIFT 14
+#define  CDMA9_CONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA9_CONTROL_RESERVED1_MASK) >> CDMA9_CONTROL_RESERVED1_SHIFT)
+#define  CDMA9_CONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA9_CONTROL_RESERVED1_SHIFT))
+
+#define  CDMA9_CONTROL_DESTADDRINC_MASK 0x2000
+#define  CDMA9_CONTROL_DESTADDRINC_SHIFT 13
+#define  CDMA9_CONTROL_DESTADDRINC_MASK_SHIFT(reg) (((reg) & CDMA9_CONTROL_DESTADDRINC_MASK) >> CDMA9_CONTROL_DESTADDRINC_SHIFT)
+#define  CDMA9_CONTROL_DESTADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CONTROL_DESTADDRINC_MASK) | (((uint32_t)val) << CDMA9_CONTROL_DESTADDRINC_SHIFT))
+
+#define  CDMA9_CONTROL_SRCADDRINC_MASK 0x1000
+#define  CDMA9_CONTROL_SRCADDRINC_SHIFT 12
+#define  CDMA9_CONTROL_SRCADDRINC_MASK_SHIFT(reg) (((reg) & CDMA9_CONTROL_SRCADDRINC_MASK) >> CDMA9_CONTROL_SRCADDRINC_SHIFT)
+#define  CDMA9_CONTROL_SRCADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CONTROL_SRCADDRINC_MASK) | (((uint32_t)val) << CDMA9_CONTROL_SRCADDRINC_SHIFT))
+
+#define  CDMA9_CONTROL_DESTXFERWIDTH_MASK 0xc00
+#define  CDMA9_CONTROL_DESTXFERWIDTH_SHIFT 10
+#define  CDMA9_CONTROL_DESTXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA9_CONTROL_DESTXFERWIDTH_MASK) >> CDMA9_CONTROL_DESTXFERWIDTH_SHIFT)
+#define  CDMA9_CONTROL_DESTXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CONTROL_DESTXFERWIDTH_MASK) | (((uint32_t)val) << CDMA9_CONTROL_DESTXFERWIDTH_SHIFT))
+
+#define  CDMA9_CONTROL_SRCXFERWIDTH_MASK 0x300
+#define  CDMA9_CONTROL_SRCXFERWIDTH_SHIFT 8
+#define  CDMA9_CONTROL_SRCXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA9_CONTROL_SRCXFERWIDTH_MASK) >> CDMA9_CONTROL_SRCXFERWIDTH_SHIFT)
+#define  CDMA9_CONTROL_SRCXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CONTROL_SRCXFERWIDTH_MASK) | (((uint32_t)val) << CDMA9_CONTROL_SRCXFERWIDTH_SHIFT))
+
+#define  CDMA9_CONTROL_RESERVED2_MASK 0xc0
+#define  CDMA9_CONTROL_RESERVED2_SHIFT 6
+#define  CDMA9_CONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA9_CONTROL_RESERVED2_MASK) >> CDMA9_CONTROL_RESERVED2_SHIFT)
+#define  CDMA9_CONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA9_CONTROL_RESERVED2_SHIFT))
+
+#define  CDMA9_CONTROL_DESTBURSTSIZE_MASK 0x30
+#define  CDMA9_CONTROL_DESTBURSTSIZE_SHIFT 4
+#define  CDMA9_CONTROL_DESTBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA9_CONTROL_DESTBURSTSIZE_MASK) >> CDMA9_CONTROL_DESTBURSTSIZE_SHIFT)
+#define  CDMA9_CONTROL_DESTBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CONTROL_DESTBURSTSIZE_MASK) | (((uint32_t)val) << CDMA9_CONTROL_DESTBURSTSIZE_SHIFT))
+
+#define  CDMA9_CONTROL_RESERVED3_MASK 0xc
+#define  CDMA9_CONTROL_RESERVED3_SHIFT 2
+#define  CDMA9_CONTROL_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA9_CONTROL_RESERVED3_MASK) >> CDMA9_CONTROL_RESERVED3_SHIFT)
+#define  CDMA9_CONTROL_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CONTROL_RESERVED3_MASK) | (((uint32_t)val) << CDMA9_CONTROL_RESERVED3_SHIFT))
+
+#define  CDMA9_CONTROL_SRCBURSTSIZE_MASK 0x3
+#define  CDMA9_CONTROL_SRCBURSTSIZE_SHIFT 0
+#define  CDMA9_CONTROL_SRCBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA9_CONTROL_SRCBURSTSIZE_MASK) >> CDMA9_CONTROL_SRCBURSTSIZE_SHIFT)
+#define  CDMA9_CONTROL_SRCBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_CONTROL_SRCBURSTSIZE_MASK) | (((uint32_t)val) << CDMA9_CONTROL_SRCBURSTSIZE_SHIFT))
+
+//====================================================================
+//Register: DMA Status Register (Status)
+//====================================================================
+
+#define  CDMA9_STATUS_RESERVED1_MASK 0xfff00000
+#define  CDMA9_STATUS_RESERVED1_SHIFT 20
+#define  CDMA9_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA9_STATUS_RESERVED1_MASK) >> CDMA9_STATUS_RESERVED1_SHIFT)
+#define  CDMA9_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_STATUS_RESERVED1_MASK) | (((uint32_t)val) << CDMA9_STATUS_RESERVED1_SHIFT))
+
+#define  CDMA9_STATUS_ODDWIDTHHW_MASK 0x80000
+#define  CDMA9_STATUS_ODDWIDTHHW_SHIFT 19
+#define  CDMA9_STATUS_ODDWIDTHHW_MASK_SHIFT(reg) (((reg) & CDMA9_STATUS_ODDWIDTHHW_MASK) >> CDMA9_STATUS_ODDWIDTHHW_SHIFT)
+#define  CDMA9_STATUS_ODDWIDTHHW_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_STATUS_ODDWIDTHHW_MASK) | (((uint32_t)val) << CDMA9_STATUS_ODDWIDTHHW_SHIFT))
+
+#define  CDMA9_STATUS_DESCFETCH_MASK 0x40000
+#define  CDMA9_STATUS_DESCFETCH_SHIFT 18
+#define  CDMA9_STATUS_DESCFETCH_MASK_SHIFT(reg) (((reg) & CDMA9_STATUS_DESCFETCH_MASK) >> CDMA9_STATUS_DESCFETCH_SHIFT)
+#define  CDMA9_STATUS_DESCFETCH_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_STATUS_DESCFETCH_MASK) | (((uint32_t)val) << CDMA9_STATUS_DESCFETCH_SHIFT))
+
+#define  CDMA9_STATUS_DMABUSY_MASK 0x20000
+#define  CDMA9_STATUS_DMABUSY_SHIFT 17
+#define  CDMA9_STATUS_DMABUSY_MASK_SHIFT(reg) (((reg) & CDMA9_STATUS_DMABUSY_MASK) >> CDMA9_STATUS_DMABUSY_SHIFT)
+#define  CDMA9_STATUS_DMABUSY_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_STATUS_DMABUSY_MASK) | (((uint32_t)val) << CDMA9_STATUS_DMABUSY_SHIFT))
+
+#define  CDMA9_STATUS_FIFOEMPTY_MASK 0x10000
+#define  CDMA9_STATUS_FIFOEMPTY_SHIFT 16
+#define  CDMA9_STATUS_FIFOEMPTY_MASK_SHIFT(reg) (((reg) & CDMA9_STATUS_FIFOEMPTY_MASK) >> CDMA9_STATUS_FIFOEMPTY_SHIFT)
+#define  CDMA9_STATUS_FIFOEMPTY_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_STATUS_FIFOEMPTY_MASK) | (((uint32_t)val) << CDMA9_STATUS_FIFOEMPTY_SHIFT))
+
+#define  CDMA9_STATUS_BYTESREMAIN_MASK 0xffff
+#define  CDMA9_STATUS_BYTESREMAIN_SHIFT 0
+#define  CDMA9_STATUS_BYTESREMAIN_MASK_SHIFT(reg) (((reg) & CDMA9_STATUS_BYTESREMAIN_MASK) >> CDMA9_STATUS_BYTESREMAIN_SHIFT)
+#define  CDMA9_STATUS_BYTESREMAIN_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_STATUS_BYTESREMAIN_MASK) | (((uint32_t)val) << CDMA9_STATUS_BYTESREMAIN_SHIFT))
+
+//====================================================================
+//Register: DMA Source Address Register (SrcAddr)
+/** \brief The Source Address register is programmed with the address of the location
+      for the DMA to transfer from. If the source is memory, the address can be
+      byte aligned.
+<br>*/
+//====================================================================
+
+#define  CDMA9_SRCADDR_SRCADDR_MASK 0xffffffff
+#define  CDMA9_SRCADDR_SRCADDR_SHIFT 0
+#define  CDMA9_SRCADDR_SRCADDR_MASK_SHIFT(reg) (((reg) & CDMA9_SRCADDR_SRCADDR_MASK) >> CDMA9_SRCADDR_SRCADDR_SHIFT)
+#define  CDMA9_SRCADDR_SRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_SRCADDR_SRCADDR_MASK) | (((uint32_t)val) << CDMA9_SRCADDR_SRCADDR_SHIFT))
+
+//====================================================================
+//Register: Current Source Address Register (SrcAddrStat)
+/** \brief This register contains the current address for the source device.*/
+//====================================================================
+
+#define  CDMA9_SRCADDRSTAT_CURRSRCADDR_MASK 0xffffffff
+#define  CDMA9_SRCADDRSTAT_CURRSRCADDR_SHIFT 0
+#define  CDMA9_SRCADDRSTAT_CURRSRCADDR_MASK_SHIFT(reg) (((reg) & CDMA9_SRCADDRSTAT_CURRSRCADDR_MASK) >> CDMA9_SRCADDRSTAT_CURRSRCADDR_SHIFT)
+#define  CDMA9_SRCADDRSTAT_CURRSRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_SRCADDRSTAT_CURRSRCADDR_MASK) | (((uint32_t)val) << CDMA9_SRCADDRSTAT_CURRSRCADDR_SHIFT))
+
+//====================================================================
+//Register: Destination Address Register (DestAddr)
+/** \brief The Destination Address register is programmed with the address of the location
+      for the DMA to transfer to. If the destination is memory, the address can be
+      byte aligned.*/
+//====================================================================
+
+#define  CDMA9_DESTADDR_DESTADDR_MASK 0xffffffff
+#define  CDMA9_DESTADDR_DESTADDR_SHIFT 0
+#define  CDMA9_DESTADDR_DESTADDR_MASK_SHIFT(reg) (((reg) & CDMA9_DESTADDR_DESTADDR_MASK) >> CDMA9_DESTADDR_DESTADDR_SHIFT)
+#define  CDMA9_DESTADDR_DESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_DESTADDR_DESTADDR_MASK) | (((uint32_t)val) << CDMA9_DESTADDR_DESTADDR_SHIFT))
+
+//====================================================================
+//Register: Current Destination Address Register (DestAddrStat)
+/** \brief This register contains the current address for the destination device.*/
+//====================================================================
+
+#define  CDMA9_DESTADDRSTAT_CURRDESTADDR_MASK 0xffffffff
+#define  CDMA9_DESTADDRSTAT_CURRDESTADDR_SHIFT 0
+#define  CDMA9_DESTADDRSTAT_CURRDESTADDR_MASK_SHIFT(reg) (((reg) & CDMA9_DESTADDRSTAT_CURRDESTADDR_MASK) >> CDMA9_DESTADDRSTAT_CURRDESTADDR_SHIFT)
+#define  CDMA9_DESTADDRSTAT_CURRDESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_DESTADDRSTAT_CURRDESTADDR_MASK) | (((uint32_t)val) << CDMA9_DESTADDRSTAT_CURRDESTADDR_SHIFT))
+
+//====================================================================
+//Register: Fill Value Register (FillValue)
+/** \brief This register contains the data value to write to the destination
+      address.*/
+//====================================================================
+
+#define  CDMA9_FILLVALUE_FILLVAL_MASK 0xffffffff
+#define  CDMA9_FILLVALUE_FILLVAL_SHIFT 0
+#define  CDMA9_FILLVALUE_FILLVAL_MASK_SHIFT(reg) (((reg) & CDMA9_FILLVALUE_FILLVAL_MASK) >> CDMA9_FILLVALUE_FILLVAL_SHIFT)
+#define  CDMA9_FILLVALUE_FILLVAL_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_FILLVALUE_FILLVAL_MASK) | (((uint32_t)val) << CDMA9_FILLVALUE_FILLVAL_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (intEn)
+//====================================================================
+
+#define  CDMA9_INTEN_RESERVED1_MASK 0xfffffff0
+#define  CDMA9_INTEN_RESERVED1_SHIFT 4
+#define  CDMA9_INTEN_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA9_INTEN_RESERVED1_MASK) >> CDMA9_INTEN_RESERVED1_SHIFT)
+#define  CDMA9_INTEN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTEN_RESERVED1_MASK) | (((uint32_t)val) << CDMA9_INTEN_RESERVED1_SHIFT))
+
+#define  CDMA9_INTEN_CLEARCOMPLETEEN_MASK 0x8
+#define  CDMA9_INTEN_CLEARCOMPLETEEN_SHIFT 3
+#define  CDMA9_INTEN_CLEARCOMPLETEEN_MASK_SHIFT(reg) (((reg) & CDMA9_INTEN_CLEARCOMPLETEEN_MASK) >> CDMA9_INTEN_CLEARCOMPLETEEN_SHIFT)
+#define  CDMA9_INTEN_CLEARCOMPLETEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTEN_CLEARCOMPLETEEN_MASK) | (((uint32_t)val) << CDMA9_INTEN_CLEARCOMPLETEEN_SHIFT))
+
+#define  CDMA9_INTEN_CHAINDONEEN_MASK 0x4
+#define  CDMA9_INTEN_CHAINDONEEN_SHIFT 2
+#define  CDMA9_INTEN_CHAINDONEEN_MASK_SHIFT(reg) (((reg) & CDMA9_INTEN_CHAINDONEEN_MASK) >> CDMA9_INTEN_CHAINDONEEN_SHIFT)
+#define  CDMA9_INTEN_CHAINDONEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTEN_CHAINDONEEN_MASK) | (((uint32_t)val) << CDMA9_INTEN_CHAINDONEEN_SHIFT))
+
+#define  CDMA9_INTEN_TIMEOUTEN_MASK 0x2
+#define  CDMA9_INTEN_TIMEOUTEN_SHIFT 1
+#define  CDMA9_INTEN_TIMEOUTEN_MASK_SHIFT(reg) (((reg) & CDMA9_INTEN_TIMEOUTEN_MASK) >> CDMA9_INTEN_TIMEOUTEN_SHIFT)
+#define  CDMA9_INTEN_TIMEOUTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTEN_TIMEOUTEN_MASK) | (((uint32_t)val) << CDMA9_INTEN_TIMEOUTEN_SHIFT))
+
+#define  CDMA9_INTEN_TERMCNTEN_MASK 0x1
+#define  CDMA9_INTEN_TERMCNTEN_SHIFT 0
+#define  CDMA9_INTEN_TERMCNTEN_MASK_SHIFT(reg) (((reg) & CDMA9_INTEN_TERMCNTEN_MASK) >> CDMA9_INTEN_TERMCNTEN_SHIFT)
+#define  CDMA9_INTEN_TERMCNTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTEN_TERMCNTEN_MASK) | (((uint32_t)val) << CDMA9_INTEN_TERMCNTEN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (intPend)
+//====================================================================
+
+#define  CDMA9_INTPEND_RESERVED1_MASK 0xfffffff0
+#define  CDMA9_INTPEND_RESERVED1_SHIFT 4
+#define  CDMA9_INTPEND_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA9_INTPEND_RESERVED1_MASK) >> CDMA9_INTPEND_RESERVED1_SHIFT)
+#define  CDMA9_INTPEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTPEND_RESERVED1_MASK) | (((uint32_t)val) << CDMA9_INTPEND_RESERVED1_SHIFT))
+
+#define  CDMA9_INTPEND_CLEARCOMPLETEPEND_MASK 0x8
+#define  CDMA9_INTPEND_CLEARCOMPLETEPEND_SHIFT 3
+#define  CDMA9_INTPEND_CLEARCOMPLETEPEND_MASK_SHIFT(reg) (((reg) & CDMA9_INTPEND_CLEARCOMPLETEPEND_MASK) >> CDMA9_INTPEND_CLEARCOMPLETEPEND_SHIFT)
+#define  CDMA9_INTPEND_CLEARCOMPLETEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTPEND_CLEARCOMPLETEPEND_MASK) | (((uint32_t)val) << CDMA9_INTPEND_CLEARCOMPLETEPEND_SHIFT))
+
+#define  CDMA9_INTPEND_CHAINDONEPEND_MASK 0x4
+#define  CDMA9_INTPEND_CHAINDONEPEND_SHIFT 2
+#define  CDMA9_INTPEND_CHAINDONEPEND_MASK_SHIFT(reg) (((reg) & CDMA9_INTPEND_CHAINDONEPEND_MASK) >> CDMA9_INTPEND_CHAINDONEPEND_SHIFT)
+#define  CDMA9_INTPEND_CHAINDONEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTPEND_CHAINDONEPEND_MASK) | (((uint32_t)val) << CDMA9_INTPEND_CHAINDONEPEND_SHIFT))
+
+#define  CDMA9_INTPEND_TIMEOUTPEND_MASK 0x2
+#define  CDMA9_INTPEND_TIMEOUTPEND_SHIFT 1
+#define  CDMA9_INTPEND_TIMEOUTPEND_MASK_SHIFT(reg) (((reg) & CDMA9_INTPEND_TIMEOUTPEND_MASK) >> CDMA9_INTPEND_TIMEOUTPEND_SHIFT)
+#define  CDMA9_INTPEND_TIMEOUTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTPEND_TIMEOUTPEND_MASK) | (((uint32_t)val) << CDMA9_INTPEND_TIMEOUTPEND_SHIFT))
+
+#define  CDMA9_INTPEND_TERMCNTPEND_MASK 0x1
+#define  CDMA9_INTPEND_TERMCNTPEND_SHIFT 0
+#define  CDMA9_INTPEND_TERMCNTPEND_MASK_SHIFT(reg) (((reg) & CDMA9_INTPEND_TERMCNTPEND_MASK) >> CDMA9_INTPEND_TERMCNTPEND_SHIFT)
+#define  CDMA9_INTPEND_TERMCNTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTPEND_TERMCNTPEND_MASK) | (((uint32_t)val) << CDMA9_INTPEND_TERMCNTPEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (intAck)
+//====================================================================
+
+#define  CDMA9_INTACK_RESERVED1_MASK 0xfffffff0
+#define  CDMA9_INTACK_RESERVED1_SHIFT 4
+#define  CDMA9_INTACK_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA9_INTACK_RESERVED1_MASK) >> CDMA9_INTACK_RESERVED1_SHIFT)
+#define  CDMA9_INTACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTACK_RESERVED1_MASK) | (((uint32_t)val) << CDMA9_INTACK_RESERVED1_SHIFT))
+
+#define  CDMA9_INTACK_CLEARCOMPLETEACK_MASK 0x8
+#define  CDMA9_INTACK_CLEARCOMPLETEACK_SHIFT 3
+#define  CDMA9_INTACK_CLEARCOMPLETEACK_MASK_SHIFT(reg) (((reg) & CDMA9_INTACK_CLEARCOMPLETEACK_MASK) >> CDMA9_INTACK_CLEARCOMPLETEACK_SHIFT)
+#define  CDMA9_INTACK_CLEARCOMPLETEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTACK_CLEARCOMPLETEACK_MASK) | (((uint32_t)val) << CDMA9_INTACK_CLEARCOMPLETEACK_SHIFT))
+
+#define  CDMA9_INTACK_CHAINDONEACK_MASK 0x4
+#define  CDMA9_INTACK_CHAINDONEACK_SHIFT 2
+#define  CDMA9_INTACK_CHAINDONEACK_MASK_SHIFT(reg) (((reg) & CDMA9_INTACK_CHAINDONEACK_MASK) >> CDMA9_INTACK_CHAINDONEACK_SHIFT)
+#define  CDMA9_INTACK_CHAINDONEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTACK_CHAINDONEACK_MASK) | (((uint32_t)val) << CDMA9_INTACK_CHAINDONEACK_SHIFT))
+
+#define  CDMA9_INTACK_TIMEOUTACK_MASK 0x2
+#define  CDMA9_INTACK_TIMEOUTACK_SHIFT 1
+#define  CDMA9_INTACK_TIMEOUTACK_MASK_SHIFT(reg) (((reg) & CDMA9_INTACK_TIMEOUTACK_MASK) >> CDMA9_INTACK_TIMEOUTACK_SHIFT)
+#define  CDMA9_INTACK_TIMEOUTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTACK_TIMEOUTACK_MASK) | (((uint32_t)val) << CDMA9_INTACK_TIMEOUTACK_SHIFT))
+
+#define  CDMA9_INTACK_TERMCNTACK_MASK 0x1
+#define  CDMA9_INTACK_TERMCNTACK_SHIFT 0
+#define  CDMA9_INTACK_TERMCNTACK_MASK_SHIFT(reg) (((reg) & CDMA9_INTACK_TERMCNTACK_MASK) >> CDMA9_INTACK_TERMCNTACK_SHIFT)
+#define  CDMA9_INTACK_TERMCNTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTACK_TERMCNTACK_MASK) | (((uint32_t)val) << CDMA9_INTACK_TERMCNTACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (intForce)
+//====================================================================
+
+#define  CDMA9_INTFORCE_RESERVED1_MASK 0xfffffff0
+#define  CDMA9_INTFORCE_RESERVED1_SHIFT 4
+#define  CDMA9_INTFORCE_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA9_INTFORCE_RESERVED1_MASK) >> CDMA9_INTFORCE_RESERVED1_SHIFT)
+#define  CDMA9_INTFORCE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTFORCE_RESERVED1_MASK) | (((uint32_t)val) << CDMA9_INTFORCE_RESERVED1_SHIFT))
+
+#define  CDMA9_INTFORCE_CLEARCOMPLETEFOR_MASK 0x8
+#define  CDMA9_INTFORCE_CLEARCOMPLETEFOR_SHIFT 3
+#define  CDMA9_INTFORCE_CLEARCOMPLETEFOR_MASK_SHIFT(reg) (((reg) & CDMA9_INTFORCE_CLEARCOMPLETEFOR_MASK) >> CDMA9_INTFORCE_CLEARCOMPLETEFOR_SHIFT)
+#define  CDMA9_INTFORCE_CLEARCOMPLETEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTFORCE_CLEARCOMPLETEFOR_MASK) | (((uint32_t)val) << CDMA9_INTFORCE_CLEARCOMPLETEFOR_SHIFT))
+
+#define  CDMA9_INTFORCE_CHAINDONEFOR_MASK 0x4
+#define  CDMA9_INTFORCE_CHAINDONEFOR_SHIFT 2
+#define  CDMA9_INTFORCE_CHAINDONEFOR_MASK_SHIFT(reg) (((reg) & CDMA9_INTFORCE_CHAINDONEFOR_MASK) >> CDMA9_INTFORCE_CHAINDONEFOR_SHIFT)
+#define  CDMA9_INTFORCE_CHAINDONEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTFORCE_CHAINDONEFOR_MASK) | (((uint32_t)val) << CDMA9_INTFORCE_CHAINDONEFOR_SHIFT))
+
+#define  CDMA9_INTFORCE_TIMEOUTFOR_MASK 0x2
+#define  CDMA9_INTFORCE_TIMEOUTFOR_SHIFT 1
+#define  CDMA9_INTFORCE_TIMEOUTFOR_MASK_SHIFT(reg) (((reg) & CDMA9_INTFORCE_TIMEOUTFOR_MASK) >> CDMA9_INTFORCE_TIMEOUTFOR_SHIFT)
+#define  CDMA9_INTFORCE_TIMEOUTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTFORCE_TIMEOUTFOR_MASK) | (((uint32_t)val) << CDMA9_INTFORCE_TIMEOUTFOR_SHIFT))
+
+#define  CDMA9_INTFORCE_TERMCNTFOR_MASK 0x1
+#define  CDMA9_INTFORCE_TERMCNTFOR_SHIFT 0
+#define  CDMA9_INTFORCE_TERMCNTFOR_MASK_SHIFT(reg) (((reg) & CDMA9_INTFORCE_TERMCNTFOR_MASK) >> CDMA9_INTFORCE_TERMCNTFOR_SHIFT)
+#define  CDMA9_INTFORCE_TERMCNTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_INTFORCE_TERMCNTFOR_MASK) | (((uint32_t)val) << CDMA9_INTFORCE_TERMCNTFOR_SHIFT))
+
+//====================================================================
+//Register: DMA Timer Control (TimerControl)
+/** \brief The Timer Control register specifies the number of timebase cycles between word
+      transfers before generating a timeout interrupt. The timer is reset each time
+      a transfer occurs.*/
+//====================================================================
+
+#define  CDMA9_TIMERCONTROL_RESERVED1_MASK 0xffff0000
+#define  CDMA9_TIMERCONTROL_RESERVED1_SHIFT 16
+#define  CDMA9_TIMERCONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA9_TIMERCONTROL_RESERVED1_MASK) >> CDMA9_TIMERCONTROL_RESERVED1_SHIFT)
+#define  CDMA9_TIMERCONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_TIMERCONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA9_TIMERCONTROL_RESERVED1_SHIFT))
+
+#define  CDMA9_TIMERCONTROL_TIMERENABLE_MASK 0x8000
+#define  CDMA9_TIMERCONTROL_TIMERENABLE_SHIFT 15
+#define  CDMA9_TIMERCONTROL_TIMERENABLE_MASK_SHIFT(reg) (((reg) & CDMA9_TIMERCONTROL_TIMERENABLE_MASK) >> CDMA9_TIMERCONTROL_TIMERENABLE_SHIFT)
+#define  CDMA9_TIMERCONTROL_TIMERENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_TIMERCONTROL_TIMERENABLE_MASK) | (((uint32_t)val) << CDMA9_TIMERCONTROL_TIMERENABLE_SHIFT))
+
+#define  CDMA9_TIMERCONTROL_TIMEBASE_MASK 0x7000
+#define  CDMA9_TIMERCONTROL_TIMEBASE_SHIFT 12
+#define  CDMA9_TIMERCONTROL_TIMEBASE_MASK_SHIFT(reg) (((reg) & CDMA9_TIMERCONTROL_TIMEBASE_MASK) >> CDMA9_TIMERCONTROL_TIMEBASE_SHIFT)
+#define  CDMA9_TIMERCONTROL_TIMEBASE_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_TIMERCONTROL_TIMEBASE_MASK) | (((uint32_t)val) << CDMA9_TIMERCONTROL_TIMEBASE_SHIFT))
+
+#define  CDMA9_TIMERCONTROL_RESERVED2_MASK 0x800
+#define  CDMA9_TIMERCONTROL_RESERVED2_SHIFT 11
+#define  CDMA9_TIMERCONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA9_TIMERCONTROL_RESERVED2_MASK) >> CDMA9_TIMERCONTROL_RESERVED2_SHIFT)
+#define  CDMA9_TIMERCONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_TIMERCONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA9_TIMERCONTROL_RESERVED2_SHIFT))
+
+#define  CDMA9_TIMERCONTROL_COUNT_MASK 0x7ff
+#define  CDMA9_TIMERCONTROL_COUNT_SHIFT 0
+#define  CDMA9_TIMERCONTROL_COUNT_MASK_SHIFT(reg) (((reg) & CDMA9_TIMERCONTROL_COUNT_MASK) >> CDMA9_TIMERCONTROL_COUNT_SHIFT)
+#define  CDMA9_TIMERCONTROL_COUNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_TIMERCONTROL_COUNT_MASK) | (((uint32_t)val) << CDMA9_TIMERCONTROL_COUNT_SHIFT))
+
+//====================================================================
+//Register: Timeout Count Status Register (TimeOutStat)
+/** \brief This register contains the current timeout count.*/
+//====================================================================
+
+#define  CDMA9_TIMEOUTSTAT_RESERVED1_MASK 0xfffff800
+#define  CDMA9_TIMEOUTSTAT_RESERVED1_SHIFT 11
+#define  CDMA9_TIMEOUTSTAT_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA9_TIMEOUTSTAT_RESERVED1_MASK) >> CDMA9_TIMEOUTSTAT_RESERVED1_SHIFT)
+#define  CDMA9_TIMEOUTSTAT_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_TIMEOUTSTAT_RESERVED1_MASK) | (((uint32_t)val) << CDMA9_TIMEOUTSTAT_RESERVED1_SHIFT))
+
+#define  CDMA9_TIMEOUTSTAT_CURRTOCNT_MASK 0x7ff
+#define  CDMA9_TIMEOUTSTAT_CURRTOCNT_SHIFT 0
+#define  CDMA9_TIMEOUTSTAT_CURRTOCNT_MASK_SHIFT(reg) (((reg) & CDMA9_TIMEOUTSTAT_CURRTOCNT_MASK) >> CDMA9_TIMEOUTSTAT_CURRTOCNT_SHIFT)
+#define  CDMA9_TIMEOUTSTAT_CURRTOCNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_TIMEOUTSTAT_CURRTOCNT_MASK) | (((uint32_t)val) << CDMA9_TIMEOUTSTAT_CURRTOCNT_SHIFT))
+
+//====================================================================
+//Register: Linked List Index Register (LLIR)
+/** \brief This register contains a word-aligned address of the first word of the next descriptor. LLI means "linked list index" or pointer to the descriptor in memory. If the LLI register is 0, then the current descriptor (that is loaded in the registers) is the last in the chain, and the DMA channel will stop once the current DMA transfer is completed.*/
+//====================================================================
+
+#define  CDMA9_LLIR_LLINDEX_MASK 0xfffffffc
+#define  CDMA9_LLIR_LLINDEX_SHIFT 2
+#define  CDMA9_LLIR_LLINDEX_MASK_SHIFT(reg) (((reg) & CDMA9_LLIR_LLINDEX_MASK) >> CDMA9_LLIR_LLINDEX_SHIFT)
+#define  CDMA9_LLIR_LLINDEX_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_LLIR_LLINDEX_MASK) | (((uint32_t)val) << CDMA9_LLIR_LLINDEX_SHIFT))
+
+#define  CDMA9_LLIR_RESERVED1_MASK 0x3
+#define  CDMA9_LLIR_RESERVED1_SHIFT 0
+#define  CDMA9_LLIR_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA9_LLIR_RESERVED1_MASK) >> CDMA9_LLIR_RESERVED1_SHIFT)
+#define  CDMA9_LLIR_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_LLIR_RESERVED1_MASK) | (((uint32_t)val) << CDMA9_LLIR_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Odd Width Config Register (OWCFG)
+//====================================================================
+
+#define  CDMA9_OWCFG_RESERVED1_MASK 0xfffe0000
+#define  CDMA9_OWCFG_RESERVED1_SHIFT 17
+#define  CDMA9_OWCFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA9_OWCFG_RESERVED1_MASK) >> CDMA9_OWCFG_RESERVED1_SHIFT)
+#define  CDMA9_OWCFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_OWCFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA9_OWCFG_RESERVED1_SHIFT))
+
+#define  CDMA9_OWCFG_EXTRABITS_MASK 0x1f000
+#define  CDMA9_OWCFG_EXTRABITS_SHIFT 12
+#define  CDMA9_OWCFG_EXTRABITS_MASK_SHIFT(reg) (((reg) & CDMA9_OWCFG_EXTRABITS_MASK) >> CDMA9_OWCFG_EXTRABITS_SHIFT)
+#define  CDMA9_OWCFG_EXTRABITS_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_OWCFG_EXTRABITS_MASK) | (((uint32_t)val) << CDMA9_OWCFG_EXTRABITS_SHIFT))
+
+#define  CDMA9_OWCFG_RESERVED2_MASK 0xe00
+#define  CDMA9_OWCFG_RESERVED2_SHIFT 9
+#define  CDMA9_OWCFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA9_OWCFG_RESERVED2_MASK) >> CDMA9_OWCFG_RESERVED2_SHIFT)
+#define  CDMA9_OWCFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_OWCFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA9_OWCFG_RESERVED2_SHIFT))
+
+#define  CDMA9_OWCFG_ODDWIDTH_MASK 0x1f0
+#define  CDMA9_OWCFG_ODDWIDTH_SHIFT 4
+#define  CDMA9_OWCFG_ODDWIDTH_MASK_SHIFT(reg) (((reg) & CDMA9_OWCFG_ODDWIDTH_MASK) >> CDMA9_OWCFG_ODDWIDTH_SHIFT)
+#define  CDMA9_OWCFG_ODDWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_OWCFG_ODDWIDTH_MASK) | (((uint32_t)val) << CDMA9_OWCFG_ODDWIDTH_SHIFT))
+
+#define  CDMA9_OWCFG_RESERVED3_MASK 0xc
+#define  CDMA9_OWCFG_RESERVED3_SHIFT 2
+#define  CDMA9_OWCFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA9_OWCFG_RESERVED3_MASK) >> CDMA9_OWCFG_RESERVED3_SHIFT)
+#define  CDMA9_OWCFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_OWCFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA9_OWCFG_RESERVED3_SHIFT))
+
+#define  CDMA9_OWCFG_PACKNUNPACK_MASK 0x2
+#define  CDMA9_OWCFG_PACKNUNPACK_SHIFT 1
+#define  CDMA9_OWCFG_PACKNUNPACK_MASK_SHIFT(reg) (((reg) & CDMA9_OWCFG_PACKNUNPACK_MASK) >> CDMA9_OWCFG_PACKNUNPACK_SHIFT)
+#define  CDMA9_OWCFG_PACKNUNPACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_OWCFG_PACKNUNPACK_MASK) | (((uint32_t)val) << CDMA9_OWCFG_PACKNUNPACK_SHIFT))
+
+#define  CDMA9_OWCFG_OWEN_MASK 0x1
+#define  CDMA9_OWCFG_OWEN_SHIFT 0
+#define  CDMA9_OWCFG_OWEN_MASK_SHIFT(reg) (((reg) & CDMA9_OWCFG_OWEN_MASK) >> CDMA9_OWCFG_OWEN_SHIFT)
+#define  CDMA9_OWCFG_OWEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA9_OWCFG_OWEN_MASK) | (((uint32_t)val) << CDMA9_OWCFG_OWEN_SHIFT))
+
+//====================================================================
+//
+//Register File: CDMA (Instance 11 of 12) (CDMA10)
+/** \brief Registers for Central DMA module*/
+//
+//====================================================================
+
+//====================================================================
+//Register: DMA Configuration Register (CFG)
+/** \brief This register is used to configure the data flow for each channel.*/
+//====================================================================
+
+#define  CDMA10_CFG_WRDELAY_MASK 0xf0000000
+#define  CDMA10_CFG_WRDELAY_SHIFT 28
+#define  CDMA10_CFG_WRDELAY_MASK_SHIFT(reg) (((reg) & CDMA10_CFG_WRDELAY_MASK) >> CDMA10_CFG_WRDELAY_SHIFT)
+#define  CDMA10_CFG_WRDELAY_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CFG_WRDELAY_MASK) | (((uint32_t)val) << CDMA10_CFG_WRDELAY_SHIFT))
+
+#define  CDMA10_CFG_RESERVED1_MASK 0xc000000
+#define  CDMA10_CFG_RESERVED1_SHIFT 26
+#define  CDMA10_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA10_CFG_RESERVED1_MASK) >> CDMA10_CFG_RESERVED1_SHIFT)
+#define  CDMA10_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA10_CFG_RESERVED1_SHIFT))
+
+#define  CDMA10_CFG_DATAUNITSIZE_MASK 0x3000000
+#define  CDMA10_CFG_DATAUNITSIZE_SHIFT 24
+#define  CDMA10_CFG_DATAUNITSIZE_MASK_SHIFT(reg) (((reg) & CDMA10_CFG_DATAUNITSIZE_MASK) >> CDMA10_CFG_DATAUNITSIZE_SHIFT)
+#define  CDMA10_CFG_DATAUNITSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CFG_DATAUNITSIZE_MASK) | (((uint32_t)val) << CDMA10_CFG_DATAUNITSIZE_SHIFT))
+
+#define  CDMA10_CFG_HALT_MASK 0x800000
+#define  CDMA10_CFG_HALT_SHIFT 23
+#define  CDMA10_CFG_HALT_MASK_SHIFT(reg) (((reg) & CDMA10_CFG_HALT_MASK) >> CDMA10_CFG_HALT_SHIFT)
+#define  CDMA10_CFG_HALT_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CFG_HALT_MASK) | (((uint32_t)val) << CDMA10_CFG_HALT_SHIFT))
+
+#define  CDMA10_CFG_FLOWCTRL_MASK 0x700000
+#define  CDMA10_CFG_FLOWCTRL_SHIFT 20
+#define  CDMA10_CFG_FLOWCTRL_MASK_SHIFT(reg) (((reg) & CDMA10_CFG_FLOWCTRL_MASK) >> CDMA10_CFG_FLOWCTRL_SHIFT)
+#define  CDMA10_CFG_FLOWCTRL_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CFG_FLOWCTRL_MASK) | (((uint32_t)val) << CDMA10_CFG_FLOWCTRL_SHIFT))
+
+#define  CDMA10_CFG_RESERVED2_MASK 0xc0000
+#define  CDMA10_CFG_RESERVED2_SHIFT 18
+#define  CDMA10_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA10_CFG_RESERVED2_MASK) >> CDMA10_CFG_RESERVED2_SHIFT)
+#define  CDMA10_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA10_CFG_RESERVED2_SHIFT))
+
+#define  CDMA10_CFG_DESTPID_MASK 0x3f000
+#define  CDMA10_CFG_DESTPID_SHIFT 12
+#define  CDMA10_CFG_DESTPID_MASK_SHIFT(reg) (((reg) & CDMA10_CFG_DESTPID_MASK) >> CDMA10_CFG_DESTPID_SHIFT)
+#define  CDMA10_CFG_DESTPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CFG_DESTPID_MASK) | (((uint32_t)val) << CDMA10_CFG_DESTPID_SHIFT))
+
+#define  CDMA10_CFG_RESERVED3_MASK 0xc00
+#define  CDMA10_CFG_RESERVED3_SHIFT 10
+#define  CDMA10_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA10_CFG_RESERVED3_MASK) >> CDMA10_CFG_RESERVED3_SHIFT)
+#define  CDMA10_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA10_CFG_RESERVED3_SHIFT))
+
+#define  CDMA10_CFG_SRCPID_MASK 0x3f0
+#define  CDMA10_CFG_SRCPID_SHIFT 4
+#define  CDMA10_CFG_SRCPID_MASK_SHIFT(reg) (((reg) & CDMA10_CFG_SRCPID_MASK) >> CDMA10_CFG_SRCPID_SHIFT)
+#define  CDMA10_CFG_SRCPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CFG_SRCPID_MASK) | (((uint32_t)val) << CDMA10_CFG_SRCPID_SHIFT))
+
+#define  CDMA10_CFG_DESTENDIAN_MASK 0x8
+#define  CDMA10_CFG_DESTENDIAN_SHIFT 3
+#define  CDMA10_CFG_DESTENDIAN_MASK_SHIFT(reg) (((reg) & CDMA10_CFG_DESTENDIAN_MASK) >> CDMA10_CFG_DESTENDIAN_SHIFT)
+#define  CDMA10_CFG_DESTENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CFG_DESTENDIAN_MASK) | (((uint32_t)val) << CDMA10_CFG_DESTENDIAN_SHIFT))
+
+#define  CDMA10_CFG_SRCENDIAN_MASK 0x4
+#define  CDMA10_CFG_SRCENDIAN_SHIFT 2
+#define  CDMA10_CFG_SRCENDIAN_MASK_SHIFT(reg) (((reg) & CDMA10_CFG_SRCENDIAN_MASK) >> CDMA10_CFG_SRCENDIAN_SHIFT)
+#define  CDMA10_CFG_SRCENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CFG_SRCENDIAN_MASK) | (((uint32_t)val) << CDMA10_CFG_SRCENDIAN_SHIFT))
+
+#define  CDMA10_CFG_FILL_MASK 0x2
+#define  CDMA10_CFG_FILL_SHIFT 1
+#define  CDMA10_CFG_FILL_MASK_SHIFT(reg) (((reg) & CDMA10_CFG_FILL_MASK) >> CDMA10_CFG_FILL_SHIFT)
+#define  CDMA10_CFG_FILL_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CFG_FILL_MASK) | (((uint32_t)val) << CDMA10_CFG_FILL_SHIFT))
+
+#define  CDMA10_CFG_ENABLE_MASK 0x1
+#define  CDMA10_CFG_ENABLE_SHIFT 0
+#define  CDMA10_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & CDMA10_CFG_ENABLE_MASK) >> CDMA10_CFG_ENABLE_SHIFT)
+#define  CDMA10_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CFG_ENABLE_MASK) | (((uint32_t)val) << CDMA10_CFG_ENABLE_SHIFT))
+
+//====================================================================
+//Register: DMA Channel Control Register (Control)
+/** \brief This register programs each channel for control features such as
+      auto-increment, initiator select, burst size, transfer size, and
+      transfer widths.*/
+//====================================================================
+
+#define  CDMA10_CONTROL_TRANSSIZE_MASK 0xffff0000
+#define  CDMA10_CONTROL_TRANSSIZE_SHIFT 16
+#define  CDMA10_CONTROL_TRANSSIZE_MASK_SHIFT(reg) (((reg) & CDMA10_CONTROL_TRANSSIZE_MASK) >> CDMA10_CONTROL_TRANSSIZE_SHIFT)
+#define  CDMA10_CONTROL_TRANSSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CONTROL_TRANSSIZE_MASK) | (((uint32_t)val) << CDMA10_CONTROL_TRANSSIZE_SHIFT))
+
+#define  CDMA10_CONTROL_RESERVED1_MASK 0xc000
+#define  CDMA10_CONTROL_RESERVED1_SHIFT 14
+#define  CDMA10_CONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA10_CONTROL_RESERVED1_MASK) >> CDMA10_CONTROL_RESERVED1_SHIFT)
+#define  CDMA10_CONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA10_CONTROL_RESERVED1_SHIFT))
+
+#define  CDMA10_CONTROL_DESTADDRINC_MASK 0x2000
+#define  CDMA10_CONTROL_DESTADDRINC_SHIFT 13
+#define  CDMA10_CONTROL_DESTADDRINC_MASK_SHIFT(reg) (((reg) & CDMA10_CONTROL_DESTADDRINC_MASK) >> CDMA10_CONTROL_DESTADDRINC_SHIFT)
+#define  CDMA10_CONTROL_DESTADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CONTROL_DESTADDRINC_MASK) | (((uint32_t)val) << CDMA10_CONTROL_DESTADDRINC_SHIFT))
+
+#define  CDMA10_CONTROL_SRCADDRINC_MASK 0x1000
+#define  CDMA10_CONTROL_SRCADDRINC_SHIFT 12
+#define  CDMA10_CONTROL_SRCADDRINC_MASK_SHIFT(reg) (((reg) & CDMA10_CONTROL_SRCADDRINC_MASK) >> CDMA10_CONTROL_SRCADDRINC_SHIFT)
+#define  CDMA10_CONTROL_SRCADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CONTROL_SRCADDRINC_MASK) | (((uint32_t)val) << CDMA10_CONTROL_SRCADDRINC_SHIFT))
+
+#define  CDMA10_CONTROL_DESTXFERWIDTH_MASK 0xc00
+#define  CDMA10_CONTROL_DESTXFERWIDTH_SHIFT 10
+#define  CDMA10_CONTROL_DESTXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA10_CONTROL_DESTXFERWIDTH_MASK) >> CDMA10_CONTROL_DESTXFERWIDTH_SHIFT)
+#define  CDMA10_CONTROL_DESTXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CONTROL_DESTXFERWIDTH_MASK) | (((uint32_t)val) << CDMA10_CONTROL_DESTXFERWIDTH_SHIFT))
+
+#define  CDMA10_CONTROL_SRCXFERWIDTH_MASK 0x300
+#define  CDMA10_CONTROL_SRCXFERWIDTH_SHIFT 8
+#define  CDMA10_CONTROL_SRCXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA10_CONTROL_SRCXFERWIDTH_MASK) >> CDMA10_CONTROL_SRCXFERWIDTH_SHIFT)
+#define  CDMA10_CONTROL_SRCXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CONTROL_SRCXFERWIDTH_MASK) | (((uint32_t)val) << CDMA10_CONTROL_SRCXFERWIDTH_SHIFT))
+
+#define  CDMA10_CONTROL_RESERVED2_MASK 0xc0
+#define  CDMA10_CONTROL_RESERVED2_SHIFT 6
+#define  CDMA10_CONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA10_CONTROL_RESERVED2_MASK) >> CDMA10_CONTROL_RESERVED2_SHIFT)
+#define  CDMA10_CONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA10_CONTROL_RESERVED2_SHIFT))
+
+#define  CDMA10_CONTROL_DESTBURSTSIZE_MASK 0x30
+#define  CDMA10_CONTROL_DESTBURSTSIZE_SHIFT 4
+#define  CDMA10_CONTROL_DESTBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA10_CONTROL_DESTBURSTSIZE_MASK) >> CDMA10_CONTROL_DESTBURSTSIZE_SHIFT)
+#define  CDMA10_CONTROL_DESTBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CONTROL_DESTBURSTSIZE_MASK) | (((uint32_t)val) << CDMA10_CONTROL_DESTBURSTSIZE_SHIFT))
+
+#define  CDMA10_CONTROL_RESERVED3_MASK 0xc
+#define  CDMA10_CONTROL_RESERVED3_SHIFT 2
+#define  CDMA10_CONTROL_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA10_CONTROL_RESERVED3_MASK) >> CDMA10_CONTROL_RESERVED3_SHIFT)
+#define  CDMA10_CONTROL_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CONTROL_RESERVED3_MASK) | (((uint32_t)val) << CDMA10_CONTROL_RESERVED3_SHIFT))
+
+#define  CDMA10_CONTROL_SRCBURSTSIZE_MASK 0x3
+#define  CDMA10_CONTROL_SRCBURSTSIZE_SHIFT 0
+#define  CDMA10_CONTROL_SRCBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA10_CONTROL_SRCBURSTSIZE_MASK) >> CDMA10_CONTROL_SRCBURSTSIZE_SHIFT)
+#define  CDMA10_CONTROL_SRCBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_CONTROL_SRCBURSTSIZE_MASK) | (((uint32_t)val) << CDMA10_CONTROL_SRCBURSTSIZE_SHIFT))
+
+//====================================================================
+//Register: DMA Status Register (Status)
+//====================================================================
+
+#define  CDMA10_STATUS_RESERVED1_MASK 0xfff00000
+#define  CDMA10_STATUS_RESERVED1_SHIFT 20
+#define  CDMA10_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA10_STATUS_RESERVED1_MASK) >> CDMA10_STATUS_RESERVED1_SHIFT)
+#define  CDMA10_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_STATUS_RESERVED1_MASK) | (((uint32_t)val) << CDMA10_STATUS_RESERVED1_SHIFT))
+
+#define  CDMA10_STATUS_ODDWIDTHHW_MASK 0x80000
+#define  CDMA10_STATUS_ODDWIDTHHW_SHIFT 19
+#define  CDMA10_STATUS_ODDWIDTHHW_MASK_SHIFT(reg) (((reg) & CDMA10_STATUS_ODDWIDTHHW_MASK) >> CDMA10_STATUS_ODDWIDTHHW_SHIFT)
+#define  CDMA10_STATUS_ODDWIDTHHW_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_STATUS_ODDWIDTHHW_MASK) | (((uint32_t)val) << CDMA10_STATUS_ODDWIDTHHW_SHIFT))
+
+#define  CDMA10_STATUS_DESCFETCH_MASK 0x40000
+#define  CDMA10_STATUS_DESCFETCH_SHIFT 18
+#define  CDMA10_STATUS_DESCFETCH_MASK_SHIFT(reg) (((reg) & CDMA10_STATUS_DESCFETCH_MASK) >> CDMA10_STATUS_DESCFETCH_SHIFT)
+#define  CDMA10_STATUS_DESCFETCH_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_STATUS_DESCFETCH_MASK) | (((uint32_t)val) << CDMA10_STATUS_DESCFETCH_SHIFT))
+
+#define  CDMA10_STATUS_DMABUSY_MASK 0x20000
+#define  CDMA10_STATUS_DMABUSY_SHIFT 17
+#define  CDMA10_STATUS_DMABUSY_MASK_SHIFT(reg) (((reg) & CDMA10_STATUS_DMABUSY_MASK) >> CDMA10_STATUS_DMABUSY_SHIFT)
+#define  CDMA10_STATUS_DMABUSY_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_STATUS_DMABUSY_MASK) | (((uint32_t)val) << CDMA10_STATUS_DMABUSY_SHIFT))
+
+#define  CDMA10_STATUS_FIFOEMPTY_MASK 0x10000
+#define  CDMA10_STATUS_FIFOEMPTY_SHIFT 16
+#define  CDMA10_STATUS_FIFOEMPTY_MASK_SHIFT(reg) (((reg) & CDMA10_STATUS_FIFOEMPTY_MASK) >> CDMA10_STATUS_FIFOEMPTY_SHIFT)
+#define  CDMA10_STATUS_FIFOEMPTY_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_STATUS_FIFOEMPTY_MASK) | (((uint32_t)val) << CDMA10_STATUS_FIFOEMPTY_SHIFT))
+
+#define  CDMA10_STATUS_BYTESREMAIN_MASK 0xffff
+#define  CDMA10_STATUS_BYTESREMAIN_SHIFT 0
+#define  CDMA10_STATUS_BYTESREMAIN_MASK_SHIFT(reg) (((reg) & CDMA10_STATUS_BYTESREMAIN_MASK) >> CDMA10_STATUS_BYTESREMAIN_SHIFT)
+#define  CDMA10_STATUS_BYTESREMAIN_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_STATUS_BYTESREMAIN_MASK) | (((uint32_t)val) << CDMA10_STATUS_BYTESREMAIN_SHIFT))
+
+//====================================================================
+//Register: DMA Source Address Register (SrcAddr)
+/** \brief The Source Address register is programmed with the address of the location
+      for the DMA to transfer from. If the source is memory, the address can be
+      byte aligned.
+<br>*/
+//====================================================================
+
+#define  CDMA10_SRCADDR_SRCADDR_MASK 0xffffffff
+#define  CDMA10_SRCADDR_SRCADDR_SHIFT 0
+#define  CDMA10_SRCADDR_SRCADDR_MASK_SHIFT(reg) (((reg) & CDMA10_SRCADDR_SRCADDR_MASK) >> CDMA10_SRCADDR_SRCADDR_SHIFT)
+#define  CDMA10_SRCADDR_SRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_SRCADDR_SRCADDR_MASK) | (((uint32_t)val) << CDMA10_SRCADDR_SRCADDR_SHIFT))
+
+//====================================================================
+//Register: Current Source Address Register (SrcAddrStat)
+/** \brief This register contains the current address for the source device.*/
+//====================================================================
+
+#define  CDMA10_SRCADDRSTAT_CURRSRCADDR_MASK 0xffffffff
+#define  CDMA10_SRCADDRSTAT_CURRSRCADDR_SHIFT 0
+#define  CDMA10_SRCADDRSTAT_CURRSRCADDR_MASK_SHIFT(reg) (((reg) & CDMA10_SRCADDRSTAT_CURRSRCADDR_MASK) >> CDMA10_SRCADDRSTAT_CURRSRCADDR_SHIFT)
+#define  CDMA10_SRCADDRSTAT_CURRSRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_SRCADDRSTAT_CURRSRCADDR_MASK) | (((uint32_t)val) << CDMA10_SRCADDRSTAT_CURRSRCADDR_SHIFT))
+
+//====================================================================
+//Register: Destination Address Register (DestAddr)
+/** \brief The Destination Address register is programmed with the address of the location
+      for the DMA to transfer to. If the destination is memory, the address can be
+      byte aligned.*/
+//====================================================================
+
+#define  CDMA10_DESTADDR_DESTADDR_MASK 0xffffffff
+#define  CDMA10_DESTADDR_DESTADDR_SHIFT 0
+#define  CDMA10_DESTADDR_DESTADDR_MASK_SHIFT(reg) (((reg) & CDMA10_DESTADDR_DESTADDR_MASK) >> CDMA10_DESTADDR_DESTADDR_SHIFT)
+#define  CDMA10_DESTADDR_DESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_DESTADDR_DESTADDR_MASK) | (((uint32_t)val) << CDMA10_DESTADDR_DESTADDR_SHIFT))
+
+//====================================================================
+//Register: Current Destination Address Register (DestAddrStat)
+/** \brief This register contains the current address for the destination device.*/
+//====================================================================
+
+#define  CDMA10_DESTADDRSTAT_CURRDESTADDR_MASK 0xffffffff
+#define  CDMA10_DESTADDRSTAT_CURRDESTADDR_SHIFT 0
+#define  CDMA10_DESTADDRSTAT_CURRDESTADDR_MASK_SHIFT(reg) (((reg) & CDMA10_DESTADDRSTAT_CURRDESTADDR_MASK) >> CDMA10_DESTADDRSTAT_CURRDESTADDR_SHIFT)
+#define  CDMA10_DESTADDRSTAT_CURRDESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_DESTADDRSTAT_CURRDESTADDR_MASK) | (((uint32_t)val) << CDMA10_DESTADDRSTAT_CURRDESTADDR_SHIFT))
+
+//====================================================================
+//Register: Fill Value Register (FillValue)
+/** \brief This register contains the data value to write to the destination
+      address.*/
+//====================================================================
+
+#define  CDMA10_FILLVALUE_FILLVAL_MASK 0xffffffff
+#define  CDMA10_FILLVALUE_FILLVAL_SHIFT 0
+#define  CDMA10_FILLVALUE_FILLVAL_MASK_SHIFT(reg) (((reg) & CDMA10_FILLVALUE_FILLVAL_MASK) >> CDMA10_FILLVALUE_FILLVAL_SHIFT)
+#define  CDMA10_FILLVALUE_FILLVAL_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_FILLVALUE_FILLVAL_MASK) | (((uint32_t)val) << CDMA10_FILLVALUE_FILLVAL_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (intEn)
+//====================================================================
+
+#define  CDMA10_INTEN_RESERVED1_MASK 0xfffffff0
+#define  CDMA10_INTEN_RESERVED1_SHIFT 4
+#define  CDMA10_INTEN_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA10_INTEN_RESERVED1_MASK) >> CDMA10_INTEN_RESERVED1_SHIFT)
+#define  CDMA10_INTEN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTEN_RESERVED1_MASK) | (((uint32_t)val) << CDMA10_INTEN_RESERVED1_SHIFT))
+
+#define  CDMA10_INTEN_CLEARCOMPLETEEN_MASK 0x8
+#define  CDMA10_INTEN_CLEARCOMPLETEEN_SHIFT 3
+#define  CDMA10_INTEN_CLEARCOMPLETEEN_MASK_SHIFT(reg) (((reg) & CDMA10_INTEN_CLEARCOMPLETEEN_MASK) >> CDMA10_INTEN_CLEARCOMPLETEEN_SHIFT)
+#define  CDMA10_INTEN_CLEARCOMPLETEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTEN_CLEARCOMPLETEEN_MASK) | (((uint32_t)val) << CDMA10_INTEN_CLEARCOMPLETEEN_SHIFT))
+
+#define  CDMA10_INTEN_CHAINDONEEN_MASK 0x4
+#define  CDMA10_INTEN_CHAINDONEEN_SHIFT 2
+#define  CDMA10_INTEN_CHAINDONEEN_MASK_SHIFT(reg) (((reg) & CDMA10_INTEN_CHAINDONEEN_MASK) >> CDMA10_INTEN_CHAINDONEEN_SHIFT)
+#define  CDMA10_INTEN_CHAINDONEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTEN_CHAINDONEEN_MASK) | (((uint32_t)val) << CDMA10_INTEN_CHAINDONEEN_SHIFT))
+
+#define  CDMA10_INTEN_TIMEOUTEN_MASK 0x2
+#define  CDMA10_INTEN_TIMEOUTEN_SHIFT 1
+#define  CDMA10_INTEN_TIMEOUTEN_MASK_SHIFT(reg) (((reg) & CDMA10_INTEN_TIMEOUTEN_MASK) >> CDMA10_INTEN_TIMEOUTEN_SHIFT)
+#define  CDMA10_INTEN_TIMEOUTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTEN_TIMEOUTEN_MASK) | (((uint32_t)val) << CDMA10_INTEN_TIMEOUTEN_SHIFT))
+
+#define  CDMA10_INTEN_TERMCNTEN_MASK 0x1
+#define  CDMA10_INTEN_TERMCNTEN_SHIFT 0
+#define  CDMA10_INTEN_TERMCNTEN_MASK_SHIFT(reg) (((reg) & CDMA10_INTEN_TERMCNTEN_MASK) >> CDMA10_INTEN_TERMCNTEN_SHIFT)
+#define  CDMA10_INTEN_TERMCNTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTEN_TERMCNTEN_MASK) | (((uint32_t)val) << CDMA10_INTEN_TERMCNTEN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (intPend)
+//====================================================================
+
+#define  CDMA10_INTPEND_RESERVED1_MASK 0xfffffff0
+#define  CDMA10_INTPEND_RESERVED1_SHIFT 4
+#define  CDMA10_INTPEND_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA10_INTPEND_RESERVED1_MASK) >> CDMA10_INTPEND_RESERVED1_SHIFT)
+#define  CDMA10_INTPEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTPEND_RESERVED1_MASK) | (((uint32_t)val) << CDMA10_INTPEND_RESERVED1_SHIFT))
+
+#define  CDMA10_INTPEND_CLEARCOMPLETEPEND_MASK 0x8
+#define  CDMA10_INTPEND_CLEARCOMPLETEPEND_SHIFT 3
+#define  CDMA10_INTPEND_CLEARCOMPLETEPEND_MASK_SHIFT(reg) (((reg) & CDMA10_INTPEND_CLEARCOMPLETEPEND_MASK) >> CDMA10_INTPEND_CLEARCOMPLETEPEND_SHIFT)
+#define  CDMA10_INTPEND_CLEARCOMPLETEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTPEND_CLEARCOMPLETEPEND_MASK) | (((uint32_t)val) << CDMA10_INTPEND_CLEARCOMPLETEPEND_SHIFT))
+
+#define  CDMA10_INTPEND_CHAINDONEPEND_MASK 0x4
+#define  CDMA10_INTPEND_CHAINDONEPEND_SHIFT 2
+#define  CDMA10_INTPEND_CHAINDONEPEND_MASK_SHIFT(reg) (((reg) & CDMA10_INTPEND_CHAINDONEPEND_MASK) >> CDMA10_INTPEND_CHAINDONEPEND_SHIFT)
+#define  CDMA10_INTPEND_CHAINDONEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTPEND_CHAINDONEPEND_MASK) | (((uint32_t)val) << CDMA10_INTPEND_CHAINDONEPEND_SHIFT))
+
+#define  CDMA10_INTPEND_TIMEOUTPEND_MASK 0x2
+#define  CDMA10_INTPEND_TIMEOUTPEND_SHIFT 1
+#define  CDMA10_INTPEND_TIMEOUTPEND_MASK_SHIFT(reg) (((reg) & CDMA10_INTPEND_TIMEOUTPEND_MASK) >> CDMA10_INTPEND_TIMEOUTPEND_SHIFT)
+#define  CDMA10_INTPEND_TIMEOUTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTPEND_TIMEOUTPEND_MASK) | (((uint32_t)val) << CDMA10_INTPEND_TIMEOUTPEND_SHIFT))
+
+#define  CDMA10_INTPEND_TERMCNTPEND_MASK 0x1
+#define  CDMA10_INTPEND_TERMCNTPEND_SHIFT 0
+#define  CDMA10_INTPEND_TERMCNTPEND_MASK_SHIFT(reg) (((reg) & CDMA10_INTPEND_TERMCNTPEND_MASK) >> CDMA10_INTPEND_TERMCNTPEND_SHIFT)
+#define  CDMA10_INTPEND_TERMCNTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTPEND_TERMCNTPEND_MASK) | (((uint32_t)val) << CDMA10_INTPEND_TERMCNTPEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (intAck)
+//====================================================================
+
+#define  CDMA10_INTACK_RESERVED1_MASK 0xfffffff0
+#define  CDMA10_INTACK_RESERVED1_SHIFT 4
+#define  CDMA10_INTACK_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA10_INTACK_RESERVED1_MASK) >> CDMA10_INTACK_RESERVED1_SHIFT)
+#define  CDMA10_INTACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTACK_RESERVED1_MASK) | (((uint32_t)val) << CDMA10_INTACK_RESERVED1_SHIFT))
+
+#define  CDMA10_INTACK_CLEARCOMPLETEACK_MASK 0x8
+#define  CDMA10_INTACK_CLEARCOMPLETEACK_SHIFT 3
+#define  CDMA10_INTACK_CLEARCOMPLETEACK_MASK_SHIFT(reg) (((reg) & CDMA10_INTACK_CLEARCOMPLETEACK_MASK) >> CDMA10_INTACK_CLEARCOMPLETEACK_SHIFT)
+#define  CDMA10_INTACK_CLEARCOMPLETEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTACK_CLEARCOMPLETEACK_MASK) | (((uint32_t)val) << CDMA10_INTACK_CLEARCOMPLETEACK_SHIFT))
+
+#define  CDMA10_INTACK_CHAINDONEACK_MASK 0x4
+#define  CDMA10_INTACK_CHAINDONEACK_SHIFT 2
+#define  CDMA10_INTACK_CHAINDONEACK_MASK_SHIFT(reg) (((reg) & CDMA10_INTACK_CHAINDONEACK_MASK) >> CDMA10_INTACK_CHAINDONEACK_SHIFT)
+#define  CDMA10_INTACK_CHAINDONEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTACK_CHAINDONEACK_MASK) | (((uint32_t)val) << CDMA10_INTACK_CHAINDONEACK_SHIFT))
+
+#define  CDMA10_INTACK_TIMEOUTACK_MASK 0x2
+#define  CDMA10_INTACK_TIMEOUTACK_SHIFT 1
+#define  CDMA10_INTACK_TIMEOUTACK_MASK_SHIFT(reg) (((reg) & CDMA10_INTACK_TIMEOUTACK_MASK) >> CDMA10_INTACK_TIMEOUTACK_SHIFT)
+#define  CDMA10_INTACK_TIMEOUTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTACK_TIMEOUTACK_MASK) | (((uint32_t)val) << CDMA10_INTACK_TIMEOUTACK_SHIFT))
+
+#define  CDMA10_INTACK_TERMCNTACK_MASK 0x1
+#define  CDMA10_INTACK_TERMCNTACK_SHIFT 0
+#define  CDMA10_INTACK_TERMCNTACK_MASK_SHIFT(reg) (((reg) & CDMA10_INTACK_TERMCNTACK_MASK) >> CDMA10_INTACK_TERMCNTACK_SHIFT)
+#define  CDMA10_INTACK_TERMCNTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTACK_TERMCNTACK_MASK) | (((uint32_t)val) << CDMA10_INTACK_TERMCNTACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (intForce)
+//====================================================================
+
+#define  CDMA10_INTFORCE_RESERVED1_MASK 0xfffffff0
+#define  CDMA10_INTFORCE_RESERVED1_SHIFT 4
+#define  CDMA10_INTFORCE_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA10_INTFORCE_RESERVED1_MASK) >> CDMA10_INTFORCE_RESERVED1_SHIFT)
+#define  CDMA10_INTFORCE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTFORCE_RESERVED1_MASK) | (((uint32_t)val) << CDMA10_INTFORCE_RESERVED1_SHIFT))
+
+#define  CDMA10_INTFORCE_CLEARCOMPLETEFOR_MASK 0x8
+#define  CDMA10_INTFORCE_CLEARCOMPLETEFOR_SHIFT 3
+#define  CDMA10_INTFORCE_CLEARCOMPLETEFOR_MASK_SHIFT(reg) (((reg) & CDMA10_INTFORCE_CLEARCOMPLETEFOR_MASK) >> CDMA10_INTFORCE_CLEARCOMPLETEFOR_SHIFT)
+#define  CDMA10_INTFORCE_CLEARCOMPLETEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTFORCE_CLEARCOMPLETEFOR_MASK) | (((uint32_t)val) << CDMA10_INTFORCE_CLEARCOMPLETEFOR_SHIFT))
+
+#define  CDMA10_INTFORCE_CHAINDONEFOR_MASK 0x4
+#define  CDMA10_INTFORCE_CHAINDONEFOR_SHIFT 2
+#define  CDMA10_INTFORCE_CHAINDONEFOR_MASK_SHIFT(reg) (((reg) & CDMA10_INTFORCE_CHAINDONEFOR_MASK) >> CDMA10_INTFORCE_CHAINDONEFOR_SHIFT)
+#define  CDMA10_INTFORCE_CHAINDONEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTFORCE_CHAINDONEFOR_MASK) | (((uint32_t)val) << CDMA10_INTFORCE_CHAINDONEFOR_SHIFT))
+
+#define  CDMA10_INTFORCE_TIMEOUTFOR_MASK 0x2
+#define  CDMA10_INTFORCE_TIMEOUTFOR_SHIFT 1
+#define  CDMA10_INTFORCE_TIMEOUTFOR_MASK_SHIFT(reg) (((reg) & CDMA10_INTFORCE_TIMEOUTFOR_MASK) >> CDMA10_INTFORCE_TIMEOUTFOR_SHIFT)
+#define  CDMA10_INTFORCE_TIMEOUTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTFORCE_TIMEOUTFOR_MASK) | (((uint32_t)val) << CDMA10_INTFORCE_TIMEOUTFOR_SHIFT))
+
+#define  CDMA10_INTFORCE_TERMCNTFOR_MASK 0x1
+#define  CDMA10_INTFORCE_TERMCNTFOR_SHIFT 0
+#define  CDMA10_INTFORCE_TERMCNTFOR_MASK_SHIFT(reg) (((reg) & CDMA10_INTFORCE_TERMCNTFOR_MASK) >> CDMA10_INTFORCE_TERMCNTFOR_SHIFT)
+#define  CDMA10_INTFORCE_TERMCNTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_INTFORCE_TERMCNTFOR_MASK) | (((uint32_t)val) << CDMA10_INTFORCE_TERMCNTFOR_SHIFT))
+
+//====================================================================
+//Register: DMA Timer Control (TimerControl)
+/** \brief The Timer Control register specifies the number of timebase cycles between word
+      transfers before generating a timeout interrupt. The timer is reset each time
+      a transfer occurs.*/
+//====================================================================
+
+#define  CDMA10_TIMERCONTROL_RESERVED1_MASK 0xffff0000
+#define  CDMA10_TIMERCONTROL_RESERVED1_SHIFT 16
+#define  CDMA10_TIMERCONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA10_TIMERCONTROL_RESERVED1_MASK) >> CDMA10_TIMERCONTROL_RESERVED1_SHIFT)
+#define  CDMA10_TIMERCONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_TIMERCONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA10_TIMERCONTROL_RESERVED1_SHIFT))
+
+#define  CDMA10_TIMERCONTROL_TIMERENABLE_MASK 0x8000
+#define  CDMA10_TIMERCONTROL_TIMERENABLE_SHIFT 15
+#define  CDMA10_TIMERCONTROL_TIMERENABLE_MASK_SHIFT(reg) (((reg) & CDMA10_TIMERCONTROL_TIMERENABLE_MASK) >> CDMA10_TIMERCONTROL_TIMERENABLE_SHIFT)
+#define  CDMA10_TIMERCONTROL_TIMERENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_TIMERCONTROL_TIMERENABLE_MASK) | (((uint32_t)val) << CDMA10_TIMERCONTROL_TIMERENABLE_SHIFT))
+
+#define  CDMA10_TIMERCONTROL_TIMEBASE_MASK 0x7000
+#define  CDMA10_TIMERCONTROL_TIMEBASE_SHIFT 12
+#define  CDMA10_TIMERCONTROL_TIMEBASE_MASK_SHIFT(reg) (((reg) & CDMA10_TIMERCONTROL_TIMEBASE_MASK) >> CDMA10_TIMERCONTROL_TIMEBASE_SHIFT)
+#define  CDMA10_TIMERCONTROL_TIMEBASE_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_TIMERCONTROL_TIMEBASE_MASK) | (((uint32_t)val) << CDMA10_TIMERCONTROL_TIMEBASE_SHIFT))
+
+#define  CDMA10_TIMERCONTROL_RESERVED2_MASK 0x800
+#define  CDMA10_TIMERCONTROL_RESERVED2_SHIFT 11
+#define  CDMA10_TIMERCONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA10_TIMERCONTROL_RESERVED2_MASK) >> CDMA10_TIMERCONTROL_RESERVED2_SHIFT)
+#define  CDMA10_TIMERCONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_TIMERCONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA10_TIMERCONTROL_RESERVED2_SHIFT))
+
+#define  CDMA10_TIMERCONTROL_COUNT_MASK 0x7ff
+#define  CDMA10_TIMERCONTROL_COUNT_SHIFT 0
+#define  CDMA10_TIMERCONTROL_COUNT_MASK_SHIFT(reg) (((reg) & CDMA10_TIMERCONTROL_COUNT_MASK) >> CDMA10_TIMERCONTROL_COUNT_SHIFT)
+#define  CDMA10_TIMERCONTROL_COUNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_TIMERCONTROL_COUNT_MASK) | (((uint32_t)val) << CDMA10_TIMERCONTROL_COUNT_SHIFT))
+
+//====================================================================
+//Register: Timeout Count Status Register (TimeOutStat)
+/** \brief This register contains the current timeout count.*/
+//====================================================================
+
+#define  CDMA10_TIMEOUTSTAT_RESERVED1_MASK 0xfffff800
+#define  CDMA10_TIMEOUTSTAT_RESERVED1_SHIFT 11
+#define  CDMA10_TIMEOUTSTAT_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA10_TIMEOUTSTAT_RESERVED1_MASK) >> CDMA10_TIMEOUTSTAT_RESERVED1_SHIFT)
+#define  CDMA10_TIMEOUTSTAT_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_TIMEOUTSTAT_RESERVED1_MASK) | (((uint32_t)val) << CDMA10_TIMEOUTSTAT_RESERVED1_SHIFT))
+
+#define  CDMA10_TIMEOUTSTAT_CURRTOCNT_MASK 0x7ff
+#define  CDMA10_TIMEOUTSTAT_CURRTOCNT_SHIFT 0
+#define  CDMA10_TIMEOUTSTAT_CURRTOCNT_MASK_SHIFT(reg) (((reg) & CDMA10_TIMEOUTSTAT_CURRTOCNT_MASK) >> CDMA10_TIMEOUTSTAT_CURRTOCNT_SHIFT)
+#define  CDMA10_TIMEOUTSTAT_CURRTOCNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_TIMEOUTSTAT_CURRTOCNT_MASK) | (((uint32_t)val) << CDMA10_TIMEOUTSTAT_CURRTOCNT_SHIFT))
+
+//====================================================================
+//Register: Linked List Index Register (LLIR)
+/** \brief This register contains a word-aligned address of the first word of the next descriptor. LLI means "linked list index" or pointer to the descriptor in memory. If the LLI register is 0, then the current descriptor (that is loaded in the registers) is the last in the chain, and the DMA channel will stop once the current DMA transfer is completed.*/
+//====================================================================
+
+#define  CDMA10_LLIR_LLINDEX_MASK 0xfffffffc
+#define  CDMA10_LLIR_LLINDEX_SHIFT 2
+#define  CDMA10_LLIR_LLINDEX_MASK_SHIFT(reg) (((reg) & CDMA10_LLIR_LLINDEX_MASK) >> CDMA10_LLIR_LLINDEX_SHIFT)
+#define  CDMA10_LLIR_LLINDEX_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_LLIR_LLINDEX_MASK) | (((uint32_t)val) << CDMA10_LLIR_LLINDEX_SHIFT))
+
+#define  CDMA10_LLIR_RESERVED1_MASK 0x3
+#define  CDMA10_LLIR_RESERVED1_SHIFT 0
+#define  CDMA10_LLIR_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA10_LLIR_RESERVED1_MASK) >> CDMA10_LLIR_RESERVED1_SHIFT)
+#define  CDMA10_LLIR_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_LLIR_RESERVED1_MASK) | (((uint32_t)val) << CDMA10_LLIR_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Odd Width Config Register (OWCFG)
+//====================================================================
+
+#define  CDMA10_OWCFG_RESERVED1_MASK 0xfffe0000
+#define  CDMA10_OWCFG_RESERVED1_SHIFT 17
+#define  CDMA10_OWCFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA10_OWCFG_RESERVED1_MASK) >> CDMA10_OWCFG_RESERVED1_SHIFT)
+#define  CDMA10_OWCFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_OWCFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA10_OWCFG_RESERVED1_SHIFT))
+
+#define  CDMA10_OWCFG_EXTRABITS_MASK 0x1f000
+#define  CDMA10_OWCFG_EXTRABITS_SHIFT 12
+#define  CDMA10_OWCFG_EXTRABITS_MASK_SHIFT(reg) (((reg) & CDMA10_OWCFG_EXTRABITS_MASK) >> CDMA10_OWCFG_EXTRABITS_SHIFT)
+#define  CDMA10_OWCFG_EXTRABITS_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_OWCFG_EXTRABITS_MASK) | (((uint32_t)val) << CDMA10_OWCFG_EXTRABITS_SHIFT))
+
+#define  CDMA10_OWCFG_RESERVED2_MASK 0xe00
+#define  CDMA10_OWCFG_RESERVED2_SHIFT 9
+#define  CDMA10_OWCFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA10_OWCFG_RESERVED2_MASK) >> CDMA10_OWCFG_RESERVED2_SHIFT)
+#define  CDMA10_OWCFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_OWCFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA10_OWCFG_RESERVED2_SHIFT))
+
+#define  CDMA10_OWCFG_ODDWIDTH_MASK 0x1f0
+#define  CDMA10_OWCFG_ODDWIDTH_SHIFT 4
+#define  CDMA10_OWCFG_ODDWIDTH_MASK_SHIFT(reg) (((reg) & CDMA10_OWCFG_ODDWIDTH_MASK) >> CDMA10_OWCFG_ODDWIDTH_SHIFT)
+#define  CDMA10_OWCFG_ODDWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_OWCFG_ODDWIDTH_MASK) | (((uint32_t)val) << CDMA10_OWCFG_ODDWIDTH_SHIFT))
+
+#define  CDMA10_OWCFG_RESERVED3_MASK 0xc
+#define  CDMA10_OWCFG_RESERVED3_SHIFT 2
+#define  CDMA10_OWCFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA10_OWCFG_RESERVED3_MASK) >> CDMA10_OWCFG_RESERVED3_SHIFT)
+#define  CDMA10_OWCFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_OWCFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA10_OWCFG_RESERVED3_SHIFT))
+
+#define  CDMA10_OWCFG_PACKNUNPACK_MASK 0x2
+#define  CDMA10_OWCFG_PACKNUNPACK_SHIFT 1
+#define  CDMA10_OWCFG_PACKNUNPACK_MASK_SHIFT(reg) (((reg) & CDMA10_OWCFG_PACKNUNPACK_MASK) >> CDMA10_OWCFG_PACKNUNPACK_SHIFT)
+#define  CDMA10_OWCFG_PACKNUNPACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_OWCFG_PACKNUNPACK_MASK) | (((uint32_t)val) << CDMA10_OWCFG_PACKNUNPACK_SHIFT))
+
+#define  CDMA10_OWCFG_OWEN_MASK 0x1
+#define  CDMA10_OWCFG_OWEN_SHIFT 0
+#define  CDMA10_OWCFG_OWEN_MASK_SHIFT(reg) (((reg) & CDMA10_OWCFG_OWEN_MASK) >> CDMA10_OWCFG_OWEN_SHIFT)
+#define  CDMA10_OWCFG_OWEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA10_OWCFG_OWEN_MASK) | (((uint32_t)val) << CDMA10_OWCFG_OWEN_SHIFT))
+
+//====================================================================
+//
+//Register File: CDMA (Instance 12 of 12) (CDMA11)
+/** \brief Registers for Central DMA module*/
+//
+//====================================================================
+
+//====================================================================
+//Register: DMA Configuration Register (CFG)
+/** \brief This register is used to configure the data flow for each channel.*/
+//====================================================================
+
+#define  CDMA11_CFG_WRDELAY_MASK 0xf0000000
+#define  CDMA11_CFG_WRDELAY_SHIFT 28
+#define  CDMA11_CFG_WRDELAY_MASK_SHIFT(reg) (((reg) & CDMA11_CFG_WRDELAY_MASK) >> CDMA11_CFG_WRDELAY_SHIFT)
+#define  CDMA11_CFG_WRDELAY_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CFG_WRDELAY_MASK) | (((uint32_t)val) << CDMA11_CFG_WRDELAY_SHIFT))
+
+#define  CDMA11_CFG_RESERVED1_MASK 0xc000000
+#define  CDMA11_CFG_RESERVED1_SHIFT 26
+#define  CDMA11_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA11_CFG_RESERVED1_MASK) >> CDMA11_CFG_RESERVED1_SHIFT)
+#define  CDMA11_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA11_CFG_RESERVED1_SHIFT))
+
+#define  CDMA11_CFG_DATAUNITSIZE_MASK 0x3000000
+#define  CDMA11_CFG_DATAUNITSIZE_SHIFT 24
+#define  CDMA11_CFG_DATAUNITSIZE_MASK_SHIFT(reg) (((reg) & CDMA11_CFG_DATAUNITSIZE_MASK) >> CDMA11_CFG_DATAUNITSIZE_SHIFT)
+#define  CDMA11_CFG_DATAUNITSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CFG_DATAUNITSIZE_MASK) | (((uint32_t)val) << CDMA11_CFG_DATAUNITSIZE_SHIFT))
+
+#define  CDMA11_CFG_HALT_MASK 0x800000
+#define  CDMA11_CFG_HALT_SHIFT 23
+#define  CDMA11_CFG_HALT_MASK_SHIFT(reg) (((reg) & CDMA11_CFG_HALT_MASK) >> CDMA11_CFG_HALT_SHIFT)
+#define  CDMA11_CFG_HALT_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CFG_HALT_MASK) | (((uint32_t)val) << CDMA11_CFG_HALT_SHIFT))
+
+#define  CDMA11_CFG_FLOWCTRL_MASK 0x700000
+#define  CDMA11_CFG_FLOWCTRL_SHIFT 20
+#define  CDMA11_CFG_FLOWCTRL_MASK_SHIFT(reg) (((reg) & CDMA11_CFG_FLOWCTRL_MASK) >> CDMA11_CFG_FLOWCTRL_SHIFT)
+#define  CDMA11_CFG_FLOWCTRL_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CFG_FLOWCTRL_MASK) | (((uint32_t)val) << CDMA11_CFG_FLOWCTRL_SHIFT))
+
+#define  CDMA11_CFG_RESERVED2_MASK 0xc0000
+#define  CDMA11_CFG_RESERVED2_SHIFT 18
+#define  CDMA11_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA11_CFG_RESERVED2_MASK) >> CDMA11_CFG_RESERVED2_SHIFT)
+#define  CDMA11_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA11_CFG_RESERVED2_SHIFT))
+
+#define  CDMA11_CFG_DESTPID_MASK 0x3f000
+#define  CDMA11_CFG_DESTPID_SHIFT 12
+#define  CDMA11_CFG_DESTPID_MASK_SHIFT(reg) (((reg) & CDMA11_CFG_DESTPID_MASK) >> CDMA11_CFG_DESTPID_SHIFT)
+#define  CDMA11_CFG_DESTPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CFG_DESTPID_MASK) | (((uint32_t)val) << CDMA11_CFG_DESTPID_SHIFT))
+
+#define  CDMA11_CFG_RESERVED3_MASK 0xc00
+#define  CDMA11_CFG_RESERVED3_SHIFT 10
+#define  CDMA11_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA11_CFG_RESERVED3_MASK) >> CDMA11_CFG_RESERVED3_SHIFT)
+#define  CDMA11_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA11_CFG_RESERVED3_SHIFT))
+
+#define  CDMA11_CFG_SRCPID_MASK 0x3f0
+#define  CDMA11_CFG_SRCPID_SHIFT 4
+#define  CDMA11_CFG_SRCPID_MASK_SHIFT(reg) (((reg) & CDMA11_CFG_SRCPID_MASK) >> CDMA11_CFG_SRCPID_SHIFT)
+#define  CDMA11_CFG_SRCPID_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CFG_SRCPID_MASK) | (((uint32_t)val) << CDMA11_CFG_SRCPID_SHIFT))
+
+#define  CDMA11_CFG_DESTENDIAN_MASK 0x8
+#define  CDMA11_CFG_DESTENDIAN_SHIFT 3
+#define  CDMA11_CFG_DESTENDIAN_MASK_SHIFT(reg) (((reg) & CDMA11_CFG_DESTENDIAN_MASK) >> CDMA11_CFG_DESTENDIAN_SHIFT)
+#define  CDMA11_CFG_DESTENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CFG_DESTENDIAN_MASK) | (((uint32_t)val) << CDMA11_CFG_DESTENDIAN_SHIFT))
+
+#define  CDMA11_CFG_SRCENDIAN_MASK 0x4
+#define  CDMA11_CFG_SRCENDIAN_SHIFT 2
+#define  CDMA11_CFG_SRCENDIAN_MASK_SHIFT(reg) (((reg) & CDMA11_CFG_SRCENDIAN_MASK) >> CDMA11_CFG_SRCENDIAN_SHIFT)
+#define  CDMA11_CFG_SRCENDIAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CFG_SRCENDIAN_MASK) | (((uint32_t)val) << CDMA11_CFG_SRCENDIAN_SHIFT))
+
+#define  CDMA11_CFG_FILL_MASK 0x2
+#define  CDMA11_CFG_FILL_SHIFT 1
+#define  CDMA11_CFG_FILL_MASK_SHIFT(reg) (((reg) & CDMA11_CFG_FILL_MASK) >> CDMA11_CFG_FILL_SHIFT)
+#define  CDMA11_CFG_FILL_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CFG_FILL_MASK) | (((uint32_t)val) << CDMA11_CFG_FILL_SHIFT))
+
+#define  CDMA11_CFG_ENABLE_MASK 0x1
+#define  CDMA11_CFG_ENABLE_SHIFT 0
+#define  CDMA11_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & CDMA11_CFG_ENABLE_MASK) >> CDMA11_CFG_ENABLE_SHIFT)
+#define  CDMA11_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CFG_ENABLE_MASK) | (((uint32_t)val) << CDMA11_CFG_ENABLE_SHIFT))
+
+//====================================================================
+//Register: DMA Channel Control Register (Control)
+/** \brief This register programs each channel for control features such as
+      auto-increment, initiator select, burst size, transfer size, and
+      transfer widths.*/
+//====================================================================
+
+#define  CDMA11_CONTROL_TRANSSIZE_MASK 0xffff0000
+#define  CDMA11_CONTROL_TRANSSIZE_SHIFT 16
+#define  CDMA11_CONTROL_TRANSSIZE_MASK_SHIFT(reg) (((reg) & CDMA11_CONTROL_TRANSSIZE_MASK) >> CDMA11_CONTROL_TRANSSIZE_SHIFT)
+#define  CDMA11_CONTROL_TRANSSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CONTROL_TRANSSIZE_MASK) | (((uint32_t)val) << CDMA11_CONTROL_TRANSSIZE_SHIFT))
+
+#define  CDMA11_CONTROL_RESERVED1_MASK 0xc000
+#define  CDMA11_CONTROL_RESERVED1_SHIFT 14
+#define  CDMA11_CONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA11_CONTROL_RESERVED1_MASK) >> CDMA11_CONTROL_RESERVED1_SHIFT)
+#define  CDMA11_CONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA11_CONTROL_RESERVED1_SHIFT))
+
+#define  CDMA11_CONTROL_DESTADDRINC_MASK 0x2000
+#define  CDMA11_CONTROL_DESTADDRINC_SHIFT 13
+#define  CDMA11_CONTROL_DESTADDRINC_MASK_SHIFT(reg) (((reg) & CDMA11_CONTROL_DESTADDRINC_MASK) >> CDMA11_CONTROL_DESTADDRINC_SHIFT)
+#define  CDMA11_CONTROL_DESTADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CONTROL_DESTADDRINC_MASK) | (((uint32_t)val) << CDMA11_CONTROL_DESTADDRINC_SHIFT))
+
+#define  CDMA11_CONTROL_SRCADDRINC_MASK 0x1000
+#define  CDMA11_CONTROL_SRCADDRINC_SHIFT 12
+#define  CDMA11_CONTROL_SRCADDRINC_MASK_SHIFT(reg) (((reg) & CDMA11_CONTROL_SRCADDRINC_MASK) >> CDMA11_CONTROL_SRCADDRINC_SHIFT)
+#define  CDMA11_CONTROL_SRCADDRINC_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CONTROL_SRCADDRINC_MASK) | (((uint32_t)val) << CDMA11_CONTROL_SRCADDRINC_SHIFT))
+
+#define  CDMA11_CONTROL_DESTXFERWIDTH_MASK 0xc00
+#define  CDMA11_CONTROL_DESTXFERWIDTH_SHIFT 10
+#define  CDMA11_CONTROL_DESTXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA11_CONTROL_DESTXFERWIDTH_MASK) >> CDMA11_CONTROL_DESTXFERWIDTH_SHIFT)
+#define  CDMA11_CONTROL_DESTXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CONTROL_DESTXFERWIDTH_MASK) | (((uint32_t)val) << CDMA11_CONTROL_DESTXFERWIDTH_SHIFT))
+
+#define  CDMA11_CONTROL_SRCXFERWIDTH_MASK 0x300
+#define  CDMA11_CONTROL_SRCXFERWIDTH_SHIFT 8
+#define  CDMA11_CONTROL_SRCXFERWIDTH_MASK_SHIFT(reg) (((reg) & CDMA11_CONTROL_SRCXFERWIDTH_MASK) >> CDMA11_CONTROL_SRCXFERWIDTH_SHIFT)
+#define  CDMA11_CONTROL_SRCXFERWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CONTROL_SRCXFERWIDTH_MASK) | (((uint32_t)val) << CDMA11_CONTROL_SRCXFERWIDTH_SHIFT))
+
+#define  CDMA11_CONTROL_RESERVED2_MASK 0xc0
+#define  CDMA11_CONTROL_RESERVED2_SHIFT 6
+#define  CDMA11_CONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA11_CONTROL_RESERVED2_MASK) >> CDMA11_CONTROL_RESERVED2_SHIFT)
+#define  CDMA11_CONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA11_CONTROL_RESERVED2_SHIFT))
+
+#define  CDMA11_CONTROL_DESTBURSTSIZE_MASK 0x30
+#define  CDMA11_CONTROL_DESTBURSTSIZE_SHIFT 4
+#define  CDMA11_CONTROL_DESTBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA11_CONTROL_DESTBURSTSIZE_MASK) >> CDMA11_CONTROL_DESTBURSTSIZE_SHIFT)
+#define  CDMA11_CONTROL_DESTBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CONTROL_DESTBURSTSIZE_MASK) | (((uint32_t)val) << CDMA11_CONTROL_DESTBURSTSIZE_SHIFT))
+
+#define  CDMA11_CONTROL_RESERVED3_MASK 0xc
+#define  CDMA11_CONTROL_RESERVED3_SHIFT 2
+#define  CDMA11_CONTROL_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA11_CONTROL_RESERVED3_MASK) >> CDMA11_CONTROL_RESERVED3_SHIFT)
+#define  CDMA11_CONTROL_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CONTROL_RESERVED3_MASK) | (((uint32_t)val) << CDMA11_CONTROL_RESERVED3_SHIFT))
+
+#define  CDMA11_CONTROL_SRCBURSTSIZE_MASK 0x3
+#define  CDMA11_CONTROL_SRCBURSTSIZE_SHIFT 0
+#define  CDMA11_CONTROL_SRCBURSTSIZE_MASK_SHIFT(reg) (((reg) & CDMA11_CONTROL_SRCBURSTSIZE_MASK) >> CDMA11_CONTROL_SRCBURSTSIZE_SHIFT)
+#define  CDMA11_CONTROL_SRCBURSTSIZE_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_CONTROL_SRCBURSTSIZE_MASK) | (((uint32_t)val) << CDMA11_CONTROL_SRCBURSTSIZE_SHIFT))
+
+//====================================================================
+//Register: DMA Status Register (Status)
+//====================================================================
+
+#define  CDMA11_STATUS_RESERVED1_MASK 0xfff00000
+#define  CDMA11_STATUS_RESERVED1_SHIFT 20
+#define  CDMA11_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA11_STATUS_RESERVED1_MASK) >> CDMA11_STATUS_RESERVED1_SHIFT)
+#define  CDMA11_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_STATUS_RESERVED1_MASK) | (((uint32_t)val) << CDMA11_STATUS_RESERVED1_SHIFT))
+
+#define  CDMA11_STATUS_ODDWIDTHHW_MASK 0x80000
+#define  CDMA11_STATUS_ODDWIDTHHW_SHIFT 19
+#define  CDMA11_STATUS_ODDWIDTHHW_MASK_SHIFT(reg) (((reg) & CDMA11_STATUS_ODDWIDTHHW_MASK) >> CDMA11_STATUS_ODDWIDTHHW_SHIFT)
+#define  CDMA11_STATUS_ODDWIDTHHW_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_STATUS_ODDWIDTHHW_MASK) | (((uint32_t)val) << CDMA11_STATUS_ODDWIDTHHW_SHIFT))
+
+#define  CDMA11_STATUS_DESCFETCH_MASK 0x40000
+#define  CDMA11_STATUS_DESCFETCH_SHIFT 18
+#define  CDMA11_STATUS_DESCFETCH_MASK_SHIFT(reg) (((reg) & CDMA11_STATUS_DESCFETCH_MASK) >> CDMA11_STATUS_DESCFETCH_SHIFT)
+#define  CDMA11_STATUS_DESCFETCH_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_STATUS_DESCFETCH_MASK) | (((uint32_t)val) << CDMA11_STATUS_DESCFETCH_SHIFT))
+
+#define  CDMA11_STATUS_DMABUSY_MASK 0x20000
+#define  CDMA11_STATUS_DMABUSY_SHIFT 17
+#define  CDMA11_STATUS_DMABUSY_MASK_SHIFT(reg) (((reg) & CDMA11_STATUS_DMABUSY_MASK) >> CDMA11_STATUS_DMABUSY_SHIFT)
+#define  CDMA11_STATUS_DMABUSY_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_STATUS_DMABUSY_MASK) | (((uint32_t)val) << CDMA11_STATUS_DMABUSY_SHIFT))
+
+#define  CDMA11_STATUS_FIFOEMPTY_MASK 0x10000
+#define  CDMA11_STATUS_FIFOEMPTY_SHIFT 16
+#define  CDMA11_STATUS_FIFOEMPTY_MASK_SHIFT(reg) (((reg) & CDMA11_STATUS_FIFOEMPTY_MASK) >> CDMA11_STATUS_FIFOEMPTY_SHIFT)
+#define  CDMA11_STATUS_FIFOEMPTY_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_STATUS_FIFOEMPTY_MASK) | (((uint32_t)val) << CDMA11_STATUS_FIFOEMPTY_SHIFT))
+
+#define  CDMA11_STATUS_BYTESREMAIN_MASK 0xffff
+#define  CDMA11_STATUS_BYTESREMAIN_SHIFT 0
+#define  CDMA11_STATUS_BYTESREMAIN_MASK_SHIFT(reg) (((reg) & CDMA11_STATUS_BYTESREMAIN_MASK) >> CDMA11_STATUS_BYTESREMAIN_SHIFT)
+#define  CDMA11_STATUS_BYTESREMAIN_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_STATUS_BYTESREMAIN_MASK) | (((uint32_t)val) << CDMA11_STATUS_BYTESREMAIN_SHIFT))
+
+//====================================================================
+//Register: DMA Source Address Register (SrcAddr)
+/** \brief The Source Address register is programmed with the address of the location
+      for the DMA to transfer from. If the source is memory, the address can be
+      byte aligned.
+<br>*/
+//====================================================================
+
+#define  CDMA11_SRCADDR_SRCADDR_MASK 0xffffffff
+#define  CDMA11_SRCADDR_SRCADDR_SHIFT 0
+#define  CDMA11_SRCADDR_SRCADDR_MASK_SHIFT(reg) (((reg) & CDMA11_SRCADDR_SRCADDR_MASK) >> CDMA11_SRCADDR_SRCADDR_SHIFT)
+#define  CDMA11_SRCADDR_SRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_SRCADDR_SRCADDR_MASK) | (((uint32_t)val) << CDMA11_SRCADDR_SRCADDR_SHIFT))
+
+//====================================================================
+//Register: Current Source Address Register (SrcAddrStat)
+/** \brief This register contains the current address for the source device.*/
+//====================================================================
+
+#define  CDMA11_SRCADDRSTAT_CURRSRCADDR_MASK 0xffffffff
+#define  CDMA11_SRCADDRSTAT_CURRSRCADDR_SHIFT 0
+#define  CDMA11_SRCADDRSTAT_CURRSRCADDR_MASK_SHIFT(reg) (((reg) & CDMA11_SRCADDRSTAT_CURRSRCADDR_MASK) >> CDMA11_SRCADDRSTAT_CURRSRCADDR_SHIFT)
+#define  CDMA11_SRCADDRSTAT_CURRSRCADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_SRCADDRSTAT_CURRSRCADDR_MASK) | (((uint32_t)val) << CDMA11_SRCADDRSTAT_CURRSRCADDR_SHIFT))
+
+//====================================================================
+//Register: Destination Address Register (DestAddr)
+/** \brief The Destination Address register is programmed with the address of the location
+      for the DMA to transfer to. If the destination is memory, the address can be
+      byte aligned.*/
+//====================================================================
+
+#define  CDMA11_DESTADDR_DESTADDR_MASK 0xffffffff
+#define  CDMA11_DESTADDR_DESTADDR_SHIFT 0
+#define  CDMA11_DESTADDR_DESTADDR_MASK_SHIFT(reg) (((reg) & CDMA11_DESTADDR_DESTADDR_MASK) >> CDMA11_DESTADDR_DESTADDR_SHIFT)
+#define  CDMA11_DESTADDR_DESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_DESTADDR_DESTADDR_MASK) | (((uint32_t)val) << CDMA11_DESTADDR_DESTADDR_SHIFT))
+
+//====================================================================
+//Register: Current Destination Address Register (DestAddrStat)
+/** \brief This register contains the current address for the destination device.*/
+//====================================================================
+
+#define  CDMA11_DESTADDRSTAT_CURRDESTADDR_MASK 0xffffffff
+#define  CDMA11_DESTADDRSTAT_CURRDESTADDR_SHIFT 0
+#define  CDMA11_DESTADDRSTAT_CURRDESTADDR_MASK_SHIFT(reg) (((reg) & CDMA11_DESTADDRSTAT_CURRDESTADDR_MASK) >> CDMA11_DESTADDRSTAT_CURRDESTADDR_SHIFT)
+#define  CDMA11_DESTADDRSTAT_CURRDESTADDR_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_DESTADDRSTAT_CURRDESTADDR_MASK) | (((uint32_t)val) << CDMA11_DESTADDRSTAT_CURRDESTADDR_SHIFT))
+
+//====================================================================
+//Register: Fill Value Register (FillValue)
+/** \brief This register contains the data value to write to the destination
+      address.*/
+//====================================================================
+
+#define  CDMA11_FILLVALUE_FILLVAL_MASK 0xffffffff
+#define  CDMA11_FILLVALUE_FILLVAL_SHIFT 0
+#define  CDMA11_FILLVALUE_FILLVAL_MASK_SHIFT(reg) (((reg) & CDMA11_FILLVALUE_FILLVAL_MASK) >> CDMA11_FILLVALUE_FILLVAL_SHIFT)
+#define  CDMA11_FILLVALUE_FILLVAL_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_FILLVALUE_FILLVAL_MASK) | (((uint32_t)val) << CDMA11_FILLVALUE_FILLVAL_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (intEn)
+//====================================================================
+
+#define  CDMA11_INTEN_RESERVED1_MASK 0xfffffff0
+#define  CDMA11_INTEN_RESERVED1_SHIFT 4
+#define  CDMA11_INTEN_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA11_INTEN_RESERVED1_MASK) >> CDMA11_INTEN_RESERVED1_SHIFT)
+#define  CDMA11_INTEN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTEN_RESERVED1_MASK) | (((uint32_t)val) << CDMA11_INTEN_RESERVED1_SHIFT))
+
+#define  CDMA11_INTEN_CLEARCOMPLETEEN_MASK 0x8
+#define  CDMA11_INTEN_CLEARCOMPLETEEN_SHIFT 3
+#define  CDMA11_INTEN_CLEARCOMPLETEEN_MASK_SHIFT(reg) (((reg) & CDMA11_INTEN_CLEARCOMPLETEEN_MASK) >> CDMA11_INTEN_CLEARCOMPLETEEN_SHIFT)
+#define  CDMA11_INTEN_CLEARCOMPLETEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTEN_CLEARCOMPLETEEN_MASK) | (((uint32_t)val) << CDMA11_INTEN_CLEARCOMPLETEEN_SHIFT))
+
+#define  CDMA11_INTEN_CHAINDONEEN_MASK 0x4
+#define  CDMA11_INTEN_CHAINDONEEN_SHIFT 2
+#define  CDMA11_INTEN_CHAINDONEEN_MASK_SHIFT(reg) (((reg) & CDMA11_INTEN_CHAINDONEEN_MASK) >> CDMA11_INTEN_CHAINDONEEN_SHIFT)
+#define  CDMA11_INTEN_CHAINDONEEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTEN_CHAINDONEEN_MASK) | (((uint32_t)val) << CDMA11_INTEN_CHAINDONEEN_SHIFT))
+
+#define  CDMA11_INTEN_TIMEOUTEN_MASK 0x2
+#define  CDMA11_INTEN_TIMEOUTEN_SHIFT 1
+#define  CDMA11_INTEN_TIMEOUTEN_MASK_SHIFT(reg) (((reg) & CDMA11_INTEN_TIMEOUTEN_MASK) >> CDMA11_INTEN_TIMEOUTEN_SHIFT)
+#define  CDMA11_INTEN_TIMEOUTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTEN_TIMEOUTEN_MASK) | (((uint32_t)val) << CDMA11_INTEN_TIMEOUTEN_SHIFT))
+
+#define  CDMA11_INTEN_TERMCNTEN_MASK 0x1
+#define  CDMA11_INTEN_TERMCNTEN_SHIFT 0
+#define  CDMA11_INTEN_TERMCNTEN_MASK_SHIFT(reg) (((reg) & CDMA11_INTEN_TERMCNTEN_MASK) >> CDMA11_INTEN_TERMCNTEN_SHIFT)
+#define  CDMA11_INTEN_TERMCNTEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTEN_TERMCNTEN_MASK) | (((uint32_t)val) << CDMA11_INTEN_TERMCNTEN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (intPend)
+//====================================================================
+
+#define  CDMA11_INTPEND_RESERVED1_MASK 0xfffffff0
+#define  CDMA11_INTPEND_RESERVED1_SHIFT 4
+#define  CDMA11_INTPEND_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA11_INTPEND_RESERVED1_MASK) >> CDMA11_INTPEND_RESERVED1_SHIFT)
+#define  CDMA11_INTPEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTPEND_RESERVED1_MASK) | (((uint32_t)val) << CDMA11_INTPEND_RESERVED1_SHIFT))
+
+#define  CDMA11_INTPEND_CLEARCOMPLETEPEND_MASK 0x8
+#define  CDMA11_INTPEND_CLEARCOMPLETEPEND_SHIFT 3
+#define  CDMA11_INTPEND_CLEARCOMPLETEPEND_MASK_SHIFT(reg) (((reg) & CDMA11_INTPEND_CLEARCOMPLETEPEND_MASK) >> CDMA11_INTPEND_CLEARCOMPLETEPEND_SHIFT)
+#define  CDMA11_INTPEND_CLEARCOMPLETEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTPEND_CLEARCOMPLETEPEND_MASK) | (((uint32_t)val) << CDMA11_INTPEND_CLEARCOMPLETEPEND_SHIFT))
+
+#define  CDMA11_INTPEND_CHAINDONEPEND_MASK 0x4
+#define  CDMA11_INTPEND_CHAINDONEPEND_SHIFT 2
+#define  CDMA11_INTPEND_CHAINDONEPEND_MASK_SHIFT(reg) (((reg) & CDMA11_INTPEND_CHAINDONEPEND_MASK) >> CDMA11_INTPEND_CHAINDONEPEND_SHIFT)
+#define  CDMA11_INTPEND_CHAINDONEPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTPEND_CHAINDONEPEND_MASK) | (((uint32_t)val) << CDMA11_INTPEND_CHAINDONEPEND_SHIFT))
+
+#define  CDMA11_INTPEND_TIMEOUTPEND_MASK 0x2
+#define  CDMA11_INTPEND_TIMEOUTPEND_SHIFT 1
+#define  CDMA11_INTPEND_TIMEOUTPEND_MASK_SHIFT(reg) (((reg) & CDMA11_INTPEND_TIMEOUTPEND_MASK) >> CDMA11_INTPEND_TIMEOUTPEND_SHIFT)
+#define  CDMA11_INTPEND_TIMEOUTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTPEND_TIMEOUTPEND_MASK) | (((uint32_t)val) << CDMA11_INTPEND_TIMEOUTPEND_SHIFT))
+
+#define  CDMA11_INTPEND_TERMCNTPEND_MASK 0x1
+#define  CDMA11_INTPEND_TERMCNTPEND_SHIFT 0
+#define  CDMA11_INTPEND_TERMCNTPEND_MASK_SHIFT(reg) (((reg) & CDMA11_INTPEND_TERMCNTPEND_MASK) >> CDMA11_INTPEND_TERMCNTPEND_SHIFT)
+#define  CDMA11_INTPEND_TERMCNTPEND_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTPEND_TERMCNTPEND_MASK) | (((uint32_t)val) << CDMA11_INTPEND_TERMCNTPEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (intAck)
+//====================================================================
+
+#define  CDMA11_INTACK_RESERVED1_MASK 0xfffffff0
+#define  CDMA11_INTACK_RESERVED1_SHIFT 4
+#define  CDMA11_INTACK_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA11_INTACK_RESERVED1_MASK) >> CDMA11_INTACK_RESERVED1_SHIFT)
+#define  CDMA11_INTACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTACK_RESERVED1_MASK) | (((uint32_t)val) << CDMA11_INTACK_RESERVED1_SHIFT))
+
+#define  CDMA11_INTACK_CLEARCOMPLETEACK_MASK 0x8
+#define  CDMA11_INTACK_CLEARCOMPLETEACK_SHIFT 3
+#define  CDMA11_INTACK_CLEARCOMPLETEACK_MASK_SHIFT(reg) (((reg) & CDMA11_INTACK_CLEARCOMPLETEACK_MASK) >> CDMA11_INTACK_CLEARCOMPLETEACK_SHIFT)
+#define  CDMA11_INTACK_CLEARCOMPLETEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTACK_CLEARCOMPLETEACK_MASK) | (((uint32_t)val) << CDMA11_INTACK_CLEARCOMPLETEACK_SHIFT))
+
+#define  CDMA11_INTACK_CHAINDONEACK_MASK 0x4
+#define  CDMA11_INTACK_CHAINDONEACK_SHIFT 2
+#define  CDMA11_INTACK_CHAINDONEACK_MASK_SHIFT(reg) (((reg) & CDMA11_INTACK_CHAINDONEACK_MASK) >> CDMA11_INTACK_CHAINDONEACK_SHIFT)
+#define  CDMA11_INTACK_CHAINDONEACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTACK_CHAINDONEACK_MASK) | (((uint32_t)val) << CDMA11_INTACK_CHAINDONEACK_SHIFT))
+
+#define  CDMA11_INTACK_TIMEOUTACK_MASK 0x2
+#define  CDMA11_INTACK_TIMEOUTACK_SHIFT 1
+#define  CDMA11_INTACK_TIMEOUTACK_MASK_SHIFT(reg) (((reg) & CDMA11_INTACK_TIMEOUTACK_MASK) >> CDMA11_INTACK_TIMEOUTACK_SHIFT)
+#define  CDMA11_INTACK_TIMEOUTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTACK_TIMEOUTACK_MASK) | (((uint32_t)val) << CDMA11_INTACK_TIMEOUTACK_SHIFT))
+
+#define  CDMA11_INTACK_TERMCNTACK_MASK 0x1
+#define  CDMA11_INTACK_TERMCNTACK_SHIFT 0
+#define  CDMA11_INTACK_TERMCNTACK_MASK_SHIFT(reg) (((reg) & CDMA11_INTACK_TERMCNTACK_MASK) >> CDMA11_INTACK_TERMCNTACK_SHIFT)
+#define  CDMA11_INTACK_TERMCNTACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTACK_TERMCNTACK_MASK) | (((uint32_t)val) << CDMA11_INTACK_TERMCNTACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (intForce)
+//====================================================================
+
+#define  CDMA11_INTFORCE_RESERVED1_MASK 0xfffffff0
+#define  CDMA11_INTFORCE_RESERVED1_SHIFT 4
+#define  CDMA11_INTFORCE_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA11_INTFORCE_RESERVED1_MASK) >> CDMA11_INTFORCE_RESERVED1_SHIFT)
+#define  CDMA11_INTFORCE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTFORCE_RESERVED1_MASK) | (((uint32_t)val) << CDMA11_INTFORCE_RESERVED1_SHIFT))
+
+#define  CDMA11_INTFORCE_CLEARCOMPLETEFOR_MASK 0x8
+#define  CDMA11_INTFORCE_CLEARCOMPLETEFOR_SHIFT 3
+#define  CDMA11_INTFORCE_CLEARCOMPLETEFOR_MASK_SHIFT(reg) (((reg) & CDMA11_INTFORCE_CLEARCOMPLETEFOR_MASK) >> CDMA11_INTFORCE_CLEARCOMPLETEFOR_SHIFT)
+#define  CDMA11_INTFORCE_CLEARCOMPLETEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTFORCE_CLEARCOMPLETEFOR_MASK) | (((uint32_t)val) << CDMA11_INTFORCE_CLEARCOMPLETEFOR_SHIFT))
+
+#define  CDMA11_INTFORCE_CHAINDONEFOR_MASK 0x4
+#define  CDMA11_INTFORCE_CHAINDONEFOR_SHIFT 2
+#define  CDMA11_INTFORCE_CHAINDONEFOR_MASK_SHIFT(reg) (((reg) & CDMA11_INTFORCE_CHAINDONEFOR_MASK) >> CDMA11_INTFORCE_CHAINDONEFOR_SHIFT)
+#define  CDMA11_INTFORCE_CHAINDONEFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTFORCE_CHAINDONEFOR_MASK) | (((uint32_t)val) << CDMA11_INTFORCE_CHAINDONEFOR_SHIFT))
+
+#define  CDMA11_INTFORCE_TIMEOUTFOR_MASK 0x2
+#define  CDMA11_INTFORCE_TIMEOUTFOR_SHIFT 1
+#define  CDMA11_INTFORCE_TIMEOUTFOR_MASK_SHIFT(reg) (((reg) & CDMA11_INTFORCE_TIMEOUTFOR_MASK) >> CDMA11_INTFORCE_TIMEOUTFOR_SHIFT)
+#define  CDMA11_INTFORCE_TIMEOUTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTFORCE_TIMEOUTFOR_MASK) | (((uint32_t)val) << CDMA11_INTFORCE_TIMEOUTFOR_SHIFT))
+
+#define  CDMA11_INTFORCE_TERMCNTFOR_MASK 0x1
+#define  CDMA11_INTFORCE_TERMCNTFOR_SHIFT 0
+#define  CDMA11_INTFORCE_TERMCNTFOR_MASK_SHIFT(reg) (((reg) & CDMA11_INTFORCE_TERMCNTFOR_MASK) >> CDMA11_INTFORCE_TERMCNTFOR_SHIFT)
+#define  CDMA11_INTFORCE_TERMCNTFOR_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_INTFORCE_TERMCNTFOR_MASK) | (((uint32_t)val) << CDMA11_INTFORCE_TERMCNTFOR_SHIFT))
+
+//====================================================================
+//Register: DMA Timer Control (TimerControl)
+/** \brief The Timer Control register specifies the number of timebase cycles between word
+      transfers before generating a timeout interrupt. The timer is reset each time
+      a transfer occurs.*/
+//====================================================================
+
+#define  CDMA11_TIMERCONTROL_RESERVED1_MASK 0xffff0000
+#define  CDMA11_TIMERCONTROL_RESERVED1_SHIFT 16
+#define  CDMA11_TIMERCONTROL_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA11_TIMERCONTROL_RESERVED1_MASK) >> CDMA11_TIMERCONTROL_RESERVED1_SHIFT)
+#define  CDMA11_TIMERCONTROL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_TIMERCONTROL_RESERVED1_MASK) | (((uint32_t)val) << CDMA11_TIMERCONTROL_RESERVED1_SHIFT))
+
+#define  CDMA11_TIMERCONTROL_TIMERENABLE_MASK 0x8000
+#define  CDMA11_TIMERCONTROL_TIMERENABLE_SHIFT 15
+#define  CDMA11_TIMERCONTROL_TIMERENABLE_MASK_SHIFT(reg) (((reg) & CDMA11_TIMERCONTROL_TIMERENABLE_MASK) >> CDMA11_TIMERCONTROL_TIMERENABLE_SHIFT)
+#define  CDMA11_TIMERCONTROL_TIMERENABLE_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_TIMERCONTROL_TIMERENABLE_MASK) | (((uint32_t)val) << CDMA11_TIMERCONTROL_TIMERENABLE_SHIFT))
+
+#define  CDMA11_TIMERCONTROL_TIMEBASE_MASK 0x7000
+#define  CDMA11_TIMERCONTROL_TIMEBASE_SHIFT 12
+#define  CDMA11_TIMERCONTROL_TIMEBASE_MASK_SHIFT(reg) (((reg) & CDMA11_TIMERCONTROL_TIMEBASE_MASK) >> CDMA11_TIMERCONTROL_TIMEBASE_SHIFT)
+#define  CDMA11_TIMERCONTROL_TIMEBASE_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_TIMERCONTROL_TIMEBASE_MASK) | (((uint32_t)val) << CDMA11_TIMERCONTROL_TIMEBASE_SHIFT))
+
+#define  CDMA11_TIMERCONTROL_RESERVED2_MASK 0x800
+#define  CDMA11_TIMERCONTROL_RESERVED2_SHIFT 11
+#define  CDMA11_TIMERCONTROL_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA11_TIMERCONTROL_RESERVED2_MASK) >> CDMA11_TIMERCONTROL_RESERVED2_SHIFT)
+#define  CDMA11_TIMERCONTROL_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_TIMERCONTROL_RESERVED2_MASK) | (((uint32_t)val) << CDMA11_TIMERCONTROL_RESERVED2_SHIFT))
+
+#define  CDMA11_TIMERCONTROL_COUNT_MASK 0x7ff
+#define  CDMA11_TIMERCONTROL_COUNT_SHIFT 0
+#define  CDMA11_TIMERCONTROL_COUNT_MASK_SHIFT(reg) (((reg) & CDMA11_TIMERCONTROL_COUNT_MASK) >> CDMA11_TIMERCONTROL_COUNT_SHIFT)
+#define  CDMA11_TIMERCONTROL_COUNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_TIMERCONTROL_COUNT_MASK) | (((uint32_t)val) << CDMA11_TIMERCONTROL_COUNT_SHIFT))
+
+//====================================================================
+//Register: Timeout Count Status Register (TimeOutStat)
+/** \brief This register contains the current timeout count.*/
+//====================================================================
+
+#define  CDMA11_TIMEOUTSTAT_RESERVED1_MASK 0xfffff800
+#define  CDMA11_TIMEOUTSTAT_RESERVED1_SHIFT 11
+#define  CDMA11_TIMEOUTSTAT_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA11_TIMEOUTSTAT_RESERVED1_MASK) >> CDMA11_TIMEOUTSTAT_RESERVED1_SHIFT)
+#define  CDMA11_TIMEOUTSTAT_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_TIMEOUTSTAT_RESERVED1_MASK) | (((uint32_t)val) << CDMA11_TIMEOUTSTAT_RESERVED1_SHIFT))
+
+#define  CDMA11_TIMEOUTSTAT_CURRTOCNT_MASK 0x7ff
+#define  CDMA11_TIMEOUTSTAT_CURRTOCNT_SHIFT 0
+#define  CDMA11_TIMEOUTSTAT_CURRTOCNT_MASK_SHIFT(reg) (((reg) & CDMA11_TIMEOUTSTAT_CURRTOCNT_MASK) >> CDMA11_TIMEOUTSTAT_CURRTOCNT_SHIFT)
+#define  CDMA11_TIMEOUTSTAT_CURRTOCNT_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_TIMEOUTSTAT_CURRTOCNT_MASK) | (((uint32_t)val) << CDMA11_TIMEOUTSTAT_CURRTOCNT_SHIFT))
+
+//====================================================================
+//Register: Linked List Index Register (LLIR)
+/** \brief This register contains a word-aligned address of the first word of the next descriptor. LLI means "linked list index" or pointer to the descriptor in memory. If the LLI register is 0, then the current descriptor (that is loaded in the registers) is the last in the chain, and the DMA channel will stop once the current DMA transfer is completed.*/
+//====================================================================
+
+#define  CDMA11_LLIR_LLINDEX_MASK 0xfffffffc
+#define  CDMA11_LLIR_LLINDEX_SHIFT 2
+#define  CDMA11_LLIR_LLINDEX_MASK_SHIFT(reg) (((reg) & CDMA11_LLIR_LLINDEX_MASK) >> CDMA11_LLIR_LLINDEX_SHIFT)
+#define  CDMA11_LLIR_LLINDEX_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_LLIR_LLINDEX_MASK) | (((uint32_t)val) << CDMA11_LLIR_LLINDEX_SHIFT))
+
+#define  CDMA11_LLIR_RESERVED1_MASK 0x3
+#define  CDMA11_LLIR_RESERVED1_SHIFT 0
+#define  CDMA11_LLIR_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA11_LLIR_RESERVED1_MASK) >> CDMA11_LLIR_RESERVED1_SHIFT)
+#define  CDMA11_LLIR_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_LLIR_RESERVED1_MASK) | (((uint32_t)val) << CDMA11_LLIR_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Odd Width Config Register (OWCFG)
+//====================================================================
+
+#define  CDMA11_OWCFG_RESERVED1_MASK 0xfffe0000
+#define  CDMA11_OWCFG_RESERVED1_SHIFT 17
+#define  CDMA11_OWCFG_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA11_OWCFG_RESERVED1_MASK) >> CDMA11_OWCFG_RESERVED1_SHIFT)
+#define  CDMA11_OWCFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_OWCFG_RESERVED1_MASK) | (((uint32_t)val) << CDMA11_OWCFG_RESERVED1_SHIFT))
+
+#define  CDMA11_OWCFG_EXTRABITS_MASK 0x1f000
+#define  CDMA11_OWCFG_EXTRABITS_SHIFT 12
+#define  CDMA11_OWCFG_EXTRABITS_MASK_SHIFT(reg) (((reg) & CDMA11_OWCFG_EXTRABITS_MASK) >> CDMA11_OWCFG_EXTRABITS_SHIFT)
+#define  CDMA11_OWCFG_EXTRABITS_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_OWCFG_EXTRABITS_MASK) | (((uint32_t)val) << CDMA11_OWCFG_EXTRABITS_SHIFT))
+
+#define  CDMA11_OWCFG_RESERVED2_MASK 0xe00
+#define  CDMA11_OWCFG_RESERVED2_SHIFT 9
+#define  CDMA11_OWCFG_RESERVED2_MASK_SHIFT(reg) (((reg) & CDMA11_OWCFG_RESERVED2_MASK) >> CDMA11_OWCFG_RESERVED2_SHIFT)
+#define  CDMA11_OWCFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_OWCFG_RESERVED2_MASK) | (((uint32_t)val) << CDMA11_OWCFG_RESERVED2_SHIFT))
+
+#define  CDMA11_OWCFG_ODDWIDTH_MASK 0x1f0
+#define  CDMA11_OWCFG_ODDWIDTH_SHIFT 4
+#define  CDMA11_OWCFG_ODDWIDTH_MASK_SHIFT(reg) (((reg) & CDMA11_OWCFG_ODDWIDTH_MASK) >> CDMA11_OWCFG_ODDWIDTH_SHIFT)
+#define  CDMA11_OWCFG_ODDWIDTH_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_OWCFG_ODDWIDTH_MASK) | (((uint32_t)val) << CDMA11_OWCFG_ODDWIDTH_SHIFT))
+
+#define  CDMA11_OWCFG_RESERVED3_MASK 0xc
+#define  CDMA11_OWCFG_RESERVED3_SHIFT 2
+#define  CDMA11_OWCFG_RESERVED3_MASK_SHIFT(reg) (((reg) & CDMA11_OWCFG_RESERVED3_MASK) >> CDMA11_OWCFG_RESERVED3_SHIFT)
+#define  CDMA11_OWCFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_OWCFG_RESERVED3_MASK) | (((uint32_t)val) << CDMA11_OWCFG_RESERVED3_SHIFT))
+
+#define  CDMA11_OWCFG_PACKNUNPACK_MASK 0x2
+#define  CDMA11_OWCFG_PACKNUNPACK_SHIFT 1
+#define  CDMA11_OWCFG_PACKNUNPACK_MASK_SHIFT(reg) (((reg) & CDMA11_OWCFG_PACKNUNPACK_MASK) >> CDMA11_OWCFG_PACKNUNPACK_SHIFT)
+#define  CDMA11_OWCFG_PACKNUNPACK_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_OWCFG_PACKNUNPACK_MASK) | (((uint32_t)val) << CDMA11_OWCFG_PACKNUNPACK_SHIFT))
+
+#define  CDMA11_OWCFG_OWEN_MASK 0x1
+#define  CDMA11_OWCFG_OWEN_SHIFT 0
+#define  CDMA11_OWCFG_OWEN_MASK_SHIFT(reg) (((reg) & CDMA11_OWCFG_OWEN_MASK) >> CDMA11_OWCFG_OWEN_SHIFT)
+#define  CDMA11_OWCFG_OWEN_REPLACE_VAL(reg,val) (((reg) & ~CDMA11_OWCFG_OWEN_MASK) | (((uint32_t)val) << CDMA11_OWCFG_OWEN_SHIFT))
+
+//====================================================================
+//
+//Register File: CDMA Top Interrupt Register (CDMA_Top_Int)
+/** \brief CDMA Top Level Register Set*/
+//
+//====================================================================
+
+//====================================================================
+//Register: CDMA Interrupt Status Register (CDMAInt)
+/** \brief Contains the status of current CDMA interrupts*/
+//====================================================================
+
+#define  CDMA_TOP_INT_CDMAINT_RESERVED1_MASK 0xfffff000
+#define  CDMA_TOP_INT_CDMAINT_RESERVED1_SHIFT 12
+#define  CDMA_TOP_INT_CDMAINT_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA_TOP_INT_CDMAINT_RESERVED1_MASK) >> CDMA_TOP_INT_CDMAINT_RESERVED1_SHIFT)
+#define  CDMA_TOP_INT_CDMAINT_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA_TOP_INT_CDMAINT_RESERVED1_MASK) | (((uint32_t)val) << CDMA_TOP_INT_CDMAINT_RESERVED1_SHIFT))
+
+#define  CDMA_TOP_INT_CDMAINT_CDMAINT_MASK 0xfff
+#define  CDMA_TOP_INT_CDMAINT_CDMAINT_SHIFT 0
+#define  CDMA_TOP_INT_CDMAINT_CDMAINT_MASK_SHIFT(reg) (((reg) & CDMA_TOP_INT_CDMAINT_CDMAINT_MASK) >> CDMA_TOP_INT_CDMAINT_CDMAINT_SHIFT)
+#define  CDMA_TOP_INT_CDMAINT_CDMAINT_REPLACE_VAL(reg,val) (((reg) & ~CDMA_TOP_INT_CDMAINT_CDMAINT_MASK) | (((uint32_t)val) << CDMA_TOP_INT_CDMAINT_CDMAINT_SHIFT))
+
+//====================================================================
+//Register: CDMA Parameter Register (CDMAPR)
+/** \brief Contains the parameter settings for this instantiation of CDMA*/
+//====================================================================
+
+#define  CDMA_TOP_INT_CDMAPR_RESERVED1_MASK 0xfffffff0
+#define  CDMA_TOP_INT_CDMAPR_RESERVED1_SHIFT 4
+#define  CDMA_TOP_INT_CDMAPR_RESERVED1_MASK_SHIFT(reg) (((reg) & CDMA_TOP_INT_CDMAPR_RESERVED1_MASK) >> CDMA_TOP_INT_CDMAPR_RESERVED1_SHIFT)
+#define  CDMA_TOP_INT_CDMAPR_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~CDMA_TOP_INT_CDMAPR_RESERVED1_MASK) | (((uint32_t)val) << CDMA_TOP_INT_CDMAPR_RESERVED1_SHIFT))
+
+#define  CDMA_TOP_INT_CDMAPR_NUMCHAN_MASK 0xf
+#define  CDMA_TOP_INT_CDMAPR_NUMCHAN_SHIFT 0
+#define  CDMA_TOP_INT_CDMAPR_NUMCHAN_MASK_SHIFT(reg) (((reg) & CDMA_TOP_INT_CDMAPR_NUMCHAN_MASK) >> CDMA_TOP_INT_CDMAPR_NUMCHAN_SHIFT)
+#define  CDMA_TOP_INT_CDMAPR_NUMCHAN_REPLACE_VAL(reg,val) (((reg) & ~CDMA_TOP_INT_CDMAPR_NUMCHAN_MASK) | (((uint32_t)val) << CDMA_TOP_INT_CDMAPR_NUMCHAN_SHIFT))
+
+#endif // CDMA_TOP

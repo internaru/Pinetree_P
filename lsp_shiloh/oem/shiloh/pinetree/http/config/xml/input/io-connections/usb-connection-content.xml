@@ -1,0 +1,23 @@
+<!--COMMENT
+
+io-connections/usb-connection-content.xml
+
+MIDAS IO Connections for USB connection Content file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+    <usbConnection>
+      <vid><!--#ssi IDr OID_USB_DEVICE_VID --></vid>
+      <pid><!--#ssi IDr OID_USB_DEVICE_PID --></pid>
+    </usbConnection>

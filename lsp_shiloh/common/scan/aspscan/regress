@@ -1,0 +1,40 @@
+#!/bin/sh
+
+set -x
+
+# davep 15-dec-05 ; added -z option to aspscan to save scan dat size
+
+ALLDPI="75 150 200 300 500 600 1000 1200"
+#ALLDPI="150"
+#ALLDPI="300 600 1200"
+
+# run these scanning modes
+#ALLMODES="planar mono"
+ALLMODES="planar rgb xrgb rgbx mono"
+
+STATFILE=regress.dat
+
+#DBG=echo
+
+${DBG} rm -f ${STATFILE}
+
+# more options passed to aspscan
+MOREOPTS="-v ${USBVID} -p ${USBPID} -i 1 -e 2"
+
+###############
+#
+# Run the tests.
+
+for scanmode in ${ALLMODES} ; do
+    for dpi in ${ALLDPI} ; do
+
+        ${DBG} src/aspscan -t ${scanmode} -r ${dpi} -o ${dpi} ${MOREOPTS} -z 6 6>> ${STATFILE}
+
+        if [ $? -ne 0 ] ; then
+            exit -1
+        fi
+
+        ${DBG} sleep 10
+    done
+done
+

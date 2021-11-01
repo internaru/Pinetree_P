@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Run three captures for three channel.
+#
+# Why was this not checked in!?
+#
+# davep ??-???-20??
+
+set -x
+
+ports="50210 50211 50212"
+
+for p in $ports ; do 
+    n=$(( $p - 50210))
+    sh capall -p $p -o out$n.gray &
+done
+

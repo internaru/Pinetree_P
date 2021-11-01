@@ -1,0 +1,28 @@
+<!--COMMENT 
+
+product-info-content.xml
+
+MIDAS product-info content xml file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+  <productInfo>
+    <devModelName><!--#ssi IDr OID_PLATFORM_PRINT_NAME_STRING --></devModelName>
+    <devPartNumber><!--#ssi IDr OID_PLATFORM_SKU --></devPartNumber>
+    <devSerialNumber><!--#ssi IDr OID_PLATFORM_PRODUCT_SERIAL_NUM --></devSerialNumber>
+    <firmwareRevision><!--#ssi IDr OID_PLATFORM_FW_VERSION --></firmwareRevision>
+    <controllerSerialNumber><!--#ssi IDr OID_PLATFORM_FORMATTER_SERIAL_NUM --></controllerSerialNumber>
+    <countryCode><!--#ssi IDr OID_PLATFORM_COUNTRY_CODE --></countryCode>
+    <languageCode><!--#ssi IDr OID_STRING_MGR_LANGUAGE_CODE --></languageCode>
+  </productInfo>

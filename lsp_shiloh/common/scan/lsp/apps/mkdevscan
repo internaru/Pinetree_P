@@ -1,0 +1,56 @@
+#!/bin/sh
+
+DEVNAME=scanman
+DEV_PATH=/dev/${DEVNAME}
+
+make_device() 
+{
+#    echo "make_device() $1 $2"
+    if [ $# -ne 2 ] ; then
+        return
+    fi
+
+    num=$1
+    device=$2
+
+#    echo num=$num 
+#    echo device=$device
+
+    echo mknod ${DEV_PATH} c ${num} 0
+    mknod ${DEV_PATH} c ${num} 0
+}
+
+a=$(grep ${DEVNAME} /proc/devices)
+if [ "$a" == "" ] ; then 
+    echo "${DEVNAME} not found in /proc/devices; kernel driver loaded?"
+    return 1
+fi
+
+# ${var%pattern}  "Use value of var after removing patter n from the right.
+# Remove the shortest matching piece."  _Bash Quick Reference_ O'Reilly.
+devnum=${a% scanman}
+echo devnum=$devnum
+
+if [ -c  ${DEV_PATH} ] ; then
+    echo ${DEV_PATH} exists
+    # get the major, minor numbers; use $(( )) to get the numbers in decimal
+    major=$(( 0x$(stat -c "%t" ${DEV_PATH}) ))
+    minor=$(( 0x$(stat -c "%T" ${DEV_PATH}) ))
+
+#    echo "/dev/scanman=($major,$minor)"
+
+    if [ ${devnum} -ne ${major} -o ${minor} -ne 0 ] ; then
+        echo "improper device number"
+        return 1
+    fi
+
+#    echo "${DEV_PATH} exists and is the proper character device"
+    return 0
+fi
+
+#echo no ${DEV_PATH} so making ${DEV_PATH}
+make_device $a
+
+# success!
+exit 0
+

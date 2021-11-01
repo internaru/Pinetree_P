@@ -1,0 +1,24 @@
+<!--#ssi INCLUDE /midas-header.xml -->
+<!--COMMENT  
+
+functions/scan.xml
+
+MIDAS Functions scan file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+  <functions>
+<!--#ssi INCLUDE /functions/scan-content.xml -->
+  </functions>
+<!--#ssi INCLUDE /midas-footer.xml -->

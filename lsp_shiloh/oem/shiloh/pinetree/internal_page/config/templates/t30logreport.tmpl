@@ -1,0 +1,69 @@
+{
+<TMPL_LOOP name="t30totalloop">
+  <TMPL_IF name="ifvarname">
+  "new_page": true,
+  </TMPL_IF>  
+  "item_font_size": 9,
+  "outline": true,
+  "x": 100,
+  "y": 100,
+  "logo_image": true,
+  "main_title": "<TMPL_VAR name="tli_prefix">",
+  "y": 240,
+  "base_x": 90,
+
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "                                                          * * * * * * * * * * * * * * * * *"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "                                                          *      PROTOCOL DUMP LIST      *"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "                                                          * * * * * * * * * * * * * * * * *"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": ""},
+          {"offset_x": <TMPL_VAR name="c2">, "data": ""}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "Firmware Version"},
+          {"offset_x": <TMPL_VAR name="c2">, "data": "          : <TMPL_VAR name="FirmwareVersion">"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "Firmware Release Date"},
+          {"offset_x": <TMPL_VAR name="c3">, "data": "         : <TMPL_VAR name="FirmwareReleaseDate">"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "T.35 Identification"},
+          {"offset_x": <TMPL_VAR name="c3">, "data": "   : <TMPL_VAR name="Identification">"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": ""},
+          {"offset_x": <TMPL_VAR name="c2">, "data": ""}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": ""},
+          {"offset_x": <TMPL_VAR name="c2">, "data": "                                                     <TMPL_VAR name="CurrentTime">"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": ""},
+          {"offset_x": <TMPL_VAR name="c2">, "data": ""}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "TIME"},
+          {"offset_x": <TMPL_VAR name="c4">, "data": "S/R"},
+          {"offset_x": <TMPL_VAR name="c5">, "data": "FCF DATA"},
+          {"offset_x": <TMPL_VAR name="c6">, "data": "FIF DATA"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------"}],
+<TMPL_LOOP name="t30loop">
+          <TMPL_IF name="ifFIFData">
+          "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "<TMPL_VAR name="T30Time">"},
+				{"offset_x": <TMPL_VAR name="c4">, "data": "<TMPL_VAR name="T30SR">"},
+				{"offset_x": <TMPL_VAR name="c5">, "data": "<TMPL_VAR name="T30FCFData">"},
+				{"offset_x": <TMPL_VAR name="c6">, "data": "<TMPL_VAR name="T30FIFData">"}],
+				<TMPL_IF name="ifData2">
+					"item":[{"offset_x": <TMPL_VAR name="c6">, "data": "<TMPL_VAR name="T30FIFData2">"}],
+				</TMPL_IF>
+		  <TMPL_ELSE>
+          "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "<TMPL_VAR name="T30Time">"},
+				{"offset_x": <TMPL_VAR name="c4">, "data": "<TMPL_VAR name="T30SR">"},
+				{"offset_x": <TMPL_VAR name="c5">, "data": "<TMPL_VAR name="T30FCFData">"}],			  
+		  </TMPL_IF> 
+</TMPL_LOOP>
+		  <TMPL_IF name="ifLastPage">
+		  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": ""}],
+		  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": ""}],
+		  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "SPEED"},
+				{"offset_x": <TMPL_VAR name="c5">, "data": ": <TMPL_VAR name="T30Speed">"}],
+		  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "RESOLUTION"},
+				{"offset_x": <TMPL_VAR name="c5">, "data": ": <TMPL_VAR name="T30Resolution">"}],
+		  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "MODE"},
+				{"offset_x": <TMPL_VAR name="c5">, "data": ": <TMPL_VAR name="T30Mode">"}],
+		  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "CODING"},
+				{"offset_x": <TMPL_VAR name="c5">, "data": ": <TMPL_VAR name="T30Coding">"}],
+		  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "RESULT"},
+				{"offset_x": <TMPL_VAR name="c5">, "data": ": <TMPL_VAR name="T30Result">"}],								
+		  </TMPL_IF>
+		  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": ""}],
+		  "item":[{"offset_x": <TMPL_VAR name="c7">, "data": "<TMPL_VAR name="T30PageCount">"}],
+</TMPL_LOOP>
+}

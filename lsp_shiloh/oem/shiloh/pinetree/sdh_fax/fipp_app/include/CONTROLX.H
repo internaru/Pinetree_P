@@ -1,0 +1,949 @@
+/*
+ *  $RCSfile: CONTROLX.H,v $
+ * $Revision: 1.4 $
+ *   $Author: miurat $
+ *     $Date: 2010/06/01 18:31:08 $
+ */
+/************************************************************************
+ *
+ *      CONTROLX.H
+ *
+ *  External defines for CONTROL.C
+ *
+ *  Copyright 1998 - 2009 Conexant Systems, Inc.
+ *  4000 MacArthur Blvd., Newport Beach, CA 92660 USA.
+ *  All Rights Reserved Worldwide.
+ *  Information Contained Herein is Proprietary to Conexant Systems, Inc.
+ *
+ ************************************************************************/
+
+#ifndef _CONTROLX_H_
+#define _CONTROLX_H_
+
+#ifndef FOREVER
+#define FOREVER for(;;)
+#endif
+#ifndef _DOS
+#define TASK_LOOP	FOREVER
+#else
+#define TASK_LOOP
+#endif
+
+#ifndef TRUE
+#define TRUE				1
+#define FALSE				0
+#endif
+
+#ifndef	NULL
+#define	NULL			0
+#endif
+
+/* Auto Answer options */
+#define AA_NONE				0
+#define AA_FAXONLY			1
+#define AA_TAMONLY			2
+#define AA_TAMFAX			3
+
+#define SYSTEM_NORMAL_MODE		0
+#define SYSTEM_MAINT_MODE		1
+
+typedef enum                /* Phone Answer Mode */
+{                           /* for attribute PCA_ANSWER_MODE */
+    ANS_MODE_MANUAL,        /* manual mode */
+    ANS_MODE_FAX,           /* FAX mode */
+    ANS_MODE_FAX_TEL,		/* FAX/TEL mode */
+    ANS_MODE_MSG_CTR,		/* message center mode or VOICE/FAX mode */
+    ANS_MODE_VOICE,         /* VOICE mode */
+    ANS_MODE_VOICE_FAX      /* VOICE/FAX mode */
+} ANSWER_MODE_TYPES;
+
+typedef enum                /* Easy Receive operation in Manual Mode */
+{                           /* for attribute PCA_EASY_RECEIVE_TYPE */
+    EASY_RECEIVE_OFF,
+    EASY_RECEIVE_ON,
+    EASY_RECEIVE_SEMI
+} EASY_RECEIVE_TYPES;
+
+typedef enum                /* Distinctive Ringing modes */
+{                           /* for attribute PCA_DISTINCTIVE_MODE */
+    DISTINCTIVE_OFF,
+    DISTINCTIVE_ON,
+    DISTINCTIVE_UNSET
+} DISTINCTIVE_MODE_TYPES;
+
+typedef enum                /* Voice operation in Message Center Mode */
+{
+    MSG_CTR_VOICE_OFF,
+    MSG_CTR_VOICE_ON,
+    MSG_CTR_VOICE_EXT
+} MSG_CTR_VOICE;
+
+/* Event messages */
+#define EM_HANDSET			1
+#define	EM_ONHOOK			2
+#define EM_TXSCAN			3
+#define EM_FIRST_RING		4
+#define EM_RINGCOUNT		5
+#define EM_RINGTIMEOUT		6
+#define EM_TXMEM			7
+#define EM_SCANMEM			8
+#define EM_SCANPRINT		9
+#define EM_PRINTMEM			10
+#define EM_HOSTPRINT		11
+#define EM_HOSTFAX			12
+#define EM_HOSTSCAN			13
+
+/* Processes */
+#define PROC_BEGIN_PROCS   -1	/* keep this as the first entry */
+#define PROC_IDLE			0
+#define PROC_T30			1
+#define PROC_DOCSCAN		2
+#define PROC_DOCPRINT		3
+#define PROC_DOCCOPY		4
+#define PROC_HOSTFAX		5
+#define PROC_HOSTPRINT		6
+#define PROC_HOSTSCAN		7
+#define PROC_PHONE			8
+#define PROC_TAM			9
+#define PROC_MFS			10
+#define PROC_VIDCAP			11
+#define PROC_VIDPRT			12
+#define PROC_INKMGR			13
+#define PROC_END_PROCS		14	/* keep this as the last entry */
+
+/* Tokens */
+
+#define PHT_READY			1
+#define PHT_AUTODIALING		2
+#define PHT_REDIAL			3
+#define PHT_SPEEDDIAL		4
+#define PHT_OFFHOOK			5
+#define PHT_BUSY			6
+#define PHT_RINGING			7
+#define PHT_NODIALTONE		8
+#define PHT_DIGIT			9
+#define PHT_BLACKLISTED_NO	10
+#define PHT_ALL_BLACKLISTED	11
+#define PHT_EXTINUSE		12
+#define PHT_AUTODIALING_DONE	13
+#define PHT_CID_READY		14
+#define PHT_RING_TIMEOUT	15
+#define PHT_HANDSET_UP		16
+
+
+#if 0
+#define FXT_CONNECTING		19
+#define FXT_READY			20
+#define FXT_CONNECTED		21
+#define FXT_TXNORMAL		22
+#define FXT_TXDELAYED		23
+#define FXT_TXPOLLING		24
+#define FXT_RXNORMAL		25
+#define FXT_RXPOLLING		26
+#define FXT_REMOTEID		27
+#define FXT_DISCONNECT		28
+#define FXT_PKUP_PHONE		29
+#define FXT_VOICEREQ		30	/* Should be removed - use FXT_PKUP_PHONE */
+#define FXT_RXWAIT			31
+
+#ifdef INTERNET_FAX
+#define FXT_IFAX_DIALING	32	// DIALING an ISP to send an IFAX
+#define FXT_IFAX_CONNECT	33	// connected to an ISP to send an IFAX
+#define FXT_IFAX_ISP_LOGIN	34	// logging into an ISP to send an IFAX
+#define FXT_IFAX_SMTP_LOGIN	35	// logging into an SMTP server to send an IFAX
+#define FXT_IFAX_EMAIL_SENT	36	// email sent successfully
+#endif
+
+// fax comm. error
+#define FXT_BUSYTONE_ERROR  37
+#define FXT_TIMEOUT_ERROR	38
+#define FXT_BADRSP_ERROR	39
+#define	FXT_BADTX_ERROR		40
+#define	FXT_BADRX_ERROR		41
+#define	FXT_NODOC_ERROR		42
+#define	FXT_BADDOC_ERROR	43
+#define FXT_TXPAPERJAM_ERROR	44
+#define FXT_NO_MEM_ERROR	45
+#define FXT_USERABORT_ERROR	46
+#define FXT_DUMMY			59			// value lager than last FXT_
+#endif
+
+enum
+{
+ FXT_READY,			
+ FXT_CONNECTING,		
+ FXT_CONNECTED,		
+ FXT_TXNORMAL,		
+ FXT_TXDELAYED,		
+ FXT_TXPOLLING,		
+ FXT_RXNORMAL,		
+ FXT_RXPOLLING,		
+ FXT_REMOTEID,		
+ FXT_DISCONNECT,		
+ FXT_PKUP_PHONE,		
+ FXT_VOICEREQ,		
+ FXT_RXWAIT,		   
+
+ FXT_BUSYTONE_ERROR, 
+ FXT_TIMEOUT_ERROR,	
+ FXT_BADRSP_ERROR,	
+ FXT_BADTX_ERROR,		
+ FXT_BADRX_ERROR,		
+ FXT_NODOC_ERROR,		
+ FXT_BADDOC_ERROR,	
+ FXT_TXPAPERJAM_ERROR,
+ FXT_NOMEM_ERROR,	
+ FXT_USERABORT_ERROR,
+ FXT_LAST			
+};
+
+#define DPT_READY				60
+#define DPT_PRINTING			61
+#define DPT_DELETEFAX			62
+#define DPT_PAPERSIZE			63
+#define DPT_COVEROPEN			64
+#define DPT_DOCMISSING			65
+#define DPT_MEMERR				66
+
+#define DST_READY			80
+#define DST_SCANNING		81
+#define DST_PAPERJAM		82
+#define DST_MEMOUT			83
+
+#define VCT_READY			90
+#define VCT_ACTIVE			91
+#define	VCT_CAPTURE			92
+#define	VCT_TRANSFER		93
+#define VCT_MEMOUT			94
+
+#define VPT_READY			100
+#define VPT_PRINTING		101
+
+#define HPT_READY			110
+#define HPT_PRINTING		111
+#define HPT_ABORTREQUEST    112
+#define HPT_ABORTING        113
+#define HPT_PCPRINT_ATTEMPT 114
+#define HPT_INITJOB         115
+
+#define AMT_PICKUPHANDSET	120
+#define AMT_RECORDOGM		121
+#define AMT_RECORDMEMO		122
+#define AMT_RECORDICM		123
+#define AMT_PLAYMSGS  		124
+#define AMT_PRESSPLAY		125
+#define AMT_ERASEOGM		126
+#define AMT_ERASEONE		127
+#define AMT_ERASEALL		128
+#define AMT_CONFIRM			129
+#define AMT_PLAYOGM			130
+#define AMT_PLAYOGM_LOCAL	131
+#define AMT_NOOGM			132
+#define AMT_NOMSG			133
+#define AMT_READY			134
+
+#define IMT_OPENCOVER			140
+#define IMT_CLOSECOVER			141
+#define IMT_CHANGECART			142
+#define IMT_CART_ERROR			143
+#define IMT_PRINTING_ALIGNMENT	144
+#define IMT_PRINTING_CLEANING	145
+#define IMT_CHANGECARTDONE		146
+
+#define MNT_READY           150
+#define MNT_EXECUTING       151
+
+#define HST_ACTIVE			160
+#define HST_READY			161
+#define HST_SCANNING		162
+#define HST_PCSCAN_ATTEMPT 163
+
+#define ATT_READY			170
+#define ATT_ACTIVE			171
+#define ATT_TXACTIVE		172
+#define ATT_RXACTIVE		173
+
+#define RCT_READY			180
+#define RCT_RCOPERATION		181
+#define RCT_REMOTEMAINTE	182
+#define RCT_FACTORYMAINTE	183
+#define RCT_ANSMODELED		184
+#define RCT_DTMF_NOTIFY		185
+
+#define DAT_READY			190
+#define DAT_ACTIVE			191
+
+#define PGT_READY			200
+#define PGT_PAGERDIALING	201
+#define PGT_SENDPINNO		202
+
+
+/* Device error codes - clear and set purposely set to 0 & 1*/
+#define DEVICE_ERROR_CLEAR			0
+#define DEVICE_ERROR_SET			1
+#define DEVICE_ERROR_TRYTOCLEAR		2
+
+#define CP_MANUAL_DIAL		0
+#define CP_AUTO_DIAL		1
+#define CP_SPEED_DIAL		2
+#define CP_REDIAL			3
+#define CP_MANUAL_ANSWER	4
+
+/* COPY size in percent */
+#define CP_FULL_SIZE  		100
+#define CP_LGL_TO_LTR 		75
+#define CP_LGL_TO_A4  		81
+#define CP_A4_TO_LTR  		95
+
+#define CP_MAX_LCD_LEN		20
+
+#define CP_MIN_COPY_PERCENT	33
+#define CP_MAX_COPY_PERCENT	200
+
+//#define CP_MIN_VPA_PRINTSIZE	1
+//#define CP_MAX_VPA_PRINTSIZE	3
+
+//#define CP_MIN_VPA_BRIGHTNESS	1
+//#define CP_MAX_VPA_BRIGHTNESS	11
+
+//#define CP_MIN_VPA_RGBADJUST	1
+//#define CP_MAX_VPA_RGBADJUST	11
+
+#define RES_STANDARD		0
+#define RES_FINE			1
+//#define RES_SUPERFINE		2  // Not support
+#define RES_300				3
+#define RES_ULTRAFINE		4
+
+//#define RES_300X600         5
+//#define RES_600X600         6
+/* User level resolution settings only */
+#define RES_PHOTO		   32
+//#define RES_MIXED		   33
+
+#define CPG_CONTRAST_LIGHTEST 0
+#define CPG_CONTRAST_LIGHTER  25
+#define CPG_CONTRAST_NORMAL   50
+#define CPG_CONTRAST_DARKER   75
+#define CPG_CONTRAST_DARKEST  100
+
+/* For DCA_IMGPROC */
+#define IMG_BILEVEL		0
+#define IMG_GRAYSCALE   1
+#define IMG_COLOR       2
+#define IMG_PHOTO		3
+
+/* for scan_target field in CIP IMG_PARAMS */
+#define IMG_SCAN_TARGET_PHOTO	0
+#define IMG_SCAN_TARGET_POLY	1
+#define IMG_SCAN_TARGET_INKJET	2
+
+/* for intent field in CIP IMG_PARAMS */
+#define CLR_INTENT_PERCEPTUAL	0
+#define CLR_INTENT_COLORMETRIC	1
+#define CLR_INTENT_SATURATION	CLR_INTENT_COLORMETRIC
+
+/* for image_type field in CIP IMG_PARAMS */
+#define IMG_INTENT_TEXT  0
+#define IMG_INTENT_PHOTO 1
+/* this next define might not be used */
+#define IMG_INTENT_MIXED 2
+
+/* these define the state of the imaging button LED's on the LCP */
+#define IMG_KEY_TEXT			0
+#define IMG_KEY_PHOTO			1
+#define IMG_KEY_GRAYSCALE		2
+#define IMG_KEY_COLOR			3
+
+#define ECM_NONE 0
+#define ECM_256  1
+#define ECM_64   2
+#ifdef INTERNET_FAX
+#define ECM_T37  3      /* Internet FAX (T.37) mode */
+#endif
+
+/* Transmit Poll Doc from options */
+#define CP_TXPOLLFOM_MEMORY	0
+#define CP_TXPOLLFOM_SCAN	1
+#define CP_TXPOLLFOM_BOTH	2
+
+/* CP power on defaults */
+#define CP_INIT_COPY_AUTOREDUCTION	FALSE
+#define CP_INIT_COPY_COLLATE		FALSE
+#define CP_INIT_COPY_REVERSEORDER	FALSE
+#define CP_INIT_COPY_COPIES			1
+#define CP_INIT_COPY_RESOLUTION		RES_STANDARD
+#define CP_INIT_COPY_IMAGING		IMG_KEY_TEXT
+#define CP_INIT_SCAN_DARKNESS		CPG_CONTRAST_NORMAL
+#define CP_INIT_COPY_SCALEFACTOR	100
+#define CP_INIT_SCAN_BRIGHTNESS		0
+#define CP_INIT_SCAN_CONTRAST		50
+#define CP_INIT_SCAN_SATURATION		100
+#define CP_INIT_SCAN_TARGET			IMG_SCAN_TARGET_INKJET
+#define CP_INIT_SCAN_INTENT			CLR_INTENT_PERCEPTUAL
+#define CP_INIT_SCAN_IMG_TYPE		IMG_INTENT_TEXT
+
+#define CP_INIT_PAPERSIZE			PAPSIZE_LETTER
+#define CP_INIT_MEDIA				PRT_MEDIA_PLAIN
+#define CP_INIT_FAX_INTERNATIONAL	FALSE
+
+/* Ringer Volume PWM definitions */
+#define RINGVOL0 0			/* =OFF */
+#define RINGVOL1 0x09
+#define RINGVOL2 0x25
+#define RINGVOL3 0x69
+#define RINGVOL4 0x85
+
+/* Speaker Volume PWM definitions. */
+#define SPVOL0 31			/* =OFF */
+#define SPVOL1 95
+#define SPVOL2 159
+#define SPVOL3 255
+
+/* Hand Set Volume PWM definitions. */
+#define HSVOL1 0x2C			/* Low */
+#define HSVOL2 0x80			/* High */
+#define HSVOL3 0xC0			/* Super High */
+
+/* Handset volume pass through values */
+#define CPA_HANDSET_HEARING_AID	 0
+#define CPA_HANDSET_HIGH		 1
+#define CPA_HANDSET_LOW			 2
+
+/* TAM Message Skip */
+/* TAM_SKIP_REVERSE is no longer used. Should be removed from
+   here once we get LCP code from BIL that doesn't use it. This
+   will let us build with old LCP code.
+*/
+#define TAM_SKIP_REVERSE			0
+#define TAM_SKIP_FORWARD			1
+#define TAM_SKIP_REV_PLAY_CURRENT	2
+#define TAM_SKIP_REV_PLAY_PREV		3
+
+/* Fax activity report printing selections */
+#define CP_FAXLOG_OFF                  0
+#define CP_FAXLOG_ON                   1
+#define CP_FAXLOG_ON_ERROR             2
+#define CP_FAXLOG_ON_ERROR_INC_POLLING 3
+#define CP_FAXLOG_ON_TXRX_ERROR        4
+#define CP_FAXLOG_ON_POLLED            5
+#define CP_FAXLOG_ON_POLLED_AND_ERROR  6
+#define CP_FAXLOG_ON_INCLUDE_RX        7
+
+#define CP_ABORT_PRINT_REQUEST  0
+//prl 040500 #define CP_RESET_NVRAM  1
+
+#define CP_HOSTFAX_ON		0
+#define CP_HOSTFAX_RESUME	1
+
+/* OP_IDLE must be last in the list.  Any changes here must be reflected
+   in matrix.h */
+enum ops {
+	OP_BEGIN_OPS = -1, /* keep this as the first entry */
+	OP_TXSCAN,         /* 00 */
+	OP_RXPRINT,        /* 01 */
+	OP_TXMEM,          /* 02 */
+	OP_RXMEM,          /* 03 */
+	OP_FAXANSWER,      /* 04 */
+	OP_SCANMEM,        /* 05 */
+	OP_PRINTMEM,       /* 06 */
+	OP_HOSTPRINT,      /* 07 */
+	OP_SCANPRINT,      /* 08 */
+	OP_HOSTFAXTX,      /* 09 */
+	OP_HOSTFAXRX,      /* 0a */
+	OP_HOSTSCAN,       /* 0b */
+	OP_PHONE,          /* 0c */
+	OP_TAMANSWER,      /* 0d */
+	OP_TAMPLAY,        /* 0e */
+	OP_MFS,            /* 0f */
+	OP_VIDCAP,         /* 10 */
+	OP_VIDPRT,         /* 11 */
+	OP_INKMGR,         /* 12 */
+	OP_TXSCNMEM,       /* 13 */
+	OP_RXPRTMEM,       /* 14 */
+	OP_AUTOANSWER,     /* 15 */
+	OP_PRINTPRIORITY,  /* 16 */
+	OP_IDLE            /* keep this as the last entry */
+};
+
+
+typedef enum ops OP;
+
+typedef struct {
+	OP opFirst;     /* the "Now" process */
+	OP opSecond;    /* the "Next" or concurrent process */
+ }PROC;
+
+/* Any additions must also be made to control.c void (*MESSAGEMAP[])(UINT8 param)*/
+/* Order must be maintained */
+enum msgs{
+	CM_AUTOANSWER_REQUEST,
+	CM_DAAHOOKSTATE,
+	CM_DELAYCALL,
+	CM_DELAYONHOOK,
+	CM_DOCCOPYTERMINATE,
+	CM_DOCPRINTREQUEST,
+	CM_DOCPRINTTERMINATE,
+	CM_DOCSCANTERMINATE,
+	CM_FAXANSWER,
+	CM_FAXANSWER_REQUEST,
+	CM_FAXCALL_REQUEST,
+	CM_HANDSETHOOKSTATE,
+	CM_HOSTCOMMERROR,
+	CM_HOSTCOMMFAIL,
+	CM_HOSTFAXREQUEST,
+	CM_HOSTFAXTERMINATE,
+	CM_HOSTPRINTEND,
+	CM_HOSTPRINTCANCEL,
+	CM_HOSTPRINTCONTINUE,
+	CM_HOSTPRINTREQUEST,
+	CM_HOSTPRINTTERMINATE,
+	CM_HOSTSCANCLOSE,
+	CM_HOSTSCANCONTINUE,	 //dfp
+	CM_HOSTSCANEND,			 //dfp
+	CM_HOSTSCANOPEN,
+	CM_HOSTSCANREQUEST,		 //dfp
+	CM_HOSTSCANTERMINATE,
+	CM_INKMGRREQUEST,
+	CM_INKMGRDONE,
+	CM_INKMGRTERMINATE,
+	CM_INKSENSORFAIL,
+	CM_MANUALFEED,
+	CM_MFSTERMINATE,
+	CM_NODOCERROR,
+	CM_OUTOFMEMORY,
+
+	CM_PC_IFC_LOST,
+	CM_CHECK_FOR_LOW_INK,
+
+/* old errors */
+	CM_OUTOFINK,
+	CM_OUTOFINKLEFT,
+	CM_OUTOFINKRIGHT,
+	CM_PEDOFFLINE,
+	CM_PEDOUTOFINK,
+	CM_PEDPAPERSIZE,
+/* new errors */
+	CM_PRTMGR_ERR_COVER_OPEN,
+	CM_PRTMGR_ERR_CATASTROPHY,
+	CM_PRTMGR_ERR_PAPER_OUT,
+	CM_PRTMGR_ERR_PAPER_JAM,
+	CM_PRTMGR_ERR_NO_HEADS,
+	CM_PRTMGR_ERR_NO_MONO,
+	CM_PRTMGR_ERR_NO_COLOR,
+	CM_PRTMGR_ERR_INVALID_MONO,
+	CM_PRTMGR_ERR_INVALID_COLOR,
+	CM_PRTMGR_ERR_BOTH_INVALID,
+	CM_PRTMGR_ERR_HEADS_SWAP,
+	CM_PRTMGR_ERR_LF_INK_LOW,
+	CM_PRTMGR_ERR_RT_INK_LOW,
+	CM_PRTMGR_ERR_HEAD_CHANGED,
+
+	CM_DTMFDIGIT,
+	CM_PHONEREQUEST,
+	CM_PHONESTATUS,
+	CM_PHONETERMINATE,
+	CM_PRINTPRIORITYREQUEST,
+	CM_PRINTPRIORITYTERMINATE,
+	CM_REPGENTERMINATE,
+	CM_RING,
+	CM_SEDCOVEROPEN,
+	CM_SEDDOCPRESENT,
+	CM_SEDPAPERJAM,
+	CM_SEDSENSORFAIL,
+	CM_SEDADFPRESENT,
+	CM_STARTBUFFEREDPRINT,
+	CM_T30TERMINATE,
+	CM_TAMANSWER_REQUEST,
+	CM_TAMTERMINATE,
+	CM_VIDCAPCAPTURE,
+	CM_VIDCAPEND,
+	CM_VIDCAPREQUEST,
+	CM_VIDCAPTERMINATE,
+	CM_VIDPRTREQUEST,
+	CM_VIDPRTTERMINATE,
+	CM_WRONGCART,
+	VKEY_ABORTCOPY,
+	VKEY_ABORTDIAL,
+	VKEY_ABORTFAX,
+	VKEY_ABORTHOSTFAX,
+	VKEY_ABORTINKMGR,
+	VKEY_ABORTPRINT,
+	VKEY_ABORTSCAN,
+	VKEY_ABORTHOSTSCAN,
+	VKEY_ABORTSCHED,
+	VKEY_ABORTTAM,
+	VKEY_ABORTVIDCAP,
+	VKEY_ABORTVIDPRT,
+	VKEY_BEEPER,
+	VKEY_CONFIRMTAMERASE,
+	VKEY_DELAYDIALNO,
+	VKEY_DELAYTIME,
+	VKEY_DELETEDOC,
+	VKEY_DELETEFAXES,
+	VKEY_ERASEMSG,
+	VKEY_ERASEOGM,
+	VKEY_FLASH,
+	VKEY_FORMFEED,
+	VKEY_HOLD,
+	VKEY_TESTPRINT,
+	VKEY_KEYPRESS,
+	VKEY_KEYRELEASE,
+	VKEY_LINEREQUEST,
+	VKEY_MUTE,
+	VKEY_ONLINE,
+	VKEY_PLAYMSG,
+	VKEY_PLAYOGM,
+	VKEY_PRINTALIGNMENT,
+	VKEY_PRINTHEADCLEANING,
+	VKEY_PRINTPRIORITY,
+	VKEY_PRINTUSERSETTINGS,
+	VKEY_PSEUDORING,
+	VKEY_RECORDOGM,
+	VKEY_REDIAL,
+	VKEY_RESET,
+	VKEY_RINGVOLUME,
+	VKEY_SAVEFAXES,
+	VKEY_SETDEFAULTS,
+	VKEY_SETDELAYTXFROMSCAN,
+	VKEY_SETTIMEDATE,
+	VKEY_SKIPMSG,
+	VKEY_SPEAKERPHONE,
+	VKEY_SPEAKERVOLUME,
+	VKEY_SPEEDDIAL,
+	VKEY_STARTCOPY,
+	VKEY_STARTDELAYPOLL,	/* finished programming a delayed poll */
+	VKEY_STARTDIAL,
+	VKEY_STARTFAX,
+	VKEY_STARTFAXPOLLING,
+	VKEY_STARTMEMTXTEST,
+	VKEY_STARTPRINT,		/* Print doc from memory */
+	VKEY_STARTPRINTFAX,		/* Print and delete all faxes */
+	VKEY_STARTSCAN,			/* Scan to Memory */
+	VKEY_VOLUME,
+//	VKEY_STARTPRINTROMLIST,
+	VKEY_PLAYMSG_REMOTE,	/* Tam remote commands */
+	VKEY_ERASEMSG_REMOTE,
+	VKEY_PLAYOGM_REMOTE,
+	VKEY_RECORDOGM_REMOTE,
+	VKEY_STARTPRINTFAXLOG,	/* Print fax log */
+	VKEY_PRINTTXLOG,		/* Print the transmit verification log */
+	VKEY_PRINTERRORLOG,		/* Print log when error in last job */
+	VKEY_PRINTBROADCASTLOG,	/* Print the broadcast log */
+	VKEY_PRINTRXPOLLINGLOG,	/* Print the receive by polling log */
+	VKEY_PRINTREPORT,		/* Print various reports */
+	VKEY_PRINTCOVERPAGE,	/* Print various cover pages */
+    VKEY_PAGER_REQUEST,		/* Request paging */
+    VKEY_PAGER_TERMINATE,
+	VKEY_DEVICE_REQUEST,		/* Request PC to do an action */
+#ifdef INTERNET_FAX
+	CM_IFAX_ABORT_ERROR,		/* stopping IFAX because of error */
+	CM_IFAX_RETRY_ERROR,		/* IFAX will retry because of error */
+#endif
+};
+
+/* tmp defines for old CM error messages */
+#define CM_PEDOUTOFPAPER 	CM_PRTMGR_ERR_PAPER_OUT
+#define CM_PEDPAPERJAM		CM_PRTMGR_ERR_PAPER_JAM
+#define CM_PEDCOVEROPEN		CM_PRTMGR_ERR_COVER_OPEN
+
+typedef enum msgs CNTLMSG;
+typedef UINT8	PID;
+typedef ERCODE (*MSGFNPTR)(CNTLMSG msg, UINT8 param);
+typedef ERCODE (*ATTRIBFNPTR)(UINT8, ATTRIB, UINT8 *);
+
+typedef struct {
+  	CNTLMSG	message;
+  	UINT8	param;
+}CMSG;
+
+ERCODE CntlActivation(void *dym_dmda, int csf_ix, void *root_pntr, int pass);
+ERCODE CntlMessage(CNTLMSG message, UINT32 param);
+ERCODE CntlAttribute(UINT8 operation, ATTRIB attrib_id, UINT8 *attrib);
+ERCODE CntlOpRequest(OP operation);
+ERCODE CntlOpActive(OP operation);
+ERCODE CntlProcActive(UINT8 proc);
+ERCODE CntlIdleQuery(void);
+ERCODE CntlOpQuery(OP operation);
+ERCODE CntlGetFirstProc(UINT8 *proc);
+ERCODE CntlGetSecondProc(UINT8 *proc);
+
+MSGFNPTR CntlGetMessageFunction(void);
+
+ERCODE CntlNvramWrite(UINT32 parnum, UINT8 *attrib);
+ERCODE CntlNvramWriteString(UINT32 parnum, UINT8 *attrib);
+ERCODE CntlNvramRead(UINT32 parnum, UINT8 *attrib);
+ERCODE CntlNvramReadString(UINT32 parnum, UINT8 *attrib);
+
+ERCODE CntlNvramWrite16(UINT32 parnum, const UINT16 *attrib);
+ERCODE CntlNvramRead16(UINT32 parnum, UINT16 *attrib);
+
+/*=====================================================================
+*/
+
+typedef enum{
+
+	CPA_DOCCOPYSTATUS= CPA,
+	CPA_DOCPRINTSTATUS,
+	CPA_DOCSCANSTATUS,
+	CPA_FAXSTATUS,
+	CPA_HSTPRTSTATUS,
+	CPA_HSTSCANSTATUS,
+	CPA_PCFAXSTATUS,
+	CPA_PHONESTATUS,
+	CPA_TAMSTATUS,
+	CPA_PAGERSTATUS,
+
+
+   /* FAX INITIAL USER SETUP */
+
+	CPA_FAX_LOCALID,
+	CPA_FAX_REMOTEID,
+	CPA_FAX_PAGENO,
+	CPA_FAX_HEADER,
+	CPA_FAX_INTERNATIONAL,
+	CPA_DELAYED_TX_TIME,
+	CPA_FIRST_REPORT_TIME,
+	CPA_REPORT_DAY,
+	CPA_REPORT_INTERVAL,
+	CPA_PRINT_TX_REPORT,
+	CPA_FAX_LASTTXLOG,
+	CPA_FAX_FORWARD,
+	CPA_FAX_FORWARD_NO,
+	CPA_FAX_BACKUP_PRINT,
+	CPA_SCHEDULE,
+	CPA_PHONE_VOICENUM,
+
+
+   /* FAX OEM SETUP */
+
+	CPA_FAX_T1TIMEOUT,
+	CPA_FAX_T5TIMEOUT,
+	CPA_FAX_CEDDETECT_TIMEOUT,
+	CPA_FAX_IGNOREMMR,
+	CPA_FAX_IGNOREMR,
+	CPA_FAX_IGNOREECM,
+	CPA_FAX_ECMMODE,
+	CPA_FAX_FALLBACK_NOOFTRIES,
+	CPA_FAX_TCFERRORS,
+	CPA_FAX_EQUALIZER,
+	CPA_FAX_RXMAXGAIN,
+	CPA_FAX_ATTENUATION,
+
+
+   /* FAX PRINTING */
+
+	CPA_FAX_AUTOREDUCTION,
+	CPA_FAX_SCALEFACTOR,
+	CPA_PRINT_PAPERSIZE,    // AFFECTS COPY TOO
+   CPA_PRINT_PAPERTYPE,    // AFFECTS COPY TOO
+   CPA_PRINT_QUALITY,
+
+
+   /* FAX SCANNING */
+
+	CPA_FAX_REALTIME_TX,
+	CPA_FAX_RESOLUTION,
+	CPA_FAX_IMAGING,
+	CPA_SCAN_CONTRAST,      // AFFECTS COPY TOO
+	CPA_SCAN_INTENT,        // AFFECTS COPY TOO
+
+
+   /* TELEPHONE DIALING */
+
+	CPA_DIALMODE,
+	CPA_BLINDDIAL,
+	CPA_DIAL_DIGIT,
+	CPA_DIAL_PAUSE_TIME,
+	CPA_SPEEDDIAL,
+
+
+   /* TELEPHONE ANSWERING */
+
+	CPA_ANSWERMODE,
+	CPA_RINGANSWER,
+	CPA_DISTINCT_RING,
+	CPA_DISTINCT_RING_PATTERN,
+	CPA_DETECTED_CALLER_ID,
+
+
+   /* ANSWERING MACHINE */
+
+	CPA_TAM_RECORD_TIME,
+	CPA_TAM_TOTALICM,
+	CPA_TAM_ICMPLAYING,
+	CPA_TAM_TIMESTAMP,
+	CPA_TAM_VOICEMSGLIMIT,
+	CPA_TAM_ICMMONITOR,
+	CPA_TAM_ICMPRESENT,
+	CPA_TAM_CALLERID,
+	CPA_TAM_OGMPRESENT,
+	CPA_TAM_ATTENUATION,
+
+
+   /* COPY */ 
+
+	CPA_COPY_RESOLUTION,
+	CPA_COPY_IMAGING,
+	CPA_COPY_AUTOREDUCTION,
+	CPA_COPY_SCALEFACTOR,
+	CPA_COPY_COPIES,
+	CPA_COPY_COLLATE,
+	CPA_COPY_REVERSEORDER,
+	CPA_COPY_CURRENT_COPY,
+	CPA_COPY_PRINT_PAGENO,
+	CPA_COPY_SCAN_PAGENO,
+
+
+   /* INK MANAGEMENT */
+
+   CPA_ALIGNA_HOR_CMYK,
+   CPA_ALIGNB_VER_CMYK,
+   CPA_ALIGNC_BLACK_BIDI,
+   CPA_ALIGND_COLOR_BIDI,
+   CPA_ALIGNE_HOR_CMYKCM,
+   CPA_ALIGNF_VER_CMYKCM,
+#ifdef CCV_VX_PARIS
+   CPA_ALIGNE_LQ_BLACK_BIDI,
+   CPA_ALIGNF_LQ_COLOR_BIDI,
+#endif // CCV_VX_PARIS
+   CPA_ALIGNA_MAX_VALUE,
+   CPA_ALIGNB_MAX_VALUE,
+   CPA_ALIGNC_MAX_VALUE,
+   CPA_ALIGND_MAX_VALUE,
+   CPA_ALIGNE_MAX_VALUE,
+   CPA_ALIGNF_MAX_VALUE,
+	CPA_LEFTCART_COMMAND,
+	CPA_RIGHTCART_COMMAND,
+	CPA_LEFTCART_TYPE,
+	CPA_RIGHTCART_TYPE,
+	CPA_BLACKCART_INSTALLCOUNT,
+	CPA_COLORCART_INSTALLCOUNT,
+	CPA_LEFTINKLOW,
+	CPA_RIGHTINKLOW,
+	CPA_DOT_COUNT_CYAN,
+	CPA_DOT_COUNT_MAGENTA,
+	CPA_DOT_COUNT_YELLOW,
+	CPA_DOT_COUNT_BLACK,
+	CPA_DOT_COUNT_PHOTO_CYAN,
+	CPA_DOT_COUNT_PHOTO_MAGENTA,
+	CPA_DOT_COUNT_PHOTO_BLACK,
+	CPA_DOT_CAPACITY_BLACK,
+	CPA_DOT_CAPACITY_COLORS,
+	CPA_DOT_CAPACITY_PHOTO,
+	CPA_DOT_LOW_BLACK,
+	CPA_DOT_LOW_COLORS,
+	CPA_DOT_LOW_PHOTO,
+	CPA_DOT_EMPTY_BLACK,
+	CPA_DOT_EMPTY_COLORS,
+	CPA_DOT_EMPTY_PHOTO,
+
+
+   /* PC OPERATIONS */
+
+	CPA_MS_READY_BIT,
+	CPA_MS_LCD_UPDATED,
+	CPA_SC_PAPER_END,
+	CPA_SC_PAPER_JAM,
+	CPA_SC_LAMP_ERROR,
+
+	CPA_LCD_PANEL_SIZE,           // LCD INFO FOR OLD STATUS MONITOR
+	CPA_LCD_CHAR_SET_SIZE,
+	CPA_LCD_BITMAPS,
+	CPA_LCD_LANGUAGE,
+	CPA_LCD_ASCII_OFFSET,
+
+	CPA_SPEEDDIAL_NAME_LENGTH,    // SPEEDDIAL INFO FOR REMOTE CONTROL PANEL
+	CPA_SPEEDDIAL_DIAL_LENGTH,
+	CPA_SPEEDDIAL_ENTRIES,
+	CPA_ONE_TOUCH_ENTRIES,
+	CPA_GROUP_ENTRIES,
+	CPA_GROUP_ENTRIES_BASE_INDEX,
+	CPA_SD_PC_BASE,
+	CPA_OTD_PC_BASE,
+
+	CPA_HSA_RES_CONVERSION,       // PC SCANNING PARAMETERS
+	CPA_HSA_RAW_CAPTURE,
+	CPA_HSA_MODE,
+	CPA_HSA_IMG_PARAMS,
+	CPA_HSA_FRAME,
+	CPA_HSA_PAGENO,
+	CPA_HSA_SENT_FRESHDATA,
+
+   CPA_PC_INTERFACE,             // SELECT 1284/USB
+
+
+   /* GENERAL */
+
+	CPA_DOCINSERTED,              // SCANNER STUFF
+	CPA_ADF_PRESENT,
+
+	CPA_CURRENT_TIME,             // REALTIME CLOCK INFO
+	CPA_RTC_BASEYEAR,
+
+   CPA_SEQUENCER_DISABLE,        // DISABLE FAX PRINTING
+
+	CPA_BEEPER_VOLUME,            // VARIOUS SOUND LEVEL CONTROLS
+	CPA_RINGER_VOLUME,
+	CPA_SPEAKER_VOLUME,
+	CPA_HANDSET_VOLUME,
+
+	CPA_MFP_VERSION,              // Current firmware version
+	CPA_SERIAL_NUMBER,
+
+
+
+/* THE FOLLOWING ATTRIBUTES SUPPORT FEATURES THAT HAVE BEEN SUPPORTED
+   ON EITHER THE MFC1000 OR MFC2000 AT SOME TIME IN THE PAST, BUT ARE
+   NOT SUPPORTED IN THE CURRENT VERSION OF THE MFC2000.  THEY MAY BE
+   SUPPORTED AGAIN AT SOME POINT IN THE FUTURE, AND/OR THEY ARE SPREAD
+   TOO WIDELY THROUGH THE SYSTEM TO MAKE THEIR REMOVAL PRACTICAL */
+
+
+   /* FAX COVERPAGE SETUP */
+
+	CPA_COVERPAGE,
+	CPA_COVERPAGE_MSG,
+	CPA_CVRPG_USERMSG_0,
+	CPA_CVRPG_USERMSG_1,
+
+
+   /* VOICE AND FAX STORAGE (FROM 7050C MESSAGE CENTER) */
+
+	CPA_FAX_STORAGE,
+	CPA_MC_VOICE,
+	CPA_FAX_PAGING,
+	CPA_VOICE_PAGING,
+	CPA_PAGING_NO,
+	CPA_PAGING_PIN,
+
+
+   /* DTMF REMOTE CONTROL (FROM 7050C MESSAGE CENTER) */
+
+	CPA_REMOCONSTATUS,
+	CPA_RC_ACCESSCODE,
+	CPA_RC_ACTIVATE,
+	CPA_RC_ACTIVATECODE,
+	CPA_RC_ACTIVATE_ENABLE,
+	CPA_RC_DEACTIVATE,
+	CPA_RC_DEACTIVATECODE,
+	CPA_RC_REMOTECONTROL,
+	CPA_RC_REMOTEMAINTENANCE,
+	CPA_RC_FACTORYMAINTENANCE,
+	CPA_RC_TASKSTATUS,
+	CPA_RC_DTMF_PATHTHROUGH,
+	CPA_RC_DTMF_DATA,
+
+
+   /* GRS MEMORY AVAILABLE (FROM MFC1000 / WINEXPRESS) */
+
+   CPA_GRS_MEM_AVAIL,
+
+
+} CONTROL_ATTRIB;
+
+/* values for CPA_PC_INTERFACE */
+#define PC_IFC_1284  0
+#define PC_IFC_USB   1
+
+#endif  /* _CONTROLX_H_  */

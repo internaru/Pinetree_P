@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# Upload necessary files to remote firmware.
+# davep 07-Aug-2012
+
+usage() {
+    echo "uploadscan - utility script to scp scan code to embedded linux"
+    echo "usage: ./uploadscan ipaddress_of_firmware"
+}
+
+if [ $# -ne 1 ] ; then
+    usage
+    exit 1
+fi
+IP=$1 
+
+SCCP_KERNEL_MOD=${PRJROOT}/linux-mrvl/arch/arm/mach-gogin/sccp.ko
+echo $SCCP_KERNEL_MOD
+if [ ! -f $SCCP_KERNEL_MOD ] ; 
+then 
+    echo sccp kernel module $SCCP_KERNEL_MOD not found. 
+    exit 1
+fi
+
+SCCP_CODE=./afe/afe_wolfson.sccp
+
+KMODULES="kscantask.ko kscanman.ko qsort.ko scansb.ko"
+APPS="../../../../../common/scan/lsp/apps/mkdevscan ../../../../../common/scan/lsp/apps/runscan ../../../../../common/scan/lsp/apps/scancmd"
+
+FILES="${KMODULES} loadscan ${APPS} $SCCP_CODE $SCCP_KERNEL_MOD"
+
+echo scp ${FILES} root@${IP}:/tmp/.
+scp ${FILES} root@${IP}:/tmp/.
+

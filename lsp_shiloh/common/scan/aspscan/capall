@@ -1,0 +1,58 @@
+#!/bin/sh
+
+# Listen for incoming pipetap (formerly scan-to-net) data, write each
+# individual connection to own file.
+#
+# Requires netcat.
+#
+# No attemp is made to convert the incoming data to a viewable image. No
+# attempt is made to comprehend the incoming raw image (width x height can only
+# be infered by reading the firmware serial log).  See also autoconv.py
+#
+# TODO - add multi-socket (i.e., planar) data support (50210, 50212, 50214)
+#
+# davep 24-Apr-2009 
+
+#set -x
+
+# default port, default filename
+PORT=50210
+FILENAME=out.gray
+
+while getopts "p:o:" opt; do
+    case $opt in
+        p)
+            echo "port ${OPTARG} ${OPTIND} ${opt}"
+            PORT=${OPTARG}
+            ;;
+        o)
+            FILENAME=${OPTARG}
+            echo "output file ${FILENAME}"
+            ;;
+        \?)
+            exit 1
+            ;;
+    esac
+done
+
+#http://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash
+filename=$(basename ${FILENAME})
+extension=${filename##*.}
+filename=${filename%.*}
+
+count=0
+while : ; do
+    outfilename=${filename}_${count}.${extension}
+    nc -l ${PORT} > ${outfilename}
+    if [ $? -ne 0 ] ; then
+        echo "nc failed" 
+        break
+    fi
+
+    echo file ${outfilename} closed
+
+    python depipetap.py ${outfilename}
+
+    count=$(($count+1))
+done
+

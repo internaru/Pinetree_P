@@ -1,0 +1,24 @@
+<!--#ssi INCLUDE /midas-header.xml -->
+<!-- 
+
+functions/photo-print.xml
+
+MIDAS Functions Photo Print file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+  <functions>
+<!--#ssi INCLUDE /functions/photo-print-content.xml -->
+  </functions>
+<!--#ssi INCLUDE /midas-footer.xml -->

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"
+ xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:wsa="http://tempuri.org/wsa.xsd"
+ xmlns:wdp="http://tempuri.org/wdp.xsd"
+ xmlns:wse="http://tempuri.org/wse.xsd"
+ xmlns:xop="http://www.w3.org/2004/08/xop/include"
+ xmlns:wprt="http://schemas.microsoft.com/windows/2006/08/wdp/print">
+ <SOAP-ENV:Body>
+   <wprt:PrinterElementsChangeEvent>
+    <ElementChanges>
+     <PrinterDescription>
+      <ColorSupported></ColorSupported>
+      <DeviceId></DeviceId>
+      <MultipleDocumentJobsSupported></MultipleDocumentJobsSupported>
+      <PagesPerMinute></PagesPerMinute>
+      <PagesPerMinuteColor></PagesPerMinuteColor>
+      <PrinterName></PrinterName>
+      <PrinterInfo></PrinterInfo>
+      <PrinterLocation></PrinterLocation>
+     </PrinterDescription>
+     <PrinterConfiguration>
+      <PrinterEventRate></PrinterEventRate>
+      <Storage>
+       <StorageEntry Name="" Removed="">
+        <Type></Type>
+        <Size></Size>
+        <Free></Free>
+       </StorageEntry>
+      </Storage>
+      <Consumables>
+       <ConsumableEntry Name="" Removed="">
+        <Type></Type>
+        <Color></Color>
+        <Level></Level>
+        <Model></Model>
+       </ConsumableEntry>
+      </Consumables>
+      <InputBins>
+       <InputBinEntry Name="" Removed="">
+        <FeedDirection></FeedDirection>
+        <MediaSize></MediaSize>
+        <MediaType></MediaType>
+        <MediaColor></MediaColor>
+        <Capacity></Capacity>
+        <Level></Level>
+       </InputBinEntry>
+      </InputBins>
+      <Finishings>
+       <CollationSupported></CollationSupported>
+       <JogOffsetSupported></JogOffsetSupported>
+       <DuplexerInstalled></DuplexerInstalled>
+       <StaplerInstalled></StaplerInstalled>
+       <HolePunchInstalled></HolePunchInstalled>
+      </Finishings>
+      <OutputBins>
+       <OutputBinEntry Name="" Removed="">
+        <Capacity></Capacity>
+        <Level></Level>
+       </OutputBinEntry>
+      </OutputBins>
+     </PrinterConfiguration>
+     <DefaultPrintTicket>
+      <JobDescription>
+       <JobName></JobName>
+       <JobOriginatingUserName></JobOriginatingUserName>
+      </JobDescription>
+      <JobProcessing>
+       <Copies MustHonor=""></Copies>
+       <JobFinishings>
+        <Collate MustHonor=""></Collate>
+        <JogOffset MustHonor=""></JogOffset>
+        <Staple>
+         <Location MustHonor=""></Location>
+         <Angle MustHonor=""></Angle>
+        </Staple>
+        <HolePunch MustHonor="">
+         <Edge></Edge>
+         <Pattern></Pattern>
+        </HolePunch>
+       </JobFinishings>
+       <Priority MustHonor=""></Priority>
+      </JobProcessing>
+      <DocumentProcessing>
+       <MediaSizeName MustHonor=""></MediaSizeName>
+       <MediaType MustHonor=""></MediaType>
+       <MediaColor MustHonor=""></MediaColor>
+       <NumberUp>
+        <PagesPerSheet MustHonor=""></PagesPerSheet>
+        <Direction MustHonor=""></Direction>
+       </NumberUp>
+       <Orientation MustHonor=""></Orientation>
+       <Resolution MustHonor="">
+        <Width></Width>
+        <Height></Height>
+       </Resolution>
+       <PrintQuality MustHonor=""></PrintQuality>
+       <Sides MustHonor=""></Sides>
+      </DocumentProcessing>
+     </DefaultPrintTicket>
+     <PrinterCapabilities>
+      <JobValues>
+       <JobProcessing>
+        <Copies>
+         <MinValue></MinValue>
+         <MaxValue></MaxValue>
+        </Copies>
+        <JobFinishings>
+         <Staple>
+          <Location xsi:nil="true"></Location>
+          <Angle xsi:nil="true"></Angle>
+         </Staple>
+         <HolePunch>
+          <Edge xsi:nil="true"></Edge>
+          <Pattern xsi:nil="true"></Pattern>
+         </HolePunch>
+        </JobFinishings>
+        <Priority>
+         <MinValue></MinValue>
+         <MaxValue></MaxValue>
+        </Priority>
+       </JobProcessing>
+       <DocumentProcessing>
+        <MediaSizeName>
+         <AllowedValue></AllowedValue>
+        </MediaSizeName>
+        <MediaType>
+         <AllowedValue></AllowedValue>
+        </MediaType>
+        <MediaColor>
+         <AllowedValue></AllowedValue>
+        </MediaColor>
+        <NumberUp>
+         <PagesPerSheet>
+          <AllowedValue xsi:nil="true"></AllowedValue>
+         </PagesPerSheet>
+         <Direction>
+          <AllowedValue xsi:nil="true"></AllowedValue>
+         </Direction>
+        </NumberUp>
+        <Orientation>
+         <AllowedValue></AllowedValue>
+        </Orientation>
+        <Resolution>
+         <AllowedValue>
+          <Width xsi:nil="true"></Width>
+          <Height xsi:nil="true"></Height>
+         </AllowedValue>
+        </Resolution>
+        <PrintQuality>
+         <AllowedValue></AllowedValue>
+        </PrintQuality>
+        <Sides>
+         <AllowedValue></AllowedValue>
+        </Sides>
+       </DocumentProcessing>
+      </JobValues>
+      <DocumentValues>
+       <DocumentDescription>
+        <Compression>
+         <AllowedValue></AllowedValue>
+        </Compression>
+        <Format>
+         <AllowedValue></AllowedValue>
+        </Format>
+       </DocumentDescription>
+      </DocumentValues>
+     </PrinterCapabilities>
+    </ElementChanges>
+   </wprt:PrinterElementsChangeEvent>
+
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

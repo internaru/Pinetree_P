@@ -1,0 +1,83 @@
+<!--COMMENT 
+
+supplies/marker-supply-content.xml
+
+MIDAS Supplies Marker-Supply Content file
+
+============================================================================
+(C) Copyright 2009-2010   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+    <markerSupply>
+      <supplyPosition><!--#ssi IDr OID_CONSUMABLE_SUPPLY_POSITION.COLOR_BLACK --></supplyPosition>
+      <supplyId>227005</supplyId>
+      <supplyModelName><!--#ssi IDr OID_CONSUMABLE_MODEL_NAME.COLOR_BLACK --></supplyModelName>
+      <supplySerialNumber><!--#ssi IDr OID_CONSUMABLE_SERIAL_NUMBER.COLOR_BLACK --></supplySerialNumber>
+      <supplyPartNumber><!--#ssi IDr OID_CONSUMABLE_PART_NUMBER.COLOR_BLACK --></supplyPartNumber>
+      <supplyInstallDate><!--#ssi IDr OID_CONSUMABLE_INSTALL_DATE.COLOR_BLACK --></supplyInstallDate>
+      <percentRemaining><!--#ssi IDr OID_CONSUMABLE_PERCENT_REMAINING.COLOR_BLACK --></percentRemaining>
+      <totalPagesPrinted><!--#ssi IDr OID_CONSUMABLE_TOTAL_PAGES_PRINTED.COLOR_BLACK --></totalPagesPrinted>
+      <pagesRemaining><!--#ssi IDr OID_CONSUMABLE_PAGES_REMAINING.COLOR_BLACK --></pagesRemaining>
+      <lowLevelIndicator><!--#ssi IDr OID_CONSUMABLE_LOW_LEVEL_INDICATOR.COLOR_BLACK --></lowLevelIndicator>
+      <supplyOutIndicator><!--#ssi IDr OID_CONSUMABLE_SUPPLY_OUT.COLOR_BLACK --></supplyOutIndicator>
+      <lastDateUsed><!--#ssi IDr OID_CONSUMABLE_LAST_DATE_USED.COLOR_BLACK --></lastDateUsed>
+      <totalMaintCycles><!--#ssi IDr OID_CONSUMABLE_TOTAL_MAINT_CYCLES.COLOR_BLACK --></totalMaintCycles>
+      <factoryData><!--#ssi IDr OID_CONSUMABLE_FACTORY_DATA.COLOR_BLACK --></factoryData>
+    </markerSupply>
+    <markerSupply>
+      <supplyPosition><!--#ssi IDr OID_CONSUMABLE_SUPPLY_POSITION.COLOR_MAGENTA --></supplyPosition>
+      <supplyId>227004</supplyId>
+      <supplyModelName><!--#ssi IDr OID_CONSUMABLE_MODEL_NAME.COLOR_MAGENTA --></supplyModelName>
+      <supplySerialNumber><!--#ssi IDr OID_CONSUMABLE_SERIAL_NUMBER.COLOR_MAGENTA --></supplySerialNumber>
+      <supplyPartNumber><!--#ssi IDr OID_CONSUMABLE_PART_NUMBER.COLOR_MAGENTA --></supplyPartNumber>
+      <supplyInstallDate><!--#ssi IDr OID_CONSUMABLE_INSTALL_DATE.COLOR_MAGENTA --></supplyInstallDate>
+      <percentRemaining><!--#ssi IDr OID_CONSUMABLE_PERCENT_REMAINING.COLOR_MAGENTA --></percentRemaining>
+      <totalPagesPrinted><!--#ssi IDr OID_CONSUMABLE_TOTAL_PAGES_PRINTED.COLOR_MAGENTA --></totalPagesPrinted>
+      <pagesRemaining><!--#ssi IDr OID_CONSUMABLE_PAGES_REMAINING.COLOR_MAGENTA --></pagesRemaining>
+      <lowLevelIndicator><!--#ssi IDr OID_CONSUMABLE_LOW_LEVEL_INDICATOR.COLOR_MAGENTA --></lowLevelIndicator>
+      <supplyOutIndicator><!--#ssi IDr OID_CONSUMABLE_SUPPLY_OUT.COLOR_MAGENTA --></supplyOutIndicator>
+      <lastDateUsed><!--#ssi IDr OID_CONSUMABLE_LAST_DATE_USED.COLOR_MAGENTA --></lastDateUsed>
+      <totalMaintCycles><!--#ssi IDr OID_CONSUMABLE_TOTAL_MAINT_CYCLES.COLOR_MAGENTA --></totalMaintCycles>
+      <factoryData><!--#ssi IDr OID_CONSUMABLE_FACTORY_DATA.COLOR_MAGENTA --></factoryData>
+    </markerSupply>
+    <markerSupply>
+      <supplyPosition><!--#ssi IDr OID_CONSUMABLE_SUPPLY_POSITION.COLOR_YELLOW --></supplyPosition>
+      <supplyId>227003</supplyId>
+      <supplyModelName><!--#ssi IDr OID_CONSUMABLE_MODEL_NAME.COLOR_YELLOW --></supplyModelName>
+      <supplySerialNumber><!--#ssi IDr OID_CONSUMABLE_SERIAL_NUMBER.COLOR_YELLOW --></supplySerialNumber>
+      <supplyPartNumber><!--#ssi IDr OID_CONSUMABLE_PART_NUMBER.COLOR_YELLOW --></supplyPartNumber>
+      <supplyInstallDate><!--#ssi IDr OID_CONSUMABLE_INSTALL_DATE.COLOR_YELLOW --></supplyInstallDate>
+      <percentRemaining><!--#ssi IDr OID_CONSUMABLE_PERCENT_REMAINING.COLOR_YELLOW --></percentRemaining>
+      <totalPagesPrinted><!--#ssi IDr OID_CONSUMABLE_TOTAL_PAGES_PRINTED.COLOR_YELLOW --></totalPagesPrinted>
+      <pagesRemaining><!--#ssi IDr OID_CONSUMABLE_PAGES_REMAINING.COLOR_YELLOW --></pagesRemaining>
+      <lowLevelIndicator><!--#ssi IDr OID_CONSUMABLE_LOW_LEVEL_INDICATOR.COLOR_YELLOW --></lowLevelIndicator>
+      <supplyOutIndicator><!--#ssi IDr OID_CONSUMABLE_SUPPLY_OUT.COLOR_YELLOW --></supplyOutIndicator>
+      <lastDateUsed><!--#ssi IDr OID_CONSUMABLE_LAST_DATE_USED.COLOR_YELLOW --></lastDateUsed>
+      <totalMaintCycles><!--#ssi IDr OID_CONSUMABLE_TOTAL_MAINT_CYCLES.COLOR_YELLOW --></totalMaintCycles>
+      <factoryData><!--#ssi IDr OID_CONSUMABLE_FACTORY_DATA.COLOR_YELLOW --></factoryData>
+    </markerSupply>
+    <markerSupply>
+      <supplyPosition><!--#ssi IDr OID_CONSUMABLE_SUPPLY_POSITION.COLOR_CYAN --></supplyPosition>
+      <supplyId>227002</supplyId>
+      <supplyModelName><!--#ssi IDr OID_CONSUMABLE_MODEL_NAME.COLOR_CYAN --></supplyModelName>
+      <supplySerialNumber><!--#ssi IDr OID_CONSUMABLE_SERIAL_NUMBER.COLOR_CYAN --></supplySerialNumber>
+      <supplyPartNumber><!--#ssi IDr OID_CONSUMABLE_PART_NUMBER.COLOR_CYAN --></supplyPartNumber>
+      <supplyInstallDate><!--#ssi IDr OID_CONSUMABLE_INSTALL_DATE.COLOR_CYAN --></supplyInstallDate>
+      <percentRemaining><!--#ssi IDr OID_CONSUMABLE_PERCENT_REMAINING.COLOR_CYAN --></percentRemaining>
+      <totalPagesPrinted><!--#ssi IDr OID_CONSUMABLE_TOTAL_PAGES_PRINTED.COLOR_CYAN --></totalPagesPrinted>
+      <pagesRemaining><!--#ssi IDr OID_CONSUMABLE_PAGES_REMAINING.COLOR_CYAN --></pagesRemaining>
+      <lowLevelIndicator><!--#ssi IDr OID_CONSUMABLE_LOW_LEVEL_INDICATOR.COLOR_CYAN --></lowLevelIndicator>
+      <supplyOutIndicator><!--#ssi IDr OID_CONSUMABLE_SUPPLY_OUT.COLOR_CYAN --></supplyOutIndicator>
+      <lastDateUsed><!--#ssi IDr OID_CONSUMABLE_LAST_DATE_USED.COLOR_CYAN --></lastDateUsed>
+      <totalMaintCycles><!--#ssi IDr OID_CONSUMABLE_TOTAL_MAINT_CYCLES.COLOR_CYAN --></totalMaintCycles>
+      <factoryData><!--#ssi IDr OID_CONSUMABLE_FACTORY_DATA.COLOR_CYAN --></factoryData>
+    </markerSupply>    

@@ -1,0 +1,29 @@
+{
+<TMPL_LOOP name="errtotalloop">
+  <TMPL_IF name="ifvarname">
+  "new_page": true,
+  </TMPL_IF>  
+  "item_font_size": 9,
+  "outline": true,
+  "x": 100,
+  "y": 100,
+  "logo_image": true,
+  "main_title": "<TMPL_VAR name="tli_prefix">",
+  "y": 240,
+  "base_x": 280,
+<TMPL_IF name="nodata">
+  "item":[{"offset_x": 50, "data": "No Error Log Data"}],
+<TMPL_ELSE>
+<TMPL_LOOP NAME="errloop">
+  "item":[{"offset_x": 50, "data": "<TMPL_VAR name="error_no">,"},
+          {"offset_x": 250, "data": "[<TMPL_VAR name="error_desc">]"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "Error type"},
+          {"offset_x": <TMPL_VAR name="c2">, "data": ": <TMPL_VAR name="error_type">"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "Date"},
+          {"offset_x": <TMPL_VAR name="c2">, "data": ": <TMPL_VAR name="error_date">"}],
+</TMPL_LOOP>
+</TMPL_IF>
+  "page_datetime":"<TMPL_VAR name="datetime">",
+  "page_number" : "Error Log Report Page # <TMPL_VAR name="current_pcount">-<TMPL_VAR name="total_pcount">",
+</TMPL_LOOP>
+}

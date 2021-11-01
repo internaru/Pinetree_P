@@ -1,0 +1,24 @@
+<!--#ssi INCLUDE /midas-header.xml -->
+<!--COMMENT
+
+io-connections/wired-network.xml
+
+MIDAS IO Connections Wired Network file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+  <ioConnections>
+<!--#ssi INCLUDE /io-connections/wired-network-content.xml -->
+  </ioConnections>
+<!--#ssi INCLUDE /midas-footer.xml -->

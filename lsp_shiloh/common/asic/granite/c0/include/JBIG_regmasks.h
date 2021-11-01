@@ -1,0 +1,1955 @@
+ /*
+ **************************************************************************************
+ *
+ * Copyright (c) 2010 Marvell International, Ltd.
+ *
+ **************************************************************************************
+ *
+ * Marvell Commercial License Option
+ *
+ * If you received this File from Marvell as part of a proprietary software release,
+ * the File is considered Marvell Proprietary and Confidential Information, and is
+ * licensed to you under the terms of the applicable Commercial License.
+ *
+ **************************************************************************************
+ *
+ * Marvell GPL License Option
+ *
+ * If you received this File from Marvell as part of a Linux distribution, this File
+ * is licensed to you in accordance with the terms and conditions of the General Public
+ * License Version 2, June 1991 (the "GPL License").  You can redistribute it and/or
+ * modify it under the terms of the GPL License; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ * PARTICULAR PURPOSE.  See the GPL License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with this
+ * program.  If not, see http://www.gnu.org/licenses/.
+ *
+ **************************************************************************************
+ *
+ * \file JBIG_regmasks.h
+ * Generated using RegBuild 1.6.1
+ *
+ *************************************************************************
+ */
+
+#ifndef _JBIGTOP_REGMASKS_H_
+#define _JBIGTOP_REGMASKS_H_
+
+#include <stdint.h>
+
+//====================================================================
+//
+//Register File: JBIG Registers (JBIGTOP)
+/** \brief Register Description for CODEC CORE*/
+//
+//====================================================================
+
+//====================================================================
+//
+//Register File: JBIG Codec Registers (JBIG_CODEC)
+/** \brief Register Description for CODEC CORE*/
+//
+//====================================================================
+
+//====================================================================
+//Register: Codec JBIG Control Register (JCTL)
+/** \brief The Register sets the JBIG control parameters*/
+//====================================================================
+
+#define  JBIG_CODEC_JCTL_RESERVED1_MASK 0xfff00000
+#define  JBIG_CODEC_JCTL_RESERVED1_SHIFT 20
+#define  JBIG_CODEC_JCTL_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JCTL_RESERVED1_MASK) >> JBIG_CODEC_JCTL_RESERVED1_SHIFT)
+#define  JBIG_CODEC_JCTL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JCTL_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_JCTL_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_JCTL_NO_SOI_MASK 0x80000
+#define  JBIG_CODEC_JCTL_NO_SOI_SHIFT 19
+#define  JBIG_CODEC_JCTL_NO_SOI_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JCTL_NO_SOI_MASK) >> JBIG_CODEC_JCTL_NO_SOI_SHIFT)
+#define  JBIG_CODEC_JCTL_NO_SOI_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JCTL_NO_SOI_MASK) | (((uint32_t)val) << JBIG_CODEC_JCTL_NO_SOI_SHIFT))
+
+#define  JBIG_CODEC_JCTL_NO_EOI_MASK 0x40000
+#define  JBIG_CODEC_JCTL_NO_EOI_SHIFT 18
+#define  JBIG_CODEC_JCTL_NO_EOI_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JCTL_NO_EOI_MASK) >> JBIG_CODEC_JCTL_NO_EOI_SHIFT)
+#define  JBIG_CODEC_JCTL_NO_EOI_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JCTL_NO_EOI_MASK) | (((uint32_t)val) << JBIG_CODEC_JCTL_NO_EOI_SHIFT))
+
+#define  JBIG_CODEC_JCTL_BPP_MASK 0x30000
+#define  JBIG_CODEC_JCTL_BPP_SHIFT 16
+#define  JBIG_CODEC_JCTL_BPP_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JCTL_BPP_MASK) >> JBIG_CODEC_JCTL_BPP_SHIFT)
+#define  JBIG_CODEC_JCTL_BPP_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JCTL_BPP_MASK) | (((uint32_t)val) << JBIG_CODEC_JCTL_BPP_SHIFT))
+
+#define  JBIG_CODEC_JCTL_A_MASK 0x8000
+#define  JBIG_CODEC_JCTL_A_SHIFT 15
+#define  JBIG_CODEC_JCTL_A_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JCTL_A_MASK) >> JBIG_CODEC_JCTL_A_SHIFT)
+#define  JBIG_CODEC_JCTL_A_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JCTL_A_MASK) | (((uint32_t)val) << JBIG_CODEC_JCTL_A_SHIFT))
+
+#define  JBIG_CODEC_JCTL_L_MASK 0x4000
+#define  JBIG_CODEC_JCTL_L_SHIFT 14
+#define  JBIG_CODEC_JCTL_L_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JCTL_L_MASK) >> JBIG_CODEC_JCTL_L_SHIFT)
+#define  JBIG_CODEC_JCTL_L_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JCTL_L_MASK) | (((uint32_t)val) << JBIG_CODEC_JCTL_L_SHIFT))
+
+#define  JBIG_CODEC_JCTL_T_MASK 0x2000
+#define  JBIG_CODEC_JCTL_T_SHIFT 13
+#define  JBIG_CODEC_JCTL_T_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JCTL_T_MASK) >> JBIG_CODEC_JCTL_T_SHIFT)
+#define  JBIG_CODEC_JCTL_T_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JCTL_T_MASK) | (((uint32_t)val) << JBIG_CODEC_JCTL_T_SHIFT))
+
+#define  JBIG_CODEC_JCTL_BE_MASK 0x1000
+#define  JBIG_CODEC_JCTL_BE_SHIFT 12
+#define  JBIG_CODEC_JCTL_BE_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JCTL_BE_MASK) >> JBIG_CODEC_JCTL_BE_SHIFT)
+#define  JBIG_CODEC_JCTL_BE_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JCTL_BE_MASK) | (((uint32_t)val) << JBIG_CODEC_JCTL_BE_SHIFT))
+
+#define  JBIG_CODEC_JCTL_E_MASK 0x800
+#define  JBIG_CODEC_JCTL_E_SHIFT 11
+#define  JBIG_CODEC_JCTL_E_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JCTL_E_MASK) >> JBIG_CODEC_JCTL_E_SHIFT)
+#define  JBIG_CODEC_JCTL_E_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JCTL_E_MASK) | (((uint32_t)val) << JBIG_CODEC_JCTL_E_SHIFT))
+
+#define  JBIG_CODEC_JCTL_D_MASK 0x400
+#define  JBIG_CODEC_JCTL_D_SHIFT 10
+#define  JBIG_CODEC_JCTL_D_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JCTL_D_MASK) >> JBIG_CODEC_JCTL_D_SHIFT)
+#define  JBIG_CODEC_JCTL_D_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JCTL_D_MASK) | (((uint32_t)val) << JBIG_CODEC_JCTL_D_SHIFT))
+
+#define  JBIG_CODEC_JCTL_B_MASK 0x200
+#define  JBIG_CODEC_JCTL_B_SHIFT 9
+#define  JBIG_CODEC_JCTL_B_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JCTL_B_MASK) >> JBIG_CODEC_JCTL_B_SHIFT)
+#define  JBIG_CODEC_JCTL_B_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JCTL_B_MASK) | (((uint32_t)val) << JBIG_CODEC_JCTL_B_SHIFT))
+
+#define  JBIG_CODEC_JCTL_C_MASK 0x100
+#define  JBIG_CODEC_JCTL_C_SHIFT 8
+#define  JBIG_CODEC_JCTL_C_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JCTL_C_MASK) >> JBIG_CODEC_JCTL_C_SHIFT)
+#define  JBIG_CODEC_JCTL_C_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JCTL_C_MASK) | (((uint32_t)val) << JBIG_CODEC_JCTL_C_SHIFT))
+
+#define  JBIG_CODEC_JCTL_R_MASK 0x80
+#define  JBIG_CODEC_JCTL_R_SHIFT 7
+#define  JBIG_CODEC_JCTL_R_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JCTL_R_MASK) >> JBIG_CODEC_JCTL_R_SHIFT)
+#define  JBIG_CODEC_JCTL_R_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JCTL_R_MASK) | (((uint32_t)val) << JBIG_CODEC_JCTL_R_SHIFT))
+
+#define  JBIG_CODEC_JCTL_M_MASK 0x7f
+#define  JBIG_CODEC_JCTL_M_SHIFT 0
+#define  JBIG_CODEC_JCTL_M_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JCTL_M_MASK) >> JBIG_CODEC_JCTL_M_SHIFT)
+#define  JBIG_CODEC_JCTL_M_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JCTL_M_MASK) | (((uint32_t)val) << JBIG_CODEC_JCTL_M_SHIFT))
+
+//====================================================================
+//Register: Codec JBIG Status Register (JSTAT)
+/** \brief The Register Reflects the status of the JBIG codec*/
+//====================================================================
+
+#define  JBIG_CODEC_JSTAT_RESERVED1_MASK 0xfc000000
+#define  JBIG_CODEC_JSTAT_RESERVED1_SHIFT 26
+#define  JBIG_CODEC_JSTAT_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JSTAT_RESERVED1_MASK) >> JBIG_CODEC_JSTAT_RESERVED1_SHIFT)
+#define  JBIG_CODEC_JSTAT_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JSTAT_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_JSTAT_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_JSTAT_E_MASK 0x3ff0000
+#define  JBIG_CODEC_JSTAT_E_SHIFT 16
+#define  JBIG_CODEC_JSTAT_E_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JSTAT_E_MASK) >> JBIG_CODEC_JSTAT_E_SHIFT)
+#define  JBIG_CODEC_JSTAT_E_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JSTAT_E_MASK) | (((uint32_t)val) << JBIG_CODEC_JSTAT_E_SHIFT))
+
+#define  JBIG_CODEC_JSTAT_D_MASK 0x8000
+#define  JBIG_CODEC_JSTAT_D_SHIFT 15
+#define  JBIG_CODEC_JSTAT_D_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JSTAT_D_MASK) >> JBIG_CODEC_JSTAT_D_SHIFT)
+#define  JBIG_CODEC_JSTAT_D_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JSTAT_D_MASK) | (((uint32_t)val) << JBIG_CODEC_JSTAT_D_SHIFT))
+
+#define  JBIG_CODEC_JSTAT_I_MASK 0x6000
+#define  JBIG_CODEC_JSTAT_I_SHIFT 13
+#define  JBIG_CODEC_JSTAT_I_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JSTAT_I_MASK) >> JBIG_CODEC_JSTAT_I_SHIFT)
+#define  JBIG_CODEC_JSTAT_I_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JSTAT_I_MASK) | (((uint32_t)val) << JBIG_CODEC_JSTAT_I_SHIFT))
+
+#define  JBIG_CODEC_JSTAT_AR_MASK 0x1800
+#define  JBIG_CODEC_JSTAT_AR_SHIFT 11
+#define  JBIG_CODEC_JSTAT_AR_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JSTAT_AR_MASK) >> JBIG_CODEC_JSTAT_AR_SHIFT)
+#define  JBIG_CODEC_JSTAT_AR_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JSTAT_AR_MASK) | (((uint32_t)val) << JBIG_CODEC_JSTAT_AR_SHIFT))
+
+#define  JBIG_CODEC_JSTAT_RESERVED2_MASK 0x700
+#define  JBIG_CODEC_JSTAT_RESERVED2_SHIFT 8
+#define  JBIG_CODEC_JSTAT_RESERVED2_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JSTAT_RESERVED2_MASK) >> JBIG_CODEC_JSTAT_RESERVED2_SHIFT)
+#define  JBIG_CODEC_JSTAT_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JSTAT_RESERVED2_MASK) | (((uint32_t)val) << JBIG_CODEC_JSTAT_RESERVED2_SHIFT))
+
+#define  JBIG_CODEC_JSTAT_V_MASK 0xe0
+#define  JBIG_CODEC_JSTAT_V_SHIFT 5
+#define  JBIG_CODEC_JSTAT_V_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JSTAT_V_MASK) >> JBIG_CODEC_JSTAT_V_SHIFT)
+#define  JBIG_CODEC_JSTAT_V_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JSTAT_V_MASK) | (((uint32_t)val) << JBIG_CODEC_JSTAT_V_SHIFT))
+
+#define  JBIG_CODEC_JSTAT_ED_MASK 0x10
+#define  JBIG_CODEC_JSTAT_ED_SHIFT 4
+#define  JBIG_CODEC_JSTAT_ED_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JSTAT_ED_MASK) >> JBIG_CODEC_JSTAT_ED_SHIFT)
+#define  JBIG_CODEC_JSTAT_ED_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JSTAT_ED_MASK) | (((uint32_t)val) << JBIG_CODEC_JSTAT_ED_SHIFT))
+
+#define  JBIG_CODEC_JSTAT_DD_MASK 0x8
+#define  JBIG_CODEC_JSTAT_DD_SHIFT 3
+#define  JBIG_CODEC_JSTAT_DD_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JSTAT_DD_MASK) >> JBIG_CODEC_JSTAT_DD_SHIFT)
+#define  JBIG_CODEC_JSTAT_DD_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JSTAT_DD_MASK) | (((uint32_t)val) << JBIG_CODEC_JSTAT_DD_SHIFT))
+
+#define  JBIG_CODEC_JSTAT_RESERVED3_MASK 0x7
+#define  JBIG_CODEC_JSTAT_RESERVED3_SHIFT 0
+#define  JBIG_CODEC_JSTAT_RESERVED3_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JSTAT_RESERVED3_MASK) >> JBIG_CODEC_JSTAT_RESERVED3_SHIFT)
+#define  JBIG_CODEC_JSTAT_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JSTAT_RESERVED3_MASK) | (((uint32_t)val) << JBIG_CODEC_JSTAT_RESERVED3_SHIFT))
+
+//====================================================================
+//Register: Codec JBIG X-Dimension (Pixels/line) Register (JX)
+/** \brief The Register sets JX for the Image*/
+//====================================================================
+
+#define  JBIG_CODEC_JX_RESERVED1_MASK 0xffff0000
+#define  JBIG_CODEC_JX_RESERVED1_SHIFT 16
+#define  JBIG_CODEC_JX_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JX_RESERVED1_MASK) >> JBIG_CODEC_JX_RESERVED1_SHIFT)
+#define  JBIG_CODEC_JX_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JX_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_JX_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_JX_P_MASK 0xffff
+#define  JBIG_CODEC_JX_P_SHIFT 0
+#define  JBIG_CODEC_JX_P_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JX_P_MASK) >> JBIG_CODEC_JX_P_SHIFT)
+#define  JBIG_CODEC_JX_P_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JX_P_MASK) | (((uint32_t)val) << JBIG_CODEC_JX_P_SHIFT))
+
+//====================================================================
+//Register: Codec JBIG Y-Dimension (Lines/page) Register (JY)
+/** \brief This Register sets JY for the Image*/
+//====================================================================
+
+#define  JBIG_CODEC_JY_RESERVED1_MASK 0xffff0000
+#define  JBIG_CODEC_JY_RESERVED1_SHIFT 16
+#define  JBIG_CODEC_JY_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JY_RESERVED1_MASK) >> JBIG_CODEC_JY_RESERVED1_SHIFT)
+#define  JBIG_CODEC_JY_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JY_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_JY_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_JY_L_MASK 0xffff
+#define  JBIG_CODEC_JY_L_SHIFT 0
+#define  JBIG_CODEC_JY_L_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JY_L_MASK) >> JBIG_CODEC_JY_L_SHIFT)
+#define  JBIG_CODEC_JY_L_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JY_L_MASK) | (((uint32_t)val) << JBIG_CODEC_JY_L_SHIFT))
+
+//====================================================================
+//Register: Codec JBIG Enable Register (JBIG_EN)
+/** \brief The Register is used for enabling/sof resetting the core*/
+//====================================================================
+
+#define  JBIG_CODEC_JBIG_EN_RESERVED1_MASK 0xffff0000
+#define  JBIG_CODEC_JBIG_EN_RESERVED1_SHIFT 16
+#define  JBIG_CODEC_JBIG_EN_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JBIG_EN_RESERVED1_MASK) >> JBIG_CODEC_JBIG_EN_RESERVED1_SHIFT)
+#define  JBIG_CODEC_JBIG_EN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JBIG_EN_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_JBIG_EN_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_JBIG_EN_S_MASK 0x8000
+#define  JBIG_CODEC_JBIG_EN_S_SHIFT 15
+#define  JBIG_CODEC_JBIG_EN_S_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JBIG_EN_S_MASK) >> JBIG_CODEC_JBIG_EN_S_SHIFT)
+#define  JBIG_CODEC_JBIG_EN_S_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JBIG_EN_S_MASK) | (((uint32_t)val) << JBIG_CODEC_JBIG_EN_S_SHIFT))
+
+#define  JBIG_CODEC_JBIG_EN_RESERVED2_MASK 0x7ffe
+#define  JBIG_CODEC_JBIG_EN_RESERVED2_SHIFT 1
+#define  JBIG_CODEC_JBIG_EN_RESERVED2_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JBIG_EN_RESERVED2_MASK) >> JBIG_CODEC_JBIG_EN_RESERVED2_SHIFT)
+#define  JBIG_CODEC_JBIG_EN_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JBIG_EN_RESERVED2_MASK) | (((uint32_t)val) << JBIG_CODEC_JBIG_EN_RESERVED2_SHIFT))
+
+#define  JBIG_CODEC_JBIG_EN_E_MASK 0x1
+#define  JBIG_CODEC_JBIG_EN_E_SHIFT 0
+#define  JBIG_CODEC_JBIG_EN_E_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JBIG_EN_E_MASK) >> JBIG_CODEC_JBIG_EN_E_SHIFT)
+#define  JBIG_CODEC_JBIG_EN_E_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JBIG_EN_E_MASK) | (((uint32_t)val) << JBIG_CODEC_JBIG_EN_E_SHIFT))
+
+//====================================================================
+//Register: Codec JBIG Stripe Length Register (JSL)
+/** \brief This Register sets lines/stripe for the image*/
+//====================================================================
+
+#define  JBIG_CODEC_JSL_RESERVED1_MASK 0xffff0000
+#define  JBIG_CODEC_JSL_RESERVED1_SHIFT 16
+#define  JBIG_CODEC_JSL_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JSL_RESERVED1_MASK) >> JBIG_CODEC_JSL_RESERVED1_SHIFT)
+#define  JBIG_CODEC_JSL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JSL_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_JSL_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_JSL_S_MASK 0xffff
+#define  JBIG_CODEC_JSL_S_SHIFT 0
+#define  JBIG_CODEC_JSL_S_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_JSL_S_MASK) >> JBIG_CODEC_JSL_S_SHIFT)
+#define  JBIG_CODEC_JSL_S_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_JSL_S_MASK) | (((uint32_t)val) << JBIG_CODEC_JSL_S_SHIFT))
+
+//====================================================================
+//
+//Register File: JBIG Decode Registers (JBIG_DECODE)
+/** \brief Register Description for CODEC CORE*/
+//
+//====================================================================
+
+//====================================================================
+//Register: Codec JBIG Control Register (JCTL)
+/** \brief The Register sets the JBIG control parameters*/
+//====================================================================
+
+#define  JBIG_DECODE_JCTL_RESERVED1_MASK 0xfff00000
+#define  JBIG_DECODE_JCTL_RESERVED1_SHIFT 20
+#define  JBIG_DECODE_JCTL_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JCTL_RESERVED1_MASK) >> JBIG_DECODE_JCTL_RESERVED1_SHIFT)
+#define  JBIG_DECODE_JCTL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JCTL_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_JCTL_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_JCTL_NO_SOI_MASK 0x80000
+#define  JBIG_DECODE_JCTL_NO_SOI_SHIFT 19
+#define  JBIG_DECODE_JCTL_NO_SOI_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JCTL_NO_SOI_MASK) >> JBIG_DECODE_JCTL_NO_SOI_SHIFT)
+#define  JBIG_DECODE_JCTL_NO_SOI_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JCTL_NO_SOI_MASK) | (((uint32_t)val) << JBIG_DECODE_JCTL_NO_SOI_SHIFT))
+
+#define  JBIG_DECODE_JCTL_NO_EOI_MASK 0x40000
+#define  JBIG_DECODE_JCTL_NO_EOI_SHIFT 18
+#define  JBIG_DECODE_JCTL_NO_EOI_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JCTL_NO_EOI_MASK) >> JBIG_DECODE_JCTL_NO_EOI_SHIFT)
+#define  JBIG_DECODE_JCTL_NO_EOI_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JCTL_NO_EOI_MASK) | (((uint32_t)val) << JBIG_DECODE_JCTL_NO_EOI_SHIFT))
+
+#define  JBIG_DECODE_JCTL_BPP_MASK 0x30000
+#define  JBIG_DECODE_JCTL_BPP_SHIFT 16
+#define  JBIG_DECODE_JCTL_BPP_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JCTL_BPP_MASK) >> JBIG_DECODE_JCTL_BPP_SHIFT)
+#define  JBIG_DECODE_JCTL_BPP_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JCTL_BPP_MASK) | (((uint32_t)val) << JBIG_DECODE_JCTL_BPP_SHIFT))
+
+#define  JBIG_DECODE_JCTL_A_MASK 0x8000
+#define  JBIG_DECODE_JCTL_A_SHIFT 15
+#define  JBIG_DECODE_JCTL_A_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JCTL_A_MASK) >> JBIG_DECODE_JCTL_A_SHIFT)
+#define  JBIG_DECODE_JCTL_A_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JCTL_A_MASK) | (((uint32_t)val) << JBIG_DECODE_JCTL_A_SHIFT))
+
+#define  JBIG_DECODE_JCTL_L_MASK 0x4000
+#define  JBIG_DECODE_JCTL_L_SHIFT 14
+#define  JBIG_DECODE_JCTL_L_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JCTL_L_MASK) >> JBIG_DECODE_JCTL_L_SHIFT)
+#define  JBIG_DECODE_JCTL_L_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JCTL_L_MASK) | (((uint32_t)val) << JBIG_DECODE_JCTL_L_SHIFT))
+
+#define  JBIG_DECODE_JCTL_T_MASK 0x2000
+#define  JBIG_DECODE_JCTL_T_SHIFT 13
+#define  JBIG_DECODE_JCTL_T_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JCTL_T_MASK) >> JBIG_DECODE_JCTL_T_SHIFT)
+#define  JBIG_DECODE_JCTL_T_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JCTL_T_MASK) | (((uint32_t)val) << JBIG_DECODE_JCTL_T_SHIFT))
+
+#define  JBIG_DECODE_JCTL_BE_MASK 0x1000
+#define  JBIG_DECODE_JCTL_BE_SHIFT 12
+#define  JBIG_DECODE_JCTL_BE_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JCTL_BE_MASK) >> JBIG_DECODE_JCTL_BE_SHIFT)
+#define  JBIG_DECODE_JCTL_BE_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JCTL_BE_MASK) | (((uint32_t)val) << JBIG_DECODE_JCTL_BE_SHIFT))
+
+#define  JBIG_DECODE_JCTL_E_MASK 0x800
+#define  JBIG_DECODE_JCTL_E_SHIFT 11
+#define  JBIG_DECODE_JCTL_E_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JCTL_E_MASK) >> JBIG_DECODE_JCTL_E_SHIFT)
+#define  JBIG_DECODE_JCTL_E_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JCTL_E_MASK) | (((uint32_t)val) << JBIG_DECODE_JCTL_E_SHIFT))
+
+#define  JBIG_DECODE_JCTL_D_MASK 0x400
+#define  JBIG_DECODE_JCTL_D_SHIFT 10
+#define  JBIG_DECODE_JCTL_D_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JCTL_D_MASK) >> JBIG_DECODE_JCTL_D_SHIFT)
+#define  JBIG_DECODE_JCTL_D_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JCTL_D_MASK) | (((uint32_t)val) << JBIG_DECODE_JCTL_D_SHIFT))
+
+#define  JBIG_DECODE_JCTL_B_MASK 0x200
+#define  JBIG_DECODE_JCTL_B_SHIFT 9
+#define  JBIG_DECODE_JCTL_B_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JCTL_B_MASK) >> JBIG_DECODE_JCTL_B_SHIFT)
+#define  JBIG_DECODE_JCTL_B_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JCTL_B_MASK) | (((uint32_t)val) << JBIG_DECODE_JCTL_B_SHIFT))
+
+#define  JBIG_DECODE_JCTL_C_MASK 0x100
+#define  JBIG_DECODE_JCTL_C_SHIFT 8
+#define  JBIG_DECODE_JCTL_C_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JCTL_C_MASK) >> JBIG_DECODE_JCTL_C_SHIFT)
+#define  JBIG_DECODE_JCTL_C_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JCTL_C_MASK) | (((uint32_t)val) << JBIG_DECODE_JCTL_C_SHIFT))
+
+#define  JBIG_DECODE_JCTL_R_MASK 0x80
+#define  JBIG_DECODE_JCTL_R_SHIFT 7
+#define  JBIG_DECODE_JCTL_R_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JCTL_R_MASK) >> JBIG_DECODE_JCTL_R_SHIFT)
+#define  JBIG_DECODE_JCTL_R_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JCTL_R_MASK) | (((uint32_t)val) << JBIG_DECODE_JCTL_R_SHIFT))
+
+#define  JBIG_DECODE_JCTL_M_MASK 0x7f
+#define  JBIG_DECODE_JCTL_M_SHIFT 0
+#define  JBIG_DECODE_JCTL_M_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JCTL_M_MASK) >> JBIG_DECODE_JCTL_M_SHIFT)
+#define  JBIG_DECODE_JCTL_M_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JCTL_M_MASK) | (((uint32_t)val) << JBIG_DECODE_JCTL_M_SHIFT))
+
+//====================================================================
+//Register: Codec JBIG Status Register (JSTAT)
+/** \brief The Register Reflects the status of the JBIG codec*/
+//====================================================================
+
+#define  JBIG_DECODE_JSTAT_RESERVED1_MASK 0xfc000000
+#define  JBIG_DECODE_JSTAT_RESERVED1_SHIFT 26
+#define  JBIG_DECODE_JSTAT_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JSTAT_RESERVED1_MASK) >> JBIG_DECODE_JSTAT_RESERVED1_SHIFT)
+#define  JBIG_DECODE_JSTAT_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JSTAT_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_JSTAT_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_JSTAT_E_MASK 0x3ff0000
+#define  JBIG_DECODE_JSTAT_E_SHIFT 16
+#define  JBIG_DECODE_JSTAT_E_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JSTAT_E_MASK) >> JBIG_DECODE_JSTAT_E_SHIFT)
+#define  JBIG_DECODE_JSTAT_E_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JSTAT_E_MASK) | (((uint32_t)val) << JBIG_DECODE_JSTAT_E_SHIFT))
+
+#define  JBIG_DECODE_JSTAT_D_MASK 0x8000
+#define  JBIG_DECODE_JSTAT_D_SHIFT 15
+#define  JBIG_DECODE_JSTAT_D_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JSTAT_D_MASK) >> JBIG_DECODE_JSTAT_D_SHIFT)
+#define  JBIG_DECODE_JSTAT_D_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JSTAT_D_MASK) | (((uint32_t)val) << JBIG_DECODE_JSTAT_D_SHIFT))
+
+#define  JBIG_DECODE_JSTAT_I_MASK 0x6000
+#define  JBIG_DECODE_JSTAT_I_SHIFT 13
+#define  JBIG_DECODE_JSTAT_I_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JSTAT_I_MASK) >> JBIG_DECODE_JSTAT_I_SHIFT)
+#define  JBIG_DECODE_JSTAT_I_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JSTAT_I_MASK) | (((uint32_t)val) << JBIG_DECODE_JSTAT_I_SHIFT))
+
+#define  JBIG_DECODE_JSTAT_AR_MASK 0x1800
+#define  JBIG_DECODE_JSTAT_AR_SHIFT 11
+#define  JBIG_DECODE_JSTAT_AR_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JSTAT_AR_MASK) >> JBIG_DECODE_JSTAT_AR_SHIFT)
+#define  JBIG_DECODE_JSTAT_AR_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JSTAT_AR_MASK) | (((uint32_t)val) << JBIG_DECODE_JSTAT_AR_SHIFT))
+
+#define  JBIG_DECODE_JSTAT_RESERVED2_MASK 0x700
+#define  JBIG_DECODE_JSTAT_RESERVED2_SHIFT 8
+#define  JBIG_DECODE_JSTAT_RESERVED2_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JSTAT_RESERVED2_MASK) >> JBIG_DECODE_JSTAT_RESERVED2_SHIFT)
+#define  JBIG_DECODE_JSTAT_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JSTAT_RESERVED2_MASK) | (((uint32_t)val) << JBIG_DECODE_JSTAT_RESERVED2_SHIFT))
+
+#define  JBIG_DECODE_JSTAT_V_MASK 0xe0
+#define  JBIG_DECODE_JSTAT_V_SHIFT 5
+#define  JBIG_DECODE_JSTAT_V_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JSTAT_V_MASK) >> JBIG_DECODE_JSTAT_V_SHIFT)
+#define  JBIG_DECODE_JSTAT_V_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JSTAT_V_MASK) | (((uint32_t)val) << JBIG_DECODE_JSTAT_V_SHIFT))
+
+#define  JBIG_DECODE_JSTAT_ED_MASK 0x10
+#define  JBIG_DECODE_JSTAT_ED_SHIFT 4
+#define  JBIG_DECODE_JSTAT_ED_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JSTAT_ED_MASK) >> JBIG_DECODE_JSTAT_ED_SHIFT)
+#define  JBIG_DECODE_JSTAT_ED_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JSTAT_ED_MASK) | (((uint32_t)val) << JBIG_DECODE_JSTAT_ED_SHIFT))
+
+#define  JBIG_DECODE_JSTAT_DD_MASK 0x8
+#define  JBIG_DECODE_JSTAT_DD_SHIFT 3
+#define  JBIG_DECODE_JSTAT_DD_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JSTAT_DD_MASK) >> JBIG_DECODE_JSTAT_DD_SHIFT)
+#define  JBIG_DECODE_JSTAT_DD_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JSTAT_DD_MASK) | (((uint32_t)val) << JBIG_DECODE_JSTAT_DD_SHIFT))
+
+#define  JBIG_DECODE_JSTAT_RESERVED3_MASK 0x7
+#define  JBIG_DECODE_JSTAT_RESERVED3_SHIFT 0
+#define  JBIG_DECODE_JSTAT_RESERVED3_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JSTAT_RESERVED3_MASK) >> JBIG_DECODE_JSTAT_RESERVED3_SHIFT)
+#define  JBIG_DECODE_JSTAT_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JSTAT_RESERVED3_MASK) | (((uint32_t)val) << JBIG_DECODE_JSTAT_RESERVED3_SHIFT))
+
+//====================================================================
+//Register: Codec JBIG X-Dimension (Pixels/line) Register (JX)
+/** \brief The Register sets JX for the Image*/
+//====================================================================
+
+#define  JBIG_DECODE_JX_RESERVED1_MASK 0xffff0000
+#define  JBIG_DECODE_JX_RESERVED1_SHIFT 16
+#define  JBIG_DECODE_JX_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JX_RESERVED1_MASK) >> JBIG_DECODE_JX_RESERVED1_SHIFT)
+#define  JBIG_DECODE_JX_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JX_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_JX_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_JX_P_MASK 0xffff
+#define  JBIG_DECODE_JX_P_SHIFT 0
+#define  JBIG_DECODE_JX_P_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JX_P_MASK) >> JBIG_DECODE_JX_P_SHIFT)
+#define  JBIG_DECODE_JX_P_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JX_P_MASK) | (((uint32_t)val) << JBIG_DECODE_JX_P_SHIFT))
+
+//====================================================================
+//Register: Codec JBIG Y-Dimension (Lines/page) Register (JY)
+/** \brief This Register sets JY for the Image*/
+//====================================================================
+
+#define  JBIG_DECODE_JY_RESERVED1_MASK 0xffff0000
+#define  JBIG_DECODE_JY_RESERVED1_SHIFT 16
+#define  JBIG_DECODE_JY_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JY_RESERVED1_MASK) >> JBIG_DECODE_JY_RESERVED1_SHIFT)
+#define  JBIG_DECODE_JY_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JY_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_JY_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_JY_L_MASK 0xffff
+#define  JBIG_DECODE_JY_L_SHIFT 0
+#define  JBIG_DECODE_JY_L_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JY_L_MASK) >> JBIG_DECODE_JY_L_SHIFT)
+#define  JBIG_DECODE_JY_L_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JY_L_MASK) | (((uint32_t)val) << JBIG_DECODE_JY_L_SHIFT))
+
+//====================================================================
+//Register: Codec JBIG Enable Register (JBIG_EN)
+/** \brief The Register is used for enabling/sof resetting the core*/
+//====================================================================
+
+#define  JBIG_DECODE_JBIG_EN_RESERVED1_MASK 0xffff0000
+#define  JBIG_DECODE_JBIG_EN_RESERVED1_SHIFT 16
+#define  JBIG_DECODE_JBIG_EN_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JBIG_EN_RESERVED1_MASK) >> JBIG_DECODE_JBIG_EN_RESERVED1_SHIFT)
+#define  JBIG_DECODE_JBIG_EN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JBIG_EN_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_JBIG_EN_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_JBIG_EN_S_MASK 0x8000
+#define  JBIG_DECODE_JBIG_EN_S_SHIFT 15
+#define  JBIG_DECODE_JBIG_EN_S_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JBIG_EN_S_MASK) >> JBIG_DECODE_JBIG_EN_S_SHIFT)
+#define  JBIG_DECODE_JBIG_EN_S_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JBIG_EN_S_MASK) | (((uint32_t)val) << JBIG_DECODE_JBIG_EN_S_SHIFT))
+
+#define  JBIG_DECODE_JBIG_EN_RESERVED2_MASK 0x7ffe
+#define  JBIG_DECODE_JBIG_EN_RESERVED2_SHIFT 1
+#define  JBIG_DECODE_JBIG_EN_RESERVED2_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JBIG_EN_RESERVED2_MASK) >> JBIG_DECODE_JBIG_EN_RESERVED2_SHIFT)
+#define  JBIG_DECODE_JBIG_EN_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JBIG_EN_RESERVED2_MASK) | (((uint32_t)val) << JBIG_DECODE_JBIG_EN_RESERVED2_SHIFT))
+
+#define  JBIG_DECODE_JBIG_EN_E_MASK 0x1
+#define  JBIG_DECODE_JBIG_EN_E_SHIFT 0
+#define  JBIG_DECODE_JBIG_EN_E_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JBIG_EN_E_MASK) >> JBIG_DECODE_JBIG_EN_E_SHIFT)
+#define  JBIG_DECODE_JBIG_EN_E_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JBIG_EN_E_MASK) | (((uint32_t)val) << JBIG_DECODE_JBIG_EN_E_SHIFT))
+
+//====================================================================
+//Register: Codec JBIG Stripe Length Register (JSL)
+/** \brief This Register sets lines/stripe for the image*/
+//====================================================================
+
+#define  JBIG_DECODE_JSL_RESERVED1_MASK 0xffff0000
+#define  JBIG_DECODE_JSL_RESERVED1_SHIFT 16
+#define  JBIG_DECODE_JSL_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JSL_RESERVED1_MASK) >> JBIG_DECODE_JSL_RESERVED1_SHIFT)
+#define  JBIG_DECODE_JSL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JSL_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_JSL_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_JSL_S_MASK 0xffff
+#define  JBIG_DECODE_JSL_S_SHIFT 0
+#define  JBIG_DECODE_JSL_S_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_JSL_S_MASK) >> JBIG_DECODE_JSL_S_SHIFT)
+#define  JBIG_DECODE_JSL_S_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_JSL_S_MASK) | (((uint32_t)val) << JBIG_DECODE_JSL_S_SHIFT))
+
+//====================================================================
+//
+//Register File: IDMA Registers (JBIG_CODEC_IDMA)
+//
+//====================================================================
+
+//====================================================================
+//Register: Configuration register (cfg)
+//====================================================================
+
+#define  JBIG_CODEC_IDMA_CFG_RESERVED1_MASK 0xfe000000
+#define  JBIG_CODEC_IDMA_CFG_RESERVED1_SHIFT 25
+#define  JBIG_CODEC_IDMA_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_CFG_RESERVED1_MASK) >> JBIG_CODEC_IDMA_CFG_RESERVED1_SHIFT)
+#define  JBIG_CODEC_IDMA_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_CFG_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_CFG_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_IDMA_CFG_REPLICATE_MASK 0x1000000
+#define  JBIG_CODEC_IDMA_CFG_REPLICATE_SHIFT 24
+#define  JBIG_CODEC_IDMA_CFG_REPLICATE_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_CFG_REPLICATE_MASK) >> JBIG_CODEC_IDMA_CFG_REPLICATE_SHIFT)
+#define  JBIG_CODEC_IDMA_CFG_REPLICATE_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_CFG_REPLICATE_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_CFG_REPLICATE_SHIFT))
+
+#define  JBIG_CODEC_IDMA_CFG_RESERVED2_MASK 0xfe0000
+#define  JBIG_CODEC_IDMA_CFG_RESERVED2_SHIFT 17
+#define  JBIG_CODEC_IDMA_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_CFG_RESERVED2_MASK) >> JBIG_CODEC_IDMA_CFG_RESERVED2_SHIFT)
+#define  JBIG_CODEC_IDMA_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_CFG_RESERVED2_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_CFG_RESERVED2_SHIFT))
+
+#define  JBIG_CODEC_IDMA_CFG_ENABLE_MASK 0x10000
+#define  JBIG_CODEC_IDMA_CFG_ENABLE_SHIFT 16
+#define  JBIG_CODEC_IDMA_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_CFG_ENABLE_MASK) >> JBIG_CODEC_IDMA_CFG_ENABLE_SHIFT)
+#define  JBIG_CODEC_IDMA_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_CFG_ENABLE_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_CFG_ENABLE_SHIFT))
+
+#define  JBIG_CODEC_IDMA_CFG_RESERVED3_MASK 0xf800
+#define  JBIG_CODEC_IDMA_CFG_RESERVED3_SHIFT 11
+#define  JBIG_CODEC_IDMA_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_CFG_RESERVED3_MASK) >> JBIG_CODEC_IDMA_CFG_RESERVED3_SHIFT)
+#define  JBIG_CODEC_IDMA_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_CFG_RESERVED3_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_CFG_RESERVED3_SHIFT))
+
+#define  JBIG_CODEC_IDMA_CFG_OUT_WIDTH_MASK 0x700
+#define  JBIG_CODEC_IDMA_CFG_OUT_WIDTH_SHIFT 8
+#define  JBIG_CODEC_IDMA_CFG_OUT_WIDTH_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_CFG_OUT_WIDTH_MASK) >> JBIG_CODEC_IDMA_CFG_OUT_WIDTH_SHIFT)
+#define  JBIG_CODEC_IDMA_CFG_OUT_WIDTH_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_CFG_OUT_WIDTH_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_CFG_OUT_WIDTH_SHIFT))
+
+#define  JBIG_CODEC_IDMA_CFG_RESERVED4_MASK 0xfc
+#define  JBIG_CODEC_IDMA_CFG_RESERVED4_SHIFT 2
+#define  JBIG_CODEC_IDMA_CFG_RESERVED4_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_CFG_RESERVED4_MASK) >> JBIG_CODEC_IDMA_CFG_RESERVED4_SHIFT)
+#define  JBIG_CODEC_IDMA_CFG_RESERVED4_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_CFG_RESERVED4_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_CFG_RESERVED4_SHIFT))
+
+#define  JBIG_CODEC_IDMA_CFG_BURST_LEN_MASK 0x3
+#define  JBIG_CODEC_IDMA_CFG_BURST_LEN_SHIFT 0
+#define  JBIG_CODEC_IDMA_CFG_BURST_LEN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_CFG_BURST_LEN_MASK) >> JBIG_CODEC_IDMA_CFG_BURST_LEN_SHIFT)
+#define  JBIG_CODEC_IDMA_CFG_BURST_LEN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_CFG_BURST_LEN_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_CFG_BURST_LEN_SHIFT))
+
+//====================================================================
+//Register: Status register (status)
+//====================================================================
+
+#define  JBIG_CODEC_IDMA_STATUS_RESERVED1_MASK 0xfffffe00
+#define  JBIG_CODEC_IDMA_STATUS_RESERVED1_SHIFT 9
+#define  JBIG_CODEC_IDMA_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_STATUS_RESERVED1_MASK) >> JBIG_CODEC_IDMA_STATUS_RESERVED1_SHIFT)
+#define  JBIG_CODEC_IDMA_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_STATUS_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_STATUS_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_IDMA_STATUS_SOI_MASK 0x100
+#define  JBIG_CODEC_IDMA_STATUS_SOI_SHIFT 8
+#define  JBIG_CODEC_IDMA_STATUS_SOI_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_STATUS_SOI_MASK) >> JBIG_CODEC_IDMA_STATUS_SOI_SHIFT)
+#define  JBIG_CODEC_IDMA_STATUS_SOI_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_STATUS_SOI_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_STATUS_SOI_SHIFT))
+
+#define  JBIG_CODEC_IDMA_STATUS_EOI_MASK 0x80
+#define  JBIG_CODEC_IDMA_STATUS_EOI_SHIFT 7
+#define  JBIG_CODEC_IDMA_STATUS_EOI_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_STATUS_EOI_MASK) >> JBIG_CODEC_IDMA_STATUS_EOI_SHIFT)
+#define  JBIG_CODEC_IDMA_STATUS_EOI_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_STATUS_EOI_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_STATUS_EOI_SHIFT))
+
+#define  JBIG_CODEC_IDMA_STATUS_SOFTRESET_MASK 0x40
+#define  JBIG_CODEC_IDMA_STATUS_SOFTRESET_SHIFT 6
+#define  JBIG_CODEC_IDMA_STATUS_SOFTRESET_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_STATUS_SOFTRESET_MASK) >> JBIG_CODEC_IDMA_STATUS_SOFTRESET_SHIFT)
+#define  JBIG_CODEC_IDMA_STATUS_SOFTRESET_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_STATUS_SOFTRESET_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_STATUS_SOFTRESET_SHIFT))
+
+#define  JBIG_CODEC_IDMA_STATUS_FULL_CBUF_MASK 0x20
+#define  JBIG_CODEC_IDMA_STATUS_FULL_CBUF_SHIFT 5
+#define  JBIG_CODEC_IDMA_STATUS_FULL_CBUF_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_STATUS_FULL_CBUF_MASK) >> JBIG_CODEC_IDMA_STATUS_FULL_CBUF_SHIFT)
+#define  JBIG_CODEC_IDMA_STATUS_FULL_CBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_STATUS_FULL_CBUF_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_STATUS_FULL_CBUF_SHIFT))
+
+#define  JBIG_CODEC_IDMA_STATUS_EMPTY_CBUF_MASK 0x10
+#define  JBIG_CODEC_IDMA_STATUS_EMPTY_CBUF_SHIFT 4
+#define  JBIG_CODEC_IDMA_STATUS_EMPTY_CBUF_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_STATUS_EMPTY_CBUF_MASK) >> JBIG_CODEC_IDMA_STATUS_EMPTY_CBUF_SHIFT)
+#define  JBIG_CODEC_IDMA_STATUS_EMPTY_CBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_STATUS_EMPTY_CBUF_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_STATUS_EMPTY_CBUF_SHIFT))
+
+#define  JBIG_CODEC_IDMA_STATUS_FULL_DBUF_MASK 0x8
+#define  JBIG_CODEC_IDMA_STATUS_FULL_DBUF_SHIFT 3
+#define  JBIG_CODEC_IDMA_STATUS_FULL_DBUF_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_STATUS_FULL_DBUF_MASK) >> JBIG_CODEC_IDMA_STATUS_FULL_DBUF_SHIFT)
+#define  JBIG_CODEC_IDMA_STATUS_FULL_DBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_STATUS_FULL_DBUF_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_STATUS_FULL_DBUF_SHIFT))
+
+#define  JBIG_CODEC_IDMA_STATUS_EMPTY_DBUF_MASK 0x4
+#define  JBIG_CODEC_IDMA_STATUS_EMPTY_DBUF_SHIFT 2
+#define  JBIG_CODEC_IDMA_STATUS_EMPTY_DBUF_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_STATUS_EMPTY_DBUF_MASK) >> JBIG_CODEC_IDMA_STATUS_EMPTY_DBUF_SHIFT)
+#define  JBIG_CODEC_IDMA_STATUS_EMPTY_DBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_STATUS_EMPTY_DBUF_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_STATUS_EMPTY_DBUF_SHIFT))
+
+#define  JBIG_CODEC_IDMA_STATUS_PACKER_EMPTY_MASK 0x2
+#define  JBIG_CODEC_IDMA_STATUS_PACKER_EMPTY_SHIFT 1
+#define  JBIG_CODEC_IDMA_STATUS_PACKER_EMPTY_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_STATUS_PACKER_EMPTY_MASK) >> JBIG_CODEC_IDMA_STATUS_PACKER_EMPTY_SHIFT)
+#define  JBIG_CODEC_IDMA_STATUS_PACKER_EMPTY_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_STATUS_PACKER_EMPTY_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_STATUS_PACKER_EMPTY_SHIFT))
+
+#define  JBIG_CODEC_IDMA_STATUS_DMA_BUSY_MASK 0x1
+#define  JBIG_CODEC_IDMA_STATUS_DMA_BUSY_SHIFT 0
+#define  JBIG_CODEC_IDMA_STATUS_DMA_BUSY_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_STATUS_DMA_BUSY_MASK) >> JBIG_CODEC_IDMA_STATUS_DMA_BUSY_SHIFT)
+#define  JBIG_CODEC_IDMA_STATUS_DMA_BUSY_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_STATUS_DMA_BUSY_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_STATUS_DMA_BUSY_SHIFT))
+
+//====================================================================
+//Register: Line Width register (line_width)
+//====================================================================
+
+#define  JBIG_CODEC_IDMA_LINE_WIDTH_RESERVED1_MASK 0xffff0000
+#define  JBIG_CODEC_IDMA_LINE_WIDTH_RESERVED1_SHIFT 16
+#define  JBIG_CODEC_IDMA_LINE_WIDTH_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_LINE_WIDTH_RESERVED1_MASK) >> JBIG_CODEC_IDMA_LINE_WIDTH_RESERVED1_SHIFT)
+#define  JBIG_CODEC_IDMA_LINE_WIDTH_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_LINE_WIDTH_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_LINE_WIDTH_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_IDMA_LINE_WIDTH_LINE_WIDTH_MASK 0xffff
+#define  JBIG_CODEC_IDMA_LINE_WIDTH_LINE_WIDTH_SHIFT 0
+#define  JBIG_CODEC_IDMA_LINE_WIDTH_LINE_WIDTH_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_LINE_WIDTH_LINE_WIDTH_MASK) >> JBIG_CODEC_IDMA_LINE_WIDTH_LINE_WIDTH_SHIFT)
+#define  JBIG_CODEC_IDMA_LINE_WIDTH_LINE_WIDTH_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_LINE_WIDTH_LINE_WIDTH_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_LINE_WIDTH_LINE_WIDTH_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (int_en)
+//====================================================================
+
+#define  JBIG_CODEC_IDMA_INT_EN_RESERVED1_MASK 0xfffffff0
+#define  JBIG_CODEC_IDMA_INT_EN_RESERVED1_SHIFT 4
+#define  JBIG_CODEC_IDMA_INT_EN_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_EN_RESERVED1_MASK) >> JBIG_CODEC_IDMA_INT_EN_RESERVED1_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_EN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_EN_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_EN_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_EN_RST_INT_EN_MASK 0x8
+#define  JBIG_CODEC_IDMA_INT_EN_RST_INT_EN_SHIFT 3
+#define  JBIG_CODEC_IDMA_INT_EN_RST_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_EN_RST_INT_EN_MASK) >> JBIG_CODEC_IDMA_INT_EN_RST_INT_EN_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_EN_RST_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_EN_RST_INT_EN_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_EN_RST_INT_EN_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_EN_EOI_INT_EN_MASK 0x4
+#define  JBIG_CODEC_IDMA_INT_EN_EOI_INT_EN_SHIFT 2
+#define  JBIG_CODEC_IDMA_INT_EN_EOI_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_EN_EOI_INT_EN_MASK) >> JBIG_CODEC_IDMA_INT_EN_EOI_INT_EN_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_EN_EOI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_EN_EOI_INT_EN_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_EN_EOI_INT_EN_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_EN_FIN_INT_EN_MASK 0x2
+#define  JBIG_CODEC_IDMA_INT_EN_FIN_INT_EN_SHIFT 1
+#define  JBIG_CODEC_IDMA_INT_EN_FIN_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_EN_FIN_INT_EN_MASK) >> JBIG_CODEC_IDMA_INT_EN_FIN_INT_EN_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_EN_FIN_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_EN_FIN_INT_EN_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_EN_FIN_INT_EN_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_EN_WHO_INT_EN_MASK 0x1
+#define  JBIG_CODEC_IDMA_INT_EN_WHO_INT_EN_SHIFT 0
+#define  JBIG_CODEC_IDMA_INT_EN_WHO_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_EN_WHO_INT_EN_MASK) >> JBIG_CODEC_IDMA_INT_EN_WHO_INT_EN_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_EN_WHO_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_EN_WHO_INT_EN_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_EN_WHO_INT_EN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (int_st)
+//====================================================================
+
+#define  JBIG_CODEC_IDMA_INT_ST_RESERVED1_MASK 0xfffffff0
+#define  JBIG_CODEC_IDMA_INT_ST_RESERVED1_SHIFT 4
+#define  JBIG_CODEC_IDMA_INT_ST_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_ST_RESERVED1_MASK) >> JBIG_CODEC_IDMA_INT_ST_RESERVED1_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_ST_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_ST_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_ST_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_ST_RST_INT_ST_MASK 0x8
+#define  JBIG_CODEC_IDMA_INT_ST_RST_INT_ST_SHIFT 3
+#define  JBIG_CODEC_IDMA_INT_ST_RST_INT_ST_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_ST_RST_INT_ST_MASK) >> JBIG_CODEC_IDMA_INT_ST_RST_INT_ST_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_ST_RST_INT_ST_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_ST_RST_INT_ST_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_ST_RST_INT_ST_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_ST_EOI_INT_ST_MASK 0x4
+#define  JBIG_CODEC_IDMA_INT_ST_EOI_INT_ST_SHIFT 2
+#define  JBIG_CODEC_IDMA_INT_ST_EOI_INT_ST_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_ST_EOI_INT_ST_MASK) >> JBIG_CODEC_IDMA_INT_ST_EOI_INT_ST_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_ST_EOI_INT_ST_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_ST_EOI_INT_ST_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_ST_EOI_INT_ST_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_ST_FIN_INT_ST_MASK 0x2
+#define  JBIG_CODEC_IDMA_INT_ST_FIN_INT_ST_SHIFT 1
+#define  JBIG_CODEC_IDMA_INT_ST_FIN_INT_ST_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_ST_FIN_INT_ST_MASK) >> JBIG_CODEC_IDMA_INT_ST_FIN_INT_ST_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_ST_FIN_INT_ST_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_ST_FIN_INT_ST_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_ST_FIN_INT_ST_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_ST_WHO_INT_ST_MASK 0x1
+#define  JBIG_CODEC_IDMA_INT_ST_WHO_INT_ST_SHIFT 0
+#define  JBIG_CODEC_IDMA_INT_ST_WHO_INT_ST_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_ST_WHO_INT_ST_MASK) >> JBIG_CODEC_IDMA_INT_ST_WHO_INT_ST_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_ST_WHO_INT_ST_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_ST_WHO_INT_ST_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_ST_WHO_INT_ST_SHIFT))
+
+//====================================================================
+//Register: Interrupt Clear Register (int_cl)
+//====================================================================
+
+#define  JBIG_CODEC_IDMA_INT_CL_RESERVED1_MASK 0xfffffff0
+#define  JBIG_CODEC_IDMA_INT_CL_RESERVED1_SHIFT 4
+#define  JBIG_CODEC_IDMA_INT_CL_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_CL_RESERVED1_MASK) >> JBIG_CODEC_IDMA_INT_CL_RESERVED1_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_CL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_CL_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_CL_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_CL_RST_INT_CL_MASK 0x8
+#define  JBIG_CODEC_IDMA_INT_CL_RST_INT_CL_SHIFT 3
+#define  JBIG_CODEC_IDMA_INT_CL_RST_INT_CL_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_CL_RST_INT_CL_MASK) >> JBIG_CODEC_IDMA_INT_CL_RST_INT_CL_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_CL_RST_INT_CL_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_CL_RST_INT_CL_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_CL_RST_INT_CL_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_CL_EOI_INT_CL_MASK 0x4
+#define  JBIG_CODEC_IDMA_INT_CL_EOI_INT_CL_SHIFT 2
+#define  JBIG_CODEC_IDMA_INT_CL_EOI_INT_CL_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_CL_EOI_INT_CL_MASK) >> JBIG_CODEC_IDMA_INT_CL_EOI_INT_CL_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_CL_EOI_INT_CL_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_CL_EOI_INT_CL_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_CL_EOI_INT_CL_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_CL_FIN_INT_CL_MASK 0x2
+#define  JBIG_CODEC_IDMA_INT_CL_FIN_INT_CL_SHIFT 1
+#define  JBIG_CODEC_IDMA_INT_CL_FIN_INT_CL_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_CL_FIN_INT_CL_MASK) >> JBIG_CODEC_IDMA_INT_CL_FIN_INT_CL_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_CL_FIN_INT_CL_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_CL_FIN_INT_CL_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_CL_FIN_INT_CL_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_CL_WHO_INT_CL_MASK 0x1
+#define  JBIG_CODEC_IDMA_INT_CL_WHO_INT_CL_SHIFT 0
+#define  JBIG_CODEC_IDMA_INT_CL_WHO_INT_CL_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_CL_WHO_INT_CL_MASK) >> JBIG_CODEC_IDMA_INT_CL_WHO_INT_CL_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_CL_WHO_INT_CL_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_CL_WHO_INT_CL_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_CL_WHO_INT_CL_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (int_fo)
+//====================================================================
+
+#define  JBIG_CODEC_IDMA_INT_FO_RESERVED1_MASK 0xfffffff0
+#define  JBIG_CODEC_IDMA_INT_FO_RESERVED1_SHIFT 4
+#define  JBIG_CODEC_IDMA_INT_FO_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_FO_RESERVED1_MASK) >> JBIG_CODEC_IDMA_INT_FO_RESERVED1_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_FO_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_FO_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_FO_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_FO_RST_INT_FO_MASK 0x8
+#define  JBIG_CODEC_IDMA_INT_FO_RST_INT_FO_SHIFT 3
+#define  JBIG_CODEC_IDMA_INT_FO_RST_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_FO_RST_INT_FO_MASK) >> JBIG_CODEC_IDMA_INT_FO_RST_INT_FO_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_FO_RST_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_FO_RST_INT_FO_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_FO_RST_INT_FO_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_FO_EOI_INT_FO_MASK 0x4
+#define  JBIG_CODEC_IDMA_INT_FO_EOI_INT_FO_SHIFT 2
+#define  JBIG_CODEC_IDMA_INT_FO_EOI_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_FO_EOI_INT_FO_MASK) >> JBIG_CODEC_IDMA_INT_FO_EOI_INT_FO_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_FO_EOI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_FO_EOI_INT_FO_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_FO_EOI_INT_FO_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_FO_FIN_INT_FO_MASK 0x2
+#define  JBIG_CODEC_IDMA_INT_FO_FIN_INT_FO_SHIFT 1
+#define  JBIG_CODEC_IDMA_INT_FO_FIN_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_FO_FIN_INT_FO_MASK) >> JBIG_CODEC_IDMA_INT_FO_FIN_INT_FO_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_FO_FIN_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_FO_FIN_INT_FO_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_FO_FIN_INT_FO_SHIFT))
+
+#define  JBIG_CODEC_IDMA_INT_FO_WHO_INT_FO_MASK 0x1
+#define  JBIG_CODEC_IDMA_INT_FO_WHO_INT_FO_SHIFT 0
+#define  JBIG_CODEC_IDMA_INT_FO_WHO_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_INT_FO_WHO_INT_FO_MASK) >> JBIG_CODEC_IDMA_INT_FO_WHO_INT_FO_SHIFT)
+#define  JBIG_CODEC_IDMA_INT_FO_WHO_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_INT_FO_WHO_INT_FO_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_INT_FO_WHO_INT_FO_SHIFT))
+
+//====================================================================
+//Register: Descriptor Write Register (desc_write)
+//====================================================================
+
+#define  JBIG_CODEC_IDMA_DESC_WRITE_DESC_MASK 0xffffffff
+#define  JBIG_CODEC_IDMA_DESC_WRITE_DESC_SHIFT 0
+#define  JBIG_CODEC_IDMA_DESC_WRITE_DESC_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_DESC_WRITE_DESC_MASK) >> JBIG_CODEC_IDMA_DESC_WRITE_DESC_SHIFT)
+#define  JBIG_CODEC_IDMA_DESC_WRITE_DESC_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_DESC_WRITE_DESC_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_DESC_WRITE_DESC_SHIFT))
+
+//====================================================================
+//Register: Descriptor Read Register (desc_read)
+//====================================================================
+
+#define  JBIG_CODEC_IDMA_DESC_READ_DESC_MASK 0xffffffff
+#define  JBIG_CODEC_IDMA_DESC_READ_DESC_SHIFT 0
+#define  JBIG_CODEC_IDMA_DESC_READ_DESC_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_DESC_READ_DESC_MASK) >> JBIG_CODEC_IDMA_DESC_READ_DESC_SHIFT)
+#define  JBIG_CODEC_IDMA_DESC_READ_DESC_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_DESC_READ_DESC_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_DESC_READ_DESC_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Length Register (xfer_length)
+//====================================================================
+
+#define  JBIG_CODEC_IDMA_XFER_LENGTH_RESERVED1_MASK 0xff000000
+#define  JBIG_CODEC_IDMA_XFER_LENGTH_RESERVED1_SHIFT 24
+#define  JBIG_CODEC_IDMA_XFER_LENGTH_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_XFER_LENGTH_RESERVED1_MASK) >> JBIG_CODEC_IDMA_XFER_LENGTH_RESERVED1_SHIFT)
+#define  JBIG_CODEC_IDMA_XFER_LENGTH_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_XFER_LENGTH_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_XFER_LENGTH_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_IDMA_XFER_LENGTH_LEN_MASK 0xffffff
+#define  JBIG_CODEC_IDMA_XFER_LENGTH_LEN_SHIFT 0
+#define  JBIG_CODEC_IDMA_XFER_LENGTH_LEN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_XFER_LENGTH_LEN_MASK) >> JBIG_CODEC_IDMA_XFER_LENGTH_LEN_SHIFT)
+#define  JBIG_CODEC_IDMA_XFER_LENGTH_LEN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_XFER_LENGTH_LEN_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_XFER_LENGTH_LEN_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Address Register (xfer_addr)
+//====================================================================
+
+#define  JBIG_CODEC_IDMA_XFER_ADDR_ADDR_MASK 0xffffffff
+#define  JBIG_CODEC_IDMA_XFER_ADDR_ADDR_SHIFT 0
+#define  JBIG_CODEC_IDMA_XFER_ADDR_ADDR_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_XFER_ADDR_ADDR_MASK) >> JBIG_CODEC_IDMA_XFER_ADDR_ADDR_SHIFT)
+#define  JBIG_CODEC_IDMA_XFER_ADDR_ADDR_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_XFER_ADDR_ADDR_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_XFER_ADDR_ADDR_SHIFT))
+
+//====================================================================
+//Register: Descriptor Control Word Register (ctrl_word)
+//====================================================================
+
+#define  JBIG_CODEC_IDMA_CTRL_WORD_CTRL_WORD_MASK 0xffffffff
+#define  JBIG_CODEC_IDMA_CTRL_WORD_CTRL_WORD_SHIFT 0
+#define  JBIG_CODEC_IDMA_CTRL_WORD_CTRL_WORD_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_CTRL_WORD_CTRL_WORD_MASK) >> JBIG_CODEC_IDMA_CTRL_WORD_CTRL_WORD_SHIFT)
+#define  JBIG_CODEC_IDMA_CTRL_WORD_CTRL_WORD_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_CTRL_WORD_CTRL_WORD_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_CTRL_WORD_CTRL_WORD_SHIFT))
+
+//====================================================================
+//Register: Soft Reset register (reset)
+//====================================================================
+
+#define  JBIG_CODEC_IDMA_RESET_RESERVED1_MASK 0xfffffffe
+#define  JBIG_CODEC_IDMA_RESET_RESERVED1_SHIFT 1
+#define  JBIG_CODEC_IDMA_RESET_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_RESET_RESERVED1_MASK) >> JBIG_CODEC_IDMA_RESET_RESERVED1_SHIFT)
+#define  JBIG_CODEC_IDMA_RESET_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_RESET_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_RESET_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_IDMA_RESET_SOFT_RESET_MASK 0x1
+#define  JBIG_CODEC_IDMA_RESET_SOFT_RESET_SHIFT 0
+#define  JBIG_CODEC_IDMA_RESET_SOFT_RESET_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_IDMA_RESET_SOFT_RESET_MASK) >> JBIG_CODEC_IDMA_RESET_SOFT_RESET_SHIFT)
+#define  JBIG_CODEC_IDMA_RESET_SOFT_RESET_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_IDMA_RESET_SOFT_RESET_MASK) | (((uint32_t)val) << JBIG_CODEC_IDMA_RESET_SOFT_RESET_SHIFT))
+
+//====================================================================
+//
+//Register File: ODMA Registers (JBIG_CODEC_ODMA)
+//
+//====================================================================
+
+//====================================================================
+//Register: Configuration register (cfg)
+//====================================================================
+
+#define  JBIG_CODEC_ODMA_CFG_RESERVED1_MASK 0xffc00000
+#define  JBIG_CODEC_ODMA_CFG_RESERVED1_SHIFT 22
+#define  JBIG_CODEC_ODMA_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_CFG_RESERVED1_MASK) >> JBIG_CODEC_ODMA_CFG_RESERVED1_SHIFT)
+#define  JBIG_CODEC_ODMA_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_CFG_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_CFG_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_ODMA_CFG_SERPENTINE_MASK 0x200000
+#define  JBIG_CODEC_ODMA_CFG_SERPENTINE_SHIFT 21
+#define  JBIG_CODEC_ODMA_CFG_SERPENTINE_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_CFG_SERPENTINE_MASK) >> JBIG_CODEC_ODMA_CFG_SERPENTINE_SHIFT)
+#define  JBIG_CODEC_ODMA_CFG_SERPENTINE_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_CFG_SERPENTINE_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_CFG_SERPENTINE_SHIFT))
+
+#define  JBIG_CODEC_ODMA_CFG_LINE_REV_MASK 0x100000
+#define  JBIG_CODEC_ODMA_CFG_LINE_REV_SHIFT 20
+#define  JBIG_CODEC_ODMA_CFG_LINE_REV_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_CFG_LINE_REV_MASK) >> JBIG_CODEC_ODMA_CFG_LINE_REV_SHIFT)
+#define  JBIG_CODEC_ODMA_CFG_LINE_REV_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_CFG_LINE_REV_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_CFG_LINE_REV_SHIFT))
+
+#define  JBIG_CODEC_ODMA_CFG_TRAN_REV_MASK 0x80000
+#define  JBIG_CODEC_ODMA_CFG_TRAN_REV_SHIFT 19
+#define  JBIG_CODEC_ODMA_CFG_TRAN_REV_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_CFG_TRAN_REV_MASK) >> JBIG_CODEC_ODMA_CFG_TRAN_REV_SHIFT)
+#define  JBIG_CODEC_ODMA_CFG_TRAN_REV_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_CFG_TRAN_REV_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_CFG_TRAN_REV_SHIFT))
+
+#define  JBIG_CODEC_ODMA_CFG_UPPER_HALF_MASK 0x40000
+#define  JBIG_CODEC_ODMA_CFG_UPPER_HALF_SHIFT 18
+#define  JBIG_CODEC_ODMA_CFG_UPPER_HALF_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_CFG_UPPER_HALF_MASK) >> JBIG_CODEC_ODMA_CFG_UPPER_HALF_SHIFT)
+#define  JBIG_CODEC_ODMA_CFG_UPPER_HALF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_CFG_UPPER_HALF_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_CFG_UPPER_HALF_SHIFT))
+
+#define  JBIG_CODEC_ODMA_CFG_MSB_IN_MASK 0x20000
+#define  JBIG_CODEC_ODMA_CFG_MSB_IN_SHIFT 17
+#define  JBIG_CODEC_ODMA_CFG_MSB_IN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_CFG_MSB_IN_MASK) >> JBIG_CODEC_ODMA_CFG_MSB_IN_SHIFT)
+#define  JBIG_CODEC_ODMA_CFG_MSB_IN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_CFG_MSB_IN_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_CFG_MSB_IN_SHIFT))
+
+#define  JBIG_CODEC_ODMA_CFG_ENABLE_MASK 0x10000
+#define  JBIG_CODEC_ODMA_CFG_ENABLE_SHIFT 16
+#define  JBIG_CODEC_ODMA_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_CFG_ENABLE_MASK) >> JBIG_CODEC_ODMA_CFG_ENABLE_SHIFT)
+#define  JBIG_CODEC_ODMA_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_CFG_ENABLE_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_CFG_ENABLE_SHIFT))
+
+#define  JBIG_CODEC_ODMA_CFG_RESERVED2_MASK 0xf800
+#define  JBIG_CODEC_ODMA_CFG_RESERVED2_SHIFT 11
+#define  JBIG_CODEC_ODMA_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_CFG_RESERVED2_MASK) >> JBIG_CODEC_ODMA_CFG_RESERVED2_SHIFT)
+#define  JBIG_CODEC_ODMA_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_CFG_RESERVED2_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_CFG_RESERVED2_SHIFT))
+
+#define  JBIG_CODEC_ODMA_CFG_IN_WIDTH_MASK 0x700
+#define  JBIG_CODEC_ODMA_CFG_IN_WIDTH_SHIFT 8
+#define  JBIG_CODEC_ODMA_CFG_IN_WIDTH_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_CFG_IN_WIDTH_MASK) >> JBIG_CODEC_ODMA_CFG_IN_WIDTH_SHIFT)
+#define  JBIG_CODEC_ODMA_CFG_IN_WIDTH_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_CFG_IN_WIDTH_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_CFG_IN_WIDTH_SHIFT))
+
+#define  JBIG_CODEC_ODMA_CFG_RESERVED3_MASK 0xfc
+#define  JBIG_CODEC_ODMA_CFG_RESERVED3_SHIFT 2
+#define  JBIG_CODEC_ODMA_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_CFG_RESERVED3_MASK) >> JBIG_CODEC_ODMA_CFG_RESERVED3_SHIFT)
+#define  JBIG_CODEC_ODMA_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_CFG_RESERVED3_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_CFG_RESERVED3_SHIFT))
+
+#define  JBIG_CODEC_ODMA_CFG_BURST_LEN_MASK 0x3
+#define  JBIG_CODEC_ODMA_CFG_BURST_LEN_SHIFT 0
+#define  JBIG_CODEC_ODMA_CFG_BURST_LEN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_CFG_BURST_LEN_MASK) >> JBIG_CODEC_ODMA_CFG_BURST_LEN_SHIFT)
+#define  JBIG_CODEC_ODMA_CFG_BURST_LEN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_CFG_BURST_LEN_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_CFG_BURST_LEN_SHIFT))
+
+//====================================================================
+//Register: Status register (status)
+//====================================================================
+
+#define  JBIG_CODEC_ODMA_STATUS_RESERVED1_MASK 0xfffff800
+#define  JBIG_CODEC_ODMA_STATUS_RESERVED1_SHIFT 11
+#define  JBIG_CODEC_ODMA_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_STATUS_RESERVED1_MASK) >> JBIG_CODEC_ODMA_STATUS_RESERVED1_SHIFT)
+#define  JBIG_CODEC_ODMA_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_STATUS_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_STATUS_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_ODMA_STATUS_DESC_OWN_MASK 0x400
+#define  JBIG_CODEC_ODMA_STATUS_DESC_OWN_SHIFT 10
+#define  JBIG_CODEC_ODMA_STATUS_DESC_OWN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_STATUS_DESC_OWN_MASK) >> JBIG_CODEC_ODMA_STATUS_DESC_OWN_SHIFT)
+#define  JBIG_CODEC_ODMA_STATUS_DESC_OWN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_STATUS_DESC_OWN_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_STATUS_DESC_OWN_SHIFT))
+
+#define  JBIG_CODEC_ODMA_STATUS_DESC_EOI_MASK 0x200
+#define  JBIG_CODEC_ODMA_STATUS_DESC_EOI_SHIFT 9
+#define  JBIG_CODEC_ODMA_STATUS_DESC_EOI_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_STATUS_DESC_EOI_MASK) >> JBIG_CODEC_ODMA_STATUS_DESC_EOI_SHIFT)
+#define  JBIG_CODEC_ODMA_STATUS_DESC_EOI_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_STATUS_DESC_EOI_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_STATUS_DESC_EOI_SHIFT))
+
+#define  JBIG_CODEC_ODMA_STATUS_DESC_SOI_MASK 0x100
+#define  JBIG_CODEC_ODMA_STATUS_DESC_SOI_SHIFT 8
+#define  JBIG_CODEC_ODMA_STATUS_DESC_SOI_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_STATUS_DESC_SOI_MASK) >> JBIG_CODEC_ODMA_STATUS_DESC_SOI_SHIFT)
+#define  JBIG_CODEC_ODMA_STATUS_DESC_SOI_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_STATUS_DESC_SOI_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_STATUS_DESC_SOI_SHIFT))
+
+#define  JBIG_CODEC_ODMA_STATUS_REVERSE_MASK 0x80
+#define  JBIG_CODEC_ODMA_STATUS_REVERSE_SHIFT 7
+#define  JBIG_CODEC_ODMA_STATUS_REVERSE_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_STATUS_REVERSE_MASK) >> JBIG_CODEC_ODMA_STATUS_REVERSE_SHIFT)
+#define  JBIG_CODEC_ODMA_STATUS_REVERSE_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_STATUS_REVERSE_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_STATUS_REVERSE_SHIFT))
+
+#define  JBIG_CODEC_ODMA_STATUS_SOFTRESET_MASK 0x40
+#define  JBIG_CODEC_ODMA_STATUS_SOFTRESET_SHIFT 6
+#define  JBIG_CODEC_ODMA_STATUS_SOFTRESET_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_STATUS_SOFTRESET_MASK) >> JBIG_CODEC_ODMA_STATUS_SOFTRESET_SHIFT)
+#define  JBIG_CODEC_ODMA_STATUS_SOFTRESET_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_STATUS_SOFTRESET_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_STATUS_SOFTRESET_SHIFT))
+
+#define  JBIG_CODEC_ODMA_STATUS_FULL_CBUF_MASK 0x20
+#define  JBIG_CODEC_ODMA_STATUS_FULL_CBUF_SHIFT 5
+#define  JBIG_CODEC_ODMA_STATUS_FULL_CBUF_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_STATUS_FULL_CBUF_MASK) >> JBIG_CODEC_ODMA_STATUS_FULL_CBUF_SHIFT)
+#define  JBIG_CODEC_ODMA_STATUS_FULL_CBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_STATUS_FULL_CBUF_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_STATUS_FULL_CBUF_SHIFT))
+
+#define  JBIG_CODEC_ODMA_STATUS_EMPTY_CBUF_MASK 0x10
+#define  JBIG_CODEC_ODMA_STATUS_EMPTY_CBUF_SHIFT 4
+#define  JBIG_CODEC_ODMA_STATUS_EMPTY_CBUF_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_STATUS_EMPTY_CBUF_MASK) >> JBIG_CODEC_ODMA_STATUS_EMPTY_CBUF_SHIFT)
+#define  JBIG_CODEC_ODMA_STATUS_EMPTY_CBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_STATUS_EMPTY_CBUF_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_STATUS_EMPTY_CBUF_SHIFT))
+
+#define  JBIG_CODEC_ODMA_STATUS_FULL_DBUF_MASK 0x8
+#define  JBIG_CODEC_ODMA_STATUS_FULL_DBUF_SHIFT 3
+#define  JBIG_CODEC_ODMA_STATUS_FULL_DBUF_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_STATUS_FULL_DBUF_MASK) >> JBIG_CODEC_ODMA_STATUS_FULL_DBUF_SHIFT)
+#define  JBIG_CODEC_ODMA_STATUS_FULL_DBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_STATUS_FULL_DBUF_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_STATUS_FULL_DBUF_SHIFT))
+
+#define  JBIG_CODEC_ODMA_STATUS_EMPTY_DBUF_MASK 0x4
+#define  JBIG_CODEC_ODMA_STATUS_EMPTY_DBUF_SHIFT 2
+#define  JBIG_CODEC_ODMA_STATUS_EMPTY_DBUF_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_STATUS_EMPTY_DBUF_MASK) >> JBIG_CODEC_ODMA_STATUS_EMPTY_DBUF_SHIFT)
+#define  JBIG_CODEC_ODMA_STATUS_EMPTY_DBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_STATUS_EMPTY_DBUF_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_STATUS_EMPTY_DBUF_SHIFT))
+
+#define  JBIG_CODEC_ODMA_STATUS_PACKER_EMPTY_MASK 0x2
+#define  JBIG_CODEC_ODMA_STATUS_PACKER_EMPTY_SHIFT 1
+#define  JBIG_CODEC_ODMA_STATUS_PACKER_EMPTY_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_STATUS_PACKER_EMPTY_MASK) >> JBIG_CODEC_ODMA_STATUS_PACKER_EMPTY_SHIFT)
+#define  JBIG_CODEC_ODMA_STATUS_PACKER_EMPTY_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_STATUS_PACKER_EMPTY_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_STATUS_PACKER_EMPTY_SHIFT))
+
+#define  JBIG_CODEC_ODMA_STATUS_DMA_BUSY_MASK 0x1
+#define  JBIG_CODEC_ODMA_STATUS_DMA_BUSY_SHIFT 0
+#define  JBIG_CODEC_ODMA_STATUS_DMA_BUSY_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_STATUS_DMA_BUSY_MASK) >> JBIG_CODEC_ODMA_STATUS_DMA_BUSY_SHIFT)
+#define  JBIG_CODEC_ODMA_STATUS_DMA_BUSY_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_STATUS_DMA_BUSY_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_STATUS_DMA_BUSY_SHIFT))
+
+//====================================================================
+//Register: Line Size Register (line_size)
+//====================================================================
+
+#define  JBIG_CODEC_ODMA_LINE_SIZE_RESERVED1_MASK 0xfffc0000
+#define  JBIG_CODEC_ODMA_LINE_SIZE_RESERVED1_SHIFT 18
+#define  JBIG_CODEC_ODMA_LINE_SIZE_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_LINE_SIZE_RESERVED1_MASK) >> JBIG_CODEC_ODMA_LINE_SIZE_RESERVED1_SHIFT)
+#define  JBIG_CODEC_ODMA_LINE_SIZE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_LINE_SIZE_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_LINE_SIZE_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_ODMA_LINE_SIZE_LINE_SIZE_MASK 0x3fffc
+#define  JBIG_CODEC_ODMA_LINE_SIZE_LINE_SIZE_SHIFT 2
+#define  JBIG_CODEC_ODMA_LINE_SIZE_LINE_SIZE_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_LINE_SIZE_LINE_SIZE_MASK) >> JBIG_CODEC_ODMA_LINE_SIZE_LINE_SIZE_SHIFT)
+#define  JBIG_CODEC_ODMA_LINE_SIZE_LINE_SIZE_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_LINE_SIZE_LINE_SIZE_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_LINE_SIZE_LINE_SIZE_SHIFT))
+
+#define  JBIG_CODEC_ODMA_LINE_SIZE_RESERVED2_MASK 0x3
+#define  JBIG_CODEC_ODMA_LINE_SIZE_RESERVED2_SHIFT 0
+#define  JBIG_CODEC_ODMA_LINE_SIZE_RESERVED2_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_LINE_SIZE_RESERVED2_MASK) >> JBIG_CODEC_ODMA_LINE_SIZE_RESERVED2_SHIFT)
+#define  JBIG_CODEC_ODMA_LINE_SIZE_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_LINE_SIZE_RESERVED2_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_LINE_SIZE_RESERVED2_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (int_en)
+//====================================================================
+
+#define  JBIG_CODEC_ODMA_INT_EN_RESERVED1_MASK 0xfffffe00
+#define  JBIG_CODEC_ODMA_INT_EN_RESERVED1_SHIFT 9
+#define  JBIG_CODEC_ODMA_INT_EN_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_EN_RESERVED1_MASK) >> JBIG_CODEC_ODMA_INT_EN_RESERVED1_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_EN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_EN_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_EN_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_EN_RST_INT_EN_MASK 0x100
+#define  JBIG_CODEC_ODMA_INT_EN_RST_INT_EN_SHIFT 8
+#define  JBIG_CODEC_ODMA_INT_EN_RST_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_EN_RST_INT_EN_MASK) >> JBIG_CODEC_ODMA_INT_EN_RST_INT_EN_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_EN_RST_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_EN_RST_INT_EN_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_EN_RST_INT_EN_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_EN_EOI_INT_EN_MASK 0x80
+#define  JBIG_CODEC_ODMA_INT_EN_EOI_INT_EN_SHIFT 7
+#define  JBIG_CODEC_ODMA_INT_EN_EOI_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_EN_EOI_INT_EN_MASK) >> JBIG_CODEC_ODMA_INT_EN_EOI_INT_EN_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_EN_EOI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_EN_EOI_INT_EN_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_EN_EOI_INT_EN_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_EN_DIR_INT_EN_MASK 0x40
+#define  JBIG_CODEC_ODMA_INT_EN_DIR_INT_EN_SHIFT 6
+#define  JBIG_CODEC_ODMA_INT_EN_DIR_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_EN_DIR_INT_EN_MASK) >> JBIG_CODEC_ODMA_INT_EN_DIR_INT_EN_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_EN_DIR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_EN_DIR_INT_EN_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_EN_DIR_INT_EN_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_EN_CL_ALI_INT_EN_MASK 0x20
+#define  JBIG_CODEC_ODMA_INT_EN_CL_ALI_INT_EN_SHIFT 5
+#define  JBIG_CODEC_ODMA_INT_EN_CL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_EN_CL_ALI_INT_EN_MASK) >> JBIG_CODEC_ODMA_INT_EN_CL_ALI_INT_EN_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_EN_CL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_EN_CL_ALI_INT_EN_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_EN_CL_ALI_INT_EN_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_EN_EOL_ALI_INT_EN_MASK 0x10
+#define  JBIG_CODEC_ODMA_INT_EN_EOL_ALI_INT_EN_SHIFT 4
+#define  JBIG_CODEC_ODMA_INT_EN_EOL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_EN_EOL_ALI_INT_EN_MASK) >> JBIG_CODEC_ODMA_INT_EN_EOL_ALI_INT_EN_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_EN_EOL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_EN_EOL_ALI_INT_EN_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_EN_EOL_ALI_INT_EN_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_EN_EOI_ALI_INT_EN_MASK 0x8
+#define  JBIG_CODEC_ODMA_INT_EN_EOI_ALI_INT_EN_SHIFT 3
+#define  JBIG_CODEC_ODMA_INT_EN_EOI_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_EN_EOI_ALI_INT_EN_MASK) >> JBIG_CODEC_ODMA_INT_EN_EOI_ALI_INT_EN_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_EN_EOI_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_EN_EOI_ALI_INT_EN_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_EN_EOI_ALI_INT_EN_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_EN_EOI_ERR_INT_EN_MASK 0x4
+#define  JBIG_CODEC_ODMA_INT_EN_EOI_ERR_INT_EN_SHIFT 2
+#define  JBIG_CODEC_ODMA_INT_EN_EOI_ERR_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_EN_EOI_ERR_INT_EN_MASK) >> JBIG_CODEC_ODMA_INT_EN_EOI_ERR_INT_EN_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_EN_EOI_ERR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_EN_EOI_ERR_INT_EN_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_EN_EOI_ERR_INT_EN_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_EN_FIN_INT_EN_MASK 0x2
+#define  JBIG_CODEC_ODMA_INT_EN_FIN_INT_EN_SHIFT 1
+#define  JBIG_CODEC_ODMA_INT_EN_FIN_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_EN_FIN_INT_EN_MASK) >> JBIG_CODEC_ODMA_INT_EN_FIN_INT_EN_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_EN_FIN_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_EN_FIN_INT_EN_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_EN_FIN_INT_EN_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_EN_WHO_INT_EN_MASK 0x1
+#define  JBIG_CODEC_ODMA_INT_EN_WHO_INT_EN_SHIFT 0
+#define  JBIG_CODEC_ODMA_INT_EN_WHO_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_EN_WHO_INT_EN_MASK) >> JBIG_CODEC_ODMA_INT_EN_WHO_INT_EN_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_EN_WHO_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_EN_WHO_INT_EN_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_EN_WHO_INT_EN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (int_pend)
+//====================================================================
+
+#define  JBIG_CODEC_ODMA_INT_PEND_RESERVED1_MASK 0xfffffe00
+#define  JBIG_CODEC_ODMA_INT_PEND_RESERVED1_SHIFT 9
+#define  JBIG_CODEC_ODMA_INT_PEND_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_PEND_RESERVED1_MASK) >> JBIG_CODEC_ODMA_INT_PEND_RESERVED1_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_PEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_PEND_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_PEND_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_PEND_RST_INT_PEND_MASK 0x100
+#define  JBIG_CODEC_ODMA_INT_PEND_RST_INT_PEND_SHIFT 8
+#define  JBIG_CODEC_ODMA_INT_PEND_RST_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_PEND_RST_INT_PEND_MASK) >> JBIG_CODEC_ODMA_INT_PEND_RST_INT_PEND_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_PEND_RST_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_PEND_RST_INT_PEND_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_PEND_RST_INT_PEND_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_PEND_EOI_INT_PEND_MASK 0x80
+#define  JBIG_CODEC_ODMA_INT_PEND_EOI_INT_PEND_SHIFT 7
+#define  JBIG_CODEC_ODMA_INT_PEND_EOI_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_PEND_EOI_INT_PEND_MASK) >> JBIG_CODEC_ODMA_INT_PEND_EOI_INT_PEND_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_PEND_EOI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_PEND_EOI_INT_PEND_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_PEND_EOI_INT_PEND_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_PEND_DIR_INT_PEND_MASK 0x40
+#define  JBIG_CODEC_ODMA_INT_PEND_DIR_INT_PEND_SHIFT 6
+#define  JBIG_CODEC_ODMA_INT_PEND_DIR_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_PEND_DIR_INT_PEND_MASK) >> JBIG_CODEC_ODMA_INT_PEND_DIR_INT_PEND_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_PEND_DIR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_PEND_DIR_INT_PEND_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_PEND_DIR_INT_PEND_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_PEND_CL_ALI_INT_PEND_MASK 0x20
+#define  JBIG_CODEC_ODMA_INT_PEND_CL_ALI_INT_PEND_SHIFT 5
+#define  JBIG_CODEC_ODMA_INT_PEND_CL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_PEND_CL_ALI_INT_PEND_MASK) >> JBIG_CODEC_ODMA_INT_PEND_CL_ALI_INT_PEND_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_PEND_CL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_PEND_CL_ALI_INT_PEND_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_PEND_CL_ALI_INT_PEND_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_PEND_EOL_ALI_INT_PEND_MASK 0x10
+#define  JBIG_CODEC_ODMA_INT_PEND_EOL_ALI_INT_PEND_SHIFT 4
+#define  JBIG_CODEC_ODMA_INT_PEND_EOL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_PEND_EOL_ALI_INT_PEND_MASK) >> JBIG_CODEC_ODMA_INT_PEND_EOL_ALI_INT_PEND_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_PEND_EOL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_PEND_EOL_ALI_INT_PEND_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_PEND_EOL_ALI_INT_PEND_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_PEND_EOI_ALI_INT_PEND_MASK 0x8
+#define  JBIG_CODEC_ODMA_INT_PEND_EOI_ALI_INT_PEND_SHIFT 3
+#define  JBIG_CODEC_ODMA_INT_PEND_EOI_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_PEND_EOI_ALI_INT_PEND_MASK) >> JBIG_CODEC_ODMA_INT_PEND_EOI_ALI_INT_PEND_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_PEND_EOI_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_PEND_EOI_ALI_INT_PEND_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_PEND_EOI_ALI_INT_PEND_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_PEND_EOI_ERR_INT_PEND_MASK 0x4
+#define  JBIG_CODEC_ODMA_INT_PEND_EOI_ERR_INT_PEND_SHIFT 2
+#define  JBIG_CODEC_ODMA_INT_PEND_EOI_ERR_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_PEND_EOI_ERR_INT_PEND_MASK) >> JBIG_CODEC_ODMA_INT_PEND_EOI_ERR_INT_PEND_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_PEND_EOI_ERR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_PEND_EOI_ERR_INT_PEND_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_PEND_EOI_ERR_INT_PEND_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_PEND_FIN_INT_PEND_MASK 0x2
+#define  JBIG_CODEC_ODMA_INT_PEND_FIN_INT_PEND_SHIFT 1
+#define  JBIG_CODEC_ODMA_INT_PEND_FIN_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_PEND_FIN_INT_PEND_MASK) >> JBIG_CODEC_ODMA_INT_PEND_FIN_INT_PEND_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_PEND_FIN_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_PEND_FIN_INT_PEND_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_PEND_FIN_INT_PEND_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_PEND_WHO_INT_PEND_MASK 0x1
+#define  JBIG_CODEC_ODMA_INT_PEND_WHO_INT_PEND_SHIFT 0
+#define  JBIG_CODEC_ODMA_INT_PEND_WHO_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_PEND_WHO_INT_PEND_MASK) >> JBIG_CODEC_ODMA_INT_PEND_WHO_INT_PEND_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_PEND_WHO_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_PEND_WHO_INT_PEND_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_PEND_WHO_INT_PEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (int_ack)
+//====================================================================
+
+#define  JBIG_CODEC_ODMA_INT_ACK_RESERVED1_MASK 0xfffffe00
+#define  JBIG_CODEC_ODMA_INT_ACK_RESERVED1_SHIFT 9
+#define  JBIG_CODEC_ODMA_INT_ACK_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_ACK_RESERVED1_MASK) >> JBIG_CODEC_ODMA_INT_ACK_RESERVED1_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_ACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_ACK_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_ACK_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_ACK_RST_INT_ACK_MASK 0x100
+#define  JBIG_CODEC_ODMA_INT_ACK_RST_INT_ACK_SHIFT 8
+#define  JBIG_CODEC_ODMA_INT_ACK_RST_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_ACK_RST_INT_ACK_MASK) >> JBIG_CODEC_ODMA_INT_ACK_RST_INT_ACK_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_ACK_RST_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_ACK_RST_INT_ACK_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_ACK_RST_INT_ACK_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_ACK_EOI_INT_ACK_MASK 0x80
+#define  JBIG_CODEC_ODMA_INT_ACK_EOI_INT_ACK_SHIFT 7
+#define  JBIG_CODEC_ODMA_INT_ACK_EOI_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_ACK_EOI_INT_ACK_MASK) >> JBIG_CODEC_ODMA_INT_ACK_EOI_INT_ACK_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_ACK_EOI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_ACK_EOI_INT_ACK_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_ACK_EOI_INT_ACK_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_ACK_DIR_INT_ACK_MASK 0x40
+#define  JBIG_CODEC_ODMA_INT_ACK_DIR_INT_ACK_SHIFT 6
+#define  JBIG_CODEC_ODMA_INT_ACK_DIR_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_ACK_DIR_INT_ACK_MASK) >> JBIG_CODEC_ODMA_INT_ACK_DIR_INT_ACK_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_ACK_DIR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_ACK_DIR_INT_ACK_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_ACK_DIR_INT_ACK_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_ACK_CL_ALI_INT_ACK_MASK 0x20
+#define  JBIG_CODEC_ODMA_INT_ACK_CL_ALI_INT_ACK_SHIFT 5
+#define  JBIG_CODEC_ODMA_INT_ACK_CL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_ACK_CL_ALI_INT_ACK_MASK) >> JBIG_CODEC_ODMA_INT_ACK_CL_ALI_INT_ACK_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_ACK_CL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_ACK_CL_ALI_INT_ACK_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_ACK_CL_ALI_INT_ACK_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_ACK_EOL_ALI_INT_ACK_MASK 0x10
+#define  JBIG_CODEC_ODMA_INT_ACK_EOL_ALI_INT_ACK_SHIFT 4
+#define  JBIG_CODEC_ODMA_INT_ACK_EOL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_ACK_EOL_ALI_INT_ACK_MASK) >> JBIG_CODEC_ODMA_INT_ACK_EOL_ALI_INT_ACK_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_ACK_EOL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_ACK_EOL_ALI_INT_ACK_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_ACK_EOL_ALI_INT_ACK_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_ACK_EOI_ALI_INT_ACK_MASK 0x8
+#define  JBIG_CODEC_ODMA_INT_ACK_EOI_ALI_INT_ACK_SHIFT 3
+#define  JBIG_CODEC_ODMA_INT_ACK_EOI_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_ACK_EOI_ALI_INT_ACK_MASK) >> JBIG_CODEC_ODMA_INT_ACK_EOI_ALI_INT_ACK_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_ACK_EOI_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_ACK_EOI_ALI_INT_ACK_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_ACK_EOI_ALI_INT_ACK_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_ACK_EOI_ERR_INT_ACK_MASK 0x4
+#define  JBIG_CODEC_ODMA_INT_ACK_EOI_ERR_INT_ACK_SHIFT 2
+#define  JBIG_CODEC_ODMA_INT_ACK_EOI_ERR_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_ACK_EOI_ERR_INT_ACK_MASK) >> JBIG_CODEC_ODMA_INT_ACK_EOI_ERR_INT_ACK_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_ACK_EOI_ERR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_ACK_EOI_ERR_INT_ACK_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_ACK_EOI_ERR_INT_ACK_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_ACK_FIN_INT_ACK_MASK 0x2
+#define  JBIG_CODEC_ODMA_INT_ACK_FIN_INT_ACK_SHIFT 1
+#define  JBIG_CODEC_ODMA_INT_ACK_FIN_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_ACK_FIN_INT_ACK_MASK) >> JBIG_CODEC_ODMA_INT_ACK_FIN_INT_ACK_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_ACK_FIN_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_ACK_FIN_INT_ACK_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_ACK_FIN_INT_ACK_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_ACK_WHO_INT_ACK_MASK 0x1
+#define  JBIG_CODEC_ODMA_INT_ACK_WHO_INT_ACK_SHIFT 0
+#define  JBIG_CODEC_ODMA_INT_ACK_WHO_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_ACK_WHO_INT_ACK_MASK) >> JBIG_CODEC_ODMA_INT_ACK_WHO_INT_ACK_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_ACK_WHO_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_ACK_WHO_INT_ACK_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_ACK_WHO_INT_ACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (int_fo)
+//====================================================================
+
+#define  JBIG_CODEC_ODMA_INT_FO_RESERVED1_MASK 0xfffffe00
+#define  JBIG_CODEC_ODMA_INT_FO_RESERVED1_SHIFT 9
+#define  JBIG_CODEC_ODMA_INT_FO_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_FO_RESERVED1_MASK) >> JBIG_CODEC_ODMA_INT_FO_RESERVED1_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_FO_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_FO_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_FO_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_FO_RST_INT_FO_MASK 0x100
+#define  JBIG_CODEC_ODMA_INT_FO_RST_INT_FO_SHIFT 8
+#define  JBIG_CODEC_ODMA_INT_FO_RST_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_FO_RST_INT_FO_MASK) >> JBIG_CODEC_ODMA_INT_FO_RST_INT_FO_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_FO_RST_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_FO_RST_INT_FO_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_FO_RST_INT_FO_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_FO_EOI_INT_FO_MASK 0x80
+#define  JBIG_CODEC_ODMA_INT_FO_EOI_INT_FO_SHIFT 7
+#define  JBIG_CODEC_ODMA_INT_FO_EOI_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_FO_EOI_INT_FO_MASK) >> JBIG_CODEC_ODMA_INT_FO_EOI_INT_FO_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_FO_EOI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_FO_EOI_INT_FO_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_FO_EOI_INT_FO_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_FO_DIR_INT_FO_MASK 0x40
+#define  JBIG_CODEC_ODMA_INT_FO_DIR_INT_FO_SHIFT 6
+#define  JBIG_CODEC_ODMA_INT_FO_DIR_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_FO_DIR_INT_FO_MASK) >> JBIG_CODEC_ODMA_INT_FO_DIR_INT_FO_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_FO_DIR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_FO_DIR_INT_FO_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_FO_DIR_INT_FO_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_FO_CL_ALI_INT_FO_MASK 0x20
+#define  JBIG_CODEC_ODMA_INT_FO_CL_ALI_INT_FO_SHIFT 5
+#define  JBIG_CODEC_ODMA_INT_FO_CL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_FO_CL_ALI_INT_FO_MASK) >> JBIG_CODEC_ODMA_INT_FO_CL_ALI_INT_FO_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_FO_CL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_FO_CL_ALI_INT_FO_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_FO_CL_ALI_INT_FO_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_FO_EOL_ALI_INT_FO_MASK 0x10
+#define  JBIG_CODEC_ODMA_INT_FO_EOL_ALI_INT_FO_SHIFT 4
+#define  JBIG_CODEC_ODMA_INT_FO_EOL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_FO_EOL_ALI_INT_FO_MASK) >> JBIG_CODEC_ODMA_INT_FO_EOL_ALI_INT_FO_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_FO_EOL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_FO_EOL_ALI_INT_FO_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_FO_EOL_ALI_INT_FO_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_FO_EOI_ALI_INT_FO_MASK 0x8
+#define  JBIG_CODEC_ODMA_INT_FO_EOI_ALI_INT_FO_SHIFT 3
+#define  JBIG_CODEC_ODMA_INT_FO_EOI_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_FO_EOI_ALI_INT_FO_MASK) >> JBIG_CODEC_ODMA_INT_FO_EOI_ALI_INT_FO_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_FO_EOI_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_FO_EOI_ALI_INT_FO_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_FO_EOI_ALI_INT_FO_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_FO_EOI_ERR_INT_FO_MASK 0x4
+#define  JBIG_CODEC_ODMA_INT_FO_EOI_ERR_INT_FO_SHIFT 2
+#define  JBIG_CODEC_ODMA_INT_FO_EOI_ERR_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_FO_EOI_ERR_INT_FO_MASK) >> JBIG_CODEC_ODMA_INT_FO_EOI_ERR_INT_FO_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_FO_EOI_ERR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_FO_EOI_ERR_INT_FO_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_FO_EOI_ERR_INT_FO_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_FO_FIN_INT_FO_MASK 0x2
+#define  JBIG_CODEC_ODMA_INT_FO_FIN_INT_FO_SHIFT 1
+#define  JBIG_CODEC_ODMA_INT_FO_FIN_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_FO_FIN_INT_FO_MASK) >> JBIG_CODEC_ODMA_INT_FO_FIN_INT_FO_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_FO_FIN_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_FO_FIN_INT_FO_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_FO_FIN_INT_FO_SHIFT))
+
+#define  JBIG_CODEC_ODMA_INT_FO_WHO_INT_FO_MASK 0x1
+#define  JBIG_CODEC_ODMA_INT_FO_WHO_INT_FO_SHIFT 0
+#define  JBIG_CODEC_ODMA_INT_FO_WHO_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_INT_FO_WHO_INT_FO_MASK) >> JBIG_CODEC_ODMA_INT_FO_WHO_INT_FO_SHIFT)
+#define  JBIG_CODEC_ODMA_INT_FO_WHO_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_INT_FO_WHO_INT_FO_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_INT_FO_WHO_INT_FO_SHIFT))
+
+//====================================================================
+//Register: Descriptor Write Register (desc_write)
+//====================================================================
+
+#define  JBIG_CODEC_ODMA_DESC_WRITE_DESC_MASK 0xfffffffc
+#define  JBIG_CODEC_ODMA_DESC_WRITE_DESC_SHIFT 2
+#define  JBIG_CODEC_ODMA_DESC_WRITE_DESC_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_DESC_WRITE_DESC_MASK) >> JBIG_CODEC_ODMA_DESC_WRITE_DESC_SHIFT)
+#define  JBIG_CODEC_ODMA_DESC_WRITE_DESC_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_DESC_WRITE_DESC_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_DESC_WRITE_DESC_SHIFT))
+
+#define  JBIG_CODEC_ODMA_DESC_WRITE_RESERVED1_MASK 0x3
+#define  JBIG_CODEC_ODMA_DESC_WRITE_RESERVED1_SHIFT 0
+#define  JBIG_CODEC_ODMA_DESC_WRITE_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_DESC_WRITE_RESERVED1_MASK) >> JBIG_CODEC_ODMA_DESC_WRITE_RESERVED1_SHIFT)
+#define  JBIG_CODEC_ODMA_DESC_WRITE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_DESC_WRITE_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_DESC_WRITE_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Descriptor Read Register (desc_read)
+//====================================================================
+
+#define  JBIG_CODEC_ODMA_DESC_READ_DESC_MASK 0xffffffff
+#define  JBIG_CODEC_ODMA_DESC_READ_DESC_SHIFT 0
+#define  JBIG_CODEC_ODMA_DESC_READ_DESC_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_DESC_READ_DESC_MASK) >> JBIG_CODEC_ODMA_DESC_READ_DESC_SHIFT)
+#define  JBIG_CODEC_ODMA_DESC_READ_DESC_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_DESC_READ_DESC_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_DESC_READ_DESC_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Length Register (xfer_length)
+//====================================================================
+
+#define  JBIG_CODEC_ODMA_XFER_LENGTH_RESERVED1_MASK 0xff000000
+#define  JBIG_CODEC_ODMA_XFER_LENGTH_RESERVED1_SHIFT 24
+#define  JBIG_CODEC_ODMA_XFER_LENGTH_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_XFER_LENGTH_RESERVED1_MASK) >> JBIG_CODEC_ODMA_XFER_LENGTH_RESERVED1_SHIFT)
+#define  JBIG_CODEC_ODMA_XFER_LENGTH_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_XFER_LENGTH_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_XFER_LENGTH_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_ODMA_XFER_LENGTH_LEN_MASK 0xffffff
+#define  JBIG_CODEC_ODMA_XFER_LENGTH_LEN_SHIFT 0
+#define  JBIG_CODEC_ODMA_XFER_LENGTH_LEN_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_XFER_LENGTH_LEN_MASK) >> JBIG_CODEC_ODMA_XFER_LENGTH_LEN_SHIFT)
+#define  JBIG_CODEC_ODMA_XFER_LENGTH_LEN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_XFER_LENGTH_LEN_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_XFER_LENGTH_LEN_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Address Register (xfer_addr)
+//====================================================================
+
+#define  JBIG_CODEC_ODMA_XFER_ADDR_ADDR_MASK 0xffffffff
+#define  JBIG_CODEC_ODMA_XFER_ADDR_ADDR_SHIFT 0
+#define  JBIG_CODEC_ODMA_XFER_ADDR_ADDR_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_XFER_ADDR_ADDR_MASK) >> JBIG_CODEC_ODMA_XFER_ADDR_ADDR_SHIFT)
+#define  JBIG_CODEC_ODMA_XFER_ADDR_ADDR_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_XFER_ADDR_ADDR_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_XFER_ADDR_ADDR_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Burst Register (xfer_burst)
+//====================================================================
+
+#define  JBIG_CODEC_ODMA_XFER_BURST_RESERVED1_MASK 0xffffffe0
+#define  JBIG_CODEC_ODMA_XFER_BURST_RESERVED1_SHIFT 5
+#define  JBIG_CODEC_ODMA_XFER_BURST_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_XFER_BURST_RESERVED1_MASK) >> JBIG_CODEC_ODMA_XFER_BURST_RESERVED1_SHIFT)
+#define  JBIG_CODEC_ODMA_XFER_BURST_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_XFER_BURST_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_XFER_BURST_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_ODMA_XFER_BURST_BURST_MASK 0x1f
+#define  JBIG_CODEC_ODMA_XFER_BURST_BURST_SHIFT 0
+#define  JBIG_CODEC_ODMA_XFER_BURST_BURST_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_XFER_BURST_BURST_MASK) >> JBIG_CODEC_ODMA_XFER_BURST_BURST_SHIFT)
+#define  JBIG_CODEC_ODMA_XFER_BURST_BURST_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_XFER_BURST_BURST_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_XFER_BURST_BURST_SHIFT))
+
+//====================================================================
+//Register: Data Valid Register (data_val)
+//====================================================================
+
+#define  JBIG_CODEC_ODMA_DATA_VAL_DATA_VALID_MASK 0xffffffff
+#define  JBIG_CODEC_ODMA_DATA_VAL_DATA_VALID_SHIFT 0
+#define  JBIG_CODEC_ODMA_DATA_VAL_DATA_VALID_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_DATA_VAL_DATA_VALID_MASK) >> JBIG_CODEC_ODMA_DATA_VAL_DATA_VALID_SHIFT)
+#define  JBIG_CODEC_ODMA_DATA_VAL_DATA_VALID_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_DATA_VAL_DATA_VALID_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_DATA_VAL_DATA_VALID_SHIFT))
+
+//====================================================================
+//Register: Soft Reset register (reset)
+//====================================================================
+
+#define  JBIG_CODEC_ODMA_RESET_RESERVED1_MASK 0xfffffffe
+#define  JBIG_CODEC_ODMA_RESET_RESERVED1_SHIFT 1
+#define  JBIG_CODEC_ODMA_RESET_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_RESET_RESERVED1_MASK) >> JBIG_CODEC_ODMA_RESET_RESERVED1_SHIFT)
+#define  JBIG_CODEC_ODMA_RESET_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_RESET_RESERVED1_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_RESET_RESERVED1_SHIFT))
+
+#define  JBIG_CODEC_ODMA_RESET_SOFT_RESET_MASK 0x1
+#define  JBIG_CODEC_ODMA_RESET_SOFT_RESET_SHIFT 0
+#define  JBIG_CODEC_ODMA_RESET_SOFT_RESET_MASK_SHIFT(reg) (((reg) & JBIG_CODEC_ODMA_RESET_SOFT_RESET_MASK) >> JBIG_CODEC_ODMA_RESET_SOFT_RESET_SHIFT)
+#define  JBIG_CODEC_ODMA_RESET_SOFT_RESET_REPLACE_VAL(reg,val) (((reg) & ~JBIG_CODEC_ODMA_RESET_SOFT_RESET_MASK) | (((uint32_t)val) << JBIG_CODEC_ODMA_RESET_SOFT_RESET_SHIFT))
+
+//====================================================================
+//
+//Register File: IDMA Registers (JBIG_DECODE_IDMA)
+//
+//====================================================================
+
+//====================================================================
+//Register: Configuration register (cfg)
+//====================================================================
+
+#define  JBIG_DECODE_IDMA_CFG_RESERVED1_MASK 0xfe000000
+#define  JBIG_DECODE_IDMA_CFG_RESERVED1_SHIFT 25
+#define  JBIG_DECODE_IDMA_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_CFG_RESERVED1_MASK) >> JBIG_DECODE_IDMA_CFG_RESERVED1_SHIFT)
+#define  JBIG_DECODE_IDMA_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_CFG_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_CFG_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_IDMA_CFG_REPLICATE_MASK 0x1000000
+#define  JBIG_DECODE_IDMA_CFG_REPLICATE_SHIFT 24
+#define  JBIG_DECODE_IDMA_CFG_REPLICATE_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_CFG_REPLICATE_MASK) >> JBIG_DECODE_IDMA_CFG_REPLICATE_SHIFT)
+#define  JBIG_DECODE_IDMA_CFG_REPLICATE_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_CFG_REPLICATE_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_CFG_REPLICATE_SHIFT))
+
+#define  JBIG_DECODE_IDMA_CFG_RESERVED2_MASK 0xfe0000
+#define  JBIG_DECODE_IDMA_CFG_RESERVED2_SHIFT 17
+#define  JBIG_DECODE_IDMA_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_CFG_RESERVED2_MASK) >> JBIG_DECODE_IDMA_CFG_RESERVED2_SHIFT)
+#define  JBIG_DECODE_IDMA_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_CFG_RESERVED2_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_CFG_RESERVED2_SHIFT))
+
+#define  JBIG_DECODE_IDMA_CFG_ENABLE_MASK 0x10000
+#define  JBIG_DECODE_IDMA_CFG_ENABLE_SHIFT 16
+#define  JBIG_DECODE_IDMA_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_CFG_ENABLE_MASK) >> JBIG_DECODE_IDMA_CFG_ENABLE_SHIFT)
+#define  JBIG_DECODE_IDMA_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_CFG_ENABLE_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_CFG_ENABLE_SHIFT))
+
+#define  JBIG_DECODE_IDMA_CFG_RESERVED3_MASK 0xf800
+#define  JBIG_DECODE_IDMA_CFG_RESERVED3_SHIFT 11
+#define  JBIG_DECODE_IDMA_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_CFG_RESERVED3_MASK) >> JBIG_DECODE_IDMA_CFG_RESERVED3_SHIFT)
+#define  JBIG_DECODE_IDMA_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_CFG_RESERVED3_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_CFG_RESERVED3_SHIFT))
+
+#define  JBIG_DECODE_IDMA_CFG_OUT_WIDTH_MASK 0x700
+#define  JBIG_DECODE_IDMA_CFG_OUT_WIDTH_SHIFT 8
+#define  JBIG_DECODE_IDMA_CFG_OUT_WIDTH_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_CFG_OUT_WIDTH_MASK) >> JBIG_DECODE_IDMA_CFG_OUT_WIDTH_SHIFT)
+#define  JBIG_DECODE_IDMA_CFG_OUT_WIDTH_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_CFG_OUT_WIDTH_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_CFG_OUT_WIDTH_SHIFT))
+
+#define  JBIG_DECODE_IDMA_CFG_RESERVED4_MASK 0xfc
+#define  JBIG_DECODE_IDMA_CFG_RESERVED4_SHIFT 2
+#define  JBIG_DECODE_IDMA_CFG_RESERVED4_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_CFG_RESERVED4_MASK) >> JBIG_DECODE_IDMA_CFG_RESERVED4_SHIFT)
+#define  JBIG_DECODE_IDMA_CFG_RESERVED4_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_CFG_RESERVED4_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_CFG_RESERVED4_SHIFT))
+
+#define  JBIG_DECODE_IDMA_CFG_BURST_LEN_MASK 0x3
+#define  JBIG_DECODE_IDMA_CFG_BURST_LEN_SHIFT 0
+#define  JBIG_DECODE_IDMA_CFG_BURST_LEN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_CFG_BURST_LEN_MASK) >> JBIG_DECODE_IDMA_CFG_BURST_LEN_SHIFT)
+#define  JBIG_DECODE_IDMA_CFG_BURST_LEN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_CFG_BURST_LEN_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_CFG_BURST_LEN_SHIFT))
+
+//====================================================================
+//Register: Status register (status)
+//====================================================================
+
+#define  JBIG_DECODE_IDMA_STATUS_RESERVED1_MASK 0xfffffe00
+#define  JBIG_DECODE_IDMA_STATUS_RESERVED1_SHIFT 9
+#define  JBIG_DECODE_IDMA_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_STATUS_RESERVED1_MASK) >> JBIG_DECODE_IDMA_STATUS_RESERVED1_SHIFT)
+#define  JBIG_DECODE_IDMA_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_STATUS_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_STATUS_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_IDMA_STATUS_SOI_MASK 0x100
+#define  JBIG_DECODE_IDMA_STATUS_SOI_SHIFT 8
+#define  JBIG_DECODE_IDMA_STATUS_SOI_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_STATUS_SOI_MASK) >> JBIG_DECODE_IDMA_STATUS_SOI_SHIFT)
+#define  JBIG_DECODE_IDMA_STATUS_SOI_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_STATUS_SOI_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_STATUS_SOI_SHIFT))
+
+#define  JBIG_DECODE_IDMA_STATUS_EOI_MASK 0x80
+#define  JBIG_DECODE_IDMA_STATUS_EOI_SHIFT 7
+#define  JBIG_DECODE_IDMA_STATUS_EOI_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_STATUS_EOI_MASK) >> JBIG_DECODE_IDMA_STATUS_EOI_SHIFT)
+#define  JBIG_DECODE_IDMA_STATUS_EOI_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_STATUS_EOI_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_STATUS_EOI_SHIFT))
+
+#define  JBIG_DECODE_IDMA_STATUS_SOFTRESET_MASK 0x40
+#define  JBIG_DECODE_IDMA_STATUS_SOFTRESET_SHIFT 6
+#define  JBIG_DECODE_IDMA_STATUS_SOFTRESET_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_STATUS_SOFTRESET_MASK) >> JBIG_DECODE_IDMA_STATUS_SOFTRESET_SHIFT)
+#define  JBIG_DECODE_IDMA_STATUS_SOFTRESET_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_STATUS_SOFTRESET_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_STATUS_SOFTRESET_SHIFT))
+
+#define  JBIG_DECODE_IDMA_STATUS_FULL_CBUF_MASK 0x20
+#define  JBIG_DECODE_IDMA_STATUS_FULL_CBUF_SHIFT 5
+#define  JBIG_DECODE_IDMA_STATUS_FULL_CBUF_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_STATUS_FULL_CBUF_MASK) >> JBIG_DECODE_IDMA_STATUS_FULL_CBUF_SHIFT)
+#define  JBIG_DECODE_IDMA_STATUS_FULL_CBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_STATUS_FULL_CBUF_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_STATUS_FULL_CBUF_SHIFT))
+
+#define  JBIG_DECODE_IDMA_STATUS_EMPTY_CBUF_MASK 0x10
+#define  JBIG_DECODE_IDMA_STATUS_EMPTY_CBUF_SHIFT 4
+#define  JBIG_DECODE_IDMA_STATUS_EMPTY_CBUF_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_STATUS_EMPTY_CBUF_MASK) >> JBIG_DECODE_IDMA_STATUS_EMPTY_CBUF_SHIFT)
+#define  JBIG_DECODE_IDMA_STATUS_EMPTY_CBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_STATUS_EMPTY_CBUF_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_STATUS_EMPTY_CBUF_SHIFT))
+
+#define  JBIG_DECODE_IDMA_STATUS_FULL_DBUF_MASK 0x8
+#define  JBIG_DECODE_IDMA_STATUS_FULL_DBUF_SHIFT 3
+#define  JBIG_DECODE_IDMA_STATUS_FULL_DBUF_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_STATUS_FULL_DBUF_MASK) >> JBIG_DECODE_IDMA_STATUS_FULL_DBUF_SHIFT)
+#define  JBIG_DECODE_IDMA_STATUS_FULL_DBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_STATUS_FULL_DBUF_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_STATUS_FULL_DBUF_SHIFT))
+
+#define  JBIG_DECODE_IDMA_STATUS_EMPTY_DBUF_MASK 0x4
+#define  JBIG_DECODE_IDMA_STATUS_EMPTY_DBUF_SHIFT 2
+#define  JBIG_DECODE_IDMA_STATUS_EMPTY_DBUF_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_STATUS_EMPTY_DBUF_MASK) >> JBIG_DECODE_IDMA_STATUS_EMPTY_DBUF_SHIFT)
+#define  JBIG_DECODE_IDMA_STATUS_EMPTY_DBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_STATUS_EMPTY_DBUF_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_STATUS_EMPTY_DBUF_SHIFT))
+
+#define  JBIG_DECODE_IDMA_STATUS_PACKER_EMPTY_MASK 0x2
+#define  JBIG_DECODE_IDMA_STATUS_PACKER_EMPTY_SHIFT 1
+#define  JBIG_DECODE_IDMA_STATUS_PACKER_EMPTY_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_STATUS_PACKER_EMPTY_MASK) >> JBIG_DECODE_IDMA_STATUS_PACKER_EMPTY_SHIFT)
+#define  JBIG_DECODE_IDMA_STATUS_PACKER_EMPTY_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_STATUS_PACKER_EMPTY_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_STATUS_PACKER_EMPTY_SHIFT))
+
+#define  JBIG_DECODE_IDMA_STATUS_DMA_BUSY_MASK 0x1
+#define  JBIG_DECODE_IDMA_STATUS_DMA_BUSY_SHIFT 0
+#define  JBIG_DECODE_IDMA_STATUS_DMA_BUSY_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_STATUS_DMA_BUSY_MASK) >> JBIG_DECODE_IDMA_STATUS_DMA_BUSY_SHIFT)
+#define  JBIG_DECODE_IDMA_STATUS_DMA_BUSY_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_STATUS_DMA_BUSY_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_STATUS_DMA_BUSY_SHIFT))
+
+//====================================================================
+//Register: Line Width register (line_width)
+//====================================================================
+
+#define  JBIG_DECODE_IDMA_LINE_WIDTH_RESERVED1_MASK 0xffff0000
+#define  JBIG_DECODE_IDMA_LINE_WIDTH_RESERVED1_SHIFT 16
+#define  JBIG_DECODE_IDMA_LINE_WIDTH_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_LINE_WIDTH_RESERVED1_MASK) >> JBIG_DECODE_IDMA_LINE_WIDTH_RESERVED1_SHIFT)
+#define  JBIG_DECODE_IDMA_LINE_WIDTH_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_LINE_WIDTH_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_LINE_WIDTH_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_IDMA_LINE_WIDTH_LINE_WIDTH_MASK 0xffff
+#define  JBIG_DECODE_IDMA_LINE_WIDTH_LINE_WIDTH_SHIFT 0
+#define  JBIG_DECODE_IDMA_LINE_WIDTH_LINE_WIDTH_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_LINE_WIDTH_LINE_WIDTH_MASK) >> JBIG_DECODE_IDMA_LINE_WIDTH_LINE_WIDTH_SHIFT)
+#define  JBIG_DECODE_IDMA_LINE_WIDTH_LINE_WIDTH_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_LINE_WIDTH_LINE_WIDTH_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_LINE_WIDTH_LINE_WIDTH_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (int_en)
+//====================================================================
+
+#define  JBIG_DECODE_IDMA_INT_EN_RESERVED1_MASK 0xfffffff0
+#define  JBIG_DECODE_IDMA_INT_EN_RESERVED1_SHIFT 4
+#define  JBIG_DECODE_IDMA_INT_EN_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_EN_RESERVED1_MASK) >> JBIG_DECODE_IDMA_INT_EN_RESERVED1_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_EN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_EN_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_EN_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_EN_RST_INT_EN_MASK 0x8
+#define  JBIG_DECODE_IDMA_INT_EN_RST_INT_EN_SHIFT 3
+#define  JBIG_DECODE_IDMA_INT_EN_RST_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_EN_RST_INT_EN_MASK) >> JBIG_DECODE_IDMA_INT_EN_RST_INT_EN_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_EN_RST_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_EN_RST_INT_EN_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_EN_RST_INT_EN_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_EN_EOI_INT_EN_MASK 0x4
+#define  JBIG_DECODE_IDMA_INT_EN_EOI_INT_EN_SHIFT 2
+#define  JBIG_DECODE_IDMA_INT_EN_EOI_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_EN_EOI_INT_EN_MASK) >> JBIG_DECODE_IDMA_INT_EN_EOI_INT_EN_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_EN_EOI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_EN_EOI_INT_EN_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_EN_EOI_INT_EN_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_EN_FIN_INT_EN_MASK 0x2
+#define  JBIG_DECODE_IDMA_INT_EN_FIN_INT_EN_SHIFT 1
+#define  JBIG_DECODE_IDMA_INT_EN_FIN_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_EN_FIN_INT_EN_MASK) >> JBIG_DECODE_IDMA_INT_EN_FIN_INT_EN_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_EN_FIN_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_EN_FIN_INT_EN_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_EN_FIN_INT_EN_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_EN_WHO_INT_EN_MASK 0x1
+#define  JBIG_DECODE_IDMA_INT_EN_WHO_INT_EN_SHIFT 0
+#define  JBIG_DECODE_IDMA_INT_EN_WHO_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_EN_WHO_INT_EN_MASK) >> JBIG_DECODE_IDMA_INT_EN_WHO_INT_EN_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_EN_WHO_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_EN_WHO_INT_EN_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_EN_WHO_INT_EN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (int_st)
+//====================================================================
+
+#define  JBIG_DECODE_IDMA_INT_ST_RESERVED1_MASK 0xfffffff0
+#define  JBIG_DECODE_IDMA_INT_ST_RESERVED1_SHIFT 4
+#define  JBIG_DECODE_IDMA_INT_ST_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_ST_RESERVED1_MASK) >> JBIG_DECODE_IDMA_INT_ST_RESERVED1_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_ST_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_ST_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_ST_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_ST_RST_INT_ST_MASK 0x8
+#define  JBIG_DECODE_IDMA_INT_ST_RST_INT_ST_SHIFT 3
+#define  JBIG_DECODE_IDMA_INT_ST_RST_INT_ST_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_ST_RST_INT_ST_MASK) >> JBIG_DECODE_IDMA_INT_ST_RST_INT_ST_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_ST_RST_INT_ST_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_ST_RST_INT_ST_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_ST_RST_INT_ST_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_ST_EOI_INT_ST_MASK 0x4
+#define  JBIG_DECODE_IDMA_INT_ST_EOI_INT_ST_SHIFT 2
+#define  JBIG_DECODE_IDMA_INT_ST_EOI_INT_ST_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_ST_EOI_INT_ST_MASK) >> JBIG_DECODE_IDMA_INT_ST_EOI_INT_ST_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_ST_EOI_INT_ST_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_ST_EOI_INT_ST_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_ST_EOI_INT_ST_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_ST_FIN_INT_ST_MASK 0x2
+#define  JBIG_DECODE_IDMA_INT_ST_FIN_INT_ST_SHIFT 1
+#define  JBIG_DECODE_IDMA_INT_ST_FIN_INT_ST_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_ST_FIN_INT_ST_MASK) >> JBIG_DECODE_IDMA_INT_ST_FIN_INT_ST_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_ST_FIN_INT_ST_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_ST_FIN_INT_ST_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_ST_FIN_INT_ST_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_ST_WHO_INT_ST_MASK 0x1
+#define  JBIG_DECODE_IDMA_INT_ST_WHO_INT_ST_SHIFT 0
+#define  JBIG_DECODE_IDMA_INT_ST_WHO_INT_ST_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_ST_WHO_INT_ST_MASK) >> JBIG_DECODE_IDMA_INT_ST_WHO_INT_ST_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_ST_WHO_INT_ST_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_ST_WHO_INT_ST_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_ST_WHO_INT_ST_SHIFT))
+
+//====================================================================
+//Register: Interrupt Clear Register (int_cl)
+//====================================================================
+
+#define  JBIG_DECODE_IDMA_INT_CL_RESERVED1_MASK 0xfffffff0
+#define  JBIG_DECODE_IDMA_INT_CL_RESERVED1_SHIFT 4
+#define  JBIG_DECODE_IDMA_INT_CL_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_CL_RESERVED1_MASK) >> JBIG_DECODE_IDMA_INT_CL_RESERVED1_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_CL_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_CL_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_CL_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_CL_RST_INT_CL_MASK 0x8
+#define  JBIG_DECODE_IDMA_INT_CL_RST_INT_CL_SHIFT 3
+#define  JBIG_DECODE_IDMA_INT_CL_RST_INT_CL_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_CL_RST_INT_CL_MASK) >> JBIG_DECODE_IDMA_INT_CL_RST_INT_CL_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_CL_RST_INT_CL_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_CL_RST_INT_CL_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_CL_RST_INT_CL_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_CL_EOI_INT_CL_MASK 0x4
+#define  JBIG_DECODE_IDMA_INT_CL_EOI_INT_CL_SHIFT 2
+#define  JBIG_DECODE_IDMA_INT_CL_EOI_INT_CL_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_CL_EOI_INT_CL_MASK) >> JBIG_DECODE_IDMA_INT_CL_EOI_INT_CL_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_CL_EOI_INT_CL_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_CL_EOI_INT_CL_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_CL_EOI_INT_CL_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_CL_FIN_INT_CL_MASK 0x2
+#define  JBIG_DECODE_IDMA_INT_CL_FIN_INT_CL_SHIFT 1
+#define  JBIG_DECODE_IDMA_INT_CL_FIN_INT_CL_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_CL_FIN_INT_CL_MASK) >> JBIG_DECODE_IDMA_INT_CL_FIN_INT_CL_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_CL_FIN_INT_CL_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_CL_FIN_INT_CL_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_CL_FIN_INT_CL_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_CL_WHO_INT_CL_MASK 0x1
+#define  JBIG_DECODE_IDMA_INT_CL_WHO_INT_CL_SHIFT 0
+#define  JBIG_DECODE_IDMA_INT_CL_WHO_INT_CL_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_CL_WHO_INT_CL_MASK) >> JBIG_DECODE_IDMA_INT_CL_WHO_INT_CL_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_CL_WHO_INT_CL_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_CL_WHO_INT_CL_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_CL_WHO_INT_CL_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (int_fo)
+//====================================================================
+
+#define  JBIG_DECODE_IDMA_INT_FO_RESERVED1_MASK 0xfffffff0
+#define  JBIG_DECODE_IDMA_INT_FO_RESERVED1_SHIFT 4
+#define  JBIG_DECODE_IDMA_INT_FO_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_FO_RESERVED1_MASK) >> JBIG_DECODE_IDMA_INT_FO_RESERVED1_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_FO_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_FO_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_FO_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_FO_RST_INT_FO_MASK 0x8
+#define  JBIG_DECODE_IDMA_INT_FO_RST_INT_FO_SHIFT 3
+#define  JBIG_DECODE_IDMA_INT_FO_RST_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_FO_RST_INT_FO_MASK) >> JBIG_DECODE_IDMA_INT_FO_RST_INT_FO_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_FO_RST_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_FO_RST_INT_FO_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_FO_RST_INT_FO_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_FO_EOI_INT_FO_MASK 0x4
+#define  JBIG_DECODE_IDMA_INT_FO_EOI_INT_FO_SHIFT 2
+#define  JBIG_DECODE_IDMA_INT_FO_EOI_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_FO_EOI_INT_FO_MASK) >> JBIG_DECODE_IDMA_INT_FO_EOI_INT_FO_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_FO_EOI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_FO_EOI_INT_FO_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_FO_EOI_INT_FO_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_FO_FIN_INT_FO_MASK 0x2
+#define  JBIG_DECODE_IDMA_INT_FO_FIN_INT_FO_SHIFT 1
+#define  JBIG_DECODE_IDMA_INT_FO_FIN_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_FO_FIN_INT_FO_MASK) >> JBIG_DECODE_IDMA_INT_FO_FIN_INT_FO_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_FO_FIN_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_FO_FIN_INT_FO_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_FO_FIN_INT_FO_SHIFT))
+
+#define  JBIG_DECODE_IDMA_INT_FO_WHO_INT_FO_MASK 0x1
+#define  JBIG_DECODE_IDMA_INT_FO_WHO_INT_FO_SHIFT 0
+#define  JBIG_DECODE_IDMA_INT_FO_WHO_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_INT_FO_WHO_INT_FO_MASK) >> JBIG_DECODE_IDMA_INT_FO_WHO_INT_FO_SHIFT)
+#define  JBIG_DECODE_IDMA_INT_FO_WHO_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_INT_FO_WHO_INT_FO_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_INT_FO_WHO_INT_FO_SHIFT))
+
+//====================================================================
+//Register: Descriptor Write Register (desc_write)
+//====================================================================
+
+#define  JBIG_DECODE_IDMA_DESC_WRITE_DESC_MASK 0xffffffff
+#define  JBIG_DECODE_IDMA_DESC_WRITE_DESC_SHIFT 0
+#define  JBIG_DECODE_IDMA_DESC_WRITE_DESC_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_DESC_WRITE_DESC_MASK) >> JBIG_DECODE_IDMA_DESC_WRITE_DESC_SHIFT)
+#define  JBIG_DECODE_IDMA_DESC_WRITE_DESC_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_DESC_WRITE_DESC_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_DESC_WRITE_DESC_SHIFT))
+
+//====================================================================
+//Register: Descriptor Read Register (desc_read)
+//====================================================================
+
+#define  JBIG_DECODE_IDMA_DESC_READ_DESC_MASK 0xffffffff
+#define  JBIG_DECODE_IDMA_DESC_READ_DESC_SHIFT 0
+#define  JBIG_DECODE_IDMA_DESC_READ_DESC_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_DESC_READ_DESC_MASK) >> JBIG_DECODE_IDMA_DESC_READ_DESC_SHIFT)
+#define  JBIG_DECODE_IDMA_DESC_READ_DESC_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_DESC_READ_DESC_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_DESC_READ_DESC_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Length Register (xfer_length)
+//====================================================================
+
+#define  JBIG_DECODE_IDMA_XFER_LENGTH_RESERVED1_MASK 0xff000000
+#define  JBIG_DECODE_IDMA_XFER_LENGTH_RESERVED1_SHIFT 24
+#define  JBIG_DECODE_IDMA_XFER_LENGTH_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_XFER_LENGTH_RESERVED1_MASK) >> JBIG_DECODE_IDMA_XFER_LENGTH_RESERVED1_SHIFT)
+#define  JBIG_DECODE_IDMA_XFER_LENGTH_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_XFER_LENGTH_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_XFER_LENGTH_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_IDMA_XFER_LENGTH_LEN_MASK 0xffffff
+#define  JBIG_DECODE_IDMA_XFER_LENGTH_LEN_SHIFT 0
+#define  JBIG_DECODE_IDMA_XFER_LENGTH_LEN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_XFER_LENGTH_LEN_MASK) >> JBIG_DECODE_IDMA_XFER_LENGTH_LEN_SHIFT)
+#define  JBIG_DECODE_IDMA_XFER_LENGTH_LEN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_XFER_LENGTH_LEN_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_XFER_LENGTH_LEN_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Address Register (xfer_addr)
+//====================================================================
+
+#define  JBIG_DECODE_IDMA_XFER_ADDR_ADDR_MASK 0xffffffff
+#define  JBIG_DECODE_IDMA_XFER_ADDR_ADDR_SHIFT 0
+#define  JBIG_DECODE_IDMA_XFER_ADDR_ADDR_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_XFER_ADDR_ADDR_MASK) >> JBIG_DECODE_IDMA_XFER_ADDR_ADDR_SHIFT)
+#define  JBIG_DECODE_IDMA_XFER_ADDR_ADDR_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_XFER_ADDR_ADDR_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_XFER_ADDR_ADDR_SHIFT))
+
+//====================================================================
+//Register: Descriptor Control Word Register (ctrl_word)
+//====================================================================
+
+#define  JBIG_DECODE_IDMA_CTRL_WORD_CTRL_WORD_MASK 0xffffffff
+#define  JBIG_DECODE_IDMA_CTRL_WORD_CTRL_WORD_SHIFT 0
+#define  JBIG_DECODE_IDMA_CTRL_WORD_CTRL_WORD_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_CTRL_WORD_CTRL_WORD_MASK) >> JBIG_DECODE_IDMA_CTRL_WORD_CTRL_WORD_SHIFT)
+#define  JBIG_DECODE_IDMA_CTRL_WORD_CTRL_WORD_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_CTRL_WORD_CTRL_WORD_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_CTRL_WORD_CTRL_WORD_SHIFT))
+
+//====================================================================
+//Register: Soft Reset register (reset)
+//====================================================================
+
+#define  JBIG_DECODE_IDMA_RESET_RESERVED1_MASK 0xfffffffe
+#define  JBIG_DECODE_IDMA_RESET_RESERVED1_SHIFT 1
+#define  JBIG_DECODE_IDMA_RESET_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_RESET_RESERVED1_MASK) >> JBIG_DECODE_IDMA_RESET_RESERVED1_SHIFT)
+#define  JBIG_DECODE_IDMA_RESET_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_RESET_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_RESET_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_IDMA_RESET_SOFT_RESET_MASK 0x1
+#define  JBIG_DECODE_IDMA_RESET_SOFT_RESET_SHIFT 0
+#define  JBIG_DECODE_IDMA_RESET_SOFT_RESET_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_IDMA_RESET_SOFT_RESET_MASK) >> JBIG_DECODE_IDMA_RESET_SOFT_RESET_SHIFT)
+#define  JBIG_DECODE_IDMA_RESET_SOFT_RESET_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_IDMA_RESET_SOFT_RESET_MASK) | (((uint32_t)val) << JBIG_DECODE_IDMA_RESET_SOFT_RESET_SHIFT))
+
+//====================================================================
+//
+//Register File: ODMA Registers (JBIG_DECODE_ODMA)
+//
+//====================================================================
+
+//====================================================================
+//Register: Configuration register (cfg)
+//====================================================================
+
+#define  JBIG_DECODE_ODMA_CFG_RESERVED1_MASK 0xffc00000
+#define  JBIG_DECODE_ODMA_CFG_RESERVED1_SHIFT 22
+#define  JBIG_DECODE_ODMA_CFG_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_CFG_RESERVED1_MASK) >> JBIG_DECODE_ODMA_CFG_RESERVED1_SHIFT)
+#define  JBIG_DECODE_ODMA_CFG_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_CFG_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_CFG_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_ODMA_CFG_SERPENTINE_MASK 0x200000
+#define  JBIG_DECODE_ODMA_CFG_SERPENTINE_SHIFT 21
+#define  JBIG_DECODE_ODMA_CFG_SERPENTINE_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_CFG_SERPENTINE_MASK) >> JBIG_DECODE_ODMA_CFG_SERPENTINE_SHIFT)
+#define  JBIG_DECODE_ODMA_CFG_SERPENTINE_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_CFG_SERPENTINE_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_CFG_SERPENTINE_SHIFT))
+
+#define  JBIG_DECODE_ODMA_CFG_LINE_REV_MASK 0x100000
+#define  JBIG_DECODE_ODMA_CFG_LINE_REV_SHIFT 20
+#define  JBIG_DECODE_ODMA_CFG_LINE_REV_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_CFG_LINE_REV_MASK) >> JBIG_DECODE_ODMA_CFG_LINE_REV_SHIFT)
+#define  JBIG_DECODE_ODMA_CFG_LINE_REV_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_CFG_LINE_REV_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_CFG_LINE_REV_SHIFT))
+
+#define  JBIG_DECODE_ODMA_CFG_TRAN_REV_MASK 0x80000
+#define  JBIG_DECODE_ODMA_CFG_TRAN_REV_SHIFT 19
+#define  JBIG_DECODE_ODMA_CFG_TRAN_REV_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_CFG_TRAN_REV_MASK) >> JBIG_DECODE_ODMA_CFG_TRAN_REV_SHIFT)
+#define  JBIG_DECODE_ODMA_CFG_TRAN_REV_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_CFG_TRAN_REV_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_CFG_TRAN_REV_SHIFT))
+
+#define  JBIG_DECODE_ODMA_CFG_UPPER_HALF_MASK 0x40000
+#define  JBIG_DECODE_ODMA_CFG_UPPER_HALF_SHIFT 18
+#define  JBIG_DECODE_ODMA_CFG_UPPER_HALF_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_CFG_UPPER_HALF_MASK) >> JBIG_DECODE_ODMA_CFG_UPPER_HALF_SHIFT)
+#define  JBIG_DECODE_ODMA_CFG_UPPER_HALF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_CFG_UPPER_HALF_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_CFG_UPPER_HALF_SHIFT))
+
+#define  JBIG_DECODE_ODMA_CFG_MSB_IN_MASK 0x20000
+#define  JBIG_DECODE_ODMA_CFG_MSB_IN_SHIFT 17
+#define  JBIG_DECODE_ODMA_CFG_MSB_IN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_CFG_MSB_IN_MASK) >> JBIG_DECODE_ODMA_CFG_MSB_IN_SHIFT)
+#define  JBIG_DECODE_ODMA_CFG_MSB_IN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_CFG_MSB_IN_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_CFG_MSB_IN_SHIFT))
+
+#define  JBIG_DECODE_ODMA_CFG_ENABLE_MASK 0x10000
+#define  JBIG_DECODE_ODMA_CFG_ENABLE_SHIFT 16
+#define  JBIG_DECODE_ODMA_CFG_ENABLE_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_CFG_ENABLE_MASK) >> JBIG_DECODE_ODMA_CFG_ENABLE_SHIFT)
+#define  JBIG_DECODE_ODMA_CFG_ENABLE_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_CFG_ENABLE_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_CFG_ENABLE_SHIFT))
+
+#define  JBIG_DECODE_ODMA_CFG_RESERVED2_MASK 0xf800
+#define  JBIG_DECODE_ODMA_CFG_RESERVED2_SHIFT 11
+#define  JBIG_DECODE_ODMA_CFG_RESERVED2_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_CFG_RESERVED2_MASK) >> JBIG_DECODE_ODMA_CFG_RESERVED2_SHIFT)
+#define  JBIG_DECODE_ODMA_CFG_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_CFG_RESERVED2_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_CFG_RESERVED2_SHIFT))
+
+#define  JBIG_DECODE_ODMA_CFG_IN_WIDTH_MASK 0x700
+#define  JBIG_DECODE_ODMA_CFG_IN_WIDTH_SHIFT 8
+#define  JBIG_DECODE_ODMA_CFG_IN_WIDTH_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_CFG_IN_WIDTH_MASK) >> JBIG_DECODE_ODMA_CFG_IN_WIDTH_SHIFT)
+#define  JBIG_DECODE_ODMA_CFG_IN_WIDTH_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_CFG_IN_WIDTH_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_CFG_IN_WIDTH_SHIFT))
+
+#define  JBIG_DECODE_ODMA_CFG_RESERVED3_MASK 0xfc
+#define  JBIG_DECODE_ODMA_CFG_RESERVED3_SHIFT 2
+#define  JBIG_DECODE_ODMA_CFG_RESERVED3_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_CFG_RESERVED3_MASK) >> JBIG_DECODE_ODMA_CFG_RESERVED3_SHIFT)
+#define  JBIG_DECODE_ODMA_CFG_RESERVED3_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_CFG_RESERVED3_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_CFG_RESERVED3_SHIFT))
+
+#define  JBIG_DECODE_ODMA_CFG_BURST_LEN_MASK 0x3
+#define  JBIG_DECODE_ODMA_CFG_BURST_LEN_SHIFT 0
+#define  JBIG_DECODE_ODMA_CFG_BURST_LEN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_CFG_BURST_LEN_MASK) >> JBIG_DECODE_ODMA_CFG_BURST_LEN_SHIFT)
+#define  JBIG_DECODE_ODMA_CFG_BURST_LEN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_CFG_BURST_LEN_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_CFG_BURST_LEN_SHIFT))
+
+//====================================================================
+//Register: Status register (status)
+//====================================================================
+
+#define  JBIG_DECODE_ODMA_STATUS_RESERVED1_MASK 0xfffff800
+#define  JBIG_DECODE_ODMA_STATUS_RESERVED1_SHIFT 11
+#define  JBIG_DECODE_ODMA_STATUS_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_STATUS_RESERVED1_MASK) >> JBIG_DECODE_ODMA_STATUS_RESERVED1_SHIFT)
+#define  JBIG_DECODE_ODMA_STATUS_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_STATUS_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_STATUS_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_ODMA_STATUS_DESC_OWN_MASK 0x400
+#define  JBIG_DECODE_ODMA_STATUS_DESC_OWN_SHIFT 10
+#define  JBIG_DECODE_ODMA_STATUS_DESC_OWN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_STATUS_DESC_OWN_MASK) >> JBIG_DECODE_ODMA_STATUS_DESC_OWN_SHIFT)
+#define  JBIG_DECODE_ODMA_STATUS_DESC_OWN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_STATUS_DESC_OWN_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_STATUS_DESC_OWN_SHIFT))
+
+#define  JBIG_DECODE_ODMA_STATUS_DESC_EOI_MASK 0x200
+#define  JBIG_DECODE_ODMA_STATUS_DESC_EOI_SHIFT 9
+#define  JBIG_DECODE_ODMA_STATUS_DESC_EOI_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_STATUS_DESC_EOI_MASK) >> JBIG_DECODE_ODMA_STATUS_DESC_EOI_SHIFT)
+#define  JBIG_DECODE_ODMA_STATUS_DESC_EOI_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_STATUS_DESC_EOI_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_STATUS_DESC_EOI_SHIFT))
+
+#define  JBIG_DECODE_ODMA_STATUS_DESC_SOI_MASK 0x100
+#define  JBIG_DECODE_ODMA_STATUS_DESC_SOI_SHIFT 8
+#define  JBIG_DECODE_ODMA_STATUS_DESC_SOI_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_STATUS_DESC_SOI_MASK) >> JBIG_DECODE_ODMA_STATUS_DESC_SOI_SHIFT)
+#define  JBIG_DECODE_ODMA_STATUS_DESC_SOI_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_STATUS_DESC_SOI_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_STATUS_DESC_SOI_SHIFT))
+
+#define  JBIG_DECODE_ODMA_STATUS_REVERSE_MASK 0x80
+#define  JBIG_DECODE_ODMA_STATUS_REVERSE_SHIFT 7
+#define  JBIG_DECODE_ODMA_STATUS_REVERSE_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_STATUS_REVERSE_MASK) >> JBIG_DECODE_ODMA_STATUS_REVERSE_SHIFT)
+#define  JBIG_DECODE_ODMA_STATUS_REVERSE_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_STATUS_REVERSE_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_STATUS_REVERSE_SHIFT))
+
+#define  JBIG_DECODE_ODMA_STATUS_SOFTRESET_MASK 0x40
+#define  JBIG_DECODE_ODMA_STATUS_SOFTRESET_SHIFT 6
+#define  JBIG_DECODE_ODMA_STATUS_SOFTRESET_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_STATUS_SOFTRESET_MASK) >> JBIG_DECODE_ODMA_STATUS_SOFTRESET_SHIFT)
+#define  JBIG_DECODE_ODMA_STATUS_SOFTRESET_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_STATUS_SOFTRESET_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_STATUS_SOFTRESET_SHIFT))
+
+#define  JBIG_DECODE_ODMA_STATUS_FULL_CBUF_MASK 0x20
+#define  JBIG_DECODE_ODMA_STATUS_FULL_CBUF_SHIFT 5
+#define  JBIG_DECODE_ODMA_STATUS_FULL_CBUF_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_STATUS_FULL_CBUF_MASK) >> JBIG_DECODE_ODMA_STATUS_FULL_CBUF_SHIFT)
+#define  JBIG_DECODE_ODMA_STATUS_FULL_CBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_STATUS_FULL_CBUF_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_STATUS_FULL_CBUF_SHIFT))
+
+#define  JBIG_DECODE_ODMA_STATUS_EMPTY_CBUF_MASK 0x10
+#define  JBIG_DECODE_ODMA_STATUS_EMPTY_CBUF_SHIFT 4
+#define  JBIG_DECODE_ODMA_STATUS_EMPTY_CBUF_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_STATUS_EMPTY_CBUF_MASK) >> JBIG_DECODE_ODMA_STATUS_EMPTY_CBUF_SHIFT)
+#define  JBIG_DECODE_ODMA_STATUS_EMPTY_CBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_STATUS_EMPTY_CBUF_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_STATUS_EMPTY_CBUF_SHIFT))
+
+#define  JBIG_DECODE_ODMA_STATUS_FULL_DBUF_MASK 0x8
+#define  JBIG_DECODE_ODMA_STATUS_FULL_DBUF_SHIFT 3
+#define  JBIG_DECODE_ODMA_STATUS_FULL_DBUF_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_STATUS_FULL_DBUF_MASK) >> JBIG_DECODE_ODMA_STATUS_FULL_DBUF_SHIFT)
+#define  JBIG_DECODE_ODMA_STATUS_FULL_DBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_STATUS_FULL_DBUF_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_STATUS_FULL_DBUF_SHIFT))
+
+#define  JBIG_DECODE_ODMA_STATUS_EMPTY_DBUF_MASK 0x4
+#define  JBIG_DECODE_ODMA_STATUS_EMPTY_DBUF_SHIFT 2
+#define  JBIG_DECODE_ODMA_STATUS_EMPTY_DBUF_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_STATUS_EMPTY_DBUF_MASK) >> JBIG_DECODE_ODMA_STATUS_EMPTY_DBUF_SHIFT)
+#define  JBIG_DECODE_ODMA_STATUS_EMPTY_DBUF_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_STATUS_EMPTY_DBUF_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_STATUS_EMPTY_DBUF_SHIFT))
+
+#define  JBIG_DECODE_ODMA_STATUS_PACKER_EMPTY_MASK 0x2
+#define  JBIG_DECODE_ODMA_STATUS_PACKER_EMPTY_SHIFT 1
+#define  JBIG_DECODE_ODMA_STATUS_PACKER_EMPTY_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_STATUS_PACKER_EMPTY_MASK) >> JBIG_DECODE_ODMA_STATUS_PACKER_EMPTY_SHIFT)
+#define  JBIG_DECODE_ODMA_STATUS_PACKER_EMPTY_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_STATUS_PACKER_EMPTY_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_STATUS_PACKER_EMPTY_SHIFT))
+
+#define  JBIG_DECODE_ODMA_STATUS_DMA_BUSY_MASK 0x1
+#define  JBIG_DECODE_ODMA_STATUS_DMA_BUSY_SHIFT 0
+#define  JBIG_DECODE_ODMA_STATUS_DMA_BUSY_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_STATUS_DMA_BUSY_MASK) >> JBIG_DECODE_ODMA_STATUS_DMA_BUSY_SHIFT)
+#define  JBIG_DECODE_ODMA_STATUS_DMA_BUSY_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_STATUS_DMA_BUSY_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_STATUS_DMA_BUSY_SHIFT))
+
+//====================================================================
+//Register: Line Size Register (line_size)
+//====================================================================
+
+#define  JBIG_DECODE_ODMA_LINE_SIZE_RESERVED1_MASK 0xfffc0000
+#define  JBIG_DECODE_ODMA_LINE_SIZE_RESERVED1_SHIFT 18
+#define  JBIG_DECODE_ODMA_LINE_SIZE_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_LINE_SIZE_RESERVED1_MASK) >> JBIG_DECODE_ODMA_LINE_SIZE_RESERVED1_SHIFT)
+#define  JBIG_DECODE_ODMA_LINE_SIZE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_LINE_SIZE_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_LINE_SIZE_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_ODMA_LINE_SIZE_LINE_SIZE_MASK 0x3fffc
+#define  JBIG_DECODE_ODMA_LINE_SIZE_LINE_SIZE_SHIFT 2
+#define  JBIG_DECODE_ODMA_LINE_SIZE_LINE_SIZE_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_LINE_SIZE_LINE_SIZE_MASK) >> JBIG_DECODE_ODMA_LINE_SIZE_LINE_SIZE_SHIFT)
+#define  JBIG_DECODE_ODMA_LINE_SIZE_LINE_SIZE_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_LINE_SIZE_LINE_SIZE_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_LINE_SIZE_LINE_SIZE_SHIFT))
+
+#define  JBIG_DECODE_ODMA_LINE_SIZE_RESERVED2_MASK 0x3
+#define  JBIG_DECODE_ODMA_LINE_SIZE_RESERVED2_SHIFT 0
+#define  JBIG_DECODE_ODMA_LINE_SIZE_RESERVED2_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_LINE_SIZE_RESERVED2_MASK) >> JBIG_DECODE_ODMA_LINE_SIZE_RESERVED2_SHIFT)
+#define  JBIG_DECODE_ODMA_LINE_SIZE_RESERVED2_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_LINE_SIZE_RESERVED2_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_LINE_SIZE_RESERVED2_SHIFT))
+
+//====================================================================
+//Register: Interrupt Enable Register (int_en)
+//====================================================================
+
+#define  JBIG_DECODE_ODMA_INT_EN_RESERVED1_MASK 0xfffffe00
+#define  JBIG_DECODE_ODMA_INT_EN_RESERVED1_SHIFT 9
+#define  JBIG_DECODE_ODMA_INT_EN_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_EN_RESERVED1_MASK) >> JBIG_DECODE_ODMA_INT_EN_RESERVED1_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_EN_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_EN_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_EN_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_EN_RST_INT_EN_MASK 0x100
+#define  JBIG_DECODE_ODMA_INT_EN_RST_INT_EN_SHIFT 8
+#define  JBIG_DECODE_ODMA_INT_EN_RST_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_EN_RST_INT_EN_MASK) >> JBIG_DECODE_ODMA_INT_EN_RST_INT_EN_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_EN_RST_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_EN_RST_INT_EN_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_EN_RST_INT_EN_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_EN_EOI_INT_EN_MASK 0x80
+#define  JBIG_DECODE_ODMA_INT_EN_EOI_INT_EN_SHIFT 7
+#define  JBIG_DECODE_ODMA_INT_EN_EOI_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_EN_EOI_INT_EN_MASK) >> JBIG_DECODE_ODMA_INT_EN_EOI_INT_EN_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_EN_EOI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_EN_EOI_INT_EN_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_EN_EOI_INT_EN_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_EN_DIR_INT_EN_MASK 0x40
+#define  JBIG_DECODE_ODMA_INT_EN_DIR_INT_EN_SHIFT 6
+#define  JBIG_DECODE_ODMA_INT_EN_DIR_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_EN_DIR_INT_EN_MASK) >> JBIG_DECODE_ODMA_INT_EN_DIR_INT_EN_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_EN_DIR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_EN_DIR_INT_EN_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_EN_DIR_INT_EN_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_EN_CL_ALI_INT_EN_MASK 0x20
+#define  JBIG_DECODE_ODMA_INT_EN_CL_ALI_INT_EN_SHIFT 5
+#define  JBIG_DECODE_ODMA_INT_EN_CL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_EN_CL_ALI_INT_EN_MASK) >> JBIG_DECODE_ODMA_INT_EN_CL_ALI_INT_EN_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_EN_CL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_EN_CL_ALI_INT_EN_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_EN_CL_ALI_INT_EN_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_EN_EOL_ALI_INT_EN_MASK 0x10
+#define  JBIG_DECODE_ODMA_INT_EN_EOL_ALI_INT_EN_SHIFT 4
+#define  JBIG_DECODE_ODMA_INT_EN_EOL_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_EN_EOL_ALI_INT_EN_MASK) >> JBIG_DECODE_ODMA_INT_EN_EOL_ALI_INT_EN_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_EN_EOL_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_EN_EOL_ALI_INT_EN_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_EN_EOL_ALI_INT_EN_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_EN_EOI_ALI_INT_EN_MASK 0x8
+#define  JBIG_DECODE_ODMA_INT_EN_EOI_ALI_INT_EN_SHIFT 3
+#define  JBIG_DECODE_ODMA_INT_EN_EOI_ALI_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_EN_EOI_ALI_INT_EN_MASK) >> JBIG_DECODE_ODMA_INT_EN_EOI_ALI_INT_EN_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_EN_EOI_ALI_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_EN_EOI_ALI_INT_EN_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_EN_EOI_ALI_INT_EN_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_EN_EOI_ERR_INT_EN_MASK 0x4
+#define  JBIG_DECODE_ODMA_INT_EN_EOI_ERR_INT_EN_SHIFT 2
+#define  JBIG_DECODE_ODMA_INT_EN_EOI_ERR_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_EN_EOI_ERR_INT_EN_MASK) >> JBIG_DECODE_ODMA_INT_EN_EOI_ERR_INT_EN_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_EN_EOI_ERR_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_EN_EOI_ERR_INT_EN_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_EN_EOI_ERR_INT_EN_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_EN_FIN_INT_EN_MASK 0x2
+#define  JBIG_DECODE_ODMA_INT_EN_FIN_INT_EN_SHIFT 1
+#define  JBIG_DECODE_ODMA_INT_EN_FIN_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_EN_FIN_INT_EN_MASK) >> JBIG_DECODE_ODMA_INT_EN_FIN_INT_EN_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_EN_FIN_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_EN_FIN_INT_EN_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_EN_FIN_INT_EN_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_EN_WHO_INT_EN_MASK 0x1
+#define  JBIG_DECODE_ODMA_INT_EN_WHO_INT_EN_SHIFT 0
+#define  JBIG_DECODE_ODMA_INT_EN_WHO_INT_EN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_EN_WHO_INT_EN_MASK) >> JBIG_DECODE_ODMA_INT_EN_WHO_INT_EN_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_EN_WHO_INT_EN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_EN_WHO_INT_EN_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_EN_WHO_INT_EN_SHIFT))
+
+//====================================================================
+//Register: Interrupt Pending Register (int_pend)
+//====================================================================
+
+#define  JBIG_DECODE_ODMA_INT_PEND_RESERVED1_MASK 0xfffffe00
+#define  JBIG_DECODE_ODMA_INT_PEND_RESERVED1_SHIFT 9
+#define  JBIG_DECODE_ODMA_INT_PEND_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_PEND_RESERVED1_MASK) >> JBIG_DECODE_ODMA_INT_PEND_RESERVED1_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_PEND_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_PEND_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_PEND_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_PEND_RST_INT_PEND_MASK 0x100
+#define  JBIG_DECODE_ODMA_INT_PEND_RST_INT_PEND_SHIFT 8
+#define  JBIG_DECODE_ODMA_INT_PEND_RST_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_PEND_RST_INT_PEND_MASK) >> JBIG_DECODE_ODMA_INT_PEND_RST_INT_PEND_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_PEND_RST_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_PEND_RST_INT_PEND_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_PEND_RST_INT_PEND_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_PEND_EOI_INT_PEND_MASK 0x80
+#define  JBIG_DECODE_ODMA_INT_PEND_EOI_INT_PEND_SHIFT 7
+#define  JBIG_DECODE_ODMA_INT_PEND_EOI_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_PEND_EOI_INT_PEND_MASK) >> JBIG_DECODE_ODMA_INT_PEND_EOI_INT_PEND_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_PEND_EOI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_PEND_EOI_INT_PEND_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_PEND_EOI_INT_PEND_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_PEND_DIR_INT_PEND_MASK 0x40
+#define  JBIG_DECODE_ODMA_INT_PEND_DIR_INT_PEND_SHIFT 6
+#define  JBIG_DECODE_ODMA_INT_PEND_DIR_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_PEND_DIR_INT_PEND_MASK) >> JBIG_DECODE_ODMA_INT_PEND_DIR_INT_PEND_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_PEND_DIR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_PEND_DIR_INT_PEND_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_PEND_DIR_INT_PEND_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_PEND_CL_ALI_INT_PEND_MASK 0x20
+#define  JBIG_DECODE_ODMA_INT_PEND_CL_ALI_INT_PEND_SHIFT 5
+#define  JBIG_DECODE_ODMA_INT_PEND_CL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_PEND_CL_ALI_INT_PEND_MASK) >> JBIG_DECODE_ODMA_INT_PEND_CL_ALI_INT_PEND_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_PEND_CL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_PEND_CL_ALI_INT_PEND_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_PEND_CL_ALI_INT_PEND_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_PEND_EOL_ALI_INT_PEND_MASK 0x10
+#define  JBIG_DECODE_ODMA_INT_PEND_EOL_ALI_INT_PEND_SHIFT 4
+#define  JBIG_DECODE_ODMA_INT_PEND_EOL_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_PEND_EOL_ALI_INT_PEND_MASK) >> JBIG_DECODE_ODMA_INT_PEND_EOL_ALI_INT_PEND_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_PEND_EOL_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_PEND_EOL_ALI_INT_PEND_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_PEND_EOL_ALI_INT_PEND_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_PEND_EOI_ALI_INT_PEND_MASK 0x8
+#define  JBIG_DECODE_ODMA_INT_PEND_EOI_ALI_INT_PEND_SHIFT 3
+#define  JBIG_DECODE_ODMA_INT_PEND_EOI_ALI_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_PEND_EOI_ALI_INT_PEND_MASK) >> JBIG_DECODE_ODMA_INT_PEND_EOI_ALI_INT_PEND_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_PEND_EOI_ALI_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_PEND_EOI_ALI_INT_PEND_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_PEND_EOI_ALI_INT_PEND_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_PEND_EOI_ERR_INT_PEND_MASK 0x4
+#define  JBIG_DECODE_ODMA_INT_PEND_EOI_ERR_INT_PEND_SHIFT 2
+#define  JBIG_DECODE_ODMA_INT_PEND_EOI_ERR_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_PEND_EOI_ERR_INT_PEND_MASK) >> JBIG_DECODE_ODMA_INT_PEND_EOI_ERR_INT_PEND_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_PEND_EOI_ERR_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_PEND_EOI_ERR_INT_PEND_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_PEND_EOI_ERR_INT_PEND_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_PEND_FIN_INT_PEND_MASK 0x2
+#define  JBIG_DECODE_ODMA_INT_PEND_FIN_INT_PEND_SHIFT 1
+#define  JBIG_DECODE_ODMA_INT_PEND_FIN_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_PEND_FIN_INT_PEND_MASK) >> JBIG_DECODE_ODMA_INT_PEND_FIN_INT_PEND_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_PEND_FIN_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_PEND_FIN_INT_PEND_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_PEND_FIN_INT_PEND_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_PEND_WHO_INT_PEND_MASK 0x1
+#define  JBIG_DECODE_ODMA_INT_PEND_WHO_INT_PEND_SHIFT 0
+#define  JBIG_DECODE_ODMA_INT_PEND_WHO_INT_PEND_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_PEND_WHO_INT_PEND_MASK) >> JBIG_DECODE_ODMA_INT_PEND_WHO_INT_PEND_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_PEND_WHO_INT_PEND_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_PEND_WHO_INT_PEND_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_PEND_WHO_INT_PEND_SHIFT))
+
+//====================================================================
+//Register: Interrupt Acknowledge Register (int_ack)
+//====================================================================
+
+#define  JBIG_DECODE_ODMA_INT_ACK_RESERVED1_MASK 0xfffffe00
+#define  JBIG_DECODE_ODMA_INT_ACK_RESERVED1_SHIFT 9
+#define  JBIG_DECODE_ODMA_INT_ACK_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_ACK_RESERVED1_MASK) >> JBIG_DECODE_ODMA_INT_ACK_RESERVED1_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_ACK_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_ACK_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_ACK_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_ACK_RST_INT_ACK_MASK 0x100
+#define  JBIG_DECODE_ODMA_INT_ACK_RST_INT_ACK_SHIFT 8
+#define  JBIG_DECODE_ODMA_INT_ACK_RST_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_ACK_RST_INT_ACK_MASK) >> JBIG_DECODE_ODMA_INT_ACK_RST_INT_ACK_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_ACK_RST_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_ACK_RST_INT_ACK_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_ACK_RST_INT_ACK_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_ACK_EOI_INT_ACK_MASK 0x80
+#define  JBIG_DECODE_ODMA_INT_ACK_EOI_INT_ACK_SHIFT 7
+#define  JBIG_DECODE_ODMA_INT_ACK_EOI_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_ACK_EOI_INT_ACK_MASK) >> JBIG_DECODE_ODMA_INT_ACK_EOI_INT_ACK_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_ACK_EOI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_ACK_EOI_INT_ACK_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_ACK_EOI_INT_ACK_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_ACK_DIR_INT_ACK_MASK 0x40
+#define  JBIG_DECODE_ODMA_INT_ACK_DIR_INT_ACK_SHIFT 6
+#define  JBIG_DECODE_ODMA_INT_ACK_DIR_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_ACK_DIR_INT_ACK_MASK) >> JBIG_DECODE_ODMA_INT_ACK_DIR_INT_ACK_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_ACK_DIR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_ACK_DIR_INT_ACK_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_ACK_DIR_INT_ACK_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_ACK_CL_ALI_INT_ACK_MASK 0x20
+#define  JBIG_DECODE_ODMA_INT_ACK_CL_ALI_INT_ACK_SHIFT 5
+#define  JBIG_DECODE_ODMA_INT_ACK_CL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_ACK_CL_ALI_INT_ACK_MASK) >> JBIG_DECODE_ODMA_INT_ACK_CL_ALI_INT_ACK_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_ACK_CL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_ACK_CL_ALI_INT_ACK_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_ACK_CL_ALI_INT_ACK_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_ACK_EOL_ALI_INT_ACK_MASK 0x10
+#define  JBIG_DECODE_ODMA_INT_ACK_EOL_ALI_INT_ACK_SHIFT 4
+#define  JBIG_DECODE_ODMA_INT_ACK_EOL_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_ACK_EOL_ALI_INT_ACK_MASK) >> JBIG_DECODE_ODMA_INT_ACK_EOL_ALI_INT_ACK_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_ACK_EOL_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_ACK_EOL_ALI_INT_ACK_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_ACK_EOL_ALI_INT_ACK_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_ACK_EOI_ALI_INT_ACK_MASK 0x8
+#define  JBIG_DECODE_ODMA_INT_ACK_EOI_ALI_INT_ACK_SHIFT 3
+#define  JBIG_DECODE_ODMA_INT_ACK_EOI_ALI_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_ACK_EOI_ALI_INT_ACK_MASK) >> JBIG_DECODE_ODMA_INT_ACK_EOI_ALI_INT_ACK_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_ACK_EOI_ALI_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_ACK_EOI_ALI_INT_ACK_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_ACK_EOI_ALI_INT_ACK_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_ACK_EOI_ERR_INT_ACK_MASK 0x4
+#define  JBIG_DECODE_ODMA_INT_ACK_EOI_ERR_INT_ACK_SHIFT 2
+#define  JBIG_DECODE_ODMA_INT_ACK_EOI_ERR_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_ACK_EOI_ERR_INT_ACK_MASK) >> JBIG_DECODE_ODMA_INT_ACK_EOI_ERR_INT_ACK_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_ACK_EOI_ERR_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_ACK_EOI_ERR_INT_ACK_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_ACK_EOI_ERR_INT_ACK_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_ACK_FIN_INT_ACK_MASK 0x2
+#define  JBIG_DECODE_ODMA_INT_ACK_FIN_INT_ACK_SHIFT 1
+#define  JBIG_DECODE_ODMA_INT_ACK_FIN_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_ACK_FIN_INT_ACK_MASK) >> JBIG_DECODE_ODMA_INT_ACK_FIN_INT_ACK_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_ACK_FIN_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_ACK_FIN_INT_ACK_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_ACK_FIN_INT_ACK_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_ACK_WHO_INT_ACK_MASK 0x1
+#define  JBIG_DECODE_ODMA_INT_ACK_WHO_INT_ACK_SHIFT 0
+#define  JBIG_DECODE_ODMA_INT_ACK_WHO_INT_ACK_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_ACK_WHO_INT_ACK_MASK) >> JBIG_DECODE_ODMA_INT_ACK_WHO_INT_ACK_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_ACK_WHO_INT_ACK_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_ACK_WHO_INT_ACK_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_ACK_WHO_INT_ACK_SHIFT))
+
+//====================================================================
+//Register: Interrupt Force Register (int_fo)
+//====================================================================
+
+#define  JBIG_DECODE_ODMA_INT_FO_RESERVED1_MASK 0xfffffe00
+#define  JBIG_DECODE_ODMA_INT_FO_RESERVED1_SHIFT 9
+#define  JBIG_DECODE_ODMA_INT_FO_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_FO_RESERVED1_MASK) >> JBIG_DECODE_ODMA_INT_FO_RESERVED1_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_FO_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_FO_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_FO_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_FO_RST_INT_FO_MASK 0x100
+#define  JBIG_DECODE_ODMA_INT_FO_RST_INT_FO_SHIFT 8
+#define  JBIG_DECODE_ODMA_INT_FO_RST_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_FO_RST_INT_FO_MASK) >> JBIG_DECODE_ODMA_INT_FO_RST_INT_FO_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_FO_RST_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_FO_RST_INT_FO_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_FO_RST_INT_FO_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_FO_EOI_INT_FO_MASK 0x80
+#define  JBIG_DECODE_ODMA_INT_FO_EOI_INT_FO_SHIFT 7
+#define  JBIG_DECODE_ODMA_INT_FO_EOI_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_FO_EOI_INT_FO_MASK) >> JBIG_DECODE_ODMA_INT_FO_EOI_INT_FO_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_FO_EOI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_FO_EOI_INT_FO_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_FO_EOI_INT_FO_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_FO_DIR_INT_FO_MASK 0x40
+#define  JBIG_DECODE_ODMA_INT_FO_DIR_INT_FO_SHIFT 6
+#define  JBIG_DECODE_ODMA_INT_FO_DIR_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_FO_DIR_INT_FO_MASK) >> JBIG_DECODE_ODMA_INT_FO_DIR_INT_FO_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_FO_DIR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_FO_DIR_INT_FO_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_FO_DIR_INT_FO_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_FO_CL_ALI_INT_FO_MASK 0x20
+#define  JBIG_DECODE_ODMA_INT_FO_CL_ALI_INT_FO_SHIFT 5
+#define  JBIG_DECODE_ODMA_INT_FO_CL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_FO_CL_ALI_INT_FO_MASK) >> JBIG_DECODE_ODMA_INT_FO_CL_ALI_INT_FO_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_FO_CL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_FO_CL_ALI_INT_FO_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_FO_CL_ALI_INT_FO_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_FO_EOL_ALI_INT_FO_MASK 0x10
+#define  JBIG_DECODE_ODMA_INT_FO_EOL_ALI_INT_FO_SHIFT 4
+#define  JBIG_DECODE_ODMA_INT_FO_EOL_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_FO_EOL_ALI_INT_FO_MASK) >> JBIG_DECODE_ODMA_INT_FO_EOL_ALI_INT_FO_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_FO_EOL_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_FO_EOL_ALI_INT_FO_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_FO_EOL_ALI_INT_FO_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_FO_EOI_ALI_INT_FO_MASK 0x8
+#define  JBIG_DECODE_ODMA_INT_FO_EOI_ALI_INT_FO_SHIFT 3
+#define  JBIG_DECODE_ODMA_INT_FO_EOI_ALI_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_FO_EOI_ALI_INT_FO_MASK) >> JBIG_DECODE_ODMA_INT_FO_EOI_ALI_INT_FO_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_FO_EOI_ALI_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_FO_EOI_ALI_INT_FO_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_FO_EOI_ALI_INT_FO_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_FO_EOI_ERR_INT_FO_MASK 0x4
+#define  JBIG_DECODE_ODMA_INT_FO_EOI_ERR_INT_FO_SHIFT 2
+#define  JBIG_DECODE_ODMA_INT_FO_EOI_ERR_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_FO_EOI_ERR_INT_FO_MASK) >> JBIG_DECODE_ODMA_INT_FO_EOI_ERR_INT_FO_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_FO_EOI_ERR_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_FO_EOI_ERR_INT_FO_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_FO_EOI_ERR_INT_FO_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_FO_FIN_INT_FO_MASK 0x2
+#define  JBIG_DECODE_ODMA_INT_FO_FIN_INT_FO_SHIFT 1
+#define  JBIG_DECODE_ODMA_INT_FO_FIN_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_FO_FIN_INT_FO_MASK) >> JBIG_DECODE_ODMA_INT_FO_FIN_INT_FO_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_FO_FIN_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_FO_FIN_INT_FO_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_FO_FIN_INT_FO_SHIFT))
+
+#define  JBIG_DECODE_ODMA_INT_FO_WHO_INT_FO_MASK 0x1
+#define  JBIG_DECODE_ODMA_INT_FO_WHO_INT_FO_SHIFT 0
+#define  JBIG_DECODE_ODMA_INT_FO_WHO_INT_FO_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_INT_FO_WHO_INT_FO_MASK) >> JBIG_DECODE_ODMA_INT_FO_WHO_INT_FO_SHIFT)
+#define  JBIG_DECODE_ODMA_INT_FO_WHO_INT_FO_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_INT_FO_WHO_INT_FO_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_INT_FO_WHO_INT_FO_SHIFT))
+
+//====================================================================
+//Register: Descriptor Write Register (desc_write)
+//====================================================================
+
+#define  JBIG_DECODE_ODMA_DESC_WRITE_DESC_MASK 0xfffffffc
+#define  JBIG_DECODE_ODMA_DESC_WRITE_DESC_SHIFT 2
+#define  JBIG_DECODE_ODMA_DESC_WRITE_DESC_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_DESC_WRITE_DESC_MASK) >> JBIG_DECODE_ODMA_DESC_WRITE_DESC_SHIFT)
+#define  JBIG_DECODE_ODMA_DESC_WRITE_DESC_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_DESC_WRITE_DESC_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_DESC_WRITE_DESC_SHIFT))
+
+#define  JBIG_DECODE_ODMA_DESC_WRITE_RESERVED1_MASK 0x3
+#define  JBIG_DECODE_ODMA_DESC_WRITE_RESERVED1_SHIFT 0
+#define  JBIG_DECODE_ODMA_DESC_WRITE_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_DESC_WRITE_RESERVED1_MASK) >> JBIG_DECODE_ODMA_DESC_WRITE_RESERVED1_SHIFT)
+#define  JBIG_DECODE_ODMA_DESC_WRITE_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_DESC_WRITE_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_DESC_WRITE_RESERVED1_SHIFT))
+
+//====================================================================
+//Register: Descriptor Read Register (desc_read)
+//====================================================================
+
+#define  JBIG_DECODE_ODMA_DESC_READ_DESC_MASK 0xffffffff
+#define  JBIG_DECODE_ODMA_DESC_READ_DESC_SHIFT 0
+#define  JBIG_DECODE_ODMA_DESC_READ_DESC_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_DESC_READ_DESC_MASK) >> JBIG_DECODE_ODMA_DESC_READ_DESC_SHIFT)
+#define  JBIG_DECODE_ODMA_DESC_READ_DESC_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_DESC_READ_DESC_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_DESC_READ_DESC_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Length Register (xfer_length)
+//====================================================================
+
+#define  JBIG_DECODE_ODMA_XFER_LENGTH_RESERVED1_MASK 0xff000000
+#define  JBIG_DECODE_ODMA_XFER_LENGTH_RESERVED1_SHIFT 24
+#define  JBIG_DECODE_ODMA_XFER_LENGTH_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_XFER_LENGTH_RESERVED1_MASK) >> JBIG_DECODE_ODMA_XFER_LENGTH_RESERVED1_SHIFT)
+#define  JBIG_DECODE_ODMA_XFER_LENGTH_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_XFER_LENGTH_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_XFER_LENGTH_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_ODMA_XFER_LENGTH_LEN_MASK 0xffffff
+#define  JBIG_DECODE_ODMA_XFER_LENGTH_LEN_SHIFT 0
+#define  JBIG_DECODE_ODMA_XFER_LENGTH_LEN_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_XFER_LENGTH_LEN_MASK) >> JBIG_DECODE_ODMA_XFER_LENGTH_LEN_SHIFT)
+#define  JBIG_DECODE_ODMA_XFER_LENGTH_LEN_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_XFER_LENGTH_LEN_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_XFER_LENGTH_LEN_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Address Register (xfer_addr)
+//====================================================================
+
+#define  JBIG_DECODE_ODMA_XFER_ADDR_ADDR_MASK 0xffffffff
+#define  JBIG_DECODE_ODMA_XFER_ADDR_ADDR_SHIFT 0
+#define  JBIG_DECODE_ODMA_XFER_ADDR_ADDR_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_XFER_ADDR_ADDR_MASK) >> JBIG_DECODE_ODMA_XFER_ADDR_ADDR_SHIFT)
+#define  JBIG_DECODE_ODMA_XFER_ADDR_ADDR_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_XFER_ADDR_ADDR_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_XFER_ADDR_ADDR_SHIFT))
+
+//====================================================================
+//Register: Descriptor Transfer Burst Register (xfer_burst)
+//====================================================================
+
+#define  JBIG_DECODE_ODMA_XFER_BURST_RESERVED1_MASK 0xffffffe0
+#define  JBIG_DECODE_ODMA_XFER_BURST_RESERVED1_SHIFT 5
+#define  JBIG_DECODE_ODMA_XFER_BURST_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_XFER_BURST_RESERVED1_MASK) >> JBIG_DECODE_ODMA_XFER_BURST_RESERVED1_SHIFT)
+#define  JBIG_DECODE_ODMA_XFER_BURST_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_XFER_BURST_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_XFER_BURST_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_ODMA_XFER_BURST_BURST_MASK 0x1f
+#define  JBIG_DECODE_ODMA_XFER_BURST_BURST_SHIFT 0
+#define  JBIG_DECODE_ODMA_XFER_BURST_BURST_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_XFER_BURST_BURST_MASK) >> JBIG_DECODE_ODMA_XFER_BURST_BURST_SHIFT)
+#define  JBIG_DECODE_ODMA_XFER_BURST_BURST_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_XFER_BURST_BURST_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_XFER_BURST_BURST_SHIFT))
+
+//====================================================================
+//Register: Data Valid Register (data_val)
+//====================================================================
+
+#define  JBIG_DECODE_ODMA_DATA_VAL_DATA_VALID_MASK 0xffffffff
+#define  JBIG_DECODE_ODMA_DATA_VAL_DATA_VALID_SHIFT 0
+#define  JBIG_DECODE_ODMA_DATA_VAL_DATA_VALID_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_DATA_VAL_DATA_VALID_MASK) >> JBIG_DECODE_ODMA_DATA_VAL_DATA_VALID_SHIFT)
+#define  JBIG_DECODE_ODMA_DATA_VAL_DATA_VALID_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_DATA_VAL_DATA_VALID_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_DATA_VAL_DATA_VALID_SHIFT))
+
+//====================================================================
+//Register: Soft Reset register (reset)
+//====================================================================
+
+#define  JBIG_DECODE_ODMA_RESET_RESERVED1_MASK 0xfffffffe
+#define  JBIG_DECODE_ODMA_RESET_RESERVED1_SHIFT 1
+#define  JBIG_DECODE_ODMA_RESET_RESERVED1_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_RESET_RESERVED1_MASK) >> JBIG_DECODE_ODMA_RESET_RESERVED1_SHIFT)
+#define  JBIG_DECODE_ODMA_RESET_RESERVED1_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_RESET_RESERVED1_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_RESET_RESERVED1_SHIFT))
+
+#define  JBIG_DECODE_ODMA_RESET_SOFT_RESET_MASK 0x1
+#define  JBIG_DECODE_ODMA_RESET_SOFT_RESET_SHIFT 0
+#define  JBIG_DECODE_ODMA_RESET_SOFT_RESET_MASK_SHIFT(reg) (((reg) & JBIG_DECODE_ODMA_RESET_SOFT_RESET_MASK) >> JBIG_DECODE_ODMA_RESET_SOFT_RESET_SHIFT)
+#define  JBIG_DECODE_ODMA_RESET_SOFT_RESET_REPLACE_VAL(reg,val) (((reg) & ~JBIG_DECODE_ODMA_RESET_SOFT_RESET_MASK) | (((uint32_t)val) << JBIG_DECODE_ODMA_RESET_SOFT_RESET_SHIFT))
+
+#endif // JBIGTOP

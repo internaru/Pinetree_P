@@ -1,0 +1,60 @@
+<!--COMMENT
+
+io-connections/wired-network-content.xml
+
+MIDAS IO Connections wired network content file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+    <wiredNetwork>
+      <networkStatus><!--#ssi IDr OID_NETWORK_STATUS --></networkStatus>
+      <macAddress><!--#ssi IDr OID_NETWORK_MAC_ADDRESS --></macAddress>
+      <hostName><!--#ssi IDr OID_NETWORK_HOST_NAME --></hostName>
+      <connectionTimeout><!--#ssi IDr OID_NETWORK_CONNECTION_TIMEOUT --></connectionTimeout>
+      <linkSpeed><!--#ssi IDr OID_NETWORK_LINK_SPEED --></linkSpeed>
+      <ipv4Config>
+        <ipv4Enabled><!--#ssi IDr OID_NETWORK_IPV4_ENABLED --></ipv4Enabled>
+        <domainName><!--#ssi IDr OID_NETWORK_IPV4_DOMAIN_NAME --></domainName>
+        <lastConfiguredBy><!--#ssi IDr OID_NETWORK_IPV4_LAST_CONFIGURED_BY --></lastConfiguredBy>
+        <allowDhcpConfig><!--#ssi IDr OID_NETWORK_IPV4_ALLOW_DHCP_CONFIG --></allowDhcpConfig>
+        <allowBootpConfig><!--#ssi IDr OID_NETWORK_IPV4_ALLOW_BOOTP_CONFIG --></allowBootpConfig>
+        <allowAutoipConfig><!--#ssi IDr OID_NETWORK_IPV4_ALLOW_AUTOIP_CONFIG --></allowAutoipConfig>
+        <dhcpLeaseTime><!--#ssi IDr OID_NETWORK_IPV4_DHCP_LEASE_TIME --></dhcpLeaseTime>
+        <ipv4Address><!--#ssi IDr OID_NETWORK_IPV4_ADDRESS --></ipv4Address>
+        <subnetMask><!--#ssi IDr OID_NETWORK_IPV4_SUBNET_MASK --></subnetMask>
+        <winsServer><!--#ssi IDr OID_NETWORK_IPV4_WINS_SERVER --></winsServer>
+        <defaultGateway><!--#ssi IDr OID_NETWORK_IPV4_DEFAULT_GATEWAY --></defaultGateway>
+      </ipv4Config>
+      <bonjourConfig>
+        <bonjourEnabled><!--#ssi IDr OID_NETWORK_BONJOUR_ENABLED--></bonjourEnabled>
+        <bonjourServiceName><!--#ssi IDr OID_NETWORK_BONJOUR_SERVICE_NAME --></bonjourServiceName>
+        <bonjourDomainName><!--#ssi IDr OID_NETWORK_BONJOUR_DOMAIN_NAME --></bonjourDomainName>
+      </bonjourConfig>
+      <networkStats>
+        <totPacketsXmitted><!--#ssi IDr OID_NETWORK_STAT_TOT_PACKETS_XMITTED --></totPacketsXmitted>
+        <totPackets><!--#ssi IDr OID_NETWORK_STAT_TOT_PACKETS --></totPackets>
+        <unicastPackets><!--#ssi IDr OID_NETWORK_STAT_UNICAST_PACKETS --></unicastPackets>
+        <framingErrors><!--#ssi IDr OID_NETWORK_STAT_FRAMING_ERRORS --></framingErrors>
+        <badPackets><!--#ssi IDr OID_NETWORK_BAD_PACKETS --></badPackets>
+      </networkStats>
+      <lpdEnabled><!--#ssi IDr OID_NETWORK_LPD_ENABLED --></lpdEnabled>
+      <slpEnabled><!--#ssi IDr OID_NETWORK_SLP_ENABLED--></slpEnabled>
+      <snmpConfig>
+        <snmpEnabled><!--#ssi IDr OID_NETWORK_SNMP_ENABLED --></snmpEnabled>
+        <readWriteEnabled><!--#ssi IDr OID_NETWORK_SNMP_RW_ENABLED --></readWriteEnabled>
+        <communitySetString><!--#ssi IDr OID_NETWORK_SNMP_COMMUNITY_SET_STRING --></communitySetString>
+        <communityGetString><!--#ssi IDr OID_NETWORK_SNMP_COMMUNITY_GET_STRING --></communityGetString>
+        <publicAccessEnabled><!--#ssi IDr OID_NETWORK_SNMP_PUBLIC_ACCESS_EN --></publicAccessEnabled>
+      </snmpConfig>
+    </wiredNetwork>

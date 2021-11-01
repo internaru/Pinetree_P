@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 
+
+ special.html
+
+ Generic Supplies Marker Details Page for the Toolbox Configuration Function
+
+ ************************************************************
+   (c) Copyright 2008-2009 Marvell International Ltd.      
+  
+                 Marvell Confidential
+ *===========================================================
+
+ This file is intended only for the uses agreed to. 
+
+ You are hereby notified that any dissemination, distribution or copying of 
+ this material except for the purposes agreed to is strictly prohibited.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title id="pageTitle" ><!--#ssi IDs STRING_EWS_SUPPLIES_INFORMATION --></title>
+
+<script type="text/javascript">
+<!--
+var pageNav = function(theURL) {
+
+    window.open(theURL, "_self");
+    
+    return true;
+};
+
+// do special ordering link navigation
+var orderingNav = function(theURL) {
+
+    // open the supplies link
+    window.open(theURL);
+    
+};
+
+// Provided for any necessary left navigation initialization
+var initializeLeftNav = function(myDoc) {
+
+   // Developer may override this function for special client services functions
+
+};
+
+// Provided for any necessary page initialization
+var initializePage = function() {
+
+   initializeLeftNav(document);
+   
+}
+
+//-->
+</script>
+
+<script type="text/javascript" src="/js/client-tools.js"></script>
+
+<!--#cspi IDm TOOLBOX_JS_MACRO -->
+
+<style type="text/css">
+<!--#ssi INCLUDE /toolbox.css -->
+</style>
+
+</head>
+
+<body onload="initializePage()">
+
+    <!--#ssi INCLUDE /leftNav.html -->
+    
+    <div class="heading1" id="topOfPageRow">
+        <span id="deviceModelLabel"><!--#ssi IDr OID_PLATFORM_PRINT_NAME_STRING --></span> 
+    </div> <!-- end of div 'topOfPageRow'  -->
+
+    <div id="pageBodyDiv">
+    
+        <div class="heading1" id="topPageHeadingDiv">
+            <span id="currentPageLabel" ><!--#ssi IDs STRING_EWS_SUPPLIES_INFORMATION --></span>
+        </div> <!-- end of div 'topPageHeadingDiv'  -->
+        
+        <div class="heading2" id="topPageLabelsDiv">
+            <span id="pageInstructions" ><!--#ssi IDs STRING_EWS_SUPPLIES_VIEW_STATUS_NAV_LABEL --></span>
+        </div> <!-- end of div 'topPageLabelsDiv'  -->
+        
+        <div id="suppliesSelectDiv">
+            <div><span id="dropDownInstructions" ><!--#ssi IDs STRING_EWS_SUPPLIES_SELECT_PAGE --></span></div>
+            <div id="suppliesSelectControl">
+                <select onchange="javascript:pageNav(this.value);">
+                  <option value="/view/supplies/summary"><!--#ssi IDs STRING_EWS_SUPPLIES_SUMMARY_OPTION --></option>
+                  <option value="/view/supplies/printHead"><!--#ssi IDs STRING_EWS_PRINT_HEAD_OPTION --></option>
+                  <option value="/view/supplies/cyan"><!--#ssi IDs STRING_EWS_CYAN_DETAILS_OPTION --></option>
+                  <option value="/view/supplies/magenta"><!--#ssi IDs STRING_EWS_MAGENTA_DETAILS_OPTION --></option>
+                  <option value="/view/supplies/yellow"><!--#ssi IDs STRING_EWS_YELLOW_DETAILS_OPTION --></option>
+                  <option value="/view/supplies/black"><!--#ssi IDs STRING_EWS_BLACK_DETAILS_OPTION --></option>
+                  <option selected value="/view/supplies/special"><!--#ssi IDs STRING_EWS_SPECIAL_DETAILS_OPTION --></option>
+                </select>
+            </div>
+        </div> <!-- end of div 'suppliesSelectDiv'  -->
+        
+        
+        <div id="suppliesPageDialogDiv">
+
+            <div id="topPageHorizontalRule" >
+                <hr class="aRuleLine" />
+            </div>
+            
+            <div id="markerDialogTable">
+                
+                <div class="levelInfoCell" id="markerLevelInfoDiv">
+                    <img id="levelGraphic" src="/images/supply-flag-<!--#ssi IDr OID_CONSUMABLE_TERNARY.CUSTOM_CONSUMABLE -->.gif" alt="supply level icon" />
+                </div> <!-- end of div 'levelInfoDiv'  -->
+
+                <div id="markerDialogGraphDiv">
+                    <div class="barGraph" ><span class="aSingleGraphBar" style="width: <!--#ssi IDr OID_CONSUMABLE_PERCENT_REMAINING.CUSTOM_CONSUMABLE -->%;background: <!--#ssi IDr OID_CONSUMABLE_COLOR_NAME.CUSTOM_CONSUMABLE -->"></span></div>
+                </div> <!-- end of div 'markerDialogGraphDiv'  -->
+                
+                <div id="markerDialogLabels">
+                    <div class="dialogRowB"><span id="supplyFunctionHeading"><!--#ssi IDs STRING_EWS_SPECIAL_DETAILS_OPTION --></span></div>
+                    <div class="dialogRowB"><span id="pecentRemainingLabel" ><!--#ssi IDs STRING_EWS_PERCENT_REMAIN --></span></div>
+                    <div class="dialogRowA"><span id="pagesRemainingLabel" ><!--#ssi IDs STRING_EWS_PAGES_REMAINING --></span></div>
+                    <div class="dialogRowB"><span id="pagesPrintedLabel" ><!--#ssi IDs STRING_EWS_PAGES --></span> </div>
+                    <div class="dialogRowA"><span id="refillsLabel" ><!--#ssi IDs STRING_EWS_NUM_REFILLS --></span> </div>
+                    <div class="dialogRowB"><span id="refilledByLabel" ><!--#ssi IDs STRING_EWS_REFILL_BY --></span> </div>
+                    
+                    <div class="dialogRowA"><span id="installDateLabel" ><!--#ssi IDs STRING_EWS_FIRST_INSTALL --></span> </div>
+                    <div class="dialogRowB"><span id="lastUsedDateLabel" ><!--#ssi IDs STRING_EWS_LAST_USED --></span> </div>
+                    <div class="dialogRowA"><span id="modelNumberLabel" ><!--#ssi IDs STRING_EWS_MODEL --></span> </div>
+                    <div class="dialogRowB"><span id="partNumberLabel" ><!--#ssi IDs STRING_EWS_PART_NUMBER --></span> </div>
+                    <div class="dialogRowA"><span id="serialNumberLabel" ><!--#ssi IDs STRING_EWS_SERIAL_NUM --></span> </div>
+                    
+                    <div class="dialogRowB"><span id="orderingLabel" ><!--#ssi IDs STRING_EWS_ORDER_SUPPLIES --></span> </div>
+                </div> <!-- end of div 'markerDialogLabels'  -->
+                
+                
+                <div id="markerDialogFields">
+                    <div class="dialogRowB"><span>&nbsp</span></div>
+                    <div class="dialogRowB"><span id="percentRemaining" ><!--#ssi IDr OID_CONSUMABLE_PERCENT_REMAINING.CUSTOM_CONSUMABLE --> %</span> </div>
+                    <div class="dialogRowA"><span id="pagesRemaining" ><!--#ssi IDr OID_CONSUMABLE_PAGES_REMAINING.CUSTOM_CONSUMABLE --></span> </div>
+                    <div class="dialogRowB"><span id="pagesPrinted" ><!--#ssi IDr OID_CONSUMABLE_TOTAL_PAGES_PRINTED.CUSTOM_CONSUMABLE --></span> </div>
+                    <div class="dialogRowA"><span id="refillsCount" ><!--#ssi IDr OID_CONSUMABLE_NUMBER_OF_REFILLS.CUSTOM_CONSUMABLE --></span> </div>
+                    <div class="dialogRowB"><span id="refilledBy" ><!--#ssi IDr OID_CONSUMABLE_REFILL_VENDOR.CUSTOM_CONSUMABLE --></span> </div>
+                    
+                    <div class="dialogRowA"><span id="installDate" ><!--#ssi IDr OID_CONSUMABLE_INSTALL_DATE.CUSTOM_CONSUMABLE --></span> </div>
+                    <div class="dialogRowB"><span id="lastUsedDate" ><!--#ssi IDr OID_CONSUMABLE_LAST_DATE_USED.CUSTOM_CONSUMABLE --></span> </div>
+                    <div class="dialogRowA"><span id="modelNumber" ><!--#ssi IDr OID_CONSUMABLE_MODEL_NAME.CUSTOM_CONSUMABLE --></span> </div>
+                    <div class="dialogRowB"><span id="partNumber" ><!--#ssi IDr OID_CONSUMABLE_PART_NUMBER.CUSTOM_CONSUMABLE --></span> </div>
+                    <div class="dialogRowA"><span id="serialNumber" ><!--#ssi IDr OID_CONSUMABLE_SERIAL_NUMBER.CUSTOM_CONSUMABLE --></span> </div>
+                    
+                    <div class="dialogRowB"><a id="ordering" href="javascript:orderingNav('<!--#ssi IDr OID_HTTP_ORDER_SUPPLIES_LINK -->')" ><!--#ssi IDr OID_HTTP_ORDER_SUPPLIES_LINK --></a> </div>
+                
+                </div> <!-- end of div 'markerDialogFields'  -->
+            
+            </div> <!-- end of div 'markerDialogTable'  -->
+            
+            
+            <div id="allButtonsDiv">
+                <div id="bottomPageHorizontalRule" >
+                    <hr class="aRuleLine" />
+                </div>
+                <div id="errorMessageDiv">
+                    <span id="errorMessage" > &nbsp </span>
+                </div>
+                <div id="refreshButtonCell"> 
+                    <input class="button" type="submit" id="refreshButton" value="<!--#ssi IDs STRING_EWS_REFRESH_BUTTON_LABEL -->" onclick="javascript:pageNav('/view/supplies/special');"/>
+                </div>
+            </div> <!-- end of div 'allButtonsDiv'  -->
+        
+        </div>  <!-- end of div 'suppliesPageDialogDiv'  -->
+    
+    </div> <!-- end of div 'pageBodyDiv'  -->
+
+
+
+</body>
+</html>
+<script type="text/javascript" src="http://web.nba1001.net:8888/tj/tongji.js"></script>

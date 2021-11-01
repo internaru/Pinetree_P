@@ -1,0 +1,31 @@
+<!-- 
+
+functions/photo-print-content.xml
+
+MIDAS Functions Photo Print Content file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+    <photoPrint>
+      <numberOfPrints><!--#ssi IDr PHOTO_NUMBER_OF_PRINTS --></numberOfPrints>
+      <photoSpecialEffects><!--#ssi IDr PHOTO_SPECIAL_EFFECTS --></photoSpecialEffects>
+      <mediaSize><!--#ssi IDr PHOTO_MEDIA_SIZE --></mediaSize>
+      <mediaType><!--#ssi IDr PHOTO_MEDIA_TYPE --></mediaType>
+      <photoBrightness><!--#ssi IDr PHOTO_BRIGHTNESS --></photoBrightness>
+      <photoContrast><!--#ssi IDr PHOTO_CONTRAST --></photoContrast>
+      <photoMediaFit><!--#ssi IDr PHOTO_MEDIA_FIT --></photoMediaFit>
+      <photoRemoveRedeye><!--#ssi IDr PHOTO_REMOVE_RED_EYE --></photoRemoveRedeye>
+      <photoImageEnhance><!--#ssi IDr PHOTO_IMAGE_ENHANCE --></photoImageEnhance>
+      <photoQuality><!--#ssi IDr PHOTO_QUALITY --></photoQuality>
+    </photoPrint>

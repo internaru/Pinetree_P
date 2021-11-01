@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"
+ xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:wsa="http://tempuri.org/wsa.xsd"
+ xmlns:wdp="http://tempuri.org/wdp.xsd"
+ xmlns:wse="http://tempuri.org/wse.xsd"
+ xmlns:xop="http://www.w3.org/2004/08/xop/include"
+ xmlns:wprt="http://schemas.microsoft.com/windows/2006/08/wdp/print">
+ <SOAP-ENV:Body>
+   <wprt:AddDocumentRequest>
+    <JobId></JobId>
+    <DocumentDescription>
+     <DocumentId>0</DocumentId>
+     <Compression MustHonor=""></Compression>
+     <Format MustHonor=""></Format>
+     <DocumentName></DocumentName>
+     <DocumentUrl></DocumentUrl>
+    </DocumentDescription>
+    <DocumentProcessing>
+     <MediaSizeName MustHonor=""></MediaSizeName>
+     <MediaType MustHonor=""></MediaType>
+     <MediaColor MustHonor=""></MediaColor>
+     <NumberUp>
+      <PagesPerSheet MustHonor=""></PagesPerSheet>
+      <Direction MustHonor=""></Direction>
+     </NumberUp>
+     <Orientation MustHonor=""></Orientation>
+     <Resolution MustHonor="">
+      <Width></Width>
+      <Height></Height>
+     </Resolution>
+     <PrintQuality MustHonor=""></PrintQuality>
+     <Sides MustHonor=""></Sides>
+    </DocumentProcessing>
+    <LastDocument></LastDocument>
+    <DocumentUrl></DocumentUrl>
+   </wprt:AddDocumentRequest>
+
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

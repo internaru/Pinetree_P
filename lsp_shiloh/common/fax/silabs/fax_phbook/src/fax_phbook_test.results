@@ -1,0 +1,83 @@
+--- Phone book entries ---
+  1. 1-111-111-1111; Company One
+  8. 888-8888; Crazy Eights
+ 12. 222-2222; Grandma & Grandpa
+ 13. 3-333-333-333; Cousin Trinity
+ 14. 4-444-444-444; Aunt April
+ 15. 555-5555; Uncle Eddie
+ 50. 123-4567; Collection Agency {BLKLST}
+ 51. 555-9876; Phoney Phisher {BLKLST}
+--- Speed Dial Groups ---
+  0. Family
+    0:  12. 222-2222; Grandma & Grandpa
+    1:  13. 3-333-333-333; Cousin Trinity
+    2:  14. 4-444-444-444; Aunt April
+    3:  15. 555-5555; Uncle Eddie
+  1. Businesses
+    0:   1. 1-111-111-1111; Company One
+    1:   8. 888-8888; Crazy Eights
+  2. Darn Spammers
+    0:  50. 123-4567; Collection Agency {BLKLST}
+    1:  51. 555-9876; Phoney Phisher {BLKLST}
+So Sad - Grandma & Grandpa Died
+--- Phone book entries ---
+  1. 1-111-111-1111; Company One
+  8. 888-8888; Crazy Eights
+ 13. 3-333-333-333; Cousin Trinity
+ 14. 4-444-444-444; Aunt April
+ 15. 555-5555; Uncle Eddie
+ 50. 123-4567; Collection Agency {BLKLST}
+ 51. 555-9876; Phoney Phisher {BLKLST}
+--- Speed Dial Groups ---
+  0. Family
+    0:  13. 3-333-333-333; Cousin Trinity
+    1:  14. 4-444-444-444; Aunt April
+    2:  15. 555-5555; Uncle Eddie
+  1. Businesses
+    0:   1. 1-111-111-1111; Company One
+    1:   8. 888-8888; Crazy Eights
+  2. Darn Spammers
+    0:  50. 123-4567; Collection Agency {BLKLST}
+    1:  51. 555-9876; Phoney Phisher {BLKLST}
+Add a new annoying caller to my blacklist
+--- Phone book entries ---
+  1. 1-111-111-1111; Company One
+  8. 888-8888; Crazy Eights
+ 13. 3-333-333-333; Cousin Trinity
+ 14. 4-444-444-444; Aunt April
+ 15. 555-5555; Uncle Eddie
+ 50. 123-4567; Collection Agency {BLKLST}
+ 51. 555-9876; Phoney Phisher {BLKLST}
+ 52. 1-800-84674273; 1 800 Timeshares {BLKLST}
+--- Speed Dial Groups ---
+  0. Family
+    0:  13. 3-333-333-333; Cousin Trinity
+    1:  14. 4-444-444-444; Aunt April
+    2:  15. 555-5555; Uncle Eddie
+  1. Businesses
+    0:   1. 1-111-111-1111; Company One
+    1:   8. 888-8888; Crazy Eights
+  2. Darn Spammers
+    0:  50. 123-4567; Collection Agency {BLKLST}
+    1:  51. 555-9876; Phoney Phisher {BLKLST}
+    2:  52. 1-800-84674273; 1 800 Timeshares {BLKLST}
+Clean up everybody but family
+--- Phone book entries ---
+ 13. 3-333-333-333; Cousin Trinity
+ 14. 4-444-444-444; Aunt April
+ 15. 555-5555; Uncle Eddie
+--- Speed Dial Groups ---
+  0. Family
+    0:  13. 3-333-333-333; Cousin Trinity
+    1:  14. 4-444-444-444; Aunt April
+    2:  15. 555-5555; Uncle Eddie
+Trinity got married - add husband's last name
+--- Phone book entries ---
+ 13. 3-333-333-333; Cousin Trinity Triad
+ 14. 4-444-444-444; Aunt April
+ 15. 555-5555; Uncle Eddie
+--- Speed Dial Groups ---
+  0. Family
+    0:  13. 3-333-333-333; Cousin Trinity Triad
+    1:  14. 4-444-444-444; Aunt April
+    2:  15. 555-5555; Uncle Eddie

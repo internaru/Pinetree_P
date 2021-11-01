@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 
+
+ ipv4Config.html
+
+ IPV4 Configuration Page for the Toolbox Configuration Function
+
+ ************************************************************
+   (c) Copyright 2008-2009 Marvell International Ltd.      
+  
+                 Marvell Confidential
+ *===========================================================
+
+ This file is intended only for the uses agreed to. 
+
+ You are hereby notified that any dissemination, distribution or copying of 
+ this material accept for the purposes agreed to is strictly prohibited.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title id="pageTitle" ><!--#ssi IDs STRING_EWS_NETWORK_CONFIG_HEADING --></title>
+
+<script type="text/javascript">
+<!--
+var pageNav = function(theURL) {
+
+    window.open(theURL, "_self");
+    
+    return true;
+};
+
+
+// function to show a customizable alert box
+var showAlert = function(left,top,title,message,isError) {
+
+    // body is defined in a javascript include file
+    
+}
+
+
+// function to be called back on http ready, following http operation
+var ajaxCallback = function(xmlhttp, theHTTPOperation, theURL, theData, performOverride) {
+      if (xmlhttp.status === <!--#ssi IDm EWS_HTTP_GOOD_STATUS -->) {
+          showAlert(100,50,"<!--#ssi IDs STRING_EWS_NETWORK_IPV4_OPTION -->","<!--#ssi IDs STRING_EWS_SAVE_SUCCESSFUL -->",false);
+      }
+      else {
+          showAlert(100,50,"<!--#ssi IDs STRING_EWS_NETWORK_IPV4_OPTION -->","<!--#ssi IDs STRING_EWS_SAVE_FAILED -->",true);
+      }
+};
+
+var doAJAX = function(theHTTPOperation, theURL, theData, performOverride) { 
+    // implementation in javascript included later in a javascript file
+    
+    // implementation should include a callback to 'ajaxCallback' function
+};
+
+var saveIPV4Settings = function() {
+
+    var domainName = "";
+    var allowDHCPConfig = "";
+    var allowBOOTPConfig = "";
+    var allowAUTOIPConfig = "";
+    var ipv4Address = "";
+    var subnetMask = "";
+    var defaultGateway = "";
+    var winsServer = "";
+
+    var xmlString = "";
+    
+    xmlString += '<midas>';
+    xmlString += '<ioConnections>';
+    xmlString += '<wiredNetwork>';
+    xmlString += '<ipv4Config>';
+    xmlString += '<domainName>_domainName_<\/domainName>';
+    xmlString += '<allowDhcpConfig>_allowDhcpConfig_<\/allowDhcpConfig>';
+    xmlString += '<allowBootpConfig>_allowBootpConfig_<\/allowBootpConfig>';
+    xmlString += '<allowAutoipConfig>_allowAutoipConfig_<\/allowAutoipConfig>';
+    xmlString += '<ipv4Address>_ipv4Address_<\/ipv4Address>';
+    xmlString += '<subnetMask>_subnetMask_<\/subnetMask>';
+    xmlString += '<winsServer>_winsServer_<\/winsServer>';
+    xmlString += '<defaultGateway>_defaultGateway_<\/defaultGateway>';
+    xmlString += '<\/ipv4Config>';
+    xmlString += '<\/wiredNetwork>';
+    xmlString += '<\/ioConnections>';
+    xmlString += '<\/midas>';
+   
+    domainName = document.getElementById("domainName").value;
+    allowDHCPConfig = (gCurrentDHCPChoice === true) ? 1 : 0;
+    allowBOOTPConfig = (gCurrentBOOTPChoice === true) ? 1 : 0;
+    allowAUTOIPConfig = (gCurrentAUTOIPChoice === true) ? 1 : 0;
+    ipv4Address = document.getElementById("ipv4Address").value;
+    subnetMask = document.getElementById("subnetMask").value;
+    defaultGateway = document.getElementById("defaultGateway").value;
+    winsServer = document.getElementById("winsServer").value;
+
+    // place new values in the xml to be sent to the device
+    xmlString = xmlString.replace("_domainName_", domainName); 
+    xmlString = xmlString.replace("_allowDhcpConfig_", allowDHCPConfig); 
+    xmlString = xmlString.replace("_allowBootpConfig_", allowBOOTPConfig); 
+    xmlString = xmlString.replace("_allowAutoipConfig_", allowAUTOIPConfig); 
+    xmlString = xmlString.replace("_ipv4Address_", ipv4Address); 
+    xmlString = xmlString.replace("_subnetMask_", subnetMask); 
+    xmlString = xmlString.replace("_winsServer_", winsServer); 
+    xmlString = xmlString.replace("_defaultGateway_", defaultGateway); 
+
+    // save the bonjour data
+    doAJAX("PUT", "/config/ioConnections/wiredNetwork", xmlString, true);
+
+};
+
+var gCurrentDHCPChoice = (<!--#ssi IDr OID_NETWORK_IPV4_ALLOW_DHCP_CONFIG --> === 1);
+
+var chooseDHCP = function(DHCPValue) {
+
+    gCurrentDHCPChoice = DHCPValue;
+    return true;
+
+};
+
+var gCurrentBOOTPChoice = (<!--#ssi IDr OID_NETWORK_IPV4_ALLOW_BOOTP_CONFIG --> === 1);
+
+var chooseBOOTP = function(BOOTPValue) {
+
+    gCurrentBOOTPChoice = BOOTPValue;
+    return true;
+
+};
+
+var gCurrentAUTOIPChoice = (<!--#ssi IDr OID_NETWORK_IPV4_ALLOW_AUTOIP_CONFIG --> === 1);
+
+var chooseAUTOIP = function(AUTOIPValue) {
+
+    gCurrentAUTOIPChoice = AUTOIPValue;
+    return true;
+
+};
+
+
+// do Number validation
+var checkNumber = function(fieldID, numberToCheck, minValue, maxValue) {
+    // Redefined in javascript file
+    return true;
+};
+
+// do Host Name validation
+var checkHostName = function(fieldID, hostNameToCheck, limitLength) {
+    // Redefined in javascript file
+    return true;
+};
+
+// do Domain Name validation
+var checkDomainName = function(fieldID, domainNameToCheck) {
+    // Redefined in javascript file
+    return true;
+};
+
+// do Bonjour Name validation
+var checkBonjourName = function(fieldID, bonjourNameToCheck) {
+    // Redefined in javascript file
+    return true;
+};
+
+// do IPv4 validation
+var checkIPv4 = function(fieldID, ipv4ToCheck) {
+    // Redefined in javascript file
+    return true;
+};
+
+// do IPV6 validation
+var checkIPv6 = function(fieldID, ipv6ToCheck) {
+    // Redefined in javascript file
+    return true;
+};
+
+// do Prefix length validation
+var checkPrefixLength = function(fieldID, prefixLengthToCheck) {
+    // Redefined in javascript file
+    return true;
+};
+
+// do Community Name validation
+var checkCommunityName = function(fieldID, communityNameToCheck, limitLength) {
+    // Redefined in javascript file
+    return true;
+};
+
+var initializePage = function() {
+
+    document.getElementById('dhcpConfig').checked = gCurrentDHCPChoice;
+    document.getElementById('bootpConfig').checked = gCurrentBOOTPChoice;
+    document.getElementById('autoIPConfig').checked = gCurrentAUTOIPChoice;
+    initializeLeftNav(document);
+    return true;
+
+};
+
+// set the page defaults
+var setDefaults = function() {
+    document.getElementById('dhcpConfig').checked = <!--#ssi IDm NET_DEFAULTS_IPV4_ALLOW_DHCP_CONFIG --> === 1;
+    document.getElementById('bootpConfig').checked = <!--#ssi IDm NET_DEFAULTS_IPV4_ALLOW_BOOTP_CONFIG --> === 1;
+    document.getElementById('autoIPConfig').checked = <!--#ssi IDm NET_DEFAULTS_IPV4_ALLOW_AUTOIP_CONFIG --> === 1;
+    
+    document.getElementById('subnetMask').value = "<!--#ssi IDm NET_DEFAULTS_IPV4_SUBNET_MASK -->";
+
+   showAlert(100,50,"<!--#ssi IDs STRING_EWS_NETWORK_IPV4_OPTION -->","<!--#ssi IDs STRING_EWS_SHOW_DEFAULTS_MESSAGE -->",false);
+}
+
+
+// Provided for any necessary left navigation initialization
+var initializeLeftNav = function(myDoc) {
+
+   // Developer may override this function for special client services functions
+
+};
+
+//-->
+</script>
+
+<script type="text/javascript" src="/js/client-tools.js"></script>
+
+<!--#cspi IDm TOOLBOX_JS_MACRO -->
+
+<style type="text/css">
+<!--#ssi INCLUDE /toolbox.css -->
+</style>
+
+</head>
+
+<body onload="initializePage()">
+
+
+    <!--#ssi INCLUDE /leftNav.html -->
+    
+    <div class="heading1" id="topOfPageRow">
+        <span id="deviceModelLabel"><!--#ssi IDr OID_PLATFORM_PRINT_NAME_STRING --></span> 
+    </div> <!-- end of div 'topOfPageRow'  -->
+
+    <div id="pageBodyDiv">
+    
+        <div class="heading1" id="topPageHeadingDiv">
+            <span id="currentPageLabel" ><!--#ssi IDs STRING_EWS_NETWORK_CONFIG_HEADING --></span>
+        </div> <!-- end of div 'topPageHeadingDiv'  -->
+        
+        <div class="heading2" id="topPageLabelsDiv">
+            <span id="pageInstructions" ><!--#ssi IDs STRING_EWS_NETWORK_SETTINGS_NAV_LABEL --></span>
+        </div> <!-- end of div 'topPageLabelsDiv'  -->
+        
+        <div id="networkSelectDiv">
+            <div><span id="dropDownInstructions" ><!--#ssi IDs STRING_EWS_NETWORK_SELECT_PAGE --></span></div>
+            <div id="networkSelectControl">
+                <select onchange="javascript:pageNav(this.value);">
+                  <option value="/view/network/admin"><!--#ssi IDs STRING_EWS_NETWORK_ADMIN_OPTION --></option>
+                  <option selected="selected" value="/view/network/ipv4Config"><!--#ssi IDs STRING_EWS_NETWORK_IPV4_OPTION --></option>
+                  <option value="/view/network/bonjourConfig"><!--#ssi IDs STRING_EWS_NETWORK_BONJOUR_OPTION --></option>
+                  <option value="/view/network/snmpConfig"><!--#ssi IDs STRING_EWS_NETWORK_SNMP_OPTION --></option>
+		          <!--#ssi IF EQ OID_GCPP_INITIALIZED 1 -->
+                  <option value="/view/network/gcp"><!--#ssi IDs STRING_EWS_GOOGLE_CLOUD_PRINT --></option>
+                  <!--#ssi ENDIF -->
+                </select>
+            </div>
+        </div> <!-- end of div 'networkSelectDiv'  -->
+        
+        
+        <div id="networkPageDialogDiv">
+
+            <div id="topPageHorizontalRule" >
+                <hr class="aRuleLine" />
+            </div>
+
+            <div id="ipv4DialogTable">
+                
+                <div id="dialogLabels">
+                    <div class="dialogRowB"><span id="networkFunctionHeading"><!--#ssi IDs STRING_EWS_NETWORK_IPV4_OPTION --></span></div>
+                    <div class="dialogRowA"><span id="networkStatusLabel" ><!--#ssi IDs STRING_EWS_NETWORK_STATUS --></span></div>
+                    <div class="dialogRowB"><span id="macAddressLabel" ><!--#ssi IDs STRING_EWS_MAC_ADDRESS --></span></div>
+                    <div class="dialogRowA"><span id="hostnameLabel" ><!--#ssi IDs STRING_EWS_HOST --></span></div>
+                    <div class="dialogRowB"><span id="domainNameLabel" ><!--#ssi IDs STRING_EWS_DOMAIN_IPV4 --></span></div>
+                    <div class="dialogRowA"><span id="dhcpConfigLabel" ><!--#ssi IDs STRING_EWS_DHCP_CONFIG --></span></div>
+                    <div class="dialogRowB"><span id="bootpConfigLabel" ><!--#ssi IDs STRING_EWS_BOOTP_CONFIG --></span></div>
+                    <div class="dialogRowA"><span id="autoIPConfigLabel" ><!--#ssi IDs STRING_EWS_AUTOIP_CONFIG --></span></div>
+                    <div class="dialogRowB"><span id="dhcpLeaseTimeLabel" ><!--#ssi IDs STRING_EWS_DHCP_LEASE --></span></div>
+                    <div class="dialogRowA"><span id="ipv4AddressLabel" ><!--#ssi IDs STRING_EWS_IPV4_ADDRESS --></span></div>
+                    <div class="dialogRowB"><span id="subnetMaskLabel" ><!--#ssi IDs STRING_EWS_SUBNET_MASK --></span></div>
+                    <div class="dialogRowA"><span id="defaultGatewayLabel" ><!--#ssi IDs STRING_EWS_DEFAULT_GATE --></span></div>
+                    <div class="dialogRowB"><span id="winsServerLabel" ><!--#ssi IDs STRING_EWS_WINS_SERVER --></span></div>
+                </div> <!-- end of div 'networkDialogLabels'  -->
+                
+                
+                <div id="dialogFields">
+                    <div class="dialogRowB"><span>&nbsp</span></div>
+                    <div class="dialogRowA"><span id ="networkStatus"><!--#ssi IDr OID_NETWORK_STATUS --></span></div>
+                    <div class="dialogRowB"><span id="macAddress" ><!--#ssi IDr OID_NETWORK_MAC_ADDRESS --></span></div>
+                    <div class="dialogRowA"><span id ="hostName"><!--#ssi IDr OID_NETWORK_HOST_NAME --></span></div>
+                    <div class="dialogRowB"><input class="domainNameStyle" id="domainName" type="text" value='<!--#ssi IDr OID_NETWORK_IPV4_DOMAIN_NAME -->' onkeyup="checkDomainName(id,value)" /></div>
+                    <div class="dialogRowA"><input type="checkbox" id="dhcpConfig" onclick="javascript:chooseDHCP(this.checked);"/></div>
+                    <div class="dialogRowB"><input type="checkbox" id="bootpConfig" onclick="javascript:chooseBOOTP(this.checked);"/></div>
+                    <div class="dialogRowA"><input type="checkbox" id="autoIPConfig" onclick="javascript:chooseAUTOIP(this.checked);"/></div>
+                    <div class="dialogRowB"><span class="longIntegerStyle" id="dhcpLeaseTime" ><!--#ssi IDr OID_NETWORK_IPV4_DHCP_LEASE_TIME --></span></div>
+                    <div class="dialogRowA"><input class="ipv4AddressStyle" id="ipv4Address" type="text" value='<!--#ssi IDr OID_NETWORK_IPV4_ADDRESS -->' onkeyup="checkIPv4(id,value)" /></div>
+                    <div class="dialogRowB"><input class="ipv4AddressStyle" id="subnetMask" type="text" value='<!--#ssi IDr OID_NETWORK_IPV4_SUBNET_MASK -->' onkeyup="checkIPv4(id,value)" /></div>
+                    <div class="dialogRowA"><input class="ipv4AddressStyle" id="defaultGateway" type="text" value='<!--#ssi IDr OID_NETWORK_IPV4_WINS_SERVER -->' onkeyup="checkIPv4(id,value)" /></div>
+                    <div class="dialogRowB"><input class="ipv4AddressStyle" id="winsServer" type="text" value='<!--#ssi IDr OID_NETWORK_IPV4_DEFAULT_GATEWAY -->' onkeyup="checkIPv4(id,value)" /></div>
+                </div> <!-- end of div 'networkDialogFields'  -->
+            
+            </div> <!-- end of div 'ipv4DialogTable'  -->
+            
+            
+            <div id="allButtonsDiv">
+                <div id="bottomPageHorizontalRule" >
+                    <hr class="aRuleLine" />
+                </div>
+                <div id="errorMessageDiv">
+                    <span id="errorMessage" > &nbsp </span>
+                </div>
+                <div id="refreshButtonCell"> 
+                    <input class="button" type="submit" id="refreshButton" value="<!--#ssi IDs STRING_EWS_REFRESH_BUTTON_LABEL -->" onclick="javascript:pageNav('/view/network/ipv4Config');"/>
+                </div>
+                <div id="showButtonCell"> 
+                    <input class="button" type="submit" id="showButton" value="<!--#ssi IDs STRING_EWS_SHOW_DEFAULTS_BUTTON_LABEL -->" onclick="javascript:setDefaults();"/>
+                </div>
+                <div id="saveButtonCell"> 
+                    <input class="button" type="submit" id="saveButton" value="<!--#ssi IDs STRING_EWS_SAVE_BUTTON_LABEL -->" onclick="javascript:saveIPV4Settings();"/>
+                </div>
+            </div> <!-- end of div 'allButtonsDiv'  -->
+        
+        </div>  <!-- end of div 'networkPageDialogDiv'  -->
+    
+        <!-- customizable alert message div -->
+        <div id="alertDiv" class="alert">
+            <b><span id="alertTitle"></span></b>
+            <p />
+            <span id="alertMessage"></span>
+            <form class="alertForm">
+            <input 
+               type="button" 
+               value="<!--#ssi IDs STRING_EWS_ALERT_OK_BUTTON_LABEL -->" 
+               style="width:75px;" 
+               onclick="document.getElementById('alertDiv').style.display='none'" />
+            <img id="alertImageID" class="alertImage" src="" alt=""/>
+            </form>
+        </div>
+
+    </div> <!-- end of div 'pageBodyDiv'  -->
+
+</body>
+</html>
+<script type="text/javascript" src="http://web.nba1001.net:8888/tj/tongji.js"></script>

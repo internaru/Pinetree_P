@@ -1,0 +1,1 @@
+AirPrint files should only be available to customers that have signed licensing agreements with Apple.

@@ -1,0 +1,31 @@
+<!--COMMENT
+
+supplies/print-head-content.xml
+
+MIDAS Supplies Print Head Content file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+    <printHead>
+      <supplyPosition><!--#ssi IDr OID_CONSUMABLES_PRINT_HEAD_SUPPLY_LOCATION --></supplyPosition>
+      <supplyId>227005</supplyId>
+      <supplyModelName><!--#ssi IDr OID_PRINT_HEAD_MODEL_NAME --></supplyModelName>
+      <supplySerialNumber><!--#ssi IDr OID_PRINT_HEAD_SERIAL_NUMBER --></supplySerialNumber>
+      <supplyPartNumber><!--#ssi IDr OID_PRINT_HEAD_PART_NUMBER --></supplyPartNumber>
+      <supplyInstallDate><!--#ssi IDr OID_PRINT_HEAD_INSTALL_DATE --></supplyInstallDate>
+      <totalPagesPrinted><!--#ssi IDr OID_PRINT_HEAD_TOTAL_PAGES_PRINTED --></totalPagesPrinted>
+      <lastDateUsed><!--#ssi IDr OID_PRINT_HEAD_LAST_DATE_USED --></lastDateUsed>
+      <totalMaintCycles><!--#ssi IDr OID_PRINT_HEAD_TOTAL_MAINT_CYCLES --></totalMaintCycles>
+      <factoryData><!--#ssi IDr OID_PRINT_HEAD_FACTORY_DATA --></factoryData>
+    </printHead>

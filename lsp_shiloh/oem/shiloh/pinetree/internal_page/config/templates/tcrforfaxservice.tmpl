@@ -1,0 +1,70 @@
+{
+<TMPL_LOOP name="tcrtotalloop">
+  <TMPL_IF name="ifvarname">
+  "new_page": true,
+  </TMPL_IF>  
+  "item_font_size": 9,
+  "outline": true,
+  "x": 100,
+  "y": 100,
+  "logo_image": true,
+  "main_title": "<TMPL_VAR name="tli_prefix">",
+
+  "y": 240,
+  "base_x": 15,
+
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "                                                              * * * * * * * * * * * * * * * * *"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "                                                              *      TCR FOR FAX SERVICE      *"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "                                                              * * * * * * * * * * * * * * * * *"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "Station ID"},
+          {"offset_x": <TMPL_VAR name="c2">, "data": ": <TMPL_VAR name="StationID">"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "Station Number"},
+          {"offset_x": <TMPL_VAR name="c3">, "data": ": <TMPL_VAR name="StationNum">"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": ""},
+          {"offset_x": <TMPL_VAR name="c2">, "data": "                                                     <TMPL_VAR name="CurrentTime">"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": ""},
+          {"offset_x": <TMPL_VAR name="c2">, "data": ""}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "No"},
+		  {"offset_x": <TMPL_VAR name="c4">, "data": "Date"},
+          {"offset_x": <TMPL_VAR name="c5">, "data": "Time"},
+          {"offset_x": <TMPL_VAR name="c6">, "data": "Mode"},
+          {"offset_x": <TMPL_VAR name="c7">, "data": "Remote Num"},
+          {"offset_x": <TMPL_VAR name="c8">, "data": "Conn. Speed"},
+          {"offset_x": <TMPL_VAR name="c9">, "data": "Duration"},
+          {"offset_x": <TMPL_VAR name="c10">, "data": "Pages"},
+          {"offset_x": <TMPL_VAR name="c11">, "data": "Result"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"}],
+<TMPL_IF name="nodata">
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "No Information"}],
+<TMPL_ELSE>
+<TMPL_LOOP name="tcrloop">
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "<TMPL_VAR name="Number">"},
+		  {"offset_x": <TMPL_VAR name="c4">, "data": "<TMPL_VAR name="TCRDate">"},
+          {"offset_x": <TMPL_VAR name="c5">, "data": "<TMPL_VAR name="TCRTime">"},
+          {"offset_x": <TMPL_VAR name="c6">, "data": "<TMPL_VAR name="TCRMode">"},
+          {"offset_x": <TMPL_VAR name="c7">, "data": "<TMPL_VAR name="TCRRemoteNum">"},
+          {"offset_x": <TMPL_VAR name="c8">, "data": "<TMPL_VAR name="TCRConnSpeed">"},
+          {"offset_x": <TMPL_VAR name="c9">, "data": "<TMPL_VAR name="TCRDuration">"},
+          {"offset_x": <TMPL_VAR name="c10">, "data": "<TMPL_VAR name="TCRPages">"},
+          {"offset_x": <TMPL_VAR name="c11">, "data": "<TMPL_VAR name="TCRResult">"}],
+</TMPL_LOOP>
+</TMPL_IF>
+  "y": 2525,
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"}],
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "                                                                     **** Mode Instruction ****"}], 
+  "item":[{"offset_x": <TMPL_VAR name="c1">, "data": "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"}],  
+  "item":[{"offset_x": <TMPL_VAR name="c5">, "data": "[1st char]"},
+          {"offset_x": <TMPL_VAR name="c12">, "data": "[2nd char]"},
+          {"offset_x": <TMPL_VAR name="c9">, "data": "[3rd char]"}],
+  "item":[{"offset_x": <TMPL_VAR name="c5">, "data": " T : Tx"},
+          {"offset_x": <TMPL_VAR name="c12">, "data": " E : ECM ON"},
+          {"offset_x": <TMPL_VAR name="c9">, "data": " S : Standard"}], 
+  "item":[{"offset_x": <TMPL_VAR name="c5">, "data": " R : Rx"},
+          {"offset_x": <TMPL_VAR name="c12">, "data": " X : ECM OFF"},
+          {"offset_x": <TMPL_VAR name="c9">, "data": " D : Fine"}], 
+  "item":[{"offset_x": <TMPL_VAR name="c5">, "data": " P : Polling"},
+          {"offset_x": <TMPL_VAR name="c9">, "data": " F : Superfine"}], 
+  "item":[{"offset_x": <TMPL_VAR name="c5">, "data": " F : Forward"}], 
+  "item":[{"offset_x": <TMPL_VAR name="c5">, "data": " O : On-Hook"}],
+</TMPL_LOOP>
+}

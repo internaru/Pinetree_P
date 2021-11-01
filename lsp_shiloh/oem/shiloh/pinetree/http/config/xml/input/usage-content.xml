@@ -1,0 +1,65 @@
+<!--COMMENT 
+
+usage-content.xml
+
+MIDAS Usage content file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+  <usage>
+    <devInstallDate><!--#ssi IDr OID_PLATFORM_INSTALL_DATE --></devInstallDate>
+    <printStats>
+      <colorPages>
+        <totalBestPrints><!--#ssi IDr OID_PRINT_NUM_COLOR_BEST --></totalBestPrints>
+        <totalNormalPrints><!--#ssi IDr OID_PRINT_NUM_COLOR_NORM --></totalNormalPrints>
+      </colorPages>
+      <monoPages>
+        <totalBestPrints><!--#ssi IDr OID_PRINT_NUM_MONO_BEST --></totalBestPrints>
+        <totalNormalPrints><!--#ssi IDr OID_PRINT_NUM_MONO_NORM --></totalNormalPrints>
+      </monoPages>
+    </printStats>
+    <!-- 
+    <copyStats>
+      <colorPages>
+        <totalBestPrints> # ssi IDr OID_SCAN_NUM_COLOR_BEST_COPIES </totalBestPrints>
+        <totalNormalPrints> # ssi IDr OID_SCAN_NUM_COLOR_NORM_COPIES </totalNormalPrints>
+      </colorPages>
+      <monoPages>
+        <totalBestPrints> # ssi IDr OID_SCAN_NUM_MONO_BEST_COPIES </totalBestPrints>
+        <totalNormalPrints> # ssi IDr OID_SCAN_NUM_MONO_NORM_COPIES </totalNormalPrints>
+      </monoPages>
+    </copyStats>
+    <scanStats>
+      <totalScans> # ssi IDr OID_SCAN_NUM_SCANS </totalScans>
+    </scanStats>
+    -->
+    <statsByMediaSize>
+      <mediaSizeStatsRecord>
+        <mediaSize><!--#ssi IDr OID_PRINT_MEDIA_SIZE_LETTER_ID --></mediaSize>
+        <totalPrints>
+          <totalBestPrints><!--#ssi IDr OID_PRINT_MEDIA_SIZE_LETTER_NUM_BEST --></totalBestPrints>
+          <totalNormalPrints><!--#ssi IDr OID_PRINT_MEDIA_SIZE_LETTER_NUM_NORM --></totalNormalPrints>
+        </totalPrints>
+      </mediaSizeStatsRecord>
+    </statsByMediaSize>
+    <statsByMediaType>
+      <mediaTypeStatsRecord>
+        <mediaType><!--#ssi IDr OID_PRINT_MEDIA_TYPE_PLAIN_ID --></mediaType>
+        <totalPrints>
+          <totalBestPrints><!--#ssi IDr OID_PRINT_MEDIA_TYPE_PLAIN_NUM_BEST --></totalBestPrints>
+          <totalNormalPrints><!--#ssi IDr OID_PRINT_MEDIA_TYPE_PLAIN_NUM_NORM --></totalNormalPrints>
+        </totalPrints>
+      </mediaTypeStatsRecord>
+    </statsByMediaType>
+  </usage>

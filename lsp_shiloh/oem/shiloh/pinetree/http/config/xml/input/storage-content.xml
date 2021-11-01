@@ -1,0 +1,41 @@
+<!--COMMENT 
+
+storage-content.xml
+
+MIDAS storage content xml file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+  <storage>
+    <internalDevices>
+      <internalStorage>
+        <memDeviceId>01</memDeviceId>
+        <memDeviceClass>201001</memDeviceClass>
+        <memDeviceStatus>202001</memDeviceStatus>
+        <memCapacity><!--#ssi IDr OID_MEMORY_TOTAL_SIZE_IN_MBYTES --></memCapacity>
+        <memAvailable><!--#ssi IDr OID_MEMORY_SYS_HEAP_AVAIL_IN_MBYTES --></memAvailable>
+      </internalStorage>
+    </internalDevices>
+    <!--#ssi IF EQ OID_REM_STORAGE_DEVICE_PRESENT.0 1 -->
+    <removableDevices>
+      <removableStorage>
+        <memDeviceId>01</memDeviceId>
+        <memDeviceClass>201004</memDeviceClass>
+        <memDeviceStatus><!--#ssi IDr OID_REM_STORAGE_DEVICE_STATUS.0 --></memDeviceStatus>
+        <memCapacity><!--#ssi IDr OID_REM_STORAGE_DEVICE_MEM_CAP.0 --></memCapacity>
+        <memAvailable><!--#ssi IDr OID_REM_STORAGE_DEVICE_MEM_AVAIL.0 --></memAvailable>
+      </removableStorage>
+    </removableDevices>
+    <!--#ssi ENDIF -->
+  </storage>

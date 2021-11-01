@@ -1,0 +1,25 @@
+<!--COMMENT
+
+functions/copy-content.xml
+
+MIDAS Functions Copy Content file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+    <copy>
+      <numberOfCopies><!--#ssi IDr OID_SCAN_COPY_NUMBER_OF_COPIES --></numberOfCopies>
+      <copyReduceEnlarge><!--#ssi IDr OID_SCAN_COPY_REDUCE_ENLARGE --></copyReduceEnlarge>
+      <copyQuality><!--#ssi IDr OID_SCAN_COPY_QUALITY --></copyQuality>
+      <copyLightDark><!--#ssi IDr OID_SCAN_COPY_LIGHT_DARK --></copyLightDark>
+    </copy>

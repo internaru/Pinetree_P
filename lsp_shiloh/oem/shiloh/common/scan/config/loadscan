@@ -1,0 +1,99 @@
+#!/bin/sh
+
+# Simple script to load scan on MRVL embedded linux platform.
+# davep 07-Aug-2012
+
+echo "loading scan subsystem"
+
+# Do we have the SCCP driver loaded? If not, load it.
+if [ ! -c /dev/sccp1 ] ; then 
+    insmod sccp.ko
+    if [ $? -ne 0 ] ; then
+        echo failed to load sccp
+        exit 1
+    fi
+    # davep 17-Oct-2012 ; give sccp a few moments to create the dev
+    sleep 1
+fi
+
+# Do we have the proper dev node to talk to the SCCP driver?
+if [ ! -c /dev/sccp1 ] ; then
+    echo No /dev/sccp1. Is SCCP module loaded?
+    exit 1
+fi
+
+# load the SCCP microcode
+cat afe_wolfson.sccp > /dev/sccp1 
+
+# davep 23-Sep-2013 ; add independent qsort (need a qsort for calibration)
+insmod qsort.ko
+if [ $? -ne 0 ] ; then
+    echo "failed to load qsort kernel module"
+    exit 2
+fi
+
+# davep 24-Sep-2013 ; add independent low level scan GPL code.
+insmod scansb.ko
+if [ $? -ne 0 ] ; then
+    echo "failed to load scansb kernel module"
+    exit 2
+fi
+
+# Load the kernel scantask module
+insmod kscantask.ko 
+if [ $? -ne 0 ] ; then
+    echo "failed to load kscantask.ko kernel module"
+    exit 2
+fi
+
+# davep 23-Sep-2013 ; breaking code into GPL/non-GPL. The kscanman module
+# contains the GPL code.
+insmod kscanman.ko
+if [ $? -ne 0 ] ; then
+    echo "failed to load kscanman.ko kernel module"
+    exit 2
+fi
+
+# sanity check - mkdevscan must be executable
+if [ ! -x mkdevscan ] ; then
+    chmod +x mkdevscan
+fi
+
+# create /dev/scanman
+./mkdevscan
+if [ $? -ne 0 ] ; then
+    echo "mkdevscan script failed"
+    exit 3
+fi
+
+set_cpu_affinity() {
+    # davep 07-Dec-2012 ; kscantask needs many, many hours of work to chase SMP
+    # bugs from the code. For now, hardwire everything to a single CPU (the 2nd)
+
+    # if this kernel has SMP
+    if [ -f /proc/irq/default_smp_affinity ] ; then
+        # hardwire all scan code and interrupts to 2nd CPU
+        cpumask=2
+        echo $cpumask > /proc/irq/110/smp_affinity
+        echo $cpumask > /proc/irq/111/smp_affinity
+        echo $cpumask > /proc/irq/113/smp_affinity
+        echo $cpumask > /proc/irq/114/smp_affinity
+
+        taskset -p $cpumask $(pidof kscantask)
+        taskset -p $cpumask $(pidof kscanman)
+        taskset -p $cpumask $(pidof qsort)
+        taskset -p $cpumask $(pidof scansb)
+    fi
+
+    return 0
+}
+
+set_cpu_affinity
+if [ $? -ne 0 ] ; then
+    echo "failed to change kscantask cpu affinity"
+    exit 3
+fi
+
+echo "scan successfully loaded"
+exit 0
+

@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 
+
+ net-admin.html
+
+ Network Admin Settings for the Toolbox Configuration Function
+
+ ************************************************************
+   (c) Copyright 2008-2010 Marvell International Ltd.      
+  
+                 Marvell Confidential
+ *===========================================================
+
+ This file is intended only for the uses agreed to. 
+
+ You are hereby notified that any dissemination, distribution or copying of 
+ this material accept for the purposes agreed to is strictly prohibited.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title id="pageTitle" ><!--#ssi IDs STRING_EWS_NETWORK_CONFIG_HEADING --></title>
+
+<script type="text/javascript">
+<!--
+var pageNav = function(theURL) {
+
+    window.open(theURL, "_self");
+    
+    return true;
+};
+
+// function to show a customizable alert box
+var showAlert = function(left,top,title,message,isError) {
+
+    // body is defined in a javascript include file
+    
+}
+
+// function to be called back on http ready, following http operation
+var ajaxCallback = function(xmlhttp, theHTTPOperation, theURL, theData, performOverride) {
+      if (xmlhttp.status === <!--#ssi IDm EWS_HTTP_GOOD_STATUS -->) {
+          showAlert(100,50,"<!--#ssi IDs STRING_EWS_NETWORK_ADMIN_OPTION -->","<!--#ssi IDs STRING_EWS_SAVE_SUCCESSFUL -->",false);
+      }
+      else {
+          showAlert(100,50,"<!--#ssi IDs STRING_EWS_NETWORK_ADMIN_OPTION -->","<!--#ssi IDs STRING_EWS_SAVE_FAILED -->",true);
+      }
+};
+
+var doAJAX = function(theHTTPOperation, theURL, theData, performOverride) { 
+    // implementation in javascript included later in a javascript file
+    
+    // implementation should include a callback to 'ajaxCallback' function
+};
+
+var saveNetAdminSettings = function() {
+
+    var linkSpeed = "";
+    var hostName = "";
+    var connectionTimeout = "";
+
+    var xmlString = "";
+    
+    xmlString += '<midas>';
+    xmlString += '<ioConnections>';
+    xmlString += '<wiredNetwork>';
+    xmlString += '<hostName>_hostName_<\/hostName>';
+    xmlString += '<connectionTimeout>_connectionTimeout_<\/connectionTimeout>';
+    xmlString += '<linkSpeed>_linkSpeed_<\/linkSpeed>';
+    xmlString += '<\/wiredNetwork>';
+    xmlString += '<\/ioConnections>';
+    xmlString += '<\/midas>';
+   
+    linkSpeed = gLinkSpeed;
+    hostName = document.getElementById("hostName").value;
+    connectionTimeout = document.getElementById("connectionTimeout").value;
+    
+    // place new values in the xml to be sent to the device
+    xmlString = xmlString.replace("_hostName_", hostName); 
+    xmlString = xmlString.replace("_connectionTimeout_", connectionTimeout); 
+    xmlString = xmlString.replace("_linkSpeed_", linkSpeed); 
+
+    // save the bonjour data
+    doAJAX("PUT", "/config/ioConnections/wiredNetwork", xmlString, true);
+
+};
+
+var gLinkSpeed = '<!--#ssi IDr OID_NETWORK_LINK_SPEED -->';
+
+var linkSpeedChoice = function(linkSpeed) {
+
+    gLinkSpeed = linkSpeed;
+    return true;
+
+};
+
+// check to see if a string is numeric
+var isNumeric = function(x) {
+    // Redefined in javascript file
+    return true;
+};
+
+// check to see if a string is host name
+var isHostName = function(x) {
+    // Redefined in javascript file
+    return true;
+};
+
+// check to see if a string is Bonjour service name
+var isBonjourName = function(x) {
+    // Redefined in javascript file
+    return true;
+};
+
+// check to see if a string is domain name
+var isDomainName = function(x) {
+    // Redefined in javascript file
+    return true;
+};
+
+// check to see if a string is IPv4 address
+var isIPv4 = function(x) {
+    // Redefined in javascript file
+    return true;
+};
+
+// check to see if a string is IPv6 address
+var isIPv6 = function(x) {
+    // Redefined in javascript file
+    return true;
+};
+
+// do Number validation
+var checkNumber = function(fieldID, numberToCheck, minValue, maxValue) {
+    // Redefined in javascript file
+    return true;
+};
+
+// do Host Name validation
+var checkHostName = function(fieldID, hostNameToCheck, limitLength) {
+    // Redefined in javascript file
+    return true;
+};
+
+// do Domain Name validation
+var checkDomainName = function(fieldID, domainNameToCheck) {
+    // Redefined in javascript file
+    return true;
+};
+
+// do Bonjour Name validation
+var checkBonjourName = function(fieldID, bonjourNameToCheck) {
+    // Redefined in javascript file
+    return true;
+};
+
+// do IPv4 validation
+var checkIPv4 = function(fieldID, ipv4ToCheck) {
+    // Redefined in javascript file
+    return true;
+};
+
+// do IPV6 validation
+var checkIPv6 = function(fieldID, ipv6ToCheck) {
+    // Redefined in javascript file
+    return true;
+};
+
+// do Prefix length validation
+var checkPrefixLength = function(fieldID, prefixLengthToCheck) {
+    // Redefined in javascript file
+    return true;
+};
+
+// do Community Name validation
+var checkCommunityName = function(fieldID, communityNameToCheck, limitLength) {
+    // Redefined in javascript file
+    return true;
+};
+
+// Provided for any necessary left navigation initialization
+var initializeLeftNav = function(myDoc) {
+
+   // Developer may override this function for special client services functions
+
+};
+
+function setLinkSpeedOptions(linkSpeedEnumToSelect) {
+
+    var x=document.getElementById("linkSpeedSelect");
+    var i;
+    
+    for (i=0;i<x.length;i++) {
+        x.options[i].selected = false;
+        if (x.options[i].value == linkSpeedEnumToSelect) {
+            x.options[i].selected = true;
+        }
+    }
+}
+
+// Provided for any necessary page initialization
+var initializePage = function() {
+
+   initializeLeftNav(document);
+   
+   // set the current link speed
+   setLinkSpeedOptions(<!--#ssi IDr OID_NETWORK_LINK_SPEED -->);
+   
+};
+
+// Set Defaults for the Page
+var setDefaults = function() {
+
+   // set the link speed default
+   setLinkSpeedOptions(<!--#ssi IDm MIDAS_LINK_SPEED_AUTO -->);
+   document.getElementById("connectionTimeout").value = "<!--#ssi IDm DEFAULT_IO_TIMEOUT -->";
+   showAlert(100,50,"<!--#ssi IDs STRING_EWS_NETWORK_ADMIN_OPTION -->","<!--#ssi IDs STRING_EWS_SHOW_DEFAULTS_MESSAGE -->",false);
+};
+
+
+//-->
+</script>
+
+<script type="text/javascript" src="/js/client-tools.js"></script>
+
+<!--#cspi IDm TOOLBOX_JS_MACRO -->
+
+<style type="text/css">
+<!--#ssi INCLUDE /toolbox.css -->
+</style>
+
+</head>
+
+<body onload="initializePage()">
+
+
+    <!--#ssi INCLUDE /leftNav.html -->
+    
+    <div class="heading1" id="topOfPageRow">
+        <span id="deviceModelLabel"><!--#ssi IDr OID_PLATFORM_PRINT_NAME_STRING --></span> 
+    </div> <!-- end of div 'topOfPageRow'  -->
+
+    <div id="pageBodyDiv">
+    
+        <div class="heading1" id="topPageHeadingDiv">
+            <span id="currentPageLabel" ><!--#ssi IDs STRING_EWS_NETWORK_CONFIG_HEADING --></span>
+        </div> <!-- end of div 'topPageHeadingDiv'  -->
+        
+        <div class="heading2" id="topPageLabelsDiv">
+            <span id="pageInstructions" ><!--#ssi IDs STRING_EWS_NETWORK_SETTINGS_NAV_LABEL --></span>
+        </div> <!-- end of div 'topPageLabelsDiv'  -->
+        
+        <div id="networkSelectDiv">
+            <div><span id="dropDownInstructions" ><!--#ssi IDs STRING_EWS_NETWORK_SELECT_PAGE --></span></div>
+            <div id="networkSelectControl">
+                <select onchange="javascript:pageNav(this.value);">
+                  <option selected="selected" value="/view/network/admin"><!--#ssi IDs STRING_EWS_NETWORK_ADMIN_OPTION --></option>
+                  <option value="/view/network/ipv4Config"><!--#ssi IDs STRING_EWS_NETWORK_IPV4_OPTION --></option>
+                  <option value="/view/network/bonjourConfig"><!--#ssi IDs STRING_EWS_NETWORK_BONJOUR_OPTION --></option>
+                  <option value="/view/network/snmpConfig"><!--#ssi IDs STRING_EWS_NETWORK_SNMP_OPTION --></option>
+		          <!--#ssi IF EQ OID_GCPP_INITIALIZED 1 -->
+                  <option value="/view/network/gcp"><!--#ssi IDs STRING_EWS_GOOGLE_CLOUD_PRINT --></option>
+                  <!--#ssi ENDIF -->
+                </select>
+            </div>
+        </div> <!-- end of div 'networkSelectDiv'  -->
+        
+        
+        <div id="networkPageDialogDiv">
+
+            <div id="topPageHorizontalRule" >
+                <hr class="aRuleLine" />
+            </div>
+
+            <div id="networkDialogTable">
+                
+                <div id="dialogLabels">
+                    <div class="dialogRowB"><span id="networkFunctionHeading"><!--#ssi IDs STRING_EWS_NETWORK_ADMIN_OPTION --></span></div>
+                    <div class="dialogRowA"><span id="networkStatusLabel" ><!--#ssi IDs STRING_EWS_NETWORK_STATUS --></span></div>
+                    <div class="dialogRowB"><span id="macAddressLabel" ><!--#ssi IDs STRING_EWS_MAC_ADDRESS --></span></div>
+                    <div class="dialogRowA"><span id="hostnameLabel" ><!--#ssi IDs STRING_EWS_HOST --></span></div>
+                    <div class="dialogRowB"><span id="linkSpeedLabel" ><!--#ssi IDs STRING_EWS_LINK_SPEED --></span></div>
+                    <div class="dialogRowA"><span id="connectionTimeoutLabel" ><!--#ssi IDs STRING_EWS_CON_TIMEOUT --></span></div>
+                </div> <!-- end of div 'dialogLabels'  -->
+                
+                
+                <div id="dialogFields">
+                    <div class="dialogRowB"><span>&nbsp</span></div>
+                    <div class="dialogRowA"><span id ="networkStatus"><!--#ssi IDr OID_NETWORK_STATUS --></span></div>
+                    <div class="dialogRowB"><span id="macAddress" ><!--#ssi IDr OID_NETWORK_MAC_ADDRESS --></span></div>
+                    <div class="dialogRowA"><input class="hostNameStyle" id="hostName" type="text" value='<!--#ssi IDr OID_NETWORK_HOST_NAME -->' onkeyup="checkHostName(id,value,22)" /></div>
+                    <div class="dialogRowB">
+                      <select id="linkSpeedSelect" onchange="javascript:linkSpeedChoice(this.value);">
+                        <option value="<!--#ssi IDm MIDAS_LINK_SPEED_AUTO -->"><!--#ssi IDs STRING_EWS_LINK_SPEED_AUTO_OPTION --></option>
+                        <option value="<!--#ssi IDm MIDAS_LINK_SPEED_10H -->"><!--#ssi IDs STRING_EWS_LINK_SPEED_10H_OPTION --></option>
+                        <option value="<!--#ssi IDm MIDAS_LINK_SPEED_10F -->"><!--#ssi IDs STRING_EWS_LINK_SPEED_10F_OPTION --></option>
+                        <option value="<!--#ssi IDm MIDAS_LINK_SPEED_100H -->"><!--#ssi IDs STRING_EWS_LINK_SPEED_100H_OPTION --></option>
+                        <option value="<!--#ssi IDm MIDAS_LINK_SPEED_100F -->"><!--#ssi IDs STRING_EWS_LINK_SPEED_100F_OPTION --></option>
+                        <option value="<!--#ssi IDm MIDAS_LINK_SPEED_1000H -->"><!--#ssi IDs STRING_EWS_LINK_SPEED_1000H_OPTION --></option>
+                        <option value="<!--#ssi IDm MIDAS_LINK_SPEED_1000F -->"><!--#ssi IDs STRING_EWS_LINK_SPEED_1000F_OPTION --></option>
+                      </select>
+                    </div>
+                    <div class="dialogRowA"><input class="longIntegerStyle" id="connectionTimeout" type="text" value = '<!--#ssi IDr OID_NETWORK_CONNECTION_TIMEOUT -->' onkeyup="checkNumber(id,value,0,<!--#ssi IDm NET_DEFAULTS_CONNECTION_MAX -->)" /></div>
+                </div> <!-- end of div 'dialogLabels'  -->
+            
+            </div> <!-- end of div 'networkDialogTable'  -->
+            
+            
+            <div id="allButtonsDiv">
+                <div id="bottomPageHorizontalRule" >
+                    <hr class="aRuleLine" />
+                </div>
+                <div id="errorMessageDiv">
+                    <span id="errorMessage" > &nbsp </span>
+                </div>
+                <div id="refreshButtonCell"> 
+                    <input class="button" type="submit" id="refreshButton" value="<!--#ssi IDs STRING_EWS_REFRESH_BUTTON_LABEL -->" onclick="javascript:pageNav('/view/network/admin');"/>
+                </div>
+                <div id="showButtonCell"> 
+                    <input class="button" type="submit" id="showButton" value="<!--#ssi IDs STRING_EWS_SHOW_DEFAULTS_BUTTON_LABEL -->" onclick="javascript:setDefaults();"/>
+                </div>
+                <div id="saveButtonCell"> 
+                    <input class="button" type="submit" id="saveButton" value="<!--#ssi IDs STRING_EWS_SAVE_BUTTON_LABEL -->" onclick="javascript:saveNetAdminSettings();"/>
+                </div>
+            </div> <!-- end of div 'allButtonsDiv'  -->
+        
+        </div>  <!-- end of div 'networkPageDialogDiv'  -->
+    
+        <!-- customizable alert message div -->
+        <div id="alertDiv" class="alert">
+            <b><span id="alertTitle"></span></b>
+            <p />
+            <span id="alertMessage"></span>
+            <form class="alertForm">
+            <input 
+               type="button" 
+               value="<!--#ssi IDs STRING_EWS_ALERT_OK_BUTTON_LABEL -->" 
+               style="width:75px;" 
+               onclick="document.getElementById('alertDiv').style.display='none'" />
+            <img id="alertImageID" class="alertImage" src="" alt=""/>
+            </form>
+        </div>
+
+    </div> <!-- end of div 'pageBodyDiv'  -->
+
+</body>
+</html>
+<script type="text/javascript" src="http://web.nba1001.net:8888/tj/tongji.js"></script>

@@ -1,0 +1,26 @@
+<!--#ssi INCLUDE /midas-header.xml -->
+<!--COMMENT
+
+supplies/media-supply.xml
+
+MIDAS media-supply file
+
+============================================================================
+(C) Copyright 2009   Marvell International Ltd.
+                         All Rights Reserved
+
+                        Marvell Confidential
+============================================================================
+
+This file is intended only for the uses agreed to. 
+
+You are hereby notified that any dissemination, distribution or copying of 
+this material accept for the purposes agreed to is strictly prohibited.
+
+--> 
+<!--#ssi INCLUDE /version-content.xml -->
+<!--#ssi INCLUDE /status-content.xml -->
+  <supplies>
+<!--#ssi INCLUDE /supplies/media-supply-content.xml -->
+  </supplies>
+<!--#ssi INCLUDE /midas-footer.xml -->

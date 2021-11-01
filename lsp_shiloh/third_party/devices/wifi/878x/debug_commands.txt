@@ -1,0 +1,96 @@
+/*
+ *
+ * ============================================================================
+ * Copyright (c) 2010   Marvell International, Ltd. All Rights Reserved.
+ *
+ *                         Marvell Confidential
+ * ============================================================================
+ */
+
+The addition of support for the wireless micro access point (uAP) has required 
+us to change the format of various debug and API calls.  Since there are now two
+wireless interfaces (station and uAP) it is necessary to specify which interface
+you wish to affect before issuing a command.
+
+The base debug command has been changed from "wireless" to "wifi".  A summary is
+provided at the end of this document showing which new commands to use to get 
+the same effect as the old commands.
+
+The debug interface has been enhanced to allow quoted input parameters.  This 
+allows you to specify ssids with spaces in the name by surrounding them with 
+quotes.  (Example: wifi sta ssid "my home AP").  It also allows you to reset 
+values by sending an empty string.  (Example: wifi sta wpa_passphrase "")
+
+In general, commands can be used to both view and set wireless parameters.  To 
+view the current station ssid, for example, you would type: wifi sta ssid.  To 
+set it you would type: wifi sta ssid new_ssid.
+
+Finally, the uAP supports a dhcp server, which can be accessed using a new root 
+command: dhcpd.  The dhcpd command will allow you to view the current client 
+list (dhcpd info) and do basic configuration of the server.
+
+
+General Wireless Commands: (Access by typing: wifi <cmd> [params])
+
+  info      : Print current values of assorted configuration info
+  power     : View/set the wifi board's power setting (on or off)
+  enable    : Enable the radio (won't power on unless sta/uap is also enabled)
+  disable   : Disable the radio
+  defaults  : Restore default settings
+  region    : View/set region (US, CAN, EUR, ESP, FRA, JPN or a numeric value)
+  scan      : Scan to find available SSIDs
+  storedscan: View results of most recent scan
+  sta       : Accesses subcommands for the wifi station
+  uap       : Accesses subcommands for the micro-ap
+
+
+Wireless Station Commands: (Access by typing: wifi sta <cmd> [params])
+
+  info           : Print current values of assorted configuration info
+  enable         : Enable the wifi station
+  disable        : Disable the wifi station
+  defaults       : Restore default settings
+  comm_mode      : Set (or view) communication mode (infrastructure or adhoc)
+  ssid           : Set (or view) the current SSID
+  security       : Set (or view) the security mode (open, wep, wpa, wpa2)
+  wep_auth_mode  : Set (or view) the wep auth mode (open, shared, auto)
+  wep_key <index>: Set (or view) wep key (must specify key index: 0-3)
+  wep_cur_key    : Set (or view) index of active wep key
+  wpa_passphrase : Set (or view) the wpa passphrase
+  wps            : Run wps enrollee (optionally specify pin and ssid)
+  wps genpin     : Generate a new WPS pin
+  wps cancel     : Cancel WPS if it is running
+
+Wireless Micro-AP Commands: (Access by typing: wifi uap <cmd> [params])
+
+  info           : Print current values of assorted configuration info
+  enable         : Enable the wifi station
+  disable        : Disable the wifi station
+  defaults       : Restore default settings
+  ssid           : Set (or view) the current SSID
+  ssid_prefix    : Set (or view) the SSID prefix
+  security       : Set (or view) the security mode (open, wep, wpa, wpa2)
+  wep_auth_mode  : Set (or view) the wep auth mode (open, shared, auto)
+  wep_key <index>: Set (or view) wep key (must specify key index: 0-3)
+  wep_cur_key    : Set (or view) index of active wep key
+  wpa_passphrase : Set (or view) the wpa passphrase
+  wpa_enc_mode   : Set (or view) the wpa encryption mode (tkip, aes, both)
+
+
+------------------------------------------------
+
+Comparison to old command set:
+
+wireless info           ==>  wifi info
+wireless start          ==>  wifi enable  (also "wifi sta enable" and "wifi uap enable")
+wireless stop           ==>  wifi disable
+wireless scan           ==>  wifi scan
+wireless toDefaults     ==>  wifi defaults (also "wifi sta defaults", etc)
+wireless reconnect      ==>  wifi sta disable, then wifi sta enable
+wireless setAP          ==>  wifi sta ssid
+wireless setMode        ==>  wifi sta comm_mode
+wireless setWEPkeys     ==>  wifi sta wep_key <index> [value] (Index must be 0-3.  Leave value blank to see current value of key.)
+wireless setWEPAuthMode ==>  wifi sta wep_auth_mode
+wireless setPassPhrase  ==>  wifi sta wpa_passphrase
+wireless wps            ==>  wifi sta wps  (also: wifi sta wps pin 12345670 ssid this_ssid_only)
+
